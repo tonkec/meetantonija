@@ -1,7 +1,17 @@
 .header {
+  padding: 200px 100px;
   background-color: #43BCCD;
-
   color: white;
 
-  h1 {margin: 0;}
+  h1 {
+    margin: 0;
+    font-weight: 300;
+    max-width: 1000px;
+
+    b {
+      font-weight: 700;
+      font-size: 55px;
+      font-family: "Rubik", sans-serif;
+    }
+  }
 }

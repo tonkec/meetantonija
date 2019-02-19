@@ -1,7 +1,9 @@
-@import "bulma/sass/utilities/_all.sass";
-@import "bulma/sass/grid/columns.sass";
-
 @import "base/typography";
 @import "base/base";
+@import "base/colors";
 
 @import "components/header";
+@import "components/nav";
+@import "components/portfolio";
+@import "components/contact";
+@import "components/footer";

@@ -1,0 +1,21 @@
+.portfolio-section {
+  padding-top: 100px;
+  padding-bottom: 150px;
+  h2 {
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  .portfolio-column {
+    .column-content {
+      background-color:  #43BCCD;
+      height: 250px;
+      cursor: pointer;
+      transition:  background-color .7s ease-in-out;
+
+      &:hover {
+        background-color: #259cad;
+      }
+    }
+  }
+}
