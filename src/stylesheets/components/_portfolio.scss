@@ -1,21 +1,51 @@
+@mixin portfolio-image($image) {
+  background-image: url($image);
+}
+
 .portfolio-section {
   padding-top: 100px;
   padding-bottom: 150px;
   h2 {
-    text-align: center;
     margin-top: 80px;
   }
 
-  .portfolio-column {
-    .column-content {
-      background-color:  #43BCCD;
-      height: 250px;
-      cursor: pointer;
-      transition:  background-color .7s ease-in-out;
+.portfolio-column {
+    height: 250px;
 
-      &:hover {
-        background-color: #259cad;
+    .column-content {
+      height: 100%;
+      cursor: pointer;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 50px 20px 0 30px;
+
+      h2 {
+        margin: 0 0 10px;
+        font-size: 2.3rem;
+      }
+
+      p {
+        color: $white;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      small {
+        font-size: .9rem;
       }
     }
+  }
+}
+
+.columns-client {
+  .column-content{
+    background-color: $green;
+  }
+}
+
+.columns-playground {
+  .column-content {
+    background-color: #662E9B;
   }
 }
