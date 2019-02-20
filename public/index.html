@@ -15,7 +15,7 @@
   </head>
   <body>
     <nav class="nav">
-  <ul>
+  <ul class="is-pulled-right">
     <li><a href="">Work</a></li>
     <li><a href="">Contact</a></li>
   </ul>
@@ -32,10 +32,29 @@
   </div>
 </header>
 
+  <section class="skills-section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h2 class="skills-heading is-uppercase has-text-weight-bold">Skills</h2>
+        <p class="skills-description">In my career so far I have solved many problems with HTML, CSS, Bootstrap, Bulma, Js, React.js and Figma</p>
+      </div>
+      <div class="column is-offset-1">
+        <h2 class="skills-heading is-uppercase has-text-weight-bold">Mentoring</h2>
+        <p class="skills-description">I have helped plenty of students with projects. We debugged together, researched many issues, looked for answers, read the docs and solved the problem</p>
+      </div>
+      <div class="column is-offset-1">
+        <h2 class="skills-heading is-uppercase has-text-weight-bold">Tools</h2>
+        <p class="skills-description">My workflow is enhanced with Webpack, Gulp, Jira, Trello, npm and yarn packages. I like to keep dependecies as light as possible, though</p>
+      </div>
+    </div>
+  </div>
+</section>
+
   <section class="portfolio-section container">
   <div class="columns">
     <div class="column has-text-centered">
-      <h2 class="column-title">Client Work</h2>
+      <h3 class="column-title">Client Work</h3>
     </div>
   </div>
 
@@ -45,7 +64,6 @@
         <h2>Craftstrom</h2>
         <p>React Native app that connects to solar panels</p>
         <small>- Front-end dev</small>
-        <span class="portoflio-pointer">More</span>
       </div>
     </div>
 
@@ -54,7 +72,6 @@
         <h2>Kwikdroid</h2>
         <p>RoR app that handles company's expenses</p>
         <small>- Front-end dev</small>
-        <span class="portoflio-pointer">More</span>
       </div>
     </div>
   </div>
@@ -65,7 +82,6 @@
         <h2>Code Institute</h2>
         <p>Bunch of stuff</p>
         <small>- Front-end dev</small>
-        <span class="portoflio-pointer">More</span>
       </div>
     </div>
 
@@ -74,7 +90,6 @@
         <h2>Peaks</h2>
         <p>Template for digital agencies</p>
         <small>- Front-end dev</small>
-        <span class="portoflio-pointer">More</span>
       </div>
     </div>
   </div>
@@ -82,7 +97,7 @@
 
   <div class="columns">
     <div class="column has-text-centered">
-      <h2 class="column-title">Playground</h2>
+      <h3 class="column-title">Playground</h3>
     </div>
   </div>
 
@@ -92,7 +107,6 @@
         <h2>Text hover effects</h2>
         <p>Scss library for hover and click effects</p>
         <small>- Front-end player</small>
-        <span class="portoflio-pointer">More</span>
       </div>
     </div>
 
@@ -101,7 +115,6 @@
         <h2>Show me the reddits</h2>
         <p>React.js project that filters reddits</p>
         <small>- Front-end player</small>
-        <span class="portoflio-pointer">More</span>
       </div>
     </div>
   </div>
@@ -116,19 +129,19 @@
     </div>
   </div>
   <div class="columns is-centered">
-    <div class="column is-3">
+    <div class="column is-2">
       <div class="field">
         <div class="control">
-          <input class="input" type="text" placeholder="Name">
+          <input class="input" type="text" value="Name">
         </div>
       </div>
     </div>
 
-    <div class="column is-3">
+    <div class="column is-2">
 
       <div class="field">
         <div class="control">
-          <input class="input" type="text" placeholder="Email">
+          <input class="input" type="text" value="Email">
         </div>
       </div>
 
@@ -136,13 +149,15 @@
   </div>
 
   <div class="columns is-centered">
-    <div class="column is-half">
-      <textarea class="textarea" placeholder="Hello, Antonija" rows="6"></textarea>
+    <div class="column is-4">
+      <div contenteditable>
+          Hello, Antonija
+      </div>
     </div>
   </div>
 
   <div class="columns is-centered">
-    <div class="column is-half">
+    <div class="column is-4">
       <a class="button is-pulled-right is-black">Send</a>
     </div>
   </div>
@@ -152,6 +167,7 @@
 
 
     
+    <script src="https://unpkg.com/headroom.js@0.9.4/dist/headroom.js"></script>
       <script src="javascripts/app.js"></script>
     
   </body>

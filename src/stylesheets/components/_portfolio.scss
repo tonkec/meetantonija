@@ -1,12 +1,7 @@
-@mixin portfolio-image($image) {
-  background-image: url($image);
-}
-
 .portfolio-section {
-  padding-top: 100px;
-  padding-bottom: 150px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 120px;
+
   .column-title {
     margin-top: 80px;
     margin-bottom: 20px;
@@ -83,10 +78,10 @@
 
 .columns-playground {
   .column-content {
-    background-color: $purple;
+    background-color: #2f2f2f;
 
     &:before {
-      background-color: darken($purple, 7);
+      background-color: darken(#2f2f2f, 7);
     }
   }
 }

@@ -1,0 +1,21 @@
+.skills-section {
+  padding-left: 22px;
+  padding-top: 200px;
+  padding-bottom: 50px;
+  .skills-heading {
+    margin-bottom: 15px;
+    color: #444;
+    &:before {
+      content: "/";
+      color: $green;
+      margin-left: -22px;
+      margin-right: 10px;
+    }
+  }
+
+  .skills-description {
+    font-size: 20px;
+    font-weight: 300;
+    color:#424040;
+  }
+}
