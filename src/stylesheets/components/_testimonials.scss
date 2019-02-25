@@ -1,6 +1,19 @@
 .testimonials-section {
   padding: 50px 0;
   background-color: #fff;
+  position: relative;
+  &:before {
+    content: "";
+  position: absolute;
+  background-color: #f9c80e;
+  width: 300px;
+  height: 300px;
+  bottom: -40%;
+  left: -15%;
+  border-radius: 100%;
+  transform: rotateZ(30deg);
+
+  }
   @media (min-width: 1200px) {
     padding: 100px 0;
   }
