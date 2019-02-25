@@ -20,12 +20,29 @@ h1 {
   }
 }
 
+h1::selection {
+  background: #292929;
+  color: $white;
+}
+
+h1::selection::-moz-selection {
+  background: $white;
+}
+
 h2 {
   font-size: 1.7rem;
   @media (min-width: 1300px) {
     font-size: 2rem;
   }
 }
+h2::selection {
+  background: $yellow;
+}
+
+h2::selection::-moz-selection {
+  background: $yellow;
+}
+
 
 h3 {
   font-size: 1.8rem;

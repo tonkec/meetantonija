@@ -77,3 +77,10 @@
     }
   }
 }
+
+blockquote::selection {
+  background: $yellow;
+}
+blockquote::selection::-moz-selection {
+  background: $yellow;
+}

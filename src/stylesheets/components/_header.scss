@@ -34,3 +34,12 @@
     }
   }
 }
+
+b::selection {
+  background: #292929;
+  color: $white;
+}
+
+b::selection::-moz-selection {
+  background: $white;
+}
