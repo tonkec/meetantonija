@@ -320,8 +320,13 @@
       context.lineWidth = 4;
       context.strokeStyle = '#292929';
       context.stroke();
-      var dataURL = canvas.toDataURL('image/png')
+      var dataURL = canvas.toDataURL('image/png');
       $('body').css('cursor', 'url('+dataURL+'), auto');
+
+      context.strokeStyle = '#f9c80e';
+      context.stroke();
+      var dataURL = canvas.toDataURL('image/png');
+      $('footer').css('cursor', 'url('+dataURL+'), auto');
     });
     </script>
     
