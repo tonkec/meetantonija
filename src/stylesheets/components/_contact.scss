@@ -2,17 +2,8 @@
   padding: 120px 0 120px;
   background-color: #f9c80e;
 
-  .button {
-    width: 150px;
-    background-color: #2f2f2f;
-  }
-
   h2 {
-    margin-bottom: 30px;
-  }
-
-  .column {
-    position: relative;
+    margin-bottom: 50px;
   }
 
   input, textarea {
@@ -37,7 +28,20 @@
   }
 
   input {
-    margin-bottom: 30px;
+    margin-bottom: 70px;
+  }
+
+  button {
+    width: 150px;
+    background-color: #2f2f2f;
+    border: none;
+    padding: 5px 0;
+    color: $white;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
   }
 }
 
