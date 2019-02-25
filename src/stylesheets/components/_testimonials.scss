@@ -1,0 +1,57 @@
+.testimonials-section {
+  padding: 50px 0;
+  background-color: #fff;
+  @media (min-width: 1200px) {
+    padding: 100px 0;
+  }
+   blockquote {
+     font-size: 1rem;
+     font-style: italic;
+     font-weight: 300;
+
+     @media (min-width: 992px) {
+       font-size: 1.3rem;
+     }
+   }
+
+   figcaption {
+     font-size: 1rem;
+     margin-top: 12px;
+     border-bottom: 1.5px solid $yellow;
+     display: inline;
+     transition: background-color .3s ease-in-out;
+     cursor: pointer;
+     a {
+       color: #292929;
+       text-decoration: none;
+     }
+     &:hover {
+       background-color: $yellow;
+     }
+   }
+
+   .carousel-item {
+     height: 200px;
+     margin-top: 20px;
+     @media (min-width: 992px) {
+       margin-top: 50px;
+     }
+   }
+
+  .carousel-indicators {
+    bottom: -20px;
+    cursor: pointer;
+    li {
+      width: 12px;
+      height: 12px;
+      margin-left: 10px;
+      background-color: transparent;
+      border: 2px solid #292929;
+      transition: background-color .3s ease-in-out;
+
+      &:hover, &.active {
+        background-color: $yellow;
+      }
+    }
+  }
+}
