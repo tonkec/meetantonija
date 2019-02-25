@@ -5,7 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "blendid": "^4.4.3",
-    "bulma": "^0.7.4"
+    "bulma": "^0.7.4",
+    "emailjs-com": "^2.3.2"
   },
   "devDependencies": {}
 }

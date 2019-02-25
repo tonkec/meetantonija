@@ -4,37 +4,58 @@
       <h2 class="has-text-weight-semibold	">Say hi!</h2>
     </div>
   </div>
-  <div class="columns is-centered">
-    <div class="column is-2">
-      <div class="field">
-        <div class="control">
-          <input class="input" type="text" value="Name">
+  <form id="form" method="post">
+    <div class="columns is-centered">
+      <div class="column is-2">
+        <div class="field">
+          <div class="control">
+            <input type="text" required  name="from_name" placeholder="Your Name">
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-2">
+        <div class="field">
+          <div class="control">
+            <input type="text" required placeholder="Your Email">
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="column is-2">
-
-      <div class="field">
-        <div class="control">
-          <input class="input" type="text" value="Email">
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="columns is-centered">
-    <div class="column is-4">
-      <div contenteditable>
-          Hello, Antonija
+    <div class="columns is-centered">
+      <div class="column is-4">
+        <textarea name="message_html"rows="5" placeholder="Message"></textarea>
       </div>
     </div>
-  </div>
 
-  <div class="columns is-centered">
-    <div class="column is-4">
-      <a class="button is-pulled-right is-black">Send</a>
+    <div class="columns is-centered">
+      <div class="column is-4">
+        <button class="button is-pulled-right is-black" type="submit">Send</button>
+      </div>
     </div>
-  </div>
+  </form>
 </section>
+
+<script>
+  $("#form").on("submit", function(event) {
+
+    event.preventDefault(); // prevent reload
+
+    var formData = new FormData(this);
+    formData.append('service_id', 'gmail');
+    formData.append('template_id', 'template_4cXwGrgd');
+    formData.append('user_id', 'user_LOSuz8pR7cowgxlm0LOa5');
+
+    $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+        type: 'POST',
+        data: formData,
+        contentType: false, // auto-detection
+        processData: false // no need to parse formData to string
+    }).done(function() {
+        console.log('Your mail is sent!');
+    }).fail(function(error) {
+        console.log('Oops... ' + JSON.stringify(error));
+    });
+});
+</script>

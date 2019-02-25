@@ -5,121 +5,156 @@
     <meta charset="utf-8">
     <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400|Rubik:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Rubik:300,400,700" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="stylesheets/app.css">
     <!-- Generate using http://realfavicongenerator.net/ -->
 
 
     
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
   </head>
   <body>
-    <nav class="nav">
-  <ul class="is-pulled-right">
-    <li><a href="">Work</a></li>
-    <li><a href="">Contact</a></li>
-  </ul>
-</nav>
-
     
   <header class="header">
   <div class="columns">
     <div class="column">
       <h1>
-        I’m <b>Antonija</b> - a freelance <b>front-end developer</b> based in Zagreb. I am a <b>glue</b> <br /> that holds back-end developers and designers <b>together</b>.
+        I’m <b>Antonija</b> - a freelance <b>front-end developer</b> based in Zagreb. I am a <b>glue</b> <br /> that holds back-end developers and designers <b>together.</b>
       </h1>
     </div>
   </div>
 </header>
 
   <section class="skills-section">
-  <div class="container">
-    <div class="columns">
-      <div class="column">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 offset-sm-2 col-md-4 offset-md-0 skills-column">
         <h2 class="skills-heading is-uppercase has-text-weight-bold">Skills</h2>
         <p class="skills-description">In my career so far I have solved many problems with HTML, CSS, Bootstrap, Bulma, Js, React.js and Figma</p>
       </div>
-      <div class="column is-offset-1">
+      <div class="col-xs-12 col-sm-8 offset-sm-2 col-md-4 offset-md-0 skills-column">
         <h2 class="skills-heading is-uppercase has-text-weight-bold">Mentoring</h2>
-        <p class="skills-description">I have helped plenty of students with projects. We debugged together, researched many issues, looked for answers, read the docs and solved the problem</p>
+        <p class="skills-description">I have helped plenty of students with their projects. We debugged together, researched many issues, looked for answers, read the docs and solved many problems together</p>
       </div>
-      <div class="column is-offset-1">
+      <div class="col-xs-12 col-sm-8 offset-sm-2 col-md-4 offset-md-0 skills-column">
         <h2 class="skills-heading is-uppercase has-text-weight-bold">Tools</h2>
-        <p class="skills-description">My workflow is enhanced with Webpack, Gulp, Jira, Trello, npm and yarn packages. I like to keep dependecies as light as possible, though</p>
+        <p class="skills-description">My workflow is enhanced with Webpack, Gulp, Jira, Trello, npm and yarn packages. I like to keep dependecies as light as possible</p>
       </div>
     </div>
   </div>
 </section>
 
-  <section class="portfolio-section container">
-  <div class="columns">
-    <div class="column has-text-centered">
-      <h3 class="column-title">Client Work</h3>
+  <section class="portfolio-section">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h2 class="column-title">Client Work</h2>
+      </div>
     </div>
+    <div class="row row-client">
+      <div class="col-xs-12 col-sm-6 col-lg-4 portfolio-column">
+        <a href="https://www.craftstrom.com" class="portfolio-link" target="_blank">
+          <div class="column-content has-text-white">
+            <h2>Craftstrom</h2>
+            <p>React Native app that connects to solar panels</p>
+            <small>- Handling API requests within React Native</small>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-lg-4 portfolio-column">
+        <a href="https://codeinstitute.net/" class="portfolio-link" target="_blank">
+          <div class="column-content has-text-white">
+            <h2>Code Institute</h2>
+            <p>Irish coding bootcamp, from zero to hero</p>
+            <small>- Implemented new UI, created course content</small>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-lg-4 portfolio-column">
+        <a href="https://antonijasimic.bitbucket.io/kwikdroid/kwikdroid1.png" class="portfolio-link" target="_blank">
+          <div class="column-content has-text-white">
+            <h2>Kwikdroid</h2>
+            <p>RoR app that handles company's expenses</p>
+            <small>- Implemented new UI into RoR</small>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-lg-4 portfolio-column">
+        <a href="https://antonijasimic.bitbucket.io/tint/index.html" class="portfolio-link" target="_blank">
+          <div class="column-content has-text-white">
+            <h2>Tint</h2>
+            <p>Several marketing pages</p>
+            <small>- Implemented new UI into Jekyll</small>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-lg-4 portfolio-column">
+        <a href="https://antonijasimic.bitbucket.io/peaks/index.html" class="portfolio-link" target="_blank">
+          <div class="column-content has-text-white">
+            <h2>Peaks</h2>
+            <p>Template for digital agencies</p>
+            <small>- Coded template from scratch</small>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-lg-4 portfolio-column">
+        <a href="https://antonijasimic.bitbucket.io/platform/index.html" class="portfolio-link" target="_blank">
+          <div class="column-content has-text-white">
+            <h2>Dashboard</h2>
+            <p>App that handles cows on the farms</p>
+            <small>- Customized Chart.js and CSS</small>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center">
+        <h2 class="column-title">Playground</h2>
+      </div>
+    </div>
+
+    <div class="row row-playground">
+      <div class="col-xs-12 col-sm-6 col-lg-4 portfolio-column">
+        <a href="https://text-hover-effects.herokuapp.com/" class="portfolio-link" target="_blank">
+          <div class="column-content has-text-white">
+            <h2>Text hover effects</h2>
+            <p>Scss library for hover and click effects</p>
+            <small>- Front-end player</small>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-lg-4 portfolio-column">
+        <a href="http://showmethereddits.herokuapp.com/" class="portfolio-link" target="_blank">
+          <div class="column-content has-text-white">
+            <h2>Show me the reddits</h2>
+            <p>React.js project that filters reddits with a call to API</p>
+            <small>- Front-end player</small>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-lg-4 portfolio-column">
+        <a href="https://github.com/tonkec/student_sessions" class="portfolio-link" target="_blank">
+          <div class="column-content has-text-white">
+            <h2>Student's sessions</h2>
+            <p>React.js app that lists all sessions with my students</p>
+            <small>- Front-end player</small>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
   </div>
-
-  <div class="columns columns-client">
-    <div class="column portfolio-column craftstrom">
-      <div class="column-content has-text-white">
-        <h2>Craftstrom</h2>
-        <p>React Native app that connects to solar panels</p>
-        <small>- Front-end dev</small>
-      </div>
-    </div>
-
-    <div class="column portfolio-column craftstrom">
-      <div class="column-content has-text-white">
-        <h2>Kwikdroid</h2>
-        <p>RoR app that handles company's expenses</p>
-        <small>- Front-end dev</small>
-      </div>
-    </div>
-  </div>
-
-  <div class="columns columns-client">
-    <div class="column portfolio-column craftstrom">
-      <div class="column-content has-text-white">
-        <h2>Code Institute</h2>
-        <p>Bunch of stuff</p>
-        <small>- Front-end dev</small>
-      </div>
-    </div>
-
-    <div class="column portfolio-column craftstrom">
-      <div class="column-content has-text-white">
-        <h2>Peaks</h2>
-        <p>Template for digital agencies</p>
-        <small>- Front-end dev</small>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="columns">
-    <div class="column has-text-centered">
-      <h3 class="column-title">Playground</h3>
-    </div>
-  </div>
-
-  <div class="columns columns-playground">
-    <div class="column portfolio-column craftstrom">
-      <div class="column-content has-text-white">
-        <h2>Text hover effects</h2>
-        <p>Scss library for hover and click effects</p>
-        <small>- Front-end player</small>
-      </div>
-    </div>
-
-    <div class="column portfolio-column craftstrom">
-      <div class="column-content has-text-white">
-        <h2>Show me the reddits</h2>
-        <p>React.js project that filters reddits</p>
-        <small>- Front-end player</small>
-      </div>
-    </div>
-  </div>
-
-
 </section>
 
   <section class="contact-section">
@@ -128,42 +163,69 @@
       <h2 class="has-text-weight-semibold	">Say hi!</h2>
     </div>
   </div>
-  <div class="columns is-centered">
-    <div class="column is-2">
-      <div class="field">
-        <div class="control">
-          <input class="input" type="text" value="Name">
+  <form id="form" method="post">
+    <div class="columns is-centered">
+      <div class="column is-2">
+        <div class="field">
+          <div class="control">
+            <input type="text" required  name="from_name" placeholder="Your Name">
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-2">
+        <div class="field">
+          <div class="control">
+            <input type="text" required placeholder="Your Email">
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="column is-2">
-
-      <div class="field">
-        <div class="control">
-          <input class="input" type="text" value="Email">
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="columns is-centered">
-    <div class="column is-4">
-      <div contenteditable>
-          Hello, Antonija
+    <div class="columns is-centered">
+      <div class="column is-4">
+        <textarea name="message_html"rows="5" placeholder="Message"></textarea>
       </div>
     </div>
-  </div>
 
-  <div class="columns is-centered">
-    <div class="column is-4">
-      <a class="button is-pulled-right is-black">Send</a>
+    <div class="columns is-centered">
+      <div class="column is-4">
+        <button class="button is-pulled-right is-black" type="submit">Send</button>
+      </div>
     </div>
-  </div>
+  </form>
 </section>
 
-  <section class="footer-section"></section>
+<script>
+  $("#form").on("submit", function(event) {
+
+    event.preventDefault(); // prevent reload
+
+    var formData = new FormData(this);
+    formData.append('service_id', 'gmail');
+    formData.append('template_id', 'template_4cXwGrgd');
+    formData.append('user_id', 'user_LOSuz8pR7cowgxlm0LOa5');
+
+    $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+        type: 'POST',
+        data: formData,
+        contentType: false, // auto-detection
+        processData: false // no need to parse formData to string
+    }).done(function() {
+        console.log('Your mail is sent!');
+    }).fail(function(error) {
+        console.log('Oops... ' + JSON.stringify(error));
+    });
+});
+</script>
+
+  <section class="footer-section">
+  <ul class="footer-list">
+    <li><a href="https://github.com/tonkec" target="_blank">Github</a></li>
+    <li><a href="https://codepen.io/tonkec/" target="_blank">Codepen</a></li>
+    <li><a href="https://stackoverflow.com/users/2504334/antonija-%C5%A0imi%C4%87" target="_blank">Stackoverflow</a></li>
+  </ul>
+</section>
 
 
     
