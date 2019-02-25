@@ -1,7 +1,7 @@
 .header {
   padding: 100px 0;
-  background-color: #43BCCD;
-  color: white;
+  background-color: $yellow;
+  color: #000;
   @media (min-width: 500px) {
     padding: 100px 30px;
   }
