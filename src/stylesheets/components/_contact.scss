@@ -42,7 +42,7 @@
     background-color: $yellow;
     border: none;
     padding: 5px 0;
-    color: #292929;
+    color: #000;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     border-radius: 5px;
@@ -69,8 +69,15 @@
   }
 }
 
-::placeholder {
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #292929;
-  opacity: .7;
-  font-size: 1.2rem;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #292929;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #292929;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #292929;
 }
