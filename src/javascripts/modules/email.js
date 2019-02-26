@@ -2,7 +2,7 @@ $("#form").on("submit", function(event) {
   event.preventDefault(); // prevent reload
   $(".msg").show();
   $(".msg").append(`
-    <span class="text">Sending...</span> <span class="float-right x">X</span>
+    <span class="text">Sending...</span> <span class="float-right x">&#x2716;</span>
   `)
   var formData = new FormData(this);
   formData.append('service_id', 'gmail');
@@ -16,7 +16,7 @@ $("#form").on("submit", function(event) {
       processData: false // no need to parse formData to string
   }).done(function() {
       $(".text").replaceWith(`
-        Message Sent! I will get back to you soon :D
+        Message Sent! I will get back to you soon 🧙
       `)
       $(".x").click(() => {$(".msg").remove()})
   }).fail(function(error) {
