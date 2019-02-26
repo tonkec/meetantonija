@@ -3,6 +3,13 @@ body, html {
   padding: 0;
 }
 
+a {
+	&:focus, &:focus:active {
+		margin: 0;
+		outline: $yellow solid 1px;
+	}
+}
+
 section {
   background-color: $white;
   z-index: 1;

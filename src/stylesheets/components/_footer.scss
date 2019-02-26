@@ -1,13 +1,29 @@
 .footer-section {
   background-color: #292929;
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: -1;
+  text-align: center;
+  @media (min-width: 992px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    text-align: left;
+  }
   ul {
     list-style: none;
+    padding-left: 0px;
+
+    li {
+      margin-bottom: 10px;
+      @media (min-width: 992px) {
+        margin-bottom: 0px;
+      }
+    }
   }
   a {
     color: $white;
@@ -19,6 +35,9 @@
     position: relative;
     margin-bottom: 7px;
     transition: background-color .3s ease-in-out, color .3s ease-in-out;
+    @media (min-width: 992px) {
+      font-size: .9rem;
+    }
     &:before {
       content: "";
       width: 100%;

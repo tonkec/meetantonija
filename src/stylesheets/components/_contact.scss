@@ -1,8 +1,11 @@
 .contact-section {
-  padding: 120px 0 120px;
+  padding: 70px 0 70px;
   background-color: #fafafa;
-  margin-bottom: 250px;
-  position: relative;
+  margin-bottom: 158px;
+  @media (min-width: 480px) {
+    padding: 120px 0 120px;
+    margin-bottom: 127px;
+  }
   h2 {
     color: #292929;
     margin-bottom: 50px;
@@ -34,7 +37,10 @@
   }
 
   input {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
+    @media (min-width: 992px) {
+      margin-bottom: 70px;
+    }
   }
 
   button {
@@ -45,9 +51,9 @@
     color: #000;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
-    border-radius: 5px;
     margin-top: 10px;
     cursor: pointer;
+    border-radius: 3px;
     border: 2px solid #000;
   }
 
@@ -72,6 +78,7 @@
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #292929;
+  font-size: 1rem;
 }
 ::-moz-placeholder { /* Firefox 19+ */
   color: #292929;

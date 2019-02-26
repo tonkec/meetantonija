@@ -6,43 +6,16 @@
     <title>{% block title %}{{ title }}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400|Roboto:100,300,400,500,700|Rubik:300,400,700" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="stylesheets/app.css">
     {% include "shared/app-icons.html" %}
     {% block head %}{% endblock %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.js"></script>
+    <script type="text/javascript" src="javascripts/app.js"></script>
   </head>
   <body>
     {% block content %}
-
-    {% endblock %}
-    {% block javascript %}
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.js"></script>
-    <script type="text/javascript">
-      $(function() {
-        var canvas = document.createElement("canvas");
-        canvas.width = 24;
-        canvas.height = 24; var centerX = canvas.width / 2;
-        var centerY = canvas.height / 2;
-        var radius = 10;
-        var context = canvas.getContext("2d");
-        context.beginPath();
-        context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-        context.fillStyle = 'transparent';
-        context.fill();
-        context.lineWidth = 4;
-        context.strokeStyle = '#292929';
-        context.stroke();
-        var dataURL = canvas.toDataURL('image/png');
-        $('body').css('cursor', 'url('+dataURL+'), auto');
-
-        context.strokeStyle = '#f9c80e';
-        context.stroke();
-        var dataURL = canvas.toDataURL('image/png');
-        $('footer').css('cursor', 'url('+dataURL+'), auto');
-      });
-    </script>
     {% endblock %}
   </body>
 </html>
