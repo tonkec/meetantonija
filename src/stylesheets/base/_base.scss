@@ -5,8 +5,8 @@ body, html {
 
 a {
 	&:focus, &:focus:active {
-		margin: 0;
 		outline: $yellow solid 1px;
+    text-decoration: none;
 	}
 }
 
