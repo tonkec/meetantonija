@@ -9,3 +9,42 @@
 @import "components/contact";
 @import "components/testimonials";
 @import "components/footer";
+
+body {
+  // &:before {
+  //   content: "";
+  //   left: 0;
+  //   width: 0;
+  //   top: 0;
+  //   height: 10px;
+  //   display: block;
+  //   position: fixed;
+  //   z-index: 999;
+  //   transition: background-color .7s ease-in-out;
+  // }
+  //
+  // &.transparent {
+  //
+  // }
+
+  &.no-scroll {
+    // &:before {
+    //   background-color: #292929;
+    //   width: 100%;
+    //   transition: width .3s ease-in-out;
+    // }
+  }
+}
+.no-scroll {
+  overflow: hidden !important;
+}
+
+.spinner {
+  background-color: #292929;
+  position: fixed;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
