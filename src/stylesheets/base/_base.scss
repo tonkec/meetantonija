@@ -5,6 +5,8 @@ body, html {
 
 section {
   background-color: $white;
+  z-index: 1;
+  position: relative;
 }
 
 body::-webkit-scrollbar {

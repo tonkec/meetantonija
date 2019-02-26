@@ -2,29 +2,13 @@
   padding: 50px 0;
   background-color: #fff;
   position: relative;
-  // &:before {
-  //   position: absolute;
-  //   background-color: #f9c80e;
-  //   width: 300px;
-  //   height: 300px;
-  //   bottom: -60%;
-  //   left: -30%;
-  //   border-radius: 100%;
-  //   transform: rotateZ(30deg);
-  //
-  //   @media (min-width: 768px) {
-  //     content: "";
-  //     bottom: -50%;
-  //     left: -20%;
-  //   }
-  //
-  //   @media (min-width: 1200px) {
-  //     bottom: -40%;
-  //     left: -15%;
-  //   }
-  // }
+
   @media (min-width: 1200px) {
     padding: 100px 0;
+  }
+
+  h2 {
+    margin-bottom: 40px;
   }
    blockquote {
      font-size: 1rem;
@@ -42,6 +26,7 @@
      border-bottom: 1.5px solid $yellow;
      display: inline;
      transition: background-color .3s ease-in-out;
+     border: 3px solid transparent;
      cursor: pointer;
      a {
        color: #292929;
@@ -63,12 +48,15 @@
   .carousel-indicators {
     bottom: -20px;
     cursor: pointer;
+    z-index: 999;
+    margin: 0;
+    padding: 30px 0;
     li {
-      width: 15px;
-      height: 15px;
+      width: 17px;
+      height: 17px;
       margin-left: 10px;
       background-color: transparent;
-      border: 2px solid #292929;
+      border: 3px solid #292929;
       transition: background-color .3s ease-in-out;
 
       &:hover, &.active {

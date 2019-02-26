@@ -182,7 +182,7 @@
     <div class="row">
       <div class="col-sm-8 offset-sm-2 text-center">
         <div class="bd-example">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
@@ -299,6 +299,7 @@
     <li><a href="https://codepen.io/tonkec/" target="_blank">Codepen</a></li>
     <li><a href="https://stackoverflow.com/users/2504334/antonija-%C5%A0imi%C4%87" target="_blank">Stackoverflow</a></li>
     <li><a href="https://www.meetup.com/S_CSS_Zagreb/" target="_blank">Meetup Organizer</a></li>
+    <li><a href="https://slides.com/tonkecpalonkec/" target="_blank">Teacher</a></li>
   </ul>
 </footer>
 
@@ -306,28 +307,28 @@
     
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.js"></script>
     <script type="text/javascript">
-    $(function() {
-      var canvas = document.createElement("canvas");
-      canvas.width = 24;
-      canvas.height = 24; var centerX = canvas.width / 2;
-      var centerY = canvas.height / 2;
-      var radius = 10;
-      var context = canvas.getContext("2d");
-      context.beginPath();
-      context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-      context.fillStyle = 'transparent';
-      context.fill();
-      context.lineWidth = 4;
-      context.strokeStyle = '#292929';
-      context.stroke();
-      var dataURL = canvas.toDataURL('image/png');
-      $('body').css('cursor', 'url('+dataURL+'), auto');
+      $(function() {
+        var canvas = document.createElement("canvas");
+        canvas.width = 24;
+        canvas.height = 24; var centerX = canvas.width / 2;
+        var centerY = canvas.height / 2;
+        var radius = 10;
+        var context = canvas.getContext("2d");
+        context.beginPath();
+        context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+        context.fillStyle = 'transparent';
+        context.fill();
+        context.lineWidth = 4;
+        context.strokeStyle = '#292929';
+        context.stroke();
+        var dataURL = canvas.toDataURL('image/png');
+        $('body').css('cursor', 'url('+dataURL+'), auto');
 
-      context.strokeStyle = '#f9c80e';
-      context.stroke();
-      var dataURL = canvas.toDataURL('image/png');
-      $('footer').css('cursor', 'url('+dataURL+'), auto');
-    });
+        context.strokeStyle = '#f9c80e';
+        context.stroke();
+        var dataURL = canvas.toDataURL('image/png');
+        $('footer').css('cursor', 'url('+dataURL+'), auto');
+      });
     </script>
     
   </body>
