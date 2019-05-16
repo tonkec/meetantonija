@@ -1,16 +1,99 @@
-<div class="portfolio-page">
-  <header class="">
-    <h1>Crafstrom</h1>
-  </header>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Meet Antonija | The Wizard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400|Roboto:100,300,400,500,700|Rubik:300,400,700"
+    />
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <!-- Generate using http://realfavicongenerator.net/ -->
+  </head>
+  <body>
+    <div class="spinner"></div>
 
-  <main>
-    <section>
-      <h2>What was my role in the crafstrom project?</h2>
-    </section>
+    <div class="portfolio-page portfolio">
+      <header class="portfolio-header">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h1>Craftstrom</h1>
+              <img src="./images/craftstrom1.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </header>
 
-    <section>
-      <h2>Link</h2>
-    </section>
-  </main>
+      <section class="portfolio-info">
+        <div class="container">
+          <div class="row">
+            <div class="offset-sm-1 col-sm-10 col-lg-6 offset-lg-3 section-col">
+              <h2>Description</h2>
+              <p class="portfolio-description">
+                Craftstrom enables users to connect to solar panels at their
+                homes. After the login, users are redirected to the dashboard
+                which renders two graphs that show the amount of generated solar
+                energy in the last week. They can also see the state of the
+                battery.
+              </p>
+            </div>
 
-</div>
+            <div class="offset-sm-1 col-sm-10 col-lg-6 offset-lg-3 section-col">
+              <h2>Technology</h2>
+              <p class="portfolio-description">
+                The app was built with React Native, customized both for Android
+                and iOS. Graphs were made with dc.js and d3.js. Besides those
+                app uses some cool react-native npm packages like tcomb,
+                animatable, moment.js, axios and plenty others.
+              </p>
+            </div>
+
+            <div class="offset-sm-1 col-sm-10 col-lg-6 offset-lg-3 section-col">
+              <h2>My role in the project</h2>
+              <p class="portfolio-description">
+                My task was to implement user interface with
+                react-native-elements and react-native and to handle user
+                authentication and authorization with ajax calls to the backend
+                api. User's token is stored using AsyncStorage. The app excited
+                me a lot because I was able to get my hands on JS and React
+                Native. It made me really happy that I can prove and test my JS
+                skills!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio-image-section">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12 offset-sm-0 col-lg-6 col-xl-4 offset-xl-2">
+              <img src="./images/craftstrom2.png" alt="" />
+            </div>
+
+            <div class="col-sm-12 col-lg-6 col-xl-4">
+              <img src="./images/craftstrom3.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.js"
+    ></script>
+    <script type="text/javascript" src="javascripts/app.js"></script>
+  </body>
+</html>
