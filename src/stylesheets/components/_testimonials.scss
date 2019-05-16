@@ -8,8 +8,10 @@
   figure {
     max-width: 400px;
     margin: 0 auto;
-    height: 200px;
     position: relative;
+    @media (min-width: 992px) {
+      height: 200px;
+    }
   }
    blockquote {
      font-size: 1.2rem;
@@ -23,6 +25,7 @@
       p {
         margin: 0;
         margin-bottom:5px;
+        display: inline-block;
           span {
             position: relative;
 
@@ -47,8 +50,11 @@
      font-size: 1rem;
      margin-top: 30px;
      cursor: pointer;
-     position: absolute;
      bottom: 0;
+
+     @media (min-width: 992px) {
+       position: absolute;
+      }
 
      a {
        color: $black;
