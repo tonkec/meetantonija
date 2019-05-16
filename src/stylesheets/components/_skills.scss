@@ -1,8 +1,8 @@
 .skills-section {
-  padding: 70px 20px 0px;
+  padding: 70px 20px 70px;
   @media (min-width: 900px) {
     padding-top: 80px;
-    padding-bottom: 0px;
+    padding-bottom: 70px;
   }
 
   @media (min-width: 1400px) {
@@ -22,13 +22,13 @@
   .skills-column {
     margin-bottom: 80px;
     @media (min-width: 1200px) {
-      padding-left: 40px;
+      padding: 0 20px;
       margin-bottom: 0;
     }
 
-    @media (min-width: 1200px) {
-      padding: 0 70px;
-      margin-bottom: 0;
+    @media (min-width: 1300px) {
+      padding-left: 40px;
+      padding-right: 40px;
     }
   }
 
@@ -38,10 +38,11 @@
     margin: 0;
     font-size: 1rem;
     line-height: 2.2;
-    color:#797979;
+    color: #797979;
 
     @media (min-width: 992px) {
       font-size: 1.1rem;
+      max-width: 450px;
     }
 
     span {
