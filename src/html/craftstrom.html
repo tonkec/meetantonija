@@ -1,16 +1,67 @@
-<div class="portfolio-page">
-  <header class="">
-    <h1>Crafstrom</h1>
+{% set title = 'Meet Antonija | The Wizard' %} {% extends
+'layouts/application.html' %} {% block content %}
+<div class="portfolio-page portfolio">
+  <header class="portfolio-header">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Craftstrom</h1>
+          <img src="./images/craftstrom1.png" alt="" />
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>What was my role in the crafstrom project?</h2>
-    </section>
+  <section class="portfolio-info">
+    <div class="container">
+      <div class="row">
+        <div class="offset-sm-1 col-sm-10 col-lg-6 offset-lg-3 section-col">
+          <h2>Description</h2>
+          <p class="portfolio-description">
+            Craftstrom enables users to connect to solar panels at their homes.
+            After the login, users are redirected to the dashboard which renders
+            two graphs that show the amount of generated solar energy in the
+            last week. They can also see the state of the battery.
+          </p>
+        </div>
 
-    <section>
-      <h2>Link</h2>
-    </section>
-  </main>
+        <div class="offset-sm-1 col-sm-10 col-lg-6 offset-lg-3 section-col">
+          <h2>Technology</h2>
+          <p class="portfolio-description">
+            The app was built with React Native, customized both for Android and
+            iOS. Graphs were made with dc.js and d3.js. Besides those app uses
+            some cool react-native npm packages like tcomb, animatable,
+            moment.js, axios and plenty others.
+          </p>
+        </div>
 
+        <div class="offset-sm-1 col-sm-10 col-lg-6 offset-lg-3 section-col">
+          <h2>My role in the project</h2>
+          <p class="portfolio-description">
+            My task was to implement user interface with react-native-elements
+            and react-native and to handle user authentication and authorization
+            with ajax calls to the backend api. User's token is stored using
+            AsyncStorage. The app excited me a lot because I was able to get my
+            hands on JS and React Native. It made me really happy that I can
+            prove and test my JS skills!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-image-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 offset-sm-0 col-lg-6 col-xl-4 offset-xl-2">
+          <img src="./images/craftstrom2.png" alt="" />
+        </div>
+
+        <div class="col-sm-12 col-lg-6 col-xl-4">
+          <img src="./images/craftstrom3.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
+{% endblock %}
