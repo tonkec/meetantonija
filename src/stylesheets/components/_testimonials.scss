@@ -9,68 +9,47 @@
     max-width: 400px;
     margin: 0 auto;
     position: relative;
+  }
+  blockquote {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: $black;
     @media (min-width: 992px) {
-      height: 200px;
+      font-size: 1.1rem;
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 5px;
+      display: inline-block;
+      line-height: 1.8;
+      color: #797979;
+      font-size: 1.1rem;
     }
   }
-   blockquote {
-     font-size: 1.2rem;
-     font-weight: 300;
-     line-height: 1.6;
-     color: $black;
-     @media (min-width: 992px) {
-       font-size: 1.1rem;
-     }
 
-      p {
-        margin: 0;
-        margin-bottom:5px;
-        display: inline-block;
-          span {
-            position: relative;
+  figcaption {
+    font-size: 1rem;
+    margin-top: 30px;
+    cursor: pointer;
 
-          //   &:before {
-          //     content: "~~~~~~~~~~~~";
-          //     font-size:1.7em;
-          //     font-weight: 700;
-          //     font-family: Times New Roman, Serif;
-          //     color: $black;
-          //     width: 100%;
-          //     position: absolute;
-          //     bottom: -28px;
-          //     left: -1px;
-          //     right: 0;
-          //     overflow: hidden;
-          // }
-        }
-      }
-   }
+    a {
+      color: $black;
+      text-decoration: none;
+      padding: 5px;
+      background-color: $yellow;
+      border: 1px solid #292929;
+    }
+  }
 
-   figcaption {
-     font-size: 1rem;
-     margin-top: 30px;
-     cursor: pointer;
-     bottom: 0;
-
-     @media (min-width: 992px) {
-       position: absolute;
-      }
-
-     a {
-       color: $black;
-       text-decoration: none;
-       padding: 5px;
-       background-color: $yellow;
-     }
-   }
-
-   .carousel-item {
-     height: 200px;
-     margin-top: 20px;
-     @media (min-width: 992px) {
-       margin-top: 30px;
-     }
-   }
+  .carousel-item {
+    height: 200px;
+    margin-top: 20px;
+    @media (min-width: 992px) {
+      margin-top: 30px;
+    }
+  }
 
   .carousel-indicators {
     bottom: -20px;
@@ -84,9 +63,10 @@
       margin-left: 10px;
       background-color: transparent;
       border: 3px solid #292929;
-      transition: background-color .3s ease-in-out;
+      transition: background-color 0.3s ease-in-out;
 
-      &:hover, &.active {
+      &:hover,
+      &.active {
         background-color: $yellow;
       }
     }
