@@ -8,23 +8,54 @@
   figure {
     max-width: 400px;
     margin: 0 auto;
+    height: 200px;
+    position: relative;
   }
    blockquote {
-     font-size: 1rem;
+     font-size: 1.2rem;
      font-weight: 300;
      line-height: 1.6;
      color: $black;
      @media (min-width: 992px) {
        font-size: 1.1rem;
      }
+
+      p {
+        margin: 0;
+        margin-bottom:5px;
+          span {
+            position: relative;
+
+            &:before {
+              content: "~~~~~~~~~~~~";
+              font-size:1.7em;
+              font-weight: 700;
+              font-family: Times New Roman, Serif;
+              color: $black;
+              width: 100%;
+              position: absolute;
+              bottom: -28px;
+              left: -1px;
+              right: 0;
+              overflow: hidden;
+          }
+        }
+      }
    }
 
    figcaption {
      font-size: 1rem;
-     margin-top: 12px;
-     display: inline;
-     transition: background-color .3s ease-in-out;
+     margin-top: 30px;
      cursor: pointer;
+     position: absolute;
+     bottom: 0;
+
+     a {
+       color: $black;
+       text-decoration: none;
+       padding: 5px;
+       background-color: $yellow;
+     }
    }
 
    .carousel-item {
@@ -57,32 +88,6 @@
 
   .testimonial-column {
     margin-bottom: 50px;
-    a {
-      color: $black;
-      text-decoration: none;
-      padding: 5px 0;
-
-      &:hover {
-        background-color: $yellow;
-        color: $black;
-      }
-    }
-
-  }
-
-  span {
-    position: relative;
-    padding-bottom: 2.5px;
-    &:before {
-      position: absolute;
-      content: "";
-      bottom: 0;
-      left: 0;
-      right: 0;
-      display: block;
-      height: 2px;
-      background-color: $black;
-    }
   }
 }
 
