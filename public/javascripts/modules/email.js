@@ -17,7 +17,7 @@ $("#form").on("submit", function(event) {
   })
     .done(function() {
       $(".text").replaceWith(`
-        Message Sent! I will get back to you soon 🧙
+        Message Sent! I will get back to you soon 🕶
       `);
       $(".x").click(() => {
         $(".msg").remove();
