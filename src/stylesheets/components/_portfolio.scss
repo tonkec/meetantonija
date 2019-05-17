@@ -153,13 +153,17 @@
   }
 
   .portfolio-description {
-    font-size: 1rem;
     text-align: left;
-    line-height: 2;
+    line-height: 1.8;
+
+    @media (min-width: 992px) {
+      font-size: 1rem;
+      line-height: 2;
+    }
   }
 
   .section-col {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   .portfolio-info {
@@ -268,11 +272,30 @@
   &.peaks {
     background-color: #000;
 
+    header {
+      img {
+        width: 100%;
+      }
+    }
+
+    .section-portfolio-data {
+      a {
+        word-break: break-all;
+      }
+    }
+
     .portfolio-image-section {
       background-color: #000;
       height: auto;
+      padding: 50px 0;
       img {
         width: 100%;
+      }
+
+      .row {
+        div {
+          margin-bottom: 0;
+        }
       }
     }
   }
