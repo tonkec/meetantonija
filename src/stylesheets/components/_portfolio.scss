@@ -104,6 +104,7 @@
 
 .portfolio-page {
   text-align: center;
+  font-family: "Raleway", sans-serif;
 
   header {
     padding: 15vh 0;
@@ -115,16 +116,32 @@
     font-size: 3rem;
     margin-bottom: 50px;
     text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-weight: 700;
   }
 
   .portfolio-image-section {
     padding: 50px 0;
     background-color: black;
+    height: 100vh;
+    overflow: auto;
+
+    img {
+      @media (min-width: 992px) {
+        width: auto;
+      }
+    }
   }
 
   .portfolio-description {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: left;
+    line-height: 2;
   }
 
   .section-col {
@@ -133,5 +150,26 @@
 
   .portfolio-info {
     padding: 70px 0;
+  }
+
+  .section-portfolio-data {
+    padding: 40px 0;
+    background-color: #fafafa;
+
+    @media (min-width: 992px) {
+      padding: 50px 0;
+    }
+  }
+
+  .row-data {
+    .col-sm-12 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      @media (min-width: 992px) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    }
   }
 }
