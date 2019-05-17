@@ -1,6 +1,6 @@
 $(window).bind("load", function() {
   $("body").addClass("no-scroll");
-  $(".spinner").fadeOut(500, () => {
+  $(".spinner").fadeOut(200, () => {
     $("body").removeClass("no-scroll");
   });
 });
