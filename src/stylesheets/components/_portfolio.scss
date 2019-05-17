@@ -111,15 +111,24 @@
     color: #f5f5f5;
     img {
       width: 100%;
+
+      @media (min-width: 992px) {
+        width: auto;
+      }
     }
   }
 
   h1 {
-    font-size: 4rem;
-    margin-bottom: 100px;
+    font-size: 2rem;
+    margin-bottom: 50px;
     text-transform: uppercase;
     font-weight: 700;
     font-family: "Roboto", sans-serif;
+
+    @media (min-width: 992px) {
+      font-size: 4rem;
+      margin-bottom: 100px;
+    }
   }
 
   h2 {
@@ -129,10 +138,11 @@
   }
 
   .portfolio-image-section {
-    padding: 50px 0;
-    height: 100vh;
+    padding: 50px;
+    height: auto;
 
     img {
+      width: 100%;
       @media (min-width: 992px) {
         width: auto;
       }
@@ -150,7 +160,11 @@
   }
 
   .portfolio-info {
-    padding: 70px 0;
+    padding: 50px 0;
+    @media (min-width: 992px) {
+      font-size: 4rem;
+      padding: 70px 0;
+    }
   }
 
   .section-portfolio-data {
@@ -179,7 +193,7 @@
 
     header {
       img {
-        width: auto;
+        width: 100%;
       }
     }
 
