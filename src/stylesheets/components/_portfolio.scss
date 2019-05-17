@@ -112,10 +112,11 @@
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 100px;
     text-transform: uppercase;
     font-weight: 700;
+    font-family: "Roboto", sans-serif;
   }
 
   h2 {
@@ -203,15 +204,31 @@
       background-color: $black;
       color: $white;
     }
+
+    dt {
+      font-weight: bold;
+    }
+    dd {
+      padding-left: 15px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      line-height: 1.8;
+    }
   }
 
-  dt {
-    font-weight: bold;
-  }
-  dd {
-    padding-left: 15px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    line-height: 1.8;
+  &.peaks {
+    background-color: #000;
+    header {
+      img {
+        width: 100%;
+      }
+    }
+    .portfolio-image-section {
+      background-color: #fafafa;
+      height: auto;
+      img {
+        width: 100%;
+      }
+    }
   }
 }
