@@ -13,11 +13,11 @@ $(function() {
   context.lineWidth = 4;
   context.strokeStyle = "#292929";
   context.stroke();
-  var dataURL = canvas.toDataURL("image/png");
-  $("body").css("cursor", "url(" + dataURL + "), auto");
+  var dataURLBlack = canvas.toDataURL("image/png");
+  $("body").css("cursor", "url(" + dataURLBlack + "), auto");
 
   context.strokeStyle = "#f9c80e";
   context.stroke();
-  var dataURL = canvas.toDataURL("image/png");
-  $("footer").css("cursor", "url(" + dataURL + "), auto");
+  var dataURLYellow = canvas.toDataURL("image/png");
+  $("footer, .nav").css("cursor", "url(" + dataURLYellow + "), auto");
 });

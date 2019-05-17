@@ -6,7 +6,7 @@
   right: 0;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 99;
   display: none;
 
   &.nav-shown {
@@ -42,26 +42,32 @@
 
 .btn-nav {
   border: none;
-  color: $black;
+  color: $white;
+  background-color: $black;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 1.7rem;
   text-transform: uppercase;
   position: fixed;
-  background-color: transparent;
   cursor: pointer;
   top: 15px;
   right: 15px;
+  z-index: 99;
+  padding: 7px 15px;
 }
 
 .btn-close {
   border: none;
   position: absolute;
-  background-color: transparent;
+  background-color: $white;
   cursor: pointer;
   top: 15px;
   right: 15px;
-  z-index: 9;
-  color: $white;
+  z-index: 991;
+  color: $black;
   text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 1.7rem;
+  padding: 7px 15px;
 }
