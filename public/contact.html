@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Meet Antonija | The Wizard</title>
+    <title>Meet Antonija | Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -90,99 +90,102 @@
   </head>
   <body>
     <div class="spinner"></div>
-    <section class="contact-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 text-center">
-            <h2 class="has-text-weight-semibold	">Say Hi!</h2>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-xs-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-            <form id="form" method="post">
-              <div class="row">
-                <div class="col-xs-12 col-sm-6">
-                  <div class="field">
-                    <div class="control">
-                      <input
-                        type="text"
-                        required
-                        name="from_name"
-                        placeholder="Your Name"
-                      />
+    <section class="contact-page">
+      <section class="contact-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 text-center">
+              <h2 class="has-text-weight-semibold	">Say Hi!</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+              <form id="form" method="post">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6">
+                    <div class="field">
+                      <div class="control">
+                        <input
+                          type="text"
+                          required
+                          name="from_name"
+                          placeholder="Your Name"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6">
+                    <div class="field">
+                      <div class="control">
+                        <input
+                          type="text"
+                          name="from_email"
+                          required
+                          placeholder="Your Email"
+                          pattern="[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="field">
+                      <div class="control">
+                        <textarea
+                          name="message_html"
+                          rows="5"
+                          placeholder="Message"
+                          required
+                        ></textarea>
+                        <button class="button float-right" type="submit">
+                          Send
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-xs-12 col-sm-6">
-                  <div class="field">
-                    <div class="control">
-                      <input
-                        type="text"
-                        name="from_email"
-                        required
-                        placeholder="Your Email"
-                        pattern="[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="field">
-                    <div class="control">
-                      <textarea
-                        name="message_html"
-                        rows="5"
-                        placeholder="Message"
-                        required
-                      ></textarea>
-                      <button class="button float-right" type="submit">
-                        Send
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="msg"></div>
-            </form>
+                <div class="msg"></div>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      <footer class="footer-section container-fluid">
+        <ul class="footer-list row">
+          <li class="col-sm-4 col-lg-12">
+            <a
+              href="https://drive.google.com/open?id=1s25bp7QEcM7-6JJqgAJmmBxLhNi6C1F5"
+              target="_blank"
+              >Resume</a
+            >
+          </li>
+          <li class="col-sm-4 col-lg-12">
+            <a href="https://github.com/tonkec" target="_blank">Github</a>
+          </li>
+          <li class="col-sm-4 col-lg-12">
+            <a href="https://codepen.io/tonkec/" target="_blank">Codepen</a>
+          </li>
+          <li class="col-sm-4 col-lg-12">
+            <a
+              href="https://stackoverflow.com/users/2504334/antonija-%C5%A0imi%C4%87"
+              target="_blank"
+              >Stackoverflow</a
+            >
+          </li>
+          <li class="col-sm-4 col-lg-12">
+            <a href="https://www.meetup.com/S_CSS_Zagreb/" target="_blank"
+              >Meetup</a
+            >
+          </li>
+          <li class="col-sm-4 col-lg-12">
+            <a href="https://slides.com/tonkecpalonkec/" target="_blank"
+              >Teacher</a
+            >
+          </li>
+        </ul>
+      </footer>
     </section>
-    <footer class="footer-section container-fluid">
-      <ul class="footer-list row">
-        <li class="col-sm-4 col-lg-12">
-          <a
-            href="https://drive.google.com/open?id=1s25bp7QEcM7-6JJqgAJmmBxLhNi6C1F5"
-            target="_blank"
-            >Resume</a
-          >
-        </li>
-        <li class="col-sm-4 col-lg-12">
-          <a href="https://github.com/tonkec" target="_blank">Github</a>
-        </li>
-        <li class="col-sm-4 col-lg-12">
-          <a href="https://codepen.io/tonkec/" target="_blank">Codepen</a>
-        </li>
-        <li class="col-sm-4 col-lg-12">
-          <a
-            href="https://stackoverflow.com/users/2504334/antonija-%C5%A0imi%C4%87"
-            target="_blank"
-            >Stackoverflow</a
-          >
-        </li>
-        <li class="col-sm-4 col-lg-12">
-          <a href="https://www.meetup.com/S_CSS_Zagreb/" target="_blank"
-            >Meetup</a
-          >
-        </li>
-        <li class="col-sm-4 col-lg-12">
-          <a href="https://slides.com/tonkecpalonkec/" target="_blank"
-            >Teacher</a
-          >
-        </li>
-      </ul>
-    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script
       type="text/javascript"

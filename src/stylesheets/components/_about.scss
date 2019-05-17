@@ -10,6 +10,7 @@
 
     img {
       width: 100%;
+      border: 2px solid $black;
     }
 
     .container-fluid {
@@ -25,8 +26,9 @@
     }
 
     .card {
-      background-color: #fff;
+      background-color: $yellow;
       padding: 15px;
+      border: 2px solid $black;
     }
 
     p {
