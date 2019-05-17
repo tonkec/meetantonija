@@ -1,7 +1,7 @@
 .nav {
   position: fixed;
   background-color: $black;
-  padding: 20px 10px;
+  padding: 15px 10px;
   bottom: 0;
   right: 0;
   z-index: 2;
@@ -15,10 +15,10 @@
     list-style: none;
     li {
       margin-right: 15px;
-      margin-bottom: 10px;
+      margin-bottom: 7px;
       a {
         color: $white;
-        font-size: 1rem;
+        font-size: 0.9rem;
         text-transform: uppercase;
       }
     }
