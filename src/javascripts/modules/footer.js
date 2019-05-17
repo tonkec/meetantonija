@@ -1,12 +1,14 @@
 function calculateHeight() {
-	var h = $(".footer-section").outerHeight();
-	$(".contact-section").css({'margin-bottom':h});
+  var h = $(".footer-section").outerHeight();
+  var section = $(".footer-section").prev();
+  console.log(section);
+  $(section).css({ "margin-bottom": h });
 }
 
 $(document).ready(() => {
-	calculateHeight();
+  calculateHeight();
 });
 
 $(window).resize(() => {
-	calculateHeight();
+  calculateHeight();
 });

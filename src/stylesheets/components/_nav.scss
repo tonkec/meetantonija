@@ -42,8 +42,9 @@
 
 .btn-nav {
   border: none;
-  color: $white;
-  background-color: $black;
+  color: $black;
+  background-color: $yellow;
+  border: 3px solid $black;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-size: 1.7rem;
