@@ -1,9 +1,16 @@
 .testimonials-section {
   background-color: #fff;
   position: relative;
-  padding: 130px 0;
+  padding: 50px 0;
+
+  @media (min-width: 992px) {
+    padding: 130px 0;
+  }
   h2 {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    @media (min-width: 992px) {
+      margin-bottom: 60px;
+    }
   }
   figure {
     max-width: 400px;
