@@ -1,7 +1,5 @@
 .nav {
   position: fixed;
-  background-color: $black;
-  padding: 15px 10px;
   bottom: 0;
   right: 0;
   top: 0;
@@ -9,8 +7,58 @@
   z-index: 99;
   display: none;
 
+  .left,
+  .right {
+    width: 100%;
+    float: left;
+    height: 50%;
+
+    @media (min-width: 992px) {
+      width: 50%;
+      height: 100%;
+    }
+  }
+
+  .container-nav {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .left {
+    background-color: $yellow;
+    position: relative;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .right {
+    background-color: $black;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+  }
+
   &.nav-shown {
     display: block;
+
+    .left {
+      transform: translateY(0);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .right {
+      transform: translateX(0);
+      transition: transform 0.5s ease-in-out;
+    }
   }
   ul {
     margin: 0;
@@ -19,16 +67,37 @@
     text-align: center;
     list-style: none;
     position: relative;
-    top: 50%;
     list-style: none;
 
     li {
       margin-right: 15px;
       margin-bottom: 7px;
       a {
-        color: $white;
-        font-size: 2rem;
+        font-size: 1rem;
         text-transform: uppercase;
+        @media (min-width: 992px) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    &.portfolio-list {
+      li {
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      a {
+        padding: 5px;
+        background-color: $yellow;
+        color: $black;
+        font-weight: 900;
+      }
+    }
+
+    &.list {
+      a {
+        color: $black;
+        font-weight: 900;
       }
     }
   }

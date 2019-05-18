@@ -14,7 +14,7 @@ $(function() {
   context.strokeStyle = "#292929";
   context.stroke();
   var dataURLBlack = canvas.toDataURL("image/png");
-  $("body").css("cursor", "url(" + dataURLBlack + "), auto");
+  $("body, nav .left").css("cursor", "url(" + dataURLBlack + "), auto");
 
   context.strokeStyle = "#f9c80e";
   context.stroke();
