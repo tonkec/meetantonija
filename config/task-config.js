@@ -1,11 +1,12 @@
 module.exports = {
-  html        : true,
-  images      : true,
-  fonts       : true,
-  static      : true,
-  svgSprite   : true,
-  ghPages     : true,
-  stylesheets : true,
+  html: true,
+  images: true,
+  fonts: true,
+  static: true,
+  svgSprite: true,
+  ghPages: true,
+  stylesheets: true,
+  javascripts: true,
 
   javascripts: {
     entry: {
@@ -19,11 +20,11 @@ module.exports = {
     server: {
       // should match `dest` in
       // path-config.json
-      baseDir: 'public'
+      baseDir: "public"
     }
   },
 
   production: {
     rev: true
   }
-}
+};
