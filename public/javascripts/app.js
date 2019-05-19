@@ -14,17 +14,21 @@ $(function() {
   context.strokeStyle = "#292929";
   context.stroke();
   var dataURLBlack = canvas.toDataURL("image/png");
-  $("body, nav .left").css("cursor", "url(" + dataURLBlack + "), auto");
+  $("body, .left").css("cursor", "url(" + dataURLBlack + "), auto");
 
   context.strokeStyle = "#f9c80e";
   context.stroke();
   var dataURLYellow = canvas.toDataURL("image/png");
-  $("footer, .nav").css("cursor", "url(" + dataURLYellow + "), auto");
+  $("footer, .right, .portfolio-header, .portfolio-image-section").css(
+    "cursor",
+    "url(" + dataURLYellow + "), auto"
+  );
 });
 
 $(".btn-nav, .btn-close").click(() => {
-  $(".nav").toggleClass("nav-shown");
+  $(".btn-nav").text((i, text) => (text === "MENU" ? "CLOSE" : "MENU"));
   $("body, html").toggleClass("no-scroll");
+  $(".left, .right").toggleClass("show");
 });
 
 $("#form").on("submit", function(event) {
