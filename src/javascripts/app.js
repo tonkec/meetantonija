@@ -60,7 +60,6 @@ $("#form").on("submit", function(event) {
 function calculateHeight() {
   var h = $(".footer-section").outerHeight();
   var section = $(".footer-section").prev();
-  console.log(section);
   $(section).css({ "margin-bottom": h });
 }
 
