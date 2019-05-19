@@ -15,7 +15,7 @@
 
   h1 {
     margin: 0;
-    font-weight: 100;
+    font-weight: 300;
     font-family: "Raleway", sans-serif;
     @media (min-width: 900px) {
       max-width: 800px;
@@ -42,5 +42,16 @@ b::selection {
 }
 
 b::selection::-moz-selection {
-  background: $white;
+  background: #292929;
+  color: $white;
+}
+
+h1::selection {
+  background-color: $black;
+  color: $yellow;
+}
+
+h1::-moz-selection {
+  background-color: $black;
+  color: $yellow;
 }
