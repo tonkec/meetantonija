@@ -35,7 +35,7 @@ $("#form").on("submit", function(event) {
   event.preventDefault(); // prevent reload
   $(".msg").show();
   $(".msg").append(`
-    <span class="text">Sending...</span> <span class="float-right x">&#x2716;</span>
+    <span class="text">Sending...</span>
   `);
   var formData = new FormData(this);
   formData.append("service_id", "gmail");
@@ -52,9 +52,11 @@ $("#form").on("submit", function(event) {
       $(".text").replaceWith(`
         Message Sent! I will get back to you soon 🕶
       `);
-      $(".x").click(() => {
+    })
+    .then(() => {
+      setTimeout(() => {
         $(".msg").remove();
-      });
+      }, 4000);
     })
     .fail(function(error) {
       console.log("Oops... " + JSON.stringify(error));
