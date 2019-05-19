@@ -46,6 +46,15 @@
     position: relative;
     list-style: none;
 
+    &.list {
+      a {
+        font-size: 1.5rem;
+        @media (min-width: 1200px) {
+          font-size: 2rem;
+        }
+      }
+    }
+
     li {
       margin-right: 15px;
       margin-bottom: 7px;
@@ -93,20 +102,21 @@
   border: 3px solid $black;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   position: fixed;
   cursor: pointer;
   top: 15px;
   right: 15px;
   z-index: 99;
-  padding: 7px 15px;
+  padding: 5px 12px;
 }
 
 .btn-close {
   border: none;
   position: absolute;
-  background-color: $white;
+  background-color: $yellow;
+  border: 3px solid $black;
   cursor: pointer;
   top: 15px;
   right: 15px;
@@ -115,6 +125,6 @@
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
-  font-size: 1.7rem;
-  padding: 7px 15px;
+  font-size: 1.5rem;
+  padding: 5px 12px;
 }
