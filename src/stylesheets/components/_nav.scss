@@ -1,98 +1,102 @@
-.nav {
+.left,
+.right {
+  float: left;
+  width: 100%;
+  height: 50%;
   position: fixed;
+  top: 0;
+  z-index: 99;
+
+  @media (min-width: 992px) {
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.container-nav {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left {
+  background-color: darken($yellow, 2%);
+  left: 0;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out 0.2s;
+
+  &.show {
+    transform: translateY(0);
+  }
+}
+
+.right {
+  background-color: $black;
+  transform: translateX(150%);
+  transition: transform 0.5s ease-in-out;
   bottom: 0;
   right: 0;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  display: none;
-
-  .left,
-  .right {
-    width: 100%;
-    float: left;
-    height: 50%;
-
-    @media (min-width: 992px) {
-      width: 50%;
-      height: 100%;
-    }
+  top: auto;
+  &.show {
+    transform: translateX(0);
   }
+}
 
-  .container-nav {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  position: relative;
+  list-style: none;
 
-  .left {
-    background-color: $yellow;
-    position: relative;
-  }
-
-  .right {
-    background-color: $black;
-  }
-
-  &.nav-shown {
-    display: block;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    text-align: center;
-    list-style: none;
-    position: relative;
-    list-style: none;
-
-    &.list {
-      a {
-        font-size: 1.5rem;
-        @media (min-width: 1200px) {
-          font-size: 2rem;
-        }
+  &.list {
+    a {
+      font-size: 1.5rem;
+      @media (min-width: 1200px) {
+        font-size: 2rem;
       }
     }
+  }
 
+  li {
+    margin-right: 15px;
+    margin-bottom: 7px;
+    a {
+      font-size: 1rem;
+      text-transform: uppercase;
+      @media (min-width: 992px) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &.portfolio-list {
     li {
-      margin-right: 15px;
-      margin-bottom: 7px;
-      a {
-        font-size: 1rem;
-        text-transform: uppercase;
-        @media (min-width: 992px) {
-          font-size: 1.6rem;
-        }
-      }
+      display: inline-block;
+      margin-bottom: 20px;
     }
-
-    &.portfolio-list {
-      li {
-        display: inline-block;
-        margin-bottom: 20px;
-      }
-      a {
-        padding: 5px;
-        background-color: $yellow;
-        color: $black;
-        font-weight: 900;
-      }
-    }
-
-    &.list {
-      a {
-        color: $black;
-        font-weight: 900;
-      }
+    a {
+      padding: 5px;
+      background-color: $yellow;
+      color: $black;
+      font-weight: 700;
     }
   }
 
-  .contact {
-    padding: 10px;
-    color: $yellow;
-    font-weight: 900;
+  &.list {
+    a {
+      color: $black;
+      font-weight: 700;
+    }
   }
+}
+
+.contact {
+  padding: 10px;
+  color: $yellow;
+  font-weight: 900;
 }
 
 .btn-nav {
@@ -108,23 +112,6 @@
   cursor: pointer;
   top: 15px;
   right: 15px;
-  z-index: 99;
-  padding: 5px 12px;
-}
-
-.btn-close {
-  border: none;
-  position: absolute;
-  background-color: $yellow;
-  border: 3px solid $black;
-  cursor: pointer;
-  top: 15px;
-  right: 15px;
-  z-index: 991;
-  color: $black;
-  text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-size: 1.5rem;
+  z-index: 999;
   padding: 5px 12px;
 }
