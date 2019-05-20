@@ -8,22 +8,19 @@
   },
   "dependencies": {
     "blendid": "^4.4.3",
-    "bulma": "^0.7.4",
     "emailjs-com": "^2.3.2",
-    "imagemin": "^6.1.0",
-    "imagemin-jpegtran": "^6.0.0",
-    "imagemin-pngquant": "^7.0.0",
-    "surge": "^0.20.1"
+    "global": "^4.3.2",
+    "surge": "^0.20.1",
+    "uglifycss": "^0.0.29"
   },
   "devDependencies": {
-    "clean-css-cli": "^4.3.0",
     "husky": "^2.3.0",
     "prettier": "^1.17.1",
     "pretty-quick": "^1.10.0"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "pretty-quick --staged && uglifycss public/stylesheets/app.css > public/stylesheets/app.min.css"
     }
   }
 }
