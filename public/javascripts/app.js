@@ -78,8 +78,8 @@ $(document).ready(() => {
   $(".spinner").fadeOut(200, () => {
     $("body").removeClass("no-scroll");
   });
-});
 
-$(window).resize(() => {
-  calculateHeight();
+  $(window).resize(() => {
+    calculateHeight();
+  });
 });
