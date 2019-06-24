@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "yarn run blendid"
+    "start": "yarn run blendid",
+    "build": "yarn run blendid -- build"
   },
   "dependencies": {
     "blendid": "^4.4.3",
