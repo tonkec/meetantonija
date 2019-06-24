@@ -21,5 +21,10 @@
     "husky": "^2.3.0",
     "prettier": "^1.17.1",
     "pretty-quick": "^1.10.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && uglifycss public/stylesheets/app.css > public/stylesheets/app.min.css"
+    }
   }
 }
