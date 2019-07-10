@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "npm run blendid",
-    "build": "npm run blendid -- build"
+    "start": "yarn run blendid",
+    "build": "yarn run blendid -- build"
   },
   "engines": {
     "node": ">=6.11.1"
