@@ -12,6 +12,7 @@
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
     "typeface-raleway": "^0.0.75",
+    "typeface-roboto": "^0.0.75",
     "typeface-rubik": "^0.0.72"
   },
   "scripts": {
@@ -37,7 +38,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && uglifycss public/stylesheets/app.css > public/stylesheets/app.min.css"
+      "pre-commit": "pretty-quick --staged"
     }
   }
 }
