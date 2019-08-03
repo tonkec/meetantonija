@@ -6,3 +6,6 @@ export const yellow = "#f9c80e";
 
 export const headerBg = yellow;
 export const footerBg = black1;
+export const portfolioBg = white1;
+
+export const topGutter = "100px";
