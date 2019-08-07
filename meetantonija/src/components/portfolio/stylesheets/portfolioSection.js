@@ -1,5 +1,5 @@
 import { css } from "emotion";
-import { portfolioBg, topGutter } from "../../../stylesheets/variables";
+import { portfolioBg, topGutter } from "stylesheets/variables";
 
 const portfolioSection = css({
   backgroundColor: portfolioBg,
