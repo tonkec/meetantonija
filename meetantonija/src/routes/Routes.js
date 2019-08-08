@@ -1,26 +1,21 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import ROUTES from "./routeNames";
 import Homepage from "pages/Homepage";
 import PortfolioItems from "components/portfolio/PortfolioItems";
+
+const components = Object.keys(PortfolioItems);
+
 const Routes = () => {
-  const { PIMSF_URL, CI_URL, CRAFTSTROM_URL, PEAKS_URL } = ROUTES;
-  let portfolioComponents = Object.keys(PortfolioItems);
-  let components = [];
-  // portfolioComponents.forEach((key) => (
-  //   components.push(portfolioComponents[key](url))
-  // ))
   return (
     <Switch>
       <Route exact path="/" component={Homepage} />
-      {portfolioComponents.map((portfolioComponent, i) => (
+      {components.map((component, i) => (
         <Route
-          path={CRAFTSTROM_URL}
-          component={PortfolioItems[portfolioComponent]}
+          path={`/portfolio/${components[i].toLowerCase()}`}
+          component={PortfolioItems[component]}
           key={i}
         />
       ))}
-      {}
     </Switch>
   );
 };
