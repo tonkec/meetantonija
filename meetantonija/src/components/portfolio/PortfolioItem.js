@@ -86,7 +86,7 @@ const PortfolioItem = ({ data, links }) => (
       <div className="container-fluid">
         <div className="row">
           {data.footerImages.map((image, i) => (
-            <div className="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3">
+            <div className="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3" key={i}>
               <img src={image} />
             </div>
           ))}
@@ -107,7 +107,7 @@ const PortfolioItem = ({ data, links }) => (
         </div>
       </div>
     </section>
-    {/* <Footer /> */}
+    <Footer />
   </div>
 );
 

@@ -7,7 +7,8 @@ import data from "components/data";
 
 class Navigation extends React.Component {
   state = {
-    visible: false
+    visible: false,
+    location: ""
   };
 
   toggleVisibility = () => {
@@ -23,6 +24,8 @@ class Navigation extends React.Component {
   };
 
   componentDidMount() {
+    let location = window.location.href;
+    this.setState({ location });
     document.addEventListener("keydown", this.escFunction, false);
   }
 
@@ -52,10 +55,10 @@ class Navigation extends React.Component {
             }`}
           >
             <ul className="navigation__list">
-              {data.items.map(item => {
+              {data.items.map((item, i) => {
                 let a = item.title.replace(/ /g, "").toLowerCase();
                 return (
-                  <li>
+                  <li key={i}>
                     <Link
                       to={a}
                       onClick={this.toggleVisibility}
