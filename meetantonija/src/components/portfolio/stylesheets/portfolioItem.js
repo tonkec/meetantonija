@@ -4,6 +4,7 @@ import { white1 } from "stylesheets/variables";
 let portfolioTopGutter = "80";
 
 const portfolioItem = css({
+  img: { width: "100%" },
   ".section-portfolio": {
     "&__header": {
       padding: "15vh 0",

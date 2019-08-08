@@ -3,15 +3,19 @@ import { Link } from "react-router-dom";
 import Footer from "components/footer";
 import portfolioItem from "./stylesheets/portfolioItem";
 import button from "stylesheets/button";
+
 const PortfolioItem = ({ data, links }) => (
   <div className={portfolioItem}>
     <header
-      className={`section-portfolio__header section-portfolio__header--${data.title.toLowerCase()}`}
+      className={`section-portfolio__header section-portfolio__header--${data.title
+        .replace(/ /g, "")
+        .toLowerCase()}`}
     >
       <div className="container">
         <div className="row">
           <div className="col-xs-8 col-sm-10 offset-sm-1 col-md-12 offset-md-0 text-center">
             <h1 className="section-portfolio__title">{data.title}</h1>
+            <img src={data.headerImage} />
           </div>
         </div>
       </div>
@@ -81,7 +85,11 @@ const PortfolioItem = ({ data, links }) => (
     <section className="section-portfolio__images">
       <div className="container-fluid">
         <div className="row">
-          <img src="" />
+          {data.footerImages.map((image, i) => (
+            <div className="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3">
+              <img src={image} />
+            </div>
+          ))}
         </div>
       </div>
     </section>

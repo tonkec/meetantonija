@@ -1,3 +1,15 @@
+import ci1 from "images/ci1.png";
+import ciHeader from "images/ci4.png";
+
+import craftstrom3 from "images/craftstrom3.png";
+import craftstrom1 from "images/craftstrom1.png";
+import craftstrom2 from "images/craftstrom2.png";
+
+import p1 from "images/p1.png";
+import p2 from "images/peaks2.jpeg";
+
+import pimsf from "images/pimsf.png";
+import pimsfGif from "images/pimsf.gif";
 const data = {
   items: [
     {
@@ -15,8 +27,8 @@ const data = {
         "User Interface":
           "My task was to implement user interface with react-native-elements and react-native and to handle user authentication and authorization with ajax calls to the backend api. User's token is stored using AsyncStorage. The app excited me a lot because I was able to get my hands on JS and React Native. It made me really happy that I can prove and test my JS skills!"
       },
-      headerImage: "",
-      footerImages: []
+      headerImage: craftstrom3,
+      footerImages: [craftstrom1, craftstrom2]
     },
     {
       title: "Code Institute",
@@ -37,16 +49,16 @@ const data = {
         Mentoring:
           "I have been mentoring (remotely) for 2 years at Code Institute. The major part of the mentorship sessions is focusing on the code quality of students' projects. I help students to think like professional developers from the very start of their coding career. The content agnosticism, don't repeat yourself, reusability and object orientation are principles that I encourage on every session. I advise my students to stay persistent, committed and curious."
       },
-      headerImage: "",
-      footerImages: []
+      headerImage: ciHeader,
+      footerImages: [ci1]
     },
     {
       title: "Peaks",
       projectLink: "https://antonijasimic.bitbucket.io/peaks/index.html",
-      client: "Craftstrom",
-      technology: "React Native",
+      client: "Supersuper",
+      technology: "HTML,CSS,JS,SCSS",
       completed: 2019,
-      link: "https://www.craftstrom.com/",
+      link: "https://www.supersuperagency.com/",
       description:
         "This is a bootstrap template for web and digital agencies. It is best used for showing portfolio and presenting work in general. Web features, such as preloader, parallax, slideshows, full-screen layout and responsivness, will impress your visitors",
       technologyDescription:
@@ -55,8 +67,8 @@ const data = {
         "User Interface":
           "My task was to implement user interface based on the design provided. The hardest part in development process was customization of parallax. It had to be compatible with swiper.js and also fully responsive. Biggest struggle was author section that has multiple parallax. The three images were not supposed to move at the same time which is not default behaviour of parallax plugin. Also, the text should have shown up on hover. And all of that needed to be responsive."
       },
-      headerImage: "",
-      footerImages: []
+      headerImage: p1,
+      footerImages: [p2]
     },
     {
       title: "Pimsf",
@@ -75,8 +87,8 @@ const data = {
         "Changelog History":
           "PIMSF can display different version of pipelines. If a constructor in the field changes something on the pipeline, they should report changes in the app. That report should create a new version of the pipeline. Such pipeline in PIMSF is perceived as a virtual pipeline. My task was to create a changelog history tree that will display each version of a pipeline. This is displayed as a tree where each new version is treated as a child, and each old version as a parent. We used Mermaid.js package to display such tree. Axios was used to get data points from API. Each pipeline in the tree can be deleted or approved. If it is approved, pipeline should change color to green. If it is deleted, it should be deleted from the history tree."
       },
-      headerImage: "",
-      footerImages: []
+      headerImage: pimsf,
+      footerImages: [pimsfGif]
     }
   ]
 };
