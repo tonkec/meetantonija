@@ -1,7 +1,7 @@
 import React from "react";
-import Homepage from "./pages/Homepage";
 import Routes from "./routes";
 import { BrowserRouter as Router } from "react-router-dom";
+import PortfolioItems from "components/portfolio/PortfolioItems";
 function App() {
   return (
     <div className="App">
