@@ -1,6 +1,6 @@
 import React from "react";
 import PortfolioItem from "./PortfolioItem";
-import data from "./data";
+import data from "components/data";
 let { items } = data;
 const PortfolioItems = {};
 let titles = items.map(item => item.title.replace(/ /g, ""));
