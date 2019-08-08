@@ -5,7 +5,9 @@ import portfolioItem from "./stylesheets/portfolioItem";
 import button from "stylesheets/button";
 const PortfolioItem = ({ data, links }) => (
   <div className={portfolioItem}>
-    <header className="section-portfolio__header">
+    <header
+      className={`section-portfolio__header section-portfolio__header--${data.title.toLowerCase()}`}
+    >
       <div className="container">
         <div className="row">
           <div className="col-xs-8 col-sm-10 offset-sm-1 col-md-12 offset-md-0 text-center">

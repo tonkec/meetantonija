@@ -7,7 +7,20 @@ const portfolioItem = css({
   ".section-portfolio": {
     "&__header": {
       padding: "15vh 0",
-      color: white1
+      color: white1,
+
+      "&--craftstrom": {
+        backgroundColor: "black"
+      },
+      "&--peaks": {
+        backgroundColor: "black"
+      },
+      "&--pimsf": {
+        backgroundColor: "#414141"
+      },
+      "&--codeinstitute": {
+        backgroundColor: "grey"
+      }
     },
 
     "&__title": {
@@ -23,6 +36,7 @@ const portfolioItem = css({
     },
 
     "&__about": {
+      backgroundColor: "#ffffff",
       padding: `${portfolioTopGutter}px`,
       dt: {
         fontSize: "1.2rem",
