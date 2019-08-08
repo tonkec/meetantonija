@@ -43,8 +43,8 @@ const portfolioItem = css({
         marginBottom: 20
       },
       dd: {
-        fontSize: "100%",
-        lineHeight: 1.8,
+        fontSize: "1rem",
+        lineHeight: 2,
         paddingLeft: 20,
         marginBottom: 40
       }
@@ -57,7 +57,7 @@ const portfolioItem = css({
     },
 
     "&__description": {
-      fontSize: "1rem",
+      fontSize: "1.1rem",
       lineHeight: 2,
       marginBottom: 40
     },
