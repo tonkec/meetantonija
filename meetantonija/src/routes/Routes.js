@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Homepage from "pages/Homepage";
-import PortfolioItems from "components/portfolio/PortfolioItems";
+import PortfolioItems from "components/portfolio";
 
 const components = Object.keys(PortfolioItems);
 
