@@ -14,7 +14,7 @@ const Routes = () => {
       <Route path="/about" component={Aboutpage} />
       {components.map((component, i) => (
         <Route
-          path={`/portfolio/${components[i].toLowerCase()}`}
+          path={`/${components[i].toLowerCase()}`}
           component={PortfolioItems[component]}
           key={i}
         />

@@ -4,7 +4,7 @@ import button from "stylesheets/button";
 import navigation from "./stylesheets/navigation";
 import navOpener from "./stylesheets/navOpener";
 import data from "components/data";
-
+import normalTitle from "components/helpers/normalTitle";
 class Navigation extends React.Component {
   state = {
     visible: false,
@@ -24,8 +24,7 @@ class Navigation extends React.Component {
   };
 
   componentDidMount() {
-    let location = window.location.href;
-    this.setState({ location });
+    console.log(this);
     document.addEventListener("keydown", this.escFunction, false);
   }
 
@@ -43,63 +42,62 @@ class Navigation extends React.Component {
         >
           MENU
         </button>
-        <nav className={`${navigation} ${visible ? "show" : ""}`}>
-          <div
-            className={`navigation__inner navigation__inner--left ${
-              visible ? "show" : ""
-            }`}
-          >
-            <ul className="navigation__list">
-              <li>
-                <Link to="/" onClick={this.toggleVisibility} className={button}>
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/about"
-                  onClick={this.toggleVisibility}
-                  className={button}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <a
-                  onClick={this.toggleVisibility}
-                  className={button}
-                  href="https://mytwocents.dev"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Mytwocents
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div
-            className={`navigation__inner navigation__inner--right ${
-              visible ? "show" : ""
-            }`}
-          >
-            <ul className="navigation__list">
-              {data.items.map((item, i) => {
-                let a = item.title.replace(/ /g, "").toLowerCase();
-                return (
-                  <li key={i}>
-                    <Link
-                      to={a}
-                      onClick={this.toggleVisibility}
-                      className={button}
-                    >
-                      {item.title}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </nav>
+        <div
+          className={`${navigation} navigation__inner navigation__inner--left ${
+            visible ? "show" : ""
+          }`}
+        >
+          <ul className="navigation__list">
+            <li>
+              <Link to="/" onClick={this.toggleVisibility} className={button}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
+                onClick={this.toggleVisibility}
+                className={button}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <a
+                onClick={this.toggleVisibility}
+                className={button}
+                href="https://mytwocents.dev"
+                target="_blank"
+                rel="noopener"
+              >
+                Mytwocents
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          className={`${navigation} navigation__inner navigation__inner--right ${
+            visible ? "show" : ""
+          }`}
+        >
+          <ul className="navigation__list">
+            {data.items.map((item, i) => {
+              let title = normalTitle(item.title);
+              console.log(`${this.state.location}/${title}`);
+              return (
+                <li key={i}>
+                  <Link
+                    to={`${this.state.location}/${title}`}
+                    onClick={this.toggleVisibility}
+                    className={button}
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </>
     );
   }
