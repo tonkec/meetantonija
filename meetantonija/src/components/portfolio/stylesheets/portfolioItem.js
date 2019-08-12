@@ -1,26 +1,20 @@
 import { css } from "emotion";
-import { white1 } from "stylesheets/variables";
+import { white1, yellow } from "stylesheets/variables";
 
 let portfolioTopGutter = "80";
 
 const portfolioItem = css({
   img: { width: "100%" },
+
   ".section-portfolio": {
     "&__header": {
       padding: "15vh 0",
       color: white1,
 
       "&--craftstrom": {
-        backgroundColor: "black"
-      },
-      "&--peaks": {
-        backgroundColor: "black"
-      },
-      "&--pimsf": {
-        backgroundColor: "#414141"
-      },
-      "&--codeinstitute": {
-        backgroundColor: "grey"
+        img: {
+          width: 500
+        }
       }
     },
 
@@ -66,6 +60,15 @@ const portfolioItem = css({
     "&__links": {
       backgroundColor: white1,
       padding: `${portfolioTopGutter}px`
+    },
+
+    "&__images": {
+      padding: `${portfolioTopGutter}px`,
+      "&--craftstrom": {
+        img: {
+          width: 300
+        }
+      }
     }
   }
 });
