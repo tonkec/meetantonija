@@ -6,7 +6,10 @@ const nav = css({
   bottom: 0,
   right: 0,
   left: 0,
-  zIndex: 99,
+
+  "&.show": {
+    zIndex: 99
+  },
   ".navigation__inner": {
     float: "left",
     height: "100%",

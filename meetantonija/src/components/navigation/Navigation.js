@@ -43,7 +43,7 @@ class Navigation extends React.Component {
         >
           MENU
         </button>
-        <nav className={navigation}>
+        <nav className={`${navigation} ${visible ? "show" : ""}`}>
           <div
             className={`navigation__inner navigation__inner--left ${
               visible ? "show" : ""
