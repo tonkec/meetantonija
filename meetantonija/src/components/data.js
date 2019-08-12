@@ -13,29 +13,11 @@ import pimsfGif from "images/pimsf.gif";
 const data = {
   items: [
     {
-      title: "Craftstrom",
-      client: "Craftstrom",
-      technology: "React Native",
-      completed: 2019,
-      link: "https://www.craftstrom.com/",
-      projectLink: "https://async-energy.com/",
-      description:
-        "Craftstrom enables users to connect to solar panels at their homes. After the login, users are redirected to the dashboard which renders two graphs that show the amount of generated solar energy in the last week. They can also see the state of the battery.",
-      technologyDescription:
-        "The app was built with React Native, customized both for Android and iOS. Graphs were made with dc.js and d3.js. Besides those app uses some cool react-native npm packages like tcomb, animatable, moment.js, axios and plenty others.",
-      myRole: {
-        "User Interface":
-          "My task was to implement user interface with react-native-elements and react-native and to handle user authentication and authorization with ajax calls to the backend api. User's token is stored using AsyncStorage. The app excited me a lot because I was able to get my hands on JS and React Native. It made me really happy that I can prove and test my JS skills!"
-      },
-      headerImage: craftstrom3,
-      footerImages: [craftstrom1, craftstrom2]
-    },
-    {
       title: "Code Institute",
       client: "Code Institute",
       technology: "HTML, CSS, JS, SCSS ",
       projectLink: "https://courses.codeinstitute.net/",
-      completed: 2019,
+      completed: 2018,
       link: "https://codeinstitute.net/",
       description:
         "Code Institute is Dublin based bootcamp that trains students from zero to hero, turning them into real porfessional developers with large scope of skills, in front-end and back-end. Students with diploma from Code Institute are eligible to apply to almost any software developer job.",
@@ -57,7 +39,7 @@ const data = {
       projectLink: "https://antonijasimic.bitbucket.io/peaks/index.html",
       client: "Supersuper",
       technology: "HTML,CSS,JS,SCSS",
-      completed: 2019,
+      completed: 2015,
       link: "https://www.supersuperagency.com/",
       description:
         "This is a bootstrap template for web and digital agencies. It is best used for showing portfolio and presenting work in general. Web features, such as preloader, parallax, slideshows, full-screen layout and responsivness, will impress your visitors",
@@ -89,6 +71,24 @@ const data = {
       },
       headerImage: pimsf,
       footerImages: [pimsfGif]
+    },
+    {
+      title: "Craftstrom",
+      client: "Craftstrom",
+      technology: "React Native",
+      completed: 2019,
+      link: "https://www.craftstrom.com/",
+      projectLink: "https://async-energy.com/",
+      description:
+        "Craftstrom enables users to connect to solar panels at their homes. After the login, users are redirected to the dashboard which renders two graphs that show the amount of generated solar energy in the last week. They can also see the state of the battery.",
+      technologyDescription:
+        "The app was built with React Native, customized both for Android and iOS. Graphs were made with dc.js and d3.js. Besides those app uses some cool react-native npm packages like tcomb, animatable, moment.js, axios and plenty others.",
+      myRole: {
+        "User Interface":
+          "My task was to implement user interface with react-native-elements and react-native and to handle user authentication and authorization with ajax calls to the backend api. User's token is stored using AsyncStorage. The app excited me a lot because I was able to get my hands on JS and React Native. It made me really happy that I can prove and test my JS skills!"
+      },
+      headerImage: craftstrom3,
+      footerImages: [craftstrom1, craftstrom2]
     }
   ]
 };
