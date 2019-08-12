@@ -48,7 +48,35 @@ class Navigation extends React.Component {
             className={`navigation__inner navigation__inner--left ${
               visible ? "show" : ""
             }`}
-          ></div>
+          >
+            <ul className="navigation__list">
+              <li>
+                <Link to="/" onClick={this.toggleVisibility} className={button}>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  onClick={this.toggleVisibility}
+                  className={button}
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <a
+                  onClick={this.toggleVisibility}
+                  className={button}
+                  href="https://mytwocents.dev"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Mytwocents
+                </a>
+              </li>
+            </ul>
+          </div>
           <div
             className={`navigation__inner navigation__inner--right ${
               visible ? "show" : ""
