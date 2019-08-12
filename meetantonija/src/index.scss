@@ -3,3 +3,23 @@ html {
   margin: 0;
   font-family: "Raleway", sans-serif;
 }
+
+div[class*="craftstrom"] {
+  background-color: black;
+}
+
+*[class*="pimsf"] {
+  background-color: #414141;
+}
+
+*[class*="craftstrom"] {
+  background-color: black;
+}
+
+*[class*="peaks"] {
+  background-color: black;
+}
+
+*[class*="codeinstitute"] {
+  background-color: grey;
+}
