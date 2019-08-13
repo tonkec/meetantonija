@@ -30,6 +30,11 @@ const nav = css({
       transform: "translateX(150%)",
       "&.show": {
         transform: "translateX(0)"
+      },
+      a: {
+        "&:hover": {
+          borderColor: yellow
+        }
       }
     }
   },
