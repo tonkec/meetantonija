@@ -81,7 +81,7 @@ class Navigation extends React.Component {
           }`}
         >
           <ul className="navigation__list">
-            {data.items.map((item, i) => {
+            {data.client.map((item, i) => {
               let title = normalTitle(item.title);
               console.log(`${this.state.location}/${title}`);
               return (

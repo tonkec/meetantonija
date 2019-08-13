@@ -10,8 +10,12 @@ import p2 from "images/peaks2.jpeg";
 
 import pimsf from "images/pimsf.png";
 import pimsfGif from "images/pimsf.gif";
+
+import s2 from "images/s2.png";
+import s3 from "images/s3.png";
+
 const data = {
-  items: [
+  client: [
     {
       title: "Code Institute",
       client: "Code Institute",
@@ -89,6 +93,37 @@ const data = {
       },
       headerImage: craftstrom3,
       footerImages: [craftstrom1, craftstrom2]
+    }
+  ],
+  hobby: [
+    {
+      title: "Sessions Tracker",
+      technology: "React/Redux",
+      completed: 2019,
+      link: "https://sessionstracker.herokuapp.com",
+      code: "https://github.com/tonkec/student_sessions",
+      description:
+        "This is an app that might help me CRUD sessions that I have with my students.",
+      technologyDescription:
+        "React, Redux, Firebase, Thunk, Recharts, Faker.js, Lodash.js, Moment.js, react-dates, create-react-app, Heroku",
+      about:
+        "My idea was to get more meaningful data for the sessions that I have with students. The data should be presented in elegant way. The most interesting part to me was grouping data with lodash. The data received from firebase was not ready to be injected into Recharts immediately. It should be cleaned up and turned into cleaner objects. It was done with ._group function from lodash. I am so grateful for this library, it made my life much easier!",
+      headerImage: s3,
+      footerImages: [s2]
+    },
+    {
+      title: "Text hover effects",
+      technology: "React/Redux",
+      completed: 2019,
+      link: "https://text-hover-effects.herokuapp.com/",
+      code: "https://github.com/tonkec/text_hover_effects",
+      description:
+        "This is a scss mixin library for effects trigered on hover and click. This library brings a clean fresh look to links and other typography elements. It allows customization of the different CSS properties, such as speed, delays, easing, colors, padding and more. It is also available in the CSS code. All transitions can be triggered on hover/focus or click.",
+      technologyDescription: "Scss for library, React.js and Heroku for demo",
+      about:
+        "My idea was to have at one place different effects that can be triggered on click or hover. This library should save up developer's time. Any effects can be customized with passing arguments to mixins. Effects are initialised with CSS classes. I put high effort in keeping the code clean and reusable.",
+      headerImage: s3,
+      footerImages: [s2]
     }
   ]
 };

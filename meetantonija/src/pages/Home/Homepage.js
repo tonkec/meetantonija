@@ -4,6 +4,7 @@ import Footer from "components/footer";
 import PortfolioContainer from "./PortfolioContainer";
 import TestimonalSection from "./TestimonalSection";
 import SkillsSection from "./SkillsSection";
+import Contact from "components/contact";
 const Homepage = () => (
   <>
     <Header>
@@ -18,6 +19,7 @@ const Homepage = () => (
     <SkillsSection />
     <PortfolioContainer />
     <TestimonalSection />
+    <Contact />
     <Footer />
   </>
 );
