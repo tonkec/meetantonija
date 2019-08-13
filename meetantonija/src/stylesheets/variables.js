@@ -10,3 +10,4 @@ export const footerBg = black1;
 export const portfolioBg = white1;
 
 export const topGutter = "100px";
+export const sectionGutter = "130px 100px";

@@ -3,7 +3,7 @@ import Header from "components/header";
 import Footer from "components/footer";
 import PortfolioContainer from "./PortfolioContainer";
 import TestimonalSection from "./TestimonalSection";
-
+import SkillsSection from "./SkillsSection";
 const Homepage = () => (
   <>
     <Header>
@@ -15,6 +15,7 @@ const Homepage = () => (
         </h1>
       </div>
     </Header>
+    <SkillsSection />
     <PortfolioContainer />
     <TestimonalSection />
     <Footer />

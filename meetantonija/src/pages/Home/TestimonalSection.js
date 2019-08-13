@@ -42,7 +42,6 @@ const TestimonalSection = () => (
               </p>
             </blockquote>
             <figcaption>
-              {" "}
               <a
                 href="https://www.supersuperagency.com/"
                 rel="noopener"
@@ -65,7 +64,6 @@ const TestimonalSection = () => (
               </p>
             </blockquote>
             <figcaption>
-              {" "}
               <a
                 href="https://github.com/maria-mir"
                 rel="noopener"
