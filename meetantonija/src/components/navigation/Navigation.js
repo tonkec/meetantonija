@@ -70,7 +70,7 @@ class Navigation extends React.Component {
                 target="_blank"
                 rel="noopener"
               >
-                Mytwocents
+                Blog
               </a>
             </li>
           </ul>

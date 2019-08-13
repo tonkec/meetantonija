@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "components/header";
 import Footer from "components/footer";
-
+import ContactContainer from "components/contact";
 import async from "images/about/async_labs.jpg";
 import borders from "images/about/borders_none.jpg";
 import code_institute from "images/about/code_institute_students.jpg";
@@ -43,6 +43,9 @@ const Aboutpage = () => (
           </div>
         ))}
       </div>
+    </section>
+    <section>
+      <ContactContainer />
     </section>
     <Footer />
   </main>
