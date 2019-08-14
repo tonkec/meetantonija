@@ -14,7 +14,6 @@ const Routes = () => {
     <Switch>
       <Route exact path="/" component={Homepage} />
       <Route path="/about" component={Aboutpage} />
-      <Route path="/contact" component={Contactpage} />
 
       {components.map((component, i) => (
         <Route
