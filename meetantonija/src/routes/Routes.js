@@ -5,10 +5,10 @@ import Aboutpage from "pages/About";
 import Contactpage from "pages/Contact";
 
 import Lostpage from "pages/404";
-import PortfolioItems from "components/portfolio";
+import { PortfolioItems, PortfolioHobbyItems } from "components/portfolio";
 
 const components = Object.keys(PortfolioItems);
-
+const hobbyComponents = Object.keys(PortfolioHobbyItems);
 const Routes = () => {
   return (
     <Switch>
@@ -22,6 +22,17 @@ const Routes = () => {
           key={i}
         />
       ))}
+
+      {hobbyComponents.map((component, i) => {
+        console.log(hobbyComponents[i].toLowerCase());
+        return (
+          <Route
+            path={`/${hobbyComponents[i].toLowerCase()}`}
+            component={PortfolioHobbyItems[component]}
+            key={i}
+          />
+        );
+      })}
       <Route component={Lostpage} />
     </Switch>
   );

@@ -14,7 +14,7 @@ const PortfolioItem = ({ data, links }) => (
     >
       <div className="container">
         <div className="row">
-          <div className="col-xs-8 col-sm-10 offset-sm-1 col-md-12 offset-md-0 text-center">
+          <div className="col-xs-8 col-sm-10 offset-sm-1 col-md-10 offset-md-1 text-center">
             <h1 className="section-portfolio__title">{data.title}</h1>
             <a href={data.headerImage} target="_blank" rel="noopener">
               <img src={data.headerImage} />
@@ -27,10 +27,10 @@ const PortfolioItem = ({ data, links }) => (
       <div className="container">
         <div className="row">
           <div className="col-sm-12 col-md-6 col-lg-3">
-            <h3>{data.client}</h3>
+            <h3>{data.client ? "Client" : "Code"}</h3>
             <p>
-              <a href={data.link} rel="noopener" target="_blank">
-                {data.link}
+              <a href={data.link || data.code} rel="noopener" target="_blank">
+                {data.client || data.code}
               </a>
             </p>
           </div>
@@ -48,7 +48,9 @@ const PortfolioItem = ({ data, links }) => (
           <div className="col-sm-12 col-md-6 col-lg-3">
             <h3>Link</h3>
             <p>
-              <a href={data.projectLink}>{data.projectLink}</a>
+              <a rel="noopener" target="_blank" href={data.projectLink}>
+                {data.projectLink}
+              </a>
             </p>
           </div>
         </div>
@@ -70,17 +72,20 @@ const PortfolioItem = ({ data, links }) => (
             </p>
           </div>
 
-          <div className="offset-sm-1 col-sm-10 col-lg-6 offset-lg-3 section-col">
-            <h2 className="section-portfolio__subtitle">
-              My Role in the project
-            </h2>
-            {Object.keys(data.myRole).map((item, i) => (
-              <dl key={i}>
-                <dt>{item}</dt>
-                <dd>{data.myRole[item]}</dd>
-              </dl>
-            ))}
-          </div>
+          {data.myRole && (
+            <div className="offset-sm-1 col-sm-10 col-lg-6 offset-lg-3 section-col">
+              <h2 className="section-portfolio__subtitle">
+                My Role in the project
+              </h2>
+
+              {Object.keys(data.myRole).map((item, i) => (
+                <dl key={i}>
+                  <dt>{item}</dt>
+                  <dd>{data.myRole[item]}</dd>
+                </dl>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>

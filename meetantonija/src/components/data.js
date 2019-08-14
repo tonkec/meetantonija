@@ -5,7 +5,7 @@ import craftstrom3 from "images/craftstrom3.png";
 import craftstrom1 from "images/craftstrom1.png";
 import craftstrom2 from "images/craftstrom2.png";
 
-import p1 from "images/p1.png";
+import p1 from "images/p1.jpeg";
 import p2 from "images/peaks2.jpeg";
 
 import pimsf from "images/pimsf.png";
@@ -58,11 +58,11 @@ const data = {
     },
     {
       title: "Pimsf",
-      client: "Craftstrom",
+      client: "Async Labs",
       projectLink: "https://async-energy.com/",
-      technology: "React Native",
+      technology: "React && Redux",
       completed: 2019,
-      link: "https://www.craftstrom.com/",
+      link: "https://www.asynclabs.co",
       description:
         "Craftstrom enables users to connect to solar panels at their homes. After the login, users are redirected to the dashboard which renders two graphs that show the amount of generated solar energy in the last week. They can also see the state of the battery.",
       technologyDescription:
@@ -100,7 +100,7 @@ const data = {
       title: "Sessions Tracker",
       technology: "React/Redux",
       completed: 2019,
-      link: "https://sessionstracker.herokuapp.com",
+      projectLink: "https://sessionstracker.herokuapp.com",
       code: "https://github.com/tonkec/student_sessions",
       description:
         "This is an app that might help me CRUD sessions that I have with my students.",
@@ -113,9 +113,9 @@ const data = {
     },
     {
       title: "Text hover effects",
-      technology: "React/Redux",
+      technology: "React && Redux",
       completed: 2019,
-      link: "https://text-hover-effects.herokuapp.com/",
+      projectLink: "https://text-hover-effects.herokuapp.com/",
       code: "https://github.com/tonkec/text_hover_effects",
       description:
         "This is a scss mixin library for effects trigered on hover and click. This library brings a clean fresh look to links and other typography elements. It allows customization of the different CSS properties, such as speed, delays, easing, colors, padding and more. It is also available in the CSS code. All transitions can be triggered on hover/focus or click.",

@@ -1,1 +1,1 @@
-export { default } from "./PortfolioItems";
+export { PortfolioItems, PortfolioHobbyItems } from "./PortfolioItems";

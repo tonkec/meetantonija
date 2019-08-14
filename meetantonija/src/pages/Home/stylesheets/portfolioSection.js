@@ -4,6 +4,8 @@ import craftstrom from "images/home/craftstrom.png";
 import peaks from "images/home/peaks.png";
 import code from "images/home/codeinstitute.png";
 import pimsf from "images/home/pimsf_logo.png";
+import sessions from "images/home/sessions_tracker.png";
+import hover from "images/home/text_hover.png";
 const portfolioSection = css({
   backgroundColor: portfolioBg,
   paddingTop: topGutter,
@@ -32,6 +34,12 @@ const portfolioItem = css({
   },
   "&.codeinstitute": {
     backgroundImage: `url(${code})`
+  },
+  "&.sessionstracker": {
+    backgroundImage: `url(${sessions})`
+  },
+  "&.texthovereffects": {
+    backgroundImage: `url(${hover})`
   }
 });
 

@@ -24,7 +24,6 @@ class Navigation extends React.Component {
   };
 
   componentDidMount() {
-    console.log(this);
     document.addEventListener("keydown", this.escFunction, false);
   }
 
@@ -83,7 +82,21 @@ class Navigation extends React.Component {
           <ul className="navigation__list">
             {data.client.map((item, i) => {
               let title = normalTitle(item.title);
-              console.log(`${this.state.location}/${title}`);
+              return (
+                <li key={i}>
+                  <Link
+                    to={`${this.state.location}/${title}`}
+                    onClick={this.toggleVisibility}
+                    className={button}
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              );
+            })}
+
+            {data.hobby.map((item, i) => {
+              let title = normalTitle(item.title);
               return (
                 <li key={i}>
                   <Link

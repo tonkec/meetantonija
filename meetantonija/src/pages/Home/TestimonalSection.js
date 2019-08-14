@@ -5,8 +5,8 @@ const TestimonalSection = () => (
   <section className={`section__testimonial ${testimonialSection}`}>
     <div className="container-fluid">
       <div className="row">
-        <div class="col text-center">
-          <h2 class="yellow-selection">Some nice things about me</h2>
+        <div className="col text-center">
+          <h2 className="yellow-selection">Some nice things about me</h2>
         </div>
       </div>
       <div className="row">

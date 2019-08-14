@@ -6,6 +6,10 @@ let portfolioTopGutter = "80";
 const portfolioItem = css({
   img: { width: "100%" },
 
+  a: {
+    wordBreak: "break-all"
+  },
+
   ".section-portfolio": {
     "&__header": {
       padding: "15vh 0",
