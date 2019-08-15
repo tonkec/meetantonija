@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "emotion": "^10.0.14",
+    "express": "^4.17.1",
     "husky": "^3.0.2",
     "lodash": "^4.17.15",
     "node-sass": "^4.12.0",
