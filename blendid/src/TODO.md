@@ -1,2 +1,0 @@
-- nav
-- slike u portfolijima da su responsive
