@@ -24,7 +24,6 @@ const Routes = () => {
       ))}
 
       {hobbyComponents.map((component, i) => {
-        console.log(hobbyComponents[i].toLowerCase());
         return (
           <Route
             path={`/${hobbyComponents[i].toLowerCase()}`}

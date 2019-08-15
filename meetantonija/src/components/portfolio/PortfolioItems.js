@@ -7,7 +7,6 @@ let PortfolioItems = {};
 let PortfolioHobbyItems = {};
 let titles = client.map(item => normalTitle(item.title));
 let hobbyTitles = hobby.map(item => item.title);
-console.log(hobbyTitles);
 let title;
 client.map((item, i) => {
   title = normalTitle(item.title);
