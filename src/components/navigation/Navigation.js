@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import button from "stylesheets/button";
+import button from "./../../stylesheets/button";
 import navigation from "./stylesheets/navigation";
 import navOpener from "./stylesheets/navOpener";
-import data from "components/data";
-import normalTitle from "components/helpers/normalTitle";
+import data from "./../data";
+import normalTitle from "./../helpers/normalTitle";
 class Navigation extends React.Component {
   state = {
     visible: false,

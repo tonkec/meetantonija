@@ -1,5 +1,5 @@
 import { css } from "emotion";
-import { yellow } from "stylesheets/variables";
+import { yellow } from "./../../../stylesheets/variables";
 
 const navOpener = css({
   position: "fixed",

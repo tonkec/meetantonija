@@ -1,5 +1,5 @@
 import { css } from "emotion";
-import { footerBg } from "stylesheets/variables";
+import { footerBg } from "./../../../stylesheets/variables";
 
 const footer = css({
   backgroundColor: footerBg,

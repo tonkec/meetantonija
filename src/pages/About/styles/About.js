@@ -1,5 +1,5 @@
 import { css } from "emotion";
-import { yellow, black } from "stylesheets/variables";
+import { yellow, black } from "./../../../stylesheets/variables";
 const about = css({
   header: {
     padding: "150px",

@@ -1,5 +1,5 @@
 import { css } from "emotion";
-import { yellow, brown } from "stylesheets/variables";
+import { yellow, brown } from "./../../../stylesheets/variables";
 const nav = css({
   "&.navigation__inner": {
     height: "100%",

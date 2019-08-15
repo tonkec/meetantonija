@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "components/header";
-import Footer from "components/footer";
+import Header from "./../../components/header";
+import Footer from "./../../components/footer";
 import PortfolioContainer from "./PortfolioContainer";
 import TestimonalSection from "./TestimonalSection";
 import SkillsSection from "./SkillsSection";
-import Contact from "components/contact";
+import Contact from "./../../components/contact";
 const Homepage = () => (
   <>
     <Header>

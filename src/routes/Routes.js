@@ -1,11 +1,11 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import Homepage from "pages/Home";
-import Aboutpage from "pages/About";
-import Contactpage from "pages/Contact";
+import Homepage from "./../pages/Home";
+import Aboutpage from "./../pages/About";
+import Contactpage from "./../pages/Contact";
 
-import Lostpage from "pages/404";
-import { PortfolioItems, PortfolioHobbyItems } from "components/portfolio";
+import Lostpage from "./../pages/404";
+import { PortfolioItems, PortfolioHobbyItems } from "./../components/portfolio";
 
 const components = Object.keys(PortfolioItems);
 const hobbyComponents = Object.keys(PortfolioHobbyItems);

@@ -1,5 +1,5 @@
 import { css } from "emotion";
-import { white1 } from "stylesheets/variables";
+import { white1 } from "./../../../stylesheets/variables";
 
 const contact = css({
   "&.section__contact": {

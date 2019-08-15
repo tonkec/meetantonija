@@ -1,5 +1,5 @@
 import React from "react";
-import Grid from "components/Grid";
+import Grid from "./../Grid";
 import contact from "./style/contact";
 
 const ContactContainer = () => (

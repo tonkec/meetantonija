@@ -1,5 +1,5 @@
 import { css } from "emotion";
-import { white1, yellow } from "stylesheets/variables";
+import { white1, yellow } from "./../../../stylesheets/variables";
 
 let portfolioTopGutter = "80";
 

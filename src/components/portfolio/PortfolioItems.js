@@ -1,7 +1,7 @@
 import React from "react";
 import PortfolioItem from "./PortfolioItem";
-import data from "components/data";
-import normalTitle from "components/helpers/normalTitle";
+import data from "./../data";
+import normalTitle from "./../helpers/normalTitle";
 let { client, hobby } = data;
 let PortfolioItems = {};
 let PortfolioHobbyItems = {};

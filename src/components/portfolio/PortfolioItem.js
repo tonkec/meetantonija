@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Footer from "components/footer";
+import Footer from "./../footer";
 import portfolioItem from "./stylesheets/portfolioItem";
-import button from "stylesheets/button";
-import normalTitle from "components/helpers/normalTitle";
+import button from "./../../stylesheets/button";
+import normalTitle from "./../helpers/normalTitle";
 
 const PortfolioItem = ({ data, links }) => (
   <div className={portfolioItem}>

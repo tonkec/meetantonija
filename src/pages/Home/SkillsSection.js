@@ -1,5 +1,5 @@
 import React from "react";
-import Grid from "components/Grid";
+import Grid from "./../../components/Grid";
 import skillsSection from "./stylesheets/skillsSection";
 const SkillsSection = () => (
   <section className={skillsSection}>

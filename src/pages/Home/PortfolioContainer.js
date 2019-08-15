@@ -3,7 +3,7 @@ import {
   portfolioSection,
   portfolioItem
 } from "./stylesheets/portfolioSection";
-import data from "components/data";
+import data from "./../../components/data";
 import { Link } from "react-router-dom";
 import { orderBy } from "lodash";
 let { client, hobby } = data;
