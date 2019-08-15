@@ -127,7 +127,7 @@ const PortfolioItem = ({ data, links }) => (
         <div className="row">
           <div className="col text-center">
             {links.map((link, i) => (
-              <Link to={link.toLowerCase()} key={i} className={button}>
+              <Link to={normalTitle(link)} key={i} className={button}>
                 {link}
               </Link>
             ))}
