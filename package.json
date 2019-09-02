@@ -4,8 +4,11 @@
   "description": "personal portfolio page",
   "scripts": {
     "start": "node server",
-    "build": "cd client/ && npm install && npm run build",
-    "heroku-postbuild": "cd client/ && npm install && npm run build"
+    "heroku-postbuild": "cd client/ && yarn install && yarn run build"
+  },
+  "engines": {
+    "node": "12.8.0",
+    "yarn": "1.9.2"
   },
   "main": "index.js",
   "repository": "https://github.com/tonkec/meetantonija.git",
