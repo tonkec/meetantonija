@@ -13,7 +13,7 @@ const Routes = () => {
   return (
     <Switch>
       <Route exact path="/" component={Homepage} />
-      <Route path="/about" component={Aboutpage} />
+      {/* <Route path="/about" component={Aboutpage} /> */}
 
       {components.map((component, i) => (
         <Route

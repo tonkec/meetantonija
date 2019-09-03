@@ -52,7 +52,7 @@ class Navigation extends React.Component {
                 Home
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 to="/about"
                 onClick={this.toggleVisibility}
@@ -60,7 +60,7 @@ class Navigation extends React.Component {
               >
                 About
               </Link>
-            </li>
+            </li> */}
             <li>
               <a
                 onClick={this.toggleVisibility}
