@@ -7,7 +7,7 @@ class Footer extends React.Component {
     let height = document.getElementsByTagName("footer")[0].offsetHeight;
     let previousSibling = document.getElementsByTagName("footer")[0]
       .previousSibling;
-    previousSibling.setAttribute("style", `margin-bottom: ${height}px`);
+    previousSibling.setAttribute("style", `margin-bottom: ${height - 5}px`);
   }
 
   render() {
