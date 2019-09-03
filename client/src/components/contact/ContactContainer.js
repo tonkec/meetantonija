@@ -40,7 +40,7 @@ const ContactContainer = () => {
                     <input
                       type="text"
                       required
-                      name="from_name"
+                      name="userName"
                       placeholder="Your Name"
                     />
                   </div>
@@ -51,7 +51,7 @@ const ContactContainer = () => {
                   <div className="control">
                     <input
                       type="text"
-                      name="from_email"
+                      name="userEmail"
                       required
                       placeholder="Your Email"
                       pattern="[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+"
@@ -63,7 +63,7 @@ const ContactContainer = () => {
                 <div className="field">
                   <div className="control">
                     <textarea
-                      name="message_html"
+                      name="userMessage"
                       rows="5"
                       placeholder="Message"
                       required
