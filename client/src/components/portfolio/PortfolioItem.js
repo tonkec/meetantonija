@@ -6,7 +6,7 @@ import button from "./../../stylesheets/button";
 import normalTitle from "./../helpers/normalTitle";
 
 const PortfolioItem = ({ data, links }) => (
-  <div className={portfolioItem}>
+  <div className={`page ${portfolioItem} page--${normalTitle(data.title)}`}>
     <header
       className={`section-portfolio__header section-portfolio__header--${normalTitle(
         data.title
@@ -89,38 +89,39 @@ const PortfolioItem = ({ data, links }) => (
         </div>
       </div>
     </section>
-
-    <section
-      className={`section-portfolio__images section-portfolio__images--${normalTitle(
-        data.title
-      )}`}
-    >
-      <div className="container-fluid">
-        <div className="row">
-          {data.footerImages.length > 1
-            ? data.footerImages.map((image, i) => (
-                <div
-                  className="col-sm-8 offset-sm-2 col-lg-4 offset-lg-1 text-center"
-                  key={i}
-                >
-                  <a href={image} target="_blank" rel="noopener">
-                    <img src={image} />
-                  </a>
-                </div>
-              ))
-            : data.footerImages.map((image, i) => (
-                <div
-                  className="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3"
-                  key={i}
-                >
-                  <a href={image} target="_blank" rel="noopener">
-                    <img src={image} />
-                  </a>
-                </div>
-              ))}
+    {/* {data.footerImages.length > 0 && (
+      <section
+        className={`section-portfolio__images section-portfolio__images--${normalTitle(
+          data.title
+        )}`}
+      >
+        <div className="container-fluid">
+          <div className="row">
+            {data.footerImages.length > 1
+              ? data.footerImages.map((image, i) => (
+                  <div
+                    className="col-sm-8 offset-sm-2 col-lg-4 offset-lg-1 text-center"
+                    key={i}
+                  >
+                    <a href={image} target="_blank" rel="noopener">
+                      <img src={image} />
+                    </a>
+                  </div>
+                ))
+              : data.footerImages.map((image, i) => (
+                  <div
+                    className="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3"
+                    key={i}
+                  >
+                    <a href={image} target="_blank" rel="noopener">
+                      <img src={image} />
+                    </a>
+                  </div>
+                ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    )} */}
 
     <section className="section-portfolio__links">
       <div className="container">

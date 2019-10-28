@@ -4,7 +4,7 @@ import { white1, yellow } from "./../../../stylesheets/variables";
 let portfolioTopGutter = "80";
 
 const portfolioItem = css({
-  img: { width: "100%" },
+  img: { width: "100%", borderRadius: 7 },
 
   a: {
     wordBreak: "break-all"

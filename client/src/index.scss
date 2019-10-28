@@ -2,7 +2,7 @@ body,
 html {
   margin: 0;
   font-family: "Raleway", sans-serif;
-  background-color: #f9c80e;
+  // background-color: #f9c80e;
 }
 
 div[class*="craftstrom"],
@@ -34,6 +34,31 @@ div[class*="craftstrom"],
   background-color: grey;
 }
 
+*[class*="revuto"] {
+  background-color: #419bd4;
+}
+
 .section__heading {
   margin-bottom: 60px;
+}
+
+.page {
+  // &--revuto {
+  //   h1 {
+  //     color: #000;
+  //   }
+  // }
+
+  // .section-portfolio__data {
+  //   background-color: #000;
+
+  //   h3,
+  //   p {
+  //     color: #fff;
+  //   }
+  // }
+
+  // .section-portfolio__links {
+  //   background-color: #000;
+  // }
 }

@@ -14,6 +14,10 @@ import pimsfGif from "./../images/pimsf.gif";
 import s2 from "./../images/s2.png";
 import s3 from "./../images/s3.png";
 
+import r1 from "./../images/revuto1.png";
+import r2 from "./../images/revuto2.jpg";
+import r3 from "./../images/revuto3.png";
+
 const data = {
   client: [
     {
@@ -77,12 +81,31 @@ const data = {
       footerImages: [pimsfGif]
     },
     {
+      title: "Revuto",
+      client: "Async Labs",
+      technology: "React.js",
+      completed: 2019,
+      link: "https://www.asynclabs.co",
+      projectLink: "https://revuto.com",
+      description:
+        "Revuto is a web application for managing subscriptions using cryptocurrency revu tokens",
+      technologyDescription:
+        "The app was built using React.js. The cool package I discovered in this project was react-helmet, npm package that manges meta tags in React apps.",
+      myRole: {
+        "React Developer":
+          "I was working closely with backend developers and a designer. My task was to create user interface following designs from designer and to connect components via API provided by backend developers. User authorization was handled with tokens. I loved working on this project because I was able to get my hands on Context API and React hooks <3. I used Context API for flash messages and hooks in the stateful functional components. The cool part in login and signup form was custom made captcha. Originally, additions were much complex, but client wanted simplified captcha. Now user should know how to sum two numbers that are not larger than 10. I also really much enjoyed playing with CSS animations and transitions. The most valuable page to client was referral program page which has animation that I coded from scratch. The tricky part was reversing animation. I learned scss can not count nth children backwards."
+      },
+      headerImage: r2,
+      footerImages: [r1]
+    },
+    {
       title: "Craftstrom",
       client: "Craftstrom",
       technology: "React Native",
       completed: 2019,
       link: "https://www.craftstrom.com/",
-      projectLink: "https://async-energy.com/",
+      projectLink:
+        "https://play.google.com/store/apps/details?id=com.craftstrom",
       description:
         "Craftstrom enables users to connect to solar panels at their homes. After the login, users are redirected to the dashboard which renders two graphs that show the amount of generated solar energy in the last week. They can also see the state of the battery.",
       technologyDescription:
@@ -92,7 +115,7 @@ const data = {
           "My task was to implement user interface with react-native-elements and react-native and to handle user authentication and authorization with ajax calls to the backend api. User's token is stored using AsyncStorage. The app excited me a lot because I was able to get my hands on JS and React Native. It made me really happy that I can prove and test my JS skills!"
       },
       headerImage: craftstrom3,
-      footerImages: [craftstrom1, craftstrom2]
+      footerImages: []
     }
   ],
   hobby: [

@@ -6,6 +6,8 @@ import code from "./../../../images/home/codeinstitute.png";
 import pimsf from "./../../../images/home/pimsf_logo.png";
 import sessions from "./../../../images/home/sessions_tracker.png";
 import hover from "./../../../images/home/text_hover.png";
+import revuto from "./../../../images/home/revuto_logo.png";
+
 const portfolioSection = css({
   backgroundColor: portfolioBg,
   paddingTop: topGutter,
@@ -40,6 +42,10 @@ const portfolioItem = css({
   },
   "&.texthovereffects": {
     backgroundImage: `url(${hover})`
+  },
+  "&.revuto": {
+    border: "0.5px solid rgba(0,0,0,.2)",
+    backgroundImage: `url(${revuto})`
   }
 });
 
