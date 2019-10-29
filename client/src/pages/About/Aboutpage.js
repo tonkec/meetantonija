@@ -7,7 +7,7 @@ import borders from "./../../images/about/borders_none.jpg";
 import code_institute from "./../../images/about/code_institute_students.jpg";
 import punk from "./../../images/about/footer_guitar.png";
 import me from "./../../images/about/me_working.jpg";
-import scss from "./../../images/about/scss_meetup.jpeg";
+import scss from "./../../images/about/beer.jpg";
 import workshop from "./../../images/about/workshop.jpg";
 
 import About from "./styles/About";
