@@ -60,6 +60,24 @@ const data = {
     //   footerImages: [p2]
     // },
     {
+      title: "Revuto",
+      client: "Async Labs",
+      technology: "React.js",
+      completed: 2019,
+      link: "https://www.asynclabs.co",
+      projectLink: "https://revuto.com",
+      description:
+        "Revuto is a web application for managing subscriptions using cryptocurrency revu tokens",
+      technologyDescription:
+        "The app was built using React.js. The cool package I discovered in this project was react-helmet, npm package that manges meta tags in React apps.",
+      myRole: {
+        "React Developer":
+          "I was working closely with backend developers and a designer. My task was to create user interface following designs from designer and to connect components via API provided by backend developers. User authorization was handled with tokens. I loved working on this project because I was able to get my hands on Context API and React hooks <3. I used Context API for flash messages and hooks in the stateful functional components. The cool part in login and signup form was custom made captcha. Originally, additions were much complex, but client wanted simplified captcha. Now user should know how to sum two numbers that are not larger than 10. I also really much enjoyed playing with CSS animations and transitions. The most valuable page to client was referral program page which has animation that I coded from scratch. The tricky part was reversing animation. I learned scss can not count nth children backwards."
+      },
+      headerImage: r2,
+      footerImages: [r1]
+    },
+    {
       title: "Pimsf",
       client: "Async Labs",
       projectLink: "https://async-energy.com/",
@@ -79,24 +97,7 @@ const data = {
       headerImage: pimsf,
       footerImages: [pimsfGif]
     },
-    {
-      title: "Revuto",
-      client: "Async Labs",
-      technology: "React.js",
-      completed: 2019,
-      link: "https://www.asynclabs.co",
-      projectLink: "https://revuto.com",
-      description:
-        "Revuto is a web application for managing subscriptions using cryptocurrency revu tokens",
-      technologyDescription:
-        "The app was built using React.js. The cool package I discovered in this project was react-helmet, npm package that manges meta tags in React apps.",
-      myRole: {
-        "React Developer":
-          "I was working closely with backend developers and a designer. My task was to create user interface following designs from designer and to connect components via API provided by backend developers. User authorization was handled with tokens. I loved working on this project because I was able to get my hands on Context API and React hooks <3. I used Context API for flash messages and hooks in the stateful functional components. The cool part in login and signup form was custom made captcha. Originally, additions were much complex, but client wanted simplified captcha. Now user should know how to sum two numbers that are not larger than 10. I also really much enjoyed playing with CSS animations and transitions. The most valuable page to client was referral program page which has animation that I coded from scratch. The tricky part was reversing animation. I learned scss can not count nth children backwards."
-      },
-      headerImage: r2,
-      footerImages: [r1]
-    },
+
     {
       title: "Craftstrom",
       client: "Craftstrom",

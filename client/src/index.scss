@@ -63,3 +63,10 @@ div[class*="craftstrom"],
     align-items: center;
   }
 }
+
+.portfolio__item {
+  position: relative;
+  &:hover {
+    top: 1px;
+  }
+}

@@ -59,7 +59,7 @@ const PortfolioContainer = () => (
                 >
                   <Link to={`${item.title.replace(/ /g, "").toLowerCase()}`}>
                     <div
-                      className={`${portfolioItem} ${item.title
+                      className={`portfolio__item ${portfolioItem} ${item.title
                         .replace(/ /g, "")
                         .toLowerCase()}`}
                     ></div>
