@@ -9,8 +9,8 @@ const Aboutpage = () => (
   <main className={`${About}`}>
     <Header>
       <div className="col-6">
-        <h1>Hello world</h1>
-        <h2>Code. Teach. Play.</h2>
+        <h1>Hello world!</h1>
+        <h2>Code. Teach. CSS.</h2>
       </div>
     </Header>
     <section className="section-about__images container-fluid">
@@ -84,64 +84,65 @@ const Aboutpage = () => (
             <div className="card__image workshop" />
           </div>
         </div>
-
-        {/* <div className="col-sm-12 col-md-6 col-xl-4">
-          <div className="card">
-            <div className="content">
-              <a
-                href="https://www.bordersnone.com/coders-without-borders/"
-                target="_blank"
-              >
-                Celebrating successful coding day with borders:none;
-              </a>
-            </div>
-            <div className="card__image borders" />
-          </div>
-        </div> */}
       </div>
     </section>
 
-    {/* <section className="section is-white">
-      <div className="container">
-        <div className="row is-centered">
-          <div className="col-6 text-center">
-            <h2>I really often hold talks on Scss meetups</h2>
+    <section className="section is-grey">
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-5">
+            <h2>I often hold talks on S(CSS) meetups:</h2>
 
-            <ul>
+            <ul className="list">
               <li>
-                <a href="https://www.meetup.com/S_CSS_Zagreb/events/257860075/">
-                  CSS Grid
+                <a
+                  target="_blank"
+                  href="https://www.meetup.com/S_CSS_Zagreb/events/257860075/"
+                >
+                  CSS Grid Meetup
                 </a>
               </li>
               <li>
-                <a href="https://www.meetup.com/S_CSS_Zagreb/events/259088646/">
-                  Pseudo Classes
+                <a
+                  target="_blank"
+                  href="https://www.meetup.com/S_CSS_Zagreb/events/259088646/"
+                >
+                  Pseudo Classes Meetup
                 </a>
               </li>
               <li>
-                <a href="https://www.meetup.com/S_CSS_Zagreb/events/260470749/">
-                  SVGs 101
+                <a
+                  target="_blank"
+                  href="https://www.meetup.com/S_CSS_Zagreb/events/260470749/"
+                >
+                  SVGs 101 Meetup
                 </a>
               </li>
               <li>
-                <a href="https://www.meetup.com/S_CSS_Zagreb/events/262442215/">
-                  Pseudoelements
+                <a
+                  target="_blank"
+                  href="https://www.meetup.com/S_CSS_Zagreb/events/262442215/"
+                >
+                  Pseudoelements Meetup
                 </a>
               </li>
 
               <li>
-                <a href="https://www.meetup.com/S_CSS_Zagreb/events/265312074/">
-                  CSS animations
+                <a
+                  target="_blank"
+                  href="https://www.meetup.com/S_CSS_Zagreb/events/265312074/"
+                >
+                  CSS animations Meetup
                 </a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-    </section> */}
-    <section>
-      <ContactContainer />
     </section>
+    {/* <section>
+      <ContactContainer />
+    </section> */}
     <Footer />
   </main>
 );

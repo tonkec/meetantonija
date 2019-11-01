@@ -10,7 +10,7 @@ import borders from "./../../../images/about/borders_none.jpg";
 import zero from "./../../../images/about/from_zero.jpg";
 const about = css({
   header: {
-    padding: "150px",
+    padding: "160px 15px",
 
     h1: {
       backgroundColor: yellow,
@@ -28,7 +28,8 @@ const about = css({
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
-      marginBottom: 30,
+      borderRadius: 7,
+      border: `3px solid #222`,
       "&.top": {
         backgroundPosition: "top"
       },
@@ -71,13 +72,7 @@ const about = css({
   },
   img: {
     width: "100%",
-    minHeight: 300,
-    borderRadius: 7,
-    border: `3px solid #222`,
-    "&.large": {
-      width: "auto",
-      height: 450
-    }
+    minHeight: 300
   },
   ".section-about__images": {
     backgroundColor: "white",
