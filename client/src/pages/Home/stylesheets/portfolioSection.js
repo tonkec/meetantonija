@@ -44,7 +44,6 @@ const portfolioItem = css({
     backgroundImage: `url(${hover})`
   },
   "&.revuto": {
-    border: "0.5px solid rgba(0,0,0,.2)",
     backgroundImage: `url(${revuto})`
   }
 });

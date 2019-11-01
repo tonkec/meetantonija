@@ -42,23 +42,17 @@ div[class*="craftstrom"],
   margin-bottom: 60px;
 }
 
-.page {
-  // &--revuto {
-  //   h1 {
-  //     color: #000;
-  //   }
-  // }
-
-  // .section-portfolio__data {
-  //   background-color: #000;
-
-  //   h3,
-  //   p {
-  //     color: #fff;
-  //   }
-  // }
-
-  // .section-portfolio__links {
-  //   background-color: #000;
-  // }
+.section {
+  &--hobby {
+    padding-top: 0;
+  }
+  &--portfolio {
+    .col-sm-6 {
+      &:nth-last-of-type(-n + 2) {
+        div {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }

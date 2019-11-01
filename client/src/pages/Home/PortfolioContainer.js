@@ -11,7 +11,9 @@ let sortedByCompletion = orderBy(client, ["completed"], ["desc"]);
 let sortedByCompletionHobby = orderBy(hobby, ["completed"], ["desc"]);
 const PortfolioContainer = () => (
   <>
-    <section className={portfolioSection}>
+    <section
+      className={`${portfolioSection} section--client section--bordered`}
+    >
       <div className="container">
         <div className="row">
           <div className="col text-center">
@@ -25,7 +27,7 @@ const PortfolioContainer = () => (
                 <div className="col-sm-6" key={i}>
                   <Link to={`${item.title.replace(/ /g, "").toLowerCase()}`}>
                     <div
-                      className={`${portfolioItem} ${item.title
+                      className={`portfolio__item ${portfolioItem} ${item.title
                         .replace(/ /g, "")
                         .toLowerCase()}`}
                     ></div>
@@ -37,7 +39,7 @@ const PortfolioContainer = () => (
         </div>
       </div>
     </section>
-    <section className={portfolioSection}>
+    <section className={`${portfolioSection} section--hobby`}>
       <div className="container">
         <div className="row">
           <div className="col text-center">

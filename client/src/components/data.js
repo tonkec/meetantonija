@@ -16,7 +16,6 @@ import s3 from "./../images/s3.png";
 
 import r1 from "./../images/revuto1.png";
 import r2 from "./../images/revuto2.jpg";
-import r3 from "./../images/revuto3.png";
 
 const data = {
   client: [
@@ -42,24 +41,24 @@ const data = {
       headerImage: ciHeader,
       footerImages: [ci1]
     },
-    {
-      title: "Peaks",
-      projectLink: "https://antonijasimic.bitbucket.io/peaks/index.html",
-      client: "Supersuper",
-      technology: "HTML,CSS,JS,SCSS",
-      completed: 2015,
-      link: "https://www.supersuperagency.com/",
-      description:
-        "This is a bootstrap template for web and digital agencies. It is best used for showing portfolio and presenting work in general. Web features, such as preloader, parallax, slideshows, full-screen layout and responsivness, will impress your visitors",
-      technologyDescription:
-        "Template is built with HTML, CSS, SCSS, Bootstrap, jQuery, JS.",
-      myRole: {
-        "User Interface":
-          "My task was to implement user interface based on the design provided. The hardest part in development process was customization of parallax. It had to be compatible with swiper.js and also fully responsive. Biggest struggle was author section that has multiple parallax. The three images were not supposed to move at the same time which is not default behaviour of parallax plugin. Also, the text should have shown up on hover. And all of that needed to be responsive."
-      },
-      headerImage: p1,
-      footerImages: [p2]
-    },
+    // {
+    //   title: "Peaks",
+    //   projectLink: "https://antonijasimic.bitbucket.io/peaks/index.html",
+    //   client: "Supersuper",
+    //   technology: "HTML,CSS,JS,SCSS",
+    //   completed: 2015,
+    //   link: "https://www.supersuperagency.com/",
+    //   description:
+    //     "This is a bootstrap template for web and digital agencies. It is best used for showing portfolio and presenting work in general. Web features, such as preloader, parallax, slideshows, full-screen layout and responsivness, will impress your visitors",
+    //   technologyDescription:
+    //     "Template is built with HTML, CSS, SCSS, Bootstrap, jQuery, JS.",
+    //   myRole: {
+    //     "User Interface":
+    //       "My task was to implement user interface based on the design provided. The hardest part in development process was customization of parallax. It had to be compatible with swiper.js and also fully responsive. Biggest struggle was author section that has multiple parallax. The three images were not supposed to move at the same time which is not default behaviour of parallax plugin. Also, the text should have shown up on hover. And all of that needed to be responsive."
+    //   },
+    //   headerImage: p1,
+    //   footerImages: [p2]
+    // },
     {
       title: "Pimsf",
       client: "Async Labs",
