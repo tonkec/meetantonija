@@ -11,8 +11,7 @@ const SkillsSection = () => (
           </h2>
           <p className="skills-description">
             In my career I have solved many problems with HTML,
-            <span>CSS</span>, Bootstrap, Bulma, Js, <span>React.js</span> and
-            Figma
+            <span>CSS</span>, Bootstrap, Js, <span>React.js</span> and Figma
           </p>
         </div>
       </div>

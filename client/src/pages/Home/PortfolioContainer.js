@@ -20,11 +20,14 @@ const PortfolioContainer = () => (
             <h2 className="section__heading">Client Work</h2>
           </div>
         </div>
-        <div className="row">
-          <div className="col-xs-12 col-sm-8 offset-sm-2">
-            <div className="row">
+        <div className="row is-centered">
+          <div className="col-xs-12 col-sm-12 col-xl-8">
+            <div className="row is-centered">
               {sortedByCompletion.map((item, i) => (
-                <div className="col-sm-6" key={i}>
+                <div
+                  className="col-xs-12 col-sm-10 col-md-6 offset-md-0 col-lg-5 col-xl-6 portfolio__column"
+                  key={i}
+                >
                   <Link to={`${item.title.replace(/ /g, "").toLowerCase()}`}>
                     <div
                       className={`portfolio__item ${portfolioItem} ${item.title
@@ -46,11 +49,14 @@ const PortfolioContainer = () => (
             <h2 className="section__heading">Hobby Projects</h2>
           </div>
         </div>
-        <div className="row">
-          <div className="col-xs-12 col-sm-8 offset-sm-2">
-            <div className="row">
+        <div className="row is-centered">
+          <div className="col-xs-12 col-sm-12 col-xl-8">
+            <div className="row is-centered">
               {sortedByCompletionHobby.map((item, i) => (
-                <div className="col-sm-6" key={i}>
+                <div
+                  className="col-xs-12 col-sm-10 col-md-6 offset-md-0 col-lg-5 col-xl-6 portfolio__column"
+                  key={i}
+                >
                   <Link to={`${item.title.replace(/ /g, "").toLowerCase()}`}>
                     <div
                       className={`${portfolioItem} ${item.title
