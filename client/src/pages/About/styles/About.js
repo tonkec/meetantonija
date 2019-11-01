@@ -15,7 +15,7 @@ const about = css({
     h1: {
       backgroundColor: yellow,
       display: "inline-block",
-      marginBottom: 30,
+      marginBottom: 15,
       fontWeight: 700,
       fontSize: "3rem"
     }

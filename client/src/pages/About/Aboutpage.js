@@ -8,7 +8,7 @@ import About from "./styles/About";
 const Aboutpage = () => (
   <main className={`${About}`}>
     <Header>
-      <div className="col-6">
+      <div className="col-12">
         <h1>Hello world!</h1>
         <h2>Code. Teach. CSS.</h2>
       </div>
@@ -90,8 +90,8 @@ const Aboutpage = () => (
     <section className="section is-grey">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-5">
-            <h2>I often hold talks on S(CSS) meetups:</h2>
+          <div className="col-12">
+            <h2>I held talk on several S(CSS) meetups:</h2>
 
             <ul className="list">
               <li>
