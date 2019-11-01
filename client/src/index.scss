@@ -5,6 +5,11 @@ html {
   // background-color: #f9c80e;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 div[class*="craftstrom"],
 .black-background {
   background-color: black;
@@ -43,6 +48,9 @@ div[class*="craftstrom"],
 }
 
 .section {
+  &.is-white {
+    background-color: #fff;
+  }
   &--hobby {
     padding-top: 0;
   }

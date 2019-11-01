@@ -54,6 +54,15 @@ class Navigation extends React.Component {
             </li>
             <li>
               <Link
+                to="/about"
+                onClick={this.toggleVisibility}
+                className={button}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/contact"
                 onClick={this.toggleVisibility}
                 className={button}
@@ -70,17 +79,6 @@ class Navigation extends React.Component {
                 rel="noopener"
               >
                 Blog
-              </a>
-            </li>
-            <li>
-              <a
-                onClick={this.toggleVisibility}
-                className={button}
-                href="https://mytwocents.dev"
-                target="_blank"
-                rel="noopener"
-              >
-                About this website
               </a>
             </li>
           </ul>
