@@ -60,12 +60,12 @@ const PortfolioItem = ({ data, links }) => (
     <section className="section-portfolio__about">
       <div className="container">
         <div className="row">
-          <div className="offset-sm-1 col-sm-10 col-lg-6 offset-lg-3 section-col">
+          <div className="col-sm-10 col-lg-8 section-col">
             <h2 className="section-portfolio__subtitle">Description</h2>
             <p className="section-portfolio__description">{data.description}</p>
           </div>
 
-          <div className="offset-sm-1 col-sm-10 col-lg-6 offset-lg-3 section-col">
+          <div className="col-sm-10 col-lg-8 section-col">
             <h2 className="section-portfolio__subtitle">Technology</h2>
             <p className="section-portfolio__description">
               {data.technologyDescription}
@@ -73,7 +73,7 @@ const PortfolioItem = ({ data, links }) => (
           </div>
 
           {data.myRole && (
-            <div className="offset-sm-1 col-sm-10 col-lg-6 offset-lg-3 section-col">
+            <div className="col-sm-10 col-lg-8 section-col">
               <h2 className="section-portfolio__subtitle">
                 My Role in the project
               </h2>

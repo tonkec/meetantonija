@@ -1,0 +1,81 @@
+$yellow: #f9c80e;
+$white: #fff;
+.skills-section {
+  padding: 70px 20px 40px;
+  @media (min-width: 900px) {
+    padding-top: 80px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: 1400px) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+
+  .skills-heading {
+    color: #444;
+    text-transform: uppercase;
+    font-weight: 500;
+    @media (min-width: 992px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .skills-column {
+    margin-bottom: 50px;
+
+    @media (min-width: 1200px) {
+      padding: 0 20px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 1300px) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  .skills-description {
+    font-weight: 200;
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 2.2;
+    color: #797979;
+
+    @media (min-width: 992px) {
+      font-size: 1.1rem;
+      max-width: 450px;
+    }
+
+    span {
+      padding: 3px 7px;
+      font-family: "Rubik", sans-serif;
+      background-color: $yellow;
+      border: 1px solid #292929;
+      color: #292929;
+    }
+  }
+}
+.skills-section span::selection {
+  background: #292929;
+  color: $white;
+}
+
+.skills-section span::-moz-selection {
+  background: #292929;
+  color: $white;
+}
+
+.skills-heading::selection {
+  background: $yellow;
+}
+.skills-heading::-moz-selection {
+  background: $yellow;
+}
+.skills-description::selection {
+  background: $yellow;
+}
+.skills-description::-moz-selection {
+  background: $yellow;
+}

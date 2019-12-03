@@ -1,8 +1,9 @@
 import React from "react";
 import Grid from "./../../components/Grid";
 import skillsSection from "./stylesheets/skillsSection";
+import "./stylesheets/skills.scss";
 const SkillsSection = () => (
-  <section className={skillsSection}>
+  <section className={`${skillsSection} skills-section`}>
     <Grid container="container-fluid">
       <div className="col-xs-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-xl-4 offset-xl-0">
         <div className="skills-column">
