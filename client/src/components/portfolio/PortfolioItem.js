@@ -15,8 +15,12 @@ const PortfolioItem = ({ data, links }) => (
         <div className="row">
           <div className="col-xs-8 col-sm-10 offset-sm-1 col-md-10 offset-md-1 text-center">
             <h1 className="section-portfolio__title">{data.title}</h1>
-            <a href={data.headerImage} target="_blank" rel="noopener">
-              <img src={data.headerImage} />
+            <a
+              href={data.headerImage}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={data.headerImage} alt="portfolio item" />
             </a>
           </div>
         </div>
@@ -28,7 +32,11 @@ const PortfolioItem = ({ data, links }) => (
           <div className="col-sm-12 col-md-6 col-lg-3">
             <h3>{data.client ? "Client" : "Code"}</h3>
             <p>
-              <a href={data.link || data.code} rel="noopener" target="_blank">
+              <a
+                href={data.link || data.code}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 {data.client || data.code}
               </a>
             </p>
@@ -47,7 +55,11 @@ const PortfolioItem = ({ data, links }) => (
           <div className="col-sm-12 col-md-6 col-lg-3">
             <h3>Link</h3>
             <p>
-              <a rel="noopener" target="_blank" href={data.projectLink}>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href={data.projectLink}
+              >
                 {data.projectLink}
               </a>
             </p>
@@ -102,7 +114,7 @@ const PortfolioItem = ({ data, links }) => (
                     className="col-sm-8 offset-sm-2 col-lg-4 offset-lg-1 text-center"
                     key={i}
                   >
-                    <a href={image} target="_blank" rel="noopener">
+                    <a href={image} target="_blank" rel="noopener noreferrer">
                       <img src={image} />
                     </a>
                   </div>
@@ -112,7 +124,7 @@ const PortfolioItem = ({ data, links }) => (
                     className="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3"
                     key={i}
                   >
-                    <a href={image} target="_blank" rel="noopener">
+                    <a href={image} target="_blank" rel="noopener noreferrer">
                       <img src={image} />
                     </a>
                   </div>

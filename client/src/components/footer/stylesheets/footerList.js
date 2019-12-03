@@ -5,7 +5,6 @@ const footerList = css({
   textTransform: "uppercase",
 
   a: {
-    transition: "color 0.2s ease-in-out",
     textDecoration: "none",
     fontSize: ".9rem",
     fontWeight: 400,

@@ -54,7 +54,6 @@ const contact = css({
     button: {
       width: 150,
       backgroundColor: "#f9c80e",
-      border: "none",
       padding: "5px 0",
       color: "#000",
       fontFamily: '"Roboto", sans-serif',

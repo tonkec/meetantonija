@@ -1,5 +1,5 @@
 import { css } from "emotion";
-import { topGutter, sectionGutter } from "./../../../stylesheets/variables";
+import { sectionGutter } from "./../../../stylesheets/variables";
 const testimonial = css({
   padding: sectionGutter,
   backgroundColor: "white",

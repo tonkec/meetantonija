@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./../../components/header";
 import Footer from "./../../components/footer";
-import ContactContainer from "./../../components/contact";
 
 import About from "./styles/About";
 
@@ -21,6 +20,7 @@ const Aboutpage = () => (
               <a
                 href="https://www.meetup.com/S_CSS_Zagreb/events/265312074/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 How to code pure CSS beer @ Scss Meetup
               </a>
@@ -31,7 +31,11 @@ const Aboutpage = () => (
         <div className="col-sm-12 col-md-6 col-xl-4">
           <div className="card">
             <div className="content">
-              <a href="https://codeinstitute.net/" target="_blank">
+              <a
+                href="https://codeinstitute.net/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Teaching students @ Code Institute
               </a>
             </div>
@@ -42,7 +46,11 @@ const Aboutpage = () => (
         <div className="col-sm-12 col-md-6 col-xl-4">
           <div className="card">
             <div className="content">
-              <a href="https://punkrockdev.com/" target="_blank">
+              <a
+                href="https://punkrockdev.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Goofing around with Punk Rock Dev
               </a>
             </div>
@@ -53,7 +61,11 @@ const Aboutpage = () => (
         <div className="col-sm-12 col-md-6 col-xl-4">
           <div className="card">
             <div className="content">
-              <a href="https://www.asynclabs.co/about" target="_blank">
+              <a
+                href="https://www.asynclabs.co/about"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Crew @ Async Labs
               </a>
             </div>
@@ -67,6 +79,7 @@ const Aboutpage = () => (
               <a
                 href="https://slides.com/tonkecpalonkec/from-zero-to-s-hero/#/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Encouraging LGBTQI+ community to start coding!
               </a>
@@ -77,7 +90,11 @@ const Aboutpage = () => (
         <div className="col-sm-12 col-md-6 col-xl-4">
           <div className="card">
             <div className="content">
-              <a href="https://github.com/tonkec/workshop" target="_blank">
+              <a
+                href="https://github.com/tonkec/workshop"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Free workshop for beginners
               </a>
             </div>
@@ -97,6 +114,7 @@ const Aboutpage = () => (
               <li>
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.meetup.com/S_CSS_Zagreb/events/257860075/"
                 >
                   CSS Grid Meetup
@@ -105,6 +123,7 @@ const Aboutpage = () => (
               <li>
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.meetup.com/S_CSS_Zagreb/events/259088646/"
                 >
                   Pseudo Classes Meetup
@@ -113,6 +132,7 @@ const Aboutpage = () => (
               <li>
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.meetup.com/S_CSS_Zagreb/events/260470749/"
                 >
                   SVGs 101 Meetup
@@ -121,6 +141,7 @@ const Aboutpage = () => (
               <li>
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.meetup.com/S_CSS_Zagreb/events/262442215/"
                 >
                   Pseudoelements Meetup
@@ -130,6 +151,7 @@ const Aboutpage = () => (
               <li>
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.meetup.com/S_CSS_Zagreb/events/265312074/"
                 >
                   CSS animations Meetup

@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "./FooterContainer";
 import footerList from "./stylesheets/footerList";
 
 const links = [
@@ -19,7 +18,7 @@ const FooterList = () => (
   <ul className={footerList}>
     {links.map((link, i) => (
       <li key={i}>
-        <a href={link.href} target="_blank" rel="noopener">
+        <a href={link.href} target="_blank" rel="noopener noreferrer">
           {link.name}
         </a>
       </li>

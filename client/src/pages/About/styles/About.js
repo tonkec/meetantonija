@@ -1,9 +1,9 @@
 import { css } from "emotion";
-import { yellow, black } from "./../../../stylesheets/variables";
+import { yellow } from "./../../../stylesheets/variables";
 import async from "./../../../images/about/async_labs.jpg";
 import code_institute from "./../../../images/about/code_institute_students_small.jpg";
 import punk from "./../../../images/about/footer_guitar.png";
-import me from "./../../../images/about/me_working.jpg";
+// import me from "./../../../images/about/me_working.jpg";
 import scss from "./../../../images/about/beer.jpg";
 import workshop from "./../../../images/about/workshop.jpg";
 import borders from "./../../../images/about/borders_none.jpg";

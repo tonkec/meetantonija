@@ -22,7 +22,7 @@ const TestimonalSection = () => (
             <figcaption>
               <a
                 href="https://codeinstitute.net"
-                rel="noopener"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 Brian O'Grady, Code Institute
@@ -44,7 +44,7 @@ const TestimonalSection = () => (
             <figcaption>
               <a
                 href="https://www.supersuperagency.com/"
-                rel="noopener"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 Mario Stipetic, Supersuperstudio
@@ -66,7 +66,7 @@ const TestimonalSection = () => (
             <figcaption>
               <a
                 href="https://github.com/maria-mir"
-                rel="noopener"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 Maria Mir, Student at Code Institute

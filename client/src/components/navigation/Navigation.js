@@ -75,7 +75,7 @@ class Navigation extends React.Component {
                 className="button"
                 href="https://mytwocents.dev"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 Blog
               </a>

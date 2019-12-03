@@ -2,11 +2,11 @@ import ci1 from "./../images/ci1.png";
 import ciHeader from "./../images/ci4.png";
 
 import craftstrom3 from "./../images/craftstrom3.png";
-import craftstrom1 from "./../images/craftstrom1.png";
-import craftstrom2 from "./../images/craftstrom2.png";
+// import craftstrom1 from "./../images/craftstrom1.png";
+// import craftstrom2 from "./../images/craftstrom2.png";
 
-import p1 from "./../images/p1.jpeg";
-import p2 from "./../images/peaks2.jpeg";
+// import p1 from "./../images/p1.jpeg";
+// import p2 from "./../images/peaks2.jpeg";
 
 import pimsf from "./../images/pimsf.png";
 import pimsfGif from "./../images/pimsf.gif";
