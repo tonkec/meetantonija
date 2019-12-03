@@ -44,7 +44,6 @@ const nav = css({
     padding: 0,
     textAlign: "center",
     li: {
-      margin: "15px 0",
       display: "inline-block"
     }
   }

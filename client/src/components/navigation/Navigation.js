@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import button from "./../../stylesheets/button";
 import navigation from "./stylesheets/navigation";
 import navOpener from "./stylesheets/navOpener";
 import data from "./../data";
@@ -36,7 +35,7 @@ class Navigation extends React.Component {
     return (
       <>
         <button
-          className={`${navOpener} ${button}`}
+          className={`${navOpener} button`}
           onClick={this.toggleVisibility}
         >
           MENU
@@ -48,7 +47,7 @@ class Navigation extends React.Component {
         >
           <ul className="navigation__list">
             <li>
-              <Link to="/" onClick={this.toggleVisibility} className={button}>
+              <Link to="/" onClick={this.toggleVisibility} className="button">
                 Home
               </Link>
             </li>
@@ -56,7 +55,7 @@ class Navigation extends React.Component {
               <Link
                 to="/about"
                 onClick={this.toggleVisibility}
-                className={button}
+                className="button"
               >
                 About
               </Link>
@@ -65,7 +64,7 @@ class Navigation extends React.Component {
               <Link
                 to="/contact"
                 onClick={this.toggleVisibility}
-                className={button}
+                className="button"
               >
                 Contact
               </Link>
@@ -73,7 +72,7 @@ class Navigation extends React.Component {
             <li>
               <a
                 onClick={this.toggleVisibility}
-                className={button}
+                className="button"
                 href="https://mytwocents.dev"
                 target="_blank"
                 rel="noopener"
@@ -96,7 +95,7 @@ class Navigation extends React.Component {
                   <Link
                     to={`${this.state.location}/${title}`}
                     onClick={this.toggleVisibility}
-                    className={button}
+                    className="button"
                   >
                     {item.title}
                   </Link>
@@ -111,7 +110,7 @@ class Navigation extends React.Component {
                   <Link
                     to={`${this.state.location}/${title}`}
                     onClick={this.toggleVisibility}
-                    className={button}
+                    className="button"
                   >
                     {item.title}
                   </Link>

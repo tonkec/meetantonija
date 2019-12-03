@@ -141,15 +141,64 @@ header {
 #root {
   .navigation {
     &__inner {
-      width: 100%;
-      height: 50%;
+      @media (max-width: 992px) {
+        width: 100%;
+        height: 50%;
+      }
 
       &--left {
-        top: 0;
+        @media (max-width: 992px) {
+          top: 0;
+        }
       }
 
       &--right {
-        bottom: 0;
+        a {
+          background-color: #292929;
+          color: $yellow;
+          border-color: $yellow;
+
+          &:hover {
+            background-color: $yellow;
+            color: #292929;
+            border-color: #292929;
+          }
+        }
+        @media (max-width: 992px) {
+          bottom: 0;
+          top: 50%;
+        }
+      }
+    }
+
+    &__list {
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 0;
+      @media (min-width: 768px) {
+        width: 70%;
+      }
+
+      @media (min-width: 992px) {
+        width: 100%;
+        padding: 0 50px;
+      }
+      li {
+        margin-bottom: 15px;
+
+        @media (min-width: 992px) {
+          margin-bottom: 20px;
+        }
+      }
+
+      a {
+        border-width: 0.5px;
+        font-size: 1rem;
+        padding: 7px 10px;
+        display: inline-block;
+        @media (min-width: 768px) {
+          font-size: 1.4rem;
+        }
       }
     }
   }
@@ -184,5 +233,26 @@ header {
         margin: 10px auto;
       }
     }
+  }
+}
+
+//button
+.button {
+  padding: 5px;
+  color: #292929;
+  background-color: #f9c80e;
+  border: 2px solid black;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  font-family: Roboto, sans-serif;
+  transition: background-color 0.2s cubic-bezier(0.51, 0.76, 0.6, 0.42),
+    color 0.2s cubic-bezier(0.51, 0.76, 0.6, 0.42);
+
+  &:hover {
+    text-decoration: none;
+    background-color: #292929;
+    color: #f9c80e;
   }
 }

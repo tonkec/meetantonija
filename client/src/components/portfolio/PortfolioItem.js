@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "./../footer";
 import portfolioItem from "./stylesheets/portfolioItem";
-import button from "./../../stylesheets/button";
 import normalTitle from "./../helpers/normalTitle";
 
 const PortfolioItem = ({ data, links }) => (
@@ -128,7 +127,7 @@ const PortfolioItem = ({ data, links }) => (
         <div className="row">
           <div className="col text-center">
             {links.map((link, i) => (
-              <Link to={normalTitle(link)} key={i} className={button}>
+              <Link to={normalTitle(link)} key={i} className="button">
                 {link}
               </Link>
             ))}
