@@ -28,7 +28,6 @@ const testimonial = css({
   },
   figcaption: {
     fontSize: "1rem",
-    marginTop: "30px",
     cursor: "pointer",
 
     a: {

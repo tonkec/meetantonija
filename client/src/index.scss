@@ -150,18 +150,31 @@ header {
         @media (max-width: 992px) {
           top: 0;
         }
+        .navigation__list {
+          li {
+            display: block;
+            margin-bottom: 0;
+          }
+          a {
+            border: none;
+
+            &:hover {
+              background-color: $yellow;
+              text-decoration: underline;
+              color: #292929;
+            }
+          }
+        }
       }
 
       &--right {
         a {
-          background-color: #292929;
-          color: $yellow;
-          border-color: $yellow;
+          background-color: $yellow;
+          color: #292929;
 
           &:hover {
             background-color: $yellow;
-            color: #292929;
-            border-color: #292929;
+            text-decoration: underline;
           }
         }
         @media (max-width: 992px) {
@@ -185,10 +198,6 @@ header {
       }
       li {
         margin-bottom: 15px;
-
-        @media (min-width: 992px) {
-          margin-bottom: 20px;
-        }
       }
 
       a {
@@ -196,8 +205,10 @@ header {
         font-size: 1rem;
         padding: 7px 10px;
         display: inline-block;
+        font-family: Raleway, sans-serif;
+        font-weight: 700;
         @media (min-width: 768px) {
-          font-size: 1.4rem;
+          font-size: 1.5rem;
         }
       }
     }
@@ -255,4 +266,81 @@ header {
     background-color: #292929;
     color: #f9c80e;
   }
+}
+
+// testimonial
+.section__testimonial {
+  background-color: #fff;
+  position: relative;
+  padding: 50px 0;
+
+  @media (min-width: 992px) {
+    padding: 80px 0;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 130px 0;
+  }
+  h2 {
+    margin-bottom: 30px;
+    text-align: left;
+    @media (min-width: 480px) {
+      text-align: center;
+    }
+    @media (min-width: 992px) {
+      margin-bottom: 60px;
+    }
+  }
+  figure {
+    max-width: 400px;
+    margin: 0 auto 50px;
+    position: relative;
+  }
+  blockquote {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: $black;
+    margin-bottom: 0px;
+    @media (min-width: 992px) {
+      font-size: 1.1rem;
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 5px;
+      display: inline-block;
+      line-height: 1.8;
+      color: #797979;
+      font-size: 1.1rem;
+    }
+  }
+
+  figcaption {
+    font-size: 1rem;
+    margin-top: 15px;
+    cursor: pointer;
+
+    a {
+      color: $black;
+      text-decoration: none;
+      padding: 5px;
+      background-color: $yellow;
+      border: 1px solid #292929;
+    }
+  }
+
+  .testimonial-column {
+    margin-bottom: 50px;
+    @media (min-width: 1200px) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+blockquote::selection {
+  background: $yellow;
+}
+blockquote::selection::-moz-selection {
+  background: $yellow;
 }
