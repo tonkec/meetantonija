@@ -6,24 +6,13 @@ let portfolioTopGutter = "80";
 const portfolioItem = css({
   img: { width: "100%", borderRadius: 7 },
 
-  a: {
-    wordBreak: "break-all"
-  },
-
   ".section-portfolio": {
     "&__header": {
       padding: "15vh 0",
-      color: white1,
-
-      "&--craftstrom": {
-        img: {
-          width: 500
-        }
-      }
+      color: white1
     },
 
     "&__title": {
-      fontSize: "4rem",
       marginBottom: 50,
       textTransform: "uppercase",
       fontWeight: 700,

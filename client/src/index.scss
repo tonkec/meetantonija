@@ -202,7 +202,7 @@ header {
 
       a {
         border-width: 0.5px;
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding: 7px 10px;
         display: inline-block;
         font-family: Raleway, sans-serif;
@@ -243,6 +243,18 @@ header {
         max-width: 200px;
         margin: 10px auto;
       }
+    }
+  }
+
+  .section-portfolio__images {
+    img {
+      width: 500px;
+    }
+  }
+  .section-portfolio__title {
+    font-size: 3rem;
+    @media (min-width: 768px) {
+      font-size: 4rem;
     }
   }
 }
@@ -343,4 +355,12 @@ blockquote::selection {
 }
 blockquote::selection::-moz-selection {
   background: $yellow;
+}
+
+// footer
+footer {
+  padding-left: 15px;
+  @media (min-width: 768px) {
+    padding-left: 40px;
+  }
 }

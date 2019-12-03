@@ -5,7 +5,6 @@ const footer = css({
   backgroundColor: footerBg,
   paddingTop: 20,
   paddingBottom: 20,
-  paddingLeft: 40,
   textAlign: "left",
   position: "fixed",
   bottom: 0,
