@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./../../components/header";
 import Footer from "./../../components/footer";
+import ContactContainer from "./../../components/contact/ContactContainer";
 
 import About from "./styles/About";
 
@@ -157,14 +158,24 @@ const Aboutpage = () => (
                   CSS animations Meetup
                 </a>
               </li>
+
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.meetup.com/S_CSS_Zagreb/events/266253881/"
+                >
+                  CSS tricks
+                </a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-    {/* <section>
+    <section>
       <ContactContainer />
-    </section> */}
+    </section>
     <Footer />
   </main>
 );
