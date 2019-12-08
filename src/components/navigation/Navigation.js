@@ -4,6 +4,8 @@ import navigation from "./stylesheets/navigation";
 import navOpener from "./stylesheets/navOpener";
 import data from "./../data";
 import normalTitle from "./../helpers/normalTitle";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 class Navigation extends React.Component {
   state = {
     visible: false,
