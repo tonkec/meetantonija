@@ -3,7 +3,6 @@ import { sectionGutter } from "./../../../stylesheets/variables";
 
 const skillsSection = css({
   backgroundColor: "white",
-  padding: sectionGutter,
 
   ".skills-column": {
     maxWidth: "400px"
