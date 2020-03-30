@@ -116,18 +116,36 @@ const Aboutpage = () => (
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://www.meetup.com/S_CSS_Zagreb/events/257860075/"
+                  href="https://www.meetup.com/css-in-vienna/events/267266901/"
                 >
-                  CSS Grid Meetup
+                  CSS-in-Vienna #1
                 </a>
               </li>
               <li>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://www.meetup.com/S_CSS_Zagreb/events/259088646/"
+                  href="https://www.meetup.com/S_CSS_Zagreb/events/266253881/"
                 >
-                  Pseudo Classes Meetup
+                  CSS tricks
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.meetup.com/S_CSS_Zagreb/events/265312074/"
+                >
+                  CSS animations Meetup
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.meetup.com/S_CSS_Zagreb/events/262442215/"
+                >
+                  Pseudoelements Meetup
                 </a>
               </li>
               <li>
@@ -143,29 +161,18 @@ const Aboutpage = () => (
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://www.meetup.com/S_CSS_Zagreb/events/262442215/"
+                  href="https://www.meetup.com/S_CSS_Zagreb/events/259088646/"
                 >
-                  Pseudoelements Meetup
+                  Pseudo Classes Meetup
                 </a>
               </li>
-
               <li>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://www.meetup.com/S_CSS_Zagreb/events/265312074/"
+                  href="https://www.meetup.com/S_CSS_Zagreb/events/257860075/"
                 >
-                  CSS animations Meetup
-                </a>
-              </li>
-
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.meetup.com/S_CSS_Zagreb/events/266253881/"
-                >
-                  CSS tricks
+                  CSS Grid Meetup
                 </a>
               </li>
             </ul>
