@@ -2,8 +2,17 @@ import React from "react";
 import Header from "./../../components/header";
 import Footer from "./../../components/footer";
 import ContactContainer from "./../../components/contact/ContactContainer";
-
 import About from "./styles/About";
+import Img from "react-cool-img";
+
+import code_institute from "./../../images/about/code_institute_students_small.jpg";
+import punk from "./../../images/about/footer_guitar.png";
+import scss from "./../../images/about/beer.jpg";
+import workshop from "./../../images/about/workshop.jpg";
+import borders from "./../../images/about/borders_none.jpg";
+import zero from "./../../images/about/from_zero.jpg";
+import vienna from "./../../images/about/css_in_vienna.jpg";
+import placeholder from "./../../images/about/placeholder.png";
 
 const Aboutpage = () => (
   <main className={`${About}`}>
@@ -26,7 +35,12 @@ const Aboutpage = () => (
                 Coding a piano @ CSS-in-Vienna
               </a>
             </div>
-            <div className="card__image vienna" />
+            <Img
+              placeholder={placeholder}
+              src={vienna}
+              error={placeholder}
+              alt="Coding a piano @ CSS-in-Vienna"
+            />
           </div>
         </div>
 
@@ -41,7 +55,12 @@ const Aboutpage = () => (
                 How to code pure CSS beer @ Scss Meetup
               </a>
             </div>
-            <div className="card__image scss" />
+            <Img
+              placeholder={placeholder}
+              src={scss}
+              error={placeholder}
+              alt="How to code pure CSS beer @ Scss Meetup"
+            />
           </div>
         </div>
         <div className="col-sm-12 col-md-6 col-xl-4">
@@ -55,7 +74,12 @@ const Aboutpage = () => (
                 Teaching students @ Code Institute
               </a>
             </div>
-            <div className="card__image ci" />
+            <Img
+              placeholder={placeholder}
+              src={code_institute}
+              error={placeholder}
+              alt="Teaching students @ Code Institute"
+            />
           </div>
         </div>
 
@@ -70,7 +94,12 @@ const Aboutpage = () => (
                 Goofing around with Punk Rock Dev
               </a>
             </div>
-            <div className="card__image punk" />
+            <Img
+              placeholder={placeholder}
+              src={punk}
+              error={placeholder}
+              alt="Goofing around with Punk Rock Dev"
+            />
           </div>
         </div>
 
@@ -85,7 +114,12 @@ const Aboutpage = () => (
                 Encouraging LGBTQI+ community to start coding!
               </a>
             </div>
-            <div className="card__image zero" />
+            <Img
+              placeholder={placeholder}
+              src={zero}
+              error={placeholder}
+              alt="Encouraging LGBTQI+ community to start coding!"
+            />
           </div>
         </div>
         <div className="col-sm-12 col-md-6 col-xl-4">
@@ -99,7 +133,12 @@ const Aboutpage = () => (
                 Free workshop for beginners
               </a>
             </div>
-            <div className="card__image workshop" />
+            <Img
+              placeholder={placeholder}
+              src={workshop}
+              error={placeholder}
+              alt="Free workshop for beginners"
+            />
           </div>
         </div>
       </div>

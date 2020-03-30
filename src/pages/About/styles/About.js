@@ -1,9 +1,7 @@
 import { css } from "emotion";
 import { yellow } from "./../../../stylesheets/variables";
-import async from "./../../../images/about/async_labs.jpg";
 import code_institute from "./../../../images/about/code_institute_students_small.jpg";
 import punk from "./../../../images/about/footer_guitar.png";
-// import me from "./../../../images/about/me_working.jpg";
 import scss from "./../../../images/about/beer.jpg";
 import workshop from "./../../../images/about/workshop.jpg";
 import borders from "./../../../images/about/borders_none.jpg";
@@ -24,43 +22,12 @@ const about = css({
   },
   ".card": {
     marginBottom: 30,
+    overflow: "hidden",
+    borderRadius: 7,
+    border: `3px solid #222`,
 
-    "&__image": {
-      height: 350,
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center",
-      borderRadius: 7,
-      border: `3px solid #222`,
-      "&.top": {
-        backgroundPosition: "top"
-      },
+    img: {},
 
-      "&.vienna": {
-        backgroundImage: `url(${vienna})`
-      },
-      "&.scss": {
-        backgroundImage: `url(${scss})`
-      },
-      // "&.async": {
-      //   backgroundImage: `url(${async})`
-      // },
-      "&.ci": {
-        backgroundImage: `url(${code_institute})`
-      },
-      "&.punk": {
-        backgroundImage: `url(${punk})`
-      },
-      "&.workshop": {
-        backgroundImage: `url(${workshop})`
-      },
-      "&.zero": {
-        backgroundImage: `url(${zero})`
-      },
-      "&.borders": {
-        backgroundImage: `url(${borders})`
-      }
-    },
     ".content": {
       position: "absolute",
       padding: "10px 20px",
