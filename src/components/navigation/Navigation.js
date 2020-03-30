@@ -1,11 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import navigation from "./stylesheets/navigation";
-import navOpener from "./stylesheets/navOpener";
-import data from "./../data";
-import normalTitle from "./../helpers/normalTitle";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
 class Navigation extends React.Component {
   state = {
     visible: false,
@@ -36,45 +30,47 @@ class Navigation extends React.Component {
     let { visible } = this.state;
     return (
       <>
-        <button
-          className={`${navOpener} button`}
-          onClick={this.toggleVisibility}
-        >
-          MENU
-        </button>
         <div
-          className={`${navigation} navigation__inner navigation__inner--left ${
+          className={`navigation__inner navigation__inner--right ${
             visible ? "show" : ""
           }`}
         >
           <ul className="navigation__list">
             <li>
-              <Link to="/" onClick={this.toggleVisibility} className="button">
+              <NavLink
+                exact
+                to="/"
+                activeStyle={{
+                  fontWeight: "bold"
+                }}
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
+                exact
                 to="/about"
-                onClick={this.toggleVisibility}
-                className="button"
+                activeStyle={{
+                  fontWeight: "bold"
+                }}
               >
                 About
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
+                exact
                 to="/contact"
-                onClick={this.toggleVisibility}
-                className="button"
+                activeStyle={{
+                  fontWeight: "bold"
+                }}
               >
                 Contact
-              </Link>
+              </NavLink>
             </li>
             <li>
               <a
-                onClick={this.toggleVisibility}
-                className="button"
                 href="https://mytwocents.dev"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -82,43 +78,6 @@ class Navigation extends React.Component {
                 Blog
               </a>
             </li>
-          </ul>
-        </div>
-        <div
-          className={`${navigation} navigation__inner navigation__inner--right ${
-            visible ? "show" : ""
-          }`}
-        >
-          <ul className="navigation__list">
-            {data.client.map((item, i) => {
-              let title = normalTitle(item.title);
-              return (
-                <li key={i}>
-                  <Link
-                    to={`${this.state.location}/${title}`}
-                    onClick={this.toggleVisibility}
-                    className="button"
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              );
-            })}
-
-            {data.hobby.map((item, i) => {
-              let title = normalTitle(item.title);
-              return (
-                <li key={i}>
-                  <Link
-                    to={`${this.state.location}/${title}`}
-                    onClick={this.toggleVisibility}
-                    className="button"
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              );
-            })}
           </ul>
         </div>
       </>

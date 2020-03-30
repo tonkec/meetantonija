@@ -138,78 +138,40 @@ header {
 }
 
 //nav
-#root {
-  .navigation {
-    &__inner {
-      @media (max-width: 992px) {
-        width: 100%;
-        height: 50%;
-      }
+.navigation {
+  &__inner {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    background-color: transparent;
+    position: absolute;
+  }
 
-      &--left {
-        @media (max-width: 992px) {
-          top: 0;
-        }
-        .navigation__list {
-          li {
-            display: block;
-            margin-bottom: 0;
-          }
-          a {
-            border: none;
+  &__list {
+    width: 100%;
+    display: flex;
+    margin-bottom: 0;
+    justify-content: flex-start;
+    align-items: center;
 
-            &:hover {
-              background-color: $yellow;
-              text-decoration: underline;
-              color: #292929;
-            }
-          }
-        }
-      }
-
-      &--right {
-        a {
-          background-color: $yellow;
-          color: #292929;
-
-          &:hover {
-            background-color: $yellow;
-            text-decoration: underline;
-          }
-        }
-        @media (max-width: 992px) {
-          bottom: 0;
-          top: 50%;
-        }
-      }
-    }
-
-    &__list {
-      width: 100%;
+    a {
+      border-width: 0.5px;
+      font-size: 1.2rem;
+      padding: 7px 10px;
       display: inline-block;
-      margin-bottom: 0;
-      @media (min-width: 768px) {
-        width: 70%;
-      }
+      font-family: Roboto, sans-serif;
+      font-weight: 300;
+      color: #292929;
 
-      @media (min-width: 992px) {
-        width: 100%;
-        padding: 0 50px;
-      }
-      li {
-        margin-bottom: 15px;
-      }
-
-      a {
-        border-width: 0.5px;
-        font-size: 1.2rem;
-        padding: 7px 10px;
-        display: inline-block;
-        font-family: Raleway, sans-serif;
-        font-weight: 700;
-        @media (min-width: 768px) {
-          font-size: 1.5rem;
-        }
+      &.active {
+        text-decoration: underline;
       }
     }
   }
