@@ -48,6 +48,7 @@ class Navigation extends React.Component {
               <NavLink
                 exact
                 to="/contact"
+                className="contact"
                 activeStyle={{
                   fontWeight: "bold"
                 }}
