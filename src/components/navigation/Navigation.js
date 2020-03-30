@@ -6,35 +6,10 @@ class Navigation extends React.Component {
     location: ""
   };
 
-  toggleVisibility = () => {
-    this.setState(prevState => ({
-      visible: !prevState.visible
-    }));
-  };
-
-  escFunction = event => {
-    if (event.keyCode === 27) {
-      this.toggleVisibility();
-    }
-  };
-
-  componentDidMount() {
-    document.addEventListener("keydown", this.escFunction, false);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener("keydown", this.escFunction, false);
-  }
-
   render() {
-    let { visible } = this.state;
     return (
       <>
-        <div
-          className={`navigation__inner navigation__inner--right ${
-            visible ? "show" : ""
-          }`}
-        >
+        <div className="navigation__inner navigation__inner--right">
           <ul className="navigation__list">
             <li>
               <NavLink
@@ -45,6 +20,17 @@ class Navigation extends React.Component {
                 }}
               >
                 Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                exact
+                to="/projects"
+                activeStyle={{
+                  fontWeight: "bold"
+                }}
+              >
+                Projects
               </NavLink>
             </li>
             <li>
