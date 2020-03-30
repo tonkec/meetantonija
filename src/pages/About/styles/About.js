@@ -8,6 +8,8 @@ import scss from "./../../../images/about/beer.jpg";
 import workshop from "./../../../images/about/workshop.jpg";
 import borders from "./../../../images/about/borders_none.jpg";
 import zero from "./../../../images/about/from_zero.jpg";
+import vienna from "./../../../images/about/css_in_vienna.jpg";
+
 const about = css({
   header: {
     padding: "160px 15px",
@@ -34,12 +36,15 @@ const about = css({
         backgroundPosition: "top"
       },
 
+      "&.vienna": {
+        backgroundImage: `url(${vienna})`
+      },
       "&.scss": {
         backgroundImage: `url(${scss})`
       },
-      "&.async": {
-        backgroundImage: `url(${async})`
-      },
+      // "&.async": {
+      //   backgroundImage: `url(${async})`
+      // },
       "&.ci": {
         backgroundImage: `url(${code_institute})`
       },

@@ -19,6 +19,21 @@ const Aboutpage = () => (
           <div className="card">
             <div className="content">
               <a
+                href="https://www.meetup.com/css-in-vienna/events/267266901/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Coding a piano @ CSS-in-Vienna
+              </a>
+            </div>
+            <div className="card__image vienna" />
+          </div>
+        </div>
+
+        <div className="col-sm-12 col-md-6 col-xl-4">
+          <div className="card">
+            <div className="content">
+              <a
                 href="https://www.meetup.com/S_CSS_Zagreb/events/265312074/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -56,21 +71,6 @@ const Aboutpage = () => (
               </a>
             </div>
             <div className="card__image punk" />
-          </div>
-        </div>
-
-        <div className="col-sm-12 col-md-6 col-xl-4">
-          <div className="card">
-            <div className="content">
-              <a
-                href="https://www.asynclabs.co/about"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Crew @ Async Labs
-              </a>
-            </div>
-            <div className="card__image async top" />
           </div>
         </div>
 
