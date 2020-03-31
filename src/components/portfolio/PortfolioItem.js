@@ -105,7 +105,6 @@ const PortfolioItem = ({ data, links }) => (
       <div className="container">
         <div className="row">
           <div className="col text-center">
-            <h2>More projects</h2>
             {links.map((link, i) => (
               <Link to={normalTitle(link)} key={i} className="project__link">
                 {link}

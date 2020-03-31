@@ -52,10 +52,7 @@ const portfolioItem = css({
 
     "&__links": {
       backgroundColor: "white",
-      padding: "50px 0 100px",
-      h2: {
-        marginBottom: 40
-      }
+      padding: "50px 0 100px"
     },
 
     "&__images": {

@@ -340,8 +340,9 @@ footer {
   font-size: 1.3rem;
   text-transform: uppercase;
   position: relative;
+  font-weight: 700;
+
   &:hover {
-    font-weight: 700;
     top: 1px;
     color: #222;
   }
