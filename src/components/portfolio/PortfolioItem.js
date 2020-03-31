@@ -15,13 +15,6 @@ const PortfolioItem = ({ data, links }) => (
         <div className="row">
           <div className="col-xs-8 col-sm-10 offset-sm-1 col-md-10 offset-md-1 text-center">
             <h1 className="section-portfolio__title">{data.title}</h1>
-            {/* <a
-              href={data.headerImage}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={data.headerImage} alt="portfolio item" />
-            </a> */}
           </div>
         </div>
       </div>

@@ -2,8 +2,6 @@ import ci1 from "./../images/ci1.png";
 import ciHeader from "./../images/ci4.png";
 
 import craftstrom3 from "./../images/craftstrom3.png";
-// import craftstrom1 from "./../images/craftstrom1.png";
-// import craftstrom2 from "./../images/craftstrom2.png";
 
 // import p1 from "./../images/p1.jpeg";
 // import p2 from "./../images/peaks2.jpeg";
@@ -85,9 +83,9 @@ const data = {
       completed: 2019,
       link: "https://www.asynclabs.co",
       description:
-        "Craftstrom enables users to connect to solar panels at their homes. After the login, users are redirected to the dashboard which renders two graphs that show the amount of generated solar energy in the last week. They can also see the state of the battery.",
+        "Pipelime Management system is software for visualizing, managing and maintaining pipelines and workflows in oil, gas or water industries.",
       technologyDescription:
-        "The app was built with React Native, customized both for Android and iOS. Graphs were made with dc.js and d3.js. Besides those app uses some cool react-native npm packages like tcomb, animatable, moment.js, axios and plenty others.",
+        "The app was built with React.js. Visualizations were coded with d3 and dc.js.",
       myRole: {
         "Pimsf Explorer":
           "The explorer is the most important part of the app. My task was to add the existing D3/DC charts and make them draggable and resizable. I achieved that using react-grid-layout npm package. The first thing I did was creating a plain draggable and resizable 8 column grid as requested. After that, I added graphs to columns. As user resizes column, graph should follow height and width of that column, of its parent. I sent resizedHeight and resizedWidth variable to the redux store and passed them to width and height in D3 attribute. When charts were resizable and draggable, I worked on responsiveness of the grid. React-grid-layout comes with the built-in properties and functions to create a grid based on the breakpoint. I used one function that will take number of columns and a breakpoint as parameters",
