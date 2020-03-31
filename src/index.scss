@@ -331,3 +331,24 @@ footer {
     background-color: transparent;
   }
 }
+
+.card {
+  animation: {
+    name: spin;
+    duration: 2s;
+    iteration-count: infinite;
+    timing-function: linear;
+    direction: alternate;
+    delay: 1s;
+  }
+}
+
+@keyframes spin {
+  from {
+    background-color: #292929;
+  }
+
+  to {
+    background-color: #b7b7b7;
+  }
+}

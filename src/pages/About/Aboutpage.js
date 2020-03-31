@@ -2,17 +2,8 @@ import React from "react";
 import Header from "./../../components/header";
 import Footer from "./../../components/footer";
 import ContactContainer from "./../../components/contact/ContactContainer";
-import About from "./styles/About";
-import Img from "react-cool-img";
 
-import code_institute from "./../../images/about/code_institute_students_small.jpg";
-import punk from "./../../images/about/footer_guitar.png";
-import scss from "./../../images/about/beer.jpg";
-import workshop from "./../../images/about/workshop.jpg";
-import borders from "./../../images/about/borders_none.jpg";
-import zero from "./../../images/about/from_zero.jpg";
-import vienna from "./../../images/about/css_in_vienna.jpg";
-import placeholder from "./../../images/about/placeholder.png";
+import About from "./styles/About";
 
 const Aboutpage = () => (
   <main className={`${About}`}>
@@ -35,15 +26,9 @@ const Aboutpage = () => (
                 Coding a piano @ CSS-in-Vienna
               </a>
             </div>
-            <Img
-              placeholder={placeholder}
-              src={vienna}
-              error={placeholder}
-              alt="Coding a piano @ CSS-in-Vienna"
-            />
+            <div className="card__image vienna" />
           </div>
         </div>
-
         <div className="col-sm-12 col-md-6 col-xl-4">
           <div className="card">
             <div className="content">
@@ -55,12 +40,7 @@ const Aboutpage = () => (
                 How to code pure CSS beer @ Scss Meetup
               </a>
             </div>
-            <Img
-              placeholder={placeholder}
-              src={scss}
-              error={placeholder}
-              alt="How to code pure CSS beer @ Scss Meetup"
-            />
+            <div className="card__image scss" />
           </div>
         </div>
         <div className="col-sm-12 col-md-6 col-xl-4">
@@ -74,12 +54,7 @@ const Aboutpage = () => (
                 Teaching students @ Code Institute
               </a>
             </div>
-            <Img
-              placeholder={placeholder}
-              src={code_institute}
-              error={placeholder}
-              alt="Teaching students @ Code Institute"
-            />
+            <div className="card__image ci" />
           </div>
         </div>
 
@@ -94,12 +69,7 @@ const Aboutpage = () => (
                 Goofing around with Punk Rock Dev
               </a>
             </div>
-            <Img
-              placeholder={placeholder}
-              src={punk}
-              error={placeholder}
-              alt="Goofing around with Punk Rock Dev"
-            />
+            <div className="card__image punk" />
           </div>
         </div>
 
@@ -114,12 +84,7 @@ const Aboutpage = () => (
                 Encouraging LGBTQI+ community to start coding!
               </a>
             </div>
-            <Img
-              placeholder={placeholder}
-              src={zero}
-              error={placeholder}
-              alt="Encouraging LGBTQI+ community to start coding!"
-            />
+            <div className="card__image zero" />
           </div>
         </div>
         <div className="col-sm-12 col-md-6 col-xl-4">
@@ -133,12 +98,7 @@ const Aboutpage = () => (
                 Free workshop for beginners
               </a>
             </div>
-            <Img
-              placeholder={placeholder}
-              src={workshop}
-              error={placeholder}
-              alt="Free workshop for beginners"
-            />
+            <div className="card__image workshop" />
           </div>
         </div>
       </div>
@@ -155,45 +115,9 @@ const Aboutpage = () => (
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://www.meetup.com/css-in-vienna/events/267266901/"
+                  href="https://www.meetup.com/S_CSS_Zagreb/events/257860075/"
                 >
-                  CSS-in-Vienna #1
-                </a>
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.meetup.com/S_CSS_Zagreb/events/266253881/"
-                >
-                  CSS tricks
-                </a>
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.meetup.com/S_CSS_Zagreb/events/265312074/"
-                >
-                  CSS animations Meetup
-                </a>
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.meetup.com/S_CSS_Zagreb/events/262442215/"
-                >
-                  Pseudoelements Meetup
-                </a>
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.meetup.com/S_CSS_Zagreb/events/260470749/"
-                >
-                  SVGs 101 Meetup
+                  CSS Grid Meetup
                 </a>
               </li>
               <li>
@@ -209,9 +133,38 @@ const Aboutpage = () => (
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://www.meetup.com/S_CSS_Zagreb/events/257860075/"
+                  href="https://www.meetup.com/S_CSS_Zagreb/events/260470749/"
                 >
-                  CSS Grid Meetup
+                  SVGs 101 Meetup
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.meetup.com/S_CSS_Zagreb/events/262442215/"
+                >
+                  Pseudoelements Meetup
+                </a>
+              </li>
+
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.meetup.com/S_CSS_Zagreb/events/265312074/"
+                >
+                  CSS animations Meetup
+                </a>
+              </li>
+
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.meetup.com/S_CSS_Zagreb/events/266253881/"
+                >
+                  CSS tricks
                 </a>
               </li>
             </ul>
