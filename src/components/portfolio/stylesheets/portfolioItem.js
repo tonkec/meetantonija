@@ -1,14 +1,14 @@
 import { css } from "emotion";
 import { white1 } from "./../../../stylesheets/variables";
 
-let portfolioTopGutter = "80";
+let portfolioTopGutter = "50";
 
 const portfolioItem = css({
-  img: { width: "100%", borderRadius: 7 },
+  img: { width: "100%", borderRadius: 7, border: "2px solid #eaeaea" },
 
   ".section-portfolio": {
     "&__header": {
-      padding: "15vh 0",
+      padding: "15vh 0 20px",
       color: white1
     },
 
@@ -51,8 +51,11 @@ const portfolioItem = css({
     },
 
     "&__links": {
-      backgroundColor: white1,
-      padding: `${portfolioTopGutter}px`
+      backgroundColor: "white",
+      padding: "50px 0 100px",
+      h2: {
+        marginBottom: 40
+      }
     },
 
     "&__images": {

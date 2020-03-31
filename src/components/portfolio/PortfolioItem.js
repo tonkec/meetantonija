@@ -15,13 +15,13 @@ const PortfolioItem = ({ data, links }) => (
         <div className="row">
           <div className="col-xs-8 col-sm-10 offset-sm-1 col-md-10 offset-md-1 text-center">
             <h1 className="section-portfolio__title">{data.title}</h1>
-            <a
+            {/* <a
               href={data.headerImage}
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src={data.headerImage} alt="portfolio item" />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
@@ -100,46 +100,14 @@ const PortfolioItem = ({ data, links }) => (
         </div>
       </div>
     </section>
-    {/* {data.footerImages.length > 0 && (
-      <section
-        className={`section-portfolio__images section-portfolio__images--${normalTitle(
-          data.title
-        )}`}
-      >
-        <div className="container-fluid">
-          <div className="row">
-            {data.footerImages.length > 1
-              ? data.footerImages.map((image, i) => (
-                  <div
-                    className="col-sm-8 offset-sm-2 col-lg-4 offset-lg-1 text-center"
-                    key={i}
-                  >
-                    <a href={image} target="_blank" rel="noopener noreferrer">
-                      <img src={image} />
-                    </a>
-                  </div>
-                ))
-              : data.footerImages.map((image, i) => (
-                  <div
-                    className="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3"
-                    key={i}
-                  >
-                    <a href={image} target="_blank" rel="noopener noreferrer">
-                      <img src={image} />
-                    </a>
-                  </div>
-                ))}
-          </div>
-        </div>
-      </section>
-    )} */}
 
     <section className="section-portfolio__links">
       <div className="container">
         <div className="row">
           <div className="col text-center">
+            <h2>More projects</h2>
             {links.map((link, i) => (
-              <Link to={normalTitle(link)} key={i} className="button">
+              <Link to={normalTitle(link)} key={i} className="project__link">
                 {link}
               </Link>
             ))}

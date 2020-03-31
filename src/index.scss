@@ -24,31 +24,31 @@ div[class*="craftstrom"],
 }
 
 *[class*="pimsf"] {
-  background-color: #414141;
+  background-color: #fff;
 }
 
 *[class*="sessionstracker"] {
-  background-color: #414141;
+  background-color: #fff;
 }
 
 *[class*="texthovereffects"] {
-  background-color: #414141;
+  background-color: #fff;
 }
 
 *[class*="craftstrom"] {
-  background-color: black;
+  background-color: #fff;
 }
 
 *[class*="peaks"] {
-  background-color: black;
+  background-color: #fff;
 }
 
 *[class*="codeinstitute"] {
-  background-color: grey;
+  background-color: #fff;
 }
 
 *[class*="revuto"] {
-  background-color: #222;
+  background-color: #fff;
 }
 
 .section__heading {
@@ -177,11 +177,13 @@ header {
 #root {
   .section-portfolio__title {
     margin: 0 auto 50px;
+    color: #222;
   }
   .section-portfolio__about,
   .section-portfolio__data {
     padding-left: 0;
     padding-right: 0;
+    background-color: #fff;
 
     .row {
       @media (min-width: 768px) {
@@ -329,6 +331,19 @@ footer {
   .section--client,
   .section--hobby {
     background-color: transparent;
+  }
+}
+
+.project__link {
+  color: #222;
+  margin: 10px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  position: relative;
+  &:hover {
+    font-weight: 700;
+    top: 1px;
+    color: #222;
   }
 }
 
