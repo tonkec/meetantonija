@@ -9,7 +9,6 @@ import Lostpage from "./../pages/404";
 import { PortfolioItems, PortfolioHobbyItems } from "./../components/portfolio";
 
 const components = Object.keys(PortfolioItems);
-const hobbyComponents = Object.keys(PortfolioHobbyItems);
 const Routes = () => {
   return (
     <Switch>
@@ -26,15 +25,6 @@ const Routes = () => {
         />
       ))}
 
-      {hobbyComponents.map((component, i) => {
-        return (
-          <Route
-            path={`/${hobbyComponents[i].toLowerCase()}`}
-            component={PortfolioHobbyItems[component]}
-            key={i}
-          />
-        );
-      })}
       <Route component={Lostpage} />
     </Switch>
   );
