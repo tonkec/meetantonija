@@ -23,8 +23,8 @@ const SkillsSection = () => (
             Mentoring
           </h2>
           <p className="skills-description">
-            I have helped plenty of students with their projects. We
-            <span> debugged</span> together, researched many issues, looked for{" "}
+            I have helped plenty of students with their projects. We &nbsp;
+            <span>debugged</span> together, researched many issues, looked for
             <span> answers</span>, read the docs and solved many problems
             together
           </p>
