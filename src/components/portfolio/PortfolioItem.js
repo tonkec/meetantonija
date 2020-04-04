@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import Footer from "./../footer";
 import portfolioItem from "./stylesheets/portfolioItem";
 import normalTitle from "./../helpers/normalTitle";
+import Image from "./../../components/gallery/Image";
 
 const PortfolioItem = ({ data, links }) => (
   <div className={`page ${portfolioItem} page--${normalTitle(data.title)}`}>
+    {console.log(data)}
     <header
       className={`section-portfolio__header section-portfolio__header--${normalTitle(
         data.title
@@ -92,6 +94,22 @@ const PortfolioItem = ({ data, links }) => (
               ))}
             </div>
           )}
+        </div>
+      </div>
+    </section>
+
+    <section className="section-portfolio__gallery is-white">
+      <div className="container">
+        <div className="row is-centered">
+          <div className="col-sm-8 col-md-10 col-lg-8">
+            <div className="row">
+              {data.images.map((image, i) => (
+                <div key={i} className="col">
+                  <Image image={image} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

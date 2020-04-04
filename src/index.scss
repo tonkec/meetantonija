@@ -11,11 +11,14 @@ $scss: "./images/about/beer.jpg";
 $workshop: "./images/about/workshop.jpg";
 $zero: "./images/about/from_zero.jpg";
 $vienna: "./images/about/css_in_vienna.jpg";
-$revuto: "./images/projects/revuto2.jpg";
-$pimsf: "./images/projects/pimsf.gif";
-$codeinstitute: "./images/projects/ci4.png";
 $students: "./images/about/students.jpg";
 
+$revuto: "./images/projects/revuto2.jpg";
+$pimsf: "./images/projects/pimsf.png";
+$codeinstitute: "./images/projects/ci4.png";
+$craftstrom: "./images/projects/craftstrom1.png";
+$craftstrom2: "./images/projects/craftstrom2.png";
+$craftstrom3: "./images/projects/craftstrom3.png";
 body,
 html {
   margin: 0;
@@ -154,58 +157,81 @@ header {
 }
 
 // portfolio
-#root {
-  .section-portfolio__title {
-    margin: 0 auto 50px;
-    color: #222;
+.section-portfolio__title {
+  margin: 0 auto 50px;
+  color: #222;
+}
+
+.section-portfolio__data {
+  background-color: #fff;
+  padding-left: 0;
+  padding-right: 0;
+
+  p {
+    margin-bottom: 40px;
   }
-  .section-portfolio__about,
-  .section-portfolio__data {
-    padding-left: 0;
-    padding-right: 0;
-    background-color: #fff;
+}
 
-    p {
-      margin-bottom: 0;
+.section-portfolio__about {
+  padding-left: 0;
+  padding-right: 0;
+  background-color: $white-1;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .row {
+    @media (min-width: 768px) {
+      justify-content: center;
+      align-items: center;
     }
+  }
 
-    .row {
-      @media (min-width: 768px) {
-        justify-content: center;
-        align-items: center;
+  .link {
+    max-width: 300px;
+  }
+}
+
+.section-portfolio__links {
+  padding-left: 0;
+  padding-right: 0;
+  .link {
+    margin: 0 10px;
+    font-size: 1.2em;
+    text-transform: capitalize;
+  }
+}
+
+.section-portfolio__images {
+  img {
+    width: 500px;
+  }
+}
+.section-portfolio__title {
+  font-size: 3rem;
+  @media (min-width: 768px) {
+    font-size: 4rem;
+  }
+}
+
+.section-portfolio__gallery {
+  padding: 0px 0 30px;
+  background-color: #fff;
+
+  .card {
+    border: none;
+    border: 5px solid #222;
+
+    margin-bottom: 0;
+    .card__image {
+      height: 300px;
+      background-size: contain;
+      background-position: top;
+      @media (min-width: 992px) {
+        height: 400px;
       }
     }
-
-    .link {
-      max-width: 300px;
-    }
-  }
-
-  .section-portfolio__links {
-    padding-left: 0;
-    padding-right: 0;
-    .link {
-      margin: 0 10px;
-      font-size: 1.2em;
-      text-transform: capitalize;
-    }
-  }
-
-  .section-portfolio__images {
-    img {
-      width: 500px;
-    }
-  }
-  .section-portfolio__title {
-    font-size: 3rem;
-    @media (min-width: 768px) {
-      font-size: 4rem;
-    }
-  }
-
-  .section-portfolio__gallery {
-    padding: 0px 0 80px;
-    background-color: #fff;
   }
 }
 
@@ -384,48 +410,84 @@ footer {
   border: 5px solid #222;
   background-color: transparent;
   margin-bottom: 40px;
+  &.scss {
+    .card__image {
+      background-image: url($scss);
+    }
+  }
+
+  &.vienna {
+    .card__image {
+      background-image: url($vienna);
+    }
+  }
+
+  &.punk {
+    .card__image {
+      background-image: url($punk);
+    }
+  }
+  &.workshop {
+    .card__image {
+      background-image: url($workshop);
+    }
+  }
+  &.zero {
+    .card__image {
+      background-image: url($zero);
+    }
+  }
+
+  &.revuto {
+    .card__image {
+      background-image: url($revuto);
+    }
+  }
+
+  &.craftstrom_panels {
+    border: none;
+    .card__image {
+      background-image: url($craftstrom2);
+    }
+  }
+
+  &.craftstrom_battery {
+    border: none;
+    .card__image {
+      background-image: url($craftstrom3);
+    }
+  }
+
+  &.craftstrom_login {
+    border: none;
+
+    .card__image {
+      background-image: url($craftstrom);
+    }
+  }
+
+  &.pimsf {
+    .card__image {
+      background-image: url($pimsf);
+    }
+  }
+
+  &.codeinstitute {
+    .card__image {
+      background-image: url($codeinstitute);
+    }
+  }
+
+  &.students {
+    .card__image {
+      background-image: url($students);
+    }
+  }
   &__image {
     height: 300px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    &.top {
-      background-position: top;
-    }
-
-    &.scss {
-      background-image: url($scss);
-    }
-
-    &.vienna {
-      background-image: url($vienna);
-    }
-
-    &.punk {
-      background-image: url($punk);
-    }
-    &.workshop {
-      background-image: url($workshop);
-    }
-    &.zero {
-      background-image: url($zero);
-    }
-
-    &.revuto {
-      background-image: url($revuto);
-    }
-
-    &.pimsf {
-      background-image: url($pimsf);
-    }
-
-    &.codeinstitute {
-      background-image: url($codeinstitute);
-    }
-
-    &.students {
-      background-image: url($students);
-    }
   }
   .content {
     position: absolute;

@@ -18,7 +18,7 @@ const portfolioItem = css({
   cursor: " pointer",
   position: "relative",
   minHeight: 250,
-  borderRadius: 10,
+  borderRadius: 5,
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center center",

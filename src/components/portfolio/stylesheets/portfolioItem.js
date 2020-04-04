@@ -18,10 +18,7 @@ const portfolioItem = css({
       fontWeight: 700,
       fontFamily: "Roboto, sans-serif"
     },
-    "&__data": {
-      padding: `${portfolioTopGutter - 20}px`,
-      backgroundColor: white1
-    },
+    "&__data": {},
 
     "&__about": {
       backgroundColor: "#ffffff",
