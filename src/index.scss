@@ -19,6 +19,9 @@ $codeinstitute: "./images/projects/ci4.png";
 $craftstrom: "./images/projects/craftstrom1.png";
 $craftstrom2: "./images/projects/craftstrom2.png";
 $craftstrom3: "./images/projects/craftstrom3.png";
+
+$sessions: "./images/projects/s4.png";
+
 body,
 html {
   margin: 0;
@@ -344,6 +347,9 @@ footer {
 //projects
 .projects {
   background-color: #f5f5f5;
+  .section--client {
+    padding-top: 150px;
+  }
   .section--client,
   .section--hobby {
     background-color: transparent;
@@ -441,6 +447,12 @@ footer {
   &.revuto {
     .card__image {
       background-image: url($revuto);
+    }
+  }
+
+  &.sessions {
+    .card__image {
+      background-image: url($sessions);
     }
   }
 
