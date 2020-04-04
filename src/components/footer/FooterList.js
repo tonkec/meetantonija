@@ -12,7 +12,12 @@ const FooterList = () => (
   <ul className={footerList}>
     {links.map((link, i) => (
       <li key={i}>
-        <a href={link.href} target="_blank" rel="noopener noreferrer">
+        <a
+          href={link.href}
+          className="link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {link.name}
         </a>
       </li>

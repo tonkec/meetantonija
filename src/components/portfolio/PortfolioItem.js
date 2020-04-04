@@ -29,6 +29,7 @@ const PortfolioItem = ({ data, links }) => (
                 href={data.link || data.code}
                 rel="noopener noreferrer"
                 target="_blank"
+                className="link"
               >
                 {data.client || data.code}
               </a>
@@ -52,6 +53,7 @@ const PortfolioItem = ({ data, links }) => (
                 rel="noopener noreferrer"
                 target="_blank"
                 href={data.projectLink}
+                className="link"
               >
                 {data.projectLink}
               </a>
