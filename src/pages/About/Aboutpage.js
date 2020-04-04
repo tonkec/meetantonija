@@ -62,7 +62,7 @@ const Aboutpage = () => (
     <section className="section is-grey">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-12">
+          <div className="col-10">
             <h2>I held talk on several S(CSS) meetups:</h2>
 
             <ul className="list">

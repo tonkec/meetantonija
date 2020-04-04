@@ -8,7 +8,6 @@
     "@fortawesome/react-fontawesome": "^0.1.8",
     "emailjs-com": "^2.3.2",
     "emotion": "^10.0.14",
-    "express": "^4.17.1",
     "global": "^4.4.0",
     "lodash": "^4.17.15",
     "netlify": "^2.4.8",
@@ -26,11 +25,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "node server.js",
+    "deploy": "rm -rf node_modules && yarn install & node server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
+  "proxy": "http://localhost:5000",
   "browserslist": {
     "production": [
       ">0.2%",
