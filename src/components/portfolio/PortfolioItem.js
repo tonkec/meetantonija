@@ -55,7 +55,7 @@ const PortfolioItem = ({ data, links }) => (
                 href={data.projectLink}
                 className="link"
               >
-                {data.projectLink}
+                {data.title === "Craftstrom" ? "Google Play" : data.projectLink}
               </a>
             </p>
           </div>
@@ -101,8 +101,8 @@ const PortfolioItem = ({ data, links }) => (
         <div className="row">
           <div className="col text-center">
             {links.map((link, i) => (
-              <Link to={normalTitle(link)} key={i} className="project__link">
-                {link}
+              <Link to={normalTitle(link)} key={i} className="link">
+                {normalTitle(link)}
               </Link>
             ))}
           </div>

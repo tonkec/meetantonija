@@ -1,19 +1,8 @@
-import ci1 from "./../images/ci1.png";
-import ciHeader from "./../images/ci4.png";
-
-import craftstrom3 from "./../images/craftstrom3.png";
-
-// import p1 from "./../images/p1.jpeg";
-// import p2 from "./../images/peaks2.jpeg";
-
-import pimsf from "./../images/pimsf.png";
-import pimsfGif from "./../images/pimsf.gif";
-
-import s2 from "./../images/s2.png";
-import s3 from "./../images/s3.png";
-
-import r1 from "./../images/revuto1.png";
-import r2 from "./../images/revuto2.jpg";
+import ciHeader from "./../images/projects/ci4.png";
+import craftstrom from "./../images/projects/craftstrom1.png";
+import pimsfGif from "./../images/projects/pimsf.gif";
+import s3 from "./../images/projects/s3.png";
+import r2 from "./../images/projects/revuto2.jpg";
 
 const data = {
   client: [
@@ -36,8 +25,8 @@ const data = {
         Mentoring:
           "I have been mentoring (remotely) for 2 years at Code Institute. The major part of the mentorship sessions is focusing on the code quality of students' projects. I help students to think like professional developers from the very start of their coding career. The content agnosticism, don't repeat yourself, reusability and object orientation are principles that I encourage on every session. I advise my students to stay persistent, committed and curious."
       },
-      headerImage: ciHeader,
-      footerImages: [ci1]
+      headerImage: ciHeader
+      // footerImages: [ci1]
     },
     // {
     //   title: "Peaks",
@@ -72,8 +61,8 @@ const data = {
         "React Developer":
           "I was working closely with backend developers and a designer. My task was to create user interface following designs from designer and to connect components via API provided by backend developers. User authorization was handled with tokens. I loved working on this project because I was able to get my hands on Context API and React hooks <3. I used Context API for flash messages and hooks in the stateful functional components. The cool part in login and signup form was custom made captcha. Originally, additions were much complex, but client wanted simplified captcha. Now user should know how to sum two numbers that are not larger than 10. I also really much enjoyed playing with CSS animations and transitions. The most valuable page to client was referral program page which has animation that I coded from scratch. The tricky part was reversing animation. I learned scss can not count nth children backwards."
       },
-      headerImage: r2,
-      footerImages: [r1]
+      headerImage: r2
+      // footerImages: [r1]
     },
     {
       title: "Pimsf",
@@ -92,8 +81,8 @@ const data = {
         "Changelog History":
           "PIMSF can display different version of pipelines. If a constructor in the field changes something on the pipeline, they should report changes in the app. That report should create a new version of the pipeline. Such pipeline in PIMSF is perceived as a virtual pipeline. My task was to create a changelog history tree that will display each version of a pipeline. This is displayed as a tree where each new version is treated as a child, and each old version as a parent. We used Mermaid.js package to display such tree. Axios was used to get data points from API. Each pipeline in the tree can be deleted or approved. If it is approved, pipeline should change color to green. If it is deleted, it should be deleted from the history tree."
       },
-      headerImage: pimsf,
-      footerImages: [pimsfGif]
+      headerImage: pimsfGif
+      // footerImages: [pimsfGif]
     },
 
     {
@@ -112,8 +101,8 @@ const data = {
         "User Interface":
           "My task was to implement user interface with react-native-elements and react-native and to handle user authentication and authorization with ajax calls to the backend api. User's token is stored using AsyncStorage. The app excited me a lot because I was able to get my hands on JS and React Native. It made me really happy that I can prove and test my JS skills!"
       },
-      headerImage: craftstrom3,
-      footerImages: []
+      headerImage: craftstrom
+      // footerImages: []
     }
   ],
   hobby: [
@@ -129,8 +118,8 @@ const data = {
         "React, Redux, Firebase, Thunk, Recharts, Faker.js, Lodash.js, Moment.js, react-dates, create-react-app, Heroku",
       about:
         "My idea was to get more meaningful data for the sessions that I have with students. The data should be presented in elegant way. The most interesting part to me was grouping data with lodash. The data received from firebase was not ready to be injected into Recharts immediately. It should be cleaned up and turned into cleaner objects. It was done with ._group function from lodash. I am so grateful for this library, it made my life much easier!",
-      headerImage: s3,
-      footerImages: [s2]
+      headerImage: s3
+      // footerImages: [s2]
     },
     {
       title: "Text hover effects",
@@ -143,8 +132,8 @@ const data = {
       technologyDescription: "Scss for library, React.js and Heroku for demo",
       about:
         "My idea was to have at one place different effects that can be triggered on click or hover. This library should save up developer's time. Any effects can be customized with passing arguments to mixins. Effects are initialised with CSS classes. I put high effort in keeping the code clean and reusable.",
-      headerImage: s3,
-      footerImages: [s2]
+      headerImage: s3
+      // footerImages: [s2]
     }
   ]
 };

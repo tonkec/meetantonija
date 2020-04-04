@@ -6,11 +6,20 @@ $yellow: #f9c80e;
 $purple: #662e9b;
 $black: #292929;
 
+$code_institute: "./images/about/code_institute_students_small.jpg";
+$punk: "./images/about/footer_guitar.jpg";
+$scss: "./images/about/beer.jpg";
+$workshop: "./images/about/workshop.jpg";
+$zero: "./images/about/from_zero.jpg";
+$vienna: "./images/about/css_in_vienna.jpg";
+$revuto: "./images/projects/revuto2.jpg";
+$pimsf: "./images/projects/pimsf.gif";
+$codeinstitute: "./images/projects/ci4.png";
+
 body,
 html {
   margin: 0;
   font-family: "Raleway", sans-serif;
-  // background-color: #f9c80e;
 }
 
 ul {
@@ -18,37 +27,8 @@ ul {
   padding: 0;
 }
 
-div[class*="craftstrom"],
 .black-background {
   background-color: black;
-}
-
-*[class*="pimsf"] {
-  background-color: #fff;
-}
-
-*[class*="sessionstracker"] {
-  background-color: #fff;
-}
-
-*[class*="texthovereffects"] {
-  background-color: #fff;
-}
-
-*[class*="craftstrom"] {
-  background-color: #fff;
-}
-
-*[class*="peaks"] {
-  background-color: #fff;
-}
-
-*[class*="codeinstitute"] {
-  background-color: #fff;
-}
-
-*[class*="revuto"] {
-  background-color: #fff;
 }
 
 .section__heading {
@@ -185,24 +165,29 @@ header {
     padding-right: 0;
     background-color: #fff;
 
+    p {
+      margin-bottom: 0;
+    }
+
     .row {
       @media (min-width: 768px) {
         justify-content: center;
         align-items: center;
       }
     }
+
+    .link {
+      max-width: 300px;
+    }
   }
 
   .section-portfolio__links {
     padding-left: 0;
     padding-right: 0;
-    a {
-      @media (max-width: 767px) {
-        display: block;
-        font-size: 1rem;
-        max-width: 200px;
-        margin: 10px auto;
-      }
+    .link {
+      margin: 0 10px;
+      font-size: 1.2em;
+      text-transform: capitalize;
     }
   }
 
@@ -216,6 +201,11 @@ header {
     @media (min-width: 768px) {
       font-size: 4rem;
     }
+  }
+
+  .section-portfolio__gallery {
+    padding: 0px 0 80px;
+    background-color: #fff;
   }
 }
 
@@ -353,34 +343,12 @@ footer {
   }
 }
 
-.card {
-  animation: {
-    name: spin;
-    duration: 2s;
-    iteration-count: infinite;
-    timing-function: linear;
-    direction: alternate;
-    delay: 1s;
-  }
-}
-
-@keyframes spin {
-  from {
-    background-color: #292929;
-  }
-
-  to {
-    background-color: #b7b7b7;
-  }
-}
-
 .link {
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 400;
   display: inline-block;
   position: relative;
-  margin-bottom: 7px;
   -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   z-index: 1;
@@ -408,5 +376,76 @@ footer {
   .link {
     font-size: 0.9rem;
     color: white;
+    margin-bottom: 7px;
   }
+}
+
+.card {
+  border: none;
+  // box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+
+  &__image {
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    &.top {
+      background-position: top;
+    }
+
+    &.scss {
+      background-image: url($scss);
+    }
+
+    &.vienna {
+      background-image: url($vienna);
+    }
+
+    &.ci {
+      background-image: url($code_institute);
+    }
+    &.punk {
+      background-image: url($punk);
+    }
+    &.workshop {
+      background-image: url($workshop);
+    }
+    &.zero {
+      background-image: url($zero);
+    }
+
+    &.revuto {
+      background-image: url($revuto);
+    }
+
+    &.pimsf {
+      background-image: url($pimsf);
+    }
+
+    &.codeinstitute {
+      background-image: url($codeinstitute);
+    }
+  }
+  .content {
+    position: absolute;
+    padding: 10px 20px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #222;
+    text-align: right;
+  }
+  a {
+    color: #fff;
+    font-size: 20px;
+  }
+}
+img {
+  width: 100%;
+  min-height: 300px;
+}
+.section-about__images {
+  background-color: white;
+  padding: 80px 15px;
 }

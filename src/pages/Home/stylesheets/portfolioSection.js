@@ -26,8 +26,7 @@ const portfolioItem = css({
   marginBottom: 30,
 
   "&.craftstrom": {
-    backgroundImage: `url(${craftstrom})`,
-    backgroundSize: "contain"
+    backgroundImage: `url(${craftstrom})`
   },
   "&.peaks": {
     backgroundImage: `url(${peaks})`

@@ -2,7 +2,6 @@ import React from "react";
 import Header from "./../../components/header";
 import Footer from "./../../components/footer";
 import ContactContainer from "./../../components/contact/ContactContainer";
-
 import About from "./styles/About";
 
 const Aboutpage = () => (

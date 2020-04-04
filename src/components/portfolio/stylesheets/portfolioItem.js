@@ -56,12 +56,7 @@ const portfolioItem = css({
     },
 
     "&__images": {
-      padding: `${portfolioTopGutter}px`,
-      "&--craftstrom": {
-        img: {
-          width: 300
-        }
-      }
+      padding: `${portfolioTopGutter}px`
     }
   }
 });
