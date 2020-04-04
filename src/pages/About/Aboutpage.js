@@ -3,6 +3,40 @@ import Header from "./../../components/header";
 import Footer from "./../../components/footer";
 import ContactContainer from "./../../components/contact/ContactContainer";
 import About from "./styles/About";
+import Image from "./../../components/gallery/Image";
+
+const data = [
+  {
+    title: "vienna",
+    href: "https://www.meetup.com/css-in-vienna/events/267266901/",
+    content: "Coding a piano @ CSS-in-Vienna"
+  },
+  {
+    title: "scss",
+    href: "https://www.meetup.com/S_CSS_Zagreb/events/265312074/",
+    content: "Coding a pure CSS beer @ Scss Meetup"
+  },
+  {
+    title: "students",
+    href: "https://codeinstitute.net/",
+    content: "Teaching students @ Code Institute"
+  },
+  {
+    title: "punk",
+    href: "https://punkrockdev.com/",
+    content: "Goofing around with Punk Rock Dev"
+  },
+  {
+    title: "zero",
+    href: "https://slides.com/tonkecpalonkec/from-zero-to-s-hero/#/",
+    content: "Encouraging LGBTQI+ community to start coding!"
+  },
+  {
+    title: "workshop",
+    href: "https://github.com/tonkec/workshop",
+    content: "Free workshop for beginners"
+  }
+];
 
 const Aboutpage = () => (
   <main className={`${About}`}>
@@ -12,93 +46,15 @@ const Aboutpage = () => (
         <h2>Code. Teach. CSS.</h2>
       </div>
     </Header>
-    <section className="section-about__images container-fluid">
-      <div className="row is-centered">
-        <div className="col-sm-12 col-md-6 col-xl-4">
-          <div className="card">
-            <div className="content">
-              <a
-                href="https://www.meetup.com/css-in-vienna/events/267266901/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Coding a piano @ CSS-in-Vienna
-              </a>
-            </div>
-            <div className="card__image vienna" />
-          </div>
-        </div>
-        <div className="col-sm-12 col-md-6 col-xl-4">
-          <div className="card">
-            <div className="content">
-              <a
-                href="https://www.meetup.com/S_CSS_Zagreb/events/265312074/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                How to code pure CSS beer @ Scss Meetup
-              </a>
-            </div>
-            <div className="card__image scss" />
-          </div>
-        </div>
-        <div className="col-sm-12 col-md-6 col-xl-4">
-          <div className="card">
-            <div className="content">
-              <a
-                href="https://codeinstitute.net/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Teaching students @ Code Institute
-              </a>
-            </div>
-            <div className="card__image ci" />
-          </div>
-        </div>
 
-        <div className="col-sm-12 col-md-6 col-xl-4">
-          <div className="card">
-            <div className="content">
-              <a
-                href="https://punkrockdev.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Goofing around with Punk Rock Dev
-              </a>
+    <section className="section is-white">
+      <div className="container">
+        <div className="row">
+          {data.map((image, i) => (
+            <div key={i} className="col-sm-12 col-md-6">
+              <Image image={image} />
             </div>
-            <div className="card__image punk" />
-          </div>
-        </div>
-
-        <div className="col-sm-12 col-md-6 col-xl-4">
-          <div className="card">
-            <div className="content">
-              <a
-                href="https://slides.com/tonkecpalonkec/from-zero-to-s-hero/#/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Encouraging LGBTQI+ community to start coding!
-              </a>
-            </div>
-            <div className="card__image zero" />
-          </div>
-        </div>
-        <div className="col-sm-12 col-md-6 col-xl-4">
-          <div className="card">
-            <div className="content">
-              <a
-                href="https://github.com/tonkec/workshop"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Free workshop for beginners
-              </a>
-            </div>
-            <div className="card__image workshop" />
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -6,7 +6,6 @@ $yellow: #f9c80e;
 $purple: #662e9b;
 $black: #292929;
 
-$code_institute: "./images/about/code_institute_students_small.jpg";
 $punk: "./images/about/footer_guitar.jpg";
 $scss: "./images/about/beer.jpg";
 $workshop: "./images/about/workshop.jpg";
@@ -15,6 +14,7 @@ $vienna: "./images/about/css_in_vienna.jpg";
 $revuto: "./images/projects/revuto2.jpg";
 $pimsf: "./images/projects/pimsf.gif";
 $codeinstitute: "./images/projects/ci4.png";
+$students: "./images/about/students.jpg";
 
 body,
 html {
@@ -381,13 +381,12 @@ footer {
 }
 
 .card {
-  border: none;
-  // box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15);
+  border: 5px solid #222;
   background-color: transparent;
-
+  margin-bottom: 40px;
   &__image {
     height: 300px;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     &.top {
@@ -402,9 +401,6 @@ footer {
       background-image: url($vienna);
     }
 
-    &.ci {
-      background-image: url($code_institute);
-    }
     &.punk {
       background-image: url($punk);
     }
@@ -425,6 +421,10 @@ footer {
 
     &.codeinstitute {
       background-image: url($codeinstitute);
+    }
+
+    &.students {
+      background-image: url($students);
     }
   }
   .content {
