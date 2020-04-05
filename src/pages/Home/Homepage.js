@@ -19,7 +19,7 @@ const Homepage = () => (
     <SkillsSection />
     <PortfolioContainer />
     <TestimonalSection />
-    <Contact />
+    <Contact text={"Say Hi!"} />
     <Footer />
   </>
 );
