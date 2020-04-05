@@ -35,6 +35,51 @@ const PortfolioContainer = () => (
             </div>
           </div>
         </div>
+
+        <div className="row is-centered">
+          <div className="col-xs-12 col-sm-12 col-xl-8">
+            <div className="row is-centered">
+              <div className="col-xs-12 col-sm-10 col-md-6 offset-md-0 col-lg-5 col-xl-10 portfolio__column">
+                <iframe
+                  height="265"
+                  scrolling="no"
+                  title="Pure CSS beer"
+                  src="https://codepen.io/tonkec/embed/LYYZJzv?height=265&theme-id=light&default-tab=result"
+                  frameBorder="no"
+                  allowtransparency="true"
+                  allowFullScreen={true}
+                >
+                  See the Pen{" "}
+                  <a href="https://codepen.io/tonkec/pen/LYYZJzv">
+                    Pure CSS beer
+                  </a>{" "}
+                  by Antonija Šimić (
+                  <a href="https://codepen.io/tonkec">@tonkec</a>) on{" "}
+                  <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+              </div>
+              <div className="col-xs-12 col-sm-10 col-md-6 offset-md-0 col-lg-5 col-xl-10 portfolio__column">
+                <iframe
+                  height="265"
+                  scrolling="no"
+                  title="Pure CSS record player"
+                  src="https://codepen.io/tonkec/embed/NWWJRdK?height=265&theme-id=light&default-tab=result"
+                  frameBorder="no"
+                  allowtransparency="true"
+                  allowFullScreen={true}
+                >
+                  See the Pen{" "}
+                  <a href="https://codepen.io/tonkec/pen/NWWJRdK">
+                    Pure CSS record player
+                  </a>{" "}
+                  by Antonija Šimić (
+                  <a href="https://codepen.io/tonkec">@tonkec</a>) on{" "}
+                  <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </>
