@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Routes from "./routes";
 import { BrowserRouter as Router } from "react-router-dom";
 import Navigation from "./components/navigation/";
-function App() {
-  return (
+import ContentLoader from "react-content-loader";
+
+const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(false);
+  }, [loading]);
+
+  return loading ? (
+    <ContentLoader />
+  ) : (
     <div className="App">
       <Router>
         <Navigation />
@@ -11,6 +21,6 @@ function App() {
       </Router>
     </div>
   );
-}
+};
 
 export default App;
