@@ -1,6 +1,5 @@
 import React from "react";
 import PortfolioContainer from "../../pages/Home/PortfolioContainer";
-import Header from "./../../components/header";
 import Footer from "./../../components/footer";
 import ContactContainer from "./../../components/contact/ContactContainer";
 
@@ -11,7 +10,7 @@ const Projectspage = () => (
     </div>
 
     <section>
-      <ContactContainer />
+      <ContactContainer text={"Let's meet"} />
     </section>
     <Footer />
   </main>

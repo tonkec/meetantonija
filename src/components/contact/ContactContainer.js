@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "./../Grid";
 import contact from "./style/contact";
 import * as emailjs from "emailjs-com";
-const ContactContainer = () => {
+const ContactContainer = ({ text }) => {
   const onSubmitForm = e => {
     e.preventDefault();
     emailjs
@@ -26,7 +26,7 @@ const ContactContainer = () => {
     <section className={`section__contact ${contact}`}>
       <Grid container="container">
         <div className="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 text-center">
-          <h2 className="section__heading yellow-selection">Say Hi!</h2>
+          <h2 className="section__heading yellow-selection">{text}</h2>
         </div>
       </Grid>
 

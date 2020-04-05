@@ -154,7 +154,7 @@ const Aboutpage = () => (
       </div>
     </section>
     <section>
-      <ContactContainer />
+      <ContactContainer text={"Say Hi"} />
     </section>
     <Footer />
   </main>
