@@ -40,7 +40,14 @@ const data = {
           Mentoring:
             "I have been mentoring (remotely) for 2 years at Code Institute. The major part of the mentorship sessions is focusing on the code quality of students' projects. I help students to think like professional developers from the very start of their coding career. The content agnosticism, don't repeat yourself, reusability and object orientation are principles that I encourage on every session. I advise my students to stay persistent, committed and curious."
         },
-        images: [{ title: "codeinstitute", content: "LMS", src: ciHeader }]
+        images: [
+          {
+            title: "codeinstitute",
+            content: "LMS",
+            src: ciHeader,
+            clickable: true
+          }
+        ]
       },
       {
         title: "Peaks",
@@ -73,7 +80,7 @@ const data = {
           "RaiseNow Payment Integration":
             "My task was to set a communication between the app and the RaiseNow API. RaiseNow iframe with form was injected into the template. I then had to send data from the form, as well as the data from the previous step, to the API. If there was an error in the form, it should be displayed to the user. The whole integration had to show states based on the connection status. I do not usually code in Angular, that is why this project had steep learning curve. I was able to quickly pick up core Angular and RxJs concepts."
         },
-        images: [{ title: "formunauts", content: "", src: f }]
+        images: [{ title: "formunauts", src: f, clickable: true }]
       },
       {
         title: "Revuto",
@@ -90,7 +97,14 @@ const data = {
           "React Developer":
             "I was working closely with backend developers and a designer. My task was to create user interface following designs from designer and to connect components via API provided by backend developers. User authorization was handled with tokens. I loved working on this project because I was able to get my hands on Context API and React hooks <3. I used Context API for flash messages and hooks in the stateful functional components. The cool part in login and signup form was custom made captcha. Originally, additions were much complex, but client wanted simplified captcha. Now user should know how to sum two numbers that are not larger than 10. I also really much enjoyed playing with CSS animations and transitions. The most valuable page to client was referral program page which has animation that I coded from scratch. The tricky part was reversing animation. I learned scss can not count nth children backwards."
         },
-        images: [{ title: "revuto", content: "Revuto Homepage", src: r2 }]
+        images: [
+          {
+            title: "revuto",
+            content: "Revuto Homepage",
+            src: r2,
+            clickable: true
+          }
+        ]
       },
       {
         title: "Pimsf",
@@ -109,7 +123,14 @@ const data = {
           "Changelog History":
             "PIMSF can display different version of pipelines. If a constructor in the field changes something on the pipeline, they should report changes in the app. That report should create a new version of the pipeline. Such pipeline in PIMSF is perceived as a virtual pipeline. My task was to create a changelog history tree that will display each version of a pipeline. This is displayed as a tree where each new version is treated as a child, and each old version as a parent. We used Mermaid.js package to display such tree. Axios was used to get data points from API. Each pipeline in the tree can be deleted or approved. If it is approved, pipeline should change color to green. If it is deleted, it should be deleted from the history tree."
         },
-        images: [{ title: "pimsf", content: "PIMSF Overview", src: pimsf }]
+        images: [
+          {
+            title: "pimsf",
+            content: "PIMSF Overview",
+            src: pimsf,
+            clickable: true
+          }
+        ]
       },
 
       {
@@ -129,9 +150,9 @@ const data = {
             "My task was to implement user interface with react-native-elements and react-native and to handle user authentication and authorization with ajax calls to the backend api. User's token is stored using AsyncStorage. The app excited me a lot because I was able to get my hands on JS and React Native. It made me really happy that I can prove and test my JS skills!"
         },
         images: [
-          { title: "craftstrom_login", src: craftstrom },
-          { title: "craftstrom_battery", src: craftstrom3 },
-          { title: "craftstrom_panels", src: craftstrom2 }
+          { title: "craftstrom_login", src: craftstrom, clickable: true },
+          { title: "craftstrom_battery", src: craftstrom3, clickable: true },
+          { title: "craftstrom_panels", src: craftstrom2, clickable: true }
         ]
       }
     ],

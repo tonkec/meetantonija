@@ -20,7 +20,16 @@ const BackgroundImage = ({ image, index }) => {
     <ContentLoader />
   ) : (
     <div className="card">
-      {image.content ? (
+      {image.clickable ? (
+        <>
+          <a href={image.src} target="_blank" rel="noopener noreferrer">
+            <div
+              className="card__image"
+              style={{ backgroundImage: `url(${image.src})` }}
+            />
+          </a>
+        </>
+      ) : (
         <>
           <div className="content">
             <a href={image.href} target="_blank" rel="noopener noreferrer">
@@ -32,13 +41,6 @@ const BackgroundImage = ({ image, index }) => {
             style={{ backgroundImage: `url(${image.src})` }}
           />
         </>
-      ) : (
-        <a href={image.src} target="_blank" rel="noopener noreferrer">
-          <div
-            className="card__image"
-            style={{ backgroundImage: `url(${image.src})` }}
-          />
-        </a>
       )}
     </div>
   );
