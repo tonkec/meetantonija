@@ -3,10 +3,11 @@ import {
   portfolioSection,
   portfolioItem
 } from "./stylesheets/portfolioSection";
-import data from "./../../components/data";
+import data from "./../../data/data";
 import { Link } from "react-router-dom";
 import { orderBy } from "lodash";
-const { client } = data;
+const { projects } = data;
+const { client } = projects;
 const sortedByCompletion = orderBy(client, ["completed"], ["desc"]);
 const PortfolioContainer = () => (
   <>

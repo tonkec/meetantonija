@@ -1,12 +1,13 @@
 import React from "react";
 import PortfolioItem from "./PortfolioItem";
-import data from "./../data";
+import data from "./../../data/data";
 import normalTitle from "./../helpers/normalTitle";
-let { client, hobby } = data;
-let PortfolioItems = {};
-let PortfolioHobbyItems = {};
-let titles = client.map(item => normalTitle(item.title));
-let hobbyTitles = hobby.map(item => item.title);
+const { projects } = data;
+const { client, hobby } = projects;
+const PortfolioItems = {};
+const PortfolioHobbyItems = {};
+const titles = client.map(item => normalTitle(item.title));
+const hobbyTitles = hobby.map(item => item.title);
 let title;
 client.map((item, i) => {
   title = normalTitle(item.title);
