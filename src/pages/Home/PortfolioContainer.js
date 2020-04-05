@@ -16,7 +16,7 @@ const PortfolioContainer = () => (
       <div className="container">
         <div className="row">
           <div className="col text-center">
-            <h2 className="section__heading">Client Work</h2>
+            <h2 className="section__heading">Projects</h2>
           </div>
         </div>
         <div className="row is-centered">

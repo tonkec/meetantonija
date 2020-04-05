@@ -10,7 +10,6 @@ const skillsSection = css({
 
   ".skills-heading": {
     color: "#444",
-    textTransform: "uppercase",
     fontWeight: 500,
     marginBottom: 20
   },

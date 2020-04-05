@@ -105,6 +105,7 @@ const PortfolioItem = ({ data, links }) => (
             <div className="row">
               {data.images.map((image, i) => (
                 <div key={i} className="col">
+                  {console.log(data.images)}
                   <Image image={image} />
                 </div>
               ))}

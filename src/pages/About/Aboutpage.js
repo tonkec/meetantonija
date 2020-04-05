@@ -5,36 +5,49 @@ import ContactContainer from "./../../components/contact/ContactContainer";
 import About from "./styles/About";
 import Image from "./../../components/gallery/Image";
 
+import punk from "./../../images/about/footer_guitar.jpg";
+import scss from "./../../images/about/beer.jpg";
+import workshop from "./../../images/about/workshop.jpg";
+import zero from "./../../images/about/from_zero.jpg";
+import vienna from "../../images/about/css_in_vienna.jpg";
+import students from "./../../images/about/students.jpg";
+
 const data = [
   {
     title: "vienna",
     href: "https://www.meetup.com/css-in-vienna/events/267266901/",
-    content: "Coding a piano @ CSS-in-Vienna"
+    content: "Coding a piano @ CSS-in-Vienna",
+    src: vienna
   },
   {
     title: "scss",
     href: "https://www.meetup.com/S_CSS_Zagreb/events/265312074/",
-    content: "Coding a pure CSS beer @ Scss Meetup"
+    content: "Coding a pure CSS beer @ Scss Meetup",
+    src: scss
   },
   {
     title: "students",
     href: "https://codeinstitute.net/",
-    content: "Teaching students @ Code Institute"
+    content: "Teaching students @ Code Institute",
+    src: students
   },
   {
     title: "punk",
     href: "https://punkrockdev.com/",
-    content: "Goofing around with Punk Rock Dev"
+    content: "Goofing around with Punk Rock Dev",
+    src: punk
   },
   {
     title: "zero",
     href: "https://slides.com/tonkecpalonkec/from-zero-to-s-hero/#/",
-    content: "Encouraging LGBTQI+ community to start coding!"
+    content: "Encouraging LGBTQI+ community to start coding!",
+    src: zero
   },
   {
     title: "workshop",
     href: "https://github.com/tonkec/workshop",
-    content: "Free workshop for beginners"
+    content: "Free workshop for beginners",
+    src: workshop
   }
 ];
 
@@ -52,7 +65,7 @@ const Aboutpage = () => (
         <div className="row">
           {data.map((image, i) => (
             <div key={i} className="col-sm-12 col-md-6">
-              <Image image={image} />
+              <Image image={image} index={i} />
             </div>
           ))}
         </div>
