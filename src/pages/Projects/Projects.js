@@ -10,7 +10,7 @@ const Projectspage = () => (
     </div>
 
     <section>
-      <ContactContainer text={"Let's meet"} />
+      <ContactContainer text={"Let's meet!"} />
     </section>
     <Footer />
   </main>
