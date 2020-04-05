@@ -1,26 +1,14 @@
 @import "stylesheets/helpers";
+@import "fonts/raleway/stylesheet.css";
+@import "fonts/rubik/stylesheet.css";
+@import "fonts/roboto/stylesheet.css";
+
 $white: #fff;
 $white-1: #f5f5f5;
 $green: #43bccd;
 $yellow: #f9c80e;
 $purple: #662e9b;
 $black: #292929;
-
-$punk: "./images/about/footer_guitar.jpg";
-$scss: "./images/about/beer.jpg";
-$workshop: "./images/about/workshop.jpg";
-$zero: "./images/about/from_zero.jpg";
-$vienna: "./images/about/css_in_vienna.jpg";
-$students: "./images/about/students.jpg";
-
-$revuto: "./images/projects/revuto2.jpg";
-$pimsf: "./images/projects/pimsf.png";
-$codeinstitute: "./images/projects/ci4.png";
-$craftstrom: "./images/projects/craftstrom1.png";
-$craftstrom2: "./images/projects/craftstrom2.png";
-$craftstrom3: "./images/projects/craftstrom3.png";
-
-$sessions: "./images/projects/s4.png";
 
 body,
 html {
@@ -225,8 +213,8 @@ header {
   .card {
     border: none;
     margin-bottom: 0;
+
     .card__image {
-      height: 300px;
       background-size: contain;
       background-position: top;
     }
@@ -414,85 +402,8 @@ footer {
   border: 5px solid #222;
   background-color: transparent;
   margin-bottom: 40px;
-  &.scss {
-    .card__image {
-      background-image: url($scss);
-    }
-  }
+  height: 300px;
 
-  &.vienna {
-    .card__image {
-      background-image: url($vienna);
-    }
-  }
-
-  &.punk {
-    .card__image {
-      background-image: url($punk);
-    }
-  }
-  &.workshop {
-    .card__image {
-      background-image: url($workshop);
-    }
-  }
-  &.zero {
-    .card__image {
-      background-image: url($zero);
-    }
-  }
-
-  &.revuto {
-    .card__image {
-      background-image: url($revuto);
-    }
-  }
-
-  &.sessions {
-    .card__image {
-      background-image: url($sessions);
-    }
-  }
-
-  &.craftstrom_panels {
-    border: none;
-    .card__image {
-      background-image: url($craftstrom2);
-    }
-  }
-
-  &.craftstrom_battery {
-    border: none;
-    .card__image {
-      background-image: url($craftstrom3);
-    }
-  }
-
-  &.craftstrom_login {
-    border: none;
-
-    .card__image {
-      background-image: url($craftstrom);
-    }
-  }
-
-  &.pimsf {
-    .card__image {
-      background-image: url($pimsf);
-    }
-  }
-
-  &.codeinstitute {
-    .card__image {
-      background-image: url($codeinstitute);
-    }
-  }
-
-  &.students {
-    .card__image {
-      background-image: url($students);
-    }
-  }
   &__image {
     height: 300px;
     background-size: cover;

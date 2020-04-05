@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import ContentLoader from "react-content-loader";
+const BackgroundImage = ({ image, index }) => {
+  const [loading, setLoading] = useState(true);
 
-const Image = ({ image }) => {
-  return (
-    <div className={`card ${image.title}`}>
+  useEffect(() => {
+    getImage();
+  }, [loading]);
+
+  const getImage = () => {
+    let img = new Image();
+    img.src = image.src;
+
+    img.onload = function() {
+      setLoading(false);
+    };
+  };
+
+  return loading ? (
+    <ContentLoader />
+  ) : (
+    <div className="card">
       {image.content ? (
         <div className="content">
           <a href={image.href} target="_blank" rel="noopener noreferrer">
@@ -13,9 +30,12 @@ const Image = ({ image }) => {
         ""
       )}
 
-      <div className={`card__image`} />
+      <div
+        className="card__image"
+        style={{ backgroundImage: `url(${image.src})` }}
+      />
     </div>
   );
 };
 
-export default Image;
+export default BackgroundImage;

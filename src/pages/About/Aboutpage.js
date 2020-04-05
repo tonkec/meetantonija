@@ -4,40 +4,8 @@ import Footer from "./../../components/footer";
 import ContactContainer from "./../../components/contact/ContactContainer";
 import About from "./styles/About";
 import Image from "./../../components/gallery/Image";
-
-const data = [
-  {
-    title: "vienna",
-    href: "https://www.meetup.com/css-in-vienna/events/267266901/",
-    content: "Coding a piano @ CSS-in-Vienna"
-  },
-  {
-    title: "scss",
-    href: "https://www.meetup.com/S_CSS_Zagreb/events/265312074/",
-    content: "Coding a pure CSS beer @ Scss Meetup"
-  },
-  {
-    title: "students",
-    href: "https://codeinstitute.net/",
-    content: "Teaching students @ Code Institute"
-  },
-  {
-    title: "punk",
-    href: "https://punkrockdev.com/",
-    content: "Goofing around with Punk Rock Dev"
-  },
-  {
-    title: "zero",
-    href: "https://slides.com/tonkecpalonkec/from-zero-to-s-hero/#/",
-    content: "Encouraging LGBTQI+ community to start coding!"
-  },
-  {
-    title: "workshop",
-    href: "https://github.com/tonkec/workshop",
-    content: "Free workshop for beginners"
-  }
-];
-
+import data from "../../data/data";
+const { images } = data;
 const Aboutpage = () => (
   <main className={`${About}`}>
     <Header>
@@ -50,9 +18,9 @@ const Aboutpage = () => (
     <section className="section is-white">
       <div className="container">
         <div className="row">
-          {data.map((image, i) => (
+          {images.map((image, i) => (
             <div key={i} className="col-sm-12 col-md-6">
-              <Image image={image} />
+              <Image image={image} index={i} />
             </div>
           ))}
         </div>
