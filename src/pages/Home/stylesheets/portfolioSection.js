@@ -7,7 +7,7 @@ import pimsf from "./../../../images/home/pimsf_logo.png";
 import sessions from "./../../../images/home/sessions_tracker.png";
 import hover from "./../../../images/home/text_hover.png";
 import revuto from "./../../../images/home/revuto_logo.png";
-
+import formunauts from "./../../../images/home/formunauts_logo.png";
 const portfolioSection = css({
   backgroundColor: portfolioBg,
   paddingTop: topGutter,
@@ -30,6 +30,9 @@ const portfolioItem = css({
   },
   "&.peaks": {
     backgroundImage: `url(${peaks})`
+  },
+  "&.formunauts": {
+    backgroundImage: `url(${formunauts})`
   },
   "&.pimsf": {
     backgroundImage: `url(${pimsf})`

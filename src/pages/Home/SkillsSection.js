@@ -20,8 +20,9 @@ const SkillsSection = () => (
           <h2 className="skills-heading has-text-weight-bold">Mentoring</h2>
           <p className="skills-description">
             I have helped plenty of students with their projects. We &nbsp;
-            <span>debugged</span> together, researched many issues, looked for
-            <span> answers</span>, read the docs and solved many problems
+            <span>debugged</span> together, researched many issues, looked
+            for&nbsp;
+            <span>answers</span>, read the docs and solved many problems
             together
           </p>
         </div>

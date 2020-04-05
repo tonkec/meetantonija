@@ -101,11 +101,10 @@ const PortfolioItem = ({ data, links }) => (
     <section className="section-portfolio__gallery is-white">
       <div className="container">
         <div className="row is-centered">
-          <div className="col-sm-8 col-md-10 col-lg-8">
+          <div className="col-sm-12 col-md-10 col-lg-8">
             <div className="row">
               {data.images.map((image, i) => (
                 <div key={i} className="col">
-                  {console.log(data.images)}
                   <Image image={image} />
                 </div>
               ))}

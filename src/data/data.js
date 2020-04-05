@@ -3,11 +3,13 @@ import craftstrom from "./../images/projects/craftstrom1.png";
 import craftstrom2 from "./../images/projects/craftstrom2.png";
 import craftstrom3 from "./../images/projects/craftstrom3.png";
 
-import pimsfGif from "./../images/projects/pimsf.gif";
+// import pimsfGif from "./../images/projects/pimsf.gif";
 import pimsf from "./../images/projects/pimsf.png";
 
 import s3 from "./../images/projects/s3.png";
 import r2 from "./../images/projects/revuto2.jpg";
+
+import f from "./../images/projects/formunauts.png";
 
 import punk from "./../images/about/footer_guitar.jpg";
 import scss from "./../images/about/beer.jpg";
@@ -55,8 +57,24 @@ const data = {
       //     "User Interface":
       //       "My task was to implement user interface based on the design provided. The hardest part in development process was customization of parallax. It had to be compatible with swiper.js and also fully responsive. Biggest struggle was author section that has multiple parallax. The three images were not supposed to move at the same time which is not default behaviour of parallax plugin. Also, the text should have shown up on hover. And all of that needed to be responsive."
       //   },
-      //   images: [p1],
+      //   images: []
       // },
+      {
+        title: "Formunauts",
+        projectLink: "https://app.formunauts.com/",
+        client: "Formunauts",
+        technology: "Angular, RxJS, Typescript",
+        completed: 2020,
+        link: "https://www.formunauts.at/",
+        description: "Formuanuts is an app that collects donations.",
+        technologyDescription:
+          "This app is built with Angular 8 fueled with RxJs and Typescript",
+        myRole: {
+          "RaiseNow Payment Integration":
+            "My task was to set a communication between the app and the RaiseNow API. RaiseNow iframe with form was injected into the template. I then had to send data from the form, as well as the data from the previous step, to the API. If there was an error in the form, it should be displayed to the user. The whole integration had to show states based on the connection status. I do not usually code in Angular, that is why this project had steep learning curve. I was able to quickly pick up core Angular and RxJs concepts."
+        },
+        images: [{ title: "formunauts", content: "", src: f }]
+      },
       {
         title: "Revuto",
         client: "Async Labs",

@@ -488,3 +488,9 @@ img {
   left: 0;
   right: 0;
 }
+
+.section-col {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -22,7 +22,7 @@ const portfolioItem = css({
 
     "&__about": {
       backgroundColor: "#ffffff",
-      padding: `${portfolioTopGutter}px`,
+      padding: `${portfolioTopGutter}px 0 0`,
       dt: {
         fontSize: "1.2rem",
         marginBottom: 20
@@ -44,7 +44,7 @@ const portfolioItem = css({
     "&__description": {
       fontSize: "1.1rem",
       lineHeight: 2,
-      marginBottom: 40
+      marginBottom: 30
     },
 
     "&__links": {

@@ -21,19 +21,25 @@ const BackgroundImage = ({ image, index }) => {
   ) : (
     <div className="card">
       {image.content ? (
-        <div className="content">
-          <a href={image.href} target="_blank" rel="noopener noreferrer">
-            {image.content}
-          </a>
-        </div>
+        <>
+          <div className="content">
+            <a href={image.href} target="_blank" rel="noopener noreferrer">
+              {image.content}
+            </a>
+          </div>
+          <div
+            className="card__image"
+            style={{ backgroundImage: `url(${image.src})` }}
+          />
+        </>
       ) : (
-        ""
+        <a href={image.src} target="_blank" rel="noopener noreferrer">
+          <div
+            className="card__image"
+            style={{ backgroundImage: `url(${image.src})` }}
+          />
+        </a>
       )}
-
-      <div
-        className="card__image"
-        style={{ backgroundImage: `url(${image.src})` }}
-      />
     </div>
   );
 };
