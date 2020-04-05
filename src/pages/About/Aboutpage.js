@@ -44,14 +44,14 @@ const Aboutpage = () => (
             </a>
           </b>{" "}
           using only CSS. Encouraging others to start coding, especially
-          minorities&nbsp;
+          minorities, like&nbsp;
           <b>
             <a
               href="https://www.bordersnone.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              like refugees
+              refugees
             </a>
           </b>
           , gives me the great sense of
@@ -59,7 +59,7 @@ const Aboutpage = () => (
           <b> mentoring </b>less experienced developers. In my non coding time,
           I play <b>basketball</b>, volunteer in <b>LGBTIQA+</b> organizations
           and explore <b>music</b>
-          &nbsp;with drums and guitar. I apologize in advance for my dad jokes.
+          &nbsp;with drums and guitar.
         </p>
       </div>{" "}
       <div className="antonija"></div>
