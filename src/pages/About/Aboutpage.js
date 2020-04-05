@@ -69,7 +69,7 @@ const Aboutpage = () => (
       <div className="container">
         <div className="row">
           {images.map((image, i) => (
-            <div key={i} className="col-sm-12 col-md-6">
+            <div key={i} className="col-sm-12 col-lg-6">
               <Image image={image} index={i} />
             </div>
           ))}
@@ -80,7 +80,7 @@ const Aboutpage = () => (
     <section className="section is-grey">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-10">
+          <div className="col-sm-12 col-md-6">
             <h2>I held talk on several S(CSS) meetups:</h2>
 
             <ul className="list">
@@ -146,6 +146,57 @@ const Aboutpage = () => (
                   href="https://www.meetup.com/S_CSS_Zagreb/events/257860075/"
                 >
                   CSS Grid Meetup
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="col-sm-12 col-lg-6">
+            <h2>I volunteered on several events:</h2>
+
+            <ul className="list">
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://slides.com/tonkecpalonkec/js-fundamentals-revisited"
+                >
+                  Coders without borders spring 2020
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://slides.com/tonkecpalonkec/flexbox"
+                >
+                  Coders without borders autumn 2019
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://slides.com/tonkecpalonkec/media-queries"
+                >
+                  Coders without borders spring 2019
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://slides.com/tonkecpalonkec/from-zero-to-s-hero#/"
+                >
+                  Trans summer camp
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/tonkec/workshop"
+                >
+                  Free coding workshop
                 </a>
               </li>
             </ul>
