@@ -65,7 +65,7 @@ const ContactContainer = ({ text }) => {
                     <textarea
                       name="userMessage"
                       rows="5"
-                      placeholder="Message"
+                      placeholder="What would you like to talk about?"
                       required
                     ></textarea>
                     <button className="button float-right" type="submit">

@@ -9,8 +9,9 @@ const SkillsSection = () => (
         <div className="skills-column">
           <h2 className="skills-heading has-text-weight-bold">Skills</h2>
           <p className="skills-description">
-            In my career I have solved many problems with HTML,
-            <span>CSS</span>, Bootstrap, Js, <span>React.js</span> and Figma
+            In my career I have solved many problems with HTML,&nbsp;
+            <span>CSS</span>, Bootstrap, Js, React Native, <span>React.js</span>
+            , <span>Angular</span> and Figma
           </p>
         </div>
       </div>
@@ -19,7 +20,7 @@ const SkillsSection = () => (
         <div className="skills-column">
           <h2 className="skills-heading has-text-weight-bold">Mentoring</h2>
           <p className="skills-description">
-            I have helped plenty of students with their projects. We &nbsp;
+            I have helped plenty of students with their projects. We&nbsp;
             <span>debugged</span> together, researched many issues, looked
             for&nbsp;
             <span>answers</span>, read the docs and solved many problems

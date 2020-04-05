@@ -4,7 +4,7 @@ const Lostpage = () => (
   <section className="lostpage is-centered">
     <h1>
       <Link to="/" className="link">
-        404. Go home
+        404. Go home!
       </Link>
     </h1>
   </section>
