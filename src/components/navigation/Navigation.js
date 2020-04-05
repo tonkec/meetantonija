@@ -1,15 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Headroom from "react-headroom";
 class Navigation extends React.Component {
-  state = {
-    visible: false,
-    location: ""
-  };
-
   render() {
     return (
-      <>
-        <div className="navigation__inner navigation__inner--right">
+      <Headroom style={{ zIndex: 999 }}>
+        <nav className="navigation__inner navigation__inner--right">
           <ul className="navigation__list">
             <li>
               <NavLink
@@ -66,8 +62,8 @@ class Navigation extends React.Component {
               </a>
             </li>
           </ul>
-        </div>
-      </>
+        </nav>
+      </Headroom>
     );
   }
 }

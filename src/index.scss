@@ -119,7 +119,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 5px 15px;
     top: 0;
     right: 0;
     left: 0;
@@ -516,4 +516,31 @@ img {
 .section--client {
   padding: 70px 0 0;
   background-color: $white;
+}
+
+nav {
+  transition: transform 0.2s ease-in-out;
+  // a {
+  //   transition: color 0.2s ease-in-out;
+  // }
+}
+
+.headroom--unfixed {
+  nav {
+    background-color: transparent;
+  }
+}
+
+.headroom--scrolled {
+  nav {
+    background-color: #fff;
+    transform: translateY(0%);
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.headroom--unpinned {
+  nav {
+    transform: translateY(-100%);
+  }
 }
