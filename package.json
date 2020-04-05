@@ -14,6 +14,7 @@
     "node": ">=8.6.0",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
+    "react-content-loader": "^5.0.2",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
@@ -25,14 +26,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "node server.js",
-    "deploy": "rm -rf node_modules && yarn install & node server.js"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy": "http://localhost:5000",
   "browserslist": {
     "production": [
       ">0.2%",
