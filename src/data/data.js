@@ -181,7 +181,7 @@ const data = {
     {
       title: "workshop",
       href: "https://github.com/tonkec/workshop",
-      content: "Free workshop for beginners",
+      content: "Encouraging others to start coding",
       src: workshop
     }
   ]

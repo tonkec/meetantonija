@@ -2,7 +2,7 @@
 @import "fonts/raleway/stylesheet.css";
 @import "fonts/rubik/stylesheet.css";
 @import "fonts/roboto/stylesheet.css";
-
+$me: "./images/about/me.jpeg";
 $white: #fff;
 $white-1: #f5f5f5;
 $green: #43bccd;
@@ -438,4 +438,38 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.aboutpage {
+  header {
+    position: relative;
+    .antonija {
+      display: none;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      width: 40%;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url($me);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      @media (min-width: 1200px) {
+        display: block;
+      }
+    }
+    p {
+      font-size: 1.7rem;
+    }
+
+    b:first-child {
+      font-size: 2.1rem;
+    }
+
+    a {
+      color: $black;
+      text-decoration: underline;
+    }
+  }
 }
