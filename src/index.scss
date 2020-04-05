@@ -314,6 +314,25 @@ header {
   }
 }
 
+span::selection,
+p::selection,
+h1::selection,
+h2::selection,
+li::selection,
+a::selection,
+input::selection,
+textarea::selection,
+button::selection {
+  background: #292929;
+  color: $white;
+}
+
+h1 b::selection,
+p b::selection {
+  background: $yellow;
+  color: $white;
+}
+
 blockquote::selection {
   background: $yellow;
 }
