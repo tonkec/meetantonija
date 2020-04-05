@@ -2,8 +2,6 @@ import { css } from "emotion";
 import { yellow } from "./../../../stylesheets/variables";
 const about = css({
   header: {
-    padding: "160px 15px",
-
     h1: {
       backgroundColor: yellow,
       display: "inline-block",
