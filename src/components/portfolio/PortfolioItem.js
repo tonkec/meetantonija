@@ -7,7 +7,6 @@ import Image from "./../../components/gallery/Image";
 
 const PortfolioItem = ({ data, links }) => (
   <div className={`page ${portfolioItem} page--${normalTitle(data.title)}`}>
-    {console.log(data)}
     <header
       className={`section-portfolio__header section-portfolio__header--${normalTitle(
         data.title

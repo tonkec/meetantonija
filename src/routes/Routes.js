@@ -4,8 +4,8 @@ import Homepage from "./../pages/Home";
 import Aboutpage from "./../pages/About";
 import Contactpage from "./../pages/Contact";
 import Projectspage from "./../pages/Projects";
-
 import Lostpage from "./../pages/404";
+
 import { PortfolioItems, PortfolioHobbyItems } from "./../components/portfolio";
 
 const components = Object.keys(PortfolioItems);

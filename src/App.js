@@ -3,6 +3,7 @@ import Routes from "./routes";
 import { BrowserRouter as Router } from "react-router-dom";
 import Navigation from "./components/navigation/";
 import Loader from "./components/loader/Loader";
+import ScrollToTop from "./components/scrollToTop/scrollToTop";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -16,8 +17,10 @@ const App = () => {
   ) : (
     <div className="App">
       <Router>
-        <Navigation />
-        <Routes />
+        <ScrollToTop>
+          <Navigation />
+          <Routes />
+        </ScrollToTop>
       </Router>
     </div>
   );
