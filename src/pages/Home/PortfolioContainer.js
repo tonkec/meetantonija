@@ -1,19 +1,14 @@
 import React from "react";
-import {
-  portfolioSection,
-  portfolioItem
-} from "./stylesheets/portfolioSection";
+import { portfolioItem } from "./stylesheets/portfolioSection";
 import data from "./../../data/data";
 import { Link } from "react-router-dom";
 import { orderBy } from "lodash";
 const { projects } = data;
-const { client } = projects;
+const { client, hobby } = projects;
 const sortedByCompletion = orderBy(client, ["completed"], ["desc"]);
 const PortfolioContainer = () => (
   <>
-    <section
-      className={`${portfolioSection} section--client section--bordered`}
-    >
+    <section className={` section--client section--bordered`}>
       <div className="container">
         <div className="row">
           <div className="col text-center">

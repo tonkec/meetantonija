@@ -9,6 +9,8 @@ import Lostpage from "./../pages/404";
 import { PortfolioItems, PortfolioHobbyItems } from "./../components/portfolio";
 
 const components = Object.keys(PortfolioItems);
+const hobbyComponents = Object.keys(PortfolioHobbyItems);
+
 const Routes = () => {
   return (
     <Switch>

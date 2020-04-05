@@ -207,7 +207,6 @@ header {
 }
 
 .section-portfolio__gallery {
-  padding: 0px 0 30px;
   background-color: #fff;
 
   .card {
@@ -493,4 +492,9 @@ img {
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.section--client {
+  padding: 70px 0 0;
+  background-color: $white;
 }

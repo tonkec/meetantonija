@@ -18,14 +18,14 @@ client.map((item, i) => {
 });
 
 // refactor, remove repetition
-// hobby.map((project, i) => {
-//   title = normalTitle(project.title);
-//   const links = hobbyTitles.filter(title => {
-//     return title !== project.title;
-//   });
-//   return (PortfolioHobbyItems[title] = () => (
-//     <PortfolioItem links={links} data={hobby[i]} />
-//   ));
-// });
+hobby.map((project, i) => {
+  title = normalTitle(project.title);
+  const links = hobbyTitles.filter(title => {
+    return title !== project.title;
+  });
+  return (PortfolioHobbyItems[title] = () => (
+    <PortfolioItem links={links} data={hobby[i]} />
+  ));
+});
 
 export { PortfolioItems, PortfolioHobbyItems };
