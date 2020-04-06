@@ -548,3 +548,16 @@ nav {
     transform: translateY(-100%);
   }
 }
+
+.section__testimonial {
+  padding: 70px 20px 40px;
+  @media (min-width: 900px) {
+    padding-top: 80px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: 1400px) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+}

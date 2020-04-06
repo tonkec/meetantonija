@@ -1,7 +1,6 @@
 import { css } from "emotion";
 import { sectionGutter } from "./../../../stylesheets/variables";
 const testimonial = css({
-  padding: sectionGutter,
   backgroundColor: "white",
   h2: {
     marginBottom: 60
