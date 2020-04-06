@@ -7,7 +7,6 @@ const testimonial = css({
   },
   figure: {
     maxWidth: "400px",
-    margin: "0 auto",
     position: "relative"
   },
   blockquote: {
