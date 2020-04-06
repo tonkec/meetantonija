@@ -326,7 +326,9 @@ li::selection,
 a::selection,
 input::selection,
 textarea::selection,
-button::selection {
+button::selection,
+dd::selection,
+dt::selection {
   background: #292929;
   color: $white;
 }
