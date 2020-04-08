@@ -25,3 +25,5 @@
 
     - Education
     - Publikacije, di su me sve spomenuli
+
+# Add emojis to sections
