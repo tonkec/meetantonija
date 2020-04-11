@@ -11,7 +11,7 @@ const Homepage = () => (
       <div className="col">
         <h1 className="header__heading">
           I’m <b>Antonija</b> - a freelance <b>front-end developer</b> based in
-          Zagreb. I am a <b>glue</b> that holds back-end developers and
+          Zagreb. I am the <b>glue</b> that holds back-end developers and
           designers <b>together.</b>
         </h1>
       </div>

@@ -54,7 +54,7 @@ const Aboutpage = () => (
               refugees
             </a>
           </b>
-          , gives me the great sense of
+          , gives me a great sense of
           <b> purpose</b>. In my career, great pleasure also comes from
           <b> mentoring </b>less experienced developers. In my non coding time,
           I play <b>basketball</b>, volunteer in <b>LGBTIQA+</b> organizations
@@ -81,7 +81,7 @@ const Aboutpage = () => (
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-12 col-md-6">
-            <h2>I held talk on several S(CSS) meetups:</h2>
+            <h2>I gave talk on several S(CSS) meetups:</h2>
 
             <ul className="list">
               <li>
