@@ -27,3 +27,8 @@
     - Publikacije, di su me sve spomenuli
 
 # Add emojis to sections
+
+## o formunautima kaj sam radila
+    - service workers
+    - caching assets
+    - imas na drive screenshot svih zadataka: https://drive.google.com/file/d/1hN5BviOUlG5e8zLGzVTYm7GiJZlXM-Sq/view?usp=sharing
