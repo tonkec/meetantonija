@@ -36,7 +36,7 @@
       }
 
       .cls-4 {
-        fill: #fbdc8e;
+        fill: #FF6500;
       }
 
       .cls-5 {
@@ -97,7 +97,7 @@
       }
     </style>
   </defs>
-  <title>example-scene-2</title>
+  <title>antonija's desk</title>
   <g id="Layer_2" data-name="Layer 2">
     <g id="Layer_2-2" data-name="Layer 2">
       <ellipse cx="332.04" cy="476.96" rx="63.11" ry="13.95"></ellipse>
