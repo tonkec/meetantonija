@@ -87,17 +87,18 @@ ul {
 
 // header
 header {
-  padding: 100px 10px;
-  @include sm {
-    padding: 100px 30px;
-  }
-  @include md {
-    padding: 200px 60px;
-  }
+  // background-image: linear-gradient(to right, #00f2fe 0%, #4facfe 80%);
+  // padding: 300px 100px;
+  // @include sm {
+  //   padding: 100px 30px;
+  // }
+  // @include md {
+  //   padding: 200px 60px;
+  // }
 
   h1 {
     font-size: 2.5rem;
-    line-height: 1.2;
+    line-height: 1.4;
     @include sm {
       max-width: 800px;
     }
@@ -568,4 +569,8 @@ nav {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.wave {
+  position: absolute;
 }

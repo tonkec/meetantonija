@@ -2,7 +2,7 @@ import { css } from "emotion";
 import { headerBg } from "../../../stylesheets/variables";
 
 const header = css({
-  backgroundColor: headerBg,
+  // backgroundColor: headerBg,
 
   ".header__heading": {
     fontWeight: 300,
