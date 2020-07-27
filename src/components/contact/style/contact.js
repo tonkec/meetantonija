@@ -3,7 +3,6 @@ import { white1 } from "./../../../stylesheets/variables";
 
 const contact = css({
   "&.section__contact": {
-    padding: "120px 0 120px",
     backgroundColor: white1,
 
     input: {

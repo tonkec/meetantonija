@@ -17,15 +17,15 @@ const Homepage = () => (
           Zagreb. I am the <b>glue</b> that holds back-end developers and
           designers <b>together.</b>
         </h1>
-      </div>{" "}
+      </div>
       <div className="col-xl-7">
         <ReactSVG src={Svg} />
       </div>
     </Header>
-    <SkillsSection />
-    <PortfolioContainer />
+    <SkillsSection /> <PortfolioContainer />
+    {/* <PortfolioContainer />
     <TestimonalSection />
-    <Contact text={"Say Hi!"} />
+    <Contact text={"Say Hi!"} /> */}
     <Footer />
   </>
 );

@@ -1,25 +1,7 @@
 $yellow: #f9c80e;
 $white: #fff;
+
 .skills-section {
-  padding: 70px 20px 40px;
-  @media (min-width: 900px) {
-    padding-top: 80px;
-    padding-bottom: 70px;
-  }
-
-  @media (min-width: 1400px) {
-    padding-top: 130px;
-    padding-bottom: 130px;
-  }
-
-  .skills-heading {
-    color: #444;
-    font-weight: 500;
-    @media (min-width: 992px) {
-      margin-bottom: 20px;
-    }
-  }
-
   .skills-column {
     margin-bottom: 70px;
 
@@ -50,9 +32,14 @@ $white: #fff;
     span {
       padding: 3px 7px;
       font-family: "Rubik", sans-serif;
-      background-color: $yellow;
+      // background-color: #f9c80e;
       border: 1px solid #292929;
       color: #292929;
+
+      background-color: #00f2fe;
+      &:hover {
+        background-position: right center;
+      }
     }
   }
 }
@@ -77,4 +64,8 @@ $white: #fff;
 }
 .skills-description::-moz-selection {
   background: $yellow;
+}
+
+.fa-icon {
+  font-size: 1.5rem;
 }

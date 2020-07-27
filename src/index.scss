@@ -25,10 +25,6 @@ ul {
   background-color: black;
 }
 
-.section__heading {
-  margin-bottom: 60px;
-}
-
 .section {
   padding: 80px 15px;
   &.is-white {
@@ -367,7 +363,6 @@ footer {
 .projects {
   background-color: #f5f5f5;
   .section--client {
-    padding-top: 150px;
   }
   .section--client,
   .section--hobby {
@@ -529,15 +524,11 @@ img {
 }
 
 .section--client {
-  padding: 70px 0 0;
   background-color: $white;
 }
 
 nav {
   transition: transform 0.2s ease-in-out;
-  // a {
-  //   transition: color 0.2s ease-in-out;
-  // }
 }
 
 .headroom--unfixed {
@@ -548,7 +539,7 @@ nav {
 
 .headroom--scrolled {
   nav {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #19f4ff;
     transform: translateY(0%);
     box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
   }
@@ -579,10 +570,64 @@ nav {
   }
 }
 
-.wave {
-  position: absolute;
-}
-
 svg {
   width: 100%;
+}
+
+%section-padding {
+  padding: 70px 20px 40px;
+  @media (min-width: 900px) {
+    padding-top: 80px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: 1400px) {
+    padding-top: 300px;
+    padding-bottom: 300px;
+  }
+}
+
+.skills-section {
+  background-color: white;
+  @extend %section-padding;
+
+  h2 {
+    color: #444;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-weight: 200;
+    font-family: '"Raleway", sans-serif';
+    margin: 0;
+    font-size: 1rem;
+    line-height: 2.2;
+    color: #797979;
+  }
+}
+
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+  border: 1px solid;
+  animation: {
+    name: move;
+    duration: 2s; // random duration
+    direction: alternate;
+    fill-mode: both;
+    iteration-count: infinite;
+    timing-function: ease-in-out;
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(190px);
+  }
 }

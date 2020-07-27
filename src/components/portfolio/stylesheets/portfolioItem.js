@@ -6,12 +6,11 @@ let portfolioTopGutter = "50";
 const portfolioItem = css({
   ".section-portfolio": {
     "&__header": {
-      padding: "15vh 0 20px",
+      // padding: "15vh 0 20px",
       color: white1
     },
 
     "&__title": {
-      marginBottom: 50,
       textTransform: "uppercase",
       fontWeight: 700,
       fontFamily: "Roboto, sans-serif"
@@ -20,7 +19,6 @@ const portfolioItem = css({
 
     "&__about": {
       backgroundColor: "#ffffff",
-      padding: `${portfolioTopGutter}px 0 0`,
       dt: {
         fontSize: "1.2rem",
         marginBottom: 20

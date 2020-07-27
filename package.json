@@ -20,6 +20,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "react-svg": "^11.0.32",
+    "react-transition-group": "^4.4.1",
     "typeface-raleway": "^0.0.75",
     "typeface-roboto": "^0.0.75",
     "typeface-rubik": "^0.0.72"
