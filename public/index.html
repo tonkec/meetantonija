@@ -39,5 +39,37 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // I feel shame for using jquery in react
+        const particles = document.getElementsByClassName("particle");
+        var arr = Array.prototype.slice.call(particles);
+
+        if (arr.length > 0) {
+          arr.forEach((el, i, ra) => {
+            let to = {
+              x: Math.random() * (i % 2 === 0 ? -11 : 11),
+              y: Math.random() * 12
+            };
+
+            let anim = el.animate(
+              [
+                { transform: "translate(0, 0)" },
+                { transform: `translate(${to.x}rem, ${to.y}rem)` }
+              ],
+              {
+                duration: (Math.random() + 1) * 4000,
+                direction: "alternate",
+                fill: "both",
+                iterations: Infinity,
+                easing: "ease-in-out"
+              }
+            );
+          });
+        }
+      });
+    </script>
   </body>
 </html>

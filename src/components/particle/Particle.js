@@ -1,32 +1,23 @@
 import React, { useRef, useEffect } from "react";
 
-const Particle = ({ particleKey }) => {
+const Particle = () => {
   const colors = ["#f5f5f5", "#ffffff", "#fafafa"];
-  const ball = useRef(null);
+  const particle = useRef(null);
 
   useEffect(() => {
     styleParticle();
   });
 
   const styleParticle = () => {
-    ball.current.style.borderColor =
+    particle.current.style.borderColor =
       colors[Math.floor(Math.random() * colors.length)];
-    ball.current.style.left = `${Math.floor(Math.random() * 100)}vw`;
-    ball.current.style.top = `${Math.floor(Math.random() * 100)}vh`;
-    ball.current.style.width = `${Math.random() * 2}rem`;
-    ball.current.style.height = ball.current.style.width;
-
-    console.log(particleKey);
-
-    const x = Math.random() * (particleKey % 2 === 0 ? -11 : 11);
-    const y = Math.random() * 12;
-
-    // { transform: "translate(0, 0)" },
-    // { transform: `translate(${to.x}rem, ${to.y}rem)` }
-    ball.current.style.transform = `translate(${x}rem, ${y}rem)`;
+    particle.current.style.left = `${Math.floor(Math.random() * 100)}vw`;
+    particle.current.style.top = `${Math.floor(Math.random() * 100)}vh`;
+    particle.current.style.width = `${Math.random() * 2}rem`;
+    particle.current.style.height = particle.current.style.width;
   };
 
-  return <div className="ball" ref={ball}></div>;
+  return <div className="particle" ref={particle}></div>;
 };
 
 export default Particle;

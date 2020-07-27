@@ -83,10 +83,12 @@ ul {
 
 // header
 header {
+  overflow: hidden;
   background-image: linear-gradient(to right, #00f2fe 0%, #4facfe 80%);
   padding: 100px;
   padding-bottom: 0;
   padding-right: 0;
+  position: relative;
   // @include sm {
   //   padding: 100px 30px;
   // }
@@ -607,27 +609,9 @@ svg {
   }
 }
 
-.ball {
+.particle {
   position: absolute;
   border-radius: 100%;
-  opacity: 0.7;
+  opacity: 0.4;
   border: 1px solid;
-  animation: {
-    name: move;
-    duration: 2s; // random duration
-    direction: alternate;
-    fill-mode: both;
-    iteration-count: infinite;
-    timing-function: ease-in-out;
-  }
-}
-
-@keyframes move {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(190px);
-  }
 }

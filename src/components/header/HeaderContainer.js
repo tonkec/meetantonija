@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { header } from "./stylesheets/header";
 import Particle from "../particle/Particle";
 
@@ -11,32 +11,7 @@ const Header = props => {
       particles.push(<Particle key={i} particleKey={i} />);
     }
 
-    animateParticles();
-
     return particles;
-  };
-
-  const animateParticles = () => {
-    particles.forEach((el, i, ra) => {
-      console.log(el);
-      // let to = {
-      //   x: Math.random() * (i % 2 === 0 ? -11 : 11),
-      //   y: Math.random() * 12
-      // };
-      // let anim = el.animate(
-      //   [
-      //     { transform: "translate(0, 0)" },
-      //     { transform: `translate(${to.x}rem, ${to.y}rem)` }
-      //   ],
-      //   {
-      //     duration: (Math.random() + 1) * 2000, // random duration
-      //     direction: "alternate",
-      //     fill: "both",
-      //     iterations: Infinity,
-      //     easing: "ease-in-out"
-      //   }
-      // );
-    });
   };
 
   return (
