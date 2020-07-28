@@ -1,21 +1,26 @@
 $yellow: #f9c80e;
 $white: #fff;
 
+%gutter-y {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @media (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
 .skills-section {
+  @extend %gutter-y;
+
   .skills-column {
-    margin-bottom: 70px;
+    margin-bottom: 100px;
 
     @media (min-width: 1200px) {
-      padding: 0 20px;
       margin-bottom: 0;
     }
-
-    @media (min-width: 1300px) {
-      padding-left: 40px;
-      padding-right: 40px;
-    }
   }
-
   .skills-description {
     font-weight: 200;
     font-family: "Raleway", sans-serif;
@@ -24,22 +29,12 @@ $white: #fff;
     line-height: 2.2;
     color: #797979;
 
-    @media (min-width: 992px) {
-      font-size: 1.1rem;
-      max-width: 450px;
-    }
-
     span {
       padding: 3px 7px;
       font-family: "Rubik", sans-serif;
-      // background-color: #f9c80e;
-      border: 1px solid #292929;
       color: #292929;
 
-      background-color: #00f2fe;
-      &:hover {
-        background-position: right center;
-      }
+      background: linear-gradient(to right, #20bdff 90%, #81c59f);
     }
   }
 }

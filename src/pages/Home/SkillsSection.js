@@ -12,7 +12,7 @@ import "./stylesheets/skills.scss";
 
 const SkillsSection = () => (
   <section className={`${skillsSection} skills-section`}>
-    <Grid container="container-fluid">
+    <Grid container="container">
       <div className="col-xs-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-xl-4 offset-xl-0">
         <div className="skills-column">
           <h2 className="skills-heading has-text-weight-bold">

@@ -17,7 +17,7 @@ const Header = props => {
   return (
     <header className={header}>
       {createParticles()}
-      <div className="container-fluid">
+      <div className="container">
         <div className="row">{props.children}</div>
       </div>
     </header>
