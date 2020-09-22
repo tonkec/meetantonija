@@ -3,6 +3,7 @@ import { headerBg } from "../../../stylesheets/variables";
 
 const header = css({
   backgroundColor: headerBg,
+  position: "relative",
 
   ".header__heading": {
     fontWeight: 300,

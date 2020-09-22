@@ -17,8 +17,10 @@
     "react-content-loader": "^5.0.2",
     "react-dom": "^16.8.6",
     "react-headroom": "^3.0.0",
+    "react-particles-js": "^3.3.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "react-svg": "^11.0.40",
     "typeface-raleway": "^0.0.75",
     "typeface-roboto": "^0.0.75",
     "typeface-rubik": "^0.0.72"

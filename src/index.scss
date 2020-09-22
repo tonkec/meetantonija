@@ -87,27 +87,39 @@ ul {
 
 // header
 header {
-  padding: 100px 10px;
-  @include sm {
-    padding: 100px 30px;
-  }
-  @include md {
-    padding: 200px 60px;
-  }
+  background-image: radial-gradient(
+    circle 603px at 32.8% 51%,
+    $yellow 0%,
+    rgba(253, 211, 117, 1) 90.3%
+  );
+  padding-bottom: 0;
+  padding-right: 0;
+  // @include sm {
+  //   padding: 100px 30px;
+  // }
+  // @include md {
+  //   padding: 200px 60px;
+  // }
 
   h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
+    font-size: 2.2rem;
+    line-height: 1.4;
+    margin: 0;
     @include sm {
       max-width: 800px;
     }
 
     b {
-      font-size: 2.7rem;
+      font-size: 2.5rem;
       @include sm {
-        font-size: 3.5rem;
+        font-size: 3.2rem;
       }
     }
+  }
+
+  .row {
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -474,8 +486,7 @@ img {
       bottom: 0;
       top: 0;
       width: 40%;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url($me);
+      background-color: $yellow;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: 30%;
@@ -568,4 +579,17 @@ nav {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.wave {
+  position: absolute;
+}
+
+svg {
+  width: 100%;
+}
+
+.header__container {
+  position: absolute;
+  top: 50%;
 }
