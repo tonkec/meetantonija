@@ -1,5 +1,5 @@
 import { css } from "emotion";
-import { sectionGutter } from "./../../../stylesheets/variables";
+import { sectionGutter, blue } from "./../../../stylesheets/variables";
 const testimonial = css({
   backgroundColor: "white",
   h2: {
@@ -32,7 +32,7 @@ const testimonial = css({
       color: "#292929",
       textDecoration: "none",
       padding: "5px",
-      backgroundColor: "#f9c80e",
+      backgroundColor: blue,
       border: "1px solid #292929"
     }
   }

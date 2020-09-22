@@ -9,8 +9,7 @@ $green: #43bccd;
 $yellow: #f9c80e;
 $purple: #662e9b;
 $black: #292929;
-$blue: linear-gradient(to right, #20bdff 90%, #81c59f);
-
+$blue: #20bdff;
 body,
 html {
   margin: 0;
@@ -76,7 +75,7 @@ ul {
       padding: 5px;
       border: 2px solid #222;
       text-decoration: none;
-      background-color: #f9c80e;
+      background-color: $blue;
       margin-left: 10px;
     }
   }
@@ -276,7 +275,7 @@ header {
 .button {
   padding: 5px;
   color: #292929;
-  background-color: #f9c80e;
+  background-color: $blue;
   border: 2px solid black;
   font-weight: 900;
   text-transform: uppercase;
@@ -289,7 +288,7 @@ header {
   &:hover {
     text-decoration: none;
     background-color: #292929;
-    color: #f9c80e;
+    color: $blue;
   }
 }
 

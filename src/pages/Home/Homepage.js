@@ -23,11 +23,9 @@ const Homepage = () => (
       </div>
     </Header>
     <SkillsSection />
-    {/* <PortfolioContainer /> */}
-    {/* <PortfolioContainer />
-    <TestimonalSection />
+    <PortfolioContainer />
+    {/* <TestimonalSection />  <Footer />
     <Contact text={"Say Hi!"} /> */}
-    <Footer />
   </>
 );
 

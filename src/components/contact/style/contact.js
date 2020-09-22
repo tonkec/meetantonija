@@ -1,5 +1,5 @@
 import { css } from "emotion";
-import { white1 } from "./../../../stylesheets/variables";
+import { white1, blue } from "./../../../stylesheets/variables";
 
 const contact = css({
   "&.section__contact": {
@@ -52,7 +52,7 @@ const contact = css({
 
     button: {
       width: 150,
-      backgroundColor: "#f9c80e",
+      backgroundColor: blue,
       padding: "5px 0",
       color: "#000",
       fontFamily: '"Roboto", sans-serif',

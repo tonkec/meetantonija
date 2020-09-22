@@ -12,7 +12,7 @@ import formunauts from "./../../../images/home/formunauts_logo.png";
 const portfolioItem = css({
   cursor: " pointer",
   position: "relative",
-  minHeight: 250,
+  minHeight: 180,
   borderRadius: 5,
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",

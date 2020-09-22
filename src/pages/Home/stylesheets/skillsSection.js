@@ -25,7 +25,7 @@
 //     span: {
 //       padding: "3px 7px",
 //       fontFamily: '"Rubik", sans-serif',
-//       backgroundColor: "#f9c80e",
+//       backgroundColor: "$blue",
 //       border: "1px solid #292929",
 //       color: "#292929"
 //     }
