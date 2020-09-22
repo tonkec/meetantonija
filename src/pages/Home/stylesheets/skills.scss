@@ -1,4 +1,4 @@
-$yellow: #f9c80e;
+$blue: #f9c80e;
 $white: #fff;
 
 %gutter-y {
@@ -49,16 +49,16 @@ $white: #fff;
 }
 
 .skills-heading::selection {
-  background: $yellow;
+  background: $blue;
 }
 .skills-heading::-moz-selection {
-  background: $yellow;
+  background: $blue;
 }
 .skills-description::selection {
-  background: $yellow;
+  background: $blue;
 }
 .skills-description::-moz-selection {
-  background: $yellow;
+  background: $blue;
 }
 
 .fa-icon {
