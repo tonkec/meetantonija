@@ -84,7 +84,7 @@ const data = {
       },
       {
         title: "Revuto",
-        client: "Async Labs",
+        employer: "Async Labs",
         technology: "React.js",
         completed: 2019,
         link: "https://www.asynclabs.co",
@@ -108,7 +108,7 @@ const data = {
       },
       {
         title: "Pimsf",
-        client: "Async Labs",
+        employer: "Async Labs",
         projectLink: "https://async-energy.com/",
         technology: "React && Redux",
         completed: 2019,
