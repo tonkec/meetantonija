@@ -1,4 +1,4 @@
-import { css } from "emotion";
+import { css } from "@emotion/css";
 import { headerBg } from "../../../stylesheets/variables";
 
 const header = css({
@@ -6,13 +6,13 @@ const header = css({
 
   ".header__heading": {
     fontWeight: 300,
-    fontFamily: "Raleway, sans-serif"
+    fontFamily: "Raleway, sans-serif",
   },
 
   b: {
     fontFamily: "Rubik, sans-serif",
-    fontWeight: 700
-  }
+    fontWeight: 700,
+  },
 });
 
 export { header };

@@ -1,17 +1,17 @@
-import { css } from "emotion";
+import { css } from "@emotion/css";
 import { sectionGutter } from "./../../../stylesheets/variables";
 
 const skillsSection = css({
   backgroundColor: "white",
 
   ".skills-column": {
-    maxWidth: "400px"
+    maxWidth: "400px",
   },
 
   ".skills-heading": {
     color: "#444",
     fontWeight: 500,
-    marginBottom: 20
+    marginBottom: 20,
   },
 
   ".skills-description": {
@@ -27,9 +27,9 @@ const skillsSection = css({
       fontFamily: '"Rubik", sans-serif',
       backgroundColor: "#f9c80e",
       border: "1px solid #292929",
-      color: "#292929"
-    }
-  }
+      color: "#292929",
+    },
+  },
 });
 
 export default skillsSection;

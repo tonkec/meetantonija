@@ -1,4 +1,4 @@
-import { css } from "emotion";
+import { css } from "@emotion/css";
 import { footerBg } from "./../../../stylesheets/variables";
 
 const footer = css({
@@ -10,7 +10,7 @@ const footer = css({
   bottom: 0,
   left: 0,
   right: 0,
-  zIndex: -1
+  zIndex: -1,
 });
 
 export default footer;
