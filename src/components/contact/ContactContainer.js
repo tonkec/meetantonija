@@ -3,7 +3,7 @@ import Grid from "./../Grid";
 import contact from "./style/contact";
 import * as emailjs from "emailjs-com";
 const ContactContainer = ({ text }) => {
-  const onSubmitForm = e => {
+  const onSubmitForm = (e) => {
     e.preventDefault();
     emailjs
       .sendForm(
@@ -13,11 +13,11 @@ const ContactContainer = ({ text }) => {
         "user_LOSuz8pR7cowgxlm0LOa5"
       )
       .then(
-        response => {
+        (response) => {
           alert("Thank you for your message! I will get back to you soon :D");
           //  console.log('SUCCESS!', response.status, response.text);
         },
-        err => {
+        (err) => {
           //  console.log('FAILED...', err);
         }
       );

@@ -1,4 +1,4 @@
-import { css } from "emotion";
+import { css } from "@emotion/css";
 import { portfolioBg, topGutter } from "./../../../stylesheets/variables";
 import craftstrom from "./../../../images/home/craftstrom.png";
 import peaks from "./../../../images/home/peaks.png";
@@ -21,29 +21,29 @@ const portfolioItem = css({
   marginBottom: 30,
 
   "&.craftstrom": {
-    backgroundImage: `url(${craftstrom})`
+    backgroundImage: `url(${craftstrom})`,
   },
   "&.peaks": {
-    backgroundImage: `url(${peaks})`
+    backgroundImage: `url(${peaks})`,
   },
   "&.formunauts": {
-    backgroundImage: `url(${formunauts})`
+    backgroundImage: `url(${formunauts})`,
   },
   "&.pimsf": {
-    backgroundImage: `url(${pimsf})`
+    backgroundImage: `url(${pimsf})`,
   },
   "&.codeinstitute": {
-    backgroundImage: `url(${code})`
+    backgroundImage: `url(${code})`,
   },
   "&.sessionstracker": {
-    backgroundImage: `url(${sessions})`
+    backgroundImage: `url(${sessions})`,
   },
   "&.texthovereffects": {
-    backgroundImage: `url(${hover})`
+    backgroundImage: `url(${hover})`,
   },
   "&.revuto": {
-    backgroundImage: `url(${revuto})`
-  }
+    backgroundImage: `url(${revuto})`,
+  },
 });
 
 export { portfolioItem };

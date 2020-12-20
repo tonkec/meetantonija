@@ -1,13 +1,13 @@
-import { css } from "emotion";
+import { css } from "@emotion/css";
 import { sectionGutter } from "./../../../stylesheets/variables";
 const testimonial = css({
   backgroundColor: "white",
   h2: {
-    marginBottom: 60
+    marginBottom: 60,
   },
   figure: {
     maxWidth: "400px",
-    position: "relative"
+    position: "relative",
   },
   blockquote: {
     fontSize: " 1.2rem",
@@ -21,8 +21,8 @@ const testimonial = css({
       display: "inline-block",
       lineHeight: 1.8,
       color: "#797979",
-      fontSize: "1.1rem"
-    }
+      fontSize: "1.1rem",
+    },
   },
   figcaption: {
     fontSize: "1rem",
@@ -33,9 +33,9 @@ const testimonial = css({
       textDecoration: "none",
       padding: "5px",
       backgroundColor: "#f9c80e",
-      border: "1px solid #292929"
-    }
-  }
+      border: "1px solid #292929",
+    },
+  },
 });
 
 export default testimonial;

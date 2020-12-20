@@ -1,4 +1,4 @@
-import { css } from "emotion";
+import { css } from "@emotion/css";
 import { white1 } from "./../../../stylesheets/variables";
 
 const contact = css({
@@ -25,8 +25,8 @@ const contact = css({
       "&:focus": {
         borderBottom: "1.5px solid #000",
         boxShadow: "none",
-        outline: "none"
-      }
+        outline: "none",
+      },
     },
 
     textarea: {
@@ -47,8 +47,8 @@ const contact = css({
       "&:focus": {
         borderBottom: "1.5px solid #000",
         boxShadow: "none",
-        outline: "none"
-      }
+        outline: "none",
+      },
     },
 
     button: {
@@ -61,9 +61,9 @@ const contact = css({
       marginTop: 10,
       cursor: "pointer",
       borderRadius: 3,
-      border: "2px solid #000"
-    }
-  }
+      border: "2px solid #000",
+    },
+  },
 });
 
 export default contact;
