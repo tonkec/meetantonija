@@ -6,6 +6,8 @@ import { orderBy } from "lodash";
 const { projects } = data;
 const { client, hobby } = projects;
 const sortedByCompletion = orderBy(client, ["completed"], ["desc"]);
+const sortedByCompletionHobby = orderBy(hobby, ["completed"], ["desc"]);
+
 const PortfolioContainer = () => (
   <>
     <section className={` section--client section--bordered`}>

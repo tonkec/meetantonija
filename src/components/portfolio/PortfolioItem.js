@@ -57,8 +57,9 @@ const PortfolioItem = ({ data, links }) => {
                   href={data.projectLink}
                   className="link"
                 >
-                  {data.title === "Craftstrom"
-                    ? "Google Play"
+                  {data.title === "Craftstrom" ||
+                  data.title === "Oslo Philanthropic Exchange"
+                    ? "Live Link"
                     : data.projectLink}
                 </a>
               </p>
