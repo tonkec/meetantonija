@@ -18,9 +18,46 @@ import zero from "./../images/about/from_zero.jpg";
 import vienna from "./../images/about/css_in_vienna.jpg";
 import students from "./../images/about/students.jpg";
 
+import opx from "./../images/projects/opx.png";
+import opx1 from "./../images/projects/opx1.png";
+import opx2 from "./../images/projects/opx2.png";
+
 const data = {
   projects: {
     client: [
+      {
+        title: "Oslo Philanthropic Exchange",
+        client: "OPX",
+        technology: "HTML, CSS, Angular, Angular Material",
+        projectLink: "https://opx-app-development.azurewebsites.net/",
+        completed: 2021,
+        link: "https://www.opx.org/",
+        description:
+          "Oslo Philanthropic Exchange is a platform that enables donors to fund NGOs from all over the world.",
+        technologyDescription:
+          "The main technologies required for this project were HTML, CSS, Scss and JS and some fundamental knowledge in Angular architecture. Angular Material was used as UI framework.",
+        myRole: {
+          "CSS developer":
+            "My main task was to implement user interface into Angular platform using Angular Material and CSS. I was responsible for implementing Figma designs into the Angular app. Pixel perfection was a requirement I had to meet. I had to know Angular templating basics. I created components that rendered either static or mocked data. The hardest task was coding masonry dashboard. Among tasks were also writing unit tests using Jest.",
+        },
+        images: [
+          {
+            title: "Find & Filter",
+            src: opx,
+            clickable: true,
+          },
+          {
+            title: "Bank Details",
+            src: opx1,
+            clickable: true,
+          },
+          {
+            title: "Dashboard",
+            src: opx2,
+            clickable: true,
+          },
+        ],
+      },
       {
         title: "Code Institute",
         client: "Code Institute",
@@ -38,16 +75,16 @@ const data = {
           "UI Development":
             "The task was to implement plenty of new components into an existing LMS based on Django: quizzes, embedded repl.it, sidebar, course content, header, footer. I coded the interface of every course module. I was provided with the design files. It required CSS and Scss skills. The existing LMS code was slow and messy. I improved it with Scss logic. Now it is much cleaner and faster. I liked working with a designer, he had a really good eye for modern and contemporary design",
           Mentoring:
-            "I have been mentoring (remotely) for 2 years at Code Institute. The major part of the mentorship sessions is focusing on the code quality of students' projects. I help students to think like professional developers from the very start of their coding career. The content agnosticism, don't repeat yourself, reusability and object orientation are principles that I encourage on every session. I advise my students to stay persistent, committed and curious."
+            "I have been mentoring (remotely) for 2 years at Code Institute. The major part of the mentorship sessions is focusing on the code quality of students' projects. I help students to think like professional developers from the very start of their coding career. The content agnosticism, don't repeat yourself, reusability and object orientation are principles that I encourage on every session. I advise my students to stay persistent, committed and curious.",
         },
         images: [
           {
             title: "codeinstitute",
             content: "LMS",
             src: ciHeader,
-            clickable: true
-          }
-        ]
+            clickable: true,
+          },
+        ],
       },
       {
         title: "Peaks",
@@ -62,9 +99,9 @@ const data = {
           "Template is built with HTML, CSS, SCSS, Bootstrap, jQuery, JS.",
         myRole: {
           "User Interface":
-            "My task was to implement user interface based on the design provided. The hardest part in development process was customization of parallax. It had to be compatible with swiper.js and also fully responsive. Biggest struggle was author section that has multiple parallax. The three images were not supposed to move at the same time which is not default behaviour of parallax plugin. Also, the text should have shown up on hover. And all of that needed to be responsive."
+            "My task was to implement user interface based on the design provided. The hardest part in development process was customization of parallax. It had to be compatible with swiper.js and also fully responsive. Biggest struggle was author section that has multiple parallax. The three images were not supposed to move at the same time which is not default behaviour of parallax plugin. Also, the text should have shown up on hover. And all of that needed to be responsive.",
         },
-        images: []
+        images: [],
       },
       {
         title: "Formunauts",
@@ -78,9 +115,9 @@ const data = {
           "This app is built with Angular 8 fueled with RxJs and Typescript",
         myRole: {
           "RaiseNow Payment Integration":
-            "My task was to set a communication between the app and the RaiseNow API. RaiseNow iframe with form was injected into the template. I then had to send data from the form, as well as the data from the previous step, to the API. If there was an error in the form, it should be displayed to the user. The whole integration had to show states based on the connection status. I do not usually code in Angular, that is why this project had steep learning curve. I was able to quickly pick up core Angular and RxJs concepts."
+            "My task was to set a communication between the app and the RaiseNow API. RaiseNow iframe with form was injected into the template. I then had to send data from the form, as well as the data from the previous step, to the API. If there was an error in the form, it should be displayed to the user. The whole integration had to show states based on the connection status. I do not usually code in Angular, that is why this project had steep learning curve. I was able to quickly pick up core Angular and RxJs concepts.",
         },
-        images: [{ title: "formunauts", src: f, clickable: true }]
+        images: [{ title: "formunauts", src: f, clickable: true }],
       },
       {
         title: "Revuto",
@@ -95,16 +132,16 @@ const data = {
           "The app was built using React.js. The cool package I discovered in this project was react-helmet, npm package that manges meta tags in React apps.",
         myRole: {
           "React Developer":
-            "I was working closely with backend developers and a designer. My task was to create user interface following designs from designer and to connect components via API provided by backend developers. User authorization was handled with tokens. I loved working on this project because I was able to get my hands on Context API and React hooks <3. I used Context API for flash messages and hooks in the stateful functional components. The cool part in login and signup form was custom made captcha. Originally, additions were much complex, but client wanted simplified captcha. Now user should know how to sum two numbers that are not larger than 10. I also really much enjoyed playing with CSS animations and transitions. The most valuable page to client was referral program page which has animation that I coded from scratch. The tricky part was reversing animation. I learned scss can not count nth children backwards."
+            "I was working closely with backend developers and a designer. My task was to create user interface following designs from designer and to connect components via API provided by backend developers. User authorization was handled with tokens. I loved working on this project because I was able to get my hands on Context API and React hooks <3. I used Context API for flash messages and hooks in the stateful functional components. The cool part in login and signup form was custom made captcha. Originally, additions were much complex, but client wanted simplified captcha. Now user should know how to sum two numbers that are not larger than 10. I also really much enjoyed playing with CSS animations and transitions. The most valuable page to client was referral program page which has animation that I coded from scratch. The tricky part was reversing animation. I learned scss can not count nth children backwards.",
         },
         images: [
           {
             title: "revuto",
             content: "Revuto Homepage",
             src: r2,
-            clickable: true
-          }
-        ]
+            clickable: true,
+          },
+        ],
       },
       {
         title: "Pimsf",
@@ -121,16 +158,16 @@ const data = {
           "Pimsf Explorer":
             "The explorer is the most important part of the app. My task was to add the existing D3/DC charts and make them draggable and resizable. I achieved that using react-grid-layout npm package. The first thing I did was creating a plain draggable and resizable 8 column grid as requested. After that, I added graphs to columns. As user resizes column, graph should follow height and width of that column, of its parent. I sent resizedHeight and resizedWidth variable to the redux store and passed them to width and height in D3 attribute. When charts were resizable and draggable, I worked on responsiveness of the grid. React-grid-layout comes with the built-in properties and functions to create a grid based on the breakpoint. I used one function that will take number of columns and a breakpoint as parameters",
           "Changelog History":
-            "PIMSF can display different version of pipelines. If a constructor in the field changes something on the pipeline, they should report changes in the app. That report should create a new version of the pipeline. Such pipeline in PIMSF is perceived as a virtual pipeline. My task was to create a changelog history tree that will display each version of a pipeline. This is displayed as a tree where each new version is treated as a child, and each old version as a parent. We used Mermaid.js package to display such tree. Axios was used to get data points from API. Each pipeline in the tree can be deleted or approved. If it is approved, pipeline should change color to green. If it is deleted, it should be deleted from the history tree."
+            "PIMSF can display different version of pipelines. If a constructor in the field changes something on the pipeline, they should report changes in the app. That report should create a new version of the pipeline. Such pipeline in PIMSF is perceived as a virtual pipeline. My task was to create a changelog history tree that will display each version of a pipeline. This is displayed as a tree where each new version is treated as a child, and each old version as a parent. We used Mermaid.js package to display such tree. Axios was used to get data points from API. Each pipeline in the tree can be deleted or approved. If it is approved, pipeline should change color to green. If it is deleted, it should be deleted from the history tree.",
         },
         images: [
           {
             title: "pimsf",
             content: "PIMSF Overview",
             src: pimsf,
-            clickable: true
-          }
-        ]
+            clickable: true,
+          },
+        ],
       },
 
       {
@@ -147,14 +184,14 @@ const data = {
           "The app was built with React Native, customized both for Android and iOS. Graphs were made with dc.js and d3.js. Besides those app uses some cool react-native npm packages like tcomb, animatable, moment.js, axios and plenty others.",
         myRole: {
           "User Interface":
-            "My task was to implement user interface with react-native-elements and react-native and to handle user authentication and authorization with ajax calls to the backend api. User's token is stored using AsyncStorage. The app excited me a lot because I was able to get my hands on JS and React Native. It made me really happy that I can prove and test my JS skills!"
+            "My task was to implement user interface with react-native-elements and react-native and to handle user authentication and authorization with ajax calls to the backend api. User's token is stored using AsyncStorage. The app excited me a lot because I was able to get my hands on JS and React Native. It made me really happy that I can prove and test my JS skills!",
         },
         images: [
           { title: "craftstrom_login", src: craftstrom, clickable: true },
           { title: "craftstrom_battery", src: craftstrom3, clickable: true },
-          { title: "craftstrom_panels", src: craftstrom2, clickable: true }
-        ]
-      }
+          { title: "craftstrom_panels", src: craftstrom2, clickable: true },
+        ],
+      },
     ],
     hobby: [
       {
@@ -169,7 +206,7 @@ const data = {
           "React, Redux, Firebase, Thunk, Recharts, Faker.js, Lodash.js, Moment.js, react-dates, create-react-app, Heroku",
         about:
           "My idea was to get more meaningful data for the sessions that I have with students. The data should be presented in elegant way. The most interesting part to me was grouping data with lodash. The data received from firebase was not ready to be injected into Recharts immediately. It should be cleaned up and turned into cleaner objects. It was done with ._group function from lodash. I am so grateful for this library, it made my life much easier!",
-        images: [{ title: "sessions tracker", src: s3 }]
+        images: [{ title: "sessions tracker", src: s3 }],
       },
       {
         title: "Text hover effects",
@@ -182,48 +219,48 @@ const data = {
         technologyDescription: "Scss for library, React.js and Heroku for demo",
         about:
           "My idea was to have at one place different effects that can be triggered on click or hover. This library should save up developer's time. Any effects can be customized with passing arguments to mixins. Effects are initialised with CSS classes. I put high effort in keeping the code clean and reusable.",
-        images: [{ title: "sessions", src: s3 }]
-      }
-    ]
+        images: [{ title: "sessions", src: s3 }],
+      },
+    ],
   },
   images: [
     {
       title: "vienna",
       href: "https://www.meetup.com/css-in-vienna/events/267266901/",
       content: "Coding a piano @ CSS-in-Vienna",
-      src: vienna
+      src: vienna,
     },
     {
       title: "scss",
       href: "https://www.meetup.com/S_CSS_Zagreb/events/265312074/",
       content: "Coding a pure CSS beer @ Scss Meetup",
-      src: scss
+      src: scss,
     },
     {
       title: "students",
       href: "https://codeinstitute.net/",
       content: "Teaching students @ Code Institute",
-      src: students
+      src: students,
     },
     {
       title: "punk",
       href: "https://punkrockdev.com/",
       content: "Goofing around with Punk Rock Dev",
-      src: punk
+      src: punk,
     },
     {
       title: "zero",
       href: "https://slides.com/tonkecpalonkec/from-zero-to-s-hero/#/",
       content: "Encouraging LGBTQI+ community to start coding!",
-      src: zero
+      src: zero,
     },
     {
       title: "workshop",
       href: "https://github.com/tonkec/workshop",
       content: "Encouraging others to start coding",
-      src: workshop
-    }
-  ]
+      src: workshop,
+    },
+  ],
 };
 
 export default data;

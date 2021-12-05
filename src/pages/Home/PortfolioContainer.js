@@ -17,7 +17,7 @@ const PortfolioContainer = () => (
         </div>
         <div className="row is-centered">
           <div className="col-xs-12 col-sm-12 col-xl-8">
-            <div className="row is-centered">
+            <div className="row">
               {sortedByCompletion.map((item, i) => (
                 <div
                   className="col-xs-12 col-sm-10 col-md-6 offset-md-0 col-lg-5 col-xl-6 portfolio__column"

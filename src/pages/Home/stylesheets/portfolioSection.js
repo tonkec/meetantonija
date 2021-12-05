@@ -8,6 +8,7 @@ import sessions from "./../../../images/home/sessions_tracker.png";
 import hover from "./../../../images/home/text_hover.png";
 import revuto from "./../../../images/home/revuto_logo.png";
 import formunauts from "./../../../images/home/formunauts_logo.png";
+import opx from "./../../../images/home/opx.png";
 
 const portfolioItem = css({
   cursor: " pointer",
@@ -43,6 +44,9 @@ const portfolioItem = css({
   },
   "&.revuto": {
     backgroundImage: `url(${revuto})`,
+  },
+  "&.oslophilanthropicexchange": {
+    backgroundImage: `url(${opx})`,
   },
 });
 
