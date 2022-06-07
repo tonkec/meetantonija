@@ -35,7 +35,11 @@ export default function Home() {
 
     <section className="bg-white py-20 px-20">
       <h2 className={`${heading3} text-secondary font-bold text-center`}>I am social.</h2>
-      <p className={`${paragraph} text-center text-secondary mt-10`}>Linkedin Github Codepen</p>
+      <p className={`${paragraph} text-center text-secondary mt-10`}>
+        <a href="https://www.linkedin.com/in/antonija-simic/" target="_blank" className="px-4 text-secondary underline">Linkedin</a>  
+          <a href="https://github.com/tonkec" target="_blank" className="px-4 text-secondary underline">Github</a>  
+          <a href="https://codepen.io/tonkec" target="_blank" className="px-4 text-secondary underline">Codepen</a>  
+      </p>
     </section>
 
     <section className="bg-primary py-20 px-20 flex items-center justify-evenly">
