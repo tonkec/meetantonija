@@ -2,56 +2,19 @@
   "name": "meetantonija",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@emotion/css": "^11.0.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.13",
-    "emailjs-com": "^2.6.4",
-    "global": "^4.4.0",
-    "lodash": "^4.17.20",
-    "netlify": "^6.0.6",
-    "node": "^15.4.0",
-    "node-sass": "4.14.1",
-    "react": "^17.0.1",
-    "react-content-loader": "^5.1.4",
-    "react-dom": "^17.0.1",
-    "react-headroom": "^3.1.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.1",
-    "typeface-raleway": "^1.1.13",
-    "typeface-roboto": "^1.1.13",
-    "typeface-rubik": "^1.1.13"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
+  "dependencies": {
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
   },
   "devDependencies": {
-    "husky": "^4.3.6",
-    "prettier": "^2.2.1",
-    "pretty-quick": "^3.1.0"
+    "eslint": "8.17.0",
+    "eslint-config-next": "12.1.6"
   }
 }
