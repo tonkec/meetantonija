@@ -1,0 +1,92 @@
+{
+    "projects" : [
+        {
+            "title": "html",
+            "settings": [{
+                "hours": 56,
+                "duration": 3,
+                "price": 1500
+            }],
+            "teacher": {
+                "title": "Predavačica",
+                "name": "Antonija",
+                "description": "podučava već pet godina u raznim online školama. Jedna od njih je i irski bootcamp Code Institute. Osim toga, predavala je i u Borders;none, neprofitnoj udruzi koja podučava imigrante programiranju. Organizira CSS meetup u Zagrebu. Radi u industriji već sedam godina. Prvu liniju koda sa Javascriptom napisala je davne 2013e godine.",
+                "video": "https://www.youtube.com/embed/2fXAuzJ8Gi8",
+                "social": {
+                    "github": "github.com/tonkec",
+                    "linkedin": "linkedin.com/in/antonija-simic"
+                }
+               
+            },
+            "goals": [
+                "iskodirati barem dva projekta koji se mogu uvrstiti u portfolio", 
+                "razviti oko za dizajn i user experience",
+                "upoznavanja sa svim relevantnim temama iz HTML-a i CSS-a"
+            ],
+            "hireables": [
+                "završiti završni projekt pod mentorstvom Kodiraonice",
+                "izgraditi portfolio stranicu",
+                "naučiti kako pisati CV"
+            ]   
+        },
+        {
+            "title": "javascript",
+            "settings": [{
+                "hours": 56,
+                "duration": 3,
+                "price": 2000
+            }],
+            "teacher": {
+                "title": "Predavač",
+                "name": "Denis",
+                "description": " je zakon. Programiranjem se bavi još od svojih srednjoškolskih dana. Bio je predavač na različitim radionicama inicijative QUANTI iz Križevaca između koji bismo istaknuli radionicu o web programiranju.",
+                "video": "https://www.youtube.com/embed/ZvuHhY8kldU",
+                "social": {
+                    "github": "github.com/denbudins",
+                    "linkedin": "linkedin.com/in/denis-martin-budinski"
+                }
+            },
+            "goals": [
+                "iskodirati Todo listu, igricu i slider", 
+                "izvježbati programerski način razmišljanja rješavajući puno zadataka",
+                "upoznati se s funkcionalnim programiranjem",
+                "upoznati se s objektno-orijentiranim programiranjem"
+
+            ],
+            "hireables": [
+                "završiti završni projekt pod mentorstvom Kodiraonice",
+                "uvrstiti iskodirane aplikacije u svoj portfolio",
+                "rješavati zadatke na preporučenim stranicama"
+            ]
+        },
+        {
+            "title": "react",
+            "settings": [{
+                "hours": 56,
+                "duration": 3,
+                "price": 2500
+            }],
+            "teacher": {
+                "title": "Predavač",
+                "name": "Matija",
+                "description": " je samouki programer s preko 7 godina iskustva. Svoju ljubav prema programiranju otkrio je preko The Elder Scrolls: Construction Set-a zbog čega je naučio QBasic i C. Kasnije je susreo Javu, PHP, Ruby On Rails, C#, Javascript, Angular, React i ostale tehnologije. Kronični nedostatak drugih programera ga je naveo na to da zadnjih godinu dana podučava ljude programiranju.",
+                "video": "https://www.youtube.com/embed/dnSJI5jd9sU",
+                "social": {
+                    "github": "github.com/Eidar",
+                    "linkedin": "linkedin.com/in/matijakatic/"
+                }
+            },
+            "goals": [
+                "iskodirati jednu aplikaciju koja pokriva najbitnije dijelove Reacta", 
+                "upoznati se s komponentama",
+                "upoznavanja sa svim relevantnim temama iz Reacta"
+            ],
+            "hireables": [
+                "završiti završni projekt pod mentorstvom Kodiraonice",
+                "samostalno iskodirati vlastitu aplikaciju",
+                "probati riješiti neki realni problem svojom aplikacijom",
+                "naučiti kako pisati CV"
+            ]
+        }
+    ]
+}
