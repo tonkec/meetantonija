@@ -1,8 +1,10 @@
 module.exports = {
-    exportPathMap: () => ({
-      '/': { page: '/' },
-      '/projects': { page: '/projects' },
-      '/tags': { page: '/tags' },
+    // exportPathMap: () => ({
+    //   '/': { page: '/' },
 
-    }),
+    // }),
+    images: {
+        loader: 'akamai',
+        path: '',
+    },
   }

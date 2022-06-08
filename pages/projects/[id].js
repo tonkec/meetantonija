@@ -76,11 +76,27 @@ export default Project;
 
 import fsPromises from 'fs/promises';
 import path from 'path'
-export async function getServerSideProps(context) {
+export async function getStaticProps({ params }) {
     const filePath = path.join(process.cwd(), 'data/projects.json');
     const jsonData = await fsPromises.readFile(filePath);
     const objectData = JSON.parse(jsonData);
     return {
-      props: objectData
+      props: {
+          projects: objectData.projects
+      }
+    }
+}
+
+// dynamic route, all possible routes
+export async function getStaticPaths() {
+    const filePath = path.join(process.cwd(), 'data/projects.json');
+    const jsonData = await fsPromises.readFile(filePath);
+    const objectData = JSON.parse(jsonData);
+    const titles = Array.from(new Set(objectData.projects.map((project) => project.title.toLowerCase())))
+    return {
+        paths: titles.map((id) => ({
+            params: { id } 
+        })),
+        fallback: false
     }
 }

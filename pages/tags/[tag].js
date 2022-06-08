@@ -1,20 +1,12 @@
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Header from "./../../components/Header"
 
 export default function Tag(props){
-    const router = useRouter()
-    const { tag } = router.query;
-    const taggedProjects =  props.projects.filter((project) => {
-        const a = project.hashtags.filter((hastag) => hastag === tag)
-        if (a.length > 0) {
-            return a;
-        }
-    })
+    const { projects } = props; 
     return <>
     <Header title="Tags" />
     <section className='bg-gray py-20'>
-        {taggedProjects.map((project, i) => <div key={i} className='px-6 py-2'>
+        {projects.map((project, i) => <div key={i} className='px-6 py-2'>
         <Link href={`/projects/${project.route}`}>
             <a className='underline text-white text-2xl'>{project.title}</a>
         </Link>
@@ -25,11 +17,28 @@ export default function Tag(props){
 
 import fsPromises from 'fs/promises';
 import path from 'path'
-export async function getServerSideProps(context) {
+
+export async function getStaticProps({ params }) {
     const filePath = path.join(process.cwd(), 'data/cv.json');
     const jsonData = await fsPromises.readFile(filePath);
     const objectData = JSON.parse(jsonData);
     return {
-      props: objectData
+      props: {
+          projects: objectData.projects.filter((project) => project.hashtags.includes(params.tag))
+      }
+    }
+}
+
+// dynamic route, all possible routes
+export async function getStaticPaths() {
+    const filePath = path.join(process.cwd(), 'data/cv.json');
+    const jsonData = await fsPromises.readFile(filePath);
+    const objectData = JSON.parse(jsonData);
+    const tags = Array.from(new Set(objectData.projects.map((project) => project.hashtags).flat()))
+    return {
+        paths: tags.map((tag) => ({
+            params: { tag } // pages/tags/[tag]
+        })),
+        fallback: false
     }
 }
