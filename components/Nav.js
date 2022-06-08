@@ -6,22 +6,19 @@ import Router from 'next/router'
 import {projects} from "./../data/projects"
 
 const a = "text-2xl text-secondary font-bold"
-const listItem = "px-6"
+const listItem = "lg:px-6 px-2"
 
 const options = projects.map((project) => project.title)
 const defaultOption = "Projects";
   
 export default function Nav() {
     const _onSelect = (e) => {
-        console.log(e)
         Router.push(`/projects/${e.value.toLowerCase()}`)
     }
   return (
    <Headroom>
-       <nav className="py-20 fixed px-20 inset-0">
-
+       <nav className="py-20 fixed lg:px-20 inset-0">
            <ul className="flex relative w-full">
-             
                <li className={`${listItem}`}>
                    <Link href="/">
                        <a className={`${a}`}>Home</a>
@@ -38,7 +35,7 @@ export default function Nav() {
                     <Dropdown onChange={_onSelect} arrowClassName="!hidden" controlClassName="!border-0 !text-2xl !py-0 text-uppercase !font-bold !bg-transparent" options={options} value={defaultOption} placeholder="Projects" />
                </li>
 
-               <li className={`${listItem} absolute right-0`}>
+               <li className={`${listItem} absolute right-6`}>
                    <Link href="/contact">
                        <a className={`${a}`}>Contact</a>
                    </Link>

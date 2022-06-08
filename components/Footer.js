@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <footer className="py-20 bg-black px-20">
-            <div className="flex justify-between items-center">
+            <div className="flex flex-wrap lg:flex-nowrap justify-between items-center">
                 <a href="/" className="px-4 text-white">meetantonija.com</a>
 
                 <div>

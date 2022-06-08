@@ -15,28 +15,28 @@ export default function About(){
             <Nav />
             <Header title="About me" subtitle="My name is Antonija Šimić" />
             <section>
-                <div className="flex w-full">
-                    <div className="w-8/12 px-20 py-20 bg-gray">
+                <div className="flex flex-wrap lg:flex-nowrap w-full">
+                    <div className="w-full lg:w-8/12 px-20 py-20 bg-gray">
                         <p className={paragraph}>
                         I am a freelance front end developer and a punk rock developer. I organize CSS meetup in Zagreb where I code funny things using only CSS. Encouraging others to start coding, especially minorities, like refugees, gives me a great sense of purpose. In my career, great pleasure also comes from mentoring less experienced developers. In my non coding time, I play basketball, volunteer in LGBTIQA+ organizations and explore music with drums and guitar.      
                         </p>
 
-                        <p className={`${paragraph} mt-20`}>
+                        <p className={`${paragraph} mt-10 lg:mt-20`}>
                         I am a founder of coding school, Kodiraonica, where I teach HTML&amp;CSS, Javascript and React. Our courses are made for beginners.
                         </p>
                     </div>
 
-                    <div className="w-4/12 px-20 py-20 bg-secondary cursor-pointer flex items-center justify-center">
+                    <div className="w-full lg:w-4/12 px-20 py-20 bg-secondary cursor-pointer flex items-center lg:justify-center">
                        <Image src="/image.webp" width={200} height={200} onClick={showImage}/>
                     </div>
                 </div>
             </section>
 
-            {isImageShown && <div className="fixed inset-x-80 inset-y-52 flex justify-center items-center bg-neutral-50">
-                <button className="text-black absolute top-4 left-4" onClick={showImage}>
+            {isImageShown && <div className="fixed w-11/12 md:w-8/12 xl:w-5/12 h-[350px] top-2/4 left-2/4 flex justify-center items-center bg-neutral-50  -translate-y-1/2 -translate-x-1/2">
+                <button className="text-black absolute top-4 left-4 z-40" onClick={showImage}>
                     <span className="material-icons cursor-pointer">&#xe5cd;</span>
                 </button>
-                <Image src="/antonija.jpg" width={300} height={200}/>
+                <Image src="/antonija.jpg" layout='fill'/>
             </div>}
 
             <Footer />

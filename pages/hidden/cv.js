@@ -8,7 +8,10 @@ export default function CV(){
     return <>
         <Nav />
         <Header title="Antonija's CV" subtitle="Find out more about me" />
-
+        <section className="bg-gray">
+            <input className="bg-transparent text-white placeholder-white w-full py-10 px-20 text-4xl border-none focus:outline-none" type="search" placeholder="Search by name of a client or name of a project" />
+       
+        </section>
         <section className="bg-ternary py-20 px-20">
             <h2 className={`${heading2}`}>Work history</h2>
 
