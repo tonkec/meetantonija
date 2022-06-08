@@ -48,8 +48,8 @@ function Project(props) {
                 </div>
             </section>
 
-            <section className="py-10 px-20">
-                <div className="flex">
+            <section className="py-10">
+                <div className="flex w-6/12 mx-auto">
                     {project.hashtags.map((hash,i) => <a key={i} href={`/tags/${hash}`}><span className="font-bold inline-block mx-2">#{hash}</span></a> )}
                 </div>
             </section>
