@@ -38,7 +38,7 @@ export default function Contact(){
 
              <section className="bg-gray py-20 text-center">
                 <h1 className={`${heading3} mb-10`}>Send me a message</h1>
-                <form id="form" method="post" onSubmit={onSubmitForm} className="w-6/12 mx-auto">
+                <form id="form" method="post" onSubmit={onSubmitForm} className="w-8/12 md:w-6/12 mx-auto">
                     <input
                         type="text"
                         required
