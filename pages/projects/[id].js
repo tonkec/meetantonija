@@ -37,13 +37,13 @@ function Project(props) {
                 </div>
             </section>
 
-            <section>
+            <section className={`${project.image ? "bg-transparent" : "bg-ternary"}`}>
                 <div className="flex w-full">
-                    <div className="w-4/12 px-20 py-20 bg-primary cursor-pointer flex items-center justify-center">
+                    {project.image && <div className="w-4/12 px-20 py-20 bg-primary cursor-pointer flex items-center justify-center">
                        <Image src="/image.webp" width={200} height={200} onClick={showImage}/>
-                    </div>
+                    </div>}
 
-                    <div className="w-8/12 px-20 py-20 bg-ternary">
+                    <div className={`${project.image ? "w-8/12 px-20" : "w-6/12 mx-auto"} py-20 bg-ternary`}>
                         <h3 className={`${heading3} font-bold mb-10`}>I was a {project.roleTitle}</h3>
                         {project.role.map((singleRole) => <p key={singleRole} className={`${paragraph} mt-20`}>{singleRole}</p>)}
                     </div>
@@ -57,6 +57,13 @@ function Project(props) {
                     </a>
                 </Link>
             </section>
+
+            {isImageShown && <div className="fixed w-11/12 md:w-8/12 xl:w-5/12 h-[350px] top-2/4 left-2/4 flex justify-center items-center bg-neutral-50  -translate-y-1/2 -translate-x-1/2">
+                <button className="text-black absolute top-4 left-4 z-40" onClick={showImage}>
+                    <span className="material-icons cursor-pointer">&#xe5cd;</span>
+                </button>
+                <Image src={project.image} layout='fill'/>
+            </div>}
 
             <Footer />
         </>

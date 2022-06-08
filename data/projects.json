@@ -12,6 +12,7 @@
           "image": ""
         },
         {
+          "image": "/opx.png",
           "title": "OPX",
           "subtitle": "2021 - OPX - Angular",
           "description": "An application that connects NGOs and their potential donors. The app is basically a huge dashboard with tons of tables and filtering options.",
@@ -22,6 +23,7 @@
           "role": ["My main task was to implement user interface into Angular platform using Angular Material and CSS. Expertise included CSS knowledge and Angular templating skills.", " I was responsible for implementing Figma designs into the Angular app. Pixel perfection was a requirement I had to meet. I had to know Angular templating basics. I created components that rendered either static or mocked data. The hardest task was coding masonry dashboard. Among tasks were also writing unit tests using Jest."]
         },
         {
+          "image": "/formunauts.png",
           "title": "Formunauts",
           "subtitle": "2020 - Formunauts - Angular",
           "description": "An application that collects funding for NGOs built with Angular and RxJS.",
@@ -35,6 +37,7 @@
              ]
         },
         {
+          "image": "/revuto.jpg",
           "title": "Revuto",
           "subtitle": "2019 - Async Labs - React",
           "description": "A React application for managing subscriptions.",
@@ -45,6 +48,7 @@
           "role": ["I was working closely with backend developers and a designer. My task was to create user interface following designs from designer and to connect components via API provided by backend developers. User authorization was handled with tokens. I loved working on this project because I was able to get my hands on Context API and React hooks <3. I used Context API for flash messages and hooks in the stateful functional components. The cool part in login and signup form was custom made captcha. Originally, additions were much complex, but client wanted simplified captcha. Now user should know how to sum two numbers that are not larger than 10. I also really much enjoyed playing with CSS animations and transitions. The most valuable page to client was referral program page which has animation that I coded from scratch. The tricky part was reversing animation. I learned scss can not count nth children backwards."]
         },
         {
+            "image": "/ci.png",
             "title": "Codeinstitute",
             "subtitle": "2019 - Code Institute - CSS",
             "description": "Code Institute is Dublin based bootcamp that trains students from zero to hero, turning them into real porfessional developers with large scope of skills, in front-end and back-end. Students with diploma from Code Institute are eligible to apply to almost any software developer job.",
@@ -67,7 +71,7 @@
             "role": ["The app was built with React Native, customized both for Android and iOS. Graphs were made with dc.js and d3.js. Besides those app uses some cool react-native npm packages like tcomb, animatable, moment.js, axios and plenty others.", "My task was to implement user interface with react-native-elements and react-native and to handle user authentication and authorization with ajax calls to the backend api. User's token is stored using AsyncStorage. The app excited me a lot because I was able to get my hands on JS and React Native. It made me really happy that I can prove and test my JS skills!"]
           },
           {
-            "hidden": "true",
+            "hidden": true,
             "title": "Peaks",
             "subtitle": "2015 - Supersuperstudio - Bootstrap",
             "description": "This is a bootstrap template for web and digital agencies. It is best used for showing portfolio and presenting work in general. Web features, such as preloader, parallax, slideshows, full-screen layout and responsivness, will impress your visitors",
