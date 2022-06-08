@@ -5,56 +5,64 @@
           "date": "April 2021 - present",
           "tasks": ["I founded a coding school where I teach Javasript and React.js.", "Our goal is to code several javascript games and one React.js application"],
           "link": "https://kodiraonica.dev/",
-          "route": "kodiraonica"
+          "route": "kodiraonica",
+          "hashtags": ["mentoring"]
         },
         {
             "title": "Human",
             "date": "Dec 2021 - March 2022",
             "tasks": ["Working with React.js and Storybook", "Delivering pixel perfect layout", "Transforming figma design into React and Stencil.js arhitecture", "Developing abstract reusable components"],
             "link": "https://kodiraonica.dev/",
-            "route": "span"
+            "route": "span",
+            "hashtags": ["react", "storybook"]
         },
         {
             "title": "Oslo Philanthropic Exchange",
             "date": "Apr 2021 - Sep 2021",
             "tasks": ["My main task was to implement user interface into Angular platform", "Expertise included CSS knowledge and Angular templating skills", "Among tasks were writing of unit tests"],
             "link": "https://kodiraonica.dev/",
-            "route": "opx"
+            "route": "opx",
+            "hashtags": ["angular", "css"]
         },
         {
             "title": "Formunauts",
             "date": "Jan 2020 - Sep 2020",
             "tasks": ["Set a communication between the app and the RaiseNow API. Send data from the form to the API.", "Respond to offline/online status", "Develop API architecture using services, injectables, axios calls, observables", "Integrate mpos device for payment with credit cards", "Setup service worker for caching assets"],
             "link": "https://kodiraonica.dev/",
-            "route": "formunauts"
+            "route": "formunauts",
+            "hashtags": ["angular", "rxjs"]
         },
         {
             "title": "Async Labs",
             "date": "Jun 2019 - Jan 2020",
             "tasks": ["Develop domain driven design for application architecture", "Using React.js and Redux with Thunk", "Implement data visualisation graph using Mermaid.js", "Integrate mpos device for payment with credit cards", "The data was parsed from the api which was then passed to the Mermaid graph.", "Implement fluid layout with react-grid-layout package", "Mentor other devs, show them cool css tricks and simple solutions."],
             "link": "https://kodiraonica.dev/",
-            "route": "revuto"
+            "route": "revuto",
+            "hashtags": ["react"]
         },
         {
             "title": "Code Institute",
             "date": "Nov 2017 - Sep 2020",
             "tasks": ["Develop UI with HTML&Scss within Django architecture based on Learning Management System", "Improve existing CSS codebase which led to better performance", "Create reading, audio and video materials for front-end module: html, css, js, scss", "Teach web fundamentals from HTML to Django architecture", "Help students think like professional developers from the very start of their coding career"],
             "link": "https://kodiraonica.dev/",
-            "route": "codeinstitute"
+            "route": "codeinstitute",
+            "hashtags": ["django", "css"]
         },
         {
             "title": "Punk Rock Dev",
             "date": "Dec 2017 - May 2019",
             "tasks": ["Connect UI to API using axios", "Develop reusable components", "Render data in graphs", "Develop responsive layout", "Fix cross-platform issues, iOS vs Android"],
             "link": "https://kodiraonica.dev/",
-            "route": "craftstrom"
+            "route": "craftstrom",
+            "hashtags": ["react_native", "react"]
         },
         {
             "title": "Super super studio",
             "date": "Jan 2015 - Jul 2015",
             "tasks": ["Develop static websites following pixel-perfect and mobile-first approach with Bootstrap", "Implement cross-browser and cross-device compatibility", "Optimise code using Gulp", "Customise jQuery animations and third-party libraries such as: Swiper.js, Waypoints,js, Skrollr.js, Parallax.js"],
             "link": "https://kodiraonica.dev/",
-            "route": "peaks"
+            "route": "peaks",
+            "hashtags": ["css"]
         }
       
     ]

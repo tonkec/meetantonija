@@ -1,5 +1,16 @@
 {
     "projects" :[
+      {
+        "title": "Kodiraonica",
+        "subtitle": "2021 - Human - Stencil.js",
+        "href": "span",
+        "stack": "react",
+        "link": "https://www.span.eu/",
+        "description": "A landing page built with web components on top of storybook and Stencil.js",
+        "roleTitle": "Stencil developer",
+        "role": ["My main task was to deliver responsive abstract and reusable components. I was turning figma designs into components. Some of the components I built are sliders, footer, navigation." ],
+        "image": ""
+      },
         {
           "title": "Span",
           "subtitle": "2021 - Human - Stencil.js",
