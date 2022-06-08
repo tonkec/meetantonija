@@ -14,7 +14,7 @@ export default function Tag(props){
     return <>
     <Header title="Tags" />
     <section className='bg-gray py-20'>
-        {taggedProjects.map((project) => <div className='px-6 py-2'>
+        {taggedProjects.map((project, i) => <div key={i} className='px-6 py-2'>
         <Link href={`/projects/${project.route}`}>
             <a className='underline text-white text-2xl'>{project.title}</a>
         </Link>
