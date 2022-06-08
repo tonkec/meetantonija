@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.6.4",
-    "@heroicons/react": "^1.0.6",
     "autoprefixer": "^10.4.7",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^6.3.11",
