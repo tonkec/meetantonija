@@ -1,8 +1,6 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Header from "./../../components/Header"
-import Nav from "./../../components/Nav"
-import Footer from "./../../components/Footer"
 
 export default function Tag(props){
     const router = useRouter()
@@ -14,7 +12,6 @@ export default function Tag(props){
         }
     })
     return <>
-    <Nav />
     <Header title="Tags" />
     <section className='bg-gray py-20'>
         {taggedProjects.map((project) => <div className='px-6 py-2'>
@@ -23,7 +20,6 @@ export default function Tag(props){
         </Link>
     </div>)}
     </section>
-    <Footer />
     </>
 }
 

@@ -2,8 +2,6 @@ import Header from "./../components/Header";
 import { heading2, heading3, heading4, heading5, paragraph } from "../utils/typography"
 import Link from "next/link"
 import {useState} from "react";
-import Nav from "./../components/Nav"
-import Footer from "./../components/Footer";
 const button = "bg-secondary text-white py-4 px-10 text-2xl";
 import {projects} from "./../data/projects"
 
@@ -15,8 +13,7 @@ export default function Home() {
   }
   return (
    <>
-      <Nav />
-      <Header title="I am Antonija" subtitle="A freelance front-end developer" />
+    <Header title="I am Antonija" subtitle="A freelance front-end developer" />
 
     <section>
       <div className="grid grid-cols-2 w-full">
@@ -74,8 +71,6 @@ export default function Home() {
        <p className={`${paragraph} mt-20`}>I have been mentoring for the past 5 years. That inspired me to found my own <a href="https://kodiraonica.dev/" className="underline" target="_blank">coding school</a>. We teach HTML&amp;CSS, Javascript and React. Kodiraonica is one year old, we have many happy students and inspiring teachers. </p>
      </div>
    </section>
-
-    <Footer />
   </>
   )
 }

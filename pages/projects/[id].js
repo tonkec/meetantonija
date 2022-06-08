@@ -1,7 +1,5 @@
 import Header from "./../../components/Header"
-import Nav from "./../../components/Nav"
 import { paragraph, heading2, heading3 } from "../../utils/typography"
-import Footer from "./../../components/Footer"
 import {useState} from "react";
 import Image from "next/image";
 import Link from "next/link"
@@ -23,7 +21,6 @@ function Project(props) {
     const randomNumber = Math.floor(Math.random() * randomProjects.length);
     return (
         <>
-            <Nav />
             <Header title={project.title} subtitle={project.subtitle} link={project.link} />
 
             <section className="bg-secondary py-20">
@@ -71,8 +68,6 @@ function Project(props) {
                 </button>
                 <Image src={project.image} layout='fill'/>
             </div>}
-
-            <Footer />
         </>
     )
 }

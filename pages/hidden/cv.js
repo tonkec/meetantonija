@@ -1,6 +1,4 @@
 import Header from "./../../components/Header"
-import Nav from "./../../components/Nav"
-import Footer from "./../../components/Footer"
 import { paragraph, heading2, heading4, heading5 } from "../../utils/typography"
 import Link from "next/link"
 import {useState} from "react";
@@ -24,7 +22,6 @@ export default function CV(props){
         return filteredProject
     }
     return <>
-        <Nav />
         <Header title="Antonija's CV" subtitle="Read more about my work" />
         <section className="bg-gray">
             <input onChange={onSearch} className="bg-transparent text-white placeholder-white w-full py-10 px-20 text-4xl border-none focus:outline-none" type="search" placeholder="Search by the name of a client or technology" />
@@ -106,8 +103,6 @@ export default function CV(props){
                 </a>
             </div>
         </section>
-
-        <Footer />
     </>
 }
 
