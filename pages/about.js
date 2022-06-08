@@ -1,7 +1,4 @@
 import Header from "../components/Header"
-import Nav from "../components/Nav"
-
-import Footer from "../components/Footer"
 import { paragraph } from "../utils/typography"
 import Image from "next/image";
 import {useState} from "react";
@@ -12,7 +9,6 @@ export default function About(){
     }
     return (
         <>
-            <Nav />
             <Header title="About me" subtitle="My name is Antonija Šimić" />
             <section>
                 <div className="flex flex-wrap lg:flex-nowrap w-full">
@@ -38,8 +34,6 @@ export default function About(){
                 </button>
                 <Image src="/antonija.jpg" layout='fill'/>
             </div>}
-
-            <Footer />
         </>
     )
 }
