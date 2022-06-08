@@ -12,5 +12,5 @@
 }
 
 ::selection {
-    @apply bg-white text-black;
+    @apply bg-blue-500 text-black;
 }
