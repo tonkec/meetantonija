@@ -12,9 +12,9 @@ function Header({title, subtitle, link}){
                 <h4 className={`${heading4} text-right font-light mt-0`}>
                     {subtitle}
                     {link && <Link href={link}>
-                        <span>
+                        <a target="_blank"><span>
                             - <span className="underline cursor-pointer">Link </span>
-                        </span>
+                        </span></a>
                    </Link>}
                 </h4>
             </div>
