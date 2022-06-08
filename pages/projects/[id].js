@@ -1,5 +1,5 @@
 import Header from "./../../components/Header"
-import { paragraph, heading2, heading3 } from "../../utils/typography"
+import { paragraph, heading3, heading4 } from "../../utils/typography"
 import {useState} from "react";
 import Image from "next/image";
 import Link from "next/link"
@@ -24,7 +24,7 @@ function Project(props) {
             <Header title={project.title} subtitle={project.subtitle} link={project.link} />
 
             <section className="bg-secondary py-20">
-                <div className="flex flex-wrap w-6/12 mx-auto">
+                <div className="flex flex-wrap w-full px-6 md:w-6/12 mx-auto">
                     <h3 className={`${heading3} text-white font-bold mb-10`}>
                         What kind of app is this?
                     </h3>
@@ -36,12 +36,12 @@ function Project(props) {
             </section>
 
             <section className={`${project.image ? "bg-transparent" : "bg-ternary"}`}>
-                <div className="flex w-full">
-                    {project.image && <div className="w-4/12 px-20 py-20 bg-primary cursor-pointer flex items-center justify-center">
+                <div className="flex w-full flex-wrap lg:flex-nowrap">
+                    {project.image && <div className="lg:w-4/12 px-20 py-20 bg-primary cursor-pointer flex items-center justify-center">
                        <Image src="/image.webp" width={200} height={200} onClick={showImage}/>
                     </div>}
 
-                    <div className={`${project.image ? "w-8/12 px-20" : "w-6/12 mx-auto"} py-20 bg-ternary`}>
+                    <div className={`${project.image ? "lg:w-8/12 px-20" : "w-6/12 mx-auto"} py-20 bg-ternary`}>
                         <h3 className={`${heading3} font-bold mb-10`}>I was a {project.roleTitle}</h3>
                         {project.role.map((singleRole) => <p key={singleRole} className={`${paragraph} mt-20`}>{singleRole}</p>)}
                     </div>
@@ -56,8 +56,8 @@ function Project(props) {
 
             <section className="bg-gray py-20 text-center">
                 <Link href={randomProjects[randomNumber].title.toLowerCase()}>
-                    <a className={`${heading3} font-bold flex items-center justify-center`}>
-                        <span>Read about {randomProjects[randomNumber].title} next</span> <span className="material-icons cursor-pointer text-8xl">&#xe5e1;</span>
+                    <a className={`${heading4} font-bold flex items-center justify-center`}>
+                        <span>Read about {randomProjects[randomNumber].title} next</span> <span className="material-icons cursor-pointer text-6xl">&#xe5e1;</span>
                     </a>
                 </Link>
             </section>

@@ -7,11 +7,7 @@ import Image from "next/image";
 export default function Contact(){
     return (
         <>
-            <Nav />
-            <Header title="Let's talk" subtitle="What is on your mind?" />
-            
-
-            <Footer />
+            <Header title="Let's talk" subtitle="What is on your mind?" />        
         </>
     )
 }

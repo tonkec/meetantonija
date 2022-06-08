@@ -2,7 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.headroom--pinned nav,
-.headroom--unpinned nav{
-    @apply bg-primary  text-white;
+.headroom--pinned nav button,
+.headroom--unpinned nav button{
+    @apply bg-secondary  text-white;
+}
+
+.z-max {
+    z-index: 999;
+}
+
+::selection {
+    @apply bg-white text-black;
 }
