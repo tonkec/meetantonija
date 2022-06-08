@@ -16,6 +16,7 @@ function Project(props) {
     const { id } = router.query
     const projects = props.projects; 
     const project = projects.filter((project) => project.title.toLowerCase() === id)[0];
+
     const randomProjects = projects.filter((p, i) => {
         return project.title.toLowerCase() !== p.title.toLowerCase() && !p.hidden
     });
@@ -47,6 +48,12 @@ function Project(props) {
                         <h3 className={`${heading3} font-bold mb-10`}>I was a {project.roleTitle}</h3>
                         {project.role.map((singleRole) => <p key={singleRole} className={`${paragraph} mt-20`}>{singleRole}</p>)}
                     </div>
+                </div>
+            </section>
+
+            <section className="py-10 px-20">
+                <div className="flex">
+                    {project.hashtags.map((hash,i) => <a key={i} href={`/tags/${hash}`}><span className="font-bold inline-block mx-2">#{hash}</span></a> )}
                 </div>
             </section>
 

@@ -15,7 +15,6 @@ export default function CV(props){
                 return nameOfTheClient;
             } 
         })
-
        
         setFilteredProjects(filteredProject);
 

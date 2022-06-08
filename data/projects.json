@@ -2,14 +2,16 @@
     "projects" :[
       {
         "title": "Kodiraonica",
-        "subtitle": "2021 - Human - Stencil.js",
-        "href": "span",
+        "subtitle": "2022 - Self Employed - Next.js",
+        "href": "kodiraonica",
         "stack": "react",
-        "link": "https://www.span.eu/",
-        "description": "A landing page built with web components on top of storybook and Stencil.js",
-        "roleTitle": "Stencil developer",
-        "role": ["My main task was to deliver responsive abstract and reusable components. I was turning figma designs into components. Some of the components I built are sliders, footer, navigation." ],
-        "image": ""
+        "link": "https://kodiraonica.dev/",
+        "description": "A landing page built with tailwind and next.js",
+        "roleTitle": "Next.js developer",
+        "role": ["My main task was to create impressive landing page that will attract students to sign up for courses." ],
+        "image": "",
+        "hidden": true,
+        "hashtags": ["mentoring"]
       },
         {
           "title": "Span",
@@ -20,9 +22,11 @@
           "description": "A landing page built with web components on top of storybook and Stencil.js",
           "roleTitle": "Stencil developer",
           "role": ["My main task was to deliver responsive abstract and reusable components. I was turning figma designs into components. Some of the components I built are sliders, footer, navigation." ],
-          "image": ""
+          "image": "",
+          "hashtags": ["react", "storybook"]
         },
         {
+          "hashtags": ["angular", "css"],
           "image": "/opx.png",
           "title": "OPX",
           "subtitle": "2021 - OPX - Angular",
@@ -34,6 +38,7 @@
           "role": ["My main task was to implement user interface into Angular platform using Angular Material and CSS. Expertise included CSS knowledge and Angular templating skills.", " I was responsible for implementing Figma designs into the Angular app. Pixel perfection was a requirement I had to meet. I had to know Angular templating basics. I created components that rendered either static or mocked data. The hardest task was coding masonry dashboard. Among tasks were also writing unit tests using Jest."]
         },
         {
+          "hashtags": ["angular", "rxjs"],
           "image": "/formunauts.png",
           "title": "Formunauts",
           "subtitle": "2020 - Formunauts - Angular",
@@ -48,6 +53,7 @@
              ]
         },
         {
+          "hashtags": ["react"],
           "image": "/revuto.jpg",
           "title": "Revuto",
           "subtitle": "2019 - Async Labs - React",
@@ -58,7 +64,7 @@
           "roleTitle": "React developer",
           "role": ["I was working closely with backend developers and a designer. My task was to create user interface following designs from designer and to connect components via API provided by backend developers. User authorization was handled with tokens. I loved working on this project because I was able to get my hands on Context API and React hooks <3. I used Context API for flash messages and hooks in the stateful functional components. The cool part in login and signup form was custom made captcha. Originally, additions were much complex, but client wanted simplified captcha. Now user should know how to sum two numbers that are not larger than 10. I also really much enjoyed playing with CSS animations and transitions. The most valuable page to client was referral program page which has animation that I coded from scratch. The tricky part was reversing animation. I learned scss can not count nth children backwards."]
         },
-        {
+        {   "hashtags": ["django", "css"],
             "image": "/ci.png",
             "title": "Codeinstitute",
             "subtitle": "2019 - Code Institute - CSS",
@@ -71,6 +77,7 @@
             "hidden": true
         },
           {
+            "hashtags": ["react_native", "react"],
             "hidden": true,
             "title": "Craftstrom",
             "subtitle": "2019 - Punk Rock Dev - React Native",
@@ -81,7 +88,7 @@
             "roleTitle": "React Native developer",
             "role": ["The app was built with React Native, customized both for Android and iOS. Graphs were made with dc.js and d3.js. Besides those app uses some cool react-native npm packages like tcomb, animatable, moment.js, axios and plenty others.", "My task was to implement user interface with react-native-elements and react-native and to handle user authentication and authorization with ajax calls to the backend api. User's token is stored using AsyncStorage. The app excited me a lot because I was able to get my hands on JS and React Native. It made me really happy that I can prove and test my JS skills!"]
           },
-          {
+          {  "hashtags": ["css"],
             "hidden": true,
             "title": "Peaks",
             "subtitle": "2015 - Supersuperstudio - Bootstrap",

@@ -57,8 +57,8 @@ export default function Home() {
 
       </div>
       {projectsShown.map((project, i) => {
-        return <div key={`projects/${project.title}`} className={`${i % 2 === 0 ? "float-left": "float-right"} bg-secondary px-20 py-6 w-2/4 clear-both mb-20 hover:bg-primary`}>
-          <Link href={project.href}>
+        return <div key={`${project.title}`} className={`${i % 2 === 0 ? "float-left": "float-right"} bg-secondary px-20 py-6 w-2/4 clear-both mb-20 hover:bg-primary`}>
+          <Link href={`/projects/${project.title.toLowerCase()}`}>
             <a>
               <h1 className={`${heading3} text-left text-white leading-normal font-bold`}>{project.title}</h1>
               <h4 className={`${heading5} text-left text-white font-light mt-0`}>{project.subtitle}</h4>
