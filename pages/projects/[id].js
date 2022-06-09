@@ -47,7 +47,7 @@ function Project(props) {
                     </div>}
 
                     <div className={`${project.image ? "lg:w-8/12 px-20" : "md:w-6/12 mx-auto"} px-6 py-20 bg-ternary`}>
-                        <h3 className={`${heading3} font-bold mb-10`}>I was a {project.roleTitle}</h3>
+                        <h3 className={`${heading3} font-bold mb-10`}>I was {project.roleTitle.startsWith("A") ? `an ${project.roleTitle}` : `a ${project.roleTitle}`}</h3>
                         {project.role.map((singleRole) => <p key={singleRole} className={`${paragraph} mt-20`}>{singleRole}</p>)}
                     </div>
                 </div>
