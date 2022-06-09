@@ -3,7 +3,7 @@ import { paragraph, heading3, heading4 } from "../../utils/typography"
 import {useState} from "react";
 import Image from "next/image";
 import Link from "next/link"
-import { Router, useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 const imageLoader = require("./../../loader.js");
 
 function Project(props) {
@@ -60,7 +60,7 @@ function Project(props) {
             </section>
 
             <section className="bg-gray py-20 px-6 sm:text-center">
-                <Link href={randomProjects[randomNumber].title.toLowerCase()}>
+                <Link href={`/projects/${randomProjects[randomNumber].title.toLowerCase()}`}>
                     <a className={`${heading4} font-bold flex items-center sm:justify-center`}>
                         <span>Read about {randomProjects[randomNumber].title} next</span> <span className="material-icons cursor-pointer text-6xl">&#xe5e1;</span>
                     </a>

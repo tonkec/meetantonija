@@ -42,7 +42,7 @@ export default function Nav() {
    }
 
    const navContent = () => (
-    <ul className="relative md:px-20 px-1 top-2/4 -translate-y-2/4 lg:w-4/12">
+    <ul className="relative md:px-20 px-1 mt-[100px] lg:w-4/12">
         <li className={`${listItem}`}onClick={closeNav}>
             <Link href="/">
             <a className={`${a}`}>Home</a>

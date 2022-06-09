@@ -62,57 +62,6 @@ export default function CV(props){
                 </div>
             } ) : <div>Nothing to show</div>}
         </section>
-
-        <section className="bg-secondary text-white py-10 md:py-20 px-10 md:px-20 print-hidden">
-            <h2 className={`${heading2}`}>Hobby projects</h2>
-            <div>
-                <h4 className={`${heading4} underline mt-10 md:mt-20`}><a href="https://duga.app/" target="_blank">Duga</a></h4>
-                <p className={`${paragraph}`}>2021</p>
-            </div>
-
-            <div className="pl-10 mt-10">
-                <ul className="list-disc">
-                    <li className="text-md md:text-2xl">A landing page for dating app built with React</li>
-                </ul>
-
-                <a href="https://www.duga.app/" className="underline mt-6 inline-block -ml-10">
-                    Open 
-                </a>
-            </div>
-        </section>
-
-        <section className="bg-secondary text-white px-10 py-10 md:py-20 md:px-20 print-hidden">
-            <h2 className={`${heading2}`}>Some other projects.</h2>
-            <div>
-                <h4 className={`${heading4} underline mt-10 md:mt-20`}><a href="https://www.tintup.com/" target="_blank">TINT</a></h4>
-                <p className={`${paragraph}`}>2016</p>
-            </div>
-
-            <div className="pl-10 mt-10">
-                <ul className="list-disc">
-                    <li className="text-md md:text-2xl">Turning designs into the Jekyll system</li>
-                </ul>
-
-                <a href="https://antonijasimic.bitbucket.io/tintold/index.html" className="underline mt-6 inline-block -ml-10">
-                    Open 
-                </a>
-            </div>
-
-            <div>
-                <h4 className={`${heading4} underline mt-10 md:mt-20`}><a href="https://www.tintup.com/" target="_blank">TINT2</a></h4>
-                <p className={`${paragraph}`}>2016</p>
-            </div>
-
-            <div className="pl-10 mt-10">
-                <ul className="list-disc">
-                    <li className="text-2xl">Turning designs into the Jekyll system</li>
-                </ul>
-
-                <a href="https://antonijasimic.bitbucket.io/tint/index.html" className="underline mt-6 inline-block -ml-10">
-                    Open 
-                </a>
-            </div>
-        </section>
     </div>
 }
 
