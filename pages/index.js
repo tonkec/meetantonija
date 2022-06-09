@@ -16,13 +16,13 @@ export default function Home() {
     <Header title="I am Antonija" subtitle="A freelance front-end developer" />
 
     <section>
-      <div className="grid grid-cols-2 w-full">
-        <div className="bg-secondary pb-[200px] pt-[100px] text-center">
+      <div className="grid lg:grid-cols-2 w-full">
+        <div className="bg-secondary px-10 lg:px-0 lg:pb-[200px] pb-[100px] pt-[100px] lg:file:text-center">
           <h2 className={`${heading2} text-white font-bold`}>Who am I?</h2>
           <p className={`${paragraph} text-white max-w-md mx-auto text-left font-light mt-12`}>I am a freelance front end developer based in Zagreb who has huge crash on design and CSS. I work mostly remotely with clients from all over the world. </p>
         </div>
 
-        <div className="bg-white pb-[200px] pt-[100px] text-center">
+        <div className="bg-white px-10 lg:px-0 lg:pb-[200px] pt-[100px] lg:text-center">
           <h2 className={`${heading2} text-secondary font-bold`}>What do I do?</h2>
           <p className={`${paragraph} text-secondary max-w-md mx-auto text-left font-light mt-12`}>I code web applications using React.js, Next.js and all mighty CSS.</p>
         </div>
@@ -39,22 +39,22 @@ export default function Home() {
       </p>
     </section>
 
-    <section className="bg-primary py-20 px-20 flex items-center justify-evenly">
+    <section className="bg-primary py-20 px-10 lg:px-20 flex items-center xl:justify-evenly flex-wrap xl:flex-nowrap">
       <h3 className={`${heading3} font-bold max-w-3xl`}>Do you have something interesting I could work on?</h3>
       <Link href="/contact">
-        <a className={`${button}`}>Contact me</a>
+        <a className={`${button} mt-6 lg:mt-0`}>Contact me</a>
       </Link>
     </section>
 
     <section className="bg-ternary py-20 overflow-auto">
-      <h2 className={`${heading2} text-secondary font-bold text-center mb-20`}>Projects I am proud of.</h2>
+      <h2 className={`${heading2} text-secondary font-bold lg:text-center ml-10 lg:ml-0 mb-20`}>Projects I am proud of.</h2>
       <div className="flex justify-center items-center mb-20">
         <button value="react" onClick={onButtonFilterClick} className="bg-gray py-2 px-10 inline-block hover:bg-primary font-bold text-2xl mr-2">React</button>
         <button value="angular" onClick={onButtonFilterClick} className="bg-gray py-2 px-10 inline-block hover:bg-primary font-bold text-2xl mr-2">Angular</button>
 
       </div>
       {projectsShown.map((project, i) => {
-        return <div key={`${project.title}`} className={`${i % 2 === 0 ? "float-left": "float-right"} bg-secondary px-20 py-6 w-2/4 clear-both mb-20 hover:bg-primary`}>
+        return <div key={`${project.title}`} className={`${i % 2 === 0 ? "lg:float-left": "lg:float-right"} bg-secondary px-20 py-6 md:w-2/4 clear-both mb-20 hover:bg-primary`}>
           <Link href={`/projects/${project.title.toLowerCase()}`}>
             <a>
               <h1 className={`${heading3} text-left text-white leading-normal font-bold`}>{project.title}</h1>
@@ -66,7 +66,7 @@ export default function Home() {
     </section>
 
    <section className="bg-primary py-20">
-     <div className="flex items-center justify-center flex-wrap w-6/12 mx-auto">
+     <div className="flex items-center justify-center flex-wrap w-8/12 lg:w-6/12 mx-auto">
        <h2 className={`${heading2} text-center font-bold`}>Kodiraonica</h2>
        <p className={`${paragraph} mt-20`}>I have been mentoring for the past 5 years. That inspired me to found my own <a href="https://kodiraonica.dev/" className="underline" target="_blank">coding school</a>. We teach HTML&amp;CSS, Javascript and React. Kodiraonica is one year old, we have many happy students and inspiring teachers. </p>
      </div>
