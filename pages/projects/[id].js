@@ -3,7 +3,7 @@ import { paragraph, heading3, heading4 } from "../../utils/typography"
 import {useState} from "react";
 import Image from "next/image";
 import Link from "next/link"
-import { useRouter } from 'next/router'
+import { Router, useRouter } from 'next/router'
 const imageLoader = require("./../../loader.js");
 
 function Project(props) {
@@ -20,6 +20,10 @@ function Project(props) {
         return project.title.toLowerCase() !== p.title.toLowerCase() && !p.hidden
     });
     const randomNumber = Math.floor(Math.random() * randomProjects.length);
+
+    const onImageClick = () => {
+        router.push(project.image);
+    }
     return (
         <>
             <Header title={project.title} subtitle={project.subtitle} link={project.link} />
@@ -63,11 +67,10 @@ function Project(props) {
                 </Link>
             </section>
 
-            {isImageShown && <div className="fixed w-11/12 md:w-8/12 xl:w-5/12 h-[350px] top-2/4 left-2/4 flex justify-center items-center bg-neutral-50  -translate-y-1/2 -translate-x-1/2">
+            {isImageShown && <div className="fixed w-8/12 md:w-8/12 lg:w-6/12 xl:w-5/12 h-[300px] md:h-[350px] top-2/4 left-2/4 flex justify-center items-center bg-neutral-50  -translate-y-1/2 -translate-x-1/2 bg-center bg-no-repeat bg-contain" style={{backgroundImage: `url(${project.image})`}} onClick={onImageClick}>
                 <button className="text-black absolute top-4 left-4 z-40" onClick={showImage}>
                     <span className="material-icons cursor-pointer">&#xe5cd;</span>
                 </button>
-                <Image loader={imageLoader} src={project.image} layout='fill'/>
             </div>}
         </>
     )
