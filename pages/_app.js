@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps, router }) {
       }}
       transition={{ type: 'linear' }}
       >
+         
       <Layout> 
         <Component {...pageProps} />
       </Layout>

@@ -15,6 +15,18 @@
     @apply bg-blue-500 text-black;
 }
 
+body::-webkit-scrollbar {
+    width: .5em;
+}
+   
+body::-webkit-scrollbar-track {
+    background-color: #333A47;
+}
+ 
+body::-webkit-scrollbar-thumb { 
+    background-color: #FF944E;
+}
+
 .print .project{
     break-inside: avoid;
     page-break-inside: avoid; 

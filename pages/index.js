@@ -13,6 +13,7 @@ export default function Home() {
   }
   return (
    <>
+   
     <Header title="I am Antonija" subtitle="A freelance front-end developer" />
 
     <section>
