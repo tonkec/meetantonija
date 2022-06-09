@@ -9,7 +9,7 @@ export default function CV(props){
     const onSearch = (e) => {
         const filteredProject = projects.filter((project) => {
             if (e.target.value.trim() !== "") {
-                const nameOfTheClient = project.title.toLowerCase().startsWith(e.target.value.toLowerCase()) || project.hashtags.filter((hastag) => hastag.toLowerCase().startsWith(e.target.value))[0]
+                const nameOfTheClient = project.title.toLowerCase().startsWith(e.target.value.toLowerCase()) || project.hashtags.filter((hastag) => hastag.toLowerCase().startsWith(e.target.value.toLowerCase()))[0]
                 return nameOfTheClient;
             } 
         })
