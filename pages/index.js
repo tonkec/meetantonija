@@ -17,20 +17,20 @@ export default function Home() {
 
     <section>
       <div className="grid lg:grid-cols-2 w-full">
-        <div className="bg-secondary px-10 lg:px-0 lg:pb-[200px] pb-[100px] pt-[100px] lg:text-center">
+        <div className="bg-secondary px-10 lg:px-0 lg:pb-[200px] pb-[100px] pt-[100px] md:text-center">
           <h2 className={`${heading2} text-white font-bold`}>Who am I?</h2>
-          <p className={`${paragraph} text-white max-w-md mx-auto text-left font-light mt-12`}>I am a freelance front end developer based in Zagreb who has huge crash on design and CSS. I work mostly remotely with clients from all over the world. </p>
+          <p className={`${paragraph} text-white max-w-md md:mx-auto text-left font-light mt-12`}>I am a freelance front end developer based in Zagreb who has huge crash on design and CSS. I work mostly remotely with clients from all over the world. </p>
         </div>
 
-        <div className="bg-white px-10 lg:px-0 lg:pb-[200px] pt-[100px] lg:text-center">
+        <div className="bg-white px-10 lg:px-0 lg:pb-[200px] pt-[100px] md:text-center">
           <h2 className={`${heading2} text-secondary font-bold`}>What do I do?</h2>
-          <p className={`${paragraph} text-secondary max-w-md mx-auto text-left font-light mt-12`}>I code web applications using React.js, Next.js and all mighty CSS.</p>
+          <p className={`${paragraph} text-secondary max-w-md md:mx-auto text-left font-light mt-12`}>I code web applications using React.js, Next.js and all mighty CSS.</p>
         </div>
       </div>
     </section>
 
 
-    <section className="bg-white py-20 px-20">
+    <section className="bg-white py-20 px-6 md:px-20">
       <h2 className={`${heading3} text-secondary font-bold text-center`}>I am social.</h2>
       <p className={`${paragraph} text-center text-secondary mt-10`}>
         <a href="https://www.linkedin.com/in/antonija-simic/" target="_blank" className="px-4 text-secondary underline">Linkedin</a>  
