@@ -4,6 +4,7 @@ import {useState} from "react";
 import Image from "next/image";
 import Link from "next/link"
 import { useRouter } from 'next/router'
+const imageLoader = require("./../../loader.js");
 
 function Project(props) {
     const [isImageShown, setIsImageShown] = useState(false);
@@ -38,7 +39,7 @@ function Project(props) {
             <section className={`${project.image ? "bg-transparent" : "bg-ternary"}`}>
                 <div className="flex w-full flex-wrap lg:flex-nowrap">
                     {project.image && <div className="lg:w-4/12 px-20 py-20 bg-primary cursor-pointer flex items-center justify-center">
-                       <Image src="/image.webp" width={200} height={200} onClick={showImage}/>
+                       <Image loader={imageLoader} src="/image.webp" width={200} height={200} onClick={showImage}/>
                     </div>}
 
                     <div className={`${project.image ? "lg:w-8/12 px-20" : "w-6/12 mx-auto"} py-20 bg-ternary`}>
@@ -66,7 +67,7 @@ function Project(props) {
                 <button className="text-black absolute top-4 left-4 z-40" onClick={showImage}>
                     <span className="material-icons cursor-pointer">&#xe5cd;</span>
                 </button>
-                <Image src={project.image} layout='fill'/>
+                <Image loader={imageLoader} src={project.image} layout='fill'/>
             </div>}
         </>
     )

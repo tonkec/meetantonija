@@ -1,7 +1,5 @@
-module.exports = {
-
+module.exports = ({
     images: {
-        loader: 'akamai',
-        path: '',
-    },
-  }
+        loader: "custom"
+    }
+});

@@ -108,11 +108,13 @@ export default function CV(props){
 
 import fsPromises from 'fs/promises';
 import path from 'path'
-export async function getServerSideProps(context) {
+export async function getStaticProps({ params }) {
     const filePath = path.join(process.cwd(), 'data/cv.json');
     const jsonData = await fsPromises.readFile(filePath);
     const objectData = JSON.parse(jsonData);
     return {
-      props: objectData
+      props: {
+          projects: objectData.projects
+      }
     }
 }

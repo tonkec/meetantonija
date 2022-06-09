@@ -2,6 +2,7 @@ import Header from "../components/Header"
 import { paragraph } from "../utils/typography"
 import Image from "next/image";
 import {useState} from "react";
+const imageLoader = require("./../loader.js");
 export default function About(){
     const [isImageShown, setIsImageShown] = useState(false);
     const showImage = () => {
@@ -23,7 +24,7 @@ export default function About(){
                     </div>
 
                     <div className="w-full lg:w-4/12 px-20 py-20 bg-secondary cursor-pointer flex items-center lg:justify-center">
-                       <Image src="/image.webp" width={200} height={200} onClick={showImage}/>
+                       <Image loader={imageLoader} src="/image.webp" width={200} height={200} onClick={showImage}/>
                     </div>
                 </div>
             </section>
@@ -32,7 +33,7 @@ export default function About(){
                 <button className="text-black absolute top-4 left-4 z-40" onClick={showImage}>
                     <span className="material-icons cursor-pointer">&#xe5cd;</span>
                 </button>
-                <Image src="/antonija.jpg" layout='fill'/>
+                <Image loader={imageLoader} src="/antonija.jpg" layout='fill'/>
             </div>}
         </>
     )

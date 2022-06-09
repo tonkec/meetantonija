@@ -37,7 +37,7 @@ export default function Contact(){
             <Header title="Let's talk" subtitle="What is on your mind?" />     
 
              <section className="bg-gray py-20 text-center">
-                <h1 className={`${heading3} mb-10`}>Send me a message</h1>
+                <h1 className={`${heading3} font-bold mb-10`}>Send me a message</h1>
                 <form id="form" method="post" onSubmit={onSubmitForm} className="w-8/12 md:w-6/12 mx-auto">
                     <input
                         type="text"

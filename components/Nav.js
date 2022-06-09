@@ -24,6 +24,13 @@ export default function Nav() {
     } else {
         document.body.className = "overflow-auto";
     }
+
+    document.addEventListener('keydown', (e) => {
+        e.key === 'Escape' && setNav(!isNavShown)
+    })
+    return () => {
+        document.removeEventListener('keydown', (e) => e)
+    }
    }, [isNavShown])
 
    const toggleNav = () => {
