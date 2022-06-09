@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps, router }) {
         const nameOfTheClient = project.title.toLowerCase().startsWith(e.target.value.trim().toLowerCase())
         return nameOfTheClient;
       } 
-  })
+    })
  
     setFilteredProjects(filteredProject);
     if (e.target.value.trim() === "") {
