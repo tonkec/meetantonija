@@ -29,3 +29,24 @@
 .print .project h4{
     margin-top: 20px;
 }
+
+@media print {
+    .project{
+        break-inside: avoid;
+        page-break-inside: avoid; 
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+    
+    .hashtags{
+       display: none;
+    }
+    
+    .project h4{
+        margin-top: 20px;
+    }
+
+    .print-hidden {
+        display: none;
+    }
+}

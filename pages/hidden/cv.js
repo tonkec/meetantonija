@@ -32,8 +32,8 @@ export default function CV(props){
 
     return <div>
         <Header title="Antonija's CV" subtitle="Read more about my work" />
-        <button onClick={handlePrint} className="bg-primary px-6 py-4">Save page as PDF</button>
-        <section className="bg-gray">
+        <button onClick={handlePrint} className="bg-primary px-6 py-4 print-hidden">Save page as PDF (ctrl + p)</button>
+        <section className="bg-gray print-hidden">
             <input onChange={onSearch} className="bg-transparent text-white placeholder-white w-full py-4 md:py-10 px-4 lg:px-20 text-sm md:text-xl lg:text-4xl border-none focus:outline-none" type="search" placeholder="Search by the name of a client or technology" />
         </section>
         <section className="bg-ternary py-20 px-10 md:px-20" ref={componentRef} >
@@ -63,7 +63,7 @@ export default function CV(props){
             } ) : <div>Nothing to show</div>}
         </section>
 
-        <section className="bg-secondary text-white py-10 md:py-20 px-10 md:px-20">
+        <section className="bg-secondary text-white py-10 md:py-20 px-10 md:px-20 print-hidden">
             <h2 className={`${heading2}`}>Hobby projects</h2>
             <div>
                 <h4 className={`${heading4} underline mt-10 md:mt-20`}><a href="https://duga.app/" target="_blank">Duga</a></h4>
@@ -81,7 +81,7 @@ export default function CV(props){
             </div>
         </section>
 
-        <section className="bg-secondary text-white px-10 py-10 md:py-20 md:px-20">
+        <section className="bg-secondary text-white px-10 py-10 md:py-20 md:px-20 print-hidden">
             <h2 className={`${heading2}`}>Some other projects.</h2>
             <div>
                 <h4 className={`${heading4} underline mt-10 md:mt-20`}><a href="https://www.tintup.com/" target="_blank">TINT</a></h4>

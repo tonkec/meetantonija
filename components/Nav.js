@@ -76,7 +76,7 @@ export default function Nav() {
             </button>
             {navContent()}
       </div>}
-    <Headroom>
+    <Headroom className="print-hidden">
         <nav className="py-16 fixed lg:px-20 inset-0">
            <button className="bg-primary block py-2 px-6 absolute right-6" onClick={toggleNav}>
                 <span className="material-icons cursor-pointer text-4xl">&#xea61;</span>
