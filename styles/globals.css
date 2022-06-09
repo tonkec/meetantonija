@@ -14,3 +14,18 @@
 ::selection {
     @apply bg-blue-500 text-black;
 }
+
+.print .project{
+    break-inside: avoid;
+    page-break-inside: avoid; 
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.print .hashtags{
+   display: none;
+}
+
+.print .project h4{
+    margin-top: 20px;
+}
