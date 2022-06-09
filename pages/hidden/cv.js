@@ -62,7 +62,7 @@ export default function CV(props){
 
             <div className="pl-10 mt-10">
                 <ul className="list-disc">
-                    <li className="text-2xl">A landing page for dating app built with React</li>
+                    <li className="text-md md:text-2xl">A landing page for dating app built with React</li>
                 </ul>
 
                 <a href="https://www.duga.app/" className="underline mt-6 inline-block -ml-10">
@@ -80,7 +80,7 @@ export default function CV(props){
 
             <div className="pl-10 mt-10">
                 <ul className="list-disc">
-                    <li className="text-2xl">Turning designs into the Jekyll system</li>
+                    <li className="text-md md:text-2xl">Turning designs into the Jekyll system</li>
                 </ul>
 
                 <a href="https://antonijasimic.bitbucket.io/tintold/index.html" className="underline mt-6 inline-block -ml-10">
