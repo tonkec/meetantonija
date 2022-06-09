@@ -71,7 +71,7 @@ export default function Nav() {
         {isNavShown && <div className="fixed inset-0 bg-black z-max">
             <div className="bg-primary absolute left-2/4 right-0 top-0 bottom-0 hidden lg:block">
             </div>
-            <button className="bg-ternary block py-2 px-6 absolute right-10 top-16" onClick={toggleNav}>
+            <button className="bg-ternary block py-2 px-6 absolute right-6 xs:right-10 top-16" onClick={toggleNav}>
                 <span className="material-icons cursor-pointer text-4xl">&#xea61;</span>
             </button>
             {navContent()}
