@@ -29,11 +29,10 @@ export default function About(){
                 </div>
             </section>
 
-            {isImageShown && <div className="fixed w-11/12 md:w-8/12 lg:w-6/12 xl:w-5/12 h-[300px] md:h-[350px] top-2/4 left-2/4 flex justify-center items-center bg-neutral-50  -translate-y-1/2 -translate-x-1/2">
+            {isImageShown && <div className="fixed w-11/12 md:w-8/12 lg:w-6/12 xl:w-5/12 h-[300px] md:h-[350px] top-2/4 left-2/4 flex justify-center items-center bg-neutral-50  -translate-y-1/2 -translate-x-1/2 bg-center bg-no-repeat bg-contain" style={{backgroundImage: `url(/antonija.jpg)`}}>
                 <button className="text-black absolute top-4 left-4 z-40" onClick={showImage}>
                     <span className="material-icons cursor-pointer">&#xe5cd;</span>
                 </button>
-                <Image loader={imageLoader} src="/antonija.jpg" layout='fill'/>
             </div>}
         </>
     )
