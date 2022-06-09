@@ -46,8 +46,8 @@ export default function Home() {
       </Link>
     </section>
 
-    <section className="bg-ternary py-20 overflow-auto">
-      <h2 className={`${heading2} text-secondary font-bold lg:text-center ml-10 lg:ml-0 mb-20`}>Projects I am proud of.</h2>
+    <section className="bg-ternary py-20 px-4 sm:px-10 md:px-0 overflow-auto">
+      <h2 className={`${heading2} text-secondary font-bold text-center mb-20`}>Projects I am proud of.</h2>
       <div className="flex justify-center items-center mb-20">
         <button value="react" onClick={onButtonFilterClick} className="bg-gray py-2 px-10 inline-block hover:bg-primary font-bold text-2xl mr-2">React</button>
         <button value="angular" onClick={onButtonFilterClick} className="bg-gray py-2 px-10 inline-block hover:bg-primary font-bold text-2xl mr-2">Angular</button>
