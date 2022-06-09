@@ -42,6 +42,10 @@ body::-webkit-scrollbar-thumb {
     margin-top: 20px;
 }
 
+body {
+    cursor: none !important;
+}
+
 @media print {
     .project{
         break-inside: avoid;

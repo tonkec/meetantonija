@@ -3,8 +3,9 @@ import '../styles/globals.css'
 import { motion } from "framer-motion"
 import {useEffect, useState} from "react";
 import {projects} from "./../data/projects"
-import { heading4 } from "./../utils/typography"
-
+import Head from "next/head";
+import CustomCursor from 'custom-cursor-react';
+import 'custom-cursor-react/dist/index.css';
 function MyApp({ Component, pageProps, router }) {
   const [isSearchShown, setSearch] = useState(null);
   const [filteredProjects, setFilteredProjects] = useState(projects);
@@ -34,6 +35,21 @@ function MyApp({ Component, pageProps, router }) {
 
   return(
     <>
+     <CustomCursor
+      targets={['.link', '.your-css-selector']}
+      customClass='custom-cursor'
+      fill='#3b82f6'
+      smoothness={{
+        movement: 1,
+        scale: 1,
+        opacity: 1
+      }}
+      targetOpacity={1}
+      dimensions={150}
+/>
+    <Head>
+      <title>Meet antonija</title>
+    </Head>
     <motion.div
       style={{backgroundColor: "#050A30", position: "fixed", top: 0, left: 0, right: 0, bottom: 0, zIndex: 999}}
       key={router.route}
