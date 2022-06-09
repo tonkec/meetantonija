@@ -24,9 +24,9 @@ export default function CV(props){
     return <>
         <Header title="Antonija's CV" subtitle="Read more about my work" />
         <section className="bg-gray">
-            <input onChange={onSearch} className="bg-transparent text-white placeholder-white w-full py-10 px-20 text-4xl border-none focus:outline-none" type="search" placeholder="Search by the name of a client or technology" />
+            <input onChange={onSearch} className="bg-transparent text-white placeholder-white w-full py-4 md:py-10 px-4 lg:px-20 text-sm md:text-xl lg:text-4xl border-none focus:outline-none" type="search" placeholder="Search by the name of a client or technology" />
         </section>
-        <section className="bg-ternary py-20 px-20">
+        <section className="bg-ternary py-20 px-10 md:px-20">
             <h2 className={`${heading2}`}>Work history</h2>
 
             {filteredProjects.length > 0 ? filteredProjects.map((project) =>{
@@ -36,9 +36,9 @@ export default function CV(props){
                         <p className={`${paragraph}`}>{project.date}</p>
                     </div>
 
-                    <div className="pl-10 mt-10 mb-5">
+                    <div className="md:pl-10 pl-4 mt-6 md:mt-10 mb-5">
                         <ul className="list-disc">
-                            {project.tasks.map((task, i) => <li key={i} className="text-2xl">{task}</li>)}
+                            {project.tasks.map((task, i) => <li key={i} className="text-md md:text-2xl">{task}</li>)}
                         </ul>
                     </div>
 
@@ -47,16 +47,16 @@ export default function CV(props){
                     </div>
 
                     <Link href={`/projects/${project.route.toLowerCase()}`}>
-                        <a className="underline"> Read More</a>
+                        <a className="underline text-sm md:text-lg"> Read More</a>
                     </Link>
                 </div>
             } ) : <div>Nothing to show</div>}
         </section>
 
-        <section className="bg-secondary text-white py-20 px-20">
+        <section className="bg-secondary text-white py-10 md:py-20 px-10 md:px-20">
             <h2 className={`${heading2}`}>Hobby projects</h2>
             <div>
-                <h4 className={`${heading4} underline mt-20`}><a href="https://duga.app/" target="_blank">Duga</a></h4>
+                <h4 className={`${heading4} underline mt-10 md:mt-20`}><a href="https://duga.app/" target="_blank">Duga</a></h4>
                 <p className={`${paragraph}`}>2021</p>
             </div>
 
@@ -71,10 +71,10 @@ export default function CV(props){
             </div>
         </section>
 
-        <section className="bg-secondary text-white py-20 px-20">
+        <section className="bg-secondary text-white px-10 py-10 md:py-20 md:px-20">
             <h2 className={`${heading2}`}>Some other projects.</h2>
             <div>
-                <h4 className={`${heading4} underline mt-20`}><a href="https://www.tintup.com/" target="_blank">TINT</a></h4>
+                <h4 className={`${heading4} underline mt-10 md:mt-20`}><a href="https://www.tintup.com/" target="_blank">TINT</a></h4>
                 <p className={`${paragraph}`}>2016</p>
             </div>
 
@@ -89,7 +89,7 @@ export default function CV(props){
             </div>
 
             <div>
-                <h4 className={`${heading4} underline mt-20`}><a href="https://www.tintup.com/" target="_blank">TINT2</a></h4>
+                <h4 className={`${heading4} underline mt-10 md:mt-20`}><a href="https://www.tintup.com/" target="_blank">TINT2</a></h4>
                 <p className={`${paragraph}`}>2016</p>
             </div>
 

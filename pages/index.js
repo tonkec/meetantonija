@@ -17,7 +17,7 @@ export default function Home() {
 
     <section>
       <div className="grid lg:grid-cols-2 w-full">
-        <div className="bg-secondary px-10 lg:px-0 lg:pb-[200px] pb-[100px] pt-[100px] lg:file:text-center">
+        <div className="bg-secondary px-10 lg:px-0 lg:pb-[200px] pb-[100px] pt-[100px] lg:text-center">
           <h2 className={`${heading2} text-white font-bold`}>Who am I?</h2>
           <p className={`${paragraph} text-white max-w-md mx-auto text-left font-light mt-12`}>I am a freelance front end developer based in Zagreb who has huge crash on design and CSS. I work mostly remotely with clients from all over the world. </p>
         </div>
