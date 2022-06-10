@@ -3,6 +3,7 @@ import '../styles/globals.css'
 import { motion } from "framer-motion"
 import {useEffect, useState} from "react";
 import {projects} from "./../data/projects"
+import { heading4 } from '../utils/typography';
 import Head from "next/head";
 import CustomCursor from 'custom-cursor-react';
 import 'custom-cursor-react/dist/index.css';
