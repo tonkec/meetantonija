@@ -1,9 +1,12 @@
 import Link from 'next/link';
 import Header from "./../../components/Header"
-
+import Head from "next/head";
 export default function Tag(props){
     const { projects } = props; 
     return <>
+     <Head>
+        <title>Antonija's tags</title>
+    </Head>
     <Header title="Tags" />
     <section className='bg-gray py-20'>
         {projects.map((project, i) => <div key={i} className='px-6 py-2'>

@@ -4,6 +4,7 @@ import {useState} from "react";
 import Image from "next/image";
 import Link from "next/link"
 import { useRouter } from 'next/router'
+import Head from "next/head"
 const imageLoader = require("./../../loader.js");
 
 function Project(props) {
@@ -26,6 +27,9 @@ function Project(props) {
     }
     return (
         <>
+            <Head>
+             <title>Projects | {project.title}</title>
+            </Head>
             <Header title={project.title} subtitle={project.subtitle} link={project.link} />
 
             <section className="bg-secondary py-20">

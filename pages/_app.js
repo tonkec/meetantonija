@@ -48,9 +48,6 @@ function MyApp({ Component, pageProps, router }) {
       targetOpacity={1}
       dimensions={150}
 />
-    <Head>
-      <title>Meet antonija</title>
-    </Head>
     <motion.div
       style={{backgroundColor: "#050A30", position: "fixed", top: 0, left: 0, right: 0, bottom: 0, zIndex: 999}}
       key={router.route}

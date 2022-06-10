@@ -4,6 +4,7 @@ import Link from "next/link"
 import {useState} from "react";
 const button = "bg-secondary text-white py-4 px-10 text-2xl";
 import {projects} from "./../data/projects"
+import Head from "next/head"
 
 export default function Home() {
   let [projectsShown, setProjects] = useState(projects)
@@ -13,7 +14,9 @@ export default function Home() {
   }
   return (
    <>
-   
+    <Head>
+      <title>I am Antonija</title>
+    </Head>
     <Header title="I am Antonija" subtitle="A freelance front-end developer" />
 
     <section>

@@ -2,6 +2,7 @@ import Header from "../components/Header"
 import * as emailjs from "emailjs-com";
 import {heading3} from "./../utils/typography"
 import {useState, useEffect, useRef} from "react"
+import Head from "next/head";
 const input = "block bg-white text-black w-full px-6 py-4 text-xl mb-4";
 export default function Contact(){
     const [messageText, setMessage] = useState(null);
@@ -34,6 +35,9 @@ export default function Contact(){
       };
     return (
         <>
+            <Head>
+                <title>Send me a message!</title>
+            </Head>
             <Header title="Let's talk" subtitle="What is on your mind?" />     
 
              <section className="bg-gray py-20 text-center">

@@ -2,6 +2,7 @@ import Header from "../components/Header"
 import { paragraph } from "../utils/typography"
 import Image from "next/image";
 import {useState} from "react";
+import Head from 'next/head';
 const imageLoader = require("./../loader.js");
 export default function About(){
     const [isImageShown, setIsImageShown] = useState(false);
@@ -10,6 +11,9 @@ export default function About(){
     }
     return (
         <>
+            <Head>
+             <title>About Antonija</title>
+            </Head>
             <Header title="About me" subtitle="My name is Antonija Šimić" />
             <section>
                 <div className="flex flex-wrap lg:flex-nowrap w-full">

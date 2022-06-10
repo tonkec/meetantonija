@@ -3,7 +3,7 @@ import { paragraph, heading2, heading4, heading5 } from "../../utils/typography"
 import Link from "next/link"
 import {useState, useRef} from "react";
 import { useReactToPrint } from 'react-to-print';
-
+import Head from "next/head";
 export default function CV(props){
     const {projects} = props;
     const [filteredProjects, setFilteredProjects] = useState(projects)
@@ -31,6 +31,9 @@ export default function CV(props){
     });
 
     return <div>
+        <Head>
+            <title>Antonija's CV</title>
+        </Head>
         <Header title="Antonija's CV" subtitle="Read more about my work" />
         <button onClick={handlePrint} className="bg-primary px-6 py-4 print-hidden">Save page as PDF (ctrl + p)</button>
         <section className="bg-gray print-hidden">
