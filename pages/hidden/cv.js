@@ -33,6 +33,7 @@ export default function CV(props){
     return <div>
         <Head>
             <title>Antonija's CV</title>
+            <meta name="robots" content="noindex" />
         </Head>
         <Header title="Antonija's CV" subtitle="Read more about my work" />
         <button onClick={handlePrint} className="bg-primary px-6 py-4 print-hidden">Save page as PDF (ctrl + p)</button>
