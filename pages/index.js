@@ -50,15 +50,14 @@ export default function Home() {
       </Link>
     </section>
 
-    <section className="bg-ternary py-20 px-4 sm:px-10 md:px-0 overflow-auto">
+    <section className="bg-ternary py-20 px-4 sm:px-10 md:px-0 overflow-hidden">
       <h2 className={`${heading2} text-secondary font-bold text-center mb-20`}>Projects I am proud of.</h2>
       <div className="flex justify-center items-center mb-20">
         <button value="react" onClick={onButtonFilterClick} className="bg-gray py-2 px-10 inline-block hover:bg-primary font-bold text-2xl mr-2">React</button>
         <button value="angular" onClick={onButtonFilterClick} className="bg-gray py-2 px-10 inline-block hover:bg-primary font-bold text-2xl mr-2">Angular</button>
-
       </div>
       {projectsShown.map((project, i) => {
-        return <div key={`${project.title}`} className={`${i % 2 === 0 ? "lg:float-left": "lg:float-right"} bg-secondary px-20 py-6 md:w-2/4 clear-both mb-20 hover:bg-primary`}>
+        return <div key={`${project.title}`} className={`${i % 2 === 0 ? "lg:float-left -translate-x-10 hover:translate-x-0": "lg:float-right translate-x-10 hover:translate-x-0"} transition-transform duration-200 bg-secondary px-20 py-6 md:w-2/4 clear-both mb-20 hover:bg-primary `}>
           <Link href={`/projects/${project.title.toLowerCase()}`}>
             <a>
               <h1 className={`${heading3} text-left text-white leading-normal font-bold`}>{project.title}</h1>
