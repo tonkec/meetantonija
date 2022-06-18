@@ -4,7 +4,6 @@ import { motion } from "framer-motion"
 import {useEffect, useState} from "react";
 import {projects} from "./../data/projects"
 import { heading4 } from '../utils/typography';
-import Head from "next/head";
 import CustomCursor from 'custom-cursor-react';
 import 'custom-cursor-react/dist/index.css';
 function MyApp({ Component, pageProps, router }) {
@@ -57,7 +56,6 @@ function MyApp({ Component, pageProps, router }) {
     >
     </motion.div>
       <Layout> 
-        <div className='px-20 absolute mt-20 bg-white text-black'>ESC, ctrl+f</div>
         {isSearchShown && <section className='bg-ternary fixed inset-0 z-max'>
          <input autoFocus onChange={onSearch} className="bg-white text-black placeholder-black w-full py-4 md:py-10 px-10 text-2xl lg:text-4xl focus:outline-none" type="search" placeholder="Search by the name of a client" />
          {filteredProjects.length > 0 ? filteredProjects.map((project) =>{
