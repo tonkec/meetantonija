@@ -1,7 +1,7 @@
 import Header from "./../components/Header";
 import { heading2, heading3, heading4, heading5, paragraph } from "../utils/typography"
 import Link from "next/link"
-import {useState} from "react";
+import {useState, useEffect} from "react";
 const button = "bg-secondary text-white py-4 px-10 text-2xl";
 import {projects} from "./../data/projects"
 import Head from "next/head"
@@ -20,7 +20,6 @@ export default function Home() {
     </Head>
     <Hand />
     <Header title="I am Antonija" subtitle="A freelance front-end developer" />
-
     <section>
       <div className="grid lg:grid-cols-2 w-full">
         <div className="bg-secondary px-10 lg:px-0 lg:pb-[200px] pb-[100px] pt-[100px] md:text-center">

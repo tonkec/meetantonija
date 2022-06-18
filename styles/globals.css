@@ -27,6 +27,17 @@ body::-webkit-scrollbar-thumb {
     background-color: #FF944E;
 }
 
+.up {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='72' viewport='0 0 100 100' style='fill:black;font-size:36px;'><text y='50%'>☝️</text></svg>")
+      16 0, auto;
+}
+
+.down {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='72' viewport='0 0 100 100' style='fill:black;font-size:36px;'><text y='50%'>👇</text></svg>")
+    16 0, auto;
+}
+
+
 .print .project{
     break-inside: avoid;
     page-break-inside: avoid; 
@@ -40,10 +51,6 @@ body::-webkit-scrollbar-thumb {
 
 .print .project h4{
     margin-top: 20px;
-}
-
-body {
-    cursor: none !important;
 }
 
 .wave {

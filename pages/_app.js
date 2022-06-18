@@ -4,9 +4,13 @@ import { motion } from "framer-motion"
 import {useEffect, useState} from "react";
 import {projects} from "./../data/projects"
 import { heading4 } from '../utils/typography';
-import CustomCursor from 'custom-cursor-react';
-import 'custom-cursor-react/dist/index.css';
+import { useScrollDirection } from 'react-use-scroll-direction'
+
 function MyApp({ Component, pageProps, router }) {
+  const { 
+    isScrollingUp, 
+    isScrollingDown,
+  } = useScrollDirection()
   const [isSearchShown, setSearch] = useState(null);
   const [filteredProjects, setFilteredProjects] = useState(projects);
   useEffect(() => {
@@ -15,9 +19,21 @@ function MyApp({ Component, pageProps, router }) {
         setSearch(!isSearchShown)
       }
     })
+    if (isScrollingDown) {
+      setBodyClass("down")
+    }
+
+    if (isScrollingUp) {
+      setBodyClass("up")
+    }
+
     return document.removeEventListener("keydown", (e) => e);
   })
 
+  const setBodyClass = (className) => {
+    document.body.removeAttribute("class");
+    document.body.classList.add(`${className}`);
+  }
   const onSearch = (e) => {
     const filteredProject = projects.filter((project) => {
       if (e.target.value.trim() !== "") {
@@ -35,18 +51,6 @@ function MyApp({ Component, pageProps, router }) {
 
   return(
     <>
-     <CustomCursor
-      targets={['.link', '.your-css-selector']}
-      customClass='custom-cursor'
-      fill='#3b82f6'
-      smoothness={{
-        movement: 1,
-        scale: 1,
-        opacity: 1
-      }}
-      targetOpacity={1}
-      dimensions={150}
-/>
     <motion.div
       style={{backgroundColor: "#050A30", position: "fixed", top: 0, left: 0, right: 0, bottom: 0, zIndex: 999}}
       key={router.route}
