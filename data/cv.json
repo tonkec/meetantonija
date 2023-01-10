@@ -26,19 +26,6 @@
       "hashtags": ["mentoring"]
     },
     {
-      "title": "Human",
-      "date": "Dec 2021 - March 2022",
-      "tasks": [
-        "Working with React.js and Storybook",
-        "Delivering pixel perfect layout",
-        "Transforming figma design into React and Stencil.js arhitecture",
-        "Developing abstract reusable components"
-      ],
-      "link": "https://www.humaninteraction.com/",
-      "route": "span",
-      "hashtags": ["react", "storybook"]
-    },
-    {
       "title": "Oslo Philanthropic Exchange",
       "date": "Apr 2021 - Sep 2021",
       "tasks": [

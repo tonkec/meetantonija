@@ -6,12 +6,6 @@ export const projects = [
     stack: "react",
   },
   {
-    title: "Span",
-    subtitle: "A landing page built with storybook and Stencil.js.",
-    href: "span",
-    stack: "react",
-  },
-  {
     title: "OPX",
     subtitle:
       "An application that connects NGOs and their potential donors built with Angular.",

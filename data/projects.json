@@ -9,7 +9,8 @@
       "description": "An online casino built with great care for their customers.",
       "roleTitle": "Senior React.js developer",
       "role": [
-        "My role was to handle multiple small bugs in authorization and authentication as well as migrating knockout.js app to React. The architecture is really complex and it required seniorty level of knowledge."
+        "My role was to handle multiple small bugs in authorization and authentication as well as migrating knockout.js app to React. The architecture is really complex and it required seniorty level of knowledge. We were using some services like Contentful, Cloudflare and Keycloak. I was part of the scrum ceremonies.",
+        "One of the latest task was to enable US players to see the correct error message. Since US players are not allowed to use this app, they were supposed the see the error message customized for them. They were getting general error, instead of US error message. My task was to detect location of the player and then display the correct error message."
       ],
       "image": "",
       "hashtags": ["react"]
@@ -23,25 +24,12 @@
       "description": "A landing page built with tailwind and next.js",
       "roleTitle": "Next.js developer",
       "role": [
-        "My main task was to create impressive landing page that will attract students to sign up for courses."
+        "My main task was to create impressive landing page that will attract students to sign up for courses. Kodiraonica requires many tasks that are not so much related to coding. It requires leadership, mentoring, marketing, customer service and great communication skills. The hardest part was marketing, since competititon was strong it was hard to get students to sign up for the courses. Luckily, with great help of our marketing department, we managed to get a few students.",
+        "Leadership skills include managing and distrubting tasks to other developers, helping them understand priorities. I had to make a decision about content, design and architecture of our stack. We decided to use Next.js since it provides a nice apified back end."
       ],
       "image": "",
       "hidden": true,
       "hashtags": ["mentoring"]
-    },
-    {
-      "title": "Span",
-      "subtitle": "2021 - Human - Stencil.js",
-      "href": "span",
-      "stack": "react",
-      "link": "https://www.span.eu/",
-      "description": "A landing page built with web components on top of storybook and Stencil.js",
-      "roleTitle": "Stencil developer",
-      "role": [
-        "My main task was to deliver responsive abstract and reusable components. I was turning figma designs into components. Some of the components I built are sliders, footer, navigation."
-      ],
-      "image": "",
-      "hashtags": ["react", "storybook"]
     },
     {
       "hashtags": ["angular", "css"],
