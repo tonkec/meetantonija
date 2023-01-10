@@ -96,6 +96,18 @@
       "hashtags": ["react_native", "react"]
     },
     {
+      "title": "Freelancing",
+      "date": "Jul 2015 - Dec 2017",
+      "tasks": [
+        "In between these years I developed many static websites using Scss and HTML. ",
+        "I worked mostly by freelancing, working with international clients",
+        "These are the years that made me think more about my career and inspired me to evenutally move on to React."
+      ],
+      "link": "",
+      "route": "",
+      "hashtags": ["scss", "css", "gulp", "webpack"]
+    },
+    {
       "title": "Super super studio",
       "date": "Jan 2015 - Jul 2015",
       "tasks": [
