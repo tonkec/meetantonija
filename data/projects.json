@@ -1,6 +1,22 @@
 {
   "projects": [
     {
+      "title": "Freelancing",
+      "subtitle": "2016 - Freelancing - HTML&CSS",
+      "href": "freelancing",
+      "stack": "html",
+      "link": "https://antonijasimic.bitbucket.io/tintold/index.html",
+      "description": "These are several different apps",
+      "roleTitle": "UI developer",
+      "role": [
+        "The majority of my tasks was the implementation of UX/UI changes into different application architectures: Rails, Angular, React, React Native and Django. I was turning designes from Zepplin and Photoshop into the real application. I was either given existing code base or had to start from scratch. Clean code, reusability and object-oriented principles were mandatory. The automatization with Gulp and Webpack made my workflow faster. Browserstack helped me test remotely while browsersync helped me test locally.",
+        "Working with clients from all over the world taught me that communication is an important part of software development, I have been using mostly Slack and Trello for communication. Creating tickets for issues on Github helped me track important bugs and helped me find elegant solutions for complex problems.",
+        "I have worked with the following startups and agencies from all over the world: TINT, Ipquest, RetailZipline, Poviolabs, Kwikdroid, Swapportunity, LocalForge"
+      ],
+      "image": "",
+      "hashtags": ["freelancing"]
+    },
+    {
       "title": "Casumo",
       "subtitle": "2022 - Casumo - React.js",
       "href": "casumo",
