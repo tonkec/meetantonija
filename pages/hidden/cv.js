@@ -47,18 +47,13 @@ export default function CV(props) {
         <title>Antonija's CV</title>
       </Head>
       <Header title="Antonija's CV" subtitle="Read more about my work" />
-      <button
-        onClick={handlePrint}
-        className="bg-primary px-6 py-4 print-hidden"
-      >
-        Save page as PDF (ctrl + p)
-      </button>
       <section className="bg-gray print-hidden">
         <input
           onChange={onSearch}
-          className="bg-transparent text-white placeholder-white w-full py-4 md:py-10 px-4 lg:px-20 text-sm md:text-xl lg:text-4xl border-none focus:outline-none"
+          className="bg-slate-100 text-black placeholder-slate-500 w-full py-4 md:py-6 px-4 lg:px-20 text-sm md:text-xl lg:text-2xl focus:outline-none"
           type="search"
-          placeholder="Search by the name of a client or technology"
+          placeholder="Type here: search by client's name or technology"
+          autoFocus
         />
       </section>
       <section className="bg-ternary py-20 px-10 md:px-20" ref={componentRef}>
@@ -108,6 +103,12 @@ export default function CV(props) {
         ) : (
           <div>Nothing to show</div>
         )}
+        <button
+          onClick={handlePrint}
+          className="bg-primary px-6 py-4 print-hidden mt-12"
+        >
+          Save page as PDF (cmd + p)
+        </button>
       </section>
     </div>
   );
