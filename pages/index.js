@@ -151,6 +151,15 @@ export default function Home() {
         })}
       </section>
 
+      <section className="bg-secondary py-20 px-4 sm:px-10 md:px-0 overflow-hidden text-center">
+        <a
+          href="/code"
+          className={`${heading3} text-center font-bold text-ternary underline`}
+        >
+          Check out my code
+        </a>
+      </section>
+
       <section className="bg-primary py-20">
         <div className="flex items-center justify-center flex-wrap w-8/12 lg:w-6/12 mx-auto">
           <h2 className={`${heading2} text-center font-bold`}>Kodiraonica</h2>
