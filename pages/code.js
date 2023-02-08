@@ -20,20 +20,20 @@ const Code = () => {
       <Header title="My code" subtitle="Source code of my projects" />
 
       <section>
-        <div className="bg-secondary px-10 lg:px-0 lg:pb-[200px] pb-[100px] pt-[100px] md:text-center">
-          <h2 className={`${heading2} text-white font-bold`}>
+        <div className="bg-secondary sm:px-10 lg:px-0 lg:pb-[200px] pb-[100px] pt-[100px] md:text-center">
+          <h2 className={`${heading2} px-10 sm:px-0 text-white font-bold`}>
             Have you seen my codepen?
           </h2>
 
           <p
-            className={`${paragraph} text-white max-w-lg mx-auto text-left font-light mt-12 mb-24`}
+            className={`${paragraph} px-10 sm:px-0 text-white max-w-lg mx-auto text-left font-light mt-12 mb-24`}
           >
             In my free time I like to create CSS art. I find inspiration in the
             world around me. I learned a lot about CSS coding these small
             projects. They are mostly coded by Scss, actually.
           </p>
 
-          <div className="grid lg:grid-cols-2 gap-4 w-full px-20">
+          <div className="grid lg:grid-cols-2 gap-4 w-full md:px-20">
             <Iframe
               url="https://codepen.io/tonkec/embed/zYLbVXV?default-tab=result"
               width="100%"
