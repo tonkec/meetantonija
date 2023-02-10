@@ -150,3 +150,27 @@ html {
   background: #333a47;
   border-radius: 100%;
 }
+
+.casumo {
+  background-image: url("../public/casumo_black.png");
+}
+
+.casumo:hover {
+  background-image: url("../public/casumo.png");
+}
+
+.formunauts {
+  background-image: url("../public/formunauts_logo_black.png");
+}
+
+.formunauts:hover {
+  background-image: url("../public/formunauts_logo.png");
+}
+
+.revuto {
+  background-image: url("../public/revuto_black.png");
+}
+
+.revuto:hover {
+  background-image: url("../public/revuto.jpg");
+}

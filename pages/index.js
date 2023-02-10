@@ -7,7 +7,6 @@ import {
   paragraph,
 } from "../utils/typography";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 const button = "bg-secondary text-white py-4 px-10 text-2xl";
 import { projects } from "./../data/projects";
 import Head from "next/head";
@@ -15,13 +14,6 @@ import Hand from "./../components/Hand";
 import Layout from "../components/Layout";
 
 export default function Home() {
-  let [projectsShown, setProjects] = useState(projects);
-  const onButtonFilterClick = (e) => {
-    const filteredProjects = projects.filter(
-      (project) => e.target.value === project.stack
-    );
-    setProjects(filteredProjects);
-  };
   return (
     <Layout>
       <Head>
@@ -105,59 +97,61 @@ export default function Home() {
         <h2
           className={`${heading2} text-secondary font-bold text-center mb-20`}
         >
-          Projects I am proud of.
+          Something I have worked on.
         </h2>
-        <div className="flex justify-center items-center mb-20">
-          <button
-            value="react"
-            onClick={onButtonFilterClick}
-            className="bg-gray py-2 px-10 inline-block hover:bg-primary font-bold text-2xl mr-2"
-          >
-            React
-          </button>
-          <button
-            value="angular"
-            onClick={onButtonFilterClick}
-            className="bg-gray py-2 px-10 inline-block hover:bg-primary font-bold text-2xl mr-2"
-          >
-            Angular
-          </button>
-        </div>
-        {projectsShown.map((project, i) => {
-          return (
-            <div
-              key={`${project.title}`}
-              className={`${
-                i % 2 === 0
-                  ? "lg:float-left -translate-x-10 hover:translate-x-0"
-                  : "lg:float-right translate-x-10 hover:translate-x-0"
-              } transition-transform duration-200 bg-secondary px-20 py-6 md:w-2/4 clear-both mb-20 hover:bg-primary `}
-            >
-              <Link href={`/projects/${project.title.toLowerCase()}`}>
-                <a>
-                  <h1
-                    className={`${heading3} text-left text-white leading-normal font-bold`}
-                  >
-                    {project.title}
-                  </h1>
-                  <h4
-                    className={`${heading5} text-left text-white font-light mt-0`}
-                  >
-                    {project.subtitle}
-                  </h4>
-                </a>
-              </Link>
-            </div>
-          );
-        })}
+
+        <a
+          href="/projects/casumo"
+          className="mb-24 block casumo layer relative bg-center md:bg-right bg-no-repeat bg-cover md:w-2/3 md:mx-auto lg:mx-0 lg:w-2/4 h-[300px] hover:top-[2px]"
+        >
+          <div className="bg-secondary px-10 py-6 lg:absolute lg:top-[120px] -translate-y-1/2 -right-1/2">
+            <h2 className={`${heading4} text-primary`}>Casumo</h2>
+            <p className={`${paragraph} text-white`}>
+              An online casino based in Malta. <br />
+              <small className="">
+                graphql, react, knockout, cloudflare, contentful
+              </small>
+            </p>
+          </div>
+        </a>
+
+        <a
+          href="/projects/formunauts"
+          className="mb-24 block formunauts layer relative bg-center lg:bg-left bg-no-repeat bg-cover md:w-2/3 md:mx-auto lg:mx-0 lg:left-2/4 lg:w-2/4 h-[300px] hover:top-[2px]"
+        >
+          <div className="bg-secondary px-10 py-6 lg:absolute top-[120px] -translate-y-1/2 -left-1/2">
+            <h2 className={`${heading4} text-primary`}>Formunauts</h2>
+            <p className={`${paragraph} text-white`}>
+              An on-street fundraising platform
+              <br />
+              <small className="">angular, rxjs, 3rd party APIs</small>
+            </p>
+          </div>
+        </a>
+
+        <a
+          href="/projects/revuto"
+          className="mb-24 block revuto layer relative bg-center lg:bg-left bg-no-repeat bg-cover md:w-2/3 md:mx-auto lg:mx-0 lg:w-2/4 h-[300px] hover:top-[2px]"
+        >
+          <div className="bg-secondary px-10 py-6 lg:absolute top-[120px] -translate-y-1/2 -right-1/2">
+            <h2 className={`${heading4} text-primary`}>Revuto</h2>
+            <p className={`${paragraph} text-white`}>
+              An app for collecting cryptocurrency. <br />
+              <small className="">react, context api</small>
+            </p>
+          </div>
+        </a>
       </section>
 
       <section className="bg-secondary py-20 px-4 sm:px-10 md:px-0 overflow-hidden text-center">
+        <h3 className={`${heading2} text-white mb-2`}>
+          Interested in how I code?
+        </h3>
         <a
           href="/code"
-          className={`${heading3} text-center font-bold text-ternary underline`}
+          className={`${paragraph} text-center font-bold text-ternary underline`}
         >
-          Check out my code
+          Take a looksie!
         </a>
       </section>
 
