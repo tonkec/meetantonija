@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import Layout from "../../components/Layout";
+
 const imageLoader = require("./../../loader.js");
 
 function Project(props) {
@@ -28,7 +30,7 @@ function Project(props) {
     router.push(project.image);
   };
   return (
-    <>
+    <Layout>
       <Head>
         <title>Projects | {project.title}</title>
       </Head>
@@ -122,7 +124,7 @@ function Project(props) {
           </button>
         </div>
       )}
-    </>
+    </Layout>
   );
 }
 

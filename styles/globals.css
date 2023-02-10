@@ -3,93 +3,150 @@
 @tailwind utilities;
 
 .headroom--pinned nav button,
-.headroom--unpinned nav button{
-    @apply bg-secondary  text-white;
+.headroom--unpinned nav button {
+  @apply bg-secondary  text-white;
 }
 
 .z-max {
-    z-index: 999;
+  z-index: 999;
 }
 
 ::selection {
-    @apply bg-blue-500 text-black;
+  @apply bg-blue-500 text-black;
 }
 
 body::-webkit-scrollbar {
-    width: .5em;
+  width: 0.5em;
 }
-   
+
 body::-webkit-scrollbar-track {
-    background-color: #333A47;
+  background-color: #333a47;
 }
- 
-body::-webkit-scrollbar-thumb { 
-    background-color: #FF944E;
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ff944e;
 }
 
 .up {
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='72' viewport='0 0 100 100' style='fill:black;font-size:36px;'><text y='50%'>☝️</text></svg>")
-      16 0, auto;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='72' viewport='0 0 100 100' style='fill:black;font-size:36px;'><text y='50%'>☝️</text></svg>")
+      16 0,
+    auto;
 }
 
 .down {
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='72' viewport='0 0 100 100' style='fill:black;font-size:36px;'><text y='50%'>👇</text></svg>")
-    16 0, auto;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='72' viewport='0 0 100 100' style='fill:black;font-size:36px;'><text y='50%'>👇</text></svg>")
+      16 0,
+    auto;
 }
 
-
-.print .project{
-    break-inside: avoid;
-    page-break-inside: avoid; 
-    margin-top: 20px;
-    padding-top: 20px;
+.print .project {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-top: 20px;
+  padding-top: 20px;
 }
 
-.print .hashtags{
-   display: none;
+.print .hashtags {
+  display: none;
 }
 
-.print .project h4{
-    margin-top: 20px;
+.print .project h4 {
+  margin-top: 20px;
 }
 
 .wave {
-    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-    animation-duration: 2.5s;        /* Change to speed up or slow down */
-    animation-iteration-count: 1;  /* Never stop waving :) */
-    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
-      display: inline-block;
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: 1; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
 }
-  
+
 @keyframes wave-animation {
-    0% { transform: rotate( 0.0deg) }
-    10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-    20% { transform: rotate(-8.0deg) }
-    30% { transform: rotate(14.0deg) }
-    40% { transform: rotate(-4.0deg) }
-    50% { transform: rotate(10.0deg) }
-    60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-    100% { transform: rotate( 0.0deg) }
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
 }
-  
 
 @media print {
-    .project{
-        break-inside: avoid;
-        page-break-inside: avoid; 
-        margin-top: 20px;
-        padding-top: 20px;
-    }
-    
-    .hashtags{
-       display: none;
-    }
-    
-    .project h4{
-        margin-top: 20px;
-    }
+  .project {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
 
-    .print-hidden {
-        display: none;
-    }
+  .hashtags {
+    display: none;
+  }
+
+  .project h4 {
+    margin-top: 20px;
+  }
+
+  .print-hidden {
+    display: none;
+  }
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.animationContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.animationContainer > div {
+  width: 150px;
+  height: 150px;
+  display: grid;
+  overflow: hidden;
+  margin: 0;
+  list-style: none;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+  padding: 15px;
+}
+
+.removeContainer {
+  display: none;
+}
+
+.item {
+  background: #333a47;
+  border-radius: 100%;
 }

@@ -9,6 +9,8 @@ import Link from "next/link";
 import { useState, useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 import Head from "next/head";
+import Layout from "../../components/Layout";
+
 export default function CV(props) {
   const { projects } = props;
   const [filteredProjects, setFilteredProjects] = useState(projects);
@@ -42,7 +44,7 @@ export default function CV(props) {
   });
 
   return (
-    <div>
+    <Layout>
       <Head>
         <title>Antonija's CV</title>
       </Head>
@@ -110,12 +112,13 @@ export default function CV(props) {
           Save page as PDF (cmd + p)
         </button>
       </section>
-    </div>
+    </Layout>
   );
 }
 
 import fsPromises from "fs/promises";
 import path from "path";
+import Layout from "../../components/Layout";
 export async function getStaticProps({ params }) {
   const filePath = path.join(process.cwd(), "data/cv.json");
   const jsonData = await fsPromises.readFile(filePath);

@@ -12,6 +12,7 @@ const button = "bg-secondary text-white py-4 px-10 text-2xl";
 import { projects } from "./../data/projects";
 import Head from "next/head";
 import Hand from "./../components/Hand";
+import Layout from "../components/Layout";
 
 export default function Home() {
   let [projectsShown, setProjects] = useState(projects);
@@ -22,7 +23,7 @@ export default function Home() {
     setProjects(filteredProjects);
   };
   return (
-    <>
+    <Layout>
       <Head>
         <title>I am Antonija</title>
       </Head>
@@ -178,6 +179,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-    </>
+    </Layout>
   );
 }

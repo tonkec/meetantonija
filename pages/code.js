@@ -9,11 +9,12 @@ import {
 } from "../utils/typography";
 import Iframe from "react-iframe";
 import Link from "next/link";
+import Layout from "../components/Layout";
 const button = "bg-secondary text-white py-4 px-10 text-2xl";
 
 const Code = () => {
   return (
-    <>
+    <Layout>
       <Head>
         <title>My code</title>
       </Head>
@@ -244,7 +245,7 @@ const Code = () => {
           <a className={`${button} mt-6 lg:mt-0`}>Contact me</a>
         </Link>
       </section>
-    </>
+    </Layout>
   );
 };
 

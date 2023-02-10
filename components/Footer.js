@@ -37,9 +37,6 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <div className="px-4 mt-6">
-        <p className="text-primary"> ctrl + F - ESC</p>
-      </div>
     </footer>
   );
 }
