@@ -118,7 +118,6 @@ export default function CV(props) {
 
 import fsPromises from "fs/promises";
 import path from "path";
-import Layout from "../../components/Layout";
 export async function getStaticProps({ params }) {
   const filePath = path.join(process.cwd(), "data/cv.json");
   const jsonData = await fsPromises.readFile(filePath);
