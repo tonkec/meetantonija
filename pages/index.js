@@ -102,7 +102,7 @@ export default function Home() {
 
         <a
           href="/projects/casumo"
-          className="mb-24 block casumo layer relative bg-center md:bg-right bg-no-repeat bg-cover md:w-2/3 md:mx-auto lg:mx-0 lg:w-2/4 h-[300px] hover:top-[2px]"
+          className="mb-24 block casumo layer relative bg-center md:bg-right bg-no-repeat bg-cover md:w-2/3 md:mx-auto lg:mx-0 lg:w-2/4 h-[300px]"
         >
           <div className="bg-secondary px-10 py-6 lg:absolute lg:top-[120px] -translate-y-1/2 -right-1/2">
             <h2 className={`${heading4} text-primary`}>Casumo</h2>
@@ -117,7 +117,7 @@ export default function Home() {
 
         <a
           href="/projects/formunauts"
-          className="mb-24 block formunauts layer relative bg-center lg:bg-left bg-no-repeat bg-cover md:w-2/3 md:mx-auto lg:mx-0 lg:left-2/4 lg:w-2/4 h-[300px] hover:top-[2px]"
+          className="mb-24 block formunauts layer relative bg-center lg:bg-left bg-no-repeat bg-cover md:w-2/3 md:mx-auto lg:mx-0 lg:left-2/4 lg:w-2/4 h-[300px]"
         >
           <div className="bg-secondary px-10 py-6 lg:absolute top-[120px] -translate-y-1/2 -left-1/2">
             <h2 className={`${heading4} text-primary`}>Formunauts</h2>
@@ -131,7 +131,7 @@ export default function Home() {
 
         <a
           href="/projects/revuto"
-          className="mb-24 block revuto layer relative bg-center lg:bg-left bg-no-repeat bg-cover md:w-2/3 md:mx-auto lg:mx-0 lg:w-2/4 h-[300px] hover:top-[2px]"
+          className="mb-24 block revuto layer relative bg-center lg:bg-left bg-no-repeat bg-cover md:w-2/3 md:mx-auto lg:mx-0 lg:w-2/4 h-[300px]"
         >
           <div className="bg-secondary px-10 py-6 lg:absolute top-[120px] -translate-y-1/2 -right-1/2">
             <h2 className={`${heading4} text-primary`}>Revuto</h2>
