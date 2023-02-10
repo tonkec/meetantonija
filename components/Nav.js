@@ -1,22 +1,12 @@
 import Headroom from "react-headroom";
 import Link from "next/link";
-import Dropdown from "react-dropdown";
-import "react-dropdown/style.css";
-import Router from "next/router";
-import { projects } from "./../data/projects";
 import { useState, useEffect } from "react";
-const a = "text-4xl text-white font-bold inline-block my-4 hover:text-primary";
-const listItem = "lg:px-6 px-2";
-
-const options = projects.map((project) => project.title);
-const defaultOption = "Projects";
+const a =
+  "text-4xl text-white font-bold inline-block my-4 hover:text-primary text-right";
+const listItem = "lg:px-6 px-2 text-right";
 
 export default function Nav() {
   const [isNavShown, setNav] = useState(false);
-  const _onSelect = (e) => {
-    Router.push(`/projects/${e.value.toLowerCase()}`);
-    setNav(false);
-  };
 
   useEffect(() => {
     if (isNavShown) {
@@ -24,13 +14,6 @@ export default function Nav() {
     } else {
       document.body.className = "overflow-auto";
     }
-
-    document.addEventListener("keydown", (e) => {
-      e.key === "Escape" && setNav(!isNavShown);
-    });
-    return () => {
-      document.removeEventListener("keydown", (e) => e);
-    };
   }, [isNavShown]);
 
   const toggleNav = () => {
@@ -42,7 +25,7 @@ export default function Nav() {
   };
 
   const navContent = () => (
-    <ul className="relative md:px-20 px-1 mt-[100px] lg:w-4/12">
+    <ul className="relative px-1 mt-[200px]">
       <li className={`${listItem}`} onClick={closeNav}>
         <Link href="/">
           <a className={`${a}`}>Home</a>
@@ -55,17 +38,6 @@ export default function Nav() {
         </Link>
       </li>
 
-      <li className={`${listItem}`}>
-        <Dropdown
-          onChange={_onSelect}
-          arrowClassName="!hidden"
-          controlClassName="!hover:text-primary !border-0 !my-4 !text-4xl !py-0 !px-0 text-uppercase !font-bold !bg-transparent !text-white"
-          options={options}
-          value={defaultOption}
-          placeholder="Projects"
-        />
-      </li>
-
       <li className={`${listItem}`} onClick={closeNav}>
         <Link href="/contact">
           <a className={`${a}`}>Contact</a>
@@ -76,8 +48,7 @@ export default function Nav() {
   return (
     <>
       {isNavShown && (
-        <div className="fixed inset-0 bg-black z-max">
-          <div className="bg-primary absolute left-2/4 right-0 top-0 bottom-0 hidden lg:block"></div>
+        <div className="fixed w-full md:w-auto pl-20 pr-6 right-0 bottom-0 top-0 bg-black z-max">
           <button
             className="bg-ternary block py-2 px-6 absolute right-6 xs:right-10 top-16"
             onClick={toggleNav}
