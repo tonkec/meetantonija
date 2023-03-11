@@ -1,17 +1,17 @@
-import Header from "./../components/Header";
+import Header from './../components/Header';
 import {
   heading2,
   heading3,
   heading4,
   heading5,
   paragraph,
-} from "../utils/typography";
-import Link from "next/link";
-const button = "bg-secondary text-white py-4 px-10 text-2xl";
-import { projects } from "./../data/projects";
-import Head from "next/head";
-import Hand from "./../components/Hand";
-import Layout from "../components/Layout";
+} from '../utils/typography';
+import Link from 'next/link';
+const button = 'bg-secondary text-white py-4 px-10 text-2xl';
+import { projects } from './../data/projects';
+import Head from 'next/head';
+import Hand from './../components/Hand';
+import Layout from '../components/Layout';
 
 export default function Home() {
   return (
@@ -153,25 +153,6 @@ export default function Home() {
         >
           Take a looksie!
         </a>
-      </section>
-
-      <section className="bg-primary py-20">
-        <div className="flex items-center justify-center flex-wrap w-8/12 lg:w-6/12 mx-auto">
-          <h2 className={`${heading2} text-center font-bold`}>Kodiraonica</h2>
-          <p className={`${paragraph} mt-20`}>
-            I have been mentoring for the past 5 years. That inspired me to
-            found my own{" "}
-            <a
-              href="https://kodiraonica.dev/"
-              className="underline"
-              target="_blank"
-            >
-              coding school
-            </a>
-            . We teach HTML&amp;CSS, Javascript and React. Kodiraonica is one
-            year old, we have many happy students and inspiring teachers.{" "}
-          </p>
-        </div>
       </section>
     </Layout>
   );
