@@ -1,158 +1,163 @@
-import Header from './../components/Header';
-import {
-  heading2,
-  heading3,
-  heading4,
-  heading5,
-  paragraph,
-} from '../utils/typography';
-import Link from 'next/link';
-const button = 'bg-secondary text-white py-4 px-10 text-2xl';
-import { projects } from './../data/projects';
-import Head from 'next/head';
-import Hand from './../components/Hand';
+import { useState } from 'react';
 import Layout from '../components/Layout';
+import Modal from 'react-modal';
 
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
 export default function Home() {
+  const [modalIsOpen, setIsOpen] = useState(false);
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   return (
     <Layout>
-      <Head>
-        <title>I am Antonija</title>
-      </Head>
-      <Hand />
-      <Header
-        title="I am Antonija"
-        subtitle="A freelance front-end developer"
-      />
-      <section>
-        <div className="grid lg:grid-cols-2 w-full">
-          <div className="bg-secondary px-10 lg:px-0 lg:pb-[200px] pb-[100px] pt-[100px] md:text-center">
-            <h2 className={`${heading2} text-white font-bold`}>Who am I?</h2>
-            <p
-              className={`${paragraph} text-white max-w-md md:mx-auto text-left font-light mt-12`}
-            >
-              I am a freelance front end developer based in Zagreb who has huge
-              crush on CSS and React. I work mostly remotely with clients from
-              all over the world. I have been working in the industry for the
-              past 7 years.
-            </p>
-          </div>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+      >
+        <div>
+          <h5 className="text-bold">You found a secret fun fact about me!</h5>
+          <p>Did you know I mentored over 200 students at Code Institute?</p>
+        </div>
+      </Modal>
+      <section className="flex w-full relative">
+        <div className="px-10 py-10 bg-green flex-1">
+          <h1 className="text-9xl font-bold text-white leading-tight">
+            Hi, I am Antonija
+            <div
+              className="ml-2 inline-block bg-white opacity-70 w-[20px] h-[20px] cursor-pointer"
+              onClick={openModal}
+            ></div>
+            <div className="ml-2 inline-block bg-white w-[20px] h-[20px]"></div>
+            <div className="ml-2 inline-block bg-white w-[20px] h-[20px]"></div>
+          </h1>
+        </div>
+        <div className="bg-brown flex flex-col w-full flex-1">
+          <div className="bg-brown">
+            <div className="grid grid-cols-4">
+              <div className="p-20 bg-green shine"></div>
+              <div className="p-20 bg-brown shine"></div>
+              <div className="p-20 bg-orange shine"></div>
+              <div className="p-20 bg-green shine"></div>
+              <div className="p-20 bg-brown shine"></div>
+              <div className="p-20 bg-orange shine"></div>
+              <div className="p-20 bg-green shine"></div>
+              <div className="p-20 bg-brown shine"></div>
+            </div>
 
-          <div className="bg-white px-10 lg:px-0 lg:pb-[200px] pt-[100px] md:text-center">
-            <h2 className={`${heading2} text-secondary font-bold`}>
-              What do I do?
-            </h2>
-            <p
-              className={`${paragraph} text-secondary max-w-md md:mx-auto text-left font-light mt-12`}
-            >
-              I code web applications using React.js, Next.js and all mighty
-              CSS. Currently I am learning Ruby on Rails since I want to extend
-              my skills to full stack development. In the past I also worked
-              with Angular, Vue and React Native. I am the most comfortable when
-              I code with React.
+            <div className="py-32 px-10">
+              <p className="text-5xl">
+                ...a freelance front end developer with high React skills...
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-brown p-20">
+        <div className="flex">
+          <p className="text-5xl max-w-lg">
+            ...but I also coded some apps using Angular and React Native...
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-orange">
+        <div className="grid grid-cols-3">
+          <div className="px-20 py-32 text-center bg-green">
+            <p className="text-5xl text-white">Trustworthy</p>
+          </div>
+          <div className="px-20 py-32 text-center bg-orange">
+            <p className="text-5xl text-white">Casumo</p>
+          </div>
+          <div className="px-20 py-32 text-center bg-brown">
+            <p className="text-5xl text-green">Formunauts</p>
+          </div>
+          <div className="px-20 py-32 text-center bg-brown">
+            <p className="text-5xl text-green">Revuto</p>
+          </div>
+          <div className="px-20 py-32 text-center bg-green">
+            <p className="text-5xl text-white">Craftstrom</p>
+          </div>
+          <div>
+            <p className="px-20 py-32 text-center text-5xl text-brown">
+              ...and more...
             </p>
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-20 px-6 md:px-20">
-        <h2 className={`${heading3} text-secondary font-bold text-center`}>
-          I am social.
-        </h2>
-        <p className={`${paragraph} text-center text-secondary mt-10`}>
-          <a
-            href="https://www.linkedin.com/in/antonija-simic/"
-            target="_blank"
-            className="px-4 text-secondary underline"
-          >
-            Linkedin
-          </a>
-          <a
-            href="https://github.com/tonkec"
-            target="_blank"
-            className="px-4 text-secondary underline"
-          >
-            Github
-          </a>
-          <a
-            href="https://codepen.io/tonkec"
-            target="_blank"
-            className="px-4 text-secondary underline"
-          >
-            Codepen
-          </a>
-        </p>
+      <section className="bg-brown p-20">
+        <div className="flex justify-end">
+          <p className="text-5xl max-w-lg">
+            ...this all means I am skilled in Javascript, Typescript, Redux,
+            Styled Components...
+          </p>
+        </div>
       </section>
 
-      <section className="bg-primary py-20 px-10 lg:px-20 flex items-center xl:justify-evenly flex-wrap xl:flex-nowrap">
-        <h3 className={`${heading3} font-bold max-w-3xl`}>
-          Do you have something interesting I could work on?
-        </h3>
-        <Link href="/contact">
-          <a className={`${button} mt-6 lg:mt-0`}>Contact me</a>
-        </Link>
+      <section className="">
+        <div className="flex items-center bg-orange">
+          <div className="bg-green px-20 py-20">
+            <p className="text-5xl max-w-lg text-white">
+              ...if you know the secret word, I will give you my CV
+            </p>
+          </div>
+
+          <div className=" bg-orange px-32 h-full text-center">
+            <button className="text-5xl"> Download CV</button>
+          </div>
+        </div>
       </section>
 
-      <section className="bg-ternary py-20 px-4 sm:px-10 md:px-0 overflow-hidden">
-        <h2
-          className={`${heading2} text-secondary font-bold text-center mb-20`}
-        >
-          Something I have worked on.
-        </h2>
-
-        <a
-          href="/projects/casumo"
-          className="mb-24 block casumo bg-secondary relative bg-center md:bg-right bg-no-repeat bg-cover md:w-2/3 md:mx-auto lg:mx-0 lg:w-2/4 h-[300px]"
-        >
-          <div className="bg-secondary px-10 py-6 lg:absolute lg:top-[120px] -translate-y-1/2 -right-1/2">
-            <h2 className={`${heading4} text-primary`}>Casumo</h2>
-            <p className={`${paragraph} text-white`}>
-              An online casino based in Malta. <br />
-              <small className="">
-                graphql, react, knockout, cloudflare, contentful
-              </small>
+      <section className="bg-brown">
+        <div className="px-20 py-20 flex justify-end">
+          <div>
+            <p className="text-5xl max-w-lg text-black">
+              ...if you don't know it, you'll have to contact me...
             </p>
           </div>
-        </a>
-
-        <a
-          href="/projects/formunauts"
-          className="mb-24 block formunauts bg-secondary bg-secondary relative bg-center lg:bg-left bg-no-repeat bg-cover md:w-2/3 md:mx-auto lg:mx-0 lg:left-2/4 lg:w-2/4 h-[300px]"
-        >
-          <div className="bg-secondary px-10 py-6 lg:absolute top-[120px] -translate-y-1/2 -left-1/2">
-            <h2 className={`${heading4} text-primary`}>Formunauts</h2>
-            <p className={`${paragraph} text-white`}>
-              An on-street fundraising platform
-              <br />
-              <small className="">angular, rxjs, 3rd party APIs</small>
-            </p>
-          </div>
-        </a>
-
-        <a
-          href="/projects/revuto"
-          className="mb-24 block revuto bg-secondary bg-secondary relative bg-center lg:bg-left bg-no-repeat bg-cover md:w-2/3 md:mx-auto lg:mx-0 lg:w-2/4 h-[300px]"
-        >
-          <div className="bg-secondary px-10 py-6 lg:absolute top-[120px] -translate-y-1/2 -right-1/2">
-            <h2 className={`${heading4} text-primary`}>Revuto</h2>
-            <p className={`${paragraph} text-white`}>
-              An app for collecting cryptocurrency. <br />
-              <small className="">react, context api</small>
-            </p>
-          </div>
-        </a>
+        </div>
       </section>
 
-      <section className="bg-secondary py-20 px-4 sm:px-10 md:px-0 overflow-hidden text-center">
-        <h3 className={`${heading2} text-white mb-2`}>
-          Interested in how I code?
-        </h3>
-        <a
-          href="/code"
-          className={`${paragraph} text-center font-bold text-ternary underline`}
-        >
-          Take a looksie!
-        </a>
+      <section className="p-20 bg-orange">
+        <form className="max-w-lg mx-auto">
+          <input
+            type="text"
+            className="bg-brown mb-4 w-full pl-6 py-6 text-green"
+            placeholder="Email"
+          />
+          <input
+            type="text"
+            className="bg-brown mb-4 w-full pl-6 py-6 text-green"
+            placeholder="Name"
+          />
+          <textarea
+            type="text"
+            className="bg-brown mb-4 w-full pl-6 py-6 text-green"
+            placeholder="Message"
+            cols={20}
+            rows={10}
+          />
+          <input
+            type="submit"
+            className="bg-green w-full block py-6 text-brown text-2xl"
+          />
+        </form>
       </section>
     </Layout>
   );

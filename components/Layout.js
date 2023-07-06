@@ -1,7 +1,7 @@
-import Nav from "./Nav";
-import Footer from "./Footer";
-import { motion } from "framer-motion";
-import { useEffect, useRef } from "react";
+import Nav from './Nav';
+import Footer from './Footer';
+import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 export default function Layout({ children }) {
   const containerRef = useRef();
@@ -27,7 +27,7 @@ export default function Layout({ children }) {
 
   useEffect(() => {
     setTimeout(() => {
-      containerRef.current.classList.add("removeContainer");
+      containerRef.current.classList.add('removeContainer');
     }, 2000);
   }, []);
   return (
@@ -45,9 +45,9 @@ export default function Layout({ children }) {
           ))}
         </div>
       </motion.div>
-      <Nav />
+      {/* <Nav /> */}
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

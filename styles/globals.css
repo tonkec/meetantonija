@@ -54,41 +54,6 @@ body::-webkit-scrollbar-thumb {
   margin-top: 20px;
 }
 
-.wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s; /* Change to speed up or slow down */
-  animation-iteration-count: 1; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
-  display: inline-block;
-}
-
-@keyframes wave-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
-  20% {
-    transform: rotate(-8deg);
-  }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  } /* Reset for the last half to pause */
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
 @media print {
   .project {
     break-inside: avoid;
@@ -152,25 +117,48 @@ html {
 }
 
 .casumo {
-  background-image: url("../public/casumo_black.png");
+  background-image: url('../public/casumo_black.png');
 }
 
 .casumo:hover {
-  background-image: url("../public/casumo.png");
+  background-image: url('../public/casumo.png');
 }
 
 .formunauts {
-  background-image: url("../public/formunauts_logo_black.png");
+  background-image: url('../public/formunauts_logo_black.png');
 }
 
 .formunauts:hover {
-  background-image: url("../public/formunauts_logo.png");
+  background-image: url('../public/formunauts_logo.png');
 }
 
 .revuto {
-  background-image: url("../public/revuto_black.png");
+  background-image: url('../public/revuto_black.png');
 }
 
 .revuto:hover {
-  background-image: url("../public/revuto.jpg");
+  background-image: url('../public/revuto.jpg');
+}
+
+.bg-brown.shine::after {
+  background-color: #333a47;
+}
+
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine::after {
+  content: '';
+  bottom: -130px;
+  right: 0;
+  width: 120px;
+  height: 360px;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  transform: rotateZ(45deg);
+  transform-origin: left;
+  opacity: 0.07;
 }
