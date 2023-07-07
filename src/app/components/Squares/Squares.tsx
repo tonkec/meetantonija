@@ -17,7 +17,7 @@ const Sqaures = ({ numberOfSquares, titles, containerSize }: SquaresProps) => {
           <div
             className="box relative flex-1"
             style={{
-              borderWidth: size.width / containerSize / numberOfSquares / 2 - 2,
+              borderWidth: size.width / containerSize / numberOfSquares / 2,
             }}
           >
             <p className="absolute left-1/2 -translate-x-1/2 text-white">
