@@ -7,12 +7,6 @@
   box-sizing: border-box;
 }
 
-.box {
-  font-size: 0;
-  float: left;
-  height: 0;
-}
-
 .box:first-child,
 .box:nth-child(4) {
   border-color: #005246 #005246 #005246cc #005246cc;
@@ -24,4 +18,7 @@
 
 .box:nth-child(3) {
   border-color: #ffe8d1 #ffe8d1 #ffe8d1cc #ffe8d1cc;
+  p {
+    color: black;
+  }
 }
