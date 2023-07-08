@@ -3,12 +3,16 @@ import Sqaures from '../../components/Squares/Squares';
 import Section from '../../components/Section/Section';
 import { FlexContainer, GridContainer } from '../../styles/containers';
 import CtaSection from '../../components/CtaSection/CtaSection';
+import Dots from '../../components/Dots';
 
 const Homepage = () => (
   <main>
     <GridContainer>
       <div>
-        <Header />
+        <Header>
+          Hi, <br /> I am Antonija
+          <Dots />
+        </Header>
       </div>
       <FlexContainer align="flex-start" style={{ flexDirection: 'column' }}>
         <Sqaures numberOfSquares={4} containerSize={2} wrap={false} />

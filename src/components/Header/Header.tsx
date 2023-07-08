@@ -1,13 +1,10 @@
-import Dots from '../Dots';
-import Sqaures from '../Squares/Squares';
 import Text from '../Text';
 import { StyledHeader } from './Header.styles';
-const Header = () => {
+const Header = ({ children }: { children: React.ReactNode }) => {
   return (
     <StyledHeader>
       <Text type="h1" color="#fff">
-        Hi, <br /> I am Antonija
-        <Dots />
+        {children}
       </Text>
     </StyledHeader>
   );

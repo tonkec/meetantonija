@@ -43,7 +43,6 @@ const Section = ({
             maxWidth: textMaxWidth ? textMaxWidth : 'auto',
             backgroundColor: '#f5f5f5',
             padding: '10px 20px',
-            maxHeight: '80%',
           }}
           color="#000000"
         >
