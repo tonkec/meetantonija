@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
+import { Dot } from './Dot.styles';
 const customStyles = {
   content: {
     top: '50%',
@@ -27,12 +28,9 @@ const Dots = () => {
           will get a keyword to download my CV. 🧙‍♂️
         </p>
       </Modal>
-      <span
-        className="w-[10px] h-[10px] bg-orange inline-block mx-1 dot cursor-pointer"
-        onClick={openModal}
-      ></span>
-      <span className="w-[10px] h-[10px] bg-white inline-block mx-0.5 dot"></span>
-      <span className="w-[10px] h-[10px] bg-white inline-block mx-0.5 dot"></span>
+      <Dot width="10" height="10" backgroundColor="#ffffff" />
+      <Dot width="10" height="10" backgroundColor="#ffffff" />
+      <Dot width="10" height="10" backgroundColor="#ffffff" />
     </>
   );
 };

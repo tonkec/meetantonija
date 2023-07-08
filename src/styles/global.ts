@@ -11,6 +11,15 @@ const GlobalStyle = createGlobalStyle`
    #root{
        margin:0 auto;
    }
+
+   html {
+    font-size: 125%;
+  } /*20px*/
+  
+
+   body {
+      line-height: 1.6;
+   }
 `;
 
 export default GlobalStyle;

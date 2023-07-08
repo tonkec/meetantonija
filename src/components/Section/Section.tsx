@@ -1,20 +1,40 @@
-interface SectionProps {
+import { P } from '../../styles/typography';
+import { StyledSection } from './Section.styles';
+
+interface SectionInterface {
   text?: string;
   backgroundColor: string;
-  textAlign: 'left' | 'right';
+  justifyContent: 'flex-start' | 'center' | 'flex-end';
+  textMaxWidth?: number;
 }
 
-const Section = ({ text, backgroundColor, textAlign }: SectionProps) => {
+const Section = ({
+  text,
+  backgroundColor,
+  justifyContent,
+  textMaxWidth,
+}: SectionInterface) => {
   return (
-    <section
-      className="p-20 h-full flex"
+    <StyledSection
+      backgroundColor={backgroundColor}
+      paddingX={100}
+      paddingY={200}
       style={{
-        backgroundColor: backgroundColor,
-        justifyContent: textAlign === 'left' ? 'flex-start' : 'flex-end',
+        flex: 1,
+        width: '100%',
+        justifyContent: justifyContent,
+        display: 'flex',
       }}
     >
-      {text && <h4 className="m-0 max-w-lg">{text}</h4>}
-    </section>
+      {text && (
+        <P
+          style={{ maxWidth: textMaxWidth ? textMaxWidth : 'auto' }}
+          color="#000000"
+        >
+          {text}
+        </P>
+      )}
+    </StyledSection>
   );
 };
 

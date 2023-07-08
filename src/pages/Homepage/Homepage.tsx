@@ -1,39 +1,43 @@
 import Header from '../../components/Header/Header';
 import Sqaures from '../../components/Squares/Squares';
 import Section from '../../components/Section/Section';
+import { FlexContainer, GridContainer } from '../../styles/containers';
 
 const Homepage = () => (
   <main>
-    <div className="grid grid-cols-2">
+    <GridContainer>
       <div>
         <Header />
       </div>
-      <div>
-        <Sqaures numberOfSquares={4} containerSize={2} />
+      <FlexContainer align="flex-start" style={{ flexDirection: 'column' }}>
+        <Sqaures numberOfSquares={4} containerSize={2} wrap={false} />
         <Section
-          backgroundColor="#FFE8D1"
+          backgroundColor="#f5f5f5"
           text="...a freelance front end developer with high React skills..."
-          textAlign="left"
+          justifyContent="flex-start"
         />
-      </div>
-    </div>
+      </FlexContainer>
+    </GridContainer>
 
     <Section
-      backgroundColor="#FFE8D1"
+      backgroundColor="#f5f5f5"
       text="...but I also coded some apps using React Native and Angular..."
-      textAlign="left"
+      justifyContent="flex-start"
+      textMaxWidth={400}
     />
 
     <Sqaures
       numberOfSquares={4}
-      containerSize={1}
+      containerSize={2}
       titles={['Trustworthy', 'Casumo', 'Formunauts', 'Craftstrom']}
+      wrap
     />
 
     <Section
-      backgroundColor="#FFE8D1"
+      backgroundColor="#f5f5f5"
       text="...this means that I am skilled in Javascript, Typescript and Styled Components..."
-      textAlign="right"
+      justifyContent="flex-end"
+      textMaxWidth={400}
     />
   </main>
 );
