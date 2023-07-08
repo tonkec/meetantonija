@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import useSound from 'use-sound';
 import Modal from 'react-modal';
 import { Dot } from './Dot.styles';
+const sound = require('./../../sounds/bell.mp3');
 const customStyles = {
   content: {
     top: '50%',
@@ -12,7 +14,11 @@ const customStyles = {
 };
 const Dots = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
-  const openModal = () => setIsOpen(true);
+  const [playOn] = useSound(sound, { volume: 0.25 });
+  const openModal = () => {
+    setIsOpen(true);
+    playOn();
+  };
   const closeModal = () => setIsOpen(false);
   return (
     <>
