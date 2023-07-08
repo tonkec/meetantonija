@@ -1,0 +1,11 @@
+{
+  "projects": [
+    { "title": "Trustworthy", "headline": "A family based operating system" },
+    { "title": "Casumo", "headline": "A friendly online casino" },
+    {
+      "title": "Formunauts",
+      "headline": "A fund-raising platform that changes lives"
+    },
+    { "title": "Craftstrom", "headline": "A your at home solar system" }
+  ]
+}

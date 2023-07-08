@@ -1,19 +1,24 @@
 import { useParams } from 'react-router-dom';
-import { FlexContainer } from '../../styles/containers';
+import { FlexContainer, GridContainer } from '../../styles/containers';
 import Sqaures from '../../components/Squares';
 import Section from '../../components/Section';
-import { GridContainer } from '../../styles/containers';
 import Header from '../../components/Header/Header';
+import data from './../../data/projects.json';
+
 const Project = () => {
   const routeParams = useParams();
+  const { id } = routeParams;
+  const current = data.projects.filter(
+    (project) => project.title.toLowerCase() === id?.toLowerCase()
+  )[0];
   return (
     <GridContainer>
-      <Header>Revuto</Header>
+      <Header>{current.title}</Header>
       <FlexContainer align="flex-start" style={{ flexDirection: 'column' }}>
         <Sqaures numberOfSquares={4} containerSize={2} wrap={false} />
         <Section
           backgroundColor="#f5f5f5"
-          text="...a simple way to manage your subscriptions while collecting tokens..."
+          text={current.headline}
           justifyContent="flex-start"
           hasPattern
           patternColors={['#005246', '#f5f5f5']}

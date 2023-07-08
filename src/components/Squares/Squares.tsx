@@ -2,6 +2,8 @@ import { useWindowSize } from '../../hooks/useWindowSize';
 import { FlexContainer } from '../../styles/containers';
 import { Square } from './Square.styles';
 import Text from '../Text/Text';
+import { Link, useNavigate } from 'react-router-dom';
+
 interface SquaresInterface {
   numberOfSquares: number;
   titles?: string[];
@@ -15,19 +17,21 @@ const Sqaures = ({
   containerSize,
   wrap,
 }: SquaresInterface) => {
+  const navigate = useNavigate();
   const size = useWindowSize();
   const arr = Array.from({ length: numberOfSquares });
+
   return (
     <FlexContainer align="flex-start" wrap={wrap}>
       {arr.map((item, index) => {
-        return (
+        return titles && titles?.length > 0 ? (
           <Square
             style={{
               borderWidth: size.width / containerSize / numberOfSquares / 2,
               position: 'relative',
             }}
           >
-            {titles && titles.length > 0 && (
+            <Link to={`project/${titles[index].toLowerCase()}`}>
               <Text
                 type="p"
                 color="#ffffff"
@@ -41,8 +45,15 @@ const Sqaures = ({
               >
                 {titles[index]}
               </Text>
-            )}
+            </Link>
           </Square>
+        ) : (
+          <Square
+            style={{
+              borderWidth: size.width / containerSize / numberOfSquares / 2,
+              position: 'relative',
+            }}
+          />
         );
       })}
     </FlexContainer>
