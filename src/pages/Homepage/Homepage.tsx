@@ -15,6 +15,8 @@ const Homepage = () => (
           backgroundColor="#f5f5f5"
           text="...a freelance front end developer with high React skills..."
           justifyContent="flex-start"
+          hasPattern
+          patternColors={['#ff944e', '#f5f5f5']}
         />
       </FlexContainer>
     </GridContainer>
@@ -24,6 +26,8 @@ const Homepage = () => (
       text="...but I also coded some apps using React Native and Angular..."
       justifyContent="flex-start"
       textMaxWidth={400}
+      hasPattern
+      patternColors={['#ff944e', '#f5f5f5']}
     />
 
     <Sqaures

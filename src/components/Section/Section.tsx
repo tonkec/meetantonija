@@ -6,6 +6,8 @@ interface SectionInterface {
   backgroundColor: string;
   justifyContent: 'flex-start' | 'center' | 'flex-end';
   textMaxWidth?: number;
+  hasPattern?: boolean;
+  patternColors?: string[];
 }
 
 const Section = ({
@@ -13,10 +15,14 @@ const Section = ({
   backgroundColor,
   justifyContent,
   textMaxWidth,
+  hasPattern,
+  patternColors,
 }: SectionInterface) => {
   return (
     <StyledSection
       backgroundColor={backgroundColor}
+      hasPattern={hasPattern}
+      patternColors={patternColors}
       paddingX={100}
       paddingY={200}
       style={{
@@ -28,7 +34,11 @@ const Section = ({
     >
       {text && (
         <P
-          style={{ maxWidth: textMaxWidth ? textMaxWidth : 'auto' }}
+          style={{
+            maxWidth: textMaxWidth ? textMaxWidth : 'auto',
+            backgroundColor: '#f5f5f5',
+            padding: '10px 20px',
+          }}
           color="#000000"
         >
           {text}

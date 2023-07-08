@@ -1,5 +1,4 @@
 import { styled, css } from 'styled-components';
-import { shuffleArray } from '../../utils';
 
 function createCSS() {
   let styles = '';
@@ -9,15 +8,13 @@ function createCSS() {
     '#ffe8d1 #ffe8d1 #ffe8d1cc #ffe8d1cc',
   ];
 
-  const shuffledColors = shuffleArray(colors);
-
-  for (let i = 0; i < shuffledColors.length; i += 1) {
+  for (let i = 0; i < colors.length; i += 1) {
     styles += `
          &:nth-child(${i + 1}) {
-           border-color: ${shuffledColors[i]};
+           border-color: ${colors[i]};
          }
          &:nth-child(4) {
-          border-color: ${shuffledColors[0]};
+          border-color: ${colors[0]};
          }
        `;
   }
