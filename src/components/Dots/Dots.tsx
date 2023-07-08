@@ -15,11 +15,12 @@ const customStyles = {
 const Dots = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [playOn] = useSound(sound, { volume: 0.25 });
-  const openModal = () => {
-    setIsOpen(true);
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
+
+  const afterOpenModal = () => {
     playOn();
   };
-  const closeModal = () => setIsOpen(false);
   return (
     <>
       <Modal
@@ -27,6 +28,7 @@ const Dots = () => {
         onRequestClose={closeModal}
         contentLabel="Secret Modal"
         style={customStyles}
+        onAfterOpen={afterOpenModal}
       >
         <h2>You found a secret key!</h2>
         <p>

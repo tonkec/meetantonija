@@ -2,6 +2,7 @@ import Header from '../../components/Header/Header';
 import Sqaures from '../../components/Squares/Squares';
 import Section from '../../components/Section/Section';
 import { FlexContainer, GridContainer } from '../../styles/containers';
+import CtaSection from '../../components/CtaSection/CtaSection';
 
 const Homepage = () => (
   <main>
@@ -13,7 +14,7 @@ const Homepage = () => (
         <Sqaures numberOfSquares={4} containerSize={2} wrap={false} />
         <Section
           backgroundColor="#f5f5f5"
-          text="...a freelance front end developer with high React skills..."
+          text="...a freelance front end developer who hid many secrets on this page using super strong React skills..."
           justifyContent="flex-start"
           hasPattern
           patternColors={['#ff944e', '#f5f5f5']}
@@ -43,6 +44,8 @@ const Homepage = () => (
       justifyContent="flex-end"
       textMaxWidth={400}
     />
+
+    <CtaSection />
   </main>
 );
 
