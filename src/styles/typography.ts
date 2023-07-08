@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 
 export const H1 = styled.h1<{ $textColor?: string }>`
-  font-size: 3.052rem;
+  font-size: 4.052rem;
   color: ${(props) => props.$textColor || '#000000'};
 `;
 

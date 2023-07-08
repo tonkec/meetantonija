@@ -30,7 +30,13 @@ const Dots = () => {
       </Modal>
       <Dot width="10" height="10" backgroundColor="#ffffff" />
       <Dot width="10" height="10" backgroundColor="#ffffff" />
-      <Dot width="10" height="10" backgroundColor="#ffffff" />
+      <Dot
+        width="10"
+        height="10"
+        backgroundColor="#ff944e"
+        onClick={openModal}
+        style={{ cursor: 'pointer' }}
+      />
     </>
   );
 };

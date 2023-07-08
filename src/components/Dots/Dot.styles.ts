@@ -11,4 +11,11 @@ export const Dot = styled.div<{
   display: inline-block;
   margin: 0 2px;
   border-radius: 2px;
+  transition: transform 0.5s ease-in-out;
+
+  &:last-child {
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
 `;

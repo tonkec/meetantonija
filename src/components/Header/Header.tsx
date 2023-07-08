@@ -6,7 +6,8 @@ const Header = () => {
   return (
     <StyledHeader>
       <Text type="h1" color="#fff">
-        Hello, <br /> I am Antonija <Dots />
+        Hi, <br /> I am Antonija
+        <Dots />
       </Text>
     </StyledHeader>
   );
