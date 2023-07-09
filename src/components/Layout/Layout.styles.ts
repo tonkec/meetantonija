@@ -11,7 +11,7 @@ export const StyledLayout = styled.div<{ toggle: boolean; offset: number }>`
         &::after {
           content: "";
           display: block;
-          background-color: #44756b;
+          background-color: #292929;
           position: fixed;
           top: 0;
           bottom: 0;

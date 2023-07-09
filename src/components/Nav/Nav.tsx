@@ -5,7 +5,7 @@ import { BiDownload } from 'react-icons/bi';
 import { FiPhone } from 'react-icons/fi';
 import { PiRocketBold } from 'react-icons/pi';
 import data from './../../data/projects.json';
-
+import Headroom from 'react-headroom';
 interface NavInterface {
   onClick: () => void;
   width: number;
@@ -16,13 +16,22 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
 
   return (
     <>
-      <BsChevronDoubleRight
-        style={{ position: 'fixed', top: 10, left: 5, zIndex: 99 }}
-        fontSize={40}
-        color="#ffe8d1"
-        cursor={'pointer'}
-        onClick={onClick}
-      />
+      <Headroom>
+        <BsChevronDoubleRight
+          style={{
+            position: 'fixed',
+            top: 10,
+            left: 10,
+            zIndex: 99,
+            backgroundColor: '#44756b',
+            padding: 5,
+          }}
+          fontSize={40}
+          color="#ffe8d1"
+          cursor={'pointer'}
+          onClick={onClick}
+        />
+      </Headroom>
       <StyledNav width={width} toggle={toggle}>
         <NavbarLink to="/">
           <HiOutlineHome fontSize={20} style={{ verticalAlign: 'text-top' }} />{' '}

@@ -23,6 +23,18 @@ const GlobalStyle = createGlobalStyle`
       line-height: 1.6;
       overflow-x: hidden;
    }
+
+   .headroom-wrapper {
+    position: fixed;
+    z-index: 999;
+   }
+
+   .headroom--unpinned {
+    svg {
+        background-color: #ff944e !important;
+        color: #f5f5f5 !important;
+    }
+   }
 `;
 
 export default GlobalStyle;
