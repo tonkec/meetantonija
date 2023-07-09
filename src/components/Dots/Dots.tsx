@@ -4,12 +4,16 @@ import Modal from 'react-modal';
 import { Dot } from './Dot.styles';
 const sound = require('./../../sounds/bell.mp3');
 const customStyles = {
+  overlay: {
+    zIndex: 9999,
+  },
   content: {
     top: '50%',
     left: '50%',
     right: 'auto',
     bottom: 'auto',
     transform: 'translate(-50%, -50%)',
+    zIndex: 9999,
   },
 };
 const Dots = () => {
@@ -41,7 +45,7 @@ const Dots = () => {
       <Dot
         width="10"
         height="10"
-        backgroundColor="#ff944e"
+        backgroundColor="#44756b"
         onClick={openModal}
         style={{ cursor: 'pointer' }}
       />

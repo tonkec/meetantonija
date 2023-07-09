@@ -20,7 +20,9 @@ const CtaSection = () => (
         justifyContent: 'center',
       }}
     >
-      <StyledButton>Download</StyledButton>
+      <StyledButton style={{ padding: '20px 50px', fontSize: '1.5rem' }}>
+        Download
+      </StyledButton>
     </div>
   </FlexContainer>
 );

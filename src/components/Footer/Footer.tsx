@@ -4,7 +4,7 @@ import Section from '../Section/Section';
 import Text from '../Text/Text';
 import { StyledFooter } from './Footer.styles';
 
-const Footer = () => {
+const Footer = ({ offset, toggle }: { offset: number; toggle: boolean }) => {
   useLayoutEffect(() => {
     const siblingElement =
       document.querySelector('footer')?.previousElementSibling;
@@ -13,7 +13,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <StyledFooter>
+    <StyledFooter offset={offset} toggle={toggle}>
       <GridContainer>
         <Section
           backgroundColor="transparent"

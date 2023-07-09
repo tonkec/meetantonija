@@ -1,15 +1,9 @@
 import { styled } from 'styled-components';
 
-export const StyledFooter = styled.footer<{ offset: number; toggle: boolean }>`
-  padding-top: 0;
-  background-color: #292929;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -2;
+export const StyledLayout = styled.div<{ toggle: boolean; offset: number }>`
   transition: transform 0.5s ease-in-out;
-
+  position: relative;
+  z-index: 2;
   ${(props) => {
     const { offset, toggle } = props;
     if (toggle) {
