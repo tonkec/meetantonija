@@ -18,5 +18,6 @@ export const StyledButton = styled.button`
     background-image: radial-gradient(#ff944e 1px, #005246 1px);
     background-position: -20px -20px;
     border-color: #ff944e;
+    text-indent: -2px;
   }
 `;

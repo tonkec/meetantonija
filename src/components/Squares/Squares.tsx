@@ -29,24 +29,24 @@ const Sqaures = ({
             style={{
               borderWidth: size.width / containerSize / numberOfSquares / 2,
               position: 'relative',
+              cursor: 'pointer',
             }}
             borderWidth={size.width / containerSize / numberOfSquares / 2}
+            onClick={() => navigate(`project/${titles[index].toLowerCase()}`)}
           >
-            <Link to={`project/${titles[index].toLowerCase()}`}>
-              <Text
-                type="p"
-                color="#ffffff"
-                style={{
-                  position: 'absolute',
-                  left: 0,
-                  right: 0,
-                  transform: 'translateY(-50%)',
-                  textAlign: 'center',
-                }}
-              >
-                {titles[index]}
-              </Text>
-            </Link>
+            <Text
+              type="p"
+              color="#ffffff"
+              style={{
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                transform: 'translateY(-50%)',
+                textAlign: 'center',
+              }}
+            >
+              {titles[index]}
+            </Text>
           </Square>
         ) : (
           <Square
