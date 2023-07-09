@@ -2,6 +2,7 @@ import { FlexContainer } from '../../styles/containers';
 import Section from '../Section';
 import Text from '../Text';
 import Button from '../Button';
+import { StyledButton } from '../Button/Button.styles';
 
 const CtaSection = () => (
   <FlexContainer align="inherit">
@@ -11,8 +12,16 @@ const CtaSection = () => (
         word...
       </Text>
     </Section>
-    <div style={{ flex: 1 }}>
-      <Button />
+    <div
+      style={{
+        flex: 1,
+        backgroundColor: '#005246',
+        alignItems: 'center',
+        display: 'flex',
+        justifyContent: 'center',
+      }}
+    >
+      <StyledButton>Download</StyledButton>
     </div>
   </FlexContainer>
 );

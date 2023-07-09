@@ -24,7 +24,7 @@ const Homepage = () => {
             text="...a freelance front end developer who hid many secrets on this page using super strong React skills..."
             justifyContent="flex-start"
             hasPattern
-            patternColors={['#ff944e', '#f5f5f5']}
+            patternColors={['#005246', '#f5f5f5']}
           />
         </FlexContainer>
       </GridContainer>
@@ -35,7 +35,7 @@ const Homepage = () => {
         justifyContent="flex-start"
         textMaxWidth={400}
         hasPattern
-        patternColors={['#ff944e', '#f5f5f5']}
+        patternColors={['#005246', '#f5f5f5']}
       />
 
       <Sqaures numberOfSquares={4} containerSize={2} titles={titles} wrap />

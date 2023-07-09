@@ -30,6 +30,7 @@ const Sqaures = ({
               borderWidth: size.width / containerSize / numberOfSquares / 2,
               position: 'relative',
             }}
+            borderWidth={size.width / containerSize / numberOfSquares / 2}
           >
             <Link to={`project/${titles[index].toLowerCase()}`}>
               <Text
@@ -53,6 +54,7 @@ const Sqaures = ({
               borderWidth: size.width / containerSize / numberOfSquares / 2,
               position: 'relative',
             }}
+            borderWidth={size.width}
           />
         );
       })}

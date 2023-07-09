@@ -24,7 +24,7 @@ function createCSS() {
   `;
 }
 
-export const Square = styled.div`
+export const Square = styled.div<{ borderWidth: number }>`
   ${createCSS()};
   flex: 1;
   border-style: solid;
