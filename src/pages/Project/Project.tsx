@@ -4,6 +4,8 @@ import Sqaures from '../../components/Squares';
 import Section from '../../components/Section';
 import Header from '../../components/Header/Header';
 import data from './../../data/projects.json';
+import CtaSection from '../../components/CtaSection/CtaSection';
+import Layout from '../../components/Layout/Layout';
 
 const Project = () => {
   const routeParams = useParams();
@@ -12,19 +14,30 @@ const Project = () => {
     (project) => project.title.toLowerCase() === id?.toLowerCase()
   )[0];
   return (
-    <GridContainer>
-      <Header>{current.title}</Header>
-      <FlexContainer align="flex-start" style={{ flexDirection: 'column' }}>
-        <Sqaures numberOfSquares={4} containerSize={2} wrap={false} />
-        <Section
-          backgroundColor="#f5f5f5"
-          text={current.headline}
-          justifyContent="flex-start"
-          hasPattern
-          patternColors={['#005246', '#f5f5f5']}
-        />
-      </FlexContainer>
-    </GridContainer>
+    <Layout>
+      <GridContainer>
+        <Header>{current.title}</Header>
+        <FlexContainer align="flex-start" style={{ flexDirection: 'column' }}>
+          <Sqaures numberOfSquares={4} containerSize={2} wrap={false} />
+          <Section
+            backgroundColor="#f5f5f5"
+            text={current.headline}
+            justifyContent="flex-start"
+            hasPattern
+            patternColors={['#005246', '#f5f5f5']}
+          />
+        </FlexContainer>
+      </GridContainer>
+      <Section
+        backgroundColor="#f5f5f5"
+        text={current.skills}
+        justifyContent="flex-start"
+        hasPattern
+        patternColors={['#005246', '#f5f5f5']}
+        textMaxWidth={400}
+      ></Section>
+      <CtaSection />
+    </Layout>
   );
 };
 

@@ -1,11 +1,24 @@
 {
   "projects": [
-    { "title": "Trustworthy", "headline": "A family based operating system" },
-    { "title": "Casumo", "headline": "A friendly online casino" },
+    {
+      "title": "Trustworthy",
+      "headline": "A family based operating system",
+      "skills": "React, Typescript, Styled Components, Redux Toolkit Query, auth0..."
+    },
+    {
+      "title": "Casumo",
+      "headline": "A friendly online casino",
+      "skills": "React, Typescript, graphQl, Contentful, Knockout.js"
+    },
     {
       "title": "Formunauts",
-      "headline": "A fund-raising platform that changes lives"
+      "headline": "A fund-raising platform that changes lives",
+      "skills": "Angular, Typescript, Rxjs"
     },
-    { "title": "Craftstrom", "headline": "Your at home solar system" }
+    {
+      "title": "Craftstrom",
+      "headline": "Your at home solar system",
+      "skills": "ReactNative, Typescript"
+    }
   ]
 }

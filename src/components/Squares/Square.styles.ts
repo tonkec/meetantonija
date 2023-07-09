@@ -29,5 +29,5 @@ export const Square = styled.div<{ borderWidth: number }>`
   flex: 1;
   border-style: solid;
   position: relative:
-  z-index: 9;
+
 `;
