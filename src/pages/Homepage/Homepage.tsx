@@ -5,6 +5,7 @@ import { FlexContainer, GridContainer } from '../../styles/containers';
 import CtaSection from '../../components/CtaSection/CtaSection';
 import Dots from '../../components/Dots';
 import data from './../../data/projects.json';
+import Footer from '../../components/Footer/Footer';
 
 const Homepage = () => {
   const titles = data.projects.map((project) => project.title);
@@ -48,6 +49,16 @@ const Homepage = () => {
       />
 
       <CtaSection />
+
+      <Section
+        backgroundColor="#f5f5f5"
+        text="...let the treasure hunt begin!"
+        justifyContent="center"
+        textMaxWidth={400}
+        hasPattern
+        patternColors={['#005246', '#f5f5f5']}
+      />
+      <Footer />
     </main>
   );
 };

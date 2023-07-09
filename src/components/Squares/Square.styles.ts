@@ -28,4 +28,6 @@ export const Square = styled.div<{ borderWidth: number }>`
   ${createCSS()};
   flex: 1;
   border-style: solid;
+  position: relative:
+  z-index: 9;
 `;

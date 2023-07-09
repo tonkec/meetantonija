@@ -22,7 +22,11 @@ const Sqaures = ({
   const arr = Array.from({ length: numberOfSquares });
 
   return (
-    <FlexContainer align="flex-start" wrap={wrap}>
+    <FlexContainer
+      align="flex-start"
+      wrap={wrap}
+      style={{ backgroundColor: '#fff' }}
+    >
       {arr.map((item, index) => {
         return titles && titles?.length > 0 ? (
           <Square

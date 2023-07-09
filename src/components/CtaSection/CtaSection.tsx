@@ -1,7 +1,6 @@
 import { FlexContainer } from '../../styles/containers';
 import Section from '../Section';
 import Text from '../Text';
-import Button from '../Button';
 import { StyledButton } from '../Button/Button.styles';
 
 const CtaSection = () => (

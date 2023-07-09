@@ -29,13 +29,8 @@ const Section = ({
       patternColors={patternColors}
       paddingX={100}
       paddingY={200}
-      style={{
-        flex: 1,
-        width: '100%',
-        justifyContent: justifyContent,
-        alignItems: alignItems,
-        display: 'flex',
-      }}
+      alignItems={alignItems}
+      justifyContent={justifyContent}
     >
       {text && (
         <P
@@ -44,7 +39,7 @@ const Section = ({
             backgroundColor: '#f5f5f5',
             padding: '10px 20px',
           }}
-          color="#000000"
+          color="#292929"
         >
           {text}
         </P>
