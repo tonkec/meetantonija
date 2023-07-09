@@ -9,7 +9,7 @@ export const StyledNav = styled.nav<{ width: number; toggle: boolean }>`
   padding-top: 80px;
   padding-left: 50px;
   background-color: #44756b;
-  z-index: -2;
+  z-index: 0;
   width: ${(props) => props.width}px;
 
   button {

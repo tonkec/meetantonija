@@ -7,7 +7,7 @@ export const StyledFooter = styled.footer<{ offset: number; toggle: boolean }>`
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: -2;
+  z-index: 1;
   transition: transform 0.5s ease-in-out;
 
   ${(props) => {
