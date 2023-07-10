@@ -23,6 +23,7 @@ export const StyledFooter = styled.footer<{ offset: number; toggle: boolean }>`
 export const List = styled.ul`
   list-style-type: none;
   display: flex;
+  justify-content: center;
 
   li {
     margin: 0 10px;

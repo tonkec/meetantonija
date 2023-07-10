@@ -17,7 +17,7 @@ const Footer = ({ offset, toggle }: { offset: number; toggle: boolean }) => {
       <List>
         <li>
           <a
-            href="https://github.io/tonkec"
+            href="https://github.com/tonkec"
             target="_blank"
             className="is-clickable"
           >
