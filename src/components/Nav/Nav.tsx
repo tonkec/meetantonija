@@ -6,6 +6,7 @@ import { FiPhone } from 'react-icons/fi';
 import { PiRocketBold } from 'react-icons/pi';
 import data from './../../data/projects.json';
 import Headroom from 'react-headroom';
+import Secret from '../Secret';
 interface NavInterface {
   onClick: () => void;
   width: number;
@@ -48,8 +49,8 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
 
         <Separator />
 
-        {titles.map((title) => (
-          <NavbarLink to={`/project/${title.toLowerCase()}`}>
+        {titles.map((title, index) => (
+          <NavbarLink key={index} to={`/project/${title.toLowerCase()}`}>
             <PiRocketBold fontSize={20} style={{ verticalAlign: 'text-top' }} />{' '}
             <span>{title}</span>
           </NavbarLink>
@@ -61,6 +62,12 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
           <FiPhone fontSize={20} style={{ verticalAlign: 'text-top' }} />{' '}
           <span>Contact</span>
         </NavbarLink>
+
+        <Secret
+          style={{ position: 'absolute', left: 15, bottom: 0 }}
+          secretName="third"
+          dotBackground="#ffffff"
+        />
       </StyledNav>
     </>
   );

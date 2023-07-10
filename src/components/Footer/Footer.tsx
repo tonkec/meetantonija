@@ -4,6 +4,7 @@ import { ImCodepen } from 'react-icons/im';
 import { BiLogoLinkedin } from 'react-icons/bi';
 import { LuGithub } from 'react-icons/lu';
 import { TiDocument } from 'react-icons/ti';
+import Secret from '../Secret/Secret';
 const Footer = ({ offset, toggle }: { offset: number; toggle: boolean }) => {
   useLayoutEffect(() => {
     const siblingElement =
@@ -52,6 +53,11 @@ const Footer = ({ offset, toggle }: { offset: number; toggle: boolean }) => {
           </a>
         </li>
       </List>
+      <Secret
+        style={{ position: 'absolute', right: 10 }}
+        dotBackground="#44756b"
+        secretName="second"
+      />
     </StyledFooter>
   );
 };

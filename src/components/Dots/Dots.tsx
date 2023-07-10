@@ -6,7 +6,11 @@ const Dots = () => {
     <>
       <Dot width="10" height="10" backgroundColor="#ffffff" />
       <Dot width="10" height="10" backgroundColor="#ffffff" />
-      <Secret />
+      <Secret
+        secretName="first"
+        style={{ position: 'static', display: 'inline-block' }}
+        dotBackground="#44756b"
+      />
     </>
   );
 };
