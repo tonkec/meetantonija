@@ -41,7 +41,7 @@ const Sqaures = ({
               className="is-clickable"
             />
 
-            <Text type="p" color="black">
+            <Text type="p" color="#292929">
               {titles[index]}{' '}
             </Text>
           </Square>

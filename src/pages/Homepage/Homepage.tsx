@@ -28,6 +28,7 @@ const Homepage = () => {
               justifyContent="flex-start"
               hasPattern
               patternColors={['#005246', '#f5f5f5']}
+              alignItems="center"
             />
           </FlexContainer>
         </GridContainer>

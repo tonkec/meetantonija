@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const TitleLink = styled.a`
   color: #ffffff;
-  padding-bottom: 0px;
+  padding-bottom: 20px;
   padding-right: 20px;
   text-decoration: none;
   display: inline-block;
@@ -14,7 +14,7 @@ export const TitleLink = styled.a`
     content: '';
     display: block;
     position: absolute;
-    bottom: 10px;
+    bottom: 30px;
     height: 50px;
     width: 100%;
     background-image: radial-gradient(#f5f5f5 1.5px, transparent 1.5px);
@@ -24,7 +24,6 @@ export const TitleLink = styled.a`
   }
 
   &:hover::after {
-    background-image: radial-gradient(#ff944e 1.5px, transparent 1.5px);
     background-position: -10px -10px;
   }
 `;

@@ -38,14 +38,6 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
           <HiOutlineHome fontSize={20} style={{ verticalAlign: 'text-top' }} />{' '}
           <span>Home</span>
         </NavbarLink>
-        <p style={{ cursor: 'pointer' }}>
-          <BiDownload
-            color="#f5f5f5"
-            fontSize={20}
-            style={{ verticalAlign: 'text-top' }}
-          />
-          <span style={{ color: '#f5f5f5', paddingLeft: '5px' }}>CV</span>
-        </p>
 
         <Separator />
 
@@ -58,7 +50,7 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
 
         <Separator />
 
-        <NavbarLink to="/contact">
+        <NavbarLink to="mailto:antonija1023@gmail.com">
           <FiPhone fontSize={20} style={{ verticalAlign: 'text-top' }} />{' '}
           <span>Contact</span>
         </NavbarLink>

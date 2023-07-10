@@ -1,8 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+export const initialState = ['first', 'second', 'third'];
+
 export const counterSlice = createSlice({
   name: 'counter',
-  initialState: ['first', 'second', 'third'],
+  initialState,
   reducers: {
     increment: (state, action) => {
       var index = state.indexOf(action.payload);

@@ -16,7 +16,7 @@ function App() {
           zIndex: 99999,
         }}
         outerStyle={{
-          border: '5px solid black',
+          border: '5px solid rgba(0,0,0,0.7)',
           zIndex: 99999,
         }}
         clickables={[

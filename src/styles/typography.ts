@@ -21,6 +21,6 @@ export const H4 = styled.h4<{ $textColor?: string }>`
 `;
 
 export const P = styled.p<{ $textColor?: string }>`
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: ${(props) => props.$textColor || '#000000'};
 `;

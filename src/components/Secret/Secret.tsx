@@ -1,10 +1,9 @@
-import { useState } from 'react';
 import useSound from 'use-sound';
-import Modal from 'react-modal';
 import { Dot } from './../Dots/Dot.styles';
 import { useDispatch, useSelector } from 'react-redux';
-import { increment } from '../../store/slices/CounterSlice';
+import { increment, initialState } from '../../store/slices/CounterSlice';
 import Text from '../Text';
+import MyModal from '../MyModal/MyModal';
 
 const sound = require('./../../sounds/bell.mp3');
 
@@ -14,62 +13,41 @@ interface SecretInterface {
   dotBackground: string;
 }
 
-const customStyles = {
-  overlay: {
-    zIndex: 9999,
-  },
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    transform: 'translate(-50%, -50%)',
-    zIndex: 9999,
-  },
-};
 const Secret = ({ secretName, style, dotBackground }: SecretInterface) => {
-  const currentScore = useSelector(
+  const dispatch = useDispatch();
+  const currentState = useSelector(
     (state: { counterSlice: string[] }) => state.counterSlice
   );
+  const currentScore = initialState.length - currentState.length;
 
-  const dispatch = useDispatch();
-  const [modalIsOpen, setIsOpen] = useState(false);
   const [playOn] = useSound(sound, { volume: 0.25 });
   const openModal = () => {
-    setIsOpen(true);
     dispatch(increment(secretName));
-  };
-  const closeModal = () => setIsOpen(false);
-
-  const afterOpenModal = () => {
     playOn();
   };
 
   return (
     <div style={style}>
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        contentLabel="Secret Modal"
-        style={customStyles}
-        onAfterOpen={afterOpenModal}
-        ariaHideApp={false}
+      <MyModal
+        modalHeading="You found a secret key!"
+        openModalFn={openModal}
+        opener={
+          <Dot
+            width="10"
+            height="10"
+            backgroundColor={dotBackground}
+            onClick={openModal}
+            className="is-clickable"
+          />
+        }
       >
-        <h2>You found a secret key!</h2>
-        <Text type="p" color="black">
+        <Text type="p" color="#292929">
           <>
-            Currently you have {4 - currentScore.length} secret keys out of 3.
-            Collect them all and you will get a keyword to download my CV. 🧙‍♂️
+            Currently you have {currentScore} secret keys out of 3. Collect them
+            all and you will get a keyword to download my CV. 🧙‍♂️
           </>
         </Text>
-      </Modal>
-      <Dot
-        width="10"
-        height="10"
-        backgroundColor={dotBackground}
-        onClick={openModal}
-        className="is-clickable"
-      />
+      </MyModal>
     </div>
   );
 };

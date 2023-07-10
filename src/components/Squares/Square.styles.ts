@@ -61,7 +61,7 @@ export const Overlay = styled.div`
   transition: all 0.25s ease-in-out;
   width: 100%;
   height: 100%;
-  transform: translate(85%, 80%);
+  transform: translate(90%, 80%);
   cursor: pointer;
   z-index: 1;
   &:hover {

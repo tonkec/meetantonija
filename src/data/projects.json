@@ -11,21 +11,21 @@
       "title": "Casumo",
       "headline": "A friendly online casino",
       "skills": "React, Typescript, graphQl, Contentful, Knockout.js",
-      "description": "My role was to handle multiple small bugs in authorization and authentication as well as migrating knockout.js app to React. The architecture is really complex and it required seniorty level of knowledge. We were using some services like Contentful, Cloudflare and Keycloak. I was part of the scrum ceremonies. One of the latest task was to enable US players to see the correct error message. Since US players are not allowed to use this app, they were supposed the see the error message customized for them. They were getting general error, instead of US error message. My task was to detect location of the player and then display the correct error message.",
+      "description": "My role was handling multiple small bugs in authorization and authentication as well as migrating knockout.js app to React. The architecture is really complex and it required seniorty level of knowledge. We were using some services like Contentful, Cloudflare and Keycloak. I was part of the scrum ceremonies. One of the latest task was to enable US players to see the correct error message. Since US players are not allowed to use this app, they were supposed the see the error message customized for them. They were getting general error, instead of US error message. My task was to detect location of the player and then display the correct error message.",
       "link": "https://casumo.com/"
     },
     {
       "title": "Formunauts",
       "headline": "A fund-raising platform that changes lives",
       "skills": "Angular, Typescript, Rxjs",
-      "description": "My task was to set a communication between the app and the RaiseNow API. RaiseNow iframe with form was injected into the template. I then had to send data from the form, as well as the data from the previous step, to the API. If there was an error in the form, it should be displayed to the user. The whole integration had to show states based on the connection status. I do not usually code in Angular, that is why this project had steep learning curve. I was able to quickly pick up core Angular and RxJs concepts. I also implemented different layout based on the status of internet connection. I learned a lot about service workers which I used here for caching assets.",
+      "description": "My task was setting a communication between the app and the RaiseNow API. RaiseNow iframe with form was injected into the template. I then had to send data from the form, as well as the data from the previous step, to the API. If there was an error in the form, it should be displayed to the user. The whole integration had to show states based on the connection status. I do not usually code in Angular, that is why this project had steep learning curve. I was able to quickly pick up core Angular and RxJs concepts. I also implemented different layout based on the status of internet connection. I learned a lot about service workers which I used here for caching assets.",
       "link": "https://app.formunauts.com/auth/login"
     },
     {
       "title": "Craftstrom",
       "headline": "Your at home solar system",
       "skills": "ReactNative, Typescript",
-      "description": "My task was to implement user interface with react-native-elements and react-native and to handle user authentication and authorization with ajax calls to the backend api. User's token is stored using AsyncStorage. The app excited me a lot because I was able to get my hands on JS and React Native. It made me really happy that I can prove and test my JS skills!",
+      "description": "My task was implementing a user interface with react-native-elements and react-native and to handle user authentication and authorization with ajax calls to the backend api. User's token is stored using AsyncStorage. The app excited me a lot because I was able to get my hands on JS and React Native. It made me really happy that I can prove and test my JS skills!",
       "link": "https://play.google.com/store/apps/details?id=com.craftstrom&hl=en&gl=US"
     }
   ]
