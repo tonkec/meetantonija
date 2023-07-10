@@ -1,4 +1,4 @@
-import Text from '../Text';
+import Text from 'components/Text';
 import { StyledHeader } from './Header.styles';
 const Header = ({ children }: { children: React.ReactNode }) => {
   return (

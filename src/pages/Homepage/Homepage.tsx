@@ -1,12 +1,11 @@
-import Header from '../../components/Header/Header';
-import Sqaures from '../../components/Squares/Squares';
-import Section from '../../components/Section/Section';
-import { FlexContainer, GridContainer } from '../../styles/containers';
-import CtaSection from '../../components/CtaSection/CtaSection';
-import Dots from '../../components/Dots';
-import data from './../../data/projects.json';
-import Footer from '../../components/Footer/Footer';
-import Layout from '../../components/Layout/Layout';
+import Header from 'components/Header';
+import Sqaures from 'components/Squares';
+import Section from 'components/Section';
+import { FlexContainer, GridContainer } from 'styles/containers';
+import CtaSection from 'components/CtaSection';
+import Dots from 'components/Dots';
+import data from 'data/projects.json';
+import Layout from 'components/Layout';
 
 const Homepage = () => {
   const titles = data.projects.map((project) => project.title);

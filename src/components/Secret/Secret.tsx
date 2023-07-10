@@ -1,11 +1,11 @@
 import useSound from 'use-sound';
-import { Dot } from './../Dots/Dot.styles';
+import { Dot } from 'components/Dots/Dot.styles';
 import { useDispatch, useSelector } from 'react-redux';
-import { increment, initialState } from '../../store/slices/CounterSlice';
-import Text from '../Text';
-import MyModal from '../MyModal/MyModal';
+import { increment, initialState } from 'store/slices/CounterSlice';
+import Text from 'components/Text';
+import MyModal from 'components/MyModal';
 
-const sound = require('./../../sounds/bell.mp3');
+const sound = require('sounds/bell.mp3');
 
 interface SecretInterface {
   secretName: string;

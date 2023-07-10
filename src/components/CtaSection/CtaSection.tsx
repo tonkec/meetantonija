@@ -1,9 +1,9 @@
-import { FlexContainer } from '../../styles/containers';
-import Section from '../Section';
-import Text from '../Text';
-import { StyledButton } from '../Button/Button.styles';
-import MyModal from '../MyModal';
-import Form from '../Form';
+import { FlexContainer } from 'styles/containers';
+import Section from 'components/Section';
+import Text from 'components/Text';
+import { StyledButton } from 'components/Button/Button.styles';
+import MyModal from 'components/MyModal';
+import Form from 'components/Form';
 
 const CtaSection = () => {
   return (

@@ -1,11 +1,11 @@
 import { useParams } from 'react-router-dom';
-import { FlexContainer, GridContainer } from '../../styles/containers';
-import Sqaures from '../../components/Squares';
-import Section from '../../components/Section';
-import Header from '../../components/Header/Header';
-import data from './../../data/projects.json';
-import CtaSection from '../../components/CtaSection/CtaSection';
-import Layout from '../../components/Layout/Layout';
+import { FlexContainer, GridContainer } from 'styles/containers';
+import Sqaures from 'components/Squares';
+import Section from 'components/Section';
+import Header from 'components/Header/Header';
+import data from 'data/projects.json';
+import CtaSection from 'components/CtaSection/CtaSection';
+import Layout from 'components/Layout/Layout';
 import { TitleLink } from './Project.styles';
 
 const Project = () => {

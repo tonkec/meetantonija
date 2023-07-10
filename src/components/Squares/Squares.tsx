@@ -1,7 +1,7 @@
-import { useWindowSize } from '../../hooks/useWindowSize';
-import { FlexContainer } from '../../styles/containers';
+import { useWindowSize } from 'hooks/useWindowSize';
+import { FlexContainer } from 'styles/containers';
 import { Overlay, Square } from './Square.styles';
-import Text from '../Text/Text';
+import Text from 'components/Text';
 import { useNavigate } from 'react-router-dom';
 import { GoArrowRight } from 'react-icons/go';
 

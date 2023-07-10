@@ -1,6 +1,6 @@
 import { useState, useLayoutEffect } from 'react';
-import Footer from '../Footer';
-import Nav from '../Nav';
+import Footer from 'components/Footer';
+import Nav from 'components/Nav';
 import { StyledLayout } from './Layout.styles';
 
 interface LayoutInterface {

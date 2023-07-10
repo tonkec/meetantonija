@@ -4,7 +4,7 @@ import { ImCodepen } from 'react-icons/im';
 import { BiLogoLinkedin } from 'react-icons/bi';
 import { LuGithub } from 'react-icons/lu';
 import { TiDocument } from 'react-icons/ti';
-import Secret from '../Secret/Secret';
+import Secret from 'components/Secret';
 const Footer = ({ offset, toggle }: { offset: number; toggle: boolean }) => {
   useLayoutEffect(() => {
     const siblingElement =

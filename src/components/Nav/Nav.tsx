@@ -1,12 +1,11 @@
 import { NavbarLink, Separator, StyledNav } from './Nav.styles';
 import { BsChevronDoubleRight } from 'react-icons/bs';
 import { HiOutlineHome } from 'react-icons/hi';
-import { BiDownload } from 'react-icons/bi';
 import { FiPhone } from 'react-icons/fi';
 import { PiRocketBold } from 'react-icons/pi';
-import data from './../../data/projects.json';
+import data from 'data/projects.json';
 import Headroom from 'react-headroom';
-import Secret from '../Secret';
+import Secret from 'components/Secret';
 interface NavInterface {
   onClick: () => void;
   width: number;

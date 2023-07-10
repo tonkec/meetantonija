@@ -1,4 +1,4 @@
-import { P } from '../../styles/typography';
+import { P } from 'styles/typography';
 import { StyledSection } from './Section.styles';
 
 interface SectionInterface {

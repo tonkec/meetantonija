@@ -1,4 +1,4 @@
-import { H1, H2, H3, H4, P } from '../../styles/typography';
+import { H1, H2, H3, H4, P } from 'styles/typography';
 
 interface TextInterface {
   type: 'h1' | 'h2' | 'h3' | 'h4' | 'p';

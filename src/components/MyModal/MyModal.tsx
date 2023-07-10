@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
-import Text from '../Text';
+import Text from 'components/Text';
 
 interface MyModalInterface {
   children: React.ReactNode;

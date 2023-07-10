@@ -1,4 +1,4 @@
-import Secret from '../Secret';
+import Secret from 'components/Secret';
 import { Dot } from './Dot.styles';
 
 const Dots = () => {
