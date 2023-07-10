@@ -48,6 +48,7 @@ const Dots = () => {
         backgroundColor="#44756b"
         onClick={openModal}
         style={{ cursor: 'pointer' }}
+        className="is-clickable"
       />
     </>
   );

@@ -29,6 +29,7 @@ const Sqaures = ({
           <Square hasTitles={titles.length > 0}>
             <Overlay
               onClick={() => navigate(`project/${titles[index].toLowerCase()}`)}
+              className="is-clickable"
             ></Overlay>
             <GoArrowRight
               style={{
@@ -37,6 +38,7 @@ const Sqaures = ({
                 right: 5,
                 color: 'white',
               }}
+              className="is-clickable"
             />
 
             <Text type="p" color="black">

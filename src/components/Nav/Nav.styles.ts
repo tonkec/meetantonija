@@ -35,6 +35,6 @@ export const NavbarLink = styled(Link)`
   transition: color 0.2s ease-in-out;
   &:hover {
     transform: translateY(0.5px);
-    color: #005246cc;
+    color: #ff944e;
   }
 `;
