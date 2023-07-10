@@ -22,7 +22,19 @@ const GlobalStyle = createGlobalStyle`
    body {
       line-height: 1.6;
       overflow-x: hidden;
-   }
+    }
+
+    body::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    body::-webkit-scrollbar-track {
+        background-color: #333a47;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        background-color: #ff944e;
+    }
 
    .headroom-wrapper {
     position: fixed;

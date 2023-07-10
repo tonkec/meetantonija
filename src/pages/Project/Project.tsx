@@ -19,7 +19,7 @@ const Project = () => {
       <GridContainer>
         <Header>
           <TitleLink href={current.link} target="_blank">
-            {current.title}{' '}
+            {current.title}
           </TitleLink>
         </Header>
 
