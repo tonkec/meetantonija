@@ -36,7 +36,7 @@ const Sqaures = ({
                 position: 'absolute',
                 bottom: 5,
                 right: 5,
-                color: 'white',
+                color: 'black',
               }}
               className="is-clickable"
             />

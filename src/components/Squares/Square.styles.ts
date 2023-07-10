@@ -55,7 +55,7 @@ export const Overlay = styled.div`
   position: absolute;
   right: 0px;
   bottom: 0px;
-  background-color: rgba(225, 225, 225, 0.1);
+  background-color: rgba(68, 117, 107, 0.2);
   display: flex;
   padding: 30px;
   transition: all 0.25s ease-in-out;
