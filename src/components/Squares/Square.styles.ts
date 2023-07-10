@@ -1,21 +1,25 @@
 import { styled, css } from 'styled-components';
 
-function createCSS() {
-  let styles = '';
-  const colors = [
-    '#005246 #005246 #005246cc #005246cc',
-    '#ff944e #ff944e #ff944ecc #ff944ecc',
-    '#ffe8d1 #ffe8d1 #ffe8d1cc #ffe8d1cc',
-  ];
+const borderColors = [
+  '#005246 #005246 #005246cc #005246cc',
+  '#ff944e #ff944e #ff944ecc #ff944ecc',
+  '#ffe8d1 #ffe8d1 #ffe8d1cc #ffe8d1cc',
+];
 
-  for (let i = 0; i < colors.length; i += 1) {
+const backgroundColors = ['#005246', '#ff944e', '#ffe8d1'];
+
+function createCSS(property: string, colors: string[]) {
+  let styles = '';
+
+  for (let i = -1; i < colors.length; i += 1) {
     styles += `
          &:nth-child(${i + 1}) {
-           border-color: ${colors[i]};
+           ${property}: ${colors[i]};
          }
-         &:nth-child(4) {
-          border-color: ${colors[0]};
+         &:nth-child(${colors.length + 1}) {
+          ${property}: ${colors[0]};
          }
+
        `;
   }
 
@@ -24,9 +28,43 @@ function createCSS() {
   `;
 }
 
-export const Square = styled.div<{ borderWidth: number }>`
-  ${createCSS()};
+export const Square = styled.div<{ hasTitles?: boolean }>`
   flex: 1;
-  border-style: solid;
   position: relative:
+ 
+  ${(props) => {
+    const { hasTitles } = props;
+    if (hasTitles) {
+      return `
+        ${createCSS('background-color', backgroundColors)};
+        padding: 50px 20px 70px;
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+      `;
+    } else {
+      return `
+        ${createCSS('border-color', borderColors)};
+        border-style: solid;
+      `;
+    }
+  }}
+`;
+
+export const Overlay = styled.div`
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 30px;
+  transition: all 0.25s ease-in-out;
+  width: 100%;
+  height: 100%;
+  transform: translate(85%, 80%);
+  cursor: pointer;
+  z-index: 1;
+  &:hover {
+    transform: translate(0%, 0%);
+  }
 `;

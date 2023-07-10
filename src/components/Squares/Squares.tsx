@@ -1,8 +1,9 @@
 import { useWindowSize } from '../../hooks/useWindowSize';
 import { FlexContainer } from '../../styles/containers';
-import { Square } from './Square.styles';
+import { Overlay, Square } from './Square.styles';
 import Text from '../Text/Text';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { GoArrowRight } from 'react-icons/go';
 
 interface SquaresInterface {
   numberOfSquares: number;
@@ -22,43 +23,31 @@ const Sqaures = ({
   const arr = Array.from({ length: numberOfSquares });
 
   return (
-    <FlexContainer
-      align="flex-start"
-      wrap={wrap}
-      style={{ backgroundColor: '#fff' }}
-    >
+    <FlexContainer align="flex-start" wrap={wrap}>
       {arr.map((item, index) => {
         return titles && titles?.length > 0 ? (
-          <Square
-            style={{
-              borderWidth: size.width / containerSize / numberOfSquares / 2,
-              position: 'relative',
-              cursor: 'pointer',
-            }}
-            borderWidth={size.width / containerSize / numberOfSquares / 2}
-            onClick={() => navigate(`project/${titles[index].toLowerCase()}`)}
-          >
-            <Text
-              type="p"
-              color="#ffffff"
+          <Square hasTitles={titles.length > 0}>
+            <Overlay
+              onClick={() => navigate(`project/${titles[index].toLowerCase()}`)}
+            ></Overlay>
+            <GoArrowRight
               style={{
                 position: 'absolute',
-                left: 0,
-                right: 0,
-                transform: 'translateY(-50%)',
-                textAlign: 'center',
+                bottom: 5,
+                right: 5,
+                color: 'white',
               }}
-            >
-              {titles[index]}
+            />
+
+            <Text type="p" color="black">
+              {titles[index]}{' '}
             </Text>
           </Square>
         ) : (
           <Square
             style={{
               borderWidth: size.width / containerSize / numberOfSquares / 2,
-              position: 'relative',
             }}
-            borderWidth={size.width}
           />
         );
       })}
