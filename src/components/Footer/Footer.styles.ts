@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 
 export const StyledFooter = styled.footer<{ offset: number; toggle: boolean }>`
-  padding-top: 0;
+  padding: 40px 20px;
   background-color: #292929;
   position: fixed;
   bottom: 0;
@@ -18,4 +18,13 @@ export const StyledFooter = styled.footer<{ offset: number; toggle: boolean }>`
       `;
     }
   }}
+`;
+
+export const List = styled.ul`
+  list-style-type: none;
+  display: flex;
+
+  li {
+    margin: 0 10px;
+  }
 `;

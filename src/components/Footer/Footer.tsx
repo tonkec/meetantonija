@@ -1,9 +1,9 @@
 import { useLayoutEffect } from 'react';
-import { GridContainer } from '../../styles/containers';
-import Section from '../Section/Section';
-import Text from '../Text/Text';
-import { StyledFooter } from './Footer.styles';
-
+import { List, StyledFooter } from './Footer.styles';
+import { ImCodepen } from 'react-icons/im';
+import { BiLogoLinkedin } from 'react-icons/bi';
+import { LuGithub } from 'react-icons/lu';
+import { TiDocument } from 'react-icons/ti';
 const Footer = ({ offset, toggle }: { offset: number; toggle: boolean }) => {
   useLayoutEffect(() => {
     const siblingElement =
@@ -14,12 +14,44 @@ const Footer = ({ offset, toggle }: { offset: number; toggle: boolean }) => {
 
   return (
     <StyledFooter offset={offset} toggle={toggle}>
-      <GridContainer>
-        <Section
-          backgroundColor="transparent"
-          justifyContent="flex-start"
-        ></Section>
-      </GridContainer>
+      <List>
+        <li>
+          <a
+            href="https://github.io/tonkec"
+            target="_blank"
+            className="is-clickable"
+          >
+            <LuGithub color="#ffffff" fontSize={40} />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://codepen.io/tonkec"
+            target="_blank"
+            className="is-clickable"
+          >
+            <ImCodepen color="#ffffff" fontSize={40} />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/antonija-simic/"
+            target="_blank"
+            className="is-clickable"
+          >
+            <BiLogoLinkedin color="#ffffff" fontSize={40} />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://gist.github.com/tonkec/344482591e09ab240458ebbebbc3dc1b"
+            target="_blank"
+            className="is-clickable"
+          >
+            <TiDocument color="#ffffff" fontSize={40} />
+          </a>
+        </li>
+      </List>
     </StyledFooter>
   );
 };
