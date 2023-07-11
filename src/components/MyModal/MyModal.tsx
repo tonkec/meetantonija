@@ -7,6 +7,7 @@ interface MyModalInterface {
   opener: React.ReactNode;
   modalHeading: string;
   openModalFn?: () => void;
+  id?: string;
 }
 
 const customStyles = {
@@ -31,6 +32,7 @@ const MyModal = ({
   opener,
   modalHeading,
   openModalFn,
+  id,
 }: MyModalInterface) => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const openModal = () => {
@@ -46,6 +48,7 @@ const MyModal = ({
         contentLabel="Just a tiny modal"
         style={customStyles}
         ariaHideApp={false}
+        id={id}
       >
         <Text type="h4" color="#292929">
           {modalHeading}

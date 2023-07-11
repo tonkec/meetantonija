@@ -23,7 +23,7 @@ const Homepage = () => {
             <Sqaures numberOfSquares={4} containerSize={2} wrap={false} />
             <Section
               backgroundColor="#f5f5f5"
-              text="...a freelance front end developer who hid many secrets on this page using super strong React skills..."
+              text="...a freelance front end developer with strong React and Javascript skills..."
               justifyContent="flex-start"
               hasPattern
               patternColors={['#005246', '#f5f5f5']}

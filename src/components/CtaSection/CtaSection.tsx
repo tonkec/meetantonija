@@ -4,8 +4,20 @@ import Text from 'components/Text';
 import { StyledButton } from 'components/Button/Button.styles';
 import MyModal from 'components/MyModal';
 import Form from 'components/Form';
+import { useSelector } from 'react-redux';
+import { StateInterface } from 'store/slices/CounterSlice';
 
 const CtaSection = () => {
+  const secretWord = useSelector(
+    (state: StateInterface) => state.counterSlice.secretWord
+  );
+
+  const setModalHeading = () => {
+    return secretWord
+      ? 'What is the secret word?'
+      : 'You did not collect all the keys!';
+  };
+
   return (
     <FlexContainer align="inherit">
       <Section backgroundColor="#ff944e" justifyContent="flex-start">
@@ -24,7 +36,8 @@ const CtaSection = () => {
         }}
       >
         <MyModal
-          modalHeading="What is the secret key?"
+          id="ctaModal"
+          modalHeading={setModalHeading()}
           opener={
             <StyledButton
               style={{ padding: '20px 50px', fontSize: '1.5rem' }}
@@ -34,7 +47,7 @@ const CtaSection = () => {
             </StyledButton>
           }
         >
-          <Form />
+          {secretWord && <Form secretWord={secretWord} />}
         </MyModal>
       </div>
     </FlexContainer>

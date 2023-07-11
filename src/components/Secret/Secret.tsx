@@ -1,9 +1,14 @@
 import useSound from 'use-sound';
 import { Dot } from 'components/Dots/Dot.styles';
 import { useDispatch, useSelector } from 'react-redux';
-import { increment, initialState } from 'store/slices/CounterSlice';
+import {
+  StateInterface,
+  increment,
+  initialState,
+} from 'store/slices/CounterSlice';
 import Text from 'components/Text';
 import MyModal from 'components/MyModal';
+import SecretModalText from './SecretModalText';
 
 const sound = require('sounds/bell.mp3');
 
@@ -16,9 +21,10 @@ interface SecretInterface {
 const Secret = ({ secretName, style, dotBackground }: SecretInterface) => {
   const dispatch = useDispatch();
   const currentState = useSelector(
-    (state: { counterSlice: string[] }) => state.counterSlice
+    (state: StateInterface) => state.counterSlice.keys
   );
-  const currentScore = initialState.length - currentState.length;
+
+  const currentScore = initialState.keys.length - currentState.length;
 
   const [playOn] = useSound(sound, { volume: 0.25 });
   const openModal = () => {
@@ -41,12 +47,7 @@ const Secret = ({ secretName, style, dotBackground }: SecretInterface) => {
           />
         }
       >
-        <Text type="p" color="#292929">
-          <>
-            Currently you have {currentScore} secret keys out of 3. Collect them
-            all and you will get a keyword to download my CV. 🧙‍♂️
-          </>
-        </Text>
+        <SecretModalText currentScore={currentScore} />
       </MyModal>
     </div>
   );
