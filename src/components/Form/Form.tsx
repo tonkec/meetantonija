@@ -1,5 +1,6 @@
 import { SyntheticEvent, useState } from 'react';
 import { StyledForm } from './Form.styles';
+import Text from 'components/Text';
 import Confetti from 'react-confetti';
 import useSound from 'use-sound';
 
@@ -17,6 +18,10 @@ const Form = ({ secretWord }: { secretWord: string }) => {
 
   const onFormSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
+
+    if (input.trim() === '') {
+      return;
+    }
 
     if (secretWord === input) {
       setShowConfetti(true);
@@ -42,6 +47,7 @@ const Form = ({ secretWord }: { secretWord: string }) => {
         className={shakeable ? 'shake-it' : ''}
       />
       <button>Get CV</button>
+
       {showConfetti && <Confetti height={modalHeight} width={modalWidth} />}
     </StyledForm>
   );
