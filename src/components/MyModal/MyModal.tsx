@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
 import Text from 'components/Text';
+import { useDispatch } from 'react-redux';
+import { setShowConfetti } from 'store/slices/CounterSlice';
+import Confetti from 'react-confetti';
 
 interface MyModalInterface {
   children: React.ReactNode;
@@ -34,12 +37,16 @@ const MyModal = ({
   openModalFn,
   id,
 }: MyModalInterface) => {
+  const dispatch = useDispatch();
   const [modalIsOpen, setIsOpen] = useState(false);
   const openModal = () => {
     setIsOpen(true);
     openModalFn && openModalFn();
   };
-  const closeModal = () => setIsOpen(false);
+  const closeModal = () => {
+    setIsOpen(false);
+    dispatch(setShowConfetti(false));
+  };
   return (
     <>
       <Modal
