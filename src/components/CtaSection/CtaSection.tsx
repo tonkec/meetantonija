@@ -22,8 +22,7 @@ const CtaSection = () => {
     <FlexContainer align="inherit">
       <Section backgroundColor="#ff944e" justifyContent="flex-start">
         <Text type="p" color="#ffffff">
-          ...if you want to download my CV, <br /> you should have a secret
-          word...
+          ...if you want to see my CV, <br /> you should have a secret word...
         </Text>
       </Section>
       <div
@@ -43,7 +42,7 @@ const CtaSection = () => {
               style={{ padding: '20px 50px', fontSize: '1.5rem' }}
               className="is-clickable"
             >
-              Download
+              Get CV
             </StyledButton>
           }
         >

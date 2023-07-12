@@ -6,7 +6,6 @@ import {
   increment,
   initialState,
 } from 'store/slices/CounterSlice';
-import Text from 'components/Text';
 import MyModal from 'components/MyModal';
 import SecretModalText from './SecretModalText';
 

@@ -46,6 +46,24 @@ const GlobalStyle = createGlobalStyle`
         background-color: #ff944e !important;
         color: #f5f5f5 !important;
     }
+
+   }
+
+   .shake-it {
+    
+    animation-name: horizontal-shaking;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+}
+
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
    }
 `;
 
