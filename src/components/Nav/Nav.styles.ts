@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const StyledNav = styled.nav<{ width: number; toggle: boolean }>`
+export const StyledNav = styled.nav<{ width: number }>`
   position: fixed;
   left: 0;
   top: 0;

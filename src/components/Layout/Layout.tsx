@@ -15,7 +15,7 @@ const Layout = ({ children }: LayoutInterface) => {
     setToggle(!toggle);
   };
 
-  useLayoutEffect(() => {
+  const toggleBodyOverflow = (toggle: boolean) => {
     if (toggle) {
       document
         .querySelector('body')
@@ -25,12 +25,22 @@ const Layout = ({ children }: LayoutInterface) => {
         .querySelector('body')
         ?.setAttribute('style', 'overflow-y: auto;');
     }
+  };
+
+  const onLayoutClick = () => {
+    if (toggle) {
+      onClick();
+    }
+  };
+
+  useLayoutEffect(() => {
+    toggleBodyOverflow(toggle);
   }, [toggle]);
 
   return (
     <>
       <Nav width={navWidth} onClick={onClick} toggle={toggle} />
-      <StyledLayout toggle={toggle} offset={navWidth}>
+      <StyledLayout toggle={toggle} offset={navWidth} onClick={onLayoutClick}>
         {children}
       </StyledLayout>
       <Footer offset={navWidth} toggle={toggle} />

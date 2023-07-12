@@ -32,7 +32,7 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
           onClick={onClick}
         />
       </Headroom>
-      <StyledNav width={width} toggle={toggle}>
+      <StyledNav width={width}>
         <NavbarLink to="/">
           <HiOutlineHome fontSize={20} style={{ verticalAlign: 'text-top' }} />{' '}
           <span>Home</span>
