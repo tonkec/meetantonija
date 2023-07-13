@@ -2,7 +2,7 @@ import { styled } from 'styled-components';
 
 export const StyledFooter = styled.footer<{ offset: number; toggle: boolean }>`
   padding: 100px 20px;
-  background-color: #292929;
+  background-color: #6c7698;
   position: fixed;
   bottom: 0;
   left: 0;

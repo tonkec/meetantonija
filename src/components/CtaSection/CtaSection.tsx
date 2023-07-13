@@ -20,18 +20,15 @@ const CtaSection = () => {
 
   return (
     <FlexContainer align="inherit">
-      <Section backgroundColor="#ff944e" justifyContent="flex-start">
-        <Text type="p" color="#ffffff">
-          ...if you want to see my CV, <br /> you should have a secret word...
-        </Text>
-      </Section>
       <div
         style={{
           flex: 1,
-          backgroundColor: '#005246',
+          backgroundColor: '#0047b4',
           alignItems: 'center',
           display: 'flex',
-          justifyContent: 'center',
+          justifyContent: 'flex-start',
+          paddingBottom: '10vh',
+          paddingLeft: 50,
         }}
       >
         <MyModal
@@ -39,10 +36,10 @@ const CtaSection = () => {
           modalHeading={setModalHeading()}
           opener={
             <StyledButton
-              style={{ padding: '20px 50px', fontSize: '1.5rem' }}
+              style={{ padding: '20px 50px', fontSize: '1.2rem' }}
               className="is-clickable"
             >
-              Get CV
+              Get Antonija's precious CV
             </StyledButton>
           }
         >

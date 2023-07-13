@@ -23,7 +23,7 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
             top: 10,
             left: 10,
             zIndex: 99,
-            backgroundColor: '#44756b',
+            backgroundColor: '#43CEA2',
             padding: 5,
           }}
           fontSize={40}
@@ -47,17 +47,10 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
           </NavbarLink>
         ))}
 
-        <Separator />
-
-        <NavbarLink to="mailto:antonija1023@gmail.com">
-          <FiPhone fontSize={20} style={{ verticalAlign: 'text-top' }} />{' '}
-          <span>Contact</span>
-        </NavbarLink>
-
         <Secret
           style={{ position: 'absolute', left: 15, bottom: 0 }}
           secretName="third"
-          dotBackground="#ffffff"
+          dotBackground="#0047b4"
         />
       </StyledNav>
     </>

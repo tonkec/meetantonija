@@ -25,30 +25,30 @@ const Project = () => {
 
         <FlexContainer align="flex-start" style={{ flexDirection: 'column' }}>
           <Sqaures numberOfSquares={4} containerSize={2} wrap={false} />
-          <Section
+          {/* <Section
             backgroundColor="#f5f5f5"
             text={current.headline}
             justifyContent="flex-start"
             hasPattern
             patternColors={['#005246', '#f5f5f5']}
-          />
+          /> */}
         </FlexContainer>
       </GridContainer>
-      <Section
+      {/* <Section
         backgroundColor="#f5f5f5"
         text={current.skills}
         justifyContent="flex-start"
         hasPattern
         patternColors={['#005246', '#f5f5f5']}
         textMaxWidth={400}
-      ></Section>
+      ></Section> */}
 
-      <Section
+      {/* <Section
         backgroundColor="#f5f5f5"
         text={current.description}
         justifyContent="center"
         textMaxWidth={800}
-      ></Section>
+      ></Section> */}
       <CtaSection />
     </Layout>
   );

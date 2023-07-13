@@ -16,11 +16,12 @@ const GlobalStyle = createGlobalStyle`
    html {
     font-size: 125%;
     background-color: #44756b;
+    
   } /*20px*/
   
 
    body {
-      line-height: 1.6;
+      line-height: 1.4;
       overflow-x: hidden;
     }
 
@@ -43,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
 
    .headroom--unpinned {
     svg {
-        background-color: #ff944e !important;
+        background-color: #0047B4 !important;
         color: #f5f5f5 !important;
     }
 
@@ -65,6 +66,8 @@ const GlobalStyle = createGlobalStyle`
     75% { transform: translateX(5px) }
     100% { transform: translateX(0) }
    }
+
+  
 `;
 
 export default GlobalStyle;

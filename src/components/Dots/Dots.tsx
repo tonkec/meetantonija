@@ -9,7 +9,7 @@ const Dots = () => {
       <Secret
         secretName="first"
         style={{ position: 'static', display: 'inline-block' }}
-        dotBackground="#44756b"
+        dotBackground="#0047b4"
       />
     </>
   );

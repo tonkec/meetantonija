@@ -20,7 +20,12 @@ export const H4 = styled.h4<{ $textColor?: string }>`
   font-size: 1.563rem;
 `;
 
+export const H5 = styled.h4<{ $textColor?: string }>`
+  color: ${(props) => props.$textColor || '#000000'};
+  font-size: 1.263rem;
+`;
+
 export const P = styled.p<{ $textColor?: string }>`
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: ${(props) => props.$textColor || '#000000'};
 `;

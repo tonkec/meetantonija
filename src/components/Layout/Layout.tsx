@@ -8,7 +8,7 @@ interface LayoutInterface {
 }
 
 const Layout = ({ children }: LayoutInterface) => {
-  const navWidth = 250;
+  const navWidth = 300;
   const [toggle, setToggle] = useState(false);
 
   const onClick = () => {

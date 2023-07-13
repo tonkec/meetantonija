@@ -55,7 +55,7 @@ const Footer = ({ offset, toggle }: { offset: number; toggle: boolean }) => {
       </List>
       <Secret
         style={{ position: 'absolute', right: 10, bottom: 10 }}
-        dotBackground="#44756b"
+        dotBackground="#0047b4"
         secretName="second"
       />
     </StyledFooter>
