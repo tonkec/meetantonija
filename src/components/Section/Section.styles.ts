@@ -46,12 +46,12 @@ export const StyledSection = styled.section<{
 
     if (padding === 'big') {
       return `
-        padding-top: 15vh;
+        padding-top: 25vh;
         padding-bottom: 15vh;
 
         @media ${device.laptop} {
           padding-top: 30vh;
-          padding-bottom: 30vh
+          padding-bottom: 10vh
         }
       `;
     }
@@ -62,6 +62,11 @@ export const StyledSection = styled.section<{
         padding-bottom: 0;
         padding-left: 0;
         padding-right:0;
+
+        @media ${device.laptop} {
+          padding-left: 0vw;
+          padding-right: 0vw;
+        }
       `;
     }
   }}

@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import Text from 'components/Text';
 import { useDispatch } from 'react-redux';
 import { setShowConfetti } from 'store/slices/CounterSlice';
+import { useWindowSize } from 'hooks/useWindowSize';
 
 interface MyModalInterface {
   children: React.ReactNode;
@@ -12,23 +13,6 @@ interface MyModalInterface {
   id?: string;
 }
 
-const customStyles = {
-  overlay: {
-    zIndex: 9999,
-  },
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    transform: 'translate(-50%, -50%)',
-    zIndex: 9999,
-    paddingLeft: 50,
-    paddingRight: 50,
-    paddingTop: 50,
-    paddingBottom: 50,
-  },
-};
 const MyModal = ({
   children,
   opener,
@@ -36,6 +20,7 @@ const MyModal = ({
   openModalFn,
   id,
 }: MyModalInterface) => {
+  const size = useWindowSize();
   const dispatch = useDispatch();
   const [modalIsOpen, setIsOpen] = useState(false);
   const openModal = () => {
@@ -45,6 +30,25 @@ const MyModal = ({
   const closeModal = () => {
     setIsOpen(false);
     dispatch(setShowConfetti(false));
+  };
+
+  const customStyles = {
+    overlay: {
+      zIndex: 9999,
+    },
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      transform: 'translate(-50%, -50%)',
+      zIndex: 9999,
+      paddingLeft: 50,
+      paddingRight: 50,
+      paddingTop: 50,
+      paddingBottom: 50,
+      width: `${size.width > 900 ? '50%' : '80%'}`,
+    },
   };
   return (
     <>

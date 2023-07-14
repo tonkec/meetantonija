@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
    html {
     font-size: 125%;
     background-color: #44756b;
-    
+    overflow-x: hidden;
   }
 
   ::selection {

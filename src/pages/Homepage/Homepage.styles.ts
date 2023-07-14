@@ -4,10 +4,14 @@ export const AbsoluteDiv = styled.div`
   position: absolute;
   right: 0;
   top: -80px;
-  max-width: 50%;
+  max-width: 80%;
   background-color: #0047b4;
-  padding: 50px 80px;
+  padding: 30px 50px;
   z-index: 9;
+  @media ${device.laptop} {
+    max-width: 50%;
+    padding: 50px 80px;
+  }
 `;
 
 export const BackgroundImage = styled.div<{
@@ -19,25 +23,37 @@ export const BackgroundImage = styled.div<{
 }>`
   height: 300px;
   width: 300px;
+  position: relative;
+  width: ${(props) => props.width};
+  height: ${(props) => props.height}px;
+  background-size: ${(props) => props.backgroundSize};
+  background-position: ${(props) => props.backgroundPosition};
   background-image: url(${(props) => props.image});
-  background-size: 100% auto;
   background-repeat: no-repeat;
-  background-position: center center;
-
+  margin-bottom: 20vh;
   @media ${device.laptop} {
-    width: ${(props) => props.width};
-    height: ${(props) => props.height}px;
-    background-size: ${(props) => props.backgroundSize};
-    background-position: ${(props) => props.backgroundPosition};
+    margin-bottom: 0vh;
+  }
+  div {
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: #43cea2;
+    padding: 50px 40px;
+
+    @media ${device.laptop} {
+      top: 0;
+      right: -100%;
+    }
   }
 `;
 
 export const ProjectCard = styled.div`
   position: relative;
   line-height: 1;
-  flex: 1;
   transition: all 0.5s ease-in-out;
-  min-width: 40%;
+  margin-bottom: 5vh;
 
   &::after {
     content: '';
@@ -57,12 +73,12 @@ export const ProjectCard = styled.div`
     background-color: #e6f0ff;
     height: 200px;
     padding: 50px 70px;
-    width: 90%;
+    width: 100%;
   }
 
   &:hover::after {
     height: 100%;
-    width: 90%;
+    width: 100%;
   }
 
   h3 {
@@ -102,9 +118,8 @@ export const ProjectCard = styled.div`
 export const CarouselItem = styled.div`
   background-color: #43cea2;
   padding: 50px 50px;
-  width: 90%;
-  height: 350px;
   cursor: none;
+  width: 95%;
 
   p:first-child {
     margin-bottom: 20px;
@@ -116,7 +131,6 @@ export const ButtonCopy = styled.button<{ content: string }>`
   border-width: 4px;
   border-style: solid;
   border-image: linear-gradient(to right, #000, #292929) 1;
-
   color: black;
   margin-top: 30px;
   background-color: transparent;
@@ -130,7 +144,7 @@ export const ButtonCopy = styled.button<{ content: string }>`
 
   span::after {
     content: '${(props) => props.content}';
-    display: block;
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
@@ -144,6 +158,7 @@ export const ButtonCopy = styled.button<{ content: string }>`
   }
 
   span:hover::after {
+    display: block;
     transform: translateY(0);
   }
 `;

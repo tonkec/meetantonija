@@ -19,7 +19,7 @@ type Item = {
 
 const MyAccordion = ({ items }: AccordionInterface) => {
   return (
-    <Accordion style={{ width: '50%', marginLeft: 50 }}>
+    <Accordion>
       {items.map((item) => (
         <AccordionItem style={{ marginBottom: 20 }}>
           <AccordionItemHeading

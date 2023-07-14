@@ -2,7 +2,7 @@ import { styled } from 'styled-components';
 import { device } from './devices';
 
 export const H1 = styled.h1<{ $textColor?: string }>`
-  font-size: 3rem;
+  font-size: 2.6rem;
   color: ${(props) => props.$textColor || '#000000'};
 
   @media ${device.tablet} {
@@ -39,12 +39,8 @@ export const H5 = styled.h4<{ $textColor?: string }>`
 `;
 
 export const P = styled.p<{ $textColor?: string }>`
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: ${(props) => props.$textColor || '#000000'};
-
-  @media ${device.mobileL} {
-    font-size: 1.25rem;
-  }
 
   @media ${device.tablet} {
     font-size: 1.4rem;

@@ -62,7 +62,7 @@ const Footer = ({ offset, toggle }: { offset: number; toggle: boolean }) => {
         </li>
       </List>
       <Text type="p" color="white" style={{ marginTop: 40 }}>
-        Antonija Šimić has coded this website in the year{' '}
+        Antonija Šimić has coded this website in the year of{' '}
         {new Date().getFullYear()} using{' '}
         <FiCoffee style={{ verticalAlign: 'middle' }} /> and a lots of{' '}
         <AiFillHeart style={{ verticalAlign: 'middle' }} />. <br />

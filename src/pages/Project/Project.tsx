@@ -6,7 +6,6 @@ import Text from 'components/Text/Text';
 import Section from 'components/Section/Section';
 import { FlexContainer, FlexItem } from 'styles/containers';
 import { GoArrowLeft } from 'react-icons/go';
-import { TextWrapper } from './Project.styles';
 import Sitting from 'images/sitting.jpeg';
 
 const Project = () => {
@@ -72,7 +71,7 @@ const Project = () => {
       <Section backgroundColor="#E6F0FF" padding="medium">
         <div className="row">
           <div className="col-xs-12 col-sm-6 col-md-4">
-            <Text type="h2" color="#0047B4">
+            <Text type="h2" color="#0047B4" style={{ marginBottom: 20 }}>
               Description
             </Text>
           </div>
@@ -88,7 +87,7 @@ const Project = () => {
       <Section backgroundColor="#E6F0FF" padding="medium">
         <div className="row">
           <div className="col-xs-12 col-sm-6 col-md-4">
-            <Text type="h2" color="#0047B4">
+            <Text type="h2" color="#0047B4" style={{ marginBottom: 20 }}>
               Technologies
             </Text>
           </div>
@@ -104,7 +103,7 @@ const Project = () => {
       <Section backgroundColor="#E6F0FF" padding="medium">
         <div className="row">
           <div className="col-xs-12 col-sm-6 col-md-4">
-            <Text type="h2" color="#0047B4">
+            <Text type="h2" color="#0047B4" style={{ marginBottom: 20 }}>
               Why did I stop working with them?
             </Text>
           </div>
@@ -120,17 +119,18 @@ const Project = () => {
       <Section padding="medium" backgroundColor="#0047B4">
         <div className="row">
           <div className="col-xs-12 col-sm-6 col-md-4">
-            <div className="box">
-              <img src={Sitting} width="100%" style={{ marginBottom: 30 }} />
-            </div>
+            <img
+              src={Sitting}
+              width="100%"
+              style={{ marginBottom: 30 }}
+              alt="Project"
+            />
           </div>
           <div className="col-xs-12 col-md-7 col-md-offset-1">
-            <div className="box">
-              <Text type="h2" color="white">
-                That's me sitting on a cushin. I don't have any project pictures
-                since clients really care about NDAs.
-              </Text>
-            </div>
+            <Text type="h2" color="white">
+              That's me sitting on a cushin. I don't have any project pictures
+              since clients really care about NDAs.
+            </Text>
           </div>
         </div>
       </Section>
