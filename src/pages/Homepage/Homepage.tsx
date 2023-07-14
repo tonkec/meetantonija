@@ -101,14 +101,18 @@ const Homepage = () => {
                   <Text type="h3" color="#292929">
                     {project.title}
                   </Text>
-                  <Text type="p" color="#292929" className="definition">
-                    <Link to={`project/${project.title}`}>
+                  <Link
+                    to={`project/${project.title}`}
+                    className="is-clickable"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <Text type="p" color="#292929" className="definition">
                       {project.headline}{' '}
                       <GoArrowRight
                         style={{ fontSize: '1rem', verticalAlign: 'middle' }}
                       />
-                    </Link>
-                  </Text>
+                    </Text>
+                  </Link>
                 </div>
               </ProjectCard>
             ))}
@@ -127,12 +131,18 @@ const Homepage = () => {
                   <Text type="h3" color="#292929">
                     {project.title}
                   </Text>
-                  <Text type="p" color="#292929" className="definition">
-                    {project.headline}{' '}
-                    <GoArrowRight
-                      style={{ fontSize: '1rem', verticalAlign: 'middle' }}
-                    />
-                  </Text>
+                  <Link
+                    to={`project/${project.title}`}
+                    className="is-clickable"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <Text type="p" color="#292929" className="definition">
+                      {project.headline}{' '}
+                      <GoArrowRight
+                        style={{ fontSize: '1rem', verticalAlign: 'middle' }}
+                      />
+                    </Text>
+                  </Link>
                 </div>
               </ProjectCard>
             ))}

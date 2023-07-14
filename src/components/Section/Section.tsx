@@ -4,7 +4,7 @@ import { StyledSection } from './Section.styles';
 interface SectionInterface {
   children: React.ReactNode;
   backgroundColor: string;
-  padding: 'small' | 'medium' | 'big';
+  padding: 'small' | 'medium' | 'big' | 'none';
   style?: React.CSSProperties;
 }
 

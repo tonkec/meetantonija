@@ -7,6 +7,7 @@ export const StyledSection = styled.section<{
   display: flex;
   background-color: ${(props) => props.backgroundColor};
   padding-left: 50px;
+  padding-right: 50px;
   position: relative;
   ${(props) => {
     const { padding } = props;
@@ -28,6 +29,13 @@ export const StyledSection = styled.section<{
       return `
         padding-top: 30vh;
         padding-bottom: 30vh
+      `;
+    }
+
+    if (padding === 'none') {
+      return `
+        padding-top: 0;
+        padding-bottom: 0
       `;
     }
   }}
