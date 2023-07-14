@@ -1,7 +1,6 @@
 import { NavbarLink, Separator, StyledNav } from './Nav.styles';
 import { BsChevronDoubleRight } from 'react-icons/bs';
 import { HiOutlineHome } from 'react-icons/hi';
-import { FiPhone } from 'react-icons/fi';
 import { PiRocketBold } from 'react-icons/pi';
 import data from 'data/projects.json';
 import Headroom from 'react-headroom';

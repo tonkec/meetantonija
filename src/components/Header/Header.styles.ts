@@ -7,6 +7,6 @@ export const StyledHeader = styled.header<{ backgroundColor?: string }>`
       : 'linear-gradient(2deg, #43cea2, #0047b4)'};
   padding-top: 15rem;
   padding-bottom: 10rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 4vw;
+  padding-right: 4vw;
 `;

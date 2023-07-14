@@ -24,6 +24,7 @@ const Footer = ({ offset, toggle }: { offset: number; toggle: boolean }) => {
           <a
             href="https://github.com/tonkec"
             target="_blank"
+            rel="noreferrer"
             className="is-clickable"
           >
             <LuGithub color="#ffffff" fontSize={40} />
@@ -33,6 +34,7 @@ const Footer = ({ offset, toggle }: { offset: number; toggle: boolean }) => {
           <a
             href="https://codepen.io/tonkec"
             target="_blank"
+            rel="noreferrer"
             className="is-clickable"
           >
             <ImCodepen color="#ffffff" fontSize={40} />
@@ -42,6 +44,7 @@ const Footer = ({ offset, toggle }: { offset: number; toggle: boolean }) => {
           <a
             href="https://www.linkedin.com/in/antonija-simic/"
             target="_blank"
+            rel="noreferrer"
             className="is-clickable"
           >
             <BiLogoLinkedin color="#ffffff" fontSize={40} />
@@ -51,6 +54,7 @@ const Footer = ({ offset, toggle }: { offset: number; toggle: boolean }) => {
           <a
             href="https://gist.github.com/tonkec/344482591e09ab240458ebbebbc3dc1b"
             target="_blank"
+            rel="noreferrer"
             className="is-clickable"
           >
             <TiDocument color="#ffffff" fontSize={40} />

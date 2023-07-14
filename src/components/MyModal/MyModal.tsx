@@ -3,7 +3,6 @@ import Modal from 'react-modal';
 import Text from 'components/Text';
 import { useDispatch } from 'react-redux';
 import { setShowConfetti } from 'store/slices/CounterSlice';
-import Confetti from 'react-confetti';
 
 interface MyModalInterface {
   children: React.ReactNode;

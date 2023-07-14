@@ -19,7 +19,11 @@ const GlobalStyle = createGlobalStyle`
     font-size: 125%;
     background-color: #44756b;
     
-  } /*20px*/
+  }
+
+  ::selection {
+    background-color: #A98AFE;
+  }
   
 
    body {

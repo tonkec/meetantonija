@@ -7,7 +7,6 @@ import { useWindowSize } from 'hooks/useWindowSize';
 import { useSelector } from 'react-redux';
 import { StateInterface } from 'store/slices/CounterSlice';
 import Search from 'components/Search/';
-import { SyntheticEvent } from 'react';
 
 function App() {
   const [showSearch, setShowSearch] = useState(false);

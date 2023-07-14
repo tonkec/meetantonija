@@ -1,11 +1,11 @@
 import styled from 'styled-components';
+import { device } from 'styles/devices';
 
 export const TextWrapper = styled.div`
-  &:first-child {
-    width: 25%;
-  }
-
-  &:last-child {
-    width: 75%;
+  h2 {
+    margin-bottom: 30px;
+    @media ${device.laptop} {
+      margin-bototm: ;
+    }
   }
 `;

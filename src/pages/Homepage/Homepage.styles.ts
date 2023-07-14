@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { device } from 'styles/devices';
 export const AbsoluteDiv = styled.div`
   position: absolute;
   right: 0;
@@ -17,12 +17,19 @@ export const BackgroundImage = styled.div<{
   backgroundSize: string;
   backgroundPosition: string;
 }>`
-  height: ${(props) => props.height}px;
-  width: ${(props) => props.width};
+  height: 300px;
+  width: 300px;
   background-image: url(${(props) => props.image});
-  background-size: ${(props) => props.backgroundSize};
+  background-size: 100% auto;
   background-repeat: no-repeat;
-  background-position: ${(props) => props.backgroundPosition};
+  background-position: center center;
+
+  @media ${device.laptop} {
+    width: ${(props) => props.width};
+    height: ${(props) => props.height}px;
+    background-size: ${(props) => props.backgroundSize};
+    background-position: ${(props) => props.backgroundPosition};
+  }
 `;
 
 export const ProjectCard = styled.div`
