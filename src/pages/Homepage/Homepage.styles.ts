@@ -97,6 +97,7 @@ export const CarouselItem = styled.div`
   padding: 50px 50px;
   width: 90%;
   height: 350px;
+  cursor: none;
 
   p:first-child {
     margin-bottom: 20px;

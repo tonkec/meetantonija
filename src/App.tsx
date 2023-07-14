@@ -49,11 +49,11 @@ function App() {
         outerScale={2}
         outerAlpha={0}
         innerStyle={{
-          backgroundColor: 'transparent',
+          backgroundColor: '#A98AFE',
           zIndex: 99999,
         }}
         outerStyle={{
-          border: '5px solid rgba(0,0,0,0.7)',
+          border: '5px solid #A98AFE',
           zIndex: 99999,
         }}
         clickables={[
@@ -67,7 +67,6 @@ function App() {
           'select',
           'textarea',
           'button',
-          'svg',
           '.is-clickable',
         ]}
       />

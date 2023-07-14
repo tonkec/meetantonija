@@ -162,7 +162,7 @@ const Homepage = () => {
           <Carousel show={3.5} slide={2} swiping={true} infinite={false}>
             {CarouselItems.map((item) => (
               <CarouselItem>
-                <Text type="h3" color="#292929" style={{ marginBottom: 20 }}>
+                <Text type="h4" color="#292929" style={{ marginBottom: 20 }}>
                   {item.title}
                   {item.icon()}
                 </Text>
