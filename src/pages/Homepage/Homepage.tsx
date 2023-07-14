@@ -219,10 +219,8 @@ const Homepage = () => {
                 style={{ backgroundColor: '#f5f5f5', padding: 20, height: 150 }}
               >
                 <Text type="p" color="#292929">
-                  She sometimes cleans her room... <br />
-                  <span style={{ fontSize: '80%', paddingRight: 10 }}>
-                    Antonija's Mom
-                  </span>
+                  She sometimes cleans her room. <br />
+                  <span style={{ fontSize: '80%', paddingRight: 10 }}>Mom</span>
                   <AiFillStar
                     fontSize={'80%'}
                     style={{ verticalAlign: 'middle' }}
@@ -252,9 +250,9 @@ const Homepage = () => {
                 style={{ backgroundColor: '#f5f5f5', padding: 20, height: 150 }}
               >
                 <Text type="p" color="#292929">
-                  She can count to 100 <br />
+                  She can count to 100. <br />
                   <span style={{ fontSize: '80%', paddingRight: 10 }}>
-                    Antonija's client
+                    Client
                   </span>
                   <AiFillStar
                     fontSize={'80%'}
@@ -285,9 +283,9 @@ const Homepage = () => {
                 style={{ backgroundColor: '#f5f5f5', padding: 20, height: 150 }}
               >
                 <Text type="p" color="#292929">
-                  She always comes full when I cook <br />
+                  She always comes full when I cook. <br />
                   <span style={{ fontSize: '80%', paddingRight: 10 }}>
-                    Antonija's Grandmother
+                    Grandmother
                   </span>{' '}
                   <AiFillStar
                     fontSize={'80%'}
@@ -318,9 +316,9 @@ const Homepage = () => {
                 style={{ backgroundColor: '#f5f5f5', padding: 20, height: 150 }}
               >
                 <Text type="p" color="#292929">
-                  She can change any background color <br />
+                  She definitevly knows what a div is. <br />
                   <span style={{ fontSize: '80%', paddingRight: 10 }}>
-                    Antonija's client
+                    Client
                   </span>{' '}
                   <AiFillStar
                     fontSize={'80%'}
