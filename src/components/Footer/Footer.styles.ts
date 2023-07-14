@@ -2,7 +2,7 @@ import { styled } from 'styled-components';
 
 export const StyledFooter = styled.footer<{ offset: number; toggle: boolean }>`
   padding: 100px 20px;
-  background-color: #6c7698;
+  background-color: #d65f32;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -23,7 +23,7 @@ export const StyledFooter = styled.footer<{ offset: number; toggle: boolean }>`
 export const List = styled.ul`
   list-style-type: none;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 
   li {
     margin: 0 10px;

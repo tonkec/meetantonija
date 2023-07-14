@@ -6,6 +6,7 @@ import { PiRocketBold } from 'react-icons/pi';
 import data from 'data/projects.json';
 import Headroom from 'react-headroom';
 import Secret from 'components/Secret';
+import Text from 'components/Text';
 interface NavInterface {
   onClick: () => void;
   width: number;
@@ -23,7 +24,7 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
             top: 10,
             left: 10,
             zIndex: 99,
-            backgroundColor: '#43CEA2',
+            backgroundColor: '#0047B4',
             padding: 5,
           }}
           fontSize={40}
@@ -46,6 +47,32 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
             <span>{title}</span>
           </NavbarLink>
         ))}
+
+        <Separator />
+
+        <Text
+          type="p"
+          color="#ffffff"
+          style={{ paddingRight: 20, fontSize: '100%', marginBottom: 20 }}
+        >
+          Did you know that this website has some shortcuts?
+        </Text>
+
+        <Text
+          type="p"
+          color="#ffffff"
+          style={{ paddingRight: 20, fontSize: '100%' }}
+        >
+          shift + F
+        </Text>
+
+        <Text
+          type="p"
+          color="#ffffff"
+          style={{ paddingRight: 20, fontSize: '100%' }}
+        >
+          shift + T
+        </Text>
 
         <Secret
           style={{ position: 'absolute', left: 15, bottom: 0 }}

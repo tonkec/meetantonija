@@ -20,7 +20,7 @@ export const StyledNav = styled.nav<{ width: number }>`
 `;
 
 export const Separator = styled.div`
-  background-color: #43cea2;
+  background-color: #d65f32;
   height: 5px;
   margin-top: 20px;
   margin-bottom: 50px;
@@ -35,6 +35,6 @@ export const NavbarLink = styled(Link)`
   transition: color 0.2s ease-in-out;
   &:hover {
     transform: translateY(0.5px);
-    color: #43cea2;
+    color: #d65f32;
   }
 `;

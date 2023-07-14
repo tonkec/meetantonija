@@ -79,6 +79,11 @@ export const ProjectCard = styled.div`
     padding: 20px;
     transition: all 0.5s ease-in-out;
     z-index: 2;
+
+    a {
+      text-decoration: none;
+      color: #292929;
+    }
   }
 
   &:hover .definition {

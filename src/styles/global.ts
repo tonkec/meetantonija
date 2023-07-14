@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
     }
     
     body::-webkit-scrollbar-thumb {
-        background-color: #ff944e;
+        background-color: #0047b4;
     }
 
    .headroom-wrapper {
@@ -44,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
 
    .headroom--unpinned {
     svg {
-        background-color: #0047B4 !important;
+        background-color: #D65F32 !important;
         color: #f5f5f5 !important;
     }
 

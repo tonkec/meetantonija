@@ -23,6 +23,7 @@ import {
 import { CarouselItems } from './CarouselItems';
 import Accordion from 'components/Accordion/Accordion';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
   const [copyMsg, setCopyMsg] = useState('Copy email');
@@ -31,8 +32,8 @@ const Homepage = () => {
       <main>
         <FlexContainer align="flex-start">
           <Header>
-            Hello world, I am Antonija, a frontend developer who brings ideas
-            into the life
+            Hello world, I am Antonija, a frontend developer who can change any
+            background color
             <Dots />
           </Header>
         </FlexContainer>
@@ -44,8 +45,8 @@ const Homepage = () => {
         >
           <AbsoluteDiv>
             <Text type="p" color="#E6F0FF">
-              ...I help software companies improve their product or build one
-              from scratch with a huge focus on the end users...
+              ...I once centered a div vertically and horizontally without
+              anyone's help or stack overflow...
             </Text>
           </AbsoluteDiv>
 
@@ -101,10 +102,12 @@ const Homepage = () => {
                     {project.title}
                   </Text>
                   <Text type="p" color="#292929" className="definition">
-                    {project.headline}{' '}
-                    <GoArrowRight
-                      style={{ fontSize: '1rem', verticalAlign: 'middle' }}
-                    />
+                    <Link to={`project/${project.title}`}>
+                      {project.headline}{' '}
+                      <GoArrowRight
+                        style={{ fontSize: '1rem', verticalAlign: 'middle' }}
+                      />
+                    </Link>
                   </Text>
                 </div>
               </ProjectCard>
@@ -153,7 +156,7 @@ const Homepage = () => {
                   {item.title}
                   {item.icon()}
                 </Text>
-                <Text type="p" color="#292929" style={{ fontSize: '90%' }}>
+                <Text type="p" color="#292929" style={{ fontSize: '95%' }}>
                   {item.description}
                 </Text>
               </CarouselItem>
@@ -165,7 +168,6 @@ const Homepage = () => {
           backgroundColor="#f5f5f5"
           padding="medium"
           style={{
-            paddingTop: '0px',
             paddingRight: 0,
             justifyContent: 'space-between',
           }}
@@ -195,9 +197,12 @@ const Homepage = () => {
         </Section>
 
         <Section
-          padding="medium"
+          padding="small"
           backgroundColor="#E6F0FF"
-          style={{ flexWrap: 'wrap', flexDirection: 'column' }}
+          style={{
+            flexWrap: 'wrap',
+            flexDirection: 'column',
+          }}
         >
           <Text type="h2" color="#292929" style={{ marginBottom: 50 }}>
             People said some nice <br />
@@ -207,10 +212,12 @@ const Homepage = () => {
           <FlexContainer
             align="flex-start"
             wrap={true}
-            style={{ justifyContent: 'flex-start' }}
+            style={{ justifyContent: 'flex-start', alignItems: 'normal' }}
           >
             <TestimonialCard>
-              <div style={{ backgroundColor: '#f5f5f5', padding: 20 }}>
+              <div
+                style={{ backgroundColor: '#f5f5f5', padding: 20, height: 150 }}
+              >
                 <Text type="p" color="#292929">
                   She sometimes cleans her room... <br />
                   <span style={{ fontSize: '80%', paddingRight: 10 }}>
@@ -241,7 +248,9 @@ const Homepage = () => {
             </TestimonialCard>
 
             <TestimonialCard>
-              <div style={{ backgroundColor: '#f5f5f5', padding: 20 }}>
+              <div
+                style={{ backgroundColor: '#f5f5f5', padding: 20, height: 150 }}
+              >
                 <Text type="p" color="#292929">
                   She can count to 100 <br />
                   <span style={{ fontSize: '80%', paddingRight: 10 }}>
@@ -272,7 +281,9 @@ const Homepage = () => {
             </TestimonialCard>
 
             <TestimonialCard>
-              <div style={{ backgroundColor: '#f5f5f5', padding: 20 }}>
+              <div
+                style={{ backgroundColor: '#f5f5f5', padding: 20, height: 150 }}
+              >
                 <Text type="p" color="#292929">
                   She always comes full when I cook <br />
                   <span style={{ fontSize: '80%', paddingRight: 10 }}>
@@ -303,7 +314,9 @@ const Homepage = () => {
             </TestimonialCard>
 
             <TestimonialCard>
-              <div style={{ backgroundColor: '#f5f5f5', padding: 20 }}>
+              <div
+                style={{ backgroundColor: '#f5f5f5', padding: 20, height: 150 }}
+              >
                 <Text type="p" color="#292929">
                   She can change any background color <br />
                   <span style={{ fontSize: '80%', paddingRight: 10 }}>

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Confetti from 'react-confetti';
 import AppRoutes from './routes';
 import GlobalStyle from './styles/global';
@@ -5,12 +6,30 @@ import AnimatedCursor from 'react-animated-cursor';
 import { useWindowSize } from 'hooks/useWindowSize';
 import { useSelector } from 'react-redux';
 import { StateInterface } from 'store/slices/CounterSlice';
+import Search from 'components/Search/';
+import { SyntheticEvent } from 'react';
 
 function App() {
+  const [showSearch, setShowSearch] = useState(false);
   const size = useWindowSize();
   const showConfetti = useSelector(
     (state: StateInterface) => state.counterSlice.showConfetti
   );
+  const onKeyDown = (e: KeyboardEvent) => {
+    if (e.shiftKey && e.key === 'F') {
+      setShowSearch(!showSearch);
+    }
+  };
+
+  useEffect(() => {
+    document?.querySelector('body')?.addEventListener('keydown', onKeyDown);
+
+    return () => {
+      document
+        ?.querySelector('body')
+        ?.removeEventListener('keydown', onKeyDown);
+    };
+  });
 
   return (
     <>
@@ -52,6 +71,7 @@ function App() {
           '.is-clickable',
         ]}
       />
+      <Search show={showSearch} />
       <GlobalStyle />
       <AppRoutes />
     </>
