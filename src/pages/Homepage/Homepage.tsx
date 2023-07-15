@@ -16,6 +16,7 @@ import {
   CarouselItem,
   ButtonCopy,
   TestimonialCard,
+  BackgroundImageDiv,
 } from './Homepage.styles';
 import { CarouselItems } from './CarouselItems';
 import Accordion from 'components/Accordion/Accordion';
@@ -24,8 +25,11 @@ import { Link } from 'react-router-dom';
 import { useKeenSlider } from 'keen-slider/react';
 import { useWindowSize } from 'hooks/useWindowSize';
 import 'keen-slider/keen-slider.min.css';
+import useImage from 'hooks/useImage';
 
 const Homepage = () => {
+  const loadingContact = useImage(Contact);
+  const loadingMe = useImage(Me);
   const size = useWindowSize();
   const [copyMsg, setCopyMsg] = useState('Copy email');
   const [sliderRef] = useKeenSlider({
@@ -36,6 +40,7 @@ const Homepage = () => {
       spacing: 15,
     },
   });
+
   return (
     <Layout>
       <main>
@@ -50,20 +55,8 @@ const Homepage = () => {
         </div>
 
         <Section backgroundColor="#f5f5f5" padding="big">
-          <AbsoluteDiv>
-            <Text type="p" color="#E6F0FF">
-              ...I once centered a div vertically and horizontally without
-              anyone's help...
-            </Text>
-          </AbsoluteDiv>
-          <BackgroundImage
-            image={Me}
-            width="400px"
-            height={400}
-            backgroundPosition="center center"
-            backgroundSize="cover"
-          >
-            <div>
+          {loadingMe ? (
+            <BackgroundImageDiv>
               <Text type="p" color="#292929" style={{ fontStyle: 'italic' }}>
                 "Let's pretend I said here something smart. Also, that's me in
                 the corner... that's me in the spotlight."
@@ -72,8 +65,33 @@ const Homepage = () => {
               <Text type="p" color="#292929" style={{ marginTop: 20 }}>
                 - Antonija Šimić
               </Text>
-            </div>
-          </BackgroundImage>
+            </BackgroundImageDiv>
+          ) : (
+            <BackgroundImage
+              image={Me}
+              width="400px"
+              height={400}
+              backgroundPosition="center center"
+              backgroundSize="cover"
+            >
+              <BackgroundImageDiv>
+                <Text type="p" color="#292929" style={{ fontStyle: 'italic' }}>
+                  "Let's pretend I said here something smart. Also, that's me in
+                  the corner... that's me in the spotlight."
+                </Text>
+
+                <Text type="p" color="#292929" style={{ marginTop: 20 }}>
+                  - Antonija Šimić
+                </Text>
+              </BackgroundImageDiv>
+            </BackgroundImage>
+          )}
+          <AbsoluteDiv>
+            <Text type="p" color="#E6F0FF">
+              ...I once centered a div vertically and horizontally without
+              anyone's help...
+            </Text>
+          </AbsoluteDiv>
         </Section>
 
         <Section backgroundColor="#f5f5f5" padding="medium">
@@ -352,14 +370,18 @@ const Homepage = () => {
         <Section backgroundColor="#43cea2" padding="none">
           <div className="row">
             <div className="col-xs-12 col-sm-6 col-lg-4">
-              <BackgroundImage
-                image={Contact}
-                width="100%"
-                height={400}
-                backgroundPosition="center center"
-                backgroundSize="cover"
-                style={{ margin: 0 }}
-              ></BackgroundImage>
+              {loadingContact ? (
+                <div id="spinner"></div>
+              ) : (
+                <BackgroundImage
+                  image={Contact}
+                  width="100%"
+                  height={400}
+                  backgroundPosition="center center"
+                  backgroundSize="cover"
+                  style={{ margin: 0 }}
+                ></BackgroundImage>
+              )}
             </div>
 
             <div

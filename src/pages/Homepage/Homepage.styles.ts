@@ -34,18 +34,19 @@ export const BackgroundImage = styled.div<{
   @media ${device.laptop} {
     margin-bottom: 0vh;
   }
-  div {
-    position: absolute;
-    top: 100%;
-    height: 100%;
-    width: 100%;
-    background-color: #43cea2;
-    padding: 50px 40px;
+`;
 
-    @media ${device.laptop} {
-      top: 0;
-      right: -100%;
-    }
+export const BackgroundImageDiv = styled.div`
+  position: absolute;
+  top: 100%;
+  height: 100%;
+  width: 100%;
+  background-color: #43cea2;
+  padding: 50px 40px;
+
+  @media ${device.laptop} {
+    top: 0;
+    right: -100%;
   }
 `;
 

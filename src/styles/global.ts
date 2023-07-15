@@ -31,10 +31,8 @@ const GlobalStyle = createGlobalStyle`
        box-sizing:border-box;
        font-family: 'Rubik', sans-serif; 
        cursor: none;
-
    }
    
-
    html {
     font-size: 125%;
     background-color: #44756b;
@@ -44,7 +42,6 @@ const GlobalStyle = createGlobalStyle`
   ::selection {
     background-color: #A98AFE;
   }
-  
 
    body {
       line-height: 1.4;
@@ -73,11 +70,9 @@ const GlobalStyle = createGlobalStyle`
         background-color: #D65F32 !important;
         color: #f5f5f5 !important;
     }
-
    }
 
    .shake-it {
-    
     animation-name: horizontal-shaking;
     animation-duration: .2s;
     animation-timing-function: ease-in-out;
@@ -93,7 +88,27 @@ const GlobalStyle = createGlobalStyle`
     100% { transform: translateX(0) }
    }
 
+   #spinner {
+        margin: 0 auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255,255,255,.3);
+        border-radius: 50%;
+        border-top-color: #fff;
+        animation: spin 1s ease-in-out infinite;
+        -webkit-animation: spin 1s ease-in-out infinite;
+    }
   
+    @keyframes spin {
+        to { -webkit-transform: rotate(360deg); }
+    }
+    @-webkit-keyframes spin {
+        to { -webkit-transform: rotate(360deg); }
+    }
 `;
 
 export default GlobalStyle;

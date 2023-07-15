@@ -7,6 +7,7 @@ import Section from 'components/Section/Section';
 import { FlexContainer, FlexItem } from 'styles/containers';
 import { GoArrowLeft } from 'react-icons/go';
 import Sitting from 'images/sitting.jpeg';
+import useImage from 'hooks/useImage';
 
 const Project = () => {
   const routeParams = useParams();
@@ -14,6 +15,8 @@ const Project = () => {
   const current = data.projects.filter(
     (project) => project.title.toLowerCase() === id?.toLowerCase()
   )[0];
+  const loading = useImage(Sitting);
+
   return (
     <Layout>
       <Header backgroundColor="#0047B4">
@@ -119,12 +122,11 @@ const Project = () => {
       <Section padding="medium" backgroundColor="#0047B4">
         <div className="row">
           <div className="col-xs-12 col-sm-6 col-md-4">
-            <img
-              src={Sitting}
-              width="100%"
-              style={{ marginBottom: 30 }}
-              alt="Project"
-            />
+            {loading ? (
+              <div id="spinner"></div>
+            ) : (
+              <img src={Sitting} alt="Me sitting" width="100%" />
+            )}
           </div>
           <div className="col-xs-12 col-md-7 col-md-offset-1">
             <Text type="h2" color="white">
