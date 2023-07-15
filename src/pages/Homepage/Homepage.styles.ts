@@ -3,11 +3,11 @@ import { device } from 'styles/devices';
 export const AbsoluteDiv = styled.div`
   position: absolute;
   right: 0;
-  top: -80px;
+  top: -10%;
   max-width: 80%;
   background-color: #0047b4;
-  padding: 30px 50px;
-  z-index: 9;
+  padding: 30px 20px;
+  z-index: 999;
   @media ${device.laptop} {
     max-width: 50%;
     padding: 50px 80px;

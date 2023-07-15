@@ -1,6 +1,28 @@
 import { createGlobalStyle } from 'styled-components';
-
+import { device } from './devices';
 const GlobalStyle = createGlobalStyle`
+    :root {
+        --space-unit: 1em;
+        --space-xxs:  calc(0.25 * var(--space-unit)); 
+        --space-xs:   calc(0.5 * var(--space-unit));  
+        --space-sm:   calc(0.75 * var(--space-unit)); 
+        --space-md:   calc(1.25 * var(--space-unit)); 
+        --space-lg:   calc(2 * var(--space-unit)); 
+        --space-xl:   calc(5 * var(--space-unit));   
+        --space-xxl:   calc(10.25 * var(--space-unit)); 
+    }
+
+    @media ${device.tablet} {
+        :root {
+            --space-unit: 1.7em;
+        }
+    }
+
+    @media ${device.desktop} {
+        :root {
+            --space-unit: 2em;
+        }
+    }
 
    *{
        margin: 0;
@@ -11,9 +33,7 @@ const GlobalStyle = createGlobalStyle`
        cursor: none;
 
    }
-   #root{
-       margin:0 auto;
-   }
+   
 
    html {
     font-size: 125%;

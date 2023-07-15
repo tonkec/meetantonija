@@ -5,53 +5,34 @@ export const StyledSection = styled.section<{
   padding: string;
 }>`
   background-color: ${(props) => props.backgroundColor};
-  padding-left: 3vw;
-  padding-right: 3vw;
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
   position: relative;
 
-  @media ${device.laptop} {
-    padding-left: 4vw;
-    padding-right: 4vw;
-  }
   ${(props) => {
     const { padding } = props;
     if (padding === 'small') {
       return `
-        padding-top: 3vh;
-        padding-bottom: 3vh;
-
-        @media ${device.laptop} {
-          padding-top: 5vh;
-          padding-bottom: 5vh
-        }
+        padding-top: var(--space-md);
+        padding-bottom:  var(--space-sm);
       `;
     }
 
     if (padding === 'medium') {
       return `
-        padding-top: 3vh;
-        padding-bottom: 3vh;
-
-        @media ${device.tablet} {
-          padding-top: 5vh;
-          padding-bottom: 5vh
-        }
-
-        @media ${device.laptop} {
-          padding-top: 9vh;
-          padding-bottom: 9vh
-        }
+        padding-top:var(--space-lg);
+        padding-bottom:var(--space-md);
       `;
     }
 
     if (padding === 'big') {
       return `
-        padding-top: 25vh;
-        padding-bottom: 15vh;
+        padding-top: var(--space-xxl);
+        padding-bottom: var(--space-xl);
 
-        @media ${device.laptop} {
-          padding-top: 30vh;
-          padding-bottom: 10vh
+        @media ${device.tablet} {
+          padding-top: var(--space-xl);
+          padding-bottom: var(--space-md);
         }
       `;
     }
@@ -62,11 +43,6 @@ export const StyledSection = styled.section<{
         padding-bottom: 0;
         padding-left: 0;
         padding-right:0;
-
-        @media ${device.laptop} {
-          padding-left: 0vw;
-          padding-right: 0vw;
-        }
       `;
     }
   }}

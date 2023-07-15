@@ -53,10 +53,9 @@ const Homepage = () => {
           <AbsoluteDiv>
             <Text type="p" color="#E6F0FF">
               ...I once centered a div vertically and horizontally without
-              anyone's help or stack overflow...
+              anyone's help...
             </Text>
           </AbsoluteDiv>
-
           <BackgroundImage
             image={Me}
             width="400px"
@@ -77,7 +76,7 @@ const Homepage = () => {
           </BackgroundImage>
         </Section>
 
-        <Section backgroundColor="#f5f5f5" padding="small">
+        <Section backgroundColor="#f5f5f5" padding="medium">
           <div className="row">
             <div className="col-xs-12">
               <Text type="h2" color="#292929" style={{ marginBottom: 50 }}>
@@ -187,7 +186,7 @@ const Homepage = () => {
           </div>
         </Section>
 
-        <Section padding="small" backgroundColor="#E6F0FF">
+        <Section padding="medium" backgroundColor="#E6F0FF">
           <div className="row">
             <div className="col-xs-12">
               <Text type="h2" color="#292929" style={{ marginBottom: 50 }}>
@@ -202,7 +201,6 @@ const Homepage = () => {
                   style={{
                     backgroundColor: '#f5f5f5',
                     padding: 20,
-                    height: 150,
                   }}
                 >
                   <Text type="p" color="#292929">
@@ -241,7 +239,6 @@ const Homepage = () => {
                   style={{
                     backgroundColor: '#f5f5f5',
                     padding: 20,
-                    height: 150,
                   }}
                 >
                   <Text type="p" color="#292929">
@@ -280,7 +277,6 @@ const Homepage = () => {
                   style={{
                     backgroundColor: '#f5f5f5',
                     padding: 20,
-                    height: 150,
                   }}
                 >
                   <Text type="p" color="#292929">
@@ -319,7 +315,6 @@ const Homepage = () => {
                   style={{
                     backgroundColor: '#f5f5f5',
                     padding: 20,
-                    height: 150,
                   }}
                 >
                   <Text type="p" color="#292929">

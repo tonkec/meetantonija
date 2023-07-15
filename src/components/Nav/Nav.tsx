@@ -47,32 +47,6 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
           </NavbarLink>
         ))}
 
-        <Separator />
-
-        <Text
-          type="p"
-          color="#ffffff"
-          style={{ paddingRight: 20, fontSize: '100%', marginBottom: 20 }}
-        >
-          Did you know that this website has some shortcuts?
-        </Text>
-
-        <Text
-          type="p"
-          color="#ffffff"
-          style={{ paddingRight: 20, fontSize: '100%' }}
-        >
-          shift + F
-        </Text>
-
-        <Text
-          type="p"
-          color="#ffffff"
-          style={{ paddingRight: 20, fontSize: '100%' }}
-        >
-          shift + T
-        </Text>
-
         <Secret
           style={{ position: 'absolute', left: 15, bottom: 0 }}
           secretName="third"
