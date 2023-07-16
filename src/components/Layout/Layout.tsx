@@ -1,13 +1,16 @@
-import { useState, useLayoutEffect } from 'react';
+import { useState, useLayoutEffect, useRef, forwardRef } from 'react';
 import Footer from 'components/Footer';
 import Nav from 'components/Nav';
 import { StyledLayout } from './Layout.styles';
+import { motion } from 'framer-motion';
 
 interface LayoutInterface {
   children: React.ReactNode;
 }
 
 const Layout = ({ children }: LayoutInterface) => {
+  const footer = useRef<HTMLDivElement>(null);
+  const section = useRef<HTMLDivElement>(null);
   const navWidth = 300;
   const [toggle, setToggle] = useState(false);
 
@@ -34,17 +37,28 @@ const Layout = ({ children }: LayoutInterface) => {
   };
 
   useLayoutEffect(() => {
+    const footerHeight = footer?.current?.clientHeight;
+    section.current?.setAttribute('style', `margin-bottom: ${footerHeight}px`);
     toggleBodyOverflow(toggle);
   }, [toggle]);
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <Nav width={navWidth} onClick={onClick} toggle={toggle} />
-      <StyledLayout toggle={toggle} offset={navWidth} onClick={onLayoutClick}>
+      <StyledLayout
+        ref={section}
+        toggle={toggle}
+        offset={navWidth}
+        onClick={onLayoutClick}
+      >
         {children}
       </StyledLayout>
-      <Footer offset={navWidth} toggle={toggle} />
-    </>
+      <Footer ref={footer} offset={navWidth} toggle={toggle} />
+    </motion.div>
   );
 };
 

@@ -1,4 +1,4 @@
-import { useLayoutEffect } from 'react';
+import { useEffect, forwardRef } from 'react';
 import { List, StyledFooter } from './Footer.styles';
 import { ImCodepen } from 'react-icons/im';
 import { BiLogoLinkedin } from 'react-icons/bi';
@@ -9,16 +9,14 @@ import Text from 'components/Text';
 import { FiCoffee } from 'react-icons/fi';
 import { AiFillHeart } from 'react-icons/ai';
 
-const Footer = ({ offset, toggle }: { offset: number; toggle: boolean }) => {
-  useLayoutEffect(() => {
-    const siblingElement =
-      document.querySelector('footer')?.previousElementSibling;
-    const footerHeight = document.querySelector('footer')?.offsetHeight;
-    siblingElement?.setAttribute('style', `margin-bottom: ${footerHeight}px`);
-  }, []);
+type PropsType = {
+  offset: number;
+  toggle: boolean;
+};
 
+const Footer = forwardRef<HTMLElement, PropsType>(({ offset, toggle }, ref) => {
   return (
-    <StyledFooter offset={offset} toggle={toggle}>
+    <StyledFooter ref={ref} offset={offset} toggle={toggle}>
       <List>
         <li>
           <a
@@ -79,6 +77,6 @@ const Footer = ({ offset, toggle }: { offset: number; toggle: boolean }) => {
       />
     </StyledFooter>
   );
-};
+});
 
 export default Footer;

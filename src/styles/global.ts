@@ -35,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
    
    html {
     font-size: 125%;
-    background-color: #44756b;
+    background-color: #ffffff;
     overflow-x: hidden;
   }
 

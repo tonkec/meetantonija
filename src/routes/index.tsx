@@ -1,14 +1,19 @@
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, useLocation, BrowserRouter } from 'react-router-dom';
 import Homepage from 'pages/Homepage/Homepage';
 import Project from 'pages/Project';
+import { AnimatePresence } from 'framer-motion';
 
-const AppRoutes = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Homepage />} />
-      <Route path="/project/:id" element={<Project />} />
-    </Routes>
-  </BrowserRouter>
-);
+const AnimatedRoutes = () => {
+  const location = useLocation();
 
-export default AppRoutes;
+  return (
+    <AnimatePresence onExitComplete={() => window.scrollTo(0, 0)}>
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/project/:id" element={<Project />} />
+      </Routes>
+    </AnimatePresence>
+  );
+};
+
+export default AnimatedRoutes;

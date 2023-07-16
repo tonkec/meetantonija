@@ -7,6 +7,8 @@ import { useWindowSize } from 'hooks/useWindowSize';
 import { useSelector } from 'react-redux';
 import { StateInterface } from 'store/slices/CounterSlice';
 import Search from 'components/Search/';
+import { BrowserRouter } from 'react-router-dom';
+import AnimatedRoutes from './routes';
 
 function App() {
   const [showSearch, setShowSearch] = useState(false);
@@ -71,7 +73,9 @@ function App() {
       />
       <Search show={showSearch} />
       <GlobalStyle />
-      <AppRoutes />
+      <BrowserRouter>
+        <AnimatedRoutes />
+      </BrowserRouter>
     </>
   );
 }

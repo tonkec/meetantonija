@@ -143,18 +143,14 @@ const Homepage = () => {
                   <div className="keen-slider__slide">
                     <CarouselItem>
                       <Text
-                        type="h4"
+                        type="h3"
                         color="#292929"
                         style={{ marginBottom: 20 }}
                       >
                         {item.title}
                         {item.icon()}
                       </Text>
-                      <Text
-                        type="p"
-                        color="#292929"
-                        style={{ fontSize: '95%' }}
-                      >
+                      <Text type="p" color="#292929">
                         {item.description}
                       </Text>
                     </CarouselItem>
