@@ -131,7 +131,7 @@ const Project = () => {
           </div>
           <div className="col-xs-12 col-md-7 col-md-offset-1">
             <Text type="h2" color="white">
-              That's me sitting on a cushin. I don't have any project pictures
+              That's me sitting on a cushion. I don't have any project pictures
               since clients really care about NDAs.
             </Text>
           </div>
