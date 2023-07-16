@@ -1,4 +1,4 @@
-import { useEffect, forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { List, StyledFooter } from './Footer.styles';
 import { ImCodepen } from 'react-icons/im';
 import { BiLogoLinkedin } from 'react-icons/bi';

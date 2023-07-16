@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Homepage from 'pages/Homepage/Homepage';
 import Project from 'pages/Project';
 import { AnimatePresence } from 'framer-motion';

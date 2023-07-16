@@ -6,6 +6,7 @@ import data from 'data/projects.json';
 import Headroom from 'react-headroom';
 import Secret from 'components/Secret';
 import { useEffect, useRef } from 'react';
+import Text from 'components/Text';
 interface NavInterface {
   onClick: () => void;
   width: number;
@@ -58,6 +59,12 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
             <span>{title}</span>
           </NavbarLink>
         ))}
+
+        <Separator />
+
+        <Text type="p" color="white">
+          Shift + F
+        </Text>
 
         <Secret
           style={{ position: 'absolute', left: 15, bottom: 0 }}

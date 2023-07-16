@@ -5,6 +5,7 @@ export interface StateInterface {
     keys: string[];
     secretWord: string | null;
     showConfetti: boolean;
+    showSearch: boolean;
   };
 }
 
@@ -12,6 +13,7 @@ export const initialState = {
   keys: ['first', 'second', 'third'],
   secretWord: null,
   showConfetti: false,
+  showSearch: false,
 };
 
 export const counterSlice = createSlice({
@@ -31,9 +33,12 @@ export const counterSlice = createSlice({
     setShowConfetti: (state, action) => {
       state.showConfetti = action.payload;
     },
+    setShowSearch: (state, action) => {
+      state.showSearch = action.payload;
+    },
   },
 });
 
-export const { increment, setSecretWord, setShowConfetti } =
+export const { increment, setSecretWord, setShowConfetti, setShowSearch } =
   counterSlice.actions;
 export default counterSlice.reducer;

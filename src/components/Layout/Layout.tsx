@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect, useRef, forwardRef } from 'react';
+import { useState, useLayoutEffect, useRef } from 'react';
 import Footer from 'components/Footer';
 import Nav from 'components/Nav';
 import { StyledLayout } from './Layout.styles';
