@@ -5,15 +5,27 @@ import { PiRocketBold } from 'react-icons/pi';
 import data from 'data/projects.json';
 import Headroom from 'react-headroom';
 import Secret from 'components/Secret';
-import Text from 'components/Text';
+import { useEffect, useRef } from 'react';
 interface NavInterface {
   onClick: () => void;
   width: number;
   toggle: boolean;
 }
 const Nav = ({ onClick, width, toggle }: NavInterface) => {
+  const nav = useRef<HTMLElement>(null);
   const titles = data.projects.map((project) => project.title);
 
+  useEffect(() => {
+    if (!toggle) {
+      setTimeout(() => {
+        nav?.current?.setAttribute('style', 'display: none');
+      }, 500);
+    }
+
+    if (toggle) {
+      nav?.current?.setAttribute('style', 'display: block');
+    }
+  }, [toggle]);
   return (
     <>
       <Headroom>
@@ -32,7 +44,7 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
           onClick={onClick}
         />
       </Headroom>
-      <StyledNav width={width}>
+      <StyledNav width={width} ref={nav}>
         <NavbarLink to="/">
           <HiOutlineHome fontSize={20} style={{ verticalAlign: 'text-top' }} />{' '}
           <span>Home</span>

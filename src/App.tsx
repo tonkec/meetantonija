@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Confetti from 'react-confetti';
-import AppRoutes from './routes';
 import GlobalStyle from './styles/global';
 import AnimatedCursor from 'react-animated-cursor';
 import { useWindowSize } from 'hooks/useWindowSize';
