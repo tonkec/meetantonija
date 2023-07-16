@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import Header from 'components/Header/Header';
 import data from 'data/projects.json';
 import Layout from 'components/Layout/Layout';
@@ -8,15 +8,26 @@ import { FlexContainer, FlexItem } from 'styles/containers';
 import { GoArrowLeft } from 'react-icons/go';
 import Sitting from 'images/sitting.jpeg';
 import useImage from 'hooks/useImage';
-import ContactMe from 'components/ContactMe';
+import { NextProjectButton } from './Project.styles';
+import { GoArrowRight } from 'react-icons/go';
+import { ProjectType } from 'components/Search/Search';
 
 const Project = () => {
+  const loading = useImage(Sitting);
+  const navigate = useNavigate();
   const routeParams = useParams();
   const { id } = routeParams;
   const current = data.projects.filter(
     (project) => project.title.toLowerCase() === id?.toLowerCase()
   )[0];
-  const loading = useImage(Sitting);
+  const nextTwoProjects = data.projects
+    .filter((project) => project !== current)
+    .sort(() => 0.5 - Math.random())
+    .splice(0, 2);
+
+  const navigateToNextProject = (project: ProjectType) => {
+    navigate(`/project/${project.title.toLowerCase()}`);
+  };
 
   return (
     <Layout>
@@ -134,6 +145,31 @@ const Project = () => {
               That's me sitting on a cushion. I don't have any project pictures
               since clients really care about NDAs.
             </Text>
+          </div>
+        </div>
+      </Section>
+
+      <Section backgroundColor="#E6F0FF" padding="none">
+        <div className="row">
+          <div className="col-xs-12 col-md-6" style={{ padding: 0 }}>
+            <div>
+              <NextProjectButton
+                background="#43cea2"
+                onClick={() => navigateToNextProject(nextTwoProjects[0])}
+              >
+                {nextTwoProjects[0].title}{' '}
+                <GoArrowRight style={{ verticalAlign: 'middle' }} />
+              </NextProjectButton>
+            </div>
+          </div>
+          <div className="col-xs-12 col-md-6" style={{ padding: 0 }}>
+            <NextProjectButton
+              background="#58A9FF"
+              onClick={() => navigateToNextProject(nextTwoProjects[1])}
+            >
+              {nextTwoProjects[1].title}{' '}
+              <GoArrowRight style={{ verticalAlign: 'middle' }} />
+            </NextProjectButton>
           </div>
         </div>
       </Section>

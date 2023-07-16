@@ -25,7 +25,7 @@
       "description": "My task was setting a communication between the app and the RaiseNow API. RaiseNow iframe with form was injected into the template. I then had to send data from the form, as well as the data from the previous step, to the API. If there was an error in the form, it should be displayed to the user. The whole integration had to show states based on the connection status. I do not usually code in Angular, that is why this project had steep learning curve. I was able to quickly pick up core Angular and RxJs concepts. I also implemented different layout based on the status of internet connection. I learned a lot about service workers which I used here for caching assets.",
       "link": "https://app.formunauts.com/auth/login",
       "year": 2020,
-      "reason": "Here I was working per month basis. At the end of each month they would tell me if there is more tasks for me. Since this is a startup, it depended on investors. "
+      "reason": "Here I was working per month basis. At the end of each month they would tell me if there are more tasks for me. Since this is a startup, it depended on investors. "
     },
     {
       "title": "Craftstrom",

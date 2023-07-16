@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { StateInterface, setShowSearch } from 'store/slices/CounterSlice';
 
-interface Project {
+export interface ProjectType {
   title: string;
   description: string;
   skills: string;
@@ -24,7 +24,7 @@ const Search = () => {
   );
 
   const [value, setValue] = useState('');
-  const [results, setResults] = useState<Project[]>([]);
+  const [results, setResults] = useState<ProjectType[]>([]);
 
   const onInputChange = (e: SyntheticEvent) => {
     const target = e.target as HTMLInputElement;
