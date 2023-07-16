@@ -8,6 +8,7 @@ import { FlexContainer, FlexItem } from 'styles/containers';
 import { GoArrowLeft } from 'react-icons/go';
 import Sitting from 'images/sitting.jpeg';
 import useImage from 'hooks/useImage';
+import ContactMe from 'components/ContactMe';
 
 const Project = () => {
   const routeParams = useParams();
@@ -139,8 +140,13 @@ const Project = () => {
 
       <Section
         padding="medium"
-        backgroundColor="#43CEA2"
-        style={{ justifyContent: 'center', textAlign: 'center' }}
+        backgroundColor="#E6F0FF"
+        style={{
+          textAlign: 'center',
+          height: '80vh',
+          display: 'flex',
+          alignItems: 'center',
+        }}
       >
         <div>
           <Text type="h1" color="#292929">

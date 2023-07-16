@@ -1,5 +1,6 @@
 import Text from 'components/Text';
 import { StyledHeader } from './Header.styles';
+import { MainContainer } from 'styles/containers';
 const Header = ({
   children,
   backgroundColor,
@@ -9,9 +10,11 @@ const Header = ({
 }) => {
   return (
     <StyledHeader backgroundColor={backgroundColor}>
-      <Text type="h1" color="#fff">
-        {children}
-      </Text>
+      <MainContainer>
+        <Text type="h1" color="#fff">
+          {children}
+        </Text>
+      </MainContainer>
     </StyledHeader>
   );
 };

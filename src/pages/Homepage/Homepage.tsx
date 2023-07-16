@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Header from 'components/Header';
 import Section from 'components/Section';
 import CtaSection from 'components/CtaSection';
@@ -8,13 +7,11 @@ import Layout from 'components/Layout';
 import { GoArrowRight } from 'react-icons/go';
 import Text from 'components/Text/Text';
 import Me from 'images/ja.jpeg';
-import Contact from 'images/contact.jpeg';
 import {
   AbsoluteDiv,
   BackgroundImage,
   ProjectCard,
   CarouselItem,
-  ButtonCopy,
   TestimonialCard,
   BackgroundImageDiv,
 } from './Homepage.styles';
@@ -26,12 +23,11 @@ import { useKeenSlider } from 'keen-slider/react';
 import { useWindowSize } from 'hooks/useWindowSize';
 import 'keen-slider/keen-slider.min.css';
 import useImage from 'hooks/useImage';
+import ContactMe from 'components/ContactMe';
 
 const Homepage = () => {
-  const loadingContact = useImage(Contact);
   const loadingMe = useImage(Me);
   const size = useWindowSize();
-  const [copyMsg, setCopyMsg] = useState('Copy email');
   const [sliderRef] = useKeenSlider({
     mode: 'free-snap',
     slides: {
@@ -363,65 +359,7 @@ const Homepage = () => {
           </div>
         </Section>
 
-        <Section backgroundColor="#43cea2" padding="none">
-          <div className="row">
-            <div className="col-xs-12 col-sm-6 col-lg-4">
-              {loadingContact ? (
-                <div id="spinner"></div>
-              ) : (
-                <BackgroundImage
-                  image={Contact}
-                  width="100%"
-                  height={400}
-                  backgroundPosition="center center"
-                  backgroundSize="cover"
-                  style={{ margin: 0 }}
-                ></BackgroundImage>
-              )}
-            </div>
-
-            <div
-              className="col-xs-12 col-sm-6 col-lg-8"
-              style={{ padding: '50px 40px' }}
-            >
-              <Text type="h2" color="#292929">
-                Do you have a project for me?
-              </Text>
-
-              <ButtonCopy
-                content={copyMsg}
-                onClick={() => {
-                  setCopyMsg('Copied!');
-                  setTimeout(() => {
-                    setCopyMsg('Copy email');
-                  }, 1000);
-                  navigator.clipboard.writeText('antonija1023@gmail.com');
-                }}
-              >
-                <span>Email me</span>
-              </ButtonCopy>
-            </div>
-          </div>
-        </Section>
-
-        <Section
-          backgroundColor="#0047b4"
-          padding="medium"
-          style={{ paddingBottom: 0 }}
-        >
-          <Text type="h2" color="white" style={{ marginBottom: 30 }}>
-            Wait... it's not over yet...
-          </Text>
-
-          <Text type="p" color="white">
-            Are you ready for some treasure hunt? You see many recruiters want
-            my CV, but I never know what they do with it afterwards. So this is
-            how we are going to play. I hid some secret boxes on this website
-            and if you want my CV, you will have to collect them all. That means
-            there is an input field waiting for a secret word that will open up
-            my CV.
-          </Text>
-        </Section>
+        <ContactMe />
 
         <CtaSection />
       </main>

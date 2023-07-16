@@ -1,4 +1,5 @@
 import { StyledSection } from './Section.styles';
+import { MainContainer } from 'styles/containers';
 
 interface SectionInterface {
   children: React.ReactNode;
@@ -19,7 +20,7 @@ const Section = ({
       padding={padding}
       backgroundColor={backgroundColor}
     >
-      {children}
+      <MainContainer>{children}</MainContainer>
     </StyledSection>
   );
 };

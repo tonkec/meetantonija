@@ -1,6 +1,12 @@
 import { styled } from 'styled-components';
 import { device } from './devices';
 
+export const MainContainer = styled.div`
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+`;
+
 export const FlexContainer = styled.div<{ align: string; wrap?: boolean }>`
   display: flex;
   align-items: ${(props) => props.align};
