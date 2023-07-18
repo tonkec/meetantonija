@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Footer from 'components/Footer';
 import Nav from 'components/Nav';
 import { StyledLayout } from './Layout.styles';
@@ -36,9 +36,14 @@ const Layout = ({ children }: LayoutInterface) => {
     }
   };
 
-  useLayoutEffect(() => {
-    const footerHeight = footer?.current?.clientHeight;
-    section.current?.setAttribute('style', `margin-bottom: ${footerHeight}px`);
+  useEffect(() => {
+    setTimeout(() => {
+      const footerHeight = footer?.current?.getBoundingClientRect().height;
+      section.current?.setAttribute(
+        'style',
+        `margin-bottom: ${footerHeight}px`
+      );
+    }, 0);
     toggleBodyOverflow(toggle);
   }, [toggle]);
 
