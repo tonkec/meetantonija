@@ -6,7 +6,7 @@ import { useWindowSize } from 'hooks/useWindowSize';
 import { useSelector } from 'react-redux';
 import { StateInterface, setShowSearch } from 'store/slices/CounterSlice';
 import Search from 'components/Search/';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import AnimatedRoutes from './routes';
 import { useDispatch } from 'react-redux';
 import { Circles } from 'react-loader-spinner';
@@ -103,10 +103,10 @@ function App() {
       />
 
       <GlobalStyle />
-      <BrowserRouter>
+      <HashRouter>
         <Search />
         <AnimatedRoutes />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
