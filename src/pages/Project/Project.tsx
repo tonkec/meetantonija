@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import Header from 'components/Header/Header';
 import data from 'data/projects.json';
@@ -8,11 +9,13 @@ import { FlexContainer, FlexItem } from 'styles/containers';
 import { GoArrowLeft } from 'react-icons/go';
 import Sitting from 'images/sitting.jpeg';
 import useImage from 'hooks/useImage';
-import { NextProjectButton } from './Project.styles';
+import { NextProjectButton, Pattern } from './Project.styles';
 import { GoArrowRight } from 'react-icons/go';
 import { ProjectType } from 'components/Search/Search';
 import { Circles } from 'react-loader-spinner';
 const Project = () => {
+  const nextProjectBox = useRef<HTMLDivElement>(null);
+  const patternBox = useRef<HTMLDivElement>(null);
   const loading = useImage(Sitting);
   const navigate = useNavigate();
   const routeParams = useParams();
@@ -22,12 +25,19 @@ const Project = () => {
   )[0];
   const nextTwoProjects = data.projects
     .filter((project) => project !== current)
-    .sort(() => 0.5 - Math.random())
-    .splice(0, 2);
+    .sort(() => 0.5 - Math.random());
 
   const navigateToNextProject = (project: ProjectType) => {
     navigate(`/project/${project.title.toLowerCase()}`);
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      const projectHeight =
+        nextProjectBox?.current?.getBoundingClientRect().height;
+      patternBox?.current?.setAttribute('style', `height: ${projectHeight}px`);
+    }, 0);
+  }, []);
 
   return (
     <Layout>
@@ -167,28 +177,27 @@ const Project = () => {
           </div>
         </div>
       </Section>
+      {/* 
+      <Section backgroundColor="#43cea2" padding="medium">
+        <Text type="h2" color="#292929">
+          What else can I show you?
+        </Text>
+      </Section> */}
 
       <Section backgroundColor="#E6F0FF" padding="none">
         <div className="row">
-          <div className="col-xs-12 col-md-6" style={{ padding: 0 }}>
-            <div>
+          <div className="col-xs-12 col-md-12">
+            <Pattern>
               <NextProjectButton
-                background="#43cea2"
+                background="#292929"
                 onClick={() => navigateToNextProject(nextTwoProjects[0])}
               >
-                {nextTwoProjects[0].title}{' '}
-                <GoArrowRight style={{ verticalAlign: 'middle' }} />
+                <button>
+                  {nextTwoProjects[0].title}{' '}
+                  <GoArrowRight style={{ verticalAlign: 'middle' }} />
+                </button>
               </NextProjectButton>
-            </div>
-          </div>
-          <div className="col-xs-12 col-md-6" style={{ padding: 0 }}>
-            <NextProjectButton
-              background="#58A9FF"
-              onClick={() => navigateToNextProject(nextTwoProjects[1])}
-            >
-              {nextTwoProjects[1].title}{' '}
-              <GoArrowRight style={{ verticalAlign: 'middle' }} />
-            </NextProjectButton>
+            </Pattern>
           </div>
         </div>
       </Section>
