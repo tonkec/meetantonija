@@ -9,7 +9,7 @@ import Search from 'components/Search/';
 import { HashRouter } from 'react-router-dom';
 import AnimatedRoutes from './routes';
 import { useDispatch } from 'react-redux';
-import { Circles } from 'react-loader-spinner';
+import { ColorRing } from 'react-loader-spinner';
 function App() {
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
@@ -52,14 +52,14 @@ function App() {
         alignItems: 'center',
       }}
     >
-      <Circles
+      <ColorRing
+        visible={true}
         height="80"
         width="80"
-        color="#43cea2"
-        ariaLabel="circles-loading"
+        ariaLabel="blocks-loading"
         wrapperStyle={{}}
-        wrapperClass=""
-        visible={true}
+        wrapperClass="blocks-wrapper"
+        colors={['#43cea2', '#43cea2', '#43cea2', '#43cea2', '#43cea2']}
       />
     </div>
   ) : (

@@ -12,7 +12,7 @@ import useImage from 'hooks/useImage';
 import { NextProjectButton, Pattern } from './Project.styles';
 import { GoArrowRight } from 'react-icons/go';
 import { ProjectType } from 'components/Search/Search';
-import { Circles } from 'react-loader-spinner';
+import { ColorRing } from 'react-loader-spinner';
 const Project = () => {
   const nextProjectBox = useRef<HTMLDivElement>(null);
   const patternBox = useRef<HTMLDivElement>(null);
@@ -155,14 +155,20 @@ const Project = () => {
                   alignItems: 'center',
                 }}
               >
-                <Circles
+                <ColorRing
+                  visible={true}
                   height="80"
                   width="80"
-                  color="white"
-                  ariaLabel="circles-loading"
+                  ariaLabel="blocks-loading"
                   wrapperStyle={{}}
-                  wrapperClass=""
-                  visible={true}
+                  wrapperClass="blocks-wrapper"
+                  colors={[
+                    '#43cea2',
+                    '#43cea2',
+                    '#43cea2',
+                    '#43cea2',
+                    '#43cea2',
+                  ]}
                 />
               </div>
             ) : (

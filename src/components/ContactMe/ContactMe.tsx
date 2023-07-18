@@ -4,7 +4,7 @@ import useImage from 'hooks/useImage';
 import Contact from 'images/contact.jpeg';
 import { BackgroundImage, ButtonCopy } from 'pages/Homepage/Homepage.styles';
 import Text from 'components/Text';
-import { Circles } from 'react-loader-spinner';
+import { ColorRing } from 'react-loader-spinner';
 
 const ContactMe = () => {
   const loadingContact = useImage(Contact);
@@ -25,14 +25,14 @@ const ContactMe = () => {
                 alignItems: 'center',
               }}
             >
-              <Circles
+              <ColorRing
+                visible={true}
                 height="80"
                 width="80"
-                color="white"
-                ariaLabel="circles-loading"
+                ariaLabel="blocks-loading"
                 wrapperStyle={{}}
-                wrapperClass=""
-                visible={true}
+                wrapperClass="blocks-wrapper"
+                colors={['#43cea2', '#43cea2', '#43cea2', '#43cea2', '#43cea2']}
               />
             </div>
           ) : (
