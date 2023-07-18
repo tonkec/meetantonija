@@ -3,9 +3,8 @@ import { StyledForm } from './Form.styles';
 import useSound from 'use-sound';
 import { useDispatch } from 'react-redux';
 import { setShowConfetti } from 'store/slices/CounterSlice';
-
-const sound = require('sounds/cheer.mp3');
-const fail = require('sounds/incorrect.mp3');
+import sound from 'sounds/cheer.mp3';
+import fail from 'sounds/incorrect.mp3';
 
 const Form = ({ secretWord }: { secretWord: string }) => {
   const dispatch = useDispatch();

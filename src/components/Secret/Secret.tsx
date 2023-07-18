@@ -8,8 +8,7 @@ import {
 } from 'store/slices/CounterSlice';
 import MyModal from 'components/MyModal';
 import SecretModalText from './SecretModalText';
-
-const sound = require('sounds/bell.mp3');
+import sound from 'sounds/bell.mp3';
 
 interface SecretInterface {
   secretName: string;
