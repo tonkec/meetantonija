@@ -4,6 +4,7 @@ import useImage from 'hooks/useImage';
 import Contact from 'images/contact.jpeg';
 import { BackgroundImage, ButtonCopy } from 'pages/Homepage/Homepage.styles';
 import Text from 'components/Text';
+import { Circles } from 'react-loader-spinner';
 
 const ContactMe = () => {
   const loadingContact = useImage(Contact);
@@ -14,7 +15,26 @@ const ContactMe = () => {
       <div className="row">
         <div className="col-xs-12 col-sm-6 col-lg-4">
           {loadingContact ? (
-            <div id="spinner"></div>
+            <div
+              style={{
+                position: 'relative',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <Circles
+                height="80"
+                width="80"
+                color="white"
+                ariaLabel="circles-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+              />
+            </div>
           ) : (
             <BackgroundImage
               image={Contact}

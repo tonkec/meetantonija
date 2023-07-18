@@ -11,7 +11,7 @@ import useImage from 'hooks/useImage';
 import { NextProjectButton } from './Project.styles';
 import { GoArrowRight } from 'react-icons/go';
 import { ProjectType } from 'components/Search/Search';
-
+import { Circles } from 'react-loader-spinner';
 const Project = () => {
   const loading = useImage(Sitting);
   const navigate = useNavigate();
@@ -135,7 +135,26 @@ const Project = () => {
         <div className="row">
           <div className="col-xs-12 col-sm-6 col-md-4">
             {loading ? (
-              <div id="spinner"></div>
+              <div
+                style={{
+                  position: 'relative',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                <Circles
+                  height="80"
+                  width="80"
+                  color="white"
+                  ariaLabel="circles-loading"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                  visible={true}
+                />
+              </div>
             ) : (
               <img src={Sitting} alt="Me sitting" width="100%" />
             )}
