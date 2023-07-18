@@ -62,7 +62,7 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
 
         <Separator />
 
-        <Text type="p" color="white">
+        <Text type="p" color="white" style={{ fontSize: '100%' }}>
           Shift + F
         </Text>
 
