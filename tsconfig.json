@@ -17,6 +17,6 @@
     "jsx": "react-jsx",
     "baseUrl": "src"
   },
-  "include": ["src", "typings"],
-  "typeRoots": ["node_modules/@types", "typings/"]
+  "include": ["src"],
+  "typeRoots": ["node_modules/@types"]
 }
