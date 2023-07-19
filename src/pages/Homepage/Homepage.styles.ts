@@ -168,7 +168,6 @@ export const TestimonialCard = styled.div`
   padding: 40px;
   background-image: radial-gradient(black 1.5px, transparent 1.5px);
   background-size: calc(10 * 1.5px) calc(10 * 1.5px);
-  margin-right: 20px;
   flex-basis: calc(50% - 100px);
   margin-bottom: 30px;
 `;
@@ -200,6 +199,6 @@ export const SeeMore = styled.a`
   transition: background-color 0.5s ease-in-out;
 
   &:hover {
-    background-color: #002500;
+    background-color: #6c7698;
   }
 `;

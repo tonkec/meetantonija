@@ -186,7 +186,7 @@ const Homepage = () => {
                     color="white"
                     style={{ marginTop: 50, textAlign: 'center' }}
                   >
-                    I barf in pure CSS!
+                    I bark in pure CSS!
                   </Text>
                 </PenContainer>
               </div>
