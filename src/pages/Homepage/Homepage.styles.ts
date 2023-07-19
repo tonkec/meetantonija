@@ -117,7 +117,7 @@ export const ProjectCard = styled.div`
 `;
 
 export const CarouselItem = styled.div`
-  background-color: #43cea2;
+  background-color: #e6f0ff;
   padding: 50px 50px;
   cursor: none;
   width: 95%;
@@ -171,4 +171,35 @@ export const TestimonialCard = styled.div`
   margin-right: 20px;
   flex-basis: calc(50% - 100px);
   margin-bottom: 30px;
+`;
+
+export const PenContainer = styled.a<{ backgroundColor: string }>`
+  background-color: ${(props) => props.backgroundColor};
+  border-radius: 10px;
+  padding: 50px 20px;
+  height: 450px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+`;
+
+export const SeeMore = styled.a`
+  background-color: #292929;
+  height: 450px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.5s ease-in-out;
+
+  &:hover {
+    background-color: #002500;
+  }
 `;

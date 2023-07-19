@@ -183,12 +183,6 @@ const Project = () => {
           </div>
         </div>
       </Section>
-      {/* 
-      <Section backgroundColor="#43cea2" padding="medium">
-        <Text type="h2" color="#292929">
-          What else can I show you?
-        </Text>
-      </Section> */}
 
       <Section backgroundColor="#E6F0FF" padding="none">
         <div className="row">
@@ -210,7 +204,7 @@ const Project = () => {
 
       <Section
         padding="medium"
-        backgroundColor="#E6F0FF"
+        backgroundColor="#43cea2"
         style={{
           textAlign: 'center',
           height: '80vh',

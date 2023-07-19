@@ -14,6 +14,8 @@ import {
   CarouselItem,
   TestimonialCard,
   BackgroundImageDiv,
+  PenContainer,
+  SeeMore,
 } from './Homepage.styles';
 import { CarouselItems } from './CarouselItems';
 import Accordion from 'components/Accordion/Accordion';
@@ -24,6 +26,9 @@ import { useWindowSize } from 'hooks/useWindowSize';
 import 'keen-slider/keen-slider.min.css';
 import useImage from 'hooks/useImage';
 import ContactMe from 'components/ContactMe';
+import Dog from 'components/Pens/Dog/Dog';
+import { MainContainer } from 'styles/containers';
+import BeardedMan from 'components/Pens/BeardedMan/BeardedMan';
 
 const Homepage = () => {
   const loadingMe = useImage(Me);
@@ -91,6 +96,37 @@ const Homepage = () => {
         </Section>
 
         <Section backgroundColor="#f5f5f5" padding="medium">
+          <div>
+            <Text type="h2" color="#292929" style={{ marginBottom: 50 }}>
+              Here are my superpowers
+            </Text>
+          </div>
+          <div className="row">
+            <div className="col-xs-12 col-md-12">
+              <div ref={sliderRef} className="keen-slider">
+                {CarouselItems.map((item) => (
+                  <div className="keen-slider__slide">
+                    <CarouselItem>
+                      <Text
+                        type="h3"
+                        color="#292929"
+                        style={{ marginBottom: 20 }}
+                      >
+                        {item.title}
+                        {item.icon()}
+                      </Text>
+                      <Text type="p" color="#292929">
+                        {item.description}
+                      </Text>
+                    </CarouselItem>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Section>
+
+        <Section backgroundColor="#f5f5f5" padding="medium">
           <div className="row">
             <div className="col-xs-12">
               <Text type="h2" color="#292929" style={{ marginBottom: 50 }}>
@@ -127,73 +163,67 @@ const Homepage = () => {
         </Section>
 
         <Section backgroundColor="#f5f5f5" padding="medium">
-          <div>
-            <Text type="h2" color="#292929" style={{ marginBottom: 50 }}>
-              Here are my superpowers
-            </Text>
-          </div>
-          <div className="row">
-            <div className="col-xs-12 col-md-12">
-              <div ref={sliderRef} className="keen-slider">
-                {CarouselItems.map((item) => (
-                  <div className="keen-slider__slide">
-                    <CarouselItem>
-                      <Text
-                        type="h3"
-                        color="#292929"
-                        style={{ marginBottom: 20 }}
-                      >
-                        {item.title}
-                        {item.icon()}
-                      </Text>
-                      <Text type="p" color="#292929">
-                        {item.description}
-                      </Text>
-                    </CarouselItem>
-                  </div>
-                ))}
+          <MainContainer>
+            <div className="row">
+              <div className="col-xs-12 col-md-6">
+                {' '}
+                <Text type="h2" color="#292929">
+                  These tiny projects will make your jaw drop or not.
+                </Text>
               </div>
             </div>
-          </div>
-        </Section>
+            <div className="row">
+              <div className="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+                <PenContainer
+                  backgroundColor="#43CEA2"
+                  href="https://codepen.io/tonkec/pen/zYLbVXV"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <Dog />
+                  <Text
+                    type="p"
+                    color="white"
+                    style={{ marginTop: 50, textAlign: 'center' }}
+                  >
+                    I barf in pure CSS!
+                  </Text>
+                </PenContainer>
+              </div>
 
-        <Section
-          backgroundColor="#f5f5f5"
-          padding="medium"
-          style={{
-            paddingRight: 0,
-            justifyContent: 'space-between',
-          }}
-        >
-          <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-5">
-              <Text type="h2" color="#292929" style={{ marginBottom: 30 }}>
-                The most common <br />
-                questions about me
-              </Text>
-            </div>
+              <div className="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+                <PenContainer
+                  backgroundColor="#0047B4"
+                  href="https://codepen.io/tonkec/pen/PoBVXjy"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <BeardedMan />
+                  <Text
+                    type="p"
+                    color="white"
+                    style={{ marginTop: 50, textAlign: 'center' }}
+                  >
+                    I am a handsome little man.
+                  </Text>
+                </PenContainer>
+              </div>
 
-            <div className="col-xs-12 col-sm-12 col-md-7">
-              <Accordion
-                items={[
-                  {
-                    title: 'Are you a senior or medior?',
-                    description:
-                      'I am closer to being senior than medior even though I do not yet have the confidence to say that I am senior out loud.',
-                  },
-                  {
-                    title: 'What is your availability?',
-                    description:
-                      'I can start working in the beginning of the August.',
-                  },
-                  {
-                    title: 'How long have you been coding?',
-                    description: 'I have been coding for the past 10 years.',
-                  },
-                ]}
-              />
+              <div className="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+                <SeeMore
+                  href="https://codepen.io/tonkec"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <Text type="h3" color="white">
+                    See more <br />
+                    on codepen{' '}
+                    <GoArrowRight style={{ verticalAlign: 'middle' }} />
+                  </Text>
+                </SeeMore>
+              </div>
             </div>
-          </div>
+          </MainContainer>
         </Section>
 
         <Section padding="medium" backgroundColor="#E6F0FF">
@@ -355,6 +385,45 @@ const Homepage = () => {
                   </Text>
                 </div>
               </TestimonialCard>
+            </div>
+          </div>
+        </Section>
+
+        <Section
+          backgroundColor="#f5f5f5"
+          padding="medium"
+          style={{
+            paddingRight: 0,
+            justifyContent: 'space-between',
+          }}
+        >
+          <div className="row">
+            <div className="col-xs-12 col-sm-12 col-md-5">
+              <Text type="h2" color="#292929" style={{ marginBottom: 30 }}>
+                The most common <br />
+                questions about me
+              </Text>
+            </div>
+
+            <div className="col-xs-12 col-sm-12 col-md-7">
+              <Accordion
+                items={[
+                  {
+                    title: 'Are you a senior or medior?',
+                    description:
+                      'I am closer to being senior than medior even though I do not yet have the confidence to say that I am senior out loud.',
+                  },
+                  {
+                    title: 'What is your availability?',
+                    description:
+                      'I can start working in the beginning of the August.',
+                  },
+                  {
+                    title: 'How long have you been coding?',
+                    description: 'I have been coding for the past 10 years.',
+                  },
+                ]}
+              />
             </div>
           </div>
         </Section>
