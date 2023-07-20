@@ -20,7 +20,7 @@ export const H2 = styled.h2<{ $textColor?: string }>`
 `;
 
 export const H3 = styled.h3<{ $textColor?: string }>`
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: ${(props) => props.$textColor || '#000000'};
 
   @media ${device.tablet} {

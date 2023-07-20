@@ -23,7 +23,7 @@ const Project = () => {
   const current = data.projects.filter(
     (project) => project.title.toLowerCase() === id?.toLowerCase()
   )[0];
-  const nextTwoProjects = data.projects
+  const nextProject = data.projects
     .filter((project) => project !== current)
     .sort(() => 0.5 - Math.random());
 
@@ -190,10 +190,10 @@ const Project = () => {
             <Pattern>
               <NextProjectButton
                 background="#292929"
-                onClick={() => navigateToNextProject(nextTwoProjects[0])}
+                onClick={() => navigateToNextProject(nextProject[0])}
               >
                 <button>
-                  {nextTwoProjects[0].title}{' '}
+                  {nextProject[0].title}{' '}
                   <GoArrowRight style={{ verticalAlign: 'middle' }} />
                 </button>
               </NextProjectButton>
