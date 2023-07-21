@@ -32,7 +32,7 @@ const ContactMe = () => {
                 ariaLabel="blocks-loading"
                 wrapperStyle={{}}
                 wrapperClass="blocks-wrapper"
-                colors={['#43cea2', '#43cea2', '#43cea2', '#43cea2', '#43cea2']}
+                colors={['#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff']}
               />
             </div>
           ) : (
