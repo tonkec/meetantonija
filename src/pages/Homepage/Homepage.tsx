@@ -29,6 +29,7 @@ import ContactMe from 'components/ContactMe';
 import Dog from 'components/Pens/Dog/Dog';
 import { MainContainer } from 'styles/containers';
 import BeardedMan from 'components/Pens/BeardedMan/BeardedMan';
+import AnimateIn from 'components/AnimateIn/AnimateIn';
 
 const Homepage = () => {
   const loadingMe = useImage(Me);
@@ -56,25 +57,9 @@ const Homepage = () => {
         </div>
 
         <Section backgroundColor="#f5f5f5" padding="big">
-          {loadingMe ? (
-            <BackgroundImageDiv>
-              <Text type="p" color="#292929" style={{ fontStyle: 'italic' }}>
-                "Let's pretend I said here something smart. Also, that's me in
-                the corner... that's me in the spotlight."
-              </Text>
-
-              <Text type="p" color="#292929" style={{ marginTop: 20 }}>
-                - Antonija Šimić
-              </Text>
-            </BackgroundImageDiv>
-          ) : (
-            <BackgroundImage
-              image={Me}
-              width="400px"
-              height={400}
-              backgroundPosition="center center"
-              backgroundSize="cover"
-            >
+          <AnimateIn>
+            {' '}
+            {loadingMe ? (
               <BackgroundImageDiv>
                 <Text type="p" color="#292929" style={{ fontStyle: 'italic' }}>
                   "Let's pretend I said here something smart. Also, that's me in
@@ -85,8 +70,31 @@ const Homepage = () => {
                   - Antonija Šimić
                 </Text>
               </BackgroundImageDiv>
-            </BackgroundImage>
-          )}
+            ) : (
+              <BackgroundImage
+                image={Me}
+                width="400px"
+                height={400}
+                backgroundPosition="center center"
+                backgroundSize="cover"
+              >
+                <BackgroundImageDiv>
+                  <Text
+                    type="p"
+                    color="#292929"
+                    style={{ fontStyle: 'italic' }}
+                  >
+                    "Let's pretend I said here something smart. Also, that's me
+                    in the corner... that's me in the spotlight."
+                  </Text>
+
+                  <Text type="p" color="#292929" style={{ marginTop: 20 }}>
+                    - Antonija Šimić
+                  </Text>
+                </BackgroundImageDiv>
+              </BackgroundImage>
+            )}
+          </AnimateIn>
           <AbsoluteDiv>
             <Text type="p" color="#E6F0FF">
               ...I once centered a div vertically and horizontally without
@@ -96,297 +104,308 @@ const Homepage = () => {
         </Section>
 
         <Section backgroundColor="#f5f5f5" padding="medium">
-          <div>
-            <Text type="h2" color="#292929" style={{ marginBottom: 50 }}>
-              Here are my superpowers
-            </Text>
-          </div>
-          <div className="row">
-            <div className="col-xs-12 col-md-12">
-              <div ref={sliderRef} className="keen-slider">
-                {CarouselItems.map((item) => (
-                  <div className="keen-slider__slide">
-                    <CarouselItem>
-                      <Text
-                        type="h3"
-                        color="#292929"
-                        style={{ marginBottom: 20 }}
-                      >
-                        {item.title}
-                        {item.icon()}
-                      </Text>
-                      <Text type="p" color="#292929">
-                        {item.description}
-                      </Text>
-                    </CarouselItem>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Section>
-
-        <Section backgroundColor="#f5f5f5" padding="medium">
-          <div className="row">
-            <div className="col-xs-12">
+          <AnimateIn>
+            <div>
               <Text type="h2" color="#292929" style={{ marginBottom: 50 }}>
-                Some cool projects I worked on
+                Here are my superpowers
               </Text>
             </div>
-          </div>
-
-          <div className="row">
-            {data.projects.map((project) => (
-              <div className="col-xs-12 col-md-6">
-                <ProjectCard>
-                  <div>
-                    <Text type="h3" color="#292929">
-                      {project.title}
-                    </Text>
-                    <Link
-                      to={`project/${project.title}`}
-                      className="is-clickable"
-                      style={{ textDecoration: 'none' }}
-                    >
-                      <Text type="p" color="#292929" className="definition">
-                        {project.headline}{' '}
-                        <GoArrowRight
-                          style={{ fontSize: '1rem', verticalAlign: 'middle' }}
-                        />
-                      </Text>
-                    </Link>
-                  </div>
-                </ProjectCard>
+            <div className="row">
+              <div className="col-xs-12 col-md-12">
+                <div ref={sliderRef} className="keen-slider">
+                  {CarouselItems.map((item) => (
+                    <div className="keen-slider__slide">
+                      <CarouselItem>
+                        <Text
+                          type="h3"
+                          color="#292929"
+                          style={{ marginBottom: 20 }}
+                        >
+                          {item.title}
+                          {item.icon()}
+                        </Text>
+                        <Text type="p" color="#292929">
+                          {item.description}
+                        </Text>
+                      </CarouselItem>
+                    </div>
+                  ))}
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          </AnimateIn>
         </Section>
 
         <Section backgroundColor="#f5f5f5" padding="medium">
-          <MainContainer>
+          <AnimateIn>
             <div className="row">
-              <div className="col-xs-12 col-md-6">
-                {' '}
-                <Text type="h2" color="#292929">
-                  These tiny projects will make your jaw drop or not.
+              <div className="col-xs-12">
+                <Text type="h2" color="#292929" style={{ marginBottom: 50 }}>
+                  Some cool projects I worked on
                 </Text>
               </div>
             </div>
+
             <div className="row">
-              <div className="col-xs-12 col-sm-8 col-md-6 col-lg-4">
-                <PenContainer
-                  backgroundColor="#43CEA2"
-                  href="https://codepen.io/tonkec/pen/zYLbVXV"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <Dog />
-                  <Text
-                    type="p"
-                    color="white"
-                    style={{ marginTop: 50, textAlign: 'center' }}
-                  >
-                    I bark in pure CSS!
-                  </Text>
-                </PenContainer>
-              </div>
-
-              <div className="col-xs-12 col-sm-8 col-md-6 col-lg-4">
-                <PenContainer
-                  backgroundColor="#0047B4"
-                  href="https://codepen.io/tonkec/pen/PoBVXjy"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <BeardedMan />
-                  <Text
-                    type="p"
-                    color="white"
-                    style={{ marginTop: 50, textAlign: 'center' }}
-                  >
-                    I am a handsome little man.
-                  </Text>
-                </PenContainer>
-              </div>
-
-              <div className="col-xs-12 col-sm-8 col-md-6 col-lg-4">
-                <SeeMore
-                  href="https://codepen.io/tonkec"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <Text type="h3" color="white">
-                    See more <br />
-                    on codepen{' '}
-                    <GoArrowRight style={{ verticalAlign: 'middle' }} />
-                  </Text>
-                </SeeMore>
-              </div>
+              {data.projects.map((project) => (
+                <div className="col-xs-12 col-md-6">
+                  <ProjectCard>
+                    <div>
+                      <Text type="h3" color="#292929">
+                        {project.title}
+                      </Text>
+                      <Link
+                        to={`project/${project.title}`}
+                        className="is-clickable"
+                        style={{ textDecoration: 'none' }}
+                      >
+                        <Text type="p" color="#292929" className="definition">
+                          {project.headline}{' '}
+                          <GoArrowRight
+                            style={{
+                              fontSize: '1rem',
+                              verticalAlign: 'middle',
+                            }}
+                          />
+                        </Text>
+                      </Link>
+                    </div>
+                  </ProjectCard>
+                </div>
+              ))}
             </div>
-          </MainContainer>
+          </AnimateIn>
+        </Section>
+
+        <Section backgroundColor="#f5f5f5" padding="medium">
+          <AnimateIn>
+            <MainContainer>
+              <div className="row">
+                <div className="col-xs-12 col-md-6">
+                  {' '}
+                  <Text type="h2" color="#292929">
+                    These tiny projects will make your jaw drop or not.
+                  </Text>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+                  <PenContainer
+                    backgroundColor="#43CEA2"
+                    href="https://codepen.io/tonkec/pen/zYLbVXV"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <Dog />
+                    <Text
+                      type="p"
+                      color="white"
+                      style={{ marginTop: 50, textAlign: 'center' }}
+                    >
+                      I bark in pure CSS!
+                    </Text>
+                  </PenContainer>
+                </div>
+
+                <div className="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+                  <PenContainer
+                    backgroundColor="#0047B4"
+                    href="https://codepen.io/tonkec/pen/PoBVXjy"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <BeardedMan />
+                    <Text
+                      type="p"
+                      color="white"
+                      style={{ marginTop: 50, textAlign: 'center' }}
+                    >
+                      I am a handsome little man.
+                    </Text>
+                  </PenContainer>
+                </div>
+
+                <div className="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+                  <SeeMore
+                    href="https://codepen.io/tonkec"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <Text type="h3" color="white">
+                      See more <br />
+                      on codepen{' '}
+                      <GoArrowRight style={{ verticalAlign: 'middle' }} />
+                    </Text>
+                  </SeeMore>
+                </div>
+              </div>
+            </MainContainer>
+          </AnimateIn>
         </Section>
 
         <Section padding="medium" backgroundColor="#E6F0FF">
-          <div className="row">
-            <div className="col-xs-12">
-              <Text type="h2" color="#292929" style={{ marginBottom: 50 }}>
-                People said some nice <br />
-                things about me
-              </Text>
-            </div>
+          <AnimateIn>
+            <div className="row">
+              <div className="col-xs-12">
+                <Text type="h2" color="#292929" style={{ marginBottom: 50 }}>
+                  People said some nice <br />
+                  things about me
+                </Text>
+              </div>
 
-            <div className="col-xs-12 col-sm-8 col-md-6">
-              <TestimonialCard>
-                <div
-                  style={{
-                    backgroundColor: '#f5f5f5',
-                    padding: 20,
-                  }}
-                >
-                  <Text type="p" color="#292929">
-                    She sometimes cleans her room. <br />
-                    <span style={{ fontSize: '80%', paddingRight: 10 }}>
-                      Mom
-                    </span>
-                    <AiFillStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                    <AiFillStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                    <AiFillStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                    <AiOutlineStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                    <AiOutlineStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                  </Text>
-                </div>
-              </TestimonialCard>
-            </div>
+              <div className="col-xs-12 col-sm-8 col-md-6">
+                <TestimonialCard>
+                  <div
+                    style={{
+                      backgroundColor: '#f5f5f5',
+                      padding: 20,
+                    }}
+                  >
+                    <Text type="p" color="#292929">
+                      She sometimes cleans her room. <br />
+                      <span style={{ fontSize: '80%', paddingRight: 10 }}>
+                        Mom
+                      </span>
+                      <AiFillStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                      <AiFillStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                      <AiFillStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                      <AiOutlineStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                      <AiOutlineStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                    </Text>
+                  </div>
+                </TestimonialCard>
+              </div>
 
-            <div className="col-xs-12 col-sm-8 col-md-6">
-              <TestimonialCard>
-                <div
-                  style={{
-                    backgroundColor: '#f5f5f5',
-                    padding: 20,
-                  }}
-                >
-                  <Text type="p" color="#292929">
-                    She can count to 100. <br />
-                    <span style={{ fontSize: '80%', paddingRight: 10 }}>
-                      Client
-                    </span>
-                    <AiFillStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                    <AiFillStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                    <AiFillStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                    <AiFillStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                    <AiFillStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                  </Text>
-                </div>
-              </TestimonialCard>
-            </div>
+              <div className="col-xs-12 col-sm-8 col-md-6">
+                <TestimonialCard>
+                  <div
+                    style={{
+                      backgroundColor: '#f5f5f5',
+                      padding: 20,
+                    }}
+                  >
+                    <Text type="p" color="#292929">
+                      She can count to 100. <br />
+                      <span style={{ fontSize: '80%', paddingRight: 10 }}>
+                        Client
+                      </span>
+                      <AiFillStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                      <AiFillStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                      <AiFillStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                      <AiFillStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                      <AiFillStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                    </Text>
+                  </div>
+                </TestimonialCard>
+              </div>
 
-            <div className="col-xs-12 col-sm-8 col-md-6">
-              <TestimonialCard>
-                <div
-                  style={{
-                    backgroundColor: '#f5f5f5',
-                    padding: 20,
-                  }}
-                >
-                  <Text type="p" color="#292929">
-                    She always comes full when I cook. <br />
-                    <span style={{ fontSize: '80%', paddingRight: 10 }}>
-                      Grandmother
-                    </span>{' '}
-                    <AiFillStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                    <AiOutlineStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                    <AiOutlineStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                    <AiOutlineStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                    <AiOutlineStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                  </Text>
-                </div>
-              </TestimonialCard>
-            </div>
+              <div className="col-xs-12 col-sm-8 col-md-6">
+                <TestimonialCard>
+                  <div
+                    style={{
+                      backgroundColor: '#f5f5f5',
+                      padding: 20,
+                    }}
+                  >
+                    <Text type="p" color="#292929">
+                      She always comes full when I cook. <br />
+                      <span style={{ fontSize: '80%', paddingRight: 10 }}>
+                        Grandmother
+                      </span>{' '}
+                      <AiFillStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                      <AiOutlineStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                      <AiOutlineStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                      <AiOutlineStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                      <AiOutlineStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                    </Text>
+                  </div>
+                </TestimonialCard>
+              </div>
 
-            <div className="col-xs-12 col-sm-8 col-md-6">
-              <TestimonialCard>
-                <div
-                  style={{
-                    backgroundColor: '#f5f5f5',
-                    padding: 20,
-                  }}
-                >
-                  <Text type="p" color="#292929">
-                    She definitely knows what a div is. <br />
-                    <span style={{ fontSize: '80%', paddingRight: 10 }}>
-                      Client
-                    </span>{' '}
-                    <AiFillStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                    <AiFillStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                    <AiFillStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                    <AiFillStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                    <AiFillStar
-                      fontSize={'80%'}
-                      style={{ verticalAlign: 'middle' }}
-                    />
-                  </Text>
-                </div>
-              </TestimonialCard>
+              <div className="col-xs-12 col-sm-8 col-md-6">
+                <TestimonialCard>
+                  <div
+                    style={{
+                      backgroundColor: '#f5f5f5',
+                      padding: 20,
+                    }}
+                  >
+                    <Text type="p" color="#292929">
+                      She definitely knows what a div is. <br />
+                      <span style={{ fontSize: '80%', paddingRight: 10 }}>
+                        Client
+                      </span>{' '}
+                      <AiFillStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                      <AiFillStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                      <AiFillStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                      <AiFillStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                      <AiFillStar
+                        fontSize={'80%'}
+                        style={{ verticalAlign: 'middle' }}
+                      />
+                    </Text>
+                  </div>
+                </TestimonialCard>
+              </div>
             </div>
-          </div>
+          </AnimateIn>
         </Section>
 
         <Section
@@ -397,35 +416,38 @@ const Homepage = () => {
             justifyContent: 'space-between',
           }}
         >
-          <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-5">
-              <Text type="h2" color="#292929" style={{ marginBottom: 30 }}>
-                The most common <br />
-                questions about me
-              </Text>
-            </div>
+          <AnimateIn>
+            {' '}
+            <div className="row">
+              <div className="col-xs-12 col-sm-12 col-md-5">
+                <Text type="h2" color="#292929" style={{ marginBottom: 30 }}>
+                  The most common <br />
+                  questions about me
+                </Text>
+              </div>
 
-            <div className="col-xs-12 col-sm-12 col-md-7">
-              <Accordion
-                items={[
-                  {
-                    title: 'Are you a senior or medior?',
-                    description:
-                      'I am closer to being senior than medior even though I do not yet have the confidence to say that I am senior out loud.',
-                  },
-                  {
-                    title: 'What is your availability?',
-                    description:
-                      'I can start working in the beginning of the August.',
-                  },
-                  {
-                    title: 'How long have you been coding?',
-                    description: 'I have been coding for the past 10 years.',
-                  },
-                ]}
-              />
+              <div className="col-xs-12 col-sm-12 col-md-7">
+                <Accordion
+                  items={[
+                    {
+                      title: 'Are you a senior or medior?',
+                      description:
+                        'I am closer to being senior than medior even though I do not yet have the confidence to say that I am senior out loud.',
+                    },
+                    {
+                      title: 'What is your availability?',
+                      description:
+                        'I can start working in the beginning of the August.',
+                    },
+                    {
+                      title: 'How long have you been coding?',
+                      description: 'I have been coding for the past 10 years.',
+                    },
+                  ]}
+                />
+              </div>
             </div>
-          </div>
+          </AnimateIn>
         </Section>
 
         <ContactMe />
