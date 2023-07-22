@@ -1,10 +1,17 @@
 import { styled } from 'styled-components';
 import { device } from 'styles/devices';
-export const StyledHeader = styled.header<{ backgroundColor?: string }>`
+export const StyledHeader = styled.header<{
+  backgroundColor?: string;
+  linearGradient?: string[];
+}>`
   background: ${(props) =>
     props.backgroundColor
       ? props.backgroundColor
       : 'linear-gradient(2deg, #43cea2, #0047b4)'};
+
+  background: ${(props) =>
+    props.linearGradient &&
+    `linear-gradient(2deg, ${props.linearGradient[0]}, ${props.linearGradient[1]})`};
   padding-top: 5rem;
   padding-bottom: 10rem;
   padding-left: 4vw;

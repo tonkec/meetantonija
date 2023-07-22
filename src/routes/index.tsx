@@ -2,6 +2,8 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Homepage from 'pages/Homepage/Homepage';
 import Project from 'pages/Project';
 import { AnimatePresence } from 'framer-motion';
+import Notes from 'pages/NotesPage';
+import SingleNote from 'pages/NotesPage/SingleNote';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -11,6 +13,8 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Homepage />} />
         <Route path="/project/:id" element={<Project />} />
+        <Route path="/notes" element={<Notes />} />
+        <Route path="/notes/:id" element={<SingleNote />} />
       </Routes>
     </AnimatePresence>
   );

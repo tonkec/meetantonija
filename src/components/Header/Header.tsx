@@ -4,12 +4,17 @@ import { MainContainer } from 'styles/containers';
 const Header = ({
   children,
   backgroundColor,
+  linearGradient,
 }: {
   children: React.ReactNode;
   backgroundColor?: string;
+  linearGradient?: string[];
 }) => {
   return (
-    <StyledHeader backgroundColor={backgroundColor}>
+    <StyledHeader
+      backgroundColor={backgroundColor}
+      linearGradient={linearGradient}
+    >
       <MainContainer>
         <Text type="h1" color="#fff">
           {children}
