@@ -9,8 +9,10 @@ import Section from 'components/Section';
 import Layout from 'components/Layout';
 import { MainContainer } from 'styles/containers';
 import GoHome from 'components/GoHome';
+import { ColorRing } from 'react-loader-spinner';
 
 const SingleNote = () => {
+  const [loading, setLoading] = useState(true);
   const [text, setText] = useState('');
   const { id } = useParams();
 
@@ -18,12 +20,35 @@ const SingleNote = () => {
     import(`./../notes/${id}.md`).then((res) => {
       fetch(res.default)
         .then((response) => response.text())
-        .then((response) => setText(response))
+        .then((response) => {
+          setLoading(false);
+          setText(response);
+        })
         .catch((err) => console.log(err));
     });
-  }, []);
+  }, [id]);
 
-  return (
+  return loading ? (
+    <div
+      style={{
+        position: 'fixed',
+        inset: '0',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <ColorRing
+        visible={true}
+        height="80"
+        width="80"
+        ariaLabel="blocks-loading"
+        wrapperStyle={{}}
+        wrapperClass="blocks-wrapper"
+        colors={['#43cea2', '#43cea2', '#43cea2', '#43cea2', '#43cea2']}
+      />
+    </div>
+  ) : (
     <Layout>
       <ReactMarkdown
         children={text}
