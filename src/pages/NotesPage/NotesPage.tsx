@@ -1,7 +1,7 @@
 import Layout from 'components/Layout';
 import Header from 'components/Header';
 import Text from 'components/Text';
-import Section from 'components/Section/Section';
+import Section from 'components/Section';
 
 const NotesPage = () => {
   return (

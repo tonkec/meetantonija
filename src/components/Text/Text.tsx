@@ -3,7 +3,7 @@ import { H1, H2, H3, H4, H5, P } from 'styles/typography';
 interface TextInterface {
   type: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'p';
   color: string;
-  children: React.ReactNode;
+  children: any;
   style?: any;
   className?: string;
 }
