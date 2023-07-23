@@ -33,7 +33,7 @@ export const H4 = styled.h4<{ $textColor?: string }>`
   font-size: 1.563rem;
 `;
 
-export const H5 = styled.h4<{ $textColor?: string }>`
+export const H5 = styled.h5<{ $textColor?: string }>`
   color: ${(props) => props.$textColor || '#000000'};
   font-size: 1.263rem;
 `;

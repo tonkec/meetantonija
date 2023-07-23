@@ -4,10 +4,11 @@ import ReactMarkdown from 'react-markdown';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { nord } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Text from 'components/Text';
-import Header from 'components/Header/Header';
-import Section from 'components/Section/Section';
-import Layout from 'components/Layout/Layout';
+import Header from 'components/Header';
+import Section from 'components/Section';
+import Layout from 'components/Layout';
 import { MainContainer } from 'styles/containers';
+import GoHome from 'components/GoHome';
 
 const SingleNote = () => {
   const [text, setText] = useState('');
@@ -21,6 +22,7 @@ const SingleNote = () => {
         .catch((err) => console.log(err));
     });
   }, []);
+
   return (
     <Layout>
       <ReactMarkdown
@@ -30,9 +32,13 @@ const SingleNote = () => {
             return (
               <Header backgroundColor="#43CEA2">
                 <MainContainer>
-                  <Text {...props} type="h1" color="#292929">
-                    {children}
-                  </Text>
+                  <div className="row">
+                    <div className="col-xs-12">
+                      <Text {...props} type="h1" color="#292929">
+                        {children}
+                      </Text>
+                    </div>
+                  </div>
                 </MainContainer>
               </Header>
             );
@@ -42,7 +48,7 @@ const SingleNote = () => {
               <Section padding="medium" backgroundColor="#f5f5f5">
                 <MainContainer>
                   <div className="row">
-                    <div className="col-sm-8 col-sm-offset-2">
+                    <div className="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
                       <Text {...props} type="p" color="#292929">
                         {children}
                       </Text>
@@ -57,7 +63,7 @@ const SingleNote = () => {
               <Section padding="small" backgroundColor="#f5f5f5">
                 <MainContainer>
                   <div className="row">
-                    <div className="col-sm-8 col-sm-offset-2">
+                    <div className="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
                       <SyntaxHighlighter
                         {...props}
                         children={String(children).replace(/\n$/, '')}
@@ -73,6 +79,8 @@ const SingleNote = () => {
           },
         }}
       />
+
+      <GoHome />
     </Layout>
   );
 };

@@ -2,18 +2,19 @@ import { useRef, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import Header from 'components/Header/Header';
 import data from 'data/projects.json';
-import Layout from 'components/Layout/Layout';
-import Text from 'components/Text/Text';
-import Section from 'components/Section/Section';
+import Layout from 'components/Layout';
+import Text from 'components/Text';
+import Section from 'components/Section';
 import { FlexContainer, FlexItem } from 'styles/containers';
-import { GoArrowLeft } from 'react-icons/go';
 import Sitting from 'images/sitting.jpeg';
 import useImage from 'hooks/useImage';
 import { NextProjectButton, Pattern } from './Project.styles';
 import { GoArrowRight } from 'react-icons/go';
 import { ProjectType } from 'components/Search/Search';
 import { ColorRing } from 'react-loader-spinner';
-import AnimateIn from 'components/AnimateIn/AnimateIn';
+import AnimateIn from 'components/AnimateIn';
+import GoHome from 'components/GoHome';
+
 const Project = () => {
   const nextProjectBox = useRef<HTMLDivElement>(null);
   const patternBox = useRef<HTMLDivElement>(null);
@@ -219,56 +220,7 @@ const Project = () => {
         </AnimateIn>
       </Section>
 
-      <Section
-        padding="medium"
-        backgroundColor="#43cea2"
-        style={{
-          textAlign: 'center',
-          height: '80vh',
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
-        <AnimateIn>
-          {' '}
-          <div>
-            <Text type="h1" color="#292929">
-              Thanks for reading!
-            </Text>
-            <Text
-              type="h5"
-              color="#ffffff"
-              style={{
-                marginTop: 60,
-                marginLeft: 'auto',
-                marginRight: 'auto',
-                backgroundColor: '#0047B4',
-                padding: '20px 40px',
-                display: 'inline-block',
-              }}
-              className="is-clickable"
-            >
-              <Link
-                className="is-clickable"
-                to="/"
-                style={{
-                  color: 'white',
-                  textDecoration: 'none',
-                  cursor: 'none',
-                }}
-              >
-                <GoArrowLeft
-                  style={{
-                    verticalAlign: 'middle',
-                    fontSize: '2rem',
-                  }}
-                />{' '}
-                Back home
-              </Link>
-            </Text>
-          </div>
-        </AnimateIn>
-      </Section>
+      <GoHome />
     </Layout>
   );
 };

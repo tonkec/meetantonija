@@ -23,9 +23,17 @@ const Layout = ({ children }: LayoutInterface) => {
       document
         .querySelector('body')
         ?.setAttribute('style', 'overflow-y: hidden;');
+
+      document
+        .querySelector('html')
+        ?.setAttribute('style', 'overflow-y: hidden;');
     } else {
       document
         .querySelector('body')
+        ?.setAttribute('style', 'overflow-y: auto;');
+
+      document
+        .querySelector('html')
         ?.setAttribute('style', 'overflow-y: auto;');
     }
   };

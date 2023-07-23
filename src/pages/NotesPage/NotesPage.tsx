@@ -2,6 +2,10 @@ import Layout from 'components/Layout';
 import Header from 'components/Header';
 import Text from 'components/Text';
 import Section from 'components/Section';
+import { notes } from './notes/notes';
+import { NotesList } from './NotesPage.styles';
+import { Link } from 'react-router-dom';
+import { MainContainer } from 'styles/containers';
 
 const NotesPage = () => {
   return (
@@ -16,7 +20,29 @@ const NotesPage = () => {
       </Header>
 
       <Section backgroundColor="#E6F0FF" padding="medium">
-        <h2>Here is a small list</h2>
+        <MainContainer>
+          <div className="row">
+            <div className="col-xs-12 col-sm-8 col-lg-6">
+              <NotesList>
+                {notes.map((note) => {
+                  return (
+                    <Link to={`/notes/${note.id}`}>
+                      <li>
+                        <Text type="h4" color="#292929">
+                          {note.title}
+                        </Text>
+
+                        <Text type="h5" color="#292929">
+                          {note.subtitle}
+                        </Text>
+                      </li>
+                    </Link>
+                  );
+                })}
+              </NotesList>
+            </div>
+          </div>
+        </MainContainer>
       </Section>
     </Layout>
   );
