@@ -52,8 +52,8 @@ const Homepage = () => {
               <Text type="h1" color="white">
                 Hello world, I am Antonija, a frontend developer who can change
                 any background color
+                <Dots />
               </Text>
-              <Dots />
             </Header>
           </div>
         </div>
