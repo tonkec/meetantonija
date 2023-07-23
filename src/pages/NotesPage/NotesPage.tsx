@@ -10,40 +10,35 @@ import { MainContainer } from 'styles/containers';
 const NotesPage = () => {
   return (
     <Layout>
-      <Header linearGradient={['#0094D3', '#005EC5']}>
-        <Text type="h1" color="white">
+      <Header backgroundColor="#f5f5f5">
+        <Text type="h1" color="#292929">
           Notes
         </Text>
-        <Text type="p" color="white">
-          This is a place for my scribbles.
-        </Text>
-      </Header>
 
-      <Section backgroundColor="#E6F0FF" padding="medium">
-        <MainContainer>
-          <div className="row">
-            <div className="col-xs-12 col-sm-8 col-lg-6">
-              <NotesList>
-                {notes.map((note) => {
-                  return (
-                    <Link to={`/notes/${note.id}`}>
-                      <li>
+        <div className="row">
+          <div className="col-xs-12" style={{ marginTop: 100 }}>
+            <NotesList>
+              {notes.map((note) => {
+                return (
+                  <Link to={`/notes/${note.id}`}>
+                    <li>
+                      <span>
                         <Text type="h4" color="#292929">
                           {note.title}
                         </Text>
-
                         <Text type="h5" color="#292929">
                           {note.subtitle}
                         </Text>
-                      </li>
-                    </Link>
-                  );
-                })}
-              </NotesList>
-            </div>
+                      </span>
+                      <span>{note.icon()}</span>
+                    </li>
+                  </Link>
+                );
+              })}
+            </NotesList>
           </div>
-        </MainContainer>
-      </Section>
+        </div>
+      </Header>
     </Layout>
   );
 };

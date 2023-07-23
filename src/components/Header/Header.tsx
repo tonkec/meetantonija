@@ -15,11 +15,7 @@ const Header = ({
       backgroundColor={backgroundColor}
       linearGradient={linearGradient}
     >
-      <MainContainer>
-        <Text type="h1" color="#fff">
-          {children}
-        </Text>
-      </MainContainer>
+      <MainContainer>{children}</MainContainer>
     </StyledHeader>
   );
 };

@@ -49,8 +49,10 @@ const Homepage = () => {
         <div className="row">
           <div className="col-xs-12">
             <Header>
-              Hello world, I am Antonija, a frontend developer who can change
-              any background color
+              <Text type="h1" color="white">
+                Hello world, I am Antonija, a frontend developer who can change
+                any background color
+              </Text>
               <Dots />
             </Header>
           </div>
