@@ -1,11 +1,9 @@
 import Layout from 'components/Layout';
 import Header from 'components/Header';
 import Text from 'components/Text';
-import Section from 'components/Section';
 import { notes } from './notes/notes';
 import { NotesList } from './NotesPage.styles';
 import { Link } from 'react-router-dom';
-import { MainContainer } from 'styles/containers';
 
 const NotesPage = () => {
   return (

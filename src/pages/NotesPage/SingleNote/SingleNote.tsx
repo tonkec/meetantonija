@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useParams, useNavigate } from 'react-router';
 import ReactMarkdown from 'react-markdown';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { nord } from 'react-syntax-highlighter/dist/esm/styles/hljs';
@@ -15,17 +15,23 @@ const SingleNote = () => {
   const [loading, setLoading] = useState(true);
   const [text, setText] = useState('');
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    import(`./../notes/${id}.md`).then((res) => {
-      fetch(res.default)
-        .then((response) => response.text())
-        .then((response) => {
-          setLoading(false);
-          setText(response);
-        })
-        .catch((err) => console.log(err));
-    });
+    import(`./../notes/${id}.md`)
+      .then((res) => {
+        fetch(res.default)
+          .then((response) => response.text())
+          .then((response) => {
+            setLoading(false);
+            setText(response);
+          })
+          .catch((err) => {
+            console.log(err);
+            navigate('/');
+          });
+      })
+      .catch(() => navigate('/404'));
   }, [id]);
 
   return loading ? (
@@ -105,7 +111,7 @@ const SingleNote = () => {
         }}
       />
 
-      <GoHome />
+      <GoHome heading="Thanks for reading!" />
     </Layout>
   );
 };

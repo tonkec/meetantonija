@@ -4,6 +4,7 @@ import Project from 'pages/Project';
 import { AnimatePresence } from 'framer-motion';
 import Notes from 'pages/NotesPage';
 import SingleNote from 'pages/NotesPage/SingleNote';
+import NotFoundPage from 'pages/NotFoundPage';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -15,6 +16,7 @@ const AnimatedRoutes = () => {
         <Route path="/project/:id" element={<Project />} />
         <Route path="/notes" element={<Notes />} />
         <Route path="/notes/:id" element={<SingleNote />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </AnimatePresence>
   );

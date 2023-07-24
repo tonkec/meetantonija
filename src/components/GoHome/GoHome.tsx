@@ -4,7 +4,7 @@ import Text from 'components/Text';
 import { Link } from 'react-router-dom';
 import { GoArrowLeft } from 'react-icons/go';
 
-const GoHome = () => (
+const GoHome = ({ heading }: { heading: string }) => (
   <Section
     padding="medium"
     backgroundColor="#43cea2"
@@ -18,7 +18,7 @@ const GoHome = () => (
     <AnimateIn>
       <div>
         <Text type="h1" color="#292929">
-          Thanks for reading!
+          {heading}
         </Text>
         <Text
           type="h5"

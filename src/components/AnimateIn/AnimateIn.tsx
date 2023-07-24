@@ -1,4 +1,4 @@
-import { useRef, PropsWithChildren, FC } from 'react';
+import { useRef } from 'react';
 import useElementOnScreen from 'hooks/useElementOnScreen';
 
 const AnimateIn = ({ children }: { children: React.ReactNode }) => {

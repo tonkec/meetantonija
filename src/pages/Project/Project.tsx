@@ -220,7 +220,7 @@ const Project = () => {
         </AnimateIn>
       </Section>
 
-      <GoHome />
+      <GoHome heading="Thanks for reading!" />
     </Layout>
   );
 };
