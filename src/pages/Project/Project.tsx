@@ -1,4 +1,3 @@
-import { useRef, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import Header from 'components/Header/Header';
 import data from 'data/projects.json';
@@ -11,13 +10,11 @@ import useImage from 'hooks/useImage';
 import { NextProjectButton, Pattern } from './Project.styles';
 import { GoArrowRight } from 'react-icons/go';
 import { ProjectType } from 'components/Search/Search';
-import { ColorRing } from 'react-loader-spinner';
 import AnimateIn from 'components/AnimateIn';
 import GoHome from 'components/GoHome';
+import Loader from 'components/Loader';
 
 const Project = () => {
-  const nextProjectBox = useRef<HTMLDivElement>(null);
-  const patternBox = useRef<HTMLDivElement>(null);
   const loading = useImage(Sitting);
   const navigate = useNavigate();
   const routeParams = useParams();
@@ -32,14 +29,6 @@ const Project = () => {
   const navigateToNextProject = (project: ProjectType) => {
     navigate(`/project/${project.title.toLowerCase()}`);
   };
-
-  useEffect(() => {
-    setTimeout(() => {
-      const projectHeight =
-        nextProjectBox?.current?.getBoundingClientRect().height;
-      patternBox?.current?.setAttribute('style', `height: ${projectHeight}px`);
-    }, 0);
-  }, []);
 
   return (
     <Layout>
@@ -160,32 +149,7 @@ const Project = () => {
           <div className="row">
             <div className="col-xs-12 col-sm-6 col-md-4">
               {loading ? (
-                <div
-                  style={{
-                    position: 'relative',
-                    top: '50%',
-                    transform: 'translateY(-50%)',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                  }}
-                >
-                  <ColorRing
-                    visible={true}
-                    height="80"
-                    width="80"
-                    ariaLabel="blocks-loading"
-                    wrapperStyle={{}}
-                    wrapperClass="blocks-wrapper"
-                    colors={[
-                      '#43cea2',
-                      '#43cea2',
-                      '#43cea2',
-                      '#43cea2',
-                      '#43cea2',
-                    ]}
-                  />
-                </div>
+                <Loader />
               ) : (
                 <img src={Sitting} alt="Me sitting" width="100%" />
               )}

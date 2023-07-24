@@ -9,7 +9,7 @@ import Section from 'components/Section';
 import Layout from 'components/Layout';
 import { MainContainer } from 'styles/containers';
 import GoHome from 'components/GoHome';
-import { ColorRing } from 'react-loader-spinner';
+import Loader from 'components/Loader';
 
 const SingleNote = () => {
   const [loading, setLoading] = useState(true);
@@ -35,25 +35,7 @@ const SingleNote = () => {
   }, [id]);
 
   return loading ? (
-    <div
-      style={{
-        position: 'fixed',
-        inset: '0',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <ColorRing
-        visible={true}
-        height="80"
-        width="80"
-        ariaLabel="blocks-loading"
-        wrapperStyle={{}}
-        wrapperClass="blocks-wrapper"
-        colors={['#43cea2', '#43cea2', '#43cea2', '#43cea2', '#43cea2']}
-      />
-    </div>
+    <Loader />
   ) : (
     <Layout>
       <ReactMarkdown

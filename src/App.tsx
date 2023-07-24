@@ -1,22 +1,19 @@
 import { useEffect, useState } from 'react';
-import Confetti from 'react-confetti';
 import GlobalStyle from './styles/global';
-import AnimatedCursor from 'react-animated-cursor';
-import { useWindowSize } from 'hooks/useWindowSize';
 import { useSelector } from 'react-redux';
 import { StateInterface, setShowSearch } from 'store/slices/CounterSlice';
-import Search from 'components/Search/';
-import { HashRouter } from 'react-router-dom';
-import AnimatedRoutes from './routes';
 import { useDispatch } from 'react-redux';
-import { ColorRing } from 'react-loader-spinner';
+import { ErrorBoundary } from 'react-error-boundary';
+import Loader from 'components/Loader';
+import Cursor from 'components/Cursor';
+import MyConfetti from 'components/Confetti';
+import Search from 'components/Search';
+import AnimatedRoutes from 'routes';
+import { HashRouter } from 'react-router-dom';
+
 function App() {
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
-  const size = useWindowSize();
-  const showConfetti = useSelector(
-    (state: StateInterface) => state.counterSlice.showConfetti
-  );
 
   const showSearch = useSelector(
     (state: StateInterface) => state.counterSlice.showSearch
@@ -42,72 +39,22 @@ function App() {
     setLoading(false);
   }, []);
 
-  return loading ? (
-    <div
-      style={{
-        position: 'fixed',
-        inset: '0',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <ColorRing
-        visible={true}
-        height="80"
-        width="80"
-        ariaLabel="blocks-loading"
-        wrapperStyle={{}}
-        wrapperClass="blocks-wrapper"
-        colors={['#43cea2', '#43cea2', '#43cea2', '#43cea2', '#43cea2']}
-      />
-    </div>
-  ) : (
-    <>
-      {showConfetti && (
-        <div style={{ position: 'fixed', inset: 0, zIndex: 9999 }}>
-          <Confetti
-            tweenDuration={100}
-            width={size.width}
-            height={size.height}
-          />
-        </div>
+  return (
+    <ErrorBoundary fallback={<h1>Something went a little wrong.</h1>}>
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <MyConfetti />
+          <Cursor />
+          <GlobalStyle />
+          <HashRouter>
+            <Search />
+            <AnimatedRoutes />
+          </HashRouter>
+        </>
       )}
-      <AnimatedCursor
-        innerSize={8}
-        outerSize={35}
-        innerScale={1}
-        outerScale={2}
-        outerAlpha={0}
-        innerStyle={{
-          backgroundColor: '#A98AFE',
-          zIndex: 99999,
-        }}
-        outerStyle={{
-          border: '5px solid #A98AFE',
-          zIndex: 99999,
-        }}
-        clickables={[
-          'a',
-          'input[type="text"]',
-          'input[type="email"]',
-          'input[type="number"]',
-          'input[type="submit"]',
-          'input[type="image"]',
-          'label[for]',
-          'select',
-          'textarea',
-          'button',
-          '.is-clickable',
-        ]}
-      />
-
-      <GlobalStyle />
-      <HashRouter>
-        <Search />
-        <AnimatedRoutes />
-      </HashRouter>
-    </>
+    </ErrorBoundary>
   );
 }
 
