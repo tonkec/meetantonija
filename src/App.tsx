@@ -19,7 +19,6 @@ function App() {
 
   const onKeyDown = (e: KeyboardEvent) => {
     if (e.shiftKey && e.key === 'F') {
-      console.log(showSearch);
       dispatch(setShowSearch(!showSearch));
     }
   };
