@@ -12,6 +12,7 @@ export const NotesList = styled.ul`
     padding: 50px 50px 50px 30px;
     transition: background-color 0.5s ease-in-out;
     border-radius: 10px;
+    margin-bottom: 30px;
 
     @media ${device.tablet} {
       display: flex;

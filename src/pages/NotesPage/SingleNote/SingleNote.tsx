@@ -58,7 +58,7 @@ const SingleNote = () => {
           },
           p({ children, ...props }) {
             return (
-              <Section padding="medium" backgroundColor="#f5f5f5">
+              <Section padding="small" backgroundColor="#f5f5f5">
                 <MainContainer>
                   <div className="row">
                     <div className="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
