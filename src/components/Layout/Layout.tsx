@@ -3,16 +3,29 @@ import Footer from 'components/Footer';
 import Nav from 'components/Nav';
 import { StyledLayout } from './Layout.styles';
 import { motion } from 'framer-motion';
+import { useDispatch, useSelector } from 'react-redux';
+import { StateInterface, setShowSearch } from 'store/slices/CounterSlice';
 
 interface LayoutInterface {
   children: React.ReactNode;
 }
 
 const Layout = ({ children }: LayoutInterface) => {
+  const navWidth = 300;
+  const dispatch = useDispatch();
   const footer = useRef<HTMLDivElement>(null);
   const section = useRef<HTMLDivElement>(null);
-  const navWidth = 300;
   const [toggle, setToggle] = useState(false);
+
+  const showSearch = useSelector(
+    (state: StateInterface) => state.counterSlice.showSearch
+  );
+
+  const onKeyDown = (e: KeyboardEvent) => {
+    if (e.shiftKey && e.key === 'F') {
+      dispatch(setShowSearch(!showSearch));
+    }
+  };
 
   const onClick = () => {
     setToggle(!toggle);
@@ -54,6 +67,16 @@ const Layout = ({ children }: LayoutInterface) => {
     }, 0);
     toggleBodyOverflow(toggle);
   }, [toggle]);
+
+  useEffect(() => {
+    document?.querySelector('body')?.addEventListener('keydown', onKeyDown);
+
+    return () => {
+      document
+        ?.querySelector('body')
+        ?.removeEventListener('keydown', onKeyDown);
+    };
+  }, []);
 
   return (
     <motion.div

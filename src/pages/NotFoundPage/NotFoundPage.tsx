@@ -2,10 +2,15 @@ import GoHome from 'components/GoHome';
 import Header from 'components/Header';
 import Layout from 'components/Layout';
 import Text from 'components/Text';
-import { TbUfo } from 'react-icons/tb';
 import { IconWrapper } from './NotFoundPage.styles';
 
-const NotFoundPage = () => (
+const NotFoundPage = ({
+  heading,
+  icon,
+}: {
+  heading: string;
+  icon: () => React.ReactNode;
+}) => (
   <Layout>
     <Header
       backgroundColor="#0047B4"
@@ -22,9 +27,7 @@ const NotFoundPage = () => (
             alignItems: 'center',
           }}
         >
-          <IconWrapper>
-            <TbUfo />
-          </IconWrapper>
+          <IconWrapper>{icon()}</IconWrapper>
         </div>
         <div
           className="col-lg-6 col-sm-12"
@@ -34,7 +37,7 @@ const NotFoundPage = () => (
           }}
         >
           <Text type="h1" color="white">
-            You got lost!
+            {heading}
           </Text>
         </div>
       </div>
