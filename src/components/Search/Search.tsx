@@ -59,7 +59,6 @@ const Search = () => {
     setResults(result);
   };
 
-  console.log(showSearch);
   return (
     <SearchWrapper show={showSearch}>
       <form>
