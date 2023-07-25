@@ -32,7 +32,7 @@ export const StyledSection = styled.section<{
 
         @media ${device.tablet} {
           padding-top: var(--space-xl);
-          padding-bottom: var(--space-md);
+          padding-bottom: var(--space-xl);
         }
       `;
     }
