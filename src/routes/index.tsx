@@ -6,7 +6,6 @@ import Notes from 'pages/NotesPage';
 import SingleNote from 'pages/NotesPage/SingleNote';
 import NotFoundPage from 'pages/NotFoundPage';
 import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary';
-import { TbUfo } from 'react-icons/tb';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -19,12 +18,7 @@ const AnimatedRoutes = () => {
           <Route path="/project/:id" element={<Project />} />
           <Route path="/notes" element={<Notes />} />
           <Route path="/notes/:id" element={<SingleNote />} />
-          <Route
-            path="*"
-            element={
-              <NotFoundPage heading="404, not found!" icon={() => <TbUfo />} />
-            }
-          />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </ErrorBoundary>
     </AnimatePresence>

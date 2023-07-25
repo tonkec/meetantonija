@@ -1,4 +1,4 @@
-import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
+import Error from 'components/Error';
 import { Component, ErrorInfo, ReactNode } from 'react';
 import { AiFillBug } from 'react-icons/ai';
 
@@ -33,9 +33,7 @@ class ErrorBoundary extends Component<Props, State> {
 
   public render() {
     if (this.state.hasError) {
-      return (
-        <NotFoundPage heading="That is an error!" icon={() => <AiFillBug />} />
-      );
+      return <Error heading="That is an error!" icon={() => <AiFillBug />} />;
     }
 
     return this.props.children;
