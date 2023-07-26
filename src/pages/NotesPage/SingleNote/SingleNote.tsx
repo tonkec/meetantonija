@@ -10,6 +10,7 @@ import Layout from 'components/Layout';
 import { MainContainer } from 'styles/containers';
 import GoHome from 'components/GoHome';
 import Loader from 'components/Loader';
+import NotesImage from '../NotesImage/NotesImage';
 
 const SingleNote = () => {
   const [loading, setLoading] = useState(true);
@@ -70,6 +71,9 @@ const SingleNote = () => {
                 </MainContainer>
               </Section>
             );
+          },
+          img({ src }) {
+            return <NotesImage src={src} />;
           },
           code({ node, inline, className, children, ...props }) {
             return (
