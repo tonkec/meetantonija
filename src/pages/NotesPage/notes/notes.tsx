@@ -1,4 +1,5 @@
 import { FaRobot, FaBook } from 'react-icons/fa';
+import { CgDanger } from 'react-icons/cg';
 
 export const notes = [
   {
@@ -15,6 +16,13 @@ export const notes = [
       'I know what lexical means in lingustics, but what about Javascript?',
     id: '2',
     icon: () => <FaBook />,
+    objectType: 'note',
+  },
+  {
+    title: 'Error boundary in React',
+    subtitle: 'How to catch errors in your components',
+    id: '3',
+    icon: () => <CgDanger />,
     objectType: 'note',
   },
 ];
