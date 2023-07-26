@@ -1,6 +1,6 @@
 import { FaRobot, FaBook } from 'react-icons/fa';
 import { CgDanger } from 'react-icons/cg';
-
+import { LuPaintbrush2 } from 'react-icons/lu';
 export const notes = [
   {
     title: 'Reintroduction to the sort method',
@@ -23,6 +23,13 @@ export const notes = [
     subtitle: 'How to catch errors in your components',
     id: '3',
     icon: () => <CgDanger />,
+    objectType: 'note',
+  },
+  {
+    title: 'What is a pure function?',
+    subtitle: 'Stay away from dirty and smelly code',
+    id: '4',
+    icon: () => <LuPaintbrush2 />,
     objectType: 'note',
   },
 ];
