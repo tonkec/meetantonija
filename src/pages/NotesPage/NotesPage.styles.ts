@@ -5,6 +5,7 @@ export const NotesList = styled.ul`
   padding-left: 0;
   list-style-type: none;
 
+
   li {
     align-items: flex-start;
     justify-content: space-between;
