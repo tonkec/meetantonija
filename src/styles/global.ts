@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
         --space-md:   calc(1.25 * var(--space-unit)); 
         --space-lg:   calc(2 * var(--space-unit)); 
         --space-xl:   calc(5 * var(--space-unit));   
-        --space-xxl:   calc(10.25 * var(--space-unit)); 
+        --space-xxl:  calc(10.25 * var(--space-unit)); 
     }
 
     @media ${device.tablet} {

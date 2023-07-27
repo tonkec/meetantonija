@@ -16,7 +16,7 @@ const NotesPage = () => {
         <div className="row">
           <div className="col-xs-12" style={{ marginTop: 100 }}>
             <NotesList>
-              {notes.map((note) => {
+              {notes.reverse().map((note) => {
                 return (
                   <Link to={`/notes/${note.id}`}>
                     <li>
