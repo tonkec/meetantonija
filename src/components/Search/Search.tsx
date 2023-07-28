@@ -17,6 +17,7 @@ export interface ProjectType {
   reason: string;
   year: number;
   objectType: string;
+  id: string;
 }
 
 export interface NotesType {

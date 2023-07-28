@@ -8,7 +8,8 @@
       "link": "https://www.trustworthy.com/",
       "reason": "Unfortunately, I was let go only after couple of months working here due to downsizing. Several of us was let go. I got really concerned about quality of my work and that being a reason, but it turns out they just did not get enough finances.",
       "year": 2023,
-      "objectType": "project"
+      "objectType": "project",
+      "id": "1"
     },
     {
       "title": "Casumo",
@@ -18,7 +19,7 @@
       "link": "https://casumo.com/",
       "reason": "I was getting more and more dev ops tasks which I did not like. My react skills begin to rot so I decided to leave and look for a reactified client. Also, I did not like the mesiness of the codebase here.",
       "year": 2023,
-
+      "id": "2",
       "objectType": "project"
     },
     {
@@ -29,7 +30,8 @@
       "link": "https://app.formunauts.com/auth/login",
       "year": 2020,
       "objectType": "project",
-      "reason": "Here I was working per month basis. At the end of each month they would tell me if there are more tasks for me. Since this is a startup, it depended on investors. "
+      "reason": "Here I was working per month basis. At the end of each month they would tell me if there are more tasks for me. Since this is a startup, it depended on investors. ",
+      "id": "3"
     },
     {
       "title": "Craftstrom",
@@ -39,7 +41,8 @@
       "link": "https://play.google.com/store/apps/details?id=com.craftstrom&hl=en&gl=US",
       "year": 2019,
       "objectType": "project",
-      "reason": "I simply finished all of my tasks."
+      "reason": "I simply finished all of my tasks.",
+      "id": "4"
     }
   ]
 }

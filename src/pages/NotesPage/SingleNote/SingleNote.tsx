@@ -10,13 +10,20 @@ import Layout from 'components/Layout';
 import { MainContainer } from 'styles/containers';
 import GoHome from 'components/GoHome';
 import Loader from 'components/Loader';
+import NextObject from 'components/NextObject';
 import NotesImage from '../NotesImage/NotesImage';
+import { notes } from '../notes/notes';
 
 const SingleNote = () => {
   const [loading, setLoading] = useState(true);
   const [text, setText] = useState('');
   const { id } = useParams();
   const navigate = useNavigate();
+
+  const current = notes.filter((note) => note.id === id)[0];
+  const nextProject = notes
+    .filter((note) => note !== current)
+    .sort(() => 0.5 - Math.random());
 
   useEffect(() => {
     import(`./../notes/${id}.md`)
@@ -33,7 +40,7 @@ const SingleNote = () => {
           });
       })
       .catch(() => navigate('/404'));
-  }, [id]);
+  }, [id, navigate]);
 
   return loading ? (
     <Loader />
@@ -98,6 +105,7 @@ const SingleNote = () => {
       />
 
       <GoHome heading="Thanks for reading!" />
+      <NextObject item={nextProject[0]} />
     </Layout>
   );
 };

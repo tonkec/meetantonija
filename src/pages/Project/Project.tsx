@@ -1,4 +1,4 @@
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Header from 'components/Header/Header';
 import data from 'data/projects.json';
 import Layout from 'components/Layout';
@@ -7,16 +7,14 @@ import Section from 'components/Section';
 import { FlexContainer, FlexItem } from 'styles/containers';
 import Sitting from 'images/sitting.jpeg';
 import useImage from 'hooks/useImage';
-import { NextProjectButton, Pattern } from './Project.styles';
-import { GoArrowRight } from 'react-icons/go';
-import { ProjectType } from 'components/Search/Search';
 import AnimateIn from 'components/AnimateIn';
 import GoHome from 'components/GoHome';
 import Loader from 'components/Loader';
+import NextObject from 'components/NextObject';
 
 const Project = () => {
   const loading = useImage(Sitting);
-  const navigate = useNavigate();
+
   const routeParams = useParams();
   const { id } = routeParams;
   const current = data.projects.filter(
@@ -25,10 +23,6 @@ const Project = () => {
   const nextProject = data.projects
     .filter((project) => project !== current)
     .sort(() => 0.5 - Math.random());
-
-  const navigateToNextProject = (project: ProjectType) => {
-    navigate(`/project/${project.title.toLowerCase()}`);
-  };
 
   return (
     <Layout>
@@ -163,28 +157,8 @@ const Project = () => {
           </div>
         </AnimateIn>
       </Section>
-
-      <Section backgroundColor="#E6F0FF" padding="none">
-        <AnimateIn>
-          <div className="row">
-            <div className="col-xs-12 col-md-12">
-              <Pattern>
-                <NextProjectButton
-                  background="#292929"
-                  onClick={() => navigateToNextProject(nextProject[0])}
-                >
-                  <button>
-                    {nextProject[0].title}{' '}
-                    <GoArrowRight style={{ verticalAlign: 'middle' }} />
-                  </button>
-                </NextProjectButton>
-              </Pattern>
-            </div>
-          </div>
-        </AnimateIn>
-      </Section>
-
       <GoHome heading="Thanks for reading!" />
+      <NextObject item={nextProject[0]} />
     </Layout>
   );
 };
