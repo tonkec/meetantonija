@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 
 export const StyledFooter = styled.footer<{ offset: number; toggle: boolean }>`
-  padding: var(--space-sm);
+  padding: 100px var(--space-sm);
   background-color: #d65f32;
   position: fixed;
   bottom: 0;
@@ -25,21 +25,7 @@ export const List = styled.ul`
   display: flex;
   justify-content: flex-start;
 
-  li {
-    margin: 0 10px;
-  }
-`;
-
-export const FooterButton = styled.div`
-  background-color: #f07d51;
-  padding: 20px 10px;
-  border-radius: 10px;
-  color: #f5f5f5;
-  text-align: center;
-  margin: 50px 0;
-  cursor: none;
-
-  &:hover {
-    background-color: #f07d51;
+  li:not(:first-child) {
+    margin-left: 10px;
   }
 `;

@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { List, StyledFooter, FooterButton } from './Footer.styles';
+import { List, StyledFooter } from './Footer.styles';
 import { ImCodepen } from 'react-icons/im';
 import { BiLogoLinkedin } from 'react-icons/bi';
 import { LuGithub } from 'react-icons/lu';
@@ -9,7 +9,6 @@ import Text from 'components/Text';
 import { FiCoffee } from 'react-icons/fi';
 import { AiFillHeart } from 'react-icons/ai';
 import { MainContainer } from 'styles/containers';
-import { useNavigate } from 'react-router';
 
 type PropsType = {
   offset: number;
@@ -17,12 +16,25 @@ type PropsType = {
 };
 
 const Footer = forwardRef<HTMLElement, PropsType>(({ offset, toggle }, ref) => {
-  const navigate = useNavigate();
   return (
     <StyledFooter ref={ref} offset={offset} toggle={toggle}>
       <MainContainer>
         <div className="row">
-          <div className="col-xs-12">
+          <div className="col-xs-12 col-md-6">
+            <Text type="p" color="white" style={{ marginBottom: 30 }}>
+              Antonija Šimić has coded this website in the year of{' '}
+              {new Date().getFullYear()} using{' '}
+              <FiCoffee style={{ verticalAlign: 'middle' }} /> and a lots of{' '}
+              <AiFillHeart style={{ verticalAlign: 'middle' }} />. <br />
+            </Text>
+            <Secret
+              style={{ position: 'absolute', right: 10, bottom: 10 }}
+              dotBackground="#0047b4"
+              secretName="second"
+            />
+          </div>
+
+          <div className="col-xs-12 col-md-4 col-md-offset-2">
             <List>
               <li>
                 <a
@@ -65,46 +77,10 @@ const Footer = forwardRef<HTMLElement, PropsType>(({ offset, toggle }, ref) => {
                 </a>
               </li>
             </List>
-            <Text type="p" color="white" style={{ marginTop: 40 }}>
-              Antonija Šimić has coded this website in the year of{' '}
-              {new Date().getFullYear()} using{' '}
-              <FiCoffee style={{ verticalAlign: 'middle' }} /> and a lots of{' '}
-              <AiFillHeart style={{ verticalAlign: 'middle' }} />. <br />
+
+            <Text type="p" color="#f5f5f5" style={{ marginTop: 30 }}>
+              Zagreb, Croatia
             </Text>
-            <Secret
-              style={{ position: 'absolute', right: 10, bottom: 10 }}
-              dotBackground="#0047b4"
-              secretName="second"
-            />
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-xs-3 col-md-2 col-lg-2">
-            <FooterButton
-              onClick={() => navigate('/')}
-              className="is-clickable"
-            >
-              Home
-            </FooterButton>
-          </div>
-
-          <div className="col-xs-3 col-md-2 col-lg-2">
-            <FooterButton
-              onClick={() => navigate('/notes')}
-              className="is-clickable"
-            >
-              Notes
-            </FooterButton>
-          </div>
-
-          <div className="col-xs-3 col-md-2 col-lg-2">
-            <FooterButton
-              onClick={() => navigate('/about')}
-              className="is-clickable"
-            >
-              About
-            </FooterButton>
           </div>
         </div>
       </MainContainer>
