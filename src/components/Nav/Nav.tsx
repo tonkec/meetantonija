@@ -1,5 +1,5 @@
 import { NavbarLink, Separator, StyledNav } from './Nav.styles';
-import { BsChevronDoubleRight } from 'react-icons/bs';
+import { BsChevronDoubleRight, BsPerson } from 'react-icons/bs';
 import { HiOutlineHome } from 'react-icons/hi';
 import { PiRocketBold } from 'react-icons/pi';
 import { CgNotes } from 'react-icons/cg';
@@ -48,15 +48,20 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
       </Headroom>
       <StyledNav width={width} ref={nav}>
         <NavbarLink to="/">
-          <HiOutlineHome fontSize={20} style={{ verticalAlign: 'text-top' }} />{' '}
+          <HiOutlineHome fontSize={20} style={{ verticalAlign: 'text-top' }} />
           <span>Home</span>
+        </NavbarLink>
+
+        <NavbarLink to="/about">
+          <BsPerson fontSize={20} style={{ verticalAlign: 'text-top' }} />
+          <span>About</span>
         </NavbarLink>
 
         <Separator />
 
         {titles.map((title, index) => (
           <NavbarLink key={index} to={`/project/${title.toLowerCase()}`}>
-            <PiRocketBold fontSize={20} style={{ verticalAlign: 'text-top' }} />{' '}
+            <PiRocketBold fontSize={20} style={{ verticalAlign: 'text-top' }} />
             <span>{title}</span>
           </NavbarLink>
         ))}
@@ -67,7 +72,7 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
           <CgNotes
             fontSize={20}
             style={{ verticalAlign: 'text-top', color: '#ffffff' }}
-          />{' '}
+          />
           <span>Notes</span>
         </NavbarLink>
 
