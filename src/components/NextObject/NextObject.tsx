@@ -21,7 +21,10 @@ const NextObject = ({ item }: { item: ProjectType | NotesType }) => {
   return (
     <Section backgroundColor="#00136E" padding="none">
       <AnimateIn>
-        <div className="row" onClick={() => navigateToNextItem(item)}>
+        <div
+          className="row is-clickable"
+          onClick={() => navigateToNextItem(item)}
+        >
           <div
             className="col-xs-8 col-sm-8 col-md-6 col-md-offset-4"
             style={{
