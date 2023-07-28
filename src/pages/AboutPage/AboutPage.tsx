@@ -64,7 +64,7 @@ const AboutPage = () => {
             </Text>
 
             <Text type="p" color="#292929" style={{ marginTop: 30 }}>
-              I believe I bring a lot of value to the table. I honestly care
+              I believe I bring a lot of values to the table. I honestly care
               about the code I am writing and the product I am working on. I am
               super picky about the projects since I want to build impressive
               portfolio. I don't want to just work on something just to be
@@ -103,7 +103,7 @@ const AboutPage = () => {
             style={{ marginBottom: 50 }}
           >
             <Text type="h2" color="#292929">
-              What am I doing in m my free time?
+              What am I doing in my free time?
             </Text>
 
             <Text type="p" color="#292929" style={{ marginTop: 30 }}>
@@ -124,7 +124,7 @@ const AboutPage = () => {
 
             <Text type="p" color="#292929" style={{ marginTop: 30 }}>
               I organised css meetup in Zagreb (before corona took over). I
-              volunteered in borders:none; organization were we encouraged
+              volunteered in borders:none; organization where we encouraged
               refugees to start coding. I started a coding school called
               Kodiraonica where I lead a team of developers in a quest to teach
               others to code.
