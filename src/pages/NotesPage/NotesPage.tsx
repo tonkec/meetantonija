@@ -11,7 +11,7 @@ const NotesPage = () => {
     <Layout>
       <Header backgroundColor="#f5f5f5">
         <div className="row">
-          <div className="col-xs-8">
+          <div className="col-xs-12 col-md-8">
             <Text type="h1" color="#292929">
               Notes.
             </Text>
