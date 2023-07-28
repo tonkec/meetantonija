@@ -14,6 +14,7 @@ import NextObject from 'components/NextObject';
 import NotesImage from '../NotesImage/NotesImage';
 import { notes } from '../notes/notes';
 import ReadingIndicator from '../ReadingIndicator/ReadingIndicator';
+import ContactMe from 'components/ContactMe';
 
 const SingleNote = () => {
   const [loading, setLoading] = useState(true);
@@ -113,7 +114,7 @@ const SingleNote = () => {
           },
         }}
       />
-
+      <ContactMe backgroundColor="#E6F0FF" />
       <GoHome heading="Thanks for reading!" />
       <NextObject item={nextProject[0]} />
     </Layout>

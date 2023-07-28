@@ -452,7 +452,7 @@ const Homepage = () => {
           </AnimateIn>
         </Section>
 
-        <ContactMe />
+        <ContactMe backgroundColor="#43cea2" />
 
         <CtaSection />
       </main>

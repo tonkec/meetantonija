@@ -7,12 +7,12 @@ import Text from 'components/Text';
 import { ColorRing } from 'react-loader-spinner';
 import AnimateIn from 'components/AnimateIn/AnimateIn';
 
-const ContactMe = () => {
+const ContactMe = ({ backgroundColor }: { backgroundColor: string }) => {
   const loadingContact = useImage(Contact);
   const [copyMsg, setCopyMsg] = useState('Copy email');
 
   return (
-    <Section backgroundColor="#43cea2" padding="none">
+    <Section backgroundColor={backgroundColor} padding="none">
       <AnimateIn>
         <div className="row">
           <div className="col-xs-12 col-sm-6 col-lg-4">

@@ -4,6 +4,7 @@ import Text from 'components/Text/Text';
 import Section from 'components/Section/Section';
 import ReadingIndicator from 'pages/NotesPage/ReadingIndicator/ReadingIndicator';
 import useImage from 'hooks/useImage';
+import ContactMe from 'components/ContactMe';
 import me1 from 'images/me1.jpg';
 import me2 from 'images/me2.jpg';
 import me3 from 'images/me3.jpeg';
@@ -234,6 +235,8 @@ const AboutPage = () => {
           </Masonry>
         </ResponsiveMasonry>
       </Section>
+
+      <ContactMe backgroundColor="#43CEA2" />
     </Layout>
   );
 };
