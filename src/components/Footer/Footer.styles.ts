@@ -29,3 +29,17 @@ export const List = styled.ul`
     margin: 0 10px;
   }
 `;
+
+export const FooterButton = styled.div`
+  background-color: #f07d51;
+  padding: 20px 10px;
+  border-radius: 10px;
+  color: #f5f5f5;
+  text-align: center;
+  margin: 50px 0;
+  cursor: none;
+
+  &:hover {
+    background-color: #f07d51;
+  }
+`;

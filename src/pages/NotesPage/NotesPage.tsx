@@ -26,7 +26,7 @@ const NotesPage = () => {
 
       <Section backgroundColor="#f5f5f5" padding="small">
         <div className="row">
-          <div className="col-xs-12 col-md-8 col-md-offset-2">
+          <div className="col-xs-12 col-md-8">
             <NotesList>
               {notes.reverse().map((note) => {
                 return (
