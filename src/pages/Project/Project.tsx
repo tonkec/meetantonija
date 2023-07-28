@@ -143,7 +143,13 @@ const Project = () => {
           <div className="row">
             <div className="col-xs-12 col-sm-6 col-md-4">
               {loading ? (
-                <Loader />
+                <Loader
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                />
               ) : (
                 <img src={Sitting} alt="Me sitting" width="100%" />
               )}

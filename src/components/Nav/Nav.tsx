@@ -57,6 +57,14 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
           <span>About</span>
         </NavbarLink>
 
+        <NavbarLink to="/notes">
+          <CgNotes
+            fontSize={20}
+            style={{ verticalAlign: 'text-top', color: '#ffffff' }}
+          />
+          <span>Notes</span>
+        </NavbarLink>
+
         <Separator />
 
         {titles.map((title, index) => (
@@ -65,16 +73,6 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
             <span>{title}</span>
           </NavbarLink>
         ))}
-
-        <Separator />
-
-        <NavbarLink to="/notes">
-          <CgNotes
-            fontSize={20}
-            style={{ verticalAlign: 'text-top', color: '#ffffff' }}
-          />
-          <span>Notes</span>
-        </NavbarLink>
 
         <Separator />
 

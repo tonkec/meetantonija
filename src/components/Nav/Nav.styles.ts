@@ -37,4 +37,8 @@ export const NavbarLink = styled(Link)`
     transform: translateY(0.5px);
     color: #d65f32;
   }
+
+  span {
+    margin-left: 10px;
+  }
 `;

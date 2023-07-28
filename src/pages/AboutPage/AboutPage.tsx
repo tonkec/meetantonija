@@ -154,13 +154,83 @@ const AboutPage = () => {
       <Section padding="medium" backgroundColor="#f5f5f5">
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
           <Masonry gutter="20px" columnsCount={5}>
-            {image2Loading ? <Loader /> : <img src={me2} alt="me" />}
-            {image3Loading ? <Loader /> : <img src={me3} alt="me" />}
-            {image4Loading ? <Loader /> : <img src={me4} alt="me" />}
-            {image5Loading ? <Loader /> : <img src={me5} alt="me" />}
-            {image6Loading ? <Loader /> : <img src={me6} alt="me" />}
-            {image7Loading ? <Loader /> : <img src={me7} alt="me" />}{' '}
-            {image1Loading ? <Loader /> : <img src={me1} alt="me" />}
+            {image2Loading ? (
+              <Loader
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              />
+            ) : (
+              <img src={me2} alt="me" />
+            )}
+            {image3Loading ? (
+              <Loader
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              />
+            ) : (
+              <img src={me3} alt="me" />
+            )}
+            {image4Loading ? (
+              <Loader
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              />
+            ) : (
+              <img src={me4} alt="me" />
+            )}
+            {image5Loading ? (
+              <Loader
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              />
+            ) : (
+              <img src={me5} alt="me" />
+            )}
+            {image6Loading ? (
+              <Loader
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              />
+            ) : (
+              <img src={me6} alt="me" />
+            )}
+            {image7Loading ? (
+              <Loader
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              />
+            ) : (
+              <img src={me7} alt="me" />
+            )}{' '}
+            {image1Loading ? (
+              <Loader
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              />
+            ) : (
+              <img src={me1} alt="me" />
+            )}
           </Masonry>
         </ResponsiveMasonry>
       </Section>

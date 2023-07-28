@@ -38,7 +38,15 @@ function App() {
   }, [showSearch]);
 
   return loading ? (
-    <Loader />
+    <Loader
+      style={{
+        position: 'fixed',
+        inset: '0',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    />
   ) : (
     <>
       <MyConfetti />

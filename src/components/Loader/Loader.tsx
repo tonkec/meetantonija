@@ -1,14 +1,6 @@
 import { ColorRing } from 'react-loader-spinner';
-const Loader = () => (
-  <div
-    style={{
-      position: 'fixed',
-      inset: '0',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-    }}
-  >
+const Loader = ({ style }: { style: React.CSSProperties }) => (
+  <div style={style}>
     <ColorRing
       visible={true}
       height="80"

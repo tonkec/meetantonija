@@ -44,7 +44,15 @@ const SingleNote = () => {
   }, [id, navigate]);
 
   return loading ? (
-    <Loader />
+    <Loader
+      style={{
+        position: 'fixed',
+        inset: '0',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    />
   ) : (
     <Layout>
       <ReadingIndicator />
