@@ -34,7 +34,7 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
         <BsChevronDoubleRight
           style={{
             position: 'fixed',
-            top: 10,
+            top: 30,
             left: 10,
             zIndex: 99,
             backgroundColor: '#0047B4',

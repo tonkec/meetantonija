@@ -13,6 +13,7 @@ import Loader from 'components/Loader';
 import NextObject from 'components/NextObject';
 import NotesImage from '../NotesImage/NotesImage';
 import { notes } from '../notes/notes';
+import ReadingIndicator from '../ReadingIndicator/ReadingIndicator';
 
 const SingleNote = () => {
   const [loading, setLoading] = useState(true);
@@ -46,6 +47,7 @@ const SingleNote = () => {
     <Loader />
   ) : (
     <Layout>
+      <ReadingIndicator />
       <ReactMarkdown
         children={text}
         components={{

@@ -6,7 +6,7 @@ export const StyledNav = styled.nav<{ width: number }>`
   left: 0;
   top: 0;
   bottom: 0;
-  padding-top: 80px;
+  padding-top: 100px;
   padding-left: 50px;
   background-color: #292929;
   z-index: 0;
