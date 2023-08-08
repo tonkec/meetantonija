@@ -96,6 +96,30 @@
       "reason": "I simply finished all of my tasks.",
       "id": "7",
       "isFeatured": false
+    },
+    {
+      "title": "Pimsf",
+      "headline": "What's with the pipes?",
+      "skills": "Javascript, React, dc, d3",
+      "link": "https://feromihin.hr/services-and-solutions/solutions/pimsf-pipeline-integrity-management-system/",
+      "description": "The explorer is the most important part of the app. My task was to add the existing D3/DC charts and make them draggable and resizable. I achieved that using react-grid-layout npm package. The first thing I did was creating a plain draggable and resizable 8 column grid as requested. After that, I added graphs to columns. As user resizes column, graph should follow height and width of that column, of its parent. I sent resizedHeight and resizedWidth variable to the redux store and passed them to width and height in D3 attribute. When charts were resizable and draggable, I worked on responsiveness of the grid. React-grid-layout comes with the built-in properties and functions to create a grid based on the breakpoint. I used one function that will take number of columns and a breakpoint as parameters. PIMSF can display different version of pipelines. If a constructor in the field changes something on the pipeline, they should report changes in the app. That report should create a new version of the pipeline. Such pipeline in PIMSF is perceived as a virtual pipeline. My task was to create a changelog history tree that will display each version of a pipeline. This is displayed as a tree where each new version is treated as a child, and each old version as a parent. We used Mermaid.js package to display such tree. Axios was used to get data points from API. Each pipeline in the tree can be deleted or approved. If it is approved, pipeline should change color to green. If it is deleted, it should be deleted from the history tree.",
+      "year": 2019,
+      "objectType": "project",
+      "reason": "I simply finished all of my tasks.",
+      "id": "8",
+      "isFeatured": false
+    },
+    {
+      "title": "Tint",
+      "headline": "Bring your ideas to life",
+      "skills": "Javascript, Scss",
+      "link": "https://www.tintup.com/",
+      "description": "I was in charge of bringing the pixel perfect layout into the life. This is a homepage, a landing page that brought more users to TINT's product. My main task was to deliver pixel-perfect layout based on Zeplin designs. Coding global navigation and footer was part of my task too. All animations and transitions are coded from scratch with custom CSS and jQuery/Js. Design sessions on this project were really friendly and funny. We had lots of fun on Skype calls. I even got a Thank you note delivered directly to my address in Croatia",
+      "year": 2016,
+      "objectType": "project",
+      "reason": "I simply finished all of my tasks.",
+      "id": "8",
+      "isFeatured": false
     }
   ]
 }
