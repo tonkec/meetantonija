@@ -142,7 +142,7 @@ const Project = () => {
       <Section padding="medium" backgroundColor="#0047B4">
         <AnimateIn>
           <div className="row">
-            <div className="col-xs-12 col-sm-6 col-md-4">
+            <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
               {loading ? (
                 <Loader
                   style={{
@@ -155,7 +155,7 @@ const Project = () => {
                 <img src={Sitting} alt="Me sitting" width="100%" />
               )}
             </div>
-            <div className="col-xs-12 col-md-7 col-md-offset-1">
+            <div className="col-xs-12 col-md-7 col-lg-6 col-lg-offset-1">
               <Text type="h2" color="white">
                 That's me sitting on a cushion. I don't have any project
                 pictures since clients really care about NDAs.
@@ -167,7 +167,6 @@ const Project = () => {
 
       <GoHome heading="Thanks for reading!" />
       <NextObject item={nextProject[0]} />
-      <ContactMe backgroundColor="#E6F0FF" />
     </Layout>
   );
 };

@@ -20,8 +20,8 @@ type Item = {
 const MyAccordion = ({ items }: AccordionInterface) => {
   return (
     <Accordion>
-      {items.map((item) => (
-        <AccordionItem style={{ marginBottom: 20 }}>
+      {items.map((item, index) => (
+        <AccordionItem key={index} style={{ marginBottom: 20 }}>
           <AccordionItemHeading
             style={{ padding: '20px 50px 10px', backgroundColor: '#ffffff' }}
           >

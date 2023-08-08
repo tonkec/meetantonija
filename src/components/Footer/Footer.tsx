@@ -32,55 +32,51 @@ const Footer = forwardRef<HTMLElement, PropsType>(({ offset, toggle }, ref) => {
               dotBackground="#0047b4"
               secretName="second"
             />
-          </div>
 
-          <div className="col-xs-12 col-md-4 col-md-offset-2">
-            <List>
-              <li>
-                <a
-                  href="https://github.com/tonkec"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="is-clickable"
-                >
-                  <LuGithub color="#ffffff" fontSize={40} />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://codepen.io/tonkec"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="is-clickable"
-                >
-                  <ImCodepen color="#ffffff" fontSize={40} />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/antonija-simic/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="is-clickable"
-                >
-                  <BiLogoLinkedin color="#ffffff" fontSize={40} />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://gist.github.com/tonkec/344482591e09ab240458ebbebbc3dc1b"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="is-clickable"
-                >
-                  <TiDocument color="#ffffff" fontSize={40} />
-                </a>
-              </li>
-            </List>
-
-            <Text type="p" color="#f5f5f5" style={{ marginTop: 30 }}>
-              Zagreb, Croatia
-            </Text>
+            <div>
+              <List>
+                <li>
+                  <a
+                    href="https://github.com/tonkec"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="is-clickable"
+                  >
+                    <LuGithub color="#ffffff" fontSize={40} />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://codepen.io/tonkec"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="is-clickable"
+                  >
+                    <ImCodepen color="#ffffff" fontSize={40} />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/antonija-simic/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="is-clickable"
+                  >
+                    <BiLogoLinkedin color="#ffffff" fontSize={40} />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://gist.github.com/tonkec/344482591e09ab240458ebbebbc3dc1b"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="is-clickable"
+                  >
+                    <TiDocument color="#ffffff" fontSize={40} />
+                  </a>
+                </li>
+              </List>
+            </div>
           </div>
         </div>
       </MainContainer>

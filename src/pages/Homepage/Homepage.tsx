@@ -43,6 +43,10 @@ const Homepage = () => {
     },
   });
 
+  const featuredProjects = data.projects.filter(
+    (project) => project.isFeatured
+  );
+
   return (
     <Layout>
       <main>
@@ -115,8 +119,8 @@ const Homepage = () => {
             <div className="row">
               <div className="col-xs-12 col-md-12">
                 <div ref={sliderRef} className="keen-slider">
-                  {CarouselItems.map((item) => (
-                    <div className="keen-slider__slide">
+                  {CarouselItems.map((item, index) => (
+                    <div className="keen-slider__slide" key={index}>
                       <CarouselItem>
                         <Text
                           type="h3"
@@ -149,8 +153,8 @@ const Homepage = () => {
             </div>
 
             <div className="row">
-              {data.projects.map((project) => (
-                <div className="col-xs-12 col-md-6">
+              {featuredProjects.map((project, index) => (
+                <div className="col-xs-12 col-md-6" key={index}>
                   <ProjectCard>
                     <div>
                       <Text type="h3" color="#292929">
@@ -175,6 +179,16 @@ const Homepage = () => {
                   </ProjectCard>
                 </div>
               ))}
+            </div>
+
+            <div className="row">
+              <div className="col-xs-12">
+                <Link to="projects">
+                  <Text type="p" color="#292929">
+                    See more projects{' '}
+                  </Text>
+                </Link>
+              </div>
             </div>
           </AnimateIn>
         </Section>
@@ -434,7 +448,7 @@ const Homepage = () => {
                     {
                       title: 'Are you a senior or medior?',
                       description:
-                        'I am closer to being senior than medior even though I do not yet have the confidence to say that I am senior out loud.',
+                        'I am closer to being a senior than medior even though I do not yet have the confidence to say that I am senior out loud.',
                     },
                     {
                       title: 'What is your availability?',

@@ -15,7 +15,9 @@ interface NavInterface {
 }
 const Nav = ({ onClick, width, toggle }: NavInterface) => {
   const nav = useRef<HTMLElement>(null);
-  const titles = data.projects.map((project) => project.title);
+  const featuredProjects = data.projects.filter(
+    (project) => project.isFeatured
+  );
 
   useEffect(() => {
     if (!toggle) {
@@ -67,10 +69,13 @@ const Nav = ({ onClick, width, toggle }: NavInterface) => {
 
         <Separator />
 
-        {titles.map((title, index) => (
-          <NavbarLink key={index} to={`/project/${title.toLowerCase()}`}>
+        {featuredProjects.map((project, index) => (
+          <NavbarLink
+            key={index}
+            to={`/project/${project.title.toLowerCase()}`}
+          >
             <PiRocketBold fontSize={20} style={{ verticalAlign: 'text-top' }} />
-            <span>{title}</span>
+            <span>{project.title}</span>
           </NavbarLink>
         ))}
 

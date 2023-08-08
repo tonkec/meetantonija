@@ -7,6 +7,7 @@ import SingleNote from 'pages/NotesPage/SingleNote';
 import NotFoundPage from 'pages/NotFoundPage';
 import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary';
 import AboutPage from 'pages/AboutPage/AboutPage';
+import ProjectsPage from 'pages/ProjectsPage';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -20,6 +21,7 @@ const AnimatedRoutes = () => {
           <Route path="/notes" element={<Notes />} />
           <Route path="/notes/:id" element={<SingleNote />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </ErrorBoundary>

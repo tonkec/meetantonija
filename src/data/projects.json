@@ -9,7 +9,8 @@
       "reason": "Unfortunately, I was let go only after couple of months working here due to downsizing. Several of us was let go. I got really concerned about quality of my work and that being a reason, but it turns out they just did not get enough finances.",
       "year": 2023,
       "objectType": "project",
-      "id": "1"
+      "id": "1",
+      "isFeatured": true
     },
     {
       "title": "Casumo",
@@ -20,7 +21,8 @@
       "reason": "I was getting more and more dev ops tasks which I did not like. My react skills begin to rot so I decided to leave and look for a reactified client. Also, I did not like the mesiness of the codebase here.",
       "year": 2023,
       "id": "2",
-      "objectType": "project"
+      "objectType": "project",
+      "isFeatured": true
     },
     {
       "title": "Formunauts",
@@ -31,7 +33,8 @@
       "year": 2020,
       "objectType": "project",
       "reason": "Here I was working per month basis. At the end of each month they would tell me if there are more tasks for me. Since this is a startup, it depended on investors. ",
-      "id": "3"
+      "id": "3",
+      "isFeatured": true
     },
     {
       "title": "Craftstrom",
@@ -42,7 +45,57 @@
       "year": 2019,
       "objectType": "project",
       "reason": "I simply finished all of my tasks.",
-      "id": "4"
+      "id": "4",
+      "isFeatured": true
+    },
+    {
+      "title": "Revuto",
+      "headline": "Manage your subscriptions",
+      "skills": "React",
+      "description": "I was working closely with backend developers and a designer. My task was to create user interface following designs from designer and to connect components via API provided by backend developers. User authorization was handled with tokens. I loved working on this project because I was able to get my hands on Context API and React hooks <3. I used Context API for flash messages and hooks in the stateful functional components. The cool part in login and signup form was custom made captcha. Originally, additions were much complex, but client wanted simplified captcha. Now user should know how to sum two numbers that are not larger than 10. I also really much enjoyed playing with CSS animations and transitions. The most valuable page to client was referral program page which has animation that I coded from scratch. The tricky part was reversing animation. I learned scss can not count nth children backwards.",
+      "link": "https://revuto.com/",
+      "year": 2019,
+      "objectType": "project",
+      "reason": "I simply finished all of my tasks.",
+      "id": "5",
+      "isFeatured": false
+    },
+
+    {
+      "title": "CodeInstitute",
+      "headline": "A coding bootcamp",
+      "skills": "HTML, CSS, Javascript",
+      "description": "The main technologies required for this project were HTML, CSS, Scss and JS and some fundamental knowledge in Django architecture. I have been developing content and learning material for students. The content I wrote provided students with up to date knowledge about the mandatory skills needed for web development: HTML, CSS, CSS animations and transitions, responsive web design, JS and Scss. After that, students were given challenges where they could practice on real-life examples. Except for challenges, I created a quiz for each lesson that tested student's knowledge as well. The other task was audio and video material that complements the rest of the content. The task was to implement plenty of new components into an existing LMS based on Django: quizzes, embedded repl.it, sidebar, course content, header, footer. I coded the interface of every course module. I was provided with the design files. It required CSS and Scss skills. The existing LMS code was slow and messy. I improved it with Scss logic. Now it is much cleaner and faster. I liked working with a designer, he had a really good eye for modern and contemporary design. I have been mentoring (remotely) for several years at Code Institute. The major part of the mentorship sessions is focusing on the code quality of students' projects. I help students to think like professional developers from the very start of their coding career. The content agnosticism, don't repeat yourself, reusability and object orientation are principles that I encourage on every session. I advise my students to stay persistent, committed and curious.",
+      "link": "https://codeinstitute.net/global/",
+      "year": 2016,
+      "objectType": "project",
+      "reason": "I simply finished all of my tasks.",
+      "id": "6",
+      "isFeatured": false
+    },
+    {
+      "title": "Peaks",
+      "headline": "The best landing page",
+      "skills": "HTML, CSS, Javascript",
+      "description": "This is a bootstrap template for web and digital agencies. It is best used for showing portfolio and presenting work in general. Web features, such as preloader, parallax, slideshows, full-screen layout and responsivness, will impress your visitors. I coded this template while I was a junior developer, actually this was my first coding job! We were nominated for awwwards.",
+      "link": "https://antonijasimic.bitbucket.io/peaks/",
+      "year": 2015,
+      "objectType": "project",
+      "reason": "I simply finished all of my tasks.",
+      "id": "7",
+      "isFeatured": false
+    },
+    {
+      "title": "OPX",
+      "headline": "Let's fund those NGOs",
+      "skills": "Javascript, Angular",
+      "description": "My main task was to implement user interface into Angular platform using Angular Material and CSS. Expertise included CSS knowledge and Angular templating skills. I was responsible for implementing Figma designs into the Angular app. Pixel perfection was a requirement I had to meet. I had to know Angular templating basics. I created components that rendered either static or mocked data. The hardest task was coding masonry dashboard. Among tasks were also writing unit tests using Jest.",
+      "link": "https://www.opx.org/",
+      "year": 2021,
+      "objectType": "project",
+      "reason": "I simply finished all of my tasks.",
+      "id": "7",
+      "isFeatured": false
     }
   ]
 }
