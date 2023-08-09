@@ -16,6 +16,7 @@ import {
   BackgroundImageDiv,
   PenContainer,
   SeeMore,
+  BlogPostCard,
 } from './Homepage.styles';
 import { CarouselItems } from './CarouselItems';
 import Accordion from 'components/Accordion/Accordion';
@@ -30,6 +31,7 @@ import Dog from 'components/Pens/Dog/Dog';
 import { MainContainer } from 'styles/containers';
 import BeardedMan from 'components/Pens/BeardedMan/BeardedMan';
 import AnimateIn from 'components/AnimateIn/AnimateIn';
+import { notes } from 'pages/NotesPage/notes/notes';
 
 const Homepage = () => {
   const loadingMe = useImage(Me);
@@ -42,6 +44,8 @@ const Homepage = () => {
       spacing: 15,
     },
   });
+
+  const reversedNotes = notes.reverse();
 
   const featuredProjects = data.projects.filter(
     (project) => project.isFeatured
@@ -200,7 +204,7 @@ const Homepage = () => {
                 <div className="col-xs-12 col-md-6">
                   {' '}
                   <Text type="h2" color="#292929">
-                    These tiny projects will make your jaw drop or not.
+                    These tiny projects will make your jaw drop!
                   </Text>
                 </div>
               </div>
@@ -420,6 +424,51 @@ const Homepage = () => {
                   </div>
                 </TestimonialCard>
               </div>
+            </div>
+          </AnimateIn>
+        </Section>
+
+        <Section padding="medium" backgroundColor="#f5f5f5">
+          <AnimateIn>
+            <div className="row" style={{ alignItems: 'stretch' }}>
+              <div className="col-xs-12">
+                <Text type="h2" color="#292929" style={{ marginBottom: 50 }}>
+                  My latest blog posts
+                </Text>
+              </div>
+
+              {notes
+                .reverse()
+                .slice(0, 2)
+                .map((note, index) => (
+                  <Link
+                    to={`notes/${note.id}`}
+                    style={{ textDecoration: 'none', marginBottom: 30 }}
+                    key={index}
+                    className="col-xs-12 col-sm-8 col-md-6 col-lg-4"
+                  >
+                    <BlogPostCard>
+                      <Text type="h3" color="#292929">
+                        {note.title}
+                      </Text>
+                      <Text type="p" color="#292929">
+                        {note.subtitle}
+                      </Text>
+                    </BlogPostCard>
+                  </Link>
+                ))}
+
+              <Link
+                to={`/notes`}
+                style={{ textDecoration: 'none' }}
+                className="col-xs-12 col-sm-8 col-md-6 col-lg-4"
+              >
+                <SeeMore style={{ height: 350, margin: 0 }}>
+                  <Text type="h3" color="white">
+                    See all notes
+                  </Text>
+                </SeeMore>
+              </Link>
             </div>
           </AnimateIn>
         </Section>

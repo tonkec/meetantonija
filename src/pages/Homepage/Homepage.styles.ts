@@ -202,3 +202,22 @@ export const SeeMore = styled.a`
     background-color: #6c7698;
   }
 `;
+
+export const BlogPostCard = styled.div`
+  background-color: #43cea2;
+  padding: 50px 40px;
+  transition: background-color 0.5s ease-in-out;
+  height: 350px;
+
+  & > * {
+    transition: color 0.5s ease-in-out;
+  }
+
+  &:hover {
+    background-color: #0047b4;
+
+    & > * {
+      color: #f5f5f5;
+    }
+  }
+`;

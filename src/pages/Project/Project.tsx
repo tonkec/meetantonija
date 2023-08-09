@@ -11,7 +11,6 @@ import AnimateIn from 'components/AnimateIn';
 import GoHome from 'components/GoHome';
 import Loader from 'components/Loader';
 import NextObject from 'components/NextObject';
-import ContactMe from 'components/ContactMe';
 
 const Project = () => {
   const loading = useImage(Sitting);
