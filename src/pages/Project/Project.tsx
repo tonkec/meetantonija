@@ -164,8 +164,9 @@ const Project = () => {
         </AnimateIn>
       </Section>
 
-      <GoHome heading="Thanks for reading!" />
+     
       <NextObject item={nextProject[0]} />
+      <GoHome heading="Thanks for reading!" />
     </Layout>
   );
 };

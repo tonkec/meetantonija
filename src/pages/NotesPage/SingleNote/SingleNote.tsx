@@ -115,8 +115,8 @@ const SingleNote = () => {
         }}
       />
       <ContactMe backgroundColor="#E6F0FF" />
-      <GoHome heading="Thanks for reading!" />
       <NextObject item={nextProject[0]} />
+      <GoHome heading="Thanks for reading!" />
     </Layout>
   );
 };
