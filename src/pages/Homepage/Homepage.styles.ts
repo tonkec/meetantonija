@@ -30,7 +30,10 @@ export const BackgroundImage = styled.div<{
   background-position: ${(props) => props.backgroundPosition};
   background-image: url(${(props) => props.image});
   background-repeat: no-repeat;
-  margin-bottom: 20vh;
+  margin-bottom: 30vh;
+  @media ${device.tablet} {
+    mbargin-bottom: 20vh;
+  }
   @media ${device.laptop} {
     margin-bottom: 0vh;
   }

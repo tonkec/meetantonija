@@ -497,17 +497,21 @@ const Homepage = () => {
                     {
                       title: 'Are you a senior or medior?',
                       description:
-                        'I am closer to being a senior than medior even though I do not yet have the confidence to say that I am senior out loud.',
-                    },
-                    {
-                      title: 'What is your availability?',
-                      description:
-                        'I can start working in the beginning of the August.',
+                        'I am closer to being a senior than medior.',
                     },
                     {
                       title: 'How long have you been coding?',
                       description: 'I have been coding for the past 10 years.',
                     },
+                    {
+                      title: 'What is your favorite color?',
+                      description: 'I like all colors equally.',
+                    },
+                    {
+                      title: "What is your strongest skill?",
+                      description:
+                        "I am really good at making divs disappear and reappear.",
+                    }
                   ]}
                 />
               </div>
