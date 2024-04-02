@@ -65,16 +65,6 @@ const Footer = forwardRef<HTMLElement, PropsType>(({ offset, toggle }, ref) => {
                     <BiLogoLinkedin color="#ffffff" fontSize={40} />
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="https://gist.github.com/tonkec/344482591e09ab240458ebbebbc3dc1b"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="is-clickable"
-                  >
-                    <TiDocument color="#ffffff" fontSize={40} />
-                  </a>
-                </li>
               </List>
             </div>
           </div>
