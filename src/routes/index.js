@@ -1,1 +1,17 @@
-export { default } from "./Routes";
+import React from 'react';
+import Answer from '../pages/answers';
+import { createBrowserRouter } from 'react-router-dom';
+import App from '../App';
+
+
+export const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <App />,
+    },
+    {
+      path: "/answer/:id",
+      element: <Answer />,
+    },
+  ]);
+

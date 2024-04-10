@@ -1,0 +1,174 @@
+// https://coolors.co/palette/ff9f1c-ffbf69-ffffff-cbf3f0-2ec4b6
+// https://coolors.co/palette/011627-fdfffc-2ec4b6-e71d36-ff9f1c
+html, body, #root {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: "Reddit Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: #fdfffc;
+  color: #011627;
+}
+
+#root {
+  background-color: transparent;
+}
+
+* {
+  box-sizing: border-box;
+  z-index: 1;
+  position: relative;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+
+}
+
+h1, h2,h3,h4,h5,h6 {
+  margin: 0;
+  line-height: 1.6;
+}
+
+#root > .container:first-child {
+  padding-top: 100px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0 20px;
+}
+
+header {
+  padding-top: 100px;
+  padding-bottom: 0px;
+
+  div {
+    margin-top: 60px;
+  }
+}
+
+main {
+  padding: 80px 0;
+
+  input {
+    min-width: 100%;
+    padding: 25px 30px 25px 50px;
+    font-size: 1rem;
+    border: 2px solid #011627;
+    color: #011627;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 50px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .input-container {
+    position: relative;
+  }
+
+  input::placeholder {
+    color: #011627;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+  }
+}
+
+
+section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.questions {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.question {
+  background-color: #011627;
+  border-radius: 5px;
+  padding: 20px;
+  color: #fdfffc;
+  cursor: pointer;
+  opacity: 0;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #2EC4B6;
+  }
+}
+
+.hire-me {
+  background-color: #2EC4B6;
+  padding: 50px;
+  border-radius: 5px;
+  text-align: center;
+  button {
+    background-color: #011627;
+    color: #fdfffc;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #292929;
+    }
+  }
+}
+
+.magic-square {
+  position: absolute;
+  z-index: 0;
+}
+
+@for $i from 1 through 5 {
+  .question:nth-child(#{$i}) {
+    animation: fadeIn 0.5s #{$i * 0.2}s forwards;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
