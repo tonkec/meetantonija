@@ -13,15 +13,20 @@ const HomePage = () => {
   return (
     <>
       <header className="container">
-        <h1>Hey, I am Antonija,</h1>
-        <h3>a frontend developer from Zagreb.</h3>
-
-        <div>
-          <p>I enjoy building beautiful user interfaces from scratch </p>
-          <p>
-            using React, Javascript, Typescript and CSS in all its form and
-            glory.
-          </p>
+        <div className="flex">
+          <div>
+            <h1>Hey, I am Antonija,</h1>
+            <h3>a frontend developer from Zagreb.</h3>
+            <p>I enjoy building beautiful user interfaces from scratch </p>
+            <p>
+              using React, Javascript, Typescript and CSS in all its form and
+              glory.
+            </p>
+          </div>
+          <img
+            src="https://avatars.githubusercontent.com/u/5020758?v=4"
+            alt="Antonija"
+          />
         </div>
       </header>
 
@@ -71,6 +76,10 @@ const HomePage = () => {
 
         <section className="container">
           <h2>Or maybe you are looking for my old webiste?</h2>
+          <p>
+            I decided to go minimalist this time, but you can still see my old
+            website here.
+          </p>
         </section>
       </main>
     </>

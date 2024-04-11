@@ -52,6 +52,7 @@ const Navigation = () => {
       clearTimeout(timeout)
     }
   }, [search, navigate])
+
   return (
     <div className="search-container" ref={navigationContainer}>
       <input

@@ -2,11 +2,18 @@ import questions from '../../data/questions'
 import { useParams } from 'react-router-dom'
 import { shuffleArray } from '../../utils'
 import HireMe from '../../components/HireMe'
+import { useEffect } from 'react'
+import { createMagicSquares } from '../../utils'
 
 const Answer = () => {
   const { id } = useParams()
 
   const question = questions.find((question) => question.id === Number(id))
+
+  useEffect(() => {
+    createMagicSquares(['main'])
+  }, [])
+
   return (
     <main>
       {question ? (
@@ -18,7 +25,6 @@ const Answer = () => {
           </section>
 
           <section>
-            <h4>More questions about me</h4>
             <div className="questions">
               {shuffleArray(questions)
                 .filter((q) => q.id !== question.id)
