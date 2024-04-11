@@ -5,6 +5,7 @@ import QuestionsPage from '../pages/QuestionsPage'
 import ProjectsPage from '../pages/ProjectsPage'
 import ProjectPage from '../pages/ProjectPage'
 import AboutPage from '../pages/AboutPage'
+import CvPage from '../pages/CvPage'
 
 const routes = [
   {
@@ -35,6 +36,10 @@ const routes = [
   {
     path: '/about',
     element: <AboutPage />,
+  },
+  {
+    path: '/cv',
+    element: <CvPage />,
   },
 ]
 

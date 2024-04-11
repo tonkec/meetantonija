@@ -20,7 +20,6 @@ const ProjectPage = () => {
             <a href={project.link} target="_blank" rel="noreferrer">
               {project.title}
             </a>
-            , {project.year}
           </h1>
           <h4>{project.headline}</h4>
           <p>{project.description}</p>

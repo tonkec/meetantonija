@@ -6,7 +6,7 @@ const ProjectsPage = () => {
   useEffect(() => {
     createMagicSquares(['main'])
   }, [])
-  const projectsSortedByYear = projects.sort((a, b) => b.year - a.year)
+  const projectsSortedByYear = projects.sort((a, b) => b.to - a.to)
   return (
     <main className="container">
       {projectsSortedByYear.map((project) => {
