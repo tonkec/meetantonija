@@ -175,6 +175,7 @@ section {
   padding: 50px;
   border-radius: 5px;
   text-align: center;
+  margin-top: 100px;
   button {
     background-color: #011627;
     color: #fdfffc;
@@ -235,4 +236,9 @@ section {
 
 .flex {
   display: flex;
+}
+
+ul li {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }

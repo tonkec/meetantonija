@@ -1,9 +1,5 @@
 const PostsPage = () => {
-  return (
-    <div>
-      <h1>Posts Page</h1>
-    </div>
-  )
+  return <main className="container"></main>
 }
 
 export default PostsPage

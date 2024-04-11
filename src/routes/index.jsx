@@ -2,6 +2,9 @@ import HomePage from '../pages/HomePage'
 import AnswerPage from '../pages/AnswerPage'
 import PostsPage from '../pages/PostsPage'
 import QuestionsPage from '../pages/QuestionsPage'
+import ProjectsPage from '../pages/ProjectsPage'
+import ProjectPage from '../pages/ProjectPage'
+import AboutPage from '../pages/AboutPage'
 
 const routes = [
   {
@@ -20,6 +23,18 @@ const routes = [
   {
     path: '/questions',
     element: <QuestionsPage />,
+  },
+  {
+    path: '/projects',
+    element: <ProjectsPage />,
+  },
+  {
+    path: '/project/:id',
+    element: <ProjectPage />,
+  },
+  {
+    path: '/about',
+    element: <AboutPage />,
   },
 ]
 
