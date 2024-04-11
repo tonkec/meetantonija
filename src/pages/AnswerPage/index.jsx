@@ -1,9 +1,9 @@
 import questions from '../../data/questions'
 import { useParams } from 'react-router-dom'
-import { shuffleArray } from '../../utils'
 import HireMe from '../../components/HireMe'
 import { useEffect } from 'react'
 import { createMagicSquares } from '../../utils'
+import OtherItems from '../../components/OtherItems'
 
 const Answer = () => {
   const { id } = useParams()
@@ -25,21 +25,12 @@ const Answer = () => {
           </section>
 
           <section>
-            <div className="questions">
-              {shuffleArray(questions)
-                .filter((q) => q.id !== question.id)
-                .slice(0, 3)
-                .map((q) => {
-                  return (
-                    <a key={q.id} className="question" href={`/answer/${q.id}`}>
-                      <h4>{q.title}</h4>
-                    </a>
-                  )
-                })}
-            </div>
-          </section>
-          <section>
             <HireMe />
+          </section>
+
+          <section>
+            <h3>Check some other questions</h3>
+            <OtherItems items={questions} currentItem={question} url="answer" />
           </section>
         </div>
       ) : (

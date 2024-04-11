@@ -23,11 +23,11 @@ const Navigation = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       const route = routes.find((route) => {
-        if (search === '') {
+        if (search === '' || search === '/') {
           return undefined
         }
 
-        if (search.toLowerCase() === 'home') {
+        if (search.toLowerCase().includes('home')) {
           return route.path === '/'
         }
 
@@ -55,13 +55,16 @@ const Navigation = () => {
 
   return (
     <div className="search-container" ref={navigationContainer}>
-      <input
-        type="search"
-        placeholder="Where would you like to go?"
-        onChange={(event) => setSearch(event.target.value)}
-        value={search}
-      />
-      <p>Example: "posts, home"</p>
+      <div>
+        <input
+          type="search"
+          placeholder="Where would you like to go?"
+          onChange={(event) => setSearch(event.target.value)}
+          value={search}
+        />
+        <span class="material-symbols-outlined">arrow_right_alt</span>
+        <p>Example: "posts, home, questions, projects, about"</p>
+      </div>
     </div>
   )
 }

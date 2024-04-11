@@ -2,6 +2,7 @@ import './App.scss'
 import { Routes, Route, Outlet } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import routes from './routes'
+import Footer from './components/Footer'
 
 function Layout() {
   return (
@@ -11,6 +12,7 @@ function Layout() {
         <h6>Command + K</h6>
       </div>
       <Outlet />
+      <Footer />
     </>
   )
 }

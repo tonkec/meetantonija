@@ -3,6 +3,7 @@ import projects from '../../data/projects'
 import { useEffect } from 'react'
 import { createMagicSquares } from '../../utils/index'
 import HireMe from '../../components/HireMe'
+import OtherItems from '../../components/OtherItems'
 
 const ProjectPage = () => {
   useEffect(() => {
@@ -37,6 +38,11 @@ const ProjectPage = () => {
           <p>{project.conclusion}</p>
 
           <HireMe />
+
+          <section>
+            <h3>Check some other projects</h3>
+            <OtherItems items={projects} currentItem={project} url="project" />
+          </section>
         </>
       ) : (
         <h1>Project not found</h1>

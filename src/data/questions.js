@@ -74,7 +74,7 @@ const questions = [
   {
     id: 15,
     title: 'Why did you teach yourself to code?',
-    info: 'I taught myself to code because I wanted to build beautiful websites and web applications.',
+    info: 'I taught myself to code because I wanted to make a career change and position myself competitively in the job market. Initially, I started exploring coding while learning Ruby on Rails, but it was when I dabbled in CSS and JavaScript that I truly fell in love with coding. The immediate feedback and tangible results I could achieve with these languages motivated me to continue learning and exploring the vast world of programming. Additionally, I saw coding as a pathway to building a future for myself and gaining valuable skills that would open up opportunities in the ever-evolving tech industry.',
   },
   {
     id: 16,
@@ -84,12 +84,12 @@ const questions = [
   {
     id: 17,
     title: 'Where can you see my code?',
-    info: 'You can see my code here',
+    info: 'You can see my code on my github page. I have many projects there.',
   },
   {
     id: 18,
     title: 'Can you give me an example of a project you have worked on?',
-    info: 'Sure, you can see an example of a project I have worked on here.',
+    info: 'Sure, you can see an example of a project I have worked on /projects page.',
   },
 ]
 

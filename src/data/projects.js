@@ -88,7 +88,6 @@ const projects = [
     year: 2019,
     id: 5,
   },
-
   {
     title: 'Code Institute',
     headline: 'A coding bootcamp',
