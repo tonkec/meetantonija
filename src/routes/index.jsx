@@ -1,6 +1,7 @@
 import HomePage from '../pages/HomePage'
 import AnswerPage from '../pages/AnswerPage'
 import PostsPage from '../pages/PostsPage'
+import QuestionsPage from '../pages/QuestionsPage'
 
 const routes = [
   {
@@ -15,6 +16,10 @@ const routes = [
   {
     path: '/posts',
     element: <PostsPage />,
+  },
+  {
+    path: '/questions',
+    element: <QuestionsPage />,
   },
 ]
 
