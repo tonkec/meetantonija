@@ -6,6 +6,7 @@ import ProjectsPage from '../pages/ProjectsPage'
 import ProjectPage from '../pages/ProjectPage'
 import AboutPage from '../pages/AboutPage'
 import CvPage from '../pages/CvPage'
+import NotFound from '../components/NotFound'
 
 const routes = [
   {
@@ -40,6 +41,10 @@ const routes = [
   {
     path: '/cv',
     element: <CvPage />,
+  },
+  {
+    path: '*',
+    element: <NotFound />,
   },
 ]
 

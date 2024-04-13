@@ -35,10 +35,11 @@ const Navigation = () => {
           return undefined
         }
 
-        return (
-          route.path.includes(search.toLowerCase()) &&
-          !route.path.includes('answer')
-        )
+        if (route.path.slice(1).toLowerCase() === search.toLowerCase()) {
+          return route
+        }
+
+        return undefined
       })
 
       if (route) {
@@ -62,8 +63,25 @@ const Navigation = () => {
           onChange={(event) => setSearch(event.target.value)}
           value={search}
         />
-        <span class="material-symbols-outlined">arrow_right_alt</span>
-        <p>Example: "posts, home, questions, projects, about"</p>
+        <span className="material-symbols-outlined">arrow_right_alt</span>
+
+        <div className="search-results">
+          {routes
+            .filter(
+              (route) => !route.path.includes(':id') && route.path !== '*'
+            )
+            .map((route) => (
+              <button
+                key={route.path}
+                onClick={() => {
+                  navigate(route.path)
+                  navigationContainer.current.classList.remove('show')
+                }}
+              >
+                {route.path}
+              </button>
+            ))}
+        </div>
       </div>
     </div>
   )

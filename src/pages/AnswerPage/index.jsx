@@ -4,6 +4,7 @@ import HireMe from '../../components/HireMe'
 import { useEffect } from 'react'
 import { createMagicSquares } from '../../utils'
 import OtherItems from '../../components/OtherItems'
+import NotFound from '../../components/NotFound'
 
 const Answer = () => {
   const { id } = useParams()
@@ -18,7 +19,7 @@ const Answer = () => {
     <main>
       {question ? (
         <div className="container">
-          <section>
+          <section className="answer">
             <h1>{question.title}</h1>
             <p>{question.info}</p>
             <p>{question.answer}</p>
@@ -34,9 +35,7 @@ const Answer = () => {
           </section>
         </div>
       ) : (
-        <div className="container">
-          <h1>Question not found</h1>
-        </div>
+        <NotFound />
       )}
     </main>
   )

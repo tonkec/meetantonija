@@ -18,7 +18,7 @@ const CvPage = () => {
           {projects.map((project) => (
             <article key={project.id}>
               <h3>
-                {project.title !== company ? `${project.title} at` : null} {' '}
+                {project.title !== company ? `${project.title} at` : null}{' '}
                 {company}
               </h3>
               <p>

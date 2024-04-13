@@ -3,8 +3,9 @@ import questions from '../../data/questions'
 import { shuffleArray } from '../../utils/index'
 import { createMagicSquares } from '../../utils/index'
 import { useEffect } from 'react'
-
 import { Tooltip as ReactTooltip } from 'react-tooltip'
+import notes from '../../data/posts'
+import Iframe from 'react-iframe'
 
 const HomePage = () => {
   const [search, setSearch] = useState('')
@@ -19,9 +20,11 @@ const HomePage = () => {
         <div className="flex">
           <div>
             <h1>Hey 👋</h1>
-            <h2>I am Antonija,</h2>
+            <h2>
+              I am <span className="accent">Antonija</span>,
+            </h2>
             <h3>
-              a <span className="accent">frontend</span> developer 👩‍💻 from{' '}
+              a frontend developer 👩‍💻 from{' '}
               <span data-tooltip-id="my-tooltip-1">Zagreb</span>.
             </h3>
             <p>I enjoy building beautiful user interfaces from scratch </p>
@@ -76,6 +79,54 @@ const HomePage = () => {
                   </a>
                 )
               })}
+          </div>
+        </section>
+
+        <section className="container">
+          <h2>Would you like to read something?</h2>
+          <div className="notes">
+            {shuffleArray(notes)
+              .slice(0, 2)
+              .map((note) => {
+                return (
+                  <a key={note.id} className="note" href={`/posts/${note.id}`}>
+                    <h3>{note.title} </h3>
+                    <p>{note.subtitle}</p>
+                  </a>
+                )
+              })}
+          </div>
+        </section>
+
+        <section className="container">
+          <h2>
+            You can also watch me <span className="accent">code</span>.
+          </h2>
+
+          <div className="iframes">
+            <div className="iframe">
+              <Iframe
+                url="https://www.youtube.com/embed/iCiG3WTfrX4?si=PVz_A9IWQTcHJCBI"
+                width="100%"
+                height="300px"
+              />
+            </div>
+
+            <div className="iframe">
+              <Iframe
+                url="https://www.youtube.com/embed/GQYJSmaSZow?si=X2qIgOMaPmuTFyJs"
+                width="100%"
+                height="300px"
+              />
+            </div>
+
+            <div className="iframe">
+              <Iframe
+                url="https://www.youtube.com/embed/PgCKTLeWLRs?si=gQTLPBDbEgsApg7h"
+                width="100%"
+                height="300px"
+              />
+            </div>
           </div>
         </section>
 
