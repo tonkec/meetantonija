@@ -3,9 +3,9 @@ import questions from '../../data/questions'
 import { shuffleArray } from '../../utils/index'
 import { createMagicSquares } from '../../utils/index'
 import { useEffect } from 'react'
-import { Tooltip as ReactTooltip } from 'react-tooltip'
 import notes from '../../data/posts'
 import Iframe from 'react-iframe'
+import { Tooltip } from 'react-tooltip'
 
 const HomePage = () => {
   const [search, setSearch] = useState('')
@@ -25,7 +25,12 @@ const HomePage = () => {
             </h2>
             <h3>
               a frontend developer 👩‍💻 from{' '}
-              <span data-tooltip-id="my-tooltip-1">Zagreb</span>.
+              <span
+                data-tooltip-id="my-tooltip"
+              >
+                Zagreb
+              </span>
+              ,
             </h3>
             <p>I enjoy building beautiful user interfaces from scratch </p>
             <p>
@@ -33,12 +38,16 @@ const HomePage = () => {
               glory.
             </p>
           </div>
-          <ReactTooltip id="my-tooltip-1" content="A capital of Croatia" />
           <img
             src="https://avatars.githubusercontent.com/u/5020758?v=4"
             alt="Antonija"
           />
         </div>
+
+        <Tooltip id="my-tooltip" style={{backgroundColor: "#011627", padding: "10px", borderRadius: "5px"}} className='tooltip'>
+         <img src="https://i.natgeofe.com/n/a11e9ead-955f-4a4e-977c-d1b2f104ee75/zagrebgettyimages-1144074611hr_3x2.jpg" alt="Zagreb" />
+          <br /><span>A capital of Croatia.</span>
+        </Tooltip>
       </header>
 
       <main>
@@ -136,8 +145,6 @@ const HomePage = () => {
             I decided to go <span data-tooltip-id="minimalist">minimalist</span>{' '}
             this time, but you can still see my old website here.
           </p>
-
-          <ReactTooltip id="minimalist" content="A way of living." />
         </section>
       </main>
     </>

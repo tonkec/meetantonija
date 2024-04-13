@@ -350,3 +350,10 @@ iframe {
   border-radius: 5px;
   border: 4px solid #011627;
 }
+
+.tooltip {
+  img {
+    border: none;
+    border-radius: 0;
+  }
+}
