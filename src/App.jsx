@@ -3,13 +3,19 @@ import { Routes, Route, Outlet } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import routes from './routes'
 import Footer from './components/Footer'
+import BrowserNavigation from './components/BrowserNavigation'
 
 function Layout() {
   return (
     <>
+     <BrowserNavigation />
       <Navigation />
+      
       <div className="container">
         <h6>Command + K</h6>
+
+       
+  
       </div>
       <Outlet />
       <Footer />

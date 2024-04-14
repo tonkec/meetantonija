@@ -43,7 +43,7 @@ const Answer = () => {
 
                 <div className="step">
                   <h3>2. Plan</h3>
-                  <p>Plan the solution and create a roadmap</p>
+                  <p>Plan the solution and create a roadmap.</p>
                 </div>
 
                 <div className="step">

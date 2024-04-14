@@ -17,7 +17,6 @@
 17. funderpro link na funderpro, a ne na mochalabs
 18. pitanje koje industrije ne volim
 19. napravit bolju navigaciju, command plus 1,2,3 ili da se trenutna filtrira na tipkanje
-20. Watch me code videi
 21. back and forth strelice?
 22. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu
 23. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
@@ -31,8 +30,8 @@
 ## GOTOVO
 
 5. dodat pens stranicu
-
-- dodat vide na homepage
+6. dodat vide na homepage
+20. Watch me code videi
 
 ## NEXTTODO
 

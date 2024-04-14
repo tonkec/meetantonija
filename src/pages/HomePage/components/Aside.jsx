@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { FaRegWindowClose } from 'react-icons/fa'
+import { IoMdClose } from "react-icons/io";
+
 import notes from '../../../data/posts'
 import { truncateString } from '../../../utils'
 
@@ -8,7 +9,7 @@ const Aside = () => {
   return (
     <section className="bg-green">
       <aside className={noteContent.intro ? 'show' : 'hide'}>
-        <FaRegWindowClose
+        <IoMdClose
           className="icon"
           onClick={() => {
             setNoteContent({})
