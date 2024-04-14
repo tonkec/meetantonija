@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { IoMdClose } from "react-icons/io";
+import { IoMdClose } from 'react-icons/io'
 
 import notes from '../../../data/posts'
 import { truncateString } from '../../../utils'
@@ -7,7 +7,7 @@ import { truncateString } from '../../../utils'
 const Aside = () => {
   const [noteContent, setNoteContent] = useState({})
   return (
-    <section className="bg-green">
+    <section className="bg-white">
       <aside className={noteContent.intro ? 'show' : 'hide'}>
         <IoMdClose
           className="icon"
@@ -31,7 +31,7 @@ const Aside = () => {
         <div className="circle"></div>
       </div>
       <div className="container">
-        <h3>👌 I write about technologies I like.</h3>
+        <h2>👌 I write about technologies I like.</h2>
 
         {notes.slice(0, 2).map((note) => {
           return (

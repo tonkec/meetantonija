@@ -12,9 +12,7 @@ const Previewer = () => {
   const buttonWrapper = useRef(null)
   return (
     <section className="container">
-      <h3>
-        🔥 I design in <span className="accent">code.</span>
-      </h3>
+      <h3>🔥 I design in code.</h3>
 
       <div className="flex codepen">
         <div ref={buttonWrapper}>

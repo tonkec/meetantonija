@@ -1,24 +1,24 @@
 .navigation {
-    button {
-        background-color: #ff9f1c;
-        border: none;
-        color: #fdfffc;
-        border-radius: 5px;
-        color: #333;
-        cursor: pointer;
-        font-size: 20px;
-        padding: 5px 10px;
-        text-align: center;
-        text-decoration: none;
-        transition: background-color 0.3s;
-        line-height: 20px;
-        position: absolute;
-        transform:  translateX(-70%);
-        transition: transform 0.3s;
-        top: 5px;
-      
-        &:hover {
-            transform: translateX(5px);
-        }
+  button {
+    background-color: #ff9f1c;
+    border: none;
+    color: #fdfffc;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    line-height: 20px;
+    position: absolute;
+    transform: translateX(-70%);
+    transition: transform 0.3s;
+    top: 5px;
+
+    &:hover {
+      transform: translateX(5px);
     }
+  }
 }

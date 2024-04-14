@@ -4,7 +4,7 @@ const HireMe = () => {
   const [isCopied, setIsCopied] = useState(false)
   return (
     <div className="hire-me">
-      <h4>Are you ready to talk about your business?</h4>
+      <h2>Are you ready to talk?</h2>
       <p>If you are interested in working with me, please get in touch.</p>
 
       <button

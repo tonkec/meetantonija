@@ -8,14 +8,11 @@ import BrowserNavigation from './components/BrowserNavigation'
 function Layout() {
   return (
     <>
-     <BrowserNavigation />
+      <BrowserNavigation />
       <Navigation />
-      
+
       <div className="container">
         <h6>Command + K</h6>
-
-       
-  
       </div>
       <Outlet />
       <Footer />

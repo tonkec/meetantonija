@@ -12,6 +12,8 @@ import Search from './components/Search'
 import CodeEditor from './components/CodeEditor'
 import Videos from './components/Videos/'
 
+import Steps from './components/Steps'
+
 const HomePage = () => {
   useEffect(() => {
     createMagicSquares(['footer'])
@@ -24,12 +26,11 @@ const HomePage = () => {
         <Previewer />
         <CodeEditor />
         <Slider />
+        <Steps />
         <Aside />
         <Videos />
         <Search />
-        <section className="container">
-          <HireMe />
-        </section>
+        <HireMe />
       </main>
     </>
   )

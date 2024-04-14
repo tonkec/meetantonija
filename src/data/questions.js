@@ -74,7 +74,7 @@ const questions = [
   {
     id: 15,
     title: 'Why did you teach yourself to code?',
-    info: 'I taught myself to code because I wanted to make a career change and position myself competitively in the job market. Initially, I started exploring coding while learning Ruby on Rails, but it was when I dabbled in CSS and JavaScript that I truly fell in love with coding. The immediate feedback and tangible results I could achieve with these languages motivated me to continue learning and exploring the vast world of programming. Additionally, I saw coding as a pathway to building a future for myself and gaining valuable skills that would open up opportunities in the ever-evolving tech industry.',
+    info: 'I taught myself to code because I fell in love with web design, css transitions and animations.',
   },
   {
     id: 16,

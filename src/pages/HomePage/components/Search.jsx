@@ -3,50 +3,47 @@ import { shuffleArray } from '../../../utils/index'
 import { useState } from 'react'
 
 const Search = () => {
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState(questions[0].title)
+  const [questionContent, setQuestionContent] = useState(questions[0])
 
   return (
-    <section>
-      <div className="container">
-        <h3>Maybe there is something else you would like to know? 🙋‍♀️</h3>
-        <div className="input-container">
-          <div className="search-icon">
-            <span className="material-symbols-outlined">search</span>
-          </div>
+    <div className="flex questions-container">
+      <section>
+        <div className="circle"></div>
+        <div className="circle"></div>
+        <div className="container">
+          <h2> Is there anything else you would like to know?</h2>
           <input
             type="text"
-            placeholder="What would you like to know?"
-            onChange={(e) => {
-              setSearch(e.target.value)
-            }}
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search for questions"
           />
-        </div>
-        <div className="questions">
-          {shuffleArray(questions)
-            .filter((question) => {
-              if (search === '') {
-                return question
-              } else if (
+
+          <div className="questions">
+            {shuffleArray(questions).slice(0, 3)
+              .filter((question) =>
                 question.title.toLowerCase().includes(search.toLowerCase())
-              ) {
-                return question
-              }
-            })
-            .slice(0, 3)
-            .map((question) => {
-              return (
-                <a
-                  key={question.id}
-                  className="question"
-                  href={`/answer/${question.id}`}
-                >
-                  <h4>{question.title}</h4>
-                </a>
               )
-            })}
+              .map((question) => (
+                <div
+                  key={question.id}
+                  onClick={() => setQuestionContent(question)}
+                  className='question'
+                >
+                  {question.title}
+                </div>
+              ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section className="bg-blue">
+        <div className="container">
+          <h3>{questionContent.title}</h3>
+          <p>{questionContent.info}</p>
+        </div>
+      </section>
+    </div>
   )
 }
 

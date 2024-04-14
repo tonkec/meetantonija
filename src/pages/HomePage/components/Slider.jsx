@@ -8,11 +8,12 @@ const Slider = () => {
       perView: 2,
       origin: 'center',
       spacing: 5,
+      offset: 0,
     },
   })
   return (
     <section className="container">
-      <h3>🔥 I work with clients.</h3>
+      <h3>🏢 I work with clients.</h3>
 
       <div ref={sliderRef} className="keen-slider">
         {projects

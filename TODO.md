@@ -17,22 +17,23 @@
 17. funderpro link na funderpro, a ne na mochalabs
 18. pitanje koje industrije ne volim
 19. napravit bolju navigaciju, command plus 1,2,3 ili da se trenutna filtrira na tipkanje
-21. back and forth strelice?
-22. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu
-23. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
-24. cv stranica, filtrirat prema godini i tehnologiji
-25. dodat tehnologije na svaki projekt na CV stranici
-26. https://giscus.app/
-27. pretvorit answere u markdown tako da mogu stavljat kod
-28. na projects stranici stavit onu sliku iz hub385
-29. dodat mali gradient na cta hire me
+20. back and forth strelice?
+21. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu
+22. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
+23. cv stranica, filtrirat prema godini i tehnologiji
+24. dodat tehnologije na svaki projekt na CV stranici
+25. https://giscus.app/
+26. pretvorit answere u markdown tako da mogu stavljat kod
+27. na projects stranici stavit onu sliku iz hub385
+28. dodat mali gradient na cta hire me
 
 ## GOTOVO
 
 5. dodat pens stranicu
 6. dodat vide na homepage
-20. Watch me code videi
+7. Watch me code videi
 
 ## NEXTTODO
 
+- i write beautiful code section do kraja
 - responsive homepage
