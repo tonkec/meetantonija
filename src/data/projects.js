@@ -3,8 +3,7 @@ const projects = [
     company: 'Trustworthy',
     title: 'Trustworthy',
     headline: 'A family operating system',
-    skills:
-      'React, Typescript, Styled Components, Redux Toolkit Query, auth0',
+    skills: 'React, Typescript, Styled Components, Redux Toolkit Query, auth0',
     link: 'https://www.trustworthy.com/',
     description:
       "As a Senior React Developer at Trustworthy Company, I played a pivotal role in the development and maintenance of critical software applications, contributing to the company's mission of providing reliable and secure solutions to its clients.",

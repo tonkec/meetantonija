@@ -333,9 +333,13 @@ span[data-tooltip-id] {
   justify-content: center;
   text-decoration: none;
   max-width: 800px;
+  cursor: pointer;
+  transition: transform 0.3s;
+
   &:hover {
     background-color: #fdfffc;
     color: #011627;
+    transform: translateX(10px);
   }
 }
 
@@ -563,7 +567,6 @@ iframe {
   padding: 20px;
   margin: 0 10px;
 
-
   h3 {
     margin-left: 50px;
   }
@@ -597,7 +600,7 @@ iframe {
   min-width: 90%;
   border-radius: 10px;
   position: relative;
-  margin-left: 50px;;
+  margin-left: 50px;
   border: 4px solid #011627;
 
   .content {
@@ -611,7 +614,6 @@ iframe {
     position: relative;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    
 
     &::after {
       content: '';
@@ -621,7 +623,7 @@ iframe {
       left: 10px;
       width: 70px;
       height: 10px;
-      background-color: lighten(#2EC4B6, 20%);
+      background-color: lighten(#2ec4b6, 20%);
       border-radius: 5px;
     }
 
@@ -633,7 +635,7 @@ iframe {
       left: 90px;
       width: 70px;
       height: 10px;
-      background-color: lighten(#FF9F1C, 20%);
+      background-color: lighten(#ff9f1c, 20%);
       border-radius: 5px;
     }
   }
@@ -651,7 +653,7 @@ iframe {
 
   p {
     margin-left: 20px;
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-style: italic;
   }
 
@@ -682,5 +684,50 @@ iframe {
       background-color: #dbdbdb;
       border-radius: 5px;
     }
+  }
+}
+
+aside {
+  position: absolute;
+  background-color: lighten(#2ec4b6, 20%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  max-width: 300px;
+  padding: 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  &.show {
+    transform: translateX(0);
+  }
+
+  h3 {
+    clear: both;
+    margin-top: 40px;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
+  button {
+    background-color: #011627;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #fdfffc;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+
+  .icon {
+    font-size: 2rem;
+    float: right;
+    cursor: pointer;
   }
 }

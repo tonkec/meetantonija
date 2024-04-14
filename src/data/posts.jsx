@@ -12,6 +12,8 @@ const notes = [
     id: 1,
     icon: () => <FaRobot />,
     objectType: 'note',
+    intro:
+      'I have a small trauma when it comes to this little array method in Javascript. I got asked in an interview to sort some array and I could not remember by my heart what does a sort function looks like. I always google it. That is why I decided to write a post about it, mainly to teach myself once and for all, how its syntax looks like. Here is an array with random numbers. If you want to sort it from the smallest number to the biggest number, just use minus operator for two parameters.',
   },
   {
     title: 'What is a lexical scope?',
@@ -20,6 +22,8 @@ const notes = [
     id: 2,
     icon: () => <FaBook />,
     objectType: 'note',
+    intro:
+      "Of course I know what lexical means, this is one of the rare cases where my diploma in linguistics helps me 💪. But still it was confusing to apply that knowledge to Javascript. Let's dive in! First things first. Lexical in general means a definition, an explanation, a meaning. It points to the definition part of the object in contrast to the execution.",
   },
   {
     title: 'Error boundary in React',
@@ -27,6 +31,8 @@ const notes = [
     id: 3,
     icon: () => <CgDanger />,
     objectType: 'note',
+    intro:
+      'While I was building this app, my personal website, I found myself looking at the exception when I visited nested route with random param. Let me start from the beginning. This project has several routes and some of them are nested.',
   },
   {
     title: 'What is a pure function?',
