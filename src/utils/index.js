@@ -10,7 +10,7 @@ export const createMagicSquares = (containers) => {
   containers.forEach((container) => {
     const containerElement = document.querySelector(container)
     if (!containerElement) return
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 2; i++) {
       const div = document.createElement('div')
       div.classList.add('magic-square')
       div.style.width = `${Math.floor(Math.random() * 100)}px`

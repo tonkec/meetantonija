@@ -4,7 +4,7 @@ const projects = [
     title: 'Trustworthy',
     headline: 'A family operating system',
     skills:
-      'React, Typescript, Styled Components, Redux Toolkit Query, auth0...',
+      'React, Typescript, Styled Components, Redux Toolkit Query, auth0',
     link: 'https://www.trustworthy.com/',
     description:
       "As a Senior React Developer at Trustworthy Company, I played a pivotal role in the development and maintenance of critical software applications, contributing to the company's mission of providing reliable and secure solutions to its clients.",
@@ -32,7 +32,6 @@ const projects = [
     skills:
       'React, Typescript, graphQl, Contentful, Wordpress, Knockout.js, Keycloak, Jenkins',
     link: 'https://casumo.com/',
-    year: 2023,
     id: 2,
     description:
       'During my tenure as a Senior React Developer at Casumo, an innovative online casino, I played a pivotal role in shaping the frontend architecture and user experience of their gaming platform. With a focus on delivering captivating gaming experiences, I collaborated closely with cross-functional teams to develop cutting-edge features and enhancements.',

@@ -2,7 +2,6 @@
 2. Autofocus input
 3. CV page save as PDF
 4. reveal footer
-5. dodat pens stranicu
 6. blog posts s makrdownom
 7. dodat jos tooltipova
 8. dodat jos nesto na answer
@@ -29,3 +28,12 @@
 29. pretvorit answere u markdown tako da mogu stavljat kod
 30. na projects stranici stavit onu sliku iz hub385
 31. dodat mali gradient na cta hire me
+
+
+## GOTOVO
+5. dodat pens stranicu
+
+## NEXTTODO
+- dodat vide na homepage
+- responsive homepage
+- see next project da bude browser?
