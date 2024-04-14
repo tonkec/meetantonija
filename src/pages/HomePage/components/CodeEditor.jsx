@@ -19,12 +19,12 @@ const CodeEditor = () => {
               {`import { skiils } from 'frontend-developer';
 const { html, css, javascript, typescript, react } = skills;
 const frontendDeveloper = {
-name: 'Antonija',
-age: 30,
-skills: [html, css, javascript, typescript, react],
-neverStopsLearning: true,
-enjoysCoding: true,
-isCreative: true,
+  name: 'Antonija',
+  age: 30,
+  skills: [html, css, javascript, typescript, react],
+  neverStopsLearning: true,
+  enjoysCoding: true,
+  isCreative: true,
 }`}
             </code>
           </pre>

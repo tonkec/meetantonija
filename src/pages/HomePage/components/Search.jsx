@@ -8,7 +8,7 @@ const Search = () => {
   return (
     <section>
       <div className="container">
-        <h3>Maybe there is something else you woul like to know? 🙋‍♀️</h3>
+        <h3>Maybe there is something else you would like to know? 🙋‍♀️</h3>
         <div className="input-container">
           <div className="search-icon">
             <span className="material-symbols-outlined">search</span>

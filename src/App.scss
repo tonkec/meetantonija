@@ -337,8 +337,7 @@ span[data-tooltip-id] {
   transition: transform 0.3s;
 
   &:hover {
-    background-color: #fdfffc;
-    color: #011627;
+    background-color: darken(#011627, 10%);
     transform: translateX(10px);
   }
 }

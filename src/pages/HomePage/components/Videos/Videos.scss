@@ -10,7 +10,7 @@
     background: lighten(#011627, 10%);
 
     p {
-        line-height: 1.2;
+      line-height: 1.2;
     }
 
     .dashboard {
@@ -137,11 +137,9 @@
         }
       }
     }
-
-   
   }
 
-& >  a {
+  & > a {
     background: lighten(#011627, 10%);
     color: #fff;
     border: none;
@@ -157,7 +155,7 @@
     text-align: center;
 
     &:hover {
-        background: lighten(#011627, 20%);
+      background: lighten(#011627, 20%);
     }
-}
+  }
 }
