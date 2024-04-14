@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import { createMagicSquares } from '../../utils/index'
 import { useEffect } from 'react'
 
@@ -12,6 +10,7 @@ import Aside from './components/Aside'
 import Search from './components/Search'
 
 import CodeEditor from './components/CodeEditor'
+import Videos from './components/Videos/'
 
 const HomePage = () => {
   useEffect(() => {
@@ -21,12 +20,12 @@ const HomePage = () => {
   return (
     <>
       <Header />
-
       <main>
         <Previewer />
         <CodeEditor />
         <Slider />
         <Aside />
+        <Videos />
         <Search />
         <section className="container">
           <HireMe />

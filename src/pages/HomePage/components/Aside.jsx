@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { FaRegWindowClose } from 'react-icons/fa'
 import notes from '../../../data/posts'
+import { truncateString } from '../../../utils'
 
 const Aside = () => {
   const [noteContent, setNoteContent] = useState({})
@@ -15,7 +16,7 @@ const Aside = () => {
         />
 
         <h3>{noteContent.title}</h3>
-        <p>{noteContent.intro}</p>
+        <p>{noteContent.intro && truncateString(noteContent.intro, 350)}</p>
         <button
           onClick={() => {
             window.location.href = `/posts/${noteContent.id}`
@@ -31,7 +32,7 @@ const Aside = () => {
       <div className="container">
         <h3>👌 I write about technologies I like.</h3>
 
-        {notes.slice(0, 3).map((note) => {
+        {notes.slice(0, 2).map((note) => {
           return (
             <div
               className="note"
