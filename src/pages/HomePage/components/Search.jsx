@@ -1,5 +1,4 @@
 import questions from '../../../data/questions'
-import { shuffleArray } from '../../../utils/index'
 import { useState } from 'react'
 
 const Search = () => {
@@ -21,7 +20,7 @@ const Search = () => {
           />
 
           <div className="questions">
-            {shuffleArray(questions).slice(0, 3)
+            {questions.slice(0, 3)
               .filter((question) =>
                 question.title.toLowerCase().includes(search.toLowerCase())
               )

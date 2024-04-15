@@ -145,7 +145,6 @@ main {
     color: #011627;
     font-size: 1rem;
     border-radius: 5px;
-
     &:focus {
       outline: none;
     }
@@ -235,13 +234,14 @@ section {
 }
 
 .search-container {
+  padding-top: 50px;
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 9;
   display: none;
   backdrop-filter: blur(5px);
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   overflow: auto;
   max-height: 100vh;
@@ -312,6 +312,10 @@ span[data-tooltip-id] {
     width: 100%;
     border-bottom: 1px solid rgba(225, 225, 225, 0.1);
     text-align: left;
+    &:last-child {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
 
     &:hover {
       background-color: #2ec4b6;

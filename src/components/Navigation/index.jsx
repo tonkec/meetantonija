@@ -20,56 +20,31 @@ const Navigation = () => {
     }
   }, [])
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      const route = routes.find((route) => {
-        if (search === '' || search === '/') {
-          return undefined
-        }
-
-        if (search.toLowerCase().includes('home')) {
-          return route.path === '/'
-        }
-
-        if (search.toLowerCase() === 'answer') {
-          return undefined
-        }
-
-        if (route.path.slice(1).toLowerCase() === search.toLowerCase()) {
-          return route
-        }
-
-        return undefined
-      })
-
-      if (route) {
-        navigate(route.path)
-        setSearch('')
-        navigationContainer.current.classList.remove('show')
-      }
-    }, 500)
-
-    return () => {
-      clearTimeout(timeout)
+  const onSubmit = (event) => {
+    event.preventDefault()
+    const route = routes.find((route) => route.path === search)
+    if (route) {
+      navigate(route.path)
+      navigationContainer.current.classList.remove('show')
     }
-  }, [search, navigate])
+  }
 
   return (
     <div className="search-container" ref={navigationContainer}>
       <div>
+      <form onSubmit={onSubmit}>
         <input
           type="search"
           placeholder="Where would you like to go?"
           onChange={(event) => setSearch(event.target.value)}
           value={search}
         />
-        <span className="material-symbols-outlined">arrow_right_alt</span>
 
         <div className="search-results">
           {routes
             .filter(
               (route) => !route.path.includes(':id') && route.path !== '*'
-            )
+            ).filter((route) => route.path.includes(search))
             .map((route) => (
               <button
                 key={route.path}
@@ -82,6 +57,7 @@ const Navigation = () => {
               </button>
             ))}
         </div>
+      </form>
       </div>
     </div>
   )

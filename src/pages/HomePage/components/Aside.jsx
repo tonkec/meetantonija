@@ -36,6 +36,7 @@ const Aside = () => {
         {notes.slice(0, 2).map((note) => {
           return (
             <div
+              key={note.id}
               className="note"
               onClick={() => {
                 setNoteContent(note)

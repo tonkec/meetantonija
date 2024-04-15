@@ -23,14 +23,14 @@ const Dashboard = () => {
         </nav>
       </aside>
       <header>
-        <div class="search">
-          <span class="material-symbols-outlined">search</span>
+        <div className="search">
+          <span className="material-symbols-outlined">search</span>
           <input type="text" placeholder="Search..." />
         </div>
       </header>
       <main>
-        <div class="content content--left"></div>
-        <div class="content content--right"></div>
+        <div className="content content--left"></div>
+        <div className="content content--right"></div>
       </main>
     </div>
   )
