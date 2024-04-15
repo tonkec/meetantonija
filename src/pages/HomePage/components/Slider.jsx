@@ -28,9 +28,14 @@ const Slider = () => {
                   <div className="fake-content"></div>
                   <div className="image"></div>
                   <div className="fake-content"></div>
+                
                   <div className="content">
                     <p>{project.headline}.</p>
+                    <a href={`/project/${project.id}`}>
+                    Read more
+                  </a>
                   </div>
+                  
                 </div>
                 <div className="skills">
                   {project.skills.split(',').map((skill) => {
@@ -42,7 +47,7 @@ const Slider = () => {
                   })}
                 </div>
 
-                <a href={`/project/${project.id}`}>View project</a>
+                
               </div>
             )
           })}

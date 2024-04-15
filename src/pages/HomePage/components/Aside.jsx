@@ -7,7 +7,7 @@ import { truncateString } from '../../../utils'
 const Aside = () => {
   const [noteContent, setNoteContent] = useState({})
   return (
-    <section className="bg-white">
+    <section className="bg-white has-padding">
       <aside className={noteContent.intro ? 'show' : 'hide'}>
         <IoMdClose
           className="icon"

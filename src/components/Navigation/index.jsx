@@ -32,32 +32,33 @@ const Navigation = () => {
   return (
     <div className="search-container" ref={navigationContainer}>
       <div>
-      <form onSubmit={onSubmit}>
-        <input
-          type="search"
-          placeholder="Where would you like to go?"
-          onChange={(event) => setSearch(event.target.value)}
-          value={search}
-        />
+        <form onSubmit={onSubmit}>
+          <input
+            type="search"
+            placeholder="Where would you like to go?"
+            onChange={(event) => setSearch(event.target.value)}
+            value={search}
+          />
 
-        <div className="search-results">
-          {routes
-            .filter(
-              (route) => !route.path.includes(':id') && route.path !== '*'
-            ).filter((route) => route.path.includes(search))
-            .map((route) => (
-              <button
-                key={route.path}
-                onClick={() => {
-                  navigate(route.path)
-                  navigationContainer.current.classList.remove('show')
-                }}
-              >
-                {route.path}
-              </button>
-            ))}
-        </div>
-      </form>
+          <div className="search-results">
+            {routes
+              .filter(
+                (route) => !route.path.includes(':id') && route.path !== '*'
+              )
+              .filter((route) => route.path.includes(search))
+              .map((route) => (
+                <button
+                  key={route.path}
+                  onClick={() => {
+                    navigate(route.path)
+                    navigationContainer.current.classList.remove('show')
+                  }}
+                >
+                  {route.path}
+                </button>
+              ))}
+          </div>
+        </form>
       </div>
     </div>
   )

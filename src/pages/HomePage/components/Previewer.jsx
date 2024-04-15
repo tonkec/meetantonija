@@ -11,7 +11,7 @@ const Previewer = () => {
   const [isIframeLoading, setIsIframeLoading] = useState(true)
   const buttonWrapper = useRef(null)
   return (
-    <section className="container">
+    <section className="container has-padding">
       <h3>🔥 I design in code.</h3>
 
       <div className="flex codepen">

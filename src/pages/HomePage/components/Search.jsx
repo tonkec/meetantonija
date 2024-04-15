@@ -20,7 +20,8 @@ const Search = () => {
           />
 
           <div className="questions">
-            {questions.slice(0, 3)
+            {questions
+              .slice(0, 3)
               .filter((question) =>
                 question.title.toLowerCase().includes(search.toLowerCase())
               )
@@ -28,7 +29,7 @@ const Search = () => {
                 <div
                   key={question.id}
                   onClick={() => setQuestionContent(question)}
-                  className='question'
+                  className="question"
                 >
                   {question.title}
                 </div>

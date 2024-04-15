@@ -1,6 +1,6 @@
 const Steps = () => {
   return (
-    <section className="bg-yellow steps-container">
+    <section className="bg-yellow steps-container has-padding">
       <div className="skewed-top">
         <div className="circle"></div>
         <div className="circle"></div>

@@ -167,8 +167,12 @@ main {
 }
 
 section {
-  padding: 80px 0 150px;
+  padding: 80px 0 0px;
   position: relative;
+
+  &.has-padding {
+    padding-bottom: 200px;
+  }
 
   h2 {
     margin-bottom: 50px;
@@ -577,6 +581,10 @@ iframe {
   }
 }
 
+.codes {
+  position: relative;
+}
+
 .code {
   background-color: #011627;
   color: #fdfffc;
@@ -587,16 +595,41 @@ iframe {
   gap: 10px;
   justify-content: center;
   text-decoration: none;
-  max-width: 800px;
   font-size: 1.2rem;
-
-  pre {
-    padding: 20px;
-    margin-top: 0;
-    overflow-x: auto;
+  position: relative;
+  cursor: pointer;
+  max-width: 800px;
+  &:last-child {
+    top: -100px;
+    left: 500px;
+    max-width: 400px;
   }
 
   span {
+    &:first-child {
+      color: #ee5f5b;
+    }
+
+    &.bracket {
+      color: lighten(#011627, 20%);
+    }
+
+    &.block {
+      display: block;
+    }
+
+    &.property {
+      color: #f8b400;
+    }
+  }
+
+  pre {
+    padding: 20px;
+    margin: 0;
+    overflow-x: auto;
+  }
+
+  .bar span {
     font-size: 1.2rem;
     color: #fdfffc;
     background-color: #2ec4b6;
@@ -605,11 +638,11 @@ iframe {
     width: 15px;
   }
 
-  span:first-child {
+  .bar span:first-child {
     background-color: #ee5f5b;
   }
 
-  span:last-child {
+  .bar span:last-child {
     background-color: #f8b400;
   }
 
@@ -620,6 +653,10 @@ iframe {
     border-top-right-radius: 5px;
     display: flex;
     gap: 10px;
+  }
+
+  &:last-child {
+    transform: translateX(-600px) translateY(50px);
   }
 }
 
@@ -752,6 +789,23 @@ iframe {
       border-radius: 5px;
     }
   }
+
+  a {
+    background-color: #011627;
+    color: #fdfffc;
+    padding: 5px 15px;
+    border-radius: 5px;
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    text-decoration: none;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #2ec4b6;
+    }
+  }
 }
 
 .steps {
@@ -831,7 +885,7 @@ iframe {
   }
 
   .bg-blue {
-    max-width: 30%;  
+    max-width: 30%;
   }
 
   section {
@@ -839,4 +893,3 @@ iframe {
     padding: 100px 50px;
   }
 }
-
