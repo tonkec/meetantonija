@@ -581,6 +581,10 @@ iframe {
   }
 }
 
+.codes-section .container {
+  min-height: 80vh;
+}
+
 .codes {
   position: relative;
 }
@@ -589,20 +593,31 @@ iframe {
   background-color: #011627;
   color: #fdfffc;
   border-radius: 5px;
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   justify-content: center;
   text-decoration: none;
   font-size: 1.2rem;
-  position: relative;
+  position: absolute;
   cursor: pointer;
   max-width: 800px;
-  &:last-child {
-    top: -100px;
-    left: 500px;
-    max-width: 400px;
+
+  &.css {
+    top: auto;
+    bottom: 0;
+    left: 460px;
+    min-width: 400px;
+
+    &:nth-child(3) {
+      left: 1000px;
+      min-width: 200px;
+    }
+
+    &:last-child {
+      left: 0px;
+      min-width: 300px;
+    }
   }
 
   span {
@@ -805,14 +820,13 @@ iframe {
 .two-col {
   .steps {
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-
   }
 }
 .steps {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 20px;
- 
+
   .step {
     padding: 20px 40px;
     background-image: linear-gradient(

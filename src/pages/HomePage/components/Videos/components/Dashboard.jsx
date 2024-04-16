@@ -1,14 +1,14 @@
 import './Dashboard.scss'
 import { FaSearch } from 'react-icons/fa'
 
-const Dashboard = () => {
+const Dashboard = ({ title }) => {
   return (
     <div className="dashboard">
       <aside>
         <nav>
           <ul>
             <li>
-              <a href="#">Dashboard</a>
+              <a href="#">{title}</a>
             </li>
             <li>
               <a href="#">Users</a>

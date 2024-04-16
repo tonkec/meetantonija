@@ -1,4 +1,4 @@
-const Steps = ({className, steps, headline}) => {
+const Steps = ({ className, steps, headline }) => {
   return (
     <section className={`bg-yellow steps-container ${className}`}>
       <div className="skewed-top">
@@ -12,7 +12,9 @@ const Steps = ({className, steps, headline}) => {
           {steps.map((step, index) => {
             return (
               <div key={index} className="step">
-                <h3>{index + 1}. {step.title}</h3>
+                <h3>
+                  {index + 1}. {step.title}
+                </h3>
                 <p>{step.description}</p>
               </div>
             )
@@ -20,7 +22,6 @@ const Steps = ({className, steps, headline}) => {
         </div>
       </div>
     </section>
-    
   )
 }
 

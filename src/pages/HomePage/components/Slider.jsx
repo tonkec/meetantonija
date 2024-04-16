@@ -2,7 +2,7 @@ import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 import BrowserFrame from '../../../components/BrowserFrame'
 
-const Slider = ({items, headline}) => {
+const Slider = ({ items, headline }) => {
   const [sliderRef] = useKeenSlider({
     slides: {
       perView: 2,

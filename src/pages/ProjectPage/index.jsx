@@ -8,7 +8,6 @@ import HireMe from '../../components/HireMe'
 import Slider from '../HomePage/components/Slider'
 
 const ProjectPage = () => {
-
   useEffect(() => {
     createMagicSquares(['footer'])
   }, [])
@@ -54,35 +53,44 @@ const ProjectPage = () => {
           </div>
 
           <div>
-            <h3>Timeline  🗓️</h3>
-            <p>{project.from} - {project.to}</p>
+            <h3>Timeline 🗓️</h3>
+            <p>
+              {project.from} - {project.to}
+            </p>
           </div>
 
           <div>
             <h3>Link 🌐</h3>
-            <a href={project.link} target='_blank' rel='noreferrer'>
+            <a href={project.link} target="_blank" rel="noreferrer">
               Open website
             </a>
           </div>
         </div>
 
         <div className="elevated">
-            <h2>Description</h2>
-            <p>{project.cvDescription}</p>
-          </div>
+          <h2>Description</h2>
+          <p>{project.cvDescription}</p>
+        </div>
       </section>
 
-     <Steps steps={project.responsibilities} className="project-steps two-col" headline="🦶 These were the steps I took" />
-    
-    <section id='tldr'>
-      <div className="container">
-        <h2>TL;DR</h2>
-        <p>{project.conclusion}</p>
-      </div>
-    </section>
+      <Steps
+        steps={project.responsibilities}
+        className="project-steps two-col"
+        headline="🦶 These were the steps I took"
+      />
 
-    <Slider  headline="🏢 Check out other projects"  items={projects.filter((p) => p.id !== project.id)} />
-    <HireMe />
+      <section id="tldr">
+        <div className="container">
+          <h2>TL;DR</h2>
+          <p>{project.conclusion}</p>
+        </div>
+      </section>
+
+      <Slider
+        headline="🏢 Check out other projects"
+        items={projects.filter((p) => p.id !== project.id)}
+      />
+      <HireMe />
     </>
   )
 }

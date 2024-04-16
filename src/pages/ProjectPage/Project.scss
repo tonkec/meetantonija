@@ -37,10 +37,8 @@
     }
   }
 
- .flex {
+  .flex {
     color: #fdfffc;
-
-   
 
     & > div {
       flex: 1;
@@ -67,7 +65,7 @@
   position: absolute;
   bottom: -20%;
   right: 0;
-  max-width:90%;
+  max-width: 90%;
   background-color: #011627;
   color: #fdfffc;
   padding: 50px;
@@ -85,14 +83,14 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-   
+
     .circle {
       bottom: 0;
     }
   }
 }
 
-.steps-container ~ #tldr{
+.steps-container ~ #tldr {
   margin-top: 200px;
   margin-bottom: 100px;
 }
