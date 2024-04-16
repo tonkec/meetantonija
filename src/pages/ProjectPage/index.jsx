@@ -2,51 +2,88 @@ import { useParams } from 'react-router-dom'
 import projects from '../../data/projects'
 import { useEffect } from 'react'
 import { createMagicSquares } from '../../utils/index'
+import Steps from '../HomePage/components/Steps'
+import './Project.scss'
 import HireMe from '../../components/HireMe'
-import OtherItems from '../../components/OtherItems'
+import Slider from '../HomePage/components/Slider'
 
 const ProjectPage = () => {
-  useEffect(() => {
-    createMagicSquares(['main'])
-  }, [])
 
+  useEffect(() => {
+    createMagicSquares(['footer'])
+  }, [])
   const { id } = useParams()
   const project = projects.find((project) => project.id === Number(id))
+
+  if (!project) {
+    return <h1>Project not found</h1>
+  }
   return (
-    <main className="container">
-      {project ? (
-        <>
-          <h1>
-            <a href={project.link} target="_blank" rel="noreferrer">
-              {project.title}
+    <>
+      <header className="project-header">
+        <div className="container">
+          <div className="flex">
+            <div>
+              <h1>{project.title}</h1>
+              <p>{project.headline}</p>
+              <a href="#tldr" className="button">
+                <span>Skip to TLDR</span> <span>👇</span>
+              </a>
+            </div>
+
+            <div>{project.fakeContent}</div>
+          </div>
+        </div>
+      </header>
+
+      <section className="bg-blue">
+        <div className="skewed-top">
+          <div className="circle"></div>
+          <div className="circle"></div>
+        </div>
+        <div className="flex container">
+          <div>
+            <h3>Technologies 🚀</h3>
+            <div className="skills">
+              {project.skills.split(',').map((skill) => (
+                <span className="skill" key={skill}>
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3>Timeline  🗓️</h3>
+            <p>{project.from} - {project.to}</p>
+          </div>
+
+          <div>
+            <h3>Link 🌐</h3>
+            <a href={project.link} target='_blank' rel='noreferrer'>
+              Open website
             </a>
-          </h1>
-          <h4>{project.headline}</h4>
-          <p>{project.description}</p>
+          </div>
+        </div>
 
-          <h3>Technologies used:</h3>
-          <p>{project.skills}</p>
+        <div className="elevated">
+            <h2>Description</h2>
+            <p>{project.cvDescription}</p>
+          </div>
+      </section>
 
-          <h3>Responsibilities:</h3>
-          <ul>
-            {project.responsibilities.map((responsibility, index) => {
-              return <li key={index}>{responsibility}</li>
-            })}
-          </ul>
+     <Steps steps={project.responsibilities} className="project-steps two-col" headline="🦶 These were the steps I took" />
+    
+    <section id='tldr'>
+      <div className="container">
+        <h2>TL;DR</h2>
+        <p>{project.conclusion}</p>
+      </div>
+    </section>
 
-          <p>{project.conclusion}</p>
-
-          <HireMe />
-
-          <section>
-            <h3>Check some other projects</h3>
-            <OtherItems items={projects} currentItem={project} url="project" />
-          </section>
-        </>
-      ) : (
-        <h1>Project not found</h1>
-      )}
-    </main>
+    <Slider  headline="🏢 Check out other projects"  items={projects.filter((p) => p.id !== project.id)} />
+    <HireMe />
+    </>
   )
 }
 

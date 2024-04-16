@@ -1,3 +1,6 @@
+import './Dashboard.scss'
+import { FaSearch } from 'react-icons/fa'
+
 const Dashboard = () => {
   return (
     <div className="dashboard">
@@ -24,7 +27,8 @@ const Dashboard = () => {
       </aside>
       <header>
         <div className="search">
-          <span className="material-symbols-outlined">search</span>
+          <FaSearch className="icon" />
+
           <input type="text" placeholder="Search..." />
         </div>
       </header>

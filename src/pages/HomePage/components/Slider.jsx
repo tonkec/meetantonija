@@ -1,8 +1,8 @@
 import { useKeenSlider } from 'keen-slider/react'
-import projects from '../../../data/projects'
 import 'keen-slider/keen-slider.min.css'
+import BrowserFrame from '../../../components/BrowserFrame'
 
-const Slider = () => {
+const Slider = ({items, headline}) => {
   const [sliderRef] = useKeenSlider({
     slides: {
       perView: 2,
@@ -12,31 +12,21 @@ const Slider = () => {
     },
   })
   return (
-    <section className="container">
-      <h3>🏢 I work with clients.</h3>
+    <section className="container has-padding">
+      <h3>{headline}</h3>
 
       <div ref={sliderRef} className="keen-slider">
-        {projects
+        {items
           .sort((p1, p2) => p2.to - p1.to)
           .slice(0, 4)
           .map((project) => {
             return (
               <div key={project.id} className="keen-slider__slide number-slide">
                 <h3>{project.title}</h3>
-                <div className="browser">
-                  <div className="bar"></div>
-                  <div className="fake-content"></div>
-                  <div className="image"></div>
-                  <div className="fake-content"></div>
-                
-                  <div className="content">
-                    <p>{project.headline}.</p>
-                    <a href={`/project/${project.id}`}>
-                    Read more
-                  </a>
-                  </div>
-                  
-                </div>
+                <BrowserFrame>
+                  <p>{project.headline}.</p>
+                  <a href={`/project/${project.id}`}>Read more</a>
+                </BrowserFrame>
                 <div className="skills">
                   {project.skills.split(',').map((skill) => {
                     return (
@@ -46,8 +36,6 @@ const Slider = () => {
                     )
                   })}
                 </div>
-
-                
               </div>
             )
           })}

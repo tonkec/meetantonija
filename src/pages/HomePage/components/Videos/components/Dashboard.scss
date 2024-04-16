@@ -1,0 +1,127 @@
+.dashboard {
+  position: relative;
+  flex: 1;
+
+  aside {
+    width: 200px;
+    height: 50vh;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    background-color: #292929;
+    position: absolute;
+  }
+
+  aside a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #2ec4b6;
+    }
+  }
+
+  aside ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 1rem;
+  }
+
+  header {
+    background-color: #cbf3f0;
+    position: absolute;
+    right: 0;
+    left: 200px;
+    padding: 0 20px;
+    z-index: 2;
+  }
+
+  header input {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    color: #000;
+    font-size: 0.9rem;
+    margin-top: 0;
+    padding-left: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  ::placeholder {
+    color: #000;
+  }
+
+  main {
+    display: flex;
+    align-items: stretch;
+    margin-left: 200px;
+    padding: 1.2rem;
+    padding-top: 80px;
+    height: 50vh;
+    gap: 1rem;
+    background-color: #fdfffc;
+  }
+
+  .content {
+    padding: 2rem;
+    flex: 1;
+    background-color: #2ec4b6;
+    border: 3px dashed #292929;
+    border-radius: 10px;
+  }
+
+  .content--left {
+    flex-grow: 2;
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .icon {
+      margin-right: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    aside {
+      width: 100%;
+      position: relative;
+      padding: 1rem;
+      height: auto;
+    }
+
+    header {
+      left: 0;
+      position: relative;
+    }
+
+    aside a {
+      font-size: 1rem;
+    }
+
+    aside li {
+      margin-bottom: 0.5rem;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    main {
+      margin-left: 0;
+      flex-direction: column;
+      padding-top: 20px;
+    }
+  }
+}
