@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import routes from '../../routes'
+import './Navigation.scss'
 
 const Navigation = () => {
   const navigate = useNavigate()

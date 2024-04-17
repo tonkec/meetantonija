@@ -1,3 +1,5 @@
+import './Steps.scss'
+
 const Steps = ({ className, steps, headline }) => {
   return (
     <section className={`bg-yellow steps-container ${className}`}>

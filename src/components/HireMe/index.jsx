@@ -1,3 +1,4 @@
+import './HireMe.scss'
 import { useState } from 'react'
 
 const HireMe = () => {

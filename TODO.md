@@ -3,22 +3,21 @@
 4. dodat jos tooltipova
 5. mobile navigation
 6. toggle dark mode
-7. dodat slike sebe na about me page?
-8. social media ikonice
-9. selection highlighter
-10. funderpro link na funderpro, a ne na mochalabs
-11. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu
 
-12. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
-13. cv stranica, filtrirat prema godini i tehnologiji
-14. dodat tehnologije na svaki projekt na CV stranici
-15. malu slikicu sebe kod CV-a
-16. CV page save as PDF
+7. social media ikonice
+8. selection highlighter
+9. funderpro link na funderpro, a ne na mochalabs
+10. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu
 
-17. responsive homepage
-18. dodat u navigaciju jedan post i jedan projekt?
-19. istipkavanje mog imena u headeru i svaki title u headeru?
-20. refactorat App.scss
+11. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
+12. cv stranica, filtrirat prema godini i tehnologiji
+13. dodat tehnologije na svaki projekt na CV stranici
+14. malu slikicu sebe kod CV-a
+15. CV page save as PDF
+
+16. responsive homepage
+17. dodat u navigaciju jedan post i jedan projekt?
+18. refactorat App.scss
 
 - podijelit po komponentama
 - ponavljanje stilova
@@ -26,10 +25,19 @@
 
 ## Mozda
 
-19. animacije na scroll?
-20. https://giscus.app/
+25. istipkavanje mog imena u headeru i svaki title u headeru?
+26. animacije na scroll?
+27. https://giscus.app/
 
 ## NEXTTODO
+
+- about page dizajn
+
+7. dodat slike sebe na about me page?
+
+8. CV stranica
+
+## GOTOVO
 
 15. dizajnirat project stranicu
 
@@ -43,11 +51,6 @@
 - pimsf -> dashboard
 - opx -> maknut skroz taj projekt?
 - crafstrom -> munja?
-
-16. CV stranica
-
-## GOTOVO
-
 - dodat tablicu kao https://www.seanhalpin.xyz/work/ai
 - napravit cool header kao ovdje? https://riccardozanutta.com/sportland
 - dodat u header velikim slovima ime projekta i onda dolje tablica

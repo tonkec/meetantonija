@@ -1,0 +1,31 @@
+.hire-me {
+  background-color: #2ec4b6;
+  padding: 150px 50px;
+  border-radius: 5px;
+  text-align: center;
+  button {
+    background-color: #011627;
+    color: #fdfffc;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #292929;
+    }
+  }
+}
+
+@for $i from 1 through 5 {
+  .question:nth-child(#{$i}) {
+    animation: fadeIn 0.5s #{$i * 0.2}s forwards;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

@@ -1,4 +1,5 @@
-import questions from '../../../data/questions'
+import './Search.scss'
+import questions from '../../../../data/questions'
 import { useState } from 'react'
 
 const Search = () => {

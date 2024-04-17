@@ -1,4 +1,5 @@
 import Draggable from 'react-draggable'
+import './Code.scss'
 
 const Code = () => {
   return (

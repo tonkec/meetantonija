@@ -1,6 +1,7 @@
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
-import BrowserFrame from '../../../components/BrowserFrame'
+import BrowserFrame from '../../../../components/BrowserFrame'
+import './Slider.scss'
 
 const Slider = ({ items, headline }) => {
   const [sliderRef] = useKeenSlider({
