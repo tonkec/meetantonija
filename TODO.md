@@ -17,11 +17,6 @@
 
 16. responsive homepage
 17. dodat u navigaciju jedan post i jedan projekt?
-18. refactorat App.scss
-
-- podijelit po komponentama
-- ponavljanje stilova
-- bolja imena klasa
 
 ## Mozda
 
@@ -38,6 +33,12 @@
 8. CV stranica
 
 ## GOTOVO
+
+18. refactorat App.scss
+
+- podijelit po komponentama
+- ponavljanje stilova
+- bolja imena klasa
 
 15. dizajnirat project stranicu
 

@@ -1,0 +1,53 @@
+.about-header {
+  .flex {
+    gap: 60px;
+  }
+}
+
+.about-main {
+  section {
+    .container {
+      padding: 60px 40px;
+    }
+
+    .skewed-bottom {
+      z-index: -1;
+      &::before {
+        background-color: var(--color-yellow);
+      }
+
+      .circle {
+        bottom: -50px;
+        top: auto;
+        left: 20px;
+        background-color: var(--color-yellow);
+      }
+    }
+  }
+  .bg-yellow {
+    border-radius: 5px;
+    padding-bottom: 300px;
+  }
+
+  .bg-blue {
+    padding: 60px 40px;
+    border-radius: 5px;
+    color: var(--color-white);
+  }
+
+  .elevated {
+    top: 600px;
+    bottom: auto;
+    left: 0;
+    right: auto;
+    max-width: 700px;
+  }
+
+  .bg-green {
+    padding-top: 200px;
+  }
+
+  .search-section {
+    padding-top: 0;
+  }
+}

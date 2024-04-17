@@ -20,10 +20,12 @@ const Header = () => {
             glory.
           </p>
         </div>
-        <img
-          src="https://avatars.githubusercontent.com/u/5020758?v=4"
-          alt="Antonija"
-        />
+        <div className="image-container">
+          <img
+            src="https://avatars.githubusercontent.com/u/5020758?v=4"
+            alt="Antonija"
+          />
+        </div>
       </div>
 
       <Tooltip
