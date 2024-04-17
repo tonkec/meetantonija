@@ -3,8 +3,8 @@
 }
 
 .code {
-  background-color: #011627;
-  color: #fdfffc;
+  background-color: var(--color-black);
+  color: var(--color-white);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -35,11 +35,11 @@
 
   span {
     &:first-child {
-      color: #ee5f5b;
+      color: var(--color-red);
     }
 
     &.bracket {
-      color: lighten(#011627, 20%);
+      color: var(--color-blue)
     }
 
     &.block {
@@ -47,7 +47,7 @@
     }
 
     &.property {
-      color: #f8b400;
+      color: var(--color-yellow);
     }
   }
 
@@ -59,24 +59,24 @@
 
   .bar span {
     font-size: 1.2rem;
-    color: #fdfffc;
-    background-color: #2ec4b6;
+    color: var(--color-white);
+    background-color: var(--color-green);
     border-radius: 100%;
     height: 15px;
     width: 15px;
   }
 
   .bar span:first-child {
-    background-color: #ee5f5b;
+    background-color: var(--color-red);
   }
 
   .bar span:last-child {
-    background-color: #f8b400;
+    background-color: var(--color-yellow);
   }
 
   .bar {
     padding: 10px;
-    background-color: #dbdbdb;
+    background-color: var(--color-gray);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     display: flex;

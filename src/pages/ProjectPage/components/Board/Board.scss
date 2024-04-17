@@ -1,10 +1,10 @@
 .board {
   border-radius: 10px;
-  border: 6px solid #011627;
+  border: 6px solid var(--color-black);
   width: 300px;
   height: 200px;
   position: absolute;
-  background-color: #dbdbdb;
+  background-color: var(--color-gray);
   display: flex;
   right: 20px;
   top: 20%;
@@ -13,7 +13,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #011627;
+    background-color: var(--color-black);
     height: 10px;
     width: 100px;
     padding: 0;
@@ -21,7 +21,7 @@
   }
 
   .sponge {
-    background-color: #2ec4b6;
+    background-color: var(--color-green);
     width: 60px;
     height: 20px;
     position: absolute;
@@ -38,7 +38,7 @@
 
   .leg {
     position: absolute;
-    background-color: #011627;
+    background-color: var(--color-black);
     width: 10px;
     height: 70px;
     border-radius: 5px;

@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { IoMdClose } from 'react-icons/io'
-
-import notes from '../../../data/posts'
-import { truncateString } from '../../../utils'
+import notes from '../../../../data/posts'
+import { truncateString } from '../../../../utils'
+import "./Aside.scss"
 
 const Aside = () => {
   const [noteContent, setNoteContent] = useState({})

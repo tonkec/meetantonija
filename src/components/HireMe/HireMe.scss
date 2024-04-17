@@ -1,11 +1,11 @@
 .hire-me {
-  background-color: #2ec4b6;
+  background-color: var(--color-green);
   padding: 150px 50px;
   border-radius: 5px;
   text-align: center;
   button {
-    background-color: #011627;
-    color: #fdfffc;
+    background-color: var(--color-black);
+    color: var(--color-white);
     border: none;
     border-radius: 5px;
     padding: 15px 50px;
@@ -13,7 +13,7 @@
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #292929;
+      background-color: var(--color-brown);
     }
   }
 }

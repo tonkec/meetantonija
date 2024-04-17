@@ -8,8 +8,8 @@
   }
 
   a {
-    background-color: #011627;
-    color: #fdfffc;
+    background-color: var(--color-black);
+    color: var(--color-white);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -22,23 +22,23 @@
 }
 
 .bg-blue {
-  background-color: #013e6f;
+  background-color: var(--color-blue);
   padding-bottom: 400px;
   position: relative;
   z-index: 9;
 
   .circle {
-    background-color: #013e6f;
+    background-color: var(--color-blue);
   }
 
   .skewed-top {
     &::after {
-      background-color: #013e6f;
+      background-color: var(--color-blue);
     }
   }
 
   .flex {
-    color: #fdfffc;
+    color: var(--color-white);
 
     & > div {
       flex: 1;
@@ -50,11 +50,11 @@
     }
 
     a {
-      color: #fdfffc;
+      color: var(--color-white);
       text-decoration: none;
       display: inline-block;
       font-size: 1.2rem;
-      background-color: #011627;
+      background-color: var(--color-black);
       padding: 10px 20px;
       border-radius: 5px;
     }
@@ -66,8 +66,8 @@
   bottom: -20%;
   right: 0;
   max-width: 90%;
-  background-color: #011627;
-  color: #fdfffc;
+  background-color: var(--color-black);
+  color: var(--color-white);
   padding: 50px;
   z-index: 99;
   border-top-left-radius: 10px;

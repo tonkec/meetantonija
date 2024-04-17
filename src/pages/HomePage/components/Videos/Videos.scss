@@ -7,7 +7,7 @@
   .video {
     border-radius: 5px;
     padding: 0 5rem;
-    background: lighten(#011627, 10%);
+    background: var(--color-blue);
 
     p {
       line-height: 1.2;
@@ -15,8 +15,8 @@
   }
 
   & > a {
-    background: lighten(#011627, 10%);
-    color: #fff;
+    background: var(--color-blue);
+    color: var(--color-white);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -30,7 +30,7 @@
     text-align: center;
 
     &:hover {
-      background: lighten(#011627, 20%);
+      background: var(--color-blue);
     }
   }
 }

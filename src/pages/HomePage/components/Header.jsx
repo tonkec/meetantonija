@@ -27,7 +27,7 @@ const Header = () => {
       <Tooltip
         id="my-tooltip"
         style={{
-          backgroundColor: '#011627',
+          backgroundColor: 'var(--color-black);',
           padding: '10px',
           borderRadius: '5px',
         }}

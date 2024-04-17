@@ -8,7 +8,7 @@
     top: 0;
     left: 0;
     padding: 2rem;
-    background-color: #292929;
+    background-color: var(--color-brown);
     position: absolute;
   }
 
@@ -19,7 +19,7 @@
     transition: color 0.3s;
 
     &:hover {
-      color: #2ec4b6;
+      color: var(--color-green);
     }
   }
 
@@ -69,13 +69,13 @@
     padding-top: 80px;
     height: 50vh;
     gap: 1rem;
-    background-color: #fdfffc;
+    background-color: var(--color-white);
   }
 
   .content {
     padding: 2rem;
     flex: 1;
-    background-color: #2ec4b6;
+    background-color: var(--color-green);
     border: 3px dashed #292929;
     border-radius: 10px;
   }

@@ -1,0 +1,30 @@
+.accent {
+  background-color: var(--color-black);
+  background-clip: text;
+  color: transparent;
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
+  font-size: larger;
+  letter-spacing: 0.1em;
+}
+
+.flex {
+  display: flex;
+}
+
+.bg-green {
+  background-color: var(--color-green);
+}
+
+.bg-yellow {
+  background-color: var(--color-yellow);
+}
+
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.bg-black {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding-bottom: 0;
+}
