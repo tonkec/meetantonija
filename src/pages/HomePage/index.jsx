@@ -15,6 +15,7 @@ import Videos from './components/Videos/'
 import Steps from './components/Steps'
 import projects from '../../data/projects'
 
+
 const HomePage = () => {
   useEffect(() => {
     createMagicSquares(['footer'])

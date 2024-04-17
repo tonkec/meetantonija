@@ -1,4 +1,6 @@
 import { Tooltip } from 'react-tooltip'
+import './Header.scss'
+
 const Header = () => {
   return (
     <header className="container">
