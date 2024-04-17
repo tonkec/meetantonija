@@ -28,6 +28,7 @@ const HomePage = () => {
         <Code />
         <Slider headline="🏢 I work with clients." items={projects} />
         <Steps
+          headline={'🚀 My development process'}
           steps={[
             {
               title: 'Understand the problem',

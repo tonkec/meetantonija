@@ -5,7 +5,7 @@ import Search from '../../pages/HomePage/components/Search'
 
 const AboutPage = () => {
   useEffect(() => {
-    createMagicSquares(['main'])
+    createMagicSquares(['footer'])
   }, [])
   return (
     <>

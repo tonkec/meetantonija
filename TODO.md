@@ -27,8 +27,8 @@
 ## NEXTTODO
 
 - about page dizajn
-
-7. dodat slike sebe na about me page?
+- dodat sta jos volim osim programiranja, zvuk gitare?
+- temperaturu iz zga
 
 8. CV stranica
 

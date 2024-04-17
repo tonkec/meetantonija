@@ -14,3 +14,20 @@ footer {
   padding-bottom: 50px;
   padding-top: 100px;
 }
+
+.icons-container {
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+
+  .icons {
+    gap: 30px;
+    a {
+      transition: transform 0.3s;
+    }
+
+    a:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
