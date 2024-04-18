@@ -13,13 +13,12 @@ const Slider = ({ items, headline }) => {
     },
   })
   return (
-    <section className="container has-padding">
+    <section className="container projects-container">
       <h3>{headline}</h3>
 
       <div ref={sliderRef} className="keen-slider">
         {items
           .sort((p1, p2) => p2.to - p1.to)
-          .slice(0, 4)
           .map((project) => {
             return (
               <div key={project.id} className="keen-slider__slide number-slide">

@@ -2,11 +2,14 @@ import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import routes from '../../routes'
 import './Navigation.scss'
+import { shuffleArray } from '../../utils'
+import projects from '../../data/projects'
 
 const Navigation = () => {
   const navigate = useNavigate()
   const [search, setSearch] = useState('')
   const navigationContainer = useRef(null)
+
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.metaKey && event.key === 'k') {
@@ -32,35 +35,33 @@ const Navigation = () => {
 
   return (
     <div className="search-container" ref={navigationContainer}>
-      <div>
-        <form onSubmit={onSubmit}>
-          <input
-            type="search"
-            placeholder="Where would you like to go?"
-            onChange={(event) => setSearch(event.target.value)}
-            value={search}
-          />
+      <form onSubmit={onSubmit}>
+        <input
+          type="search"
+          placeholder="Where would you like to go?"
+          onChange={(event) => setSearch(event.target.value)}
+          value={search}
+        />
 
-          <div className="search-results">
-            {routes
-              .filter(
-                (route) => !route.path.includes(':id') && route.path !== '*'
-              )
-              .filter((route) => route.path.includes(search))
-              .map((route) => (
-                <button
-                  key={route.path}
-                  onClick={() => {
-                    navigate(route.path)
-                    navigationContainer.current.classList.remove('show')
-                  }}
-                >
-                  {route.path}
-                </button>
-              ))}
-          </div>
-        </form>
-      </div>
+        <div className="search-results">
+          {routes
+            .filter(
+              (route) => !route.path.includes(':id') && route.path !== '*'
+            )
+            .filter((route) => route.path.includes(search))
+            .map((route) => (
+              <button
+                key={route.path}
+                onClick={() => {
+                  navigate(route.path)
+                  navigationContainer.current.classList.remove('show')
+                }}
+              >
+                {route.path}
+              </button>
+            ))}
+        </div>
+      </form>
     </div>
   )
 }

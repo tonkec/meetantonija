@@ -1,32 +1,31 @@
 2. Autofocus input
 3. blog posts s markdownom
-4. dodat jos tooltipova
-5. mobile navigation
-6. toggle dark mode
+4. mobile navigation
+5. toggle dark mode
+6. selection highlighter
+7. funderpro link na funderpro, a ne na mochalabs
+8. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu
+9. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
+10. cv stranica, filtrirat prema godini i tehnologiji
+11. dodat tehnologije na svaki projekt na CV stranici
+12. malu slikicu sebe kod CV-a
+13. CV page save as PDF
 
-7. social media ikonice
-8. selection highlighter
-9. funderpro link na funderpro, a ne na mochalabs
-10. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu
-
-11. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
-12. cv stranica, filtrirat prema godini i tehnologiji
-13. dodat tehnologije na svaki projekt na CV stranici
-14. malu slikicu sebe kod CV-a
-15. CV page save as PDF
-
-16. responsive homepage
-17. dodat u navigaciju jedan post i jedan projekt?
+14. responsive homepage
+15. dodat u navigaciju jedan post i jedan projekt?
+16. disable tab when modal open
+17. animacije na graf na projekt page
 
 ## Mozda
 
 25. istipkavanje mog imena u headeru i svaki title u headeru?
 26. animacije na scroll?
 27. https://giscus.app/
+28. dodat jos tooltipova
 
 ## NEXTTODO
 
-- about page dizajn
+- about page dizajn, previse I (ja ovo ja ono)
 - dodat sta jos volim osim programiranja, zvuk gitare?
 - temperaturu iz zga
 
@@ -35,6 +34,7 @@
 ## GOTOVO
 
 18. refactorat App.scss
+19. social media ikonice
 
 - podijelit po komponentama
 - ponavljanje stilova

@@ -1,6 +1,3 @@
-import { createMagicSquares } from '../../utils/index'
-import { useEffect } from 'react'
-
 import HireMe from '../../components/HireMe'
 
 import Header from './components/Header'
@@ -16,10 +13,6 @@ import Steps from './components/Steps'
 import projects from '../../data/projects'
 
 const HomePage = () => {
-  useEffect(() => {
-    createMagicSquares(['footer'])
-  }, [])
-
   return (
     <>
       <Header />

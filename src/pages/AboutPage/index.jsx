@@ -2,6 +2,9 @@ import { useEffect } from 'react'
 import { createMagicSquares } from '../../utils/index'
 import './About.scss'
 import Search from '../../pages/HomePage/components/Search'
+import { FaHtml5, FaCss3, FaJs } from 'react-icons/fa'
+import { SiTypescript, SiRedux, SiReact, SiAngular } from 'react-icons/si'
+import HireMe from '../../components/HireMe'
 
 const AboutPage = () => {
   useEffect(() => {
@@ -19,16 +22,16 @@ const AboutPage = () => {
               />
             </div>
             <h1>
-              I am Antonija, a <span className="accent">frontend</span>{' '}
+              I am Antonija,a <span className="accent">frontend</span>{' '}
               developer.{' '}
             </h1>
           </div>
         </div>
       </header>
       <main className="about-main">
-        <section className="bg-yellow">
+        <section className="bg-black">
           <div className="container">
-            <h3>I bring a lot of values to the table.</h3>
+            <h2>I bring a lot of values to the table.</h2>
 
             <p>
               I honestly care about the code I am writing and the product I am
@@ -39,34 +42,105 @@ const AboutPage = () => {
             </p>
 
             <p>These days I focus on designing skills using CSS.</p>
-          </div>
 
-          <div className="skewed-bottom">
-            <div className="circle"></div>
+            <h2>Technologies I am familiar with</h2>
+            <ul className="technologies">
+              <li>
+                <span>
+                  <FaHtml5 className="icon" />
+                </span>
+                <span>
+                  HTML <br />
+                  10 years
+                </span>
+              </li>
+              <li>
+                <span>
+                  <FaCss3 className="icon" />
+                </span>
+                <span>
+                  CSS <br />
+                  10 years
+                </span>
+              </li>
+              <li>
+                <span>
+                  <FaJs className="icon" />
+                </span>
+                <span>
+                  JavaScript <br />8 years
+                </span>
+              </li>
+              <li>
+                <span>
+                  <SiTypescript className="icon" />
+                </span>
+                <span>
+                  TypeScript <br />3 years
+                </span>
+              </li>
+              <li>
+                <span>
+                  <SiReact className="icon" />
+                </span>
+                <span>
+                  React <br />4 years
+                </span>
+              </li>
+              <li>
+                <span>
+                  <SiRedux className="icon" />
+                </span>
+                <span>
+                  Redux <br />4 years
+                </span>
+              </li>
+
+              <li>
+                <span>
+                  <SiAngular className="icon" />
+                </span>
+                <span>
+                  Angular <br />1 year
+                </span>
+              </li>
+              <li>
+                <span>
+                  <SiReact className="icon" />
+                </span>
+                <span>
+                  React Native <br />1 year
+                </span>
+              </li>
+            </ul>
           </div>
         </section>
 
-        <section className="bg-blue container elevated">
-          <h3> I am resistent, dilligent and effective.</h3>
-          <p>
-            {' '}
-            I taught myself without any prior knowledge. One day I woke up and
-            just decided today was the day I would start coding. I did not go to
-            any school nor bootcamp. I just used free services like
-            Freecodecamp, Code School and Codecademy.
-          </p>
-        </section>
-
-        <section className="bg-green">
+        <section className="bg-blue">
           <div className="container">
-            <h3>I do not have a diploma in the software development, but...</h3>
+            <h2>My story</h2>
             <p>
-              {' '}
-              I have been coding for so long now, almost ten years. I believe I
-              can compete with anyone who has a diploma. I mean college
-              graduates will probably know less than me. I am up to date with
-              all the latest technologies and I follow several blogs and
-              youtubers to see the latest shiny thing in front-end development.
+              I started coding because I wanted a change in my career, I wanted
+              to have a bright future and be competitive in the market.
+              Initially, I had been learning Ruby on Rails when I tried CSS and
+              Javascript, and instantly fell in love with those languages. I
+              could immediately see the result of my coding. It was back in 2013
+              and I was super active user on Codecademy, the online learning
+              platform for coding.
+            </p>
+
+            <p>
+              I do not have a diploma in the software development, but I think I
+              can make up for it with my expreience. I am up to date with all
+              the latest technologies and I follow several blogs and youtubers
+              to see the latest shiny thing in front-end development.
+            </p>
+
+            <h2>What do I do in freetime?</h2>
+            <p>
+              I drum in the drumming collective where we fight for human and
+              animal rights. I read, mostly fiction and comic books. I play
+              basketball, go to the gym and ride bicycle.
             </p>
           </div>
         </section>
@@ -74,6 +148,8 @@ const AboutPage = () => {
         <section className="search-section">
           <Search />
         </section>
+
+        <HireMe />
       </main>
     </>
   )

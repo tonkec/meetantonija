@@ -14,9 +14,9 @@ const Header = () => {
             a frontend developer 👩‍💻 from{' '}
             <span data-tooltip-id="my-tooltip">Zagreb</span>,
           </h3>
-          <p>I enjoy building beautiful user interfaces from scratch </p>
+          <p>I enjoy creating beautiful user interfaces from scratch </p>
           <p>
-            using React, Javascript, Typescript and CSS in all its form and
+            using React, Javascript, Typescript and CSS in all its forms and
             glory.
           </p>
         </div>
