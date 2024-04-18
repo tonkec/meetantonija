@@ -1,20 +1,23 @@
-2. Autofocus input
-3. blog posts s markdownom
-4. mobile navigation
-5. toggle dark mode
-6. selection highlighter
+2. Autofocus input - ned 21.04
+3. blog posts s markdownom - sub 20.04
+4. mobile navigation sub 20.04
+
+6. selection highlighter - pet 19.04
 7. funderpro link na funderpro, a ne na mochalabs
-8. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu
+8. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu sub 20.04
+
+22.04 -26.04
 9. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
 10. cv stranica, filtrirat prema godini i tehnologiji
 11. dodat tehnologije na svaki projekt na CV stranici
 12. malu slikicu sebe kod CV-a
 13. CV page save as PDF
-
-14. responsive homepage
-15. dodat u navigaciju jedan post i jedan projekt?
-16. disable tab when modal open
 17. animacije na graf na projekt page
+
+28. responsive about and project page - pet 19.04
+15. dodat u navigaciju jedan post i jedan projekt? sub 20.04
+16. disable tab when modal open - ned 21.04
+
 
 ## Mozda
 
@@ -22,17 +25,14 @@
 26. animacije na scroll?
 27. https://giscus.app/
 28. dodat jos tooltipova
-
-## NEXTTODO
-
-- about page dizajn, previse I (ja ovo ja ono)
-- dodat sta jos volim osim programiranja, zvuk gitare?
+5. toggle dark mode
 - temperaturu iz zga
 
-8. CV stranica
 
 ## GOTOVO
-
+- about page dizajn, previse I (ja ovo ja ono)
+- dodat sta jos volim osim programiranja, zvuk gitare?
+14. responsive homepage
 18. refactorat App.scss
 19. social media ikonice
 

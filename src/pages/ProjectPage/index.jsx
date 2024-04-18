@@ -30,7 +30,7 @@ const ProjectPage = () => {
         </div>
       </header>
 
-      <section className="bg-blue">
+      <section className="bg-blue has-elevated">
         <div className="skewed-top">
           <div className="circle"></div>
           <div className="circle"></div>

@@ -31,6 +31,10 @@
   flex-direction: column;
   @include breakpoint(xl) {
     flex-direction: row;
+
+    section {
+      padding-bottom: 100px;
+    }
   }
 
   .bg-blue {
