@@ -2,11 +2,14 @@ import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 import BrowserFrame from '../../../../components/BrowserFrame'
 import './Slider.scss'
+import { useWindowSize } from '../../../../hooks/useWindowSize'
 
 const Slider = ({ items, headline }) => {
+  const size = useWindowSize()
   const [sliderRef] = useKeenSlider({
+    mode: 'free-snap',
     slides: {
-      perView: 2,
+      perView: size.width > 900 ? 2 : 1,
       origin: 'center',
       spacing: 5,
       offset: 0,

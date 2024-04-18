@@ -1,8 +1,14 @@
+@import '../../../../styles//mq.scss';
+
 .questions {
-  margin-top: 60px;
+  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
+
+  @include breakpoint(xl) {
+    margin-top: 60px;
+  }
 }
 
 .question {
@@ -20,15 +26,24 @@
 }
 
 .questions-container {
-  display: flex;
   gap: 80px;
   justify-content: space-between;
+  flex-direction: column;
+  @include breakpoint(xl) {
+    flex-direction: row;
+  }
 
   .bg-blue {
     background-color: var(--color-blue);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
     color: var(--color-white);
+
+    padding: 50px 20px;
+    @include breakpoint(xl) {
+      padding: 50px;
+      max-width: 30%;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
   }
 
   .bg-white {
@@ -50,12 +65,7 @@
     }
   }
 
-  .bg-blue {
-    max-width: 30%;
-  }
-
   section {
     flex: 1;
-    padding: 100px 50px;
   }
 }

@@ -1,3 +1,4 @@
+@import './../../../../styles/mq.scss';
 .videos {
   .description {
     padding: 10px;
@@ -6,8 +7,10 @@
 
   .video {
     border-radius: 5px;
-    padding: 0 5rem;
     background: var(--color-blue);
+    @include breakpoint(lg) {
+      padding: 0 4rem;
+    }
 
     p {
       line-height: 1.2;

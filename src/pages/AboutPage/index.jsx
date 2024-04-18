@@ -1,4 +1,3 @@
-
 import './About.scss'
 import Search from '../../pages/HomePage/components/Search'
 import { FaHtml5, FaCss3, FaJs } from 'react-icons/fa'

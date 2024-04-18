@@ -1,3 +1,5 @@
+@import './../../../../styles/mq.scss';
+
 .codes {
   position: relative;
 }
@@ -12,15 +14,28 @@
   justify-content: center;
   text-decoration: none;
   font-size: 1.2rem;
-  position: absolute;
+  position: static;
   cursor: pointer;
   max-width: 800px;
+  margin-bottom: 40px;
+  margin-right: 20px;
+
+  @include breakpoint(xl) {
+    position: absolute;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
 
   &.css {
     top: auto;
     bottom: 0;
     left: 460px;
-    min-width: 400px;
+    max-width: 300px;
+    display: inline-block;
+
+    @include breakpoint(xl) {
+      min-width: 400px;
+    }
 
     &:nth-child(3) {
       left: 1000px;
