@@ -1,5 +1,4 @@
-import { useEffect } from 'react'
-import { createMagicSquares } from '../../utils/index'
+
 import './About.scss'
 import Search from '../../pages/HomePage/components/Search'
 import { FaHtml5, FaCss3, FaJs } from 'react-icons/fa'
@@ -7,9 +6,6 @@ import { SiTypescript, SiRedux, SiReact, SiAngular } from 'react-icons/si'
 import HireMe from '../../components/HireMe'
 
 const AboutPage = () => {
-  useEffect(() => {
-    createMagicSquares(['footer'])
-  }, [])
   return (
     <>
       <header className="about-header">

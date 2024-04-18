@@ -1,16 +1,11 @@
 import { useParams } from 'react-router-dom'
 import projects from '../../data/projects'
-import { useEffect } from 'react'
-import { createMagicSquares } from '../../utils/index'
 import Steps from '../HomePage/components/Steps'
 import './Project.scss'
 import HireMe from '../../components/HireMe'
 import Slider from '../HomePage/components/Slider'
 
 const ProjectPage = () => {
-  useEffect(() => {
-    createMagicSquares(['footer'])
-  }, [])
   const { id } = useParams()
   const project = projects.find((project) => project.id === Number(id))
 
