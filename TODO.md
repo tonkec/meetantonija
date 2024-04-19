@@ -27,7 +27,7 @@
 28. dodat jos tooltipova
 5. toggle dark mode
 - temperaturu iz zga
-
+- forma u cta
 
 ## GOTOVO
 - about page dizajn, previse I (ja ovo ja ono)

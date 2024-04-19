@@ -1,7 +1,14 @@
+@import "../../styles//mq.scss";
+
 .project-header {
   padding-bottom: 150px;
   .flex {
     align-items: flex-start;
+    flex-direction: column;
+
+    @include breakpoint(lg) {
+      flex-direction: row;
+    }
   }
   h1 {
     margin-bottom: 0;
@@ -23,9 +30,12 @@
 
 .bg-blue.has-elevated {
   background-color: var(--color-blue);
-  padding-bottom: 400px;
   position: relative;
   z-index: 9;
+
+  @include breakpoint(lg) {
+    padding-bottom: 400px;
+  }
 
   .circle {
     background-color: var(--color-blue);
@@ -39,6 +49,11 @@
 
   .flex {
     color: var(--color-white);
+    flex-direction: column;
+
+    @include breakpoint(lg) {
+      flex-direction: row;
+    }
 
     & > div {
       flex: 1;
@@ -62,16 +77,20 @@
 }
 
 .elevated {
-  position: absolute;
-  bottom: -20%;
-  right: 0;
-  max-width: 90%;
+ 
   background-color: var(--color-black);
   color: var(--color-white);
   padding: 50px;
-  z-index: 99;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+ 
+  @include breakpoint(lg) {
+    z-index: 99;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    bottom: -20%;
+    right: 0;
+    max-width: 90%;
+  }
 }
 
 .project-steps {
