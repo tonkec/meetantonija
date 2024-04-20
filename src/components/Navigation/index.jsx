@@ -3,10 +3,18 @@ import { useNavigate } from 'react-router-dom'
 import routes from '../../routes'
 import './Navigation.scss'
 
-const Navigation = () => {
+const Navigation = ({ isNavigationOpen }) => {
   const navigate = useNavigate()
   const [search, setSearch] = useState('')
   const navigationContainer = useRef(null)
+
+  useEffect(() => {
+    if (isNavigationOpen) {
+      navigationContainer.current.classList.add('show')
+    } else {
+      navigationContainer.current.classList.remove('show')
+    }
+  }, [isNavigationOpen])
 
   useEffect(() => {
     const handleKeyDown = (event) => {

@@ -4,6 +4,7 @@
 @import './styles/containers.scss';
 @import './styles/utils.scss';
 @import './styles/tooltip.scss';
+@import './styles/mq.scss';
 
 .magic-square {
   position: absolute;
@@ -14,6 +15,29 @@
   justify-content: space-between;
   align-items: center;
   padding: 40px 20px;
+  position: relative;
+  z-index: 99;
+  button {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-black);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+
+  h6 {
+    display: none;
+    @include breakpoint(lg) {
+      display: block;
+    }
+  }
 
   .icons {
     gap: 30px;

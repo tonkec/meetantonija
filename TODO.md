@@ -7,6 +7,7 @@
 7. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu sub 20.04
 
    22.04 -26.04
+
 8. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
 9. cv stranica, filtrirat prema godini i tehnologiji
 10. dodat tehnologije na svaki projekt na CV stranici
@@ -14,22 +15,24 @@
 12. CV page save as PDF
 13. animacije na graf na projekt page
 
-
-16. disable tab when modal open - ned 21.04
+14. disable tab when modal open - ned 21.04
 
 ## Mozda
+
 15. dodat u navigaciju jedan post i jedan projekt? sub 20.04
-25. istipkavanje mog imena u headeru i svaki title u headeru?
-26. animacije na scroll?
-27. https://giscus.app/
-28. dodat jos tooltipova
-29. toggle dark mode
+16. istipkavanje mog imena u headeru i svaki title u headeru?
+17. animacije na scroll?
+18. https://giscus.app/
+19. dodat jos tooltipova
+20. toggle dark mode
 
 - temperaturu iz zga
 - forma u cta
 
 ## GOTOVO
+
 14. responsive about and project page
+
 - about page dizajn, previse I (ja ovo ja ono)
 - dodat sta jos volim osim programiranja, zvuk gitare?
 

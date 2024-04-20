@@ -1,18 +1,30 @@
 import './App.scss'
-import { Routes, Route, Outlet } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Routes, Route, Outlet, useLocation } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import routes from './routes'
 import Footer from './components/Footer'
-import BrowserNavigation from './components/BrowserNavigation'
 import { LuLinkedin, LuGithub, LuCodepen } from 'react-icons/lu'
+import { RxHamburgerMenu } from 'react-icons/rx'
 
 function Layout() {
+  const [isNavigationOpen, setIsNavigationOpen] = useState(false)
+  const location = useLocation()
+
+  useEffect(() => {
+    setIsNavigationOpen(false)
+  }, [location])
+
   return (
     <>
-      <BrowserNavigation />
-      <Navigation />
-
+      <Navigation isNavigationOpen={isNavigationOpen} />
       <div className="container flex icons-container">
+        <button>
+          <RxHamburgerMenu
+            onClick={() => setIsNavigationOpen(!isNavigationOpen)}
+            fontSize={'2rem'}
+          />
+        </button>
         <h6>Command + K</h6>
         <div className="flex icons">
           <a href="https://codepen.io/tonkec" target="_blank" rel="noreferrer">
