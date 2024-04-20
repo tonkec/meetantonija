@@ -17,7 +17,7 @@ const CvPage = () => {
       <div className="flex">
         <h1>Antonija's CV 💼</h1>
 
-        <Image src={Me} alt="Antonija" />
+        <Image hasBackground src={Me} alt="Antonija" />
       </div>
 
       {Object.entries(groupedByCompany).map(([company, projects]) => (

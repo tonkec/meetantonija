@@ -59,3 +59,7 @@
     }
   }
 }
+
+div[role='tooltip'] {
+  z-index: 9999;
+}

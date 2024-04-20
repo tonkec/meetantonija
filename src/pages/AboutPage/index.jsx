@@ -3,23 +3,52 @@ import Search from '../../pages/HomePage/components/Search'
 import { FaHtml5, FaCss3, FaJs } from 'react-icons/fa'
 import { SiTypescript, SiRedux, SiReact, SiAngular } from 'react-icons/si'
 import HireMe from '../../components/HireMe'
+import Image from '../../components/Image'
+import Temperature from '../../components/Temperature'
+import Me from '../../images/me.jpeg'
+import { Tooltip } from 'react-tooltip'
+import useTemperature from '../../hooks/useTemperature'
+import {getValuesAndProperties} from '../../utils'
 
 const AboutPage = () => {
+  const temperatureData = useTemperature()
+  const {values , properties} = getValuesAndProperties(temperatureData)
+  console.log(values)
   return (
     <>
       <header className="about-header">
         <div className="container">
           <div className="flex">
-            <div className="image-container">
-              <img
-                src="https://avatars.githubusercontent.com/u/5020758?v=4"
-                alt="Antonija"
-              />
+            <div>
+              <h2>
+                I am <span className="accent">Antonija</span>,
+              </h2>
+
+              <h3>
+                a developer from Sveta Nedelja <br /> which currently has a <span data-tooltip-id="temperature-tooltip">
+                  <Temperature /></span> weather
+              </h3>
             </div>
-            <h1>
-              I am Antonija,a <span className="accent">frontend</span>{' '}
-              developer.{' '}
-            </h1>
+
+            <Tooltip
+              id="temperature-tooltip"
+              style={{
+                backgroundColor: 'var(--color-black)',
+                padding: '10px',
+                borderRadius: '5px',
+              }}
+              className="tooltip"
+            >
+              <ul>
+                {properties.map((property, index) => (
+                  <li key={index}>
+                    {property}: {values[index]}
+                  </li>
+                ))}
+              </ul>
+            </Tooltip>
+
+            <Image hasBackground src={Me} alt="Antonija" />
           </div>
         </div>
       </header>

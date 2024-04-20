@@ -2,7 +2,7 @@ import './Image.scss'
 import useImage from '../../hooks/useImage'
 import { Blocks } from 'react-loader-spinner'
 
-const Image = ({ src, alt }) => {
+const Image = ({ hasBackground, src, alt }) => {
   const isImageLoading = useImage(src)
 
   if (isImageLoading) {
@@ -12,12 +12,16 @@ const Image = ({ src, alt }) => {
   if (!src) {
     return null
   }
-  
-  return (
-    <div className="image-container">
-      <img src={src} alt={alt} className="cv-img" />
-    </div>
-  )
+
+  if (hasBackground) {
+    return (
+      <div className="image-container">
+        <img src={src} alt={alt} />
+      </div>
+    )
+  }
+
+  return <img src={src} alt={alt} />
 }
 
 export default Image

@@ -13,7 +13,7 @@ const Header = () => {
           </h2>
           <h3>
             a frontend developer 👩‍💻 from{' '}
-            <span data-tooltip-id="my-tooltip">Zagreb</span>,
+            <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>,
           </h3>
           <p>I enjoy creating beautiful user interfaces from scratch </p>
           <p>
@@ -24,24 +24,26 @@ const Header = () => {
         <Image
           src="https://avatars.githubusercontent.com/u/5020758?v=4"
           alt="Antonija"
+          hasBackground
         />
       </div>
 
       <Tooltip
         id="my-tooltip"
         style={{
-          backgroundColor: 'var(--color-black);',
+          backgroundColor: 'var(--color-black)',
           padding: '10px',
           borderRadius: '5px',
         }}
         className="tooltip"
       >
-        <img
-          src="https://i.natgeofe.com/n/a11e9ead-955f-4a4e-977c-d1b2f104ee75/zagrebgettyimages-1144074611hr_3x2.jpg"
-          alt="Zagreb"
+        <Image
+          hasBackground={false}
+          src="https://grad-svetanedelja.hr/wp-content/uploads/2020/04/Crkva-Sveta-Nedelja-zalazak-polje-800x450.jpg"
+          alt="Sveta Nedelja"
         />
         <br />
-        <span>A capital of Croatia.</span>
+        <span>A small town in Croatia.</span>
       </Tooltip>
     </header>
   )

@@ -13,3 +13,18 @@ export const truncateString = (string, length) => {
     return string
   }
 }
+
+export const getValuesAndProperties = (object) => {
+  const values = []
+  const properties = []
+  for (const key in object) {
+    if (key === "current") {
+      for (const key2 in object[key]) {
+        values.push(object[key][key2])
+        properties.push(key2)
+      }
+    }
+  }
+
+  return { values: values.slice(0, 3), properties: properties.slice(0, 3) }
+}
