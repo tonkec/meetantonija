@@ -20,7 +20,6 @@ const PageTransition = () => {
       <Blocks
         height="80"
         width="80"
-        color="#2ec4b6"
         ariaLabel="blocks-loading"
         wrapperStyle={{}}
         wrapperClass="blocks-wrapper"

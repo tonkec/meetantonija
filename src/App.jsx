@@ -36,7 +36,7 @@ function Layout() {
   }
 
   return (
-    <div ref={contentWrapper} className="content">
+    <div ref={contentWrapper} className="page-content">
       <Navigation isNavigationOpen={isNavigationOpen} />
       <div className="container flex icons-container">
         <button>

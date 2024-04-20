@@ -1,4 +1,5 @@
 import { Tooltip } from 'react-tooltip'
+import Image from './../../../../components/Image'
 import './Header.scss'
 
 const Header = () => {
@@ -20,12 +21,10 @@ const Header = () => {
             glory.
           </p>
         </div>
-        <div className="image-container">
-          <img
-            src="https://avatars.githubusercontent.com/u/5020758?v=4"
-            alt="Antonija"
-          />
-        </div>
+        <Image
+          src="https://avatars.githubusercontent.com/u/5020758?v=4"
+          alt="Antonija"
+        />
       </div>
 
       <Tooltip

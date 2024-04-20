@@ -6,11 +6,9 @@
 
    22.04 -26.04
 
-7. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
-8. cv stranica, filtrirat prema godini i tehnologiji
-9. dodat tehnologije na svaki projekt na CV stranici
-10. malu slikicu sebe kod CV-a
-11. CV page save as PDF
+7. cv stranica, filtrirat prema godini i tehnologiji
+8. malu slikicu sebe kod CV-a
+9. CV page save as PDF
 
 ## Sta ce jos ostat
 
@@ -18,11 +16,12 @@
 
 ## GOTOVO
 
-13. page transition
-14. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu sub 20.04
-15. blog posts s markdownom - sub 20.04
-16. mobile navigation sub 20.04
-17. responsive about and project page
+9. dodat tehnologije na svaki projekt na CV stranici
+10. page transition
+11. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu sub 20.04
+12. blog posts s markdownom - sub 20.04
+13. mobile navigation sub 20.04
+14. responsive about and project page
 
 - about page dizajn, previse I (ja ovo ja ono)
 - dodat sta jos volim osim programiranja, zvuk gitare?
@@ -68,12 +67,13 @@
 
 ## Mozda
 
-15. dodat u navigaciju jedan post i jedan projekt? sub 20.04
-16. istipkavanje mog imena u headeru i svaki title u headeru?
-17. animacije na scroll?
-18. https://giscus.app/
-19. dodat jos tooltipova
-20. toggle dark mode
+7. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
+8. dodat u navigaciju jedan post i jedan projekt? sub 20.04
+9. istipkavanje mog imena u headeru i svaki title u headeru?
+10. animacije na scroll?
+11. https://giscus.app/
+12. dodat jos tooltipova
+13. toggle dark mode
 
 - temperaturu iz zga
 - forma u cta
