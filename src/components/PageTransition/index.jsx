@@ -16,7 +16,6 @@ const PageTransition = () => {
   }, [pageTransition])
   return (
     <div ref={pageTransition} className="page-transition">
-      <h1>Getting you there...</h1>
     </div>
   )
 }

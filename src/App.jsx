@@ -26,7 +26,6 @@ function Layout() {
   }, [location])
 
   useEffect(() => {
-    console.log('isOutletLoaded', isOutletLoaded)
     if (isOutletLoaded) {
       contentWrapper.current.classList.add('enter')
     }
