@@ -10,22 +10,32 @@ const routes = [
     path: '/',
     element: <HomePage />,
     exact: true,
+    navigationName: 'Home',
   },
   {
     path: '/posts',
     element: <PostsPage />,
-  },
-  {
-    path: '/project/:id',
-    element: <ProjectPage />,
+    navigationName: 'Posts',
   },
   {
     path: '/about',
     element: <AboutPage />,
+    navigationName: 'About',
   },
   {
     path: '/cv',
     element: <CvPage />,
+    navigationName: 'CV',
+  },
+  {
+    path: '/post/:id',
+    element: <PostsPage />,
+    navigationName: 'Post',
+  },
+  {
+    path: '/project/:id',
+    element: <ProjectPage />,
+    navigationName: 'Project',
   },
   {
     path: '*',

@@ -2,8 +2,6 @@ import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import routes from '../../routes'
 import './Navigation.scss'
-import { shuffleArray } from '../../utils'
-import projects from '../../data/projects'
 
 const Navigation = () => {
   const navigate = useNavigate()

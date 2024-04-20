@@ -2,39 +2,40 @@
 3. blog posts s markdownom - sub 20.04
 4. mobile navigation sub 20.04
 
-6. selection highlighter - pet 19.04
-7. funderpro link na funderpro, a ne na mochalabs
-8. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu sub 20.04
+5. selection highlighter - pet 19.04
+6. funderpro link na funderpro, a ne na mochalabs
+7. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu sub 20.04
 
-22.04 -26.04
-9. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
-10. cv stranica, filtrirat prema godini i tehnologiji
-11. dodat tehnologije na svaki projekt na CV stranici
-12. malu slikicu sebe kod CV-a
-13. CV page save as PDF
-17. animacije na graf na projekt page
+   22.04 -26.04
+8. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
+9. cv stranica, filtrirat prema godini i tehnologiji
+10. dodat tehnologije na svaki projekt na CV stranici
+11. malu slikicu sebe kod CV-a
+12. CV page save as PDF
+13. animacije na graf na projekt page
 
-28. responsive about and project page - pet 19.04
-15. dodat u navigaciju jedan post i jedan projekt? sub 20.04
+
 16. disable tab when modal open - ned 21.04
 
-
 ## Mozda
-
+15. dodat u navigaciju jedan post i jedan projekt? sub 20.04
 25. istipkavanje mog imena u headeru i svaki title u headeru?
 26. animacije na scroll?
 27. https://giscus.app/
 28. dodat jos tooltipova
-5. toggle dark mode
+29. toggle dark mode
+
 - temperaturu iz zga
 - forma u cta
 
 ## GOTOVO
+14. responsive about and project page
 - about page dizajn, previse I (ja ovo ja ono)
 - dodat sta jos volim osim programiranja, zvuk gitare?
+
 14. responsive homepage
-18. refactorat App.scss
-19. social media ikonice
+15. refactorat App.scss
+16. social media ikonice
 
 - podijelit po komponentama
 - ponavljanje stilova

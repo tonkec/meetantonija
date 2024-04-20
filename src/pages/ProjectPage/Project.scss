@@ -1,4 +1,4 @@
-@import "../../styles//mq.scss";
+@import '../../styles//mq.scss';
 
 .project-header {
   padding-bottom: 150px;
@@ -77,11 +77,10 @@
 }
 
 .elevated {
- 
   background-color: var(--color-black);
   color: var(--color-white);
   padding: 50px;
- 
+
   @include breakpoint(lg) {
     z-index: 99;
     border-top-left-radius: 10px;
