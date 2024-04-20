@@ -4,6 +4,7 @@ import ProjectPage from '../pages/ProjectPage'
 import AboutPage from '../pages/AboutPage'
 import CvPage from '../pages/CvPage'
 import NotFound from '../components/NotFound'
+import PostPage from '../pages/PostPage'
 
 const routes = [
   {
@@ -29,7 +30,7 @@ const routes = [
   },
   {
     path: '/post/:id',
-    element: <PostsPage />,
+    element: <PostPage />,
     navigationName: 'Post',
   },
   {

@@ -1,21 +1,20 @@
 2. Autofocus input - ned 21.04
 3. blog posts s markdownom - sub 20.04
-4. mobile navigation sub 20.04
 
-5. selection highlighter - pet 19.04
-6. funderpro link na funderpro, a ne na mochalabs
-7. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu sub 20.04
+4. selection highlighter - pet 19.04
+5. funderpro link na funderpro, a ne na mochalabs
+6. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu sub 20.04
 
    22.04 -26.04
 
-8. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
-9. cv stranica, filtrirat prema godini i tehnologiji
-10. dodat tehnologije na svaki projekt na CV stranici
-11. malu slikicu sebe kod CV-a
-12. CV page save as PDF
-13. animacije na graf na projekt page
+7. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
+8. cv stranica, filtrirat prema godini i tehnologiji
+9. dodat tehnologije na svaki projekt na CV stranici
+10. malu slikicu sebe kod CV-a
+11. CV page save as PDF
+12. animacije na graf na projekt page
 
-14. disable tab when modal open - ned 21.04
+13. disable tab when modal open - ned 21.04
 
 ## Mozda
 
@@ -31,7 +30,8 @@
 
 ## GOTOVO
 
-14. responsive about and project page
+4.  mobile navigation sub 20.04
+5.  responsive about and project page
 
 - about page dizajn, previse I (ja ovo ja ono)
 - dodat sta jos volim osim programiranja, zvuk gitare?

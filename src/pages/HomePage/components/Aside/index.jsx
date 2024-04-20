@@ -20,7 +20,7 @@ const Aside = () => {
         <p>{noteContent.intro && truncateString(noteContent.intro, 350)}</p>
         <button
           onClick={() => {
-            window.location.href = `/posts/${noteContent.id}`
+            window.location.href = `/post/${noteContent.id}`
           }}
         >
           Read more
