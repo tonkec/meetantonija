@@ -1,5 +1,5 @@
 import './App.scss'
-import { useState, useEffect, useLayoutEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Routes, Route, Outlet, useLocation } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import routes from './routes'
@@ -19,7 +19,7 @@ function Layout() {
     setIsOutletLoaded(false)
   }, [location])
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setTimeout(() => {
       setIsOutletLoaded(true)
     }, 1500)
@@ -36,7 +36,7 @@ function Layout() {
   }
 
   return (
-    <div ref={contentWrapper} className='content'>
+    <div ref={contentWrapper} className="content">
       <Navigation isNavigationOpen={isNavigationOpen} />
       <div className="container flex icons-container">
         <button>
@@ -45,7 +45,7 @@ function Layout() {
             fontSize={'2rem'}
           />
         </button>
-        <h6>Shift + K</h6>
+        <h6>Press K</h6>
         <div className="flex icons">
           <a href="https://codepen.io/tonkec" target="_blank" rel="noreferrer">
             <LuCodepen fontSize={'2rem'} />

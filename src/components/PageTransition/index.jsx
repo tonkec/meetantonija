@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Blocks } from 'react-loader-spinner'
 import './PageTransition.scss'
 
 const PageTransition = () => {
@@ -16,6 +17,15 @@ const PageTransition = () => {
   }, [pageTransition])
   return (
     <div ref={pageTransition} className="page-transition">
+      <Blocks
+        height="80"
+        width="80"
+        color="#2ec4b6"
+        ariaLabel="blocks-loading"
+        wrapperStyle={{}}
+        wrapperClass="blocks-wrapper"
+        visible={true}
+      />
     </div>
   )
 }

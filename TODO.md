@@ -2,26 +2,27 @@
 3. selection highlighter - pet 19.04
 4. funderpro link na funderpro, a ne na mochalabs
 5. disable tab when modal open - ned 21.04
+6. dodat novi tekst u draggable
 
    22.04 -26.04
 
-6. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
-7. cv stranica, filtrirat prema godini i tehnologiji
-8. dodat tehnologije na svaki projekt na CV stranici
-9. malu slikicu sebe kod CV-a
-10. CV page save as PDF
+7. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
+8. cv stranica, filtrirat prema godini i tehnologiji
+9. dodat tehnologije na svaki projekt na CV stranici
+10. malu slikicu sebe kod CV-a
+11. CV page save as PDF
 
 ## Sta ce jos ostat
 
 12. animacije na graf na projekt page
-13. page transition
 
 ## GOTOVO
 
-6. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu sub 20.04
-7. blog posts s markdownom - sub 20.04
-8. mobile navigation sub 20.04
-9. responsive about and project page
+13. page transition
+14. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu sub 20.04
+15. blog posts s markdownom - sub 20.04
+16. mobile navigation sub 20.04
+17. responsive about and project page
 
 - about page dizajn, previse I (ja ovo ja ono)
 - dodat sta jos volim osim programiranja, zvuk gitare?
