@@ -31,7 +31,7 @@ const PostPage = () => {
   }, [id, navigate])
   return (
     <div className="post-page">
-        {loading && <Loader />}
+      {loading && <Loader />}
       <ReactMarkdown
         children={text}
         components={{

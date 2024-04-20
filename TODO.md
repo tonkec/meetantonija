@@ -1,37 +1,27 @@
 2. Autofocus input - ned 21.04
-3. blog posts s markdownom - sub 20.04
-
-4. selection highlighter - pet 19.04
-5. funderpro link na funderpro, a ne na mochalabs
-6. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu sub 20.04
+3. selection highlighter - pet 19.04
+4. funderpro link na funderpro, a ne na mochalabs
+5. disable tab when modal open - ned 21.04
 
    22.04 -26.04
 
-7. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
-8. cv stranica, filtrirat prema godini i tehnologiji
-9. dodat tehnologije na svaki projekt na CV stranici
-10. malu slikicu sebe kod CV-a
-11. CV page save as PDF
+6. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
+7. cv stranica, filtrirat prema godini i tehnologiji
+8. dodat tehnologije na svaki projekt na CV stranici
+9. malu slikicu sebe kod CV-a
+10. CV page save as PDF
+
+## Sta ce jos ostat
+
 12. animacije na graf na projekt page
-
-13. disable tab when modal open - ned 21.04
-
-## Mozda
-
-15. dodat u navigaciju jedan post i jedan projekt? sub 20.04
-16. istipkavanje mog imena u headeru i svaki title u headeru?
-17. animacije na scroll?
-18. https://giscus.app/
-19. dodat jos tooltipova
-20. toggle dark mode
-
-- temperaturu iz zga
-- forma u cta
+13. page transition
 
 ## GOTOVO
 
-4.  mobile navigation sub 20.04
-5.  responsive about and project page
+6. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu sub 20.04
+7. blog posts s markdownom - sub 20.04
+8. mobile navigation sub 20.04
+9. responsive about and project page
 
 - about page dizajn, previse I (ja ovo ja ono)
 - dodat sta jos volim osim programiranja, zvuk gitare?
@@ -74,3 +64,15 @@
 29. napravit bolju navigaciju, command plus 1,2,3 ili da se trenutna filtrira na tipkanje
 30. kad se scrolla da se animacija pojavi za pitanja
 31. i write beautiful code section do kraja
+
+## Mozda
+
+15. dodat u navigaciju jedan post i jedan projekt? sub 20.04
+16. istipkavanje mog imena u headeru i svaki title u headeru?
+17. animacije na scroll?
+18. https://giscus.app/
+19. dodat jos tooltipova
+20. toggle dark mode
+
+- temperaturu iz zga
+- forma u cta

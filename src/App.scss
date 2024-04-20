@@ -6,6 +6,15 @@
 @import './styles/tooltip.scss';
 @import './styles/mq.scss';
 
+.content {
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  &.enter {
+    opacity: 1;
+  }
+}
+
 .magic-square {
   position: absolute;
   z-index: 0;

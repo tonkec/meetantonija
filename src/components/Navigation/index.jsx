@@ -18,7 +18,7 @@ const Navigation = ({ isNavigationOpen }) => {
 
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (event.metaKey && event.key === 'k') {
+      if (event.code === 'KeyK') {
         navigationContainer.current.classList.toggle('show')
       }
     }
