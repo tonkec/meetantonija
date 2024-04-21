@@ -25,11 +25,21 @@ const Temperature = () => {
   useEffect(() => {
     if (temperatureData) {
       setTemperature(temperatureData.current.temperature_2m)
-      setIsLoading(false)
+      setTimeout(() => {
+        setIsLoading(false)
+      }, 1000)
     }
   }, [temperatureData])
 
-  if (isLoading) return <Triangle color="#000" height={50} width={50} />
+  if (isLoading)
+    return (
+      <Triangle
+        wrapperStyle={{ display: 'inline' }}
+        color="#000"
+        height={50}
+        width={50}
+      />
+    )
   return <span>{getTemperatureMood(temperature)}</span>
 }
 

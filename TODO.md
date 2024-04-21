@@ -1,13 +1,10 @@
 1. cv stranica, filtrirat prema godini i tehnologiji
 2. CV page save as PDF => https://react-pdf.org/
 3. selection highlighter
-4. single post page dizajn i content
-5. dodat link na iduci post
-6. animacije na graf na projekt page
-7. loader za weather da bude inline a ne ovako da skace
-8. not found stranicu bacit neku foru http://localhost:3000/project/8
-9. sta bi se jos moglo istipkavat? (Header na cvu),
-10. footer dizajnirat do kraja
+4. animacije na graf na projekt page
+5. not found stranicu bacit neku foru http://localhost:3000/project/8
+6. sta bi se jos moglo istipkavat? (Header na cvu),
+7. footer dizajnirat do kraja
 
 ## Mozda
 
@@ -30,16 +27,19 @@
 
 ## GOTOVO
 
-4. dovrsit self typing text
-5. skakanje footera na post page
-6. disable tab when modal open - ned 21.04
-7. Autofocus input - ned 21.04
-8. posts page dizajn?
-9. funderpro link na funderpro, a ne na mochalabs
-10. skip to tldr ne radi
-11. loading za weather, ovako izgleda glupo
-12. dodat loader na iframe loading?
-13. dodat novi tekst u draggable
+7. loader za weather da bude inline a ne ovako da skace
+8. single post page dizajn i content
+9. dodat link na iduci post
+10. dovrsit self typing text
+11. skakanje footera na post page
+12. disable tab when modal open - ned 21.04
+13. Autofocus input - ned 21.04
+14. posts page dizajn?
+15. funderpro link na funderpro, a ne na mochalabs
+16. skip to tldr ne radi
+17. loading za weather, ovako izgleda glupo
+18. dodat loader na iframe loading?
+19. dodat novi tekst u draggable
 
 - ne mora biti pravi css
 - mozes dodat i typescript nesto s Pick ili Omit

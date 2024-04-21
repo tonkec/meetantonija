@@ -1,0 +1,11 @@
+::selection {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.bg-black {
+  ::selection {
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
+}
