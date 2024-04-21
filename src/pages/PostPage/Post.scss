@@ -5,3 +5,11 @@
     margin-top: 20px;
   }
 }
+
+.post-loader {
+  background-color: var(--color-white);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

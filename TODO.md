@@ -1,7 +1,5 @@
-3. disable tab when modal open - ned 21.04
 
    22.04 -26.04
-
 4. cv stranica, filtrirat prema godini i tehnologiji
 5. CV page save as PDF => https://react-pdf.org/
 
@@ -11,7 +9,6 @@
 
 ## Sta ce jos ostat
 
-19. skakanje footera na post page
 20. single post page dizajn i content
 
 - dodat link na iduci post
@@ -37,7 +34,8 @@
 12. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
 
 ## GOTOVO
-
+19. skakanje footera na post page
+3. disable tab when modal open - ned 21.04
 2. Autofocus input - ned 21.04
 3. posts page dizajn?
 4. funderpro link na funderpro, a ne na mochalabs

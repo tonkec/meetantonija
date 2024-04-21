@@ -5,8 +5,10 @@ import PostsImage from './PostsImage'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { nord } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import './Post.scss'
+import { Triangle } from 'react-loader-spinner'
 
 const PostPage = () => {
+  const [isLoading, setIsLoading] = useState(true)
   const navigate = useNavigate()
   const [text, setText] = useState('')
   const { id } = useParams()
@@ -16,6 +18,7 @@ const PostPage = () => {
         fetch(res.default)
           .then((response) => response.text())
           .then((response) => {
+            setIsLoading(false)
             setText(response)
           })
           .catch((err) => {
@@ -25,6 +28,13 @@ const PostPage = () => {
       })
       .catch(() => navigate('/404'))
   }, [id, navigate])
+
+  if (isLoading) {
+    return <div className='post-loader'>
+     <h2>Fetching post data just for you...</h2>
+    </div>
+  }
+  
   return (
     <div className="post-page">
       <ReactMarkdown
