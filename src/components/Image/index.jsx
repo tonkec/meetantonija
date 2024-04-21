@@ -1,12 +1,12 @@
 import './Image.scss'
 import useImage from '../../hooks/useImage'
-import { Blocks } from 'react-loader-spinner'
+import { Triangle } from 'react-loader-spinner'
 
 const Image = ({ hasBackground, src, alt }) => {
   const isImageLoading = useImage(src)
 
   if (isImageLoading) {
-    return <Blocks type="ThreeDots" color="#00BFFF" height={100} width={100} />
+    return <Triangle color="#000" height={50} width={50} />
   }
 
   if (!src) {
