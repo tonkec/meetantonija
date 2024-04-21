@@ -39,7 +39,7 @@ export const typeString = (string, speed) => {
   setTimeout(() => {
     for (let i = 0; i < text.length; i++) {
       setTimeout(() => {
-        const elements =  document.getElementsByClassName('typed-text')
+        const elements = document.getElementsByClassName('typed-text')
         Array.from(elements).forEach((element) => {
           element.innerHTML += text[i]
         })

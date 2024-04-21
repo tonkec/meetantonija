@@ -16,9 +16,11 @@ const Header = () => {
             a frontend developer 👩‍💻 from{' '}
             <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>,
           </h3>
-          <TypedText type="p"> I enjoy creating beautiful user interfaces from scratch  using React, Javascript, Typescript and CSS in all its forms and
-            glory.  </TypedText>
-
+          <TypedText type="p">
+            {' '}
+            I enjoy creating beautiful user interfaces from scratch using React,
+            Javascript, Typescript and CSS in all its forms and glory.{' '}
+          </TypedText>
         </div>
         <Image
           src="https://avatars.githubusercontent.com/u/5020758?v=4"
