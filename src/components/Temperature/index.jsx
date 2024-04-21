@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react'
 import useTemperature from '../../hooks/useTemperature'
 import { Triangle } from 'react-loader-spinner'
 
-
-
 const Temperature = () => {
   const [temperature, setTemperature] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -29,9 +27,7 @@ const Temperature = () => {
       setTemperature(temperatureData.current.temperature_2m)
       setIsLoading(false)
     }
-  }, [
-    temperatureData,
-  ])
+  }, [temperatureData])
 
   if (isLoading) return <Triangle color="#000" height={50} width={50} />
   return <span>{getTemperatureMood(temperature)}</span>

@@ -1,58 +1,69 @@
 2. Autofocus input - ned 21.04
-5. disable tab when modal open - ned 21.04
-7. skip to tldr ne radi
+3. disable tab when modal open - ned 21.04
+4. skip to tldr ne radi
 
    22.04 -26.04
-7. cv stranica, filtrirat prema godini i tehnologiji
-9. CV page save as PDF
 
+5. cv stranica, filtrirat prema godini i tehnologiji
+6. CV page save as PDF
 
 ## Lagane stvari
-- 3. selection highlighter 
-4. funderpro link na funderpro, a ne na mochalabs
-15. loading za weather, ovako izgleda glupo
 
+- 3. selection highlighter
+
+4. funderpro link na funderpro, a ne na mochalabs
 
 
 ## Sta ce jos ostat
+
 14. posts page dizajn?
-16. single post page dizajn i content
-  - dodat link na iduci post
-  - dodat onaj gore indicator za reading
+15. single post page dizajn i content
+
+- dodat link na iduci post
+- dodat onaj gore indicator za reading
+
 12. animacije na graf na projekt page
 
 ## Mozda
+
 9. istipkavanje mog imena u headeru i svaki title u headeru?
 10. animacije na scroll?
-13. toggle dark mode
+11. toggle dark mode
+
 - forma u cta
+
 15. kad se na projektu stisne na skill da preusmjeri na stranicu s projektima koji koriste samo taj skill ili da redirekta na cv i izlista projekte s tim skillovima?
 
 ## Odbijeno
-- 8. dodat u navigaciju jedan post i jedan projekt? sub 20.04
-11. https://giscus.app/
-7. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
 
+- 8. dodat u navigaciju jedan post i jedan projekt? sub 20.04
+
+11. https://giscus.app/
+12. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
 
 ## GOTOVO
+5. loading za weather, ovako izgleda glupo
 16. dodat loader na iframe loading?
-6. dodat novi tekst u draggable 
- - ne mora biti pravi css
- - mozes dodat i typescript nesto s Pick ili Omit
+17. dodat novi tekst u draggable
+
+- ne mora biti pravi css
+- mozes dodat i typescript nesto s Pick ili Omit
+
 17. nekako naglasit da je ovo draggable
 18. drugi loader na page transition
+
 - bolji tekst na about page I bring a lot of values to the table.
 
 12. dodat jos tooltipova
 
-8. malu slikicu sebe kod CV-a
-28. temperatura
-9. dodat tehnologije na svaki projekt na CV stranici
-10. page transition
-11. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu sub 20.04
-12. blog posts s markdownom - sub 20.04
-13. mobile navigation sub 20.04
-14. responsive about and project page
+13. malu slikicu sebe kod CV-a
+14. temperatura
+15. dodat tehnologije na svaki projekt na CV stranici
+16. page transition
+17. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu sub 20.04
+18. blog posts s markdownom - sub 20.04
+19. mobile navigation sub 20.04
+20. responsive about and project page
 
 - about page dizajn, previse I (ja ovo ja ono)
 - dodat sta jos volim osim programiranja, zvuk gitare?

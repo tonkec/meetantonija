@@ -20,9 +20,12 @@ const ProjectPage = () => {
             <div>
               <h1>{project.title}</h1>
               <p>{project.headline}</p>
-              <a href="#tldr" className="button">
+              <button className="button" onClick={() => {
+                const tldr = document.getElementById('tldr')
+                tldr.scrollIntoView({ behavior: 'smooth' })
+              }}>
                 <span>Skip to TLDR</span> <span>👇</span>
-              </a>
+              </button>
             </div>
 
             <div>{project.fakeContent}</div>

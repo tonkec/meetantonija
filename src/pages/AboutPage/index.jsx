@@ -8,11 +8,11 @@ import Temperature from '../../components/Temperature'
 import Me from '../../images/me.jpeg'
 import { Tooltip } from 'react-tooltip'
 import useTemperature from '../../hooks/useTemperature'
-import {getValuesAndProperties} from '../../utils'
+import { getValuesAndProperties } from '../../utils'
 
 const AboutPage = () => {
   const temperatureData = useTemperature()
-  const {values , properties} = getValuesAndProperties(temperatureData)
+  const { values, properties } = getValuesAndProperties(temperatureData)
   console.log(values)
   return (
     <>
@@ -25,8 +25,12 @@ const AboutPage = () => {
               </h2>
 
               <h3>
-                a frontend developer from Sveta Nedelja <br /> which currently has a <span data-tooltip-id="temperature-tooltip">
-                  <Temperature /></span> weather.
+                a frontend developer from Sveta Nedelja <br /> which currently
+                has a{' '}
+                <span data-tooltip-id="temperature-tooltip">
+                  <Temperature />
+                </span>{' '}
+                weather.
               </h3>
             </div>
 
@@ -58,7 +62,17 @@ const AboutPage = () => {
             <h2>I bring a lot of values to the table.</h2>
 
             <p>
-            With a decade of experience in front-end development, I bring a wealth of technical expertise to the table. I've mastered various technologies, frameworks, and tools, allowing me to create robust and responsive user interfaces with ease. My problem-solving skills are finely honed after years of tackling challenges in front-end development. I have a knack for identifying issues, debugging code efficiently, and finding creative solutions to complex problems. Attention to detail is one of my strengths. I understand the importance of pixel-perfect precision in implementing designs across different devices and browsers, ensuring high-quality user experiences every time.
+              With a decade of experience in front-end development, I bring a
+              wealth of technical expertise to the table. I've mastered various
+              technologies, frameworks, and tools, allowing me to create robust
+              and responsive user interfaces with ease. My problem-solving
+              skills are finely honed after years of tackling challenges in
+              front-end development. I have a knack for identifying issues,
+              debugging code efficiently, and finding creative solutions to
+              complex problems. Attention to detail is one of my strengths. I
+              understand the importance of pixel-perfect precision in
+              implementing designs across different devices and browsers,
+              ensuring high-quality user experiences every time.
             </p>
 
             <h2>Technologies I am familiar with</h2>

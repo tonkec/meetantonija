@@ -18,7 +18,7 @@ export const getValuesAndProperties = (object) => {
   const values = []
   const properties = []
   for (const key in object) {
-    if (key === "current") {
+    if (key === 'current') {
       for (const key2 in object[key]) {
         values.push(object[key][key2])
         properties.push(key2)

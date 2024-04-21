@@ -15,7 +15,7 @@ const useTemperature = () => {
       })
   }, [])
 
-    return temperatureData
+  return temperatureData
 }
 
 export default useTemperature
