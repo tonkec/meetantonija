@@ -31,6 +31,8 @@ const notes = [
     id: 3,
     icon: () => <LuPaintbrush2 />,
     objectType: 'note',
+    intro:
+      'I have been hearing about pure functions for a while now. I know that they are good and I should use them. But I never really understood why. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. Pure functions are functions that always return the same output if the input is the same. They do not have side effects. They are predictable and easy to test.',
   },
   {
     title: 'How to fetch data in React?',
@@ -38,6 +40,8 @@ const notes = [
     id: 4,
     icon: () => <GiSpiderWeb />,
     objectType: 'note',
+    intro:
+      'I have been using fetch method for a while now. But I never really understood how it works. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. Fetch method is a modern replacement for XMLHttpRequest. It is a simple and powerful window method that allows you to fetch resources across the network. It is promise-based, so you can use it with async/await.',
   },
   {
     title: 'Double question mark operator',
@@ -45,6 +49,8 @@ const notes = [
     id: 5,
     icon: () => <BsQuestionSquare />,
     objectType: 'note',
+    intro:
+      'I have been seeing this operator a lot lately. I know that it is called double question mark operator. But I never really understood how it works. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. Double question mark operator is a new operator in Javascript. It is called nullish coalescing operator. It returns the right-hand operand when the left-hand operand is null or undefined.',
   },
 ]
 

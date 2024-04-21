@@ -1,17 +1,14 @@
 2. Autofocus input - ned 21.04
 3. disable tab when modal open - ned 21.04
-4. skip to tldr ne radi
 
    22.04 -26.04
 
 5. cv stranica, filtrirat prema godini i tehnologiji
-6. CV page save as PDF
+6. CV page save as PDF => https://react-pdf.org/
 
 ## Lagane stvari
 
 - 3. selection highlighter
-
-4. funderpro link na funderpro, a ne na mochalabs
 
 
 ## Sta ce jos ostat
@@ -42,6 +39,8 @@
 12. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
 
 ## GOTOVO
+4. funderpro link na funderpro, a ne na mochalabs
+4. skip to tldr ne radi
 5. loading za weather, ovako izgleda glupo
 16. dodat loader na iframe loading?
 17. dodat novi tekst u draggable

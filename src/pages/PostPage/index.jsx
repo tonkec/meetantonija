@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import PostsImage from './PostsImage'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { nord } from 'react-syntax-highlighter/dist/esm/styles/hljs'
-import './Posts.scss'
+import './Post.scss'
 
 const PostPage = () => {
   const navigate = useNavigate()

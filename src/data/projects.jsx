@@ -394,7 +394,7 @@ const projects = [
     title: 'Funder Pro',
     headline: 'Make your trading exceptional',
     skills: 'Javascript, React, Redux, Typescript, React Query',
-    link: 'https://mochalabs.com/',
+    link: 'https://prop.funderpro.com/',
     responsibilities: [
       {
         title: 'Implementation of Dynamic and Responsive User Interfaces',

@@ -4,7 +4,7 @@ import notes from '../../../../data/posts'
 import { truncateString } from '../../../../utils'
 import './Aside.scss'
 
-const Aside = () => {
+const Aside = ({numberOfPosts}) => {
   const [noteContent, setNoteContent] = useState({})
   return (
     <section className="bg-white has-padding">
@@ -33,7 +33,7 @@ const Aside = () => {
       <div className="container">
         <h2>👌 I write about technologies I like.</h2>
 
-        {notes.slice(0, 2).map((note) => {
+        {notes.slice(0, numberOfPosts).map((note) => {
           return (
             <div
               key={note.id}

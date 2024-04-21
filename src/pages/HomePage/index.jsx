@@ -53,7 +53,7 @@ const HomePage = () => {
           ]}
           className="has-padding"
         />
-        <Aside />
+        <Aside numberOfPosts={2} />
         <Videos />
         <Search />
         <HireMe />

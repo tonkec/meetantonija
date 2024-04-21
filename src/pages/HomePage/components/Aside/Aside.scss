@@ -1,6 +1,8 @@
 @import '../../../../styles/mq.scss';
 
 .note {
+  text-decoration: none;
+  display: block;
   margin-bottom: 20px;
   padding: 20px;
   border: 1px solid #e0e0e0;
