@@ -5,7 +5,7 @@
 }
 
 .code {
-  background-color: var(--color-black);
+  background-color: var(--color-block-code);
   color: var(--color-white);
   border-radius: 5px;
   display: flex;
@@ -26,6 +26,17 @@
     margin-left: 0;
   }
 
+  &.ts {
+    top: 0;
+    left: 0;
+    max-width: 500px;
+    display: inline-block;
+
+    @include breakpoint(xl) {
+      min-width: 400px;
+    }
+  }
+
   &.css {
     top: auto;
     bottom: 0;
@@ -37,32 +48,14 @@
       min-width: 400px;
     }
 
-    &:nth-child(3) {
-      left: 1000px;
+    &:first-child {
+      left:0px;
       min-width: 200px;
     }
 
     &:last-child {
       left: 0px;
       min-width: 300px;
-    }
-  }
-
-  span {
-    &:first-child {
-      color: var(--color-red);
-    }
-
-    &.bracket {
-      color: var(--color-blue);
-    }
-
-    &.block {
-      display: block;
-    }
-
-    &.property {
-      color: var(--color-yellow);
     }
   }
 

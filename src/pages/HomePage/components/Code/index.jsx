@@ -1,5 +1,12 @@
 import Draggable from 'react-draggable'
 import './Code.scss'
+import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/default-highlight'
+import { darcula} from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
+const javascriptCode = "import { skiils } from 'frontend-developer';\nconst { html, css, javascript, typescript, react } = skills;\nconst frontendDeveloper = {\n  name: 'Antonija',\n  age: 30,\n  skills: [html, css, javascript, typescript, react],\n  neverStopsLearning: true,\n  enjoysCoding: true,\n  isCreative: true,\n}";
+const scssCode = ".scss-master {\n  color: black;\n  font-weight: bold;\n  font-size: large;\n  visibility: visible;\n}\n\n.react-dev {\n  display: 💪;\n}";
+const typescriptCode = "type DevSkills = 'html' | 'css' | 'javascript' | 'typescript' | 'react';\ninterface ExperiencedDeveveloper {\n  skills: DevSkills[];\n  neverStopsLearning: boolean;\n  enjoysCoding: boolean;\n  isCreative: boolean;\n}\n";
+
 
 const Code = () => {
   return (
@@ -9,7 +16,7 @@ const Code = () => {
         <div className="circle"></div>
       </div>
       <div className="container">
-        <h2>✅ I write beautiful code</h2>
+        <h2>✅ Clicking is so last season</h2>
 
         <Draggable bounds="parent">
           <div className="code">
@@ -18,23 +25,12 @@ const Code = () => {
               <span></span>
               <span></span>
             </div>
-            <pre>
-              <code>
-                {`import { skiils } from 'frontend-developer';
-const { html, css, javascript, typescript, react } = skills;
-const frontendDeveloper = {
-  name: 'Antonija',
-  age: 30,
-  skills: [html, css, javascript, typescript, react],
-  neverStopsLearning: true,
-  enjoysCoding: true,
-  isCreative: true,
-}`}
-              </code>
-            </pre>
+            <SyntaxHighlighter language="javascript" style={darcula} children={String(javascriptCode).replace(/\n$/, '')} />
+                
           </div>
         </Draggable>
 
+      
         <Draggable bounds="parent">
           <div className="code css">
             <div className="bar">
@@ -42,101 +38,18 @@ const frontendDeveloper = {
               <span></span>
               <span></span>
             </div>
-            <pre>
-              <code>
-                <span>{`.css-ninja`}</span>
-                <span className="bracket">{` {`}</span>
-                <span className="block">
-                  <span className="property">{`  color:`}</span>
-                  <span>{` black;`}</span>
-                </span>
-                <span className="block">
-                  <span className="property">{`  font-weight:`}</span>
-                  <span>{` bold;`}</span>
-                </span>
-                <span className="bracket">{`}`}</span>
-                <span className="block">
-                  <span>{`.react-dev`}</span>
-                  <span className="bracket">{` {`}</span>
-                  <span className="block">
-                    <span className="property">{`  display:`}</span>
-                    <span>{` 💪;`}</span>
-                  </span>
-
-                  <span className="bracket">{`}`}</span>
-                </span>
-              </code>
-            </pre>
+            <SyntaxHighlighter language="scss" style={darcula} children={String(scssCode).replace(/\n$/, '')} />
           </div>
         </Draggable>
 
         <Draggable bounds="parent">
-          <div className="code css">
+          <div className="code ts">
             <div className="bar">
               <span></span>
               <span></span>
               <span></span>
             </div>
-            <pre>
-              <code>
-                <span>{`.scss-master`}</span>
-                <span className="bracket">{` {`}</span>
-                <span className="block">
-                  <span className="property">{`  color:`}</span>
-                  <span>{` black;`}</span>
-                </span>
-                <span className="block">
-                  <span className="property">{`  font-weight:`}</span>
-                  <span>{` bold;`}</span>
-                </span>
-                <span className="bracket">{`}`}</span>
-                <span className="block">
-                  <span>{`.react-dev`}</span>
-                  <span className="bracket">{` {`}</span>
-                  <span className="block">
-                    <span className="property">{`  display:`}</span>
-                    <span>{` 💪;`}</span>
-                  </span>
-
-                  <span className="bracket">{`}`}</span>
-                </span>
-              </code>
-            </pre>
-          </div>
-        </Draggable>
-
-        <Draggable bounds="parent">
-          <div className="code css">
-            <div className="bar">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <pre>
-              <code>
-                <span>{`.scss-master`}</span>
-                <span className="bracket">{` {`}</span>
-                <span className="block">
-                  <span className="property">{`  color:`}</span>
-                  <span>{` black;`}</span>
-                </span>
-                <span className="block">
-                  <span className="property">{`  font-weight:`}</span>
-                  <span>{` bold;`}</span>
-                </span>
-                <span className="bracket">{`}`}</span>
-                <span className="block">
-                  <span>{`.react-dev`}</span>
-                  <span className="bracket">{` {`}</span>
-                  <span className="block">
-                    <span className="property">{`  display:`}</span>
-                    <span>{` 💪;`}</span>
-                  </span>
-
-                  <span className="bracket">{`}`}</span>
-                </span>
-              </code>
-            </pre>
+            <SyntaxHighlighter language="typescript" style={darcula} children={String(typescriptCode).replace(/\n$/, '')} />
           </div>
         </Draggable>
       </div>

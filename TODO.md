@@ -1,21 +1,51 @@
 2. Autofocus input - ned 21.04
-3. selection highlighter - pet 19.04
-4. funderpro link na funderpro, a ne na mochalabs
 5. disable tab when modal open - ned 21.04
-6. dodat novi tekst u draggable
+7. skip to tldr ne radi
 
    22.04 -26.04
-
 7. cv stranica, filtrirat prema godini i tehnologiji
-8. malu slikicu sebe kod CV-a
 9. CV page save as PDF
 
-## Sta ce jos ostat
 
+## Lagane stvari
+- 3. selection highlighter 
+4. funderpro link na funderpro, a ne na mochalabs
+15. loading za weather, ovako izgleda glupo
+16. dodat loader na iframe loading?
+
+
+## Sta ce jos ostat
+14. posts page dizajn?
+16. single post page dizajn i content
+  - dodat link na iduci post
+  - dodat onaj gore indicator za reading
 12. animacije na graf na projekt page
 
-## GOTOVO
+## Mozda
+9. istipkavanje mog imena u headeru i svaki title u headeru?
+10. animacije na scroll?
+13. toggle dark mode
+- forma u cta
+15. kad se na projektu stisne na skill da preusmjeri na stranicu s projektima koji koriste samo taj skill ili da redirekta na cv i izlista projekte s tim skillovima?
 
+## Odbijeno
+- 8. dodat u navigaciju jedan post i jedan projekt? sub 20.04
+11. https://giscus.app/
+7. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
+
+
+## GOTOVO
+6. dodat novi tekst u draggable 
+ - ne mora biti pravi css
+ - mozes dodat i typescript nesto s Pick ili Omit
+17. nekako naglasit da je ovo draggable
+18. drugi loader na page transition
+- bolji tekst na about page I bring a lot of values to the table.
+
+12. dodat jos tooltipova
+
+8. malu slikicu sebe kod CV-a
+28. temperatura
 9. dodat tehnologije na svaki projekt na CV stranici
 10. page transition
 11. mozda umjesto command + K stavit shift plus K jer command ne postoji na windowsu sub 20.04
@@ -64,16 +94,3 @@
 29. napravit bolju navigaciju, command plus 1,2,3 ili da se trenutna filtrira na tipkanje
 30. kad se scrolla da se animacija pojavi za pitanja
 31. i write beautiful code section do kraja
-
-## Mozda
-
-7. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
-8. dodat u navigaciju jedan post i jedan projekt? sub 20.04
-9. istipkavanje mog imena u headeru i svaki title u headeru?
-10. animacije na scroll?
-11. https://giscus.app/
-12. dodat jos tooltipova
-13. toggle dark mode
-
-- temperaturu iz zga
-- forma u cta
