@@ -1,25 +1,29 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import routes from '../../routes'
+import FocusTrap from 'focus-trap-react'
 import './Navigation.scss'
 
-const Navigation = ({ isNavigationOpen }) => {
+const delay = 0.1
+
+const Navigation = ({ isMobileNavigationOpen }) => {
   const navigate = useNavigate()
   const [search, setSearch] = useState('')
-  const navigationContainer = useRef(null)
-
-  useEffect(() => {
-    if (isNavigationOpen) {
-      navigationContainer.current.classList.add('show')
-    } else {
-      navigationContainer.current.classList.remove('show')
-    }
-  }, [isNavigationOpen])
+  const [isNavigationOpen, setIsNavigationOpen] = useState(false)
 
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (event.code === 'KeyK') {
-        navigationContainer.current.classList.toggle('show')
+      if (event.shiftKey && event.key === 'K') {
+        // hack that clears the input and ignores just pressed shift + K as an input value
+        return isNavigationOpen
+          ? setTimeout(() => {
+              setSearch('')
+              setIsNavigationOpen(false)
+            }, delay)
+          : (setSearch(''),
+            setTimeout(() => {
+              setIsNavigationOpen(true)
+            }, delay))
       }
     }
 
@@ -28,47 +32,57 @@ const Navigation = ({ isNavigationOpen }) => {
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
     }
-  }, [])
+  }, [isNavigationOpen])
 
   const onSubmit = (event) => {
     event.preventDefault()
     const route = routes.find((route) => route.path === search)
     if (route) {
       navigate(route.path)
-      navigationContainer.current.classList.remove('show')
     }
   }
 
-  return (
-    <div className="search-container" ref={navigationContainer}>
-      <form onSubmit={onSubmit}>
-        <input
-          type="search"
-          placeholder="Where would you like to go?"
-          onChange={(event) => setSearch(event.target.value)}
-          value={search}
-        />
+  const shouldShowNavigation = isMobileNavigationOpen || isNavigationOpen
 
-        <div className="search-results">
-          {routes
-            .filter(
-              (route) => !route.path.includes(':id') && route.path !== '*'
-            )
-            .filter((route) => route.path.includes(search))
-            .map((route) => (
-              <button
-                key={route.path}
-                onClick={() => {
-                  navigate(route.path)
-                  navigationContainer.current.classList.remove('show')
-                }}
-              >
-                {route.path}
-              </button>
-            ))}
-        </div>
-      </form>
-    </div>
+  if (!shouldShowNavigation) {
+    return null
+  }
+
+  return (
+    <FocusTrap>
+      <div className="search-container show">
+        <form onSubmit={onSubmit}>
+          <input
+            type="search"
+            placeholder="Where would you like to go?"
+            onChange={(event) => {
+              setSearch(event.target.value)
+            }}
+            value={search}
+            autoFocus
+          />
+
+          <div className="search-results">
+            {routes
+              .filter(
+                (route) => !route.path.includes(':id') && route.path !== '*'
+              )
+              .filter((route) => route.path.includes(search))
+              .map((route) => (
+                <button
+                  key={route.path}
+                  onClick={() => {
+                    navigate(route.path)
+                    setIsNavigationOpen(false)
+                  }}
+                >
+                  {route.path}
+                </button>
+              ))}
+          </div>
+        </form>
+      </div>
+    </FocusTrap>
   )
 }
 

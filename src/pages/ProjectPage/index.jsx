@@ -21,9 +21,12 @@ const ProjectPage = () => {
             <div>
               <h1>{project.title}</h1>
               <p>{project.headline}</p>
-              <button className="button" onClick={() => {
-                scrollToTheElement('tldr')
-              }}>
+              <button
+                className="button"
+                onClick={() => {
+                  scrollToTheElement('tldr')
+                }}
+              >
                 <span>Skip to TLDR</span> <span>👇</span>
               </button>
             </div>

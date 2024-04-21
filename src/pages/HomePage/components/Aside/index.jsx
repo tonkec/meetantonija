@@ -4,7 +4,7 @@ import notes from '../../../../data/posts'
 import { truncateString } from '../../../../utils'
 import './Aside.scss'
 
-const Aside = ({numberOfPosts}) => {
+const Aside = ({ numberOfPosts }) => {
   const [noteContent, setNoteContent] = useState({})
   return (
     <section className="bg-white has-padding">

@@ -9,13 +9,13 @@ import { RxHamburgerMenu } from 'react-icons/rx'
 import PageTransition from './components/PageTransition'
 
 function Layout() {
-  const [isNavigationOpen, setIsNavigationOpen] = useState(false)
+  const [isMobileNavigationOpen, setIsMobileNavigationOpen] = useState(false)
   const [isOutletLoaded, setIsOutletLoaded] = useState(false)
   const location = useLocation()
   const contentWrapper = useRef(null)
 
   useEffect(() => {
-    setIsNavigationOpen(false)
+    setIsMobileNavigationOpen(false)
     setIsOutletLoaded(false)
   }, [location])
 
@@ -36,36 +36,46 @@ function Layout() {
   }
 
   return (
-    <div ref={contentWrapper} className="page-content">
-      <Navigation isNavigationOpen={isNavigationOpen} />
-      <div className="container flex icons-container">
-        <button>
-          <RxHamburgerMenu
-            onClick={() => setIsNavigationOpen(!isNavigationOpen)}
-            fontSize={'2rem'}
-          />
-        </button>
-        <h6>Press K</h6>
-        <div className="flex icons">
-          <a href="https://codepen.io/tonkec" target="_blank" rel="noreferrer">
-            <LuCodepen fontSize={'2rem'} />
-          </a>
-          <a href="https://github.com/tonkec" target="_blank" rel="noreferrer">
-            {' '}
-            <LuGithub fontSize={'2rem'} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/antonija-simic/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <LuLinkedin fontSize={'2rem'} />
-          </a>
+    <>
+      <Navigation isMobileNavigationOpen={isMobileNavigationOpen} />
+      <div ref={contentWrapper} className="page-content">
+        <div className="container flex icons-container">
+          <button>
+            <RxHamburgerMenu
+              onClick={() => setIsMobileNavigationOpen(!isMobileNavigationOpen)}
+              fontSize={'2rem'}
+            />
+          </button>
+          <h6>Shift + K</h6>
+          <div className="flex icons">
+            <a
+              href="https://codepen.io/tonkec"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LuCodepen fontSize={'2rem'} />
+            </a>
+            <a
+              href="https://github.com/tonkec"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {' '}
+              <LuGithub fontSize={'2rem'} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/antonija-simic/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LuLinkedin fontSize={'2rem'} />
+            </a>
+          </div>
         </div>
+        <Outlet />
+        <Footer />
       </div>
-      <Outlet />
-      <Footer />
-    </div>
+    </>
   )
 }
 
