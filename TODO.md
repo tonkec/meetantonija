@@ -1,23 +1,16 @@
 
-   22.04 -26.04
-4. cv stranica, filtrirat prema godini i tehnologiji
-5. CV page save as PDF => https://react-pdf.org/
-
-## Lagane stvari
-
-- 3. selection highlighter
-
-## Sta ce jos ostat
-
+1. cv stranica, filtrirat prema godini i tehnologiji
+2. CV page save as PDF => https://react-pdf.org/
+3. selection highlighter
+4. dovrsit self typing text
 20. single post page dizajn i content
-
-- dodat link na iduci post
-- dodat onaj gore indicator za reading
-
+21. dodat link na iduci post
 12. animacije na graf na projekt page
+13. loader za weather da bude inline a ne ovako da skace
+14. not found stranicu bacit neku foru http://localhost:3000/project/8
 
 ## Mozda
-
+17. bolje rjesenje za post loader!
 9. istipkavanje mog imena u headeru i svaki title u headeru?
 10. animacije na scroll?
 11. toggle dark mode
@@ -27,9 +20,8 @@
 15. kad se na projektu stisne na skill da preusmjeri na stranicu s projektima koji koriste samo taj skill ili da redirekta na cv i izlista projekte s tim skillovima?
 
 ## Odbijeno
-
+- dodat onaj gore indicator za reading
 - 8. dodat u navigaciju jedan post i jedan projekt? sub 20.04
-
 11. https://giscus.app/
 12. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
 

@@ -5,7 +5,8 @@ import PostsImage from './PostsImage'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { nord } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import './Post.scss'
-import { Triangle } from 'react-loader-spinner'
+
+import TypedText from '../../components/TypedText'
 
 const PostPage = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -34,7 +35,7 @@ const PostPage = () => {
      <h2>Fetching post data just for you...</h2>
     </div>
   }
-  
+
   return (
     <div className="post-page">
       <ReactMarkdown
@@ -43,7 +44,7 @@ const PostPage = () => {
           h1({ children }) {
             return (
               <div className="container">
-                <h1>{children}</h1>
+                <TypedText>{children}</TypedText>
               </div>
             )
           },

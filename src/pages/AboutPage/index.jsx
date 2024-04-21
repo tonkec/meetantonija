@@ -13,7 +13,6 @@ import { getValuesAndProperties } from '../../utils'
 const AboutPage = () => {
   const temperatureData = useTemperature()
   const { values, properties } = getValuesAndProperties(temperatureData)
-  console.log(values)
   return (
     <>
       <header className="about-header">

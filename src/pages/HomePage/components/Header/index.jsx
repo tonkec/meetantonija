@@ -1,10 +1,11 @@
 import { Tooltip } from 'react-tooltip'
 import Image from './../../../../components/Image'
 import './Header.scss'
+import TypedText from '../../../../components/TypedText'
 
 const Header = () => {
   return (
-    <header className="container">
+    <header className="container homepage-header">
       <div className="flex">
         <div>
           <h1>Hey 👋</h1>
@@ -15,11 +16,9 @@ const Header = () => {
             a frontend developer 👩‍💻 from{' '}
             <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>,
           </h3>
-          <p>I enjoy creating beautiful user interfaces from scratch </p>
-          <p>
-            using React, Javascript, Typescript and CSS in all its forms and
-            glory.
-          </p>
+          <TypedText type="p"> I enjoy creating beautiful user interfaces from scratch  using React, Javascript, Typescript and CSS in all its forms and
+            glory.  </TypedText>
+
         </div>
         <Image
           src="https://avatars.githubusercontent.com/u/5020758?v=4"
