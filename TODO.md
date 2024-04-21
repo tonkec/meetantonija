@@ -11,7 +11,7 @@
 - 3. selection highlighter 
 4. funderpro link na funderpro, a ne na mochalabs
 15. loading za weather, ovako izgleda glupo
-16. dodat loader na iframe loading?
+
 
 
 ## Sta ce jos ostat
@@ -35,6 +35,7 @@
 
 
 ## GOTOVO
+16. dodat loader na iframe loading?
 6. dodat novi tekst u draggable 
  - ne mora biti pravi css
  - mozes dodat i typescript nesto s Pick ili Omit
