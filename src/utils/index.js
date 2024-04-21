@@ -28,3 +28,9 @@ export const getValuesAndProperties = (object) => {
 
   return { values: values.slice(0, 3), properties: properties.slice(0, 3) }
 }
+
+
+export const scrollToTheElement = (id) => {
+  const element = document.getElementById(id);
+  element.scrollIntoView({ behavior: 'smooth' })
+}

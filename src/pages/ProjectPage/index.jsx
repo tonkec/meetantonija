@@ -4,6 +4,7 @@ import Steps from '../HomePage/components/Steps'
 import './Project.scss'
 import HireMe from '../../components/HireMe'
 import Slider from '../HomePage/components/Slider'
+import { scrollToTheElement } from '../../utils'
 
 const ProjectPage = () => {
   const { id } = useParams()
@@ -21,8 +22,7 @@ const ProjectPage = () => {
               <h1>{project.title}</h1>
               <p>{project.headline}</p>
               <button className="button" onClick={() => {
-                const tldr = document.getElementById('tldr')
-                tldr.scrollIntoView({ behavior: 'smooth' })
+                scrollToTheElement('tldr')
               }}>
                 <span>Skip to TLDR</span> <span>👇</span>
               </button>
