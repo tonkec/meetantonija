@@ -47,3 +47,15 @@ export const typeString = (string, speed) => {
     }
   }, 200)
 }
+
+export const removeSpacesAndDashesFromString = (string) => {
+  return string.toLowerCase().replace(/\s/g, '').replace(/-/g, '')
+}
+
+export const arrayHasFullString = (array, string) => {
+  return array.some(
+    (item) =>
+      removeSpacesAndDashesFromString(item) ===
+      removeSpacesAndDashesFromString(string)
+  )
+}

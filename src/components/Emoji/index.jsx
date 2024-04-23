@@ -1,4 +1,4 @@
-import "./Emoji.scss";
+import './Emoji.scss'
 
 const Emoji = () => {
   return (

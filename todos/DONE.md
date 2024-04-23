@@ -1,26 +1,27 @@
 ## GOTOVO
-
-19. dodat jos tehnologija na revuto, pimsf, peaks, craftstrom, tint
-
-20. ubit my two cents
-21. close navigation na escape
-22. istipkavanje mog imena u headeru i svaki title u headeru?
-23. bolje rjesenje za post loader
-24. selection highlighter
-25. loader za weather da bude inline a ne ovako da skace
-26. single post page dizajn i content
-27. dodat link na iduci post
-28. dovrsit self typing text
-29. skakanje footera na post page
-30. disable tab when modal open - ned 21.04
-31. Autofocus input - ned 21.04
-32. posts page dizajn?
-33. funderpro link na funderpro, a ne na mochalabs
-34. skip to tldr ne radi
-35. loading za weather, ovako izgleda glupo
-36. dodat loader na iframe loading?
-37. dodat novi tekst u draggable
-38. steps na revuto dodat jos
+4. kad se na projektu stisne na skill da preusmjeri na stranicu s projektima koji koriste samo taj skill ili da redirekta na cv i izlista projekte s tim skillovima? preko query paramsa. Da li da se isto dogodi i na about stranici kad se stisne na technology, isto i na projekt stranici
+1. cv stranica filter prema tehnologiji
+5. dovrsit zenskicu, stavit umjesto loadera
+6. dodat jos tehnologija na revuto, pimsf, peaks, craftstrom, tint
+7. ubit my two cents
+8. close navigation na escape
+9. istipkavanje mog imena u headeru i svaki title u headeru?
+10. bolje rjesenje za post loader
+11. selection highlighter
+12. loader za weather da bude inline a ne ovako da skace
+13. single post page dizajn i content
+14. dodat link na iduci post
+15. dovrsit self typing text
+16. skakanje footera na post page
+17. disable tab when modal open - ned 21.04
+18. Autofocus input - ned 21.04
+19. posts page dizajn?
+20. funderpro link na funderpro, a ne na mochalabs
+21. skip to tldr ne radi
+22. loading za weather, ovako izgleda glupo
+23. dodat loader na iframe loading?
+24. dodat novi tekst u draggable
+25. steps na revuto dodat jos
 
 - ne mora biti pravi css
 - mozes dodat i typescript nesto s Pick ili Omit

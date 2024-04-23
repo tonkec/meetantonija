@@ -5,6 +5,7 @@ import './Project.scss'
 import HireMe from '../../components/HireMe'
 import Slider from '../HomePage/components/Slider'
 import { scrollToTheElement } from '../../utils'
+import Skills from '../../components/Skills'
 
 const ProjectPage = () => {
   const { id } = useParams()
@@ -44,13 +45,7 @@ const ProjectPage = () => {
         <div className="flex container">
           <div>
             <h3>Technologies 🚀</h3>
-            <div className="skills">
-              {project.skills.split(',').map((skill) => (
-                <span className="skill" key={skill}>
-                  {skill}
-                </span>
-              ))}
-            </div>
+           <Skills skills={project.skills.split(',')} />
           </div>
 
           <div>

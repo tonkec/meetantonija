@@ -1,4 +1,5 @@
 .cv-container {
+  padding-bottom: 100px;
   .flex {
     gap: 50px;
     justify-content: space-between;
@@ -6,5 +7,9 @@
 
   img {
     width: 200px;
+  }
+
+  article {
+    margin-bottom: 100px;
   }
 }

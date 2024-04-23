@@ -3,6 +3,7 @@ import 'keen-slider/keen-slider.min.css'
 import BrowserFrame from '../../../../components/BrowserFrame'
 import './Slider.scss'
 import { useWindowSize } from '../../../../hooks/useWindowSize'
+import Skills from '../../../../components/Skills'
 
 const Slider = ({ items, headline }) => {
   const size = useWindowSize()
@@ -30,15 +31,7 @@ const Slider = ({ items, headline }) => {
                   <p>{project.headline}.</p>
                   <a href={`/project/${project.id}`}>Read more</a>
                 </BrowserFrame>
-                <div className="skills">
-                  {project.skills.split(',').map((skill) => {
-                    return (
-                      <span key={skill} className="skill">
-                        {skill}
-                      </span>
-                    )
-                  })}
-                </div>
+                <Skills skills={project.skills.split(',')} />
               </div>
             )
           })}
