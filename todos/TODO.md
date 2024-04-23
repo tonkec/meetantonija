@@ -112,5 +112,4 @@
 6. favicon
 7. scroll to top
 8. dodat zvuk kad se navigacija otvara
-9. kad bude gotov emoji, zamijenit "a frontend developer 👩‍💻" s tim emojijem
 10. via email u hire me sectionu, dodat tooltip i objasnit zasto ne volim da me se zove
