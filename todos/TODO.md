@@ -3,11 +3,6 @@
 5. not found stranicu bacit neku foru http://localhost:3000/project/8
 6. about this website
 
-#### Project page
-
-17. dodat jos content na project page? What I learned in this project? Why did I choose to work on this project, what was team like, was it scrum or kanban, how did we communicate, small or big team, koja je moja bila uloga? junior, mid, senior?
-18. project slider random fake content
-
 #### Post page
 
 10. posts stranicu malo bolje dizajnirat?

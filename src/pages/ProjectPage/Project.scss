@@ -108,7 +108,11 @@
   }
 }
 
+.steps-container + section {
+  margin-top: 150px;
+  margin-bottom: 0;
+}
+
 .steps-container ~ #tldr {
-  margin-top: 200px;
   margin-bottom: 100px;
 }

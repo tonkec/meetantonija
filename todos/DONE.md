@@ -1,28 +1,29 @@
 ## GOTOVO
+
 3. za cv stranicu umjesto print pdfa? https://tailwindui.com/components/application-ui/data-display/description-lists
 4. kad se na projektu stisne na skill da preusmjeri na stranicu s projektima koji koriste samo taj skill ili da redirekta na cv i izlista projekte s tim skillovima? preko query paramsa. Da li da se isto dogodi i na about stranici kad se stisne na technology, isto i na projekt stranici
-1. cv stranica filter prema tehnologiji
-1. dovrsit zenskicu, stavit umjesto loadera
-1. dodat jos tehnologija na revuto, pimsf, peaks, craftstrom, tint
-1. ubit my two cents
-1. close navigation na escape
-1. istipkavanje mog imena u headeru i svaki title u headeru?
-1. bolje rjesenje za post loader
-1. selection highlighter
-1. loader za weather da bude inline a ne ovako da skace
-1. single post page dizajn i content
-1. dodat link na iduci post
-1. dovrsit self typing text
-1. skakanje footera na post page
-1. disable tab when modal open - ned 21.04
-1. Autofocus input - ned 21.04
-1. posts page dizajn?
-1. funderpro link na funderpro, a ne na mochalabs
-1. skip to tldr ne radi
-1. loading za weather, ovako izgleda glupo
-1. dodat loader na iframe loading?
-1. dodat novi tekst u draggable
-1. steps na revuto dodat jos
+5. cv stranica filter prema tehnologiji
+6. dovrsit zenskicu, stavit umjesto loadera
+7. dodat jos tehnologija na revuto, pimsf, peaks, craftstrom, tint
+8. ubit my two cents
+9. close navigation na escape
+10. istipkavanje mog imena u headeru i svaki title u headeru?
+11. bolje rjesenje za post loader
+12. selection highlighter
+13. loader za weather da bude inline a ne ovako da skace
+14. single post page dizajn i content
+15. dodat link na iduci post
+16. dovrsit self typing text
+17. skakanje footera na post page
+18. disable tab when modal open - ned 21.04
+19. Autofocus input - ned 21.04
+20. posts page dizajn?
+21. funderpro link na funderpro, a ne na mochalabs
+22. skip to tldr ne radi
+23. loading za weather, ovako izgleda glupo
+24. dodat loader na iframe loading?
+25. dodat novi tekst u draggable
+26. steps na revuto dodat jos
 
 - ne mora biti pravi css
 - mozes dodat i typescript nesto s Pick ili Omit
