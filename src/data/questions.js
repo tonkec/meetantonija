@@ -14,7 +14,7 @@ const questions = [
   {
     id: 3,
     title: 'What are your favorite libraries?',
-    info: 'I enjoy working with React and Redux. I also like working with styled-components and SCSS.',
+    info: 'I enjoy working with React and Redux.',
   },
   {
     id: 4,

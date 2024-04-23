@@ -1,45 +1,26 @@
-1. cv stranica, filtrirat prema godini i tehnologiji
-2. CV page save as PDF => https://react-pdf.org/
-3. selection highlighter
-4. animacije na graf na projekt page
-5. not found stranicu bacit neku foru http://localhost:3000/project/8
-6. sta bi se jos moglo istipkavat? (Header na cvu),
-7. footer dizajnirat do kraja
-
-## Mozda
-
-17. bolje rjesenje za post loader!
-18. istipkavanje mog imena u headeru i svaki title u headeru?
-19. animacije na scroll?
-20. toggle dark mode
-
-- forma u cta
-
-15. kad se na projektu stisne na skill da preusmjeri na stranicu s projektima koji koriste samo taj skill ili da redirekta na cv i izlista projekte s tim skillovima?
-
-## Odbijeno
-
-- dodat onaj gore indicator za reading
-- 8. dodat u navigaciju jedan post i jedan projekt? sub 20.04
-
-11. https://giscus.app/
-12. na cv stranici staviti linkove za svaki projekt, mozda buttone koji ce vodit do svakog projekta/firme, :target
-
 ## GOTOVO
 
-7. loader za weather da bude inline a ne ovako da skace
-8. single post page dizajn i content
-9. dodat link na iduci post
-10. dovrsit self typing text
-11. skakanje footera na post page
-12. disable tab when modal open - ned 21.04
-13. Autofocus input - ned 21.04
-14. posts page dizajn?
-15. funderpro link na funderpro, a ne na mochalabs
-16. skip to tldr ne radi
-17. loading za weather, ovako izgleda glupo
-18. dodat loader na iframe loading?
-19. dodat novi tekst u draggable
+19. dodat jos tehnologija na revuto, pimsf, peaks, craftstrom, tint
+
+20. ubit my two cents
+21. close navigation na escape
+22. istipkavanje mog imena u headeru i svaki title u headeru?
+23. bolje rjesenje za post loader
+24. selection highlighter
+25. loader za weather da bude inline a ne ovako da skace
+26. single post page dizajn i content
+27. dodat link na iduci post
+28. dovrsit self typing text
+29. skakanje footera na post page
+30. disable tab when modal open - ned 21.04
+31. Autofocus input - ned 21.04
+32. posts page dizajn?
+33. funderpro link na funderpro, a ne na mochalabs
+34. skip to tldr ne radi
+35. loading za weather, ovako izgleda glupo
+36. dodat loader na iframe loading?
+37. dodat novi tekst u draggable
+38. steps na revuto dodat jos
 
 - ne mora biti pravi css
 - mozes dodat i typescript nesto s Pick ili Omit

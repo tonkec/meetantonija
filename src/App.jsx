@@ -22,7 +22,7 @@ function Layout() {
   useEffect(() => {
     setTimeout(() => {
       setIsOutletLoaded(true)
-    }, 1500)
+    }, 2500)
   }, [location])
 
   useEffect(() => {

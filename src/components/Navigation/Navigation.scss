@@ -1,3 +1,5 @@
+@import './../../styles//mq.scss';
+
 .search-container {
   padding-top: 120px;
   padding-left: 30px;
@@ -33,6 +35,10 @@
     border-radius: 5px;
     border: none;
     font-size: 1.2rem;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   span {
@@ -68,6 +74,46 @@
     &:focus {
       outline: none;
       background-color: var(--color-green);
+    }
+  }
+}
+
+.icons-container {
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 99;
+  button {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-black);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+
+  h6 {
+    display: none;
+    @include breakpoint(lg) {
+      display: block;
+    }
+  }
+
+  .icons {
+    gap: 30px;
+    a {
+      transition: transform 0.3s;
+    }
+
+    a:hover {
+      transform: translateY(-5px);
     }
   }
 }

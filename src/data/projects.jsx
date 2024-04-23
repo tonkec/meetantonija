@@ -11,6 +11,7 @@ const projects = [
         <Dashboard title="Trustworthy" />
       </FakeBrowser>
     ),
+    location: 'Remote',
     company: 'Trustworthy',
     title: 'Trustworthy',
     headline: 'A family operating system',
@@ -56,6 +57,7 @@ const projects = [
         <Graph />
       </FakeBrowser>
     ),
+    location: 'Remote',
     company: 'Casumo',
     title: 'Casumo',
     headline: 'A friendly online casino',
@@ -105,9 +107,10 @@ const projects = [
       </FakeBrowser>
     ),
     company: 'Formunauts',
+    location: 'Remote',
     title: 'Formunauts',
     headline: 'A fund-raising platform that changes lives',
-    skills: 'Angular, Typescript, Rxjs',
+    skills: 'Angular, Typescript, Rxjs, Jest',
     responsibilities: [
       {
         title: 'Mastering Angular',
@@ -151,10 +154,11 @@ const projects = [
         <Dashboard title="Crafstrom" />
       </FakeBrowser>
     ),
+    location: 'Remote',
     company: 'Craftstrom',
     title: 'Craftstrom',
     headline: 'Your at home solar system',
-    skills: 'ReactNative, Typescript',
+    skills: 'ReactNative, Typescript, JavaScript',
     responsibilities: [
       {
         title: 'Designing and Implementing User Interface',
@@ -187,10 +191,11 @@ const projects = [
         <Graph />
       </FakeBrowser>
     ),
+    location: 'Remote',
     company: 'AsyncLabs',
     title: 'Revuto',
     headline: 'Manage your subscriptions',
-    skills: 'React, Redux',
+    skills: 'React, Redux, Axios, JavaScript, TypeScript, SCSS, HTML, CSS',
     responsibilities: [
       {
         title: 'Platform Development for Revuto',
@@ -201,6 +206,16 @@ const projects = [
         title: 'API Integration and Optimization',
         description:
           'Successfully integrated APIs into the Revuto platform, optimizing data flow and communication. Leveraging interceptors, I handled authentication, error handling, and other cross-cutting concerns, enhancing the reliability and security of the application.',
+      },
+      {
+        title: 'Enhancing User Experience',
+        description:
+          'Focused on enhancing user experience through meticulous API integration, React Context utilization, and a keen eye for detail. Implemented features such as subscription management, payment processing, and user authentication to streamline user interactions and improve platform usability.',
+      },
+      {
+        title: 'Data Visualization and Management',
+        description:
+          'Enhanced data visualization and management capabilities of the platform, leveraging React Context and other state management techniques to provide users with real-time insights into their subscriptions, payments, and account details.',
       },
     ],
     conclusion:
@@ -218,10 +233,11 @@ const projects = [
         <Board />
       </FakeBrowser>
     ),
+    location: 'Remote',
     company: 'Code Institute',
     title: 'Code Institute',
     headline: 'A coding bootcamp',
-    skills: 'HTML, CSS, Javascript',
+    skills: 'HTML, CSS, Javascript, Django, Python',
     link: 'https://codeinstitute.net/global/',
     from: 2016,
     to: 2021,
@@ -259,10 +275,11 @@ const projects = [
         <Mountains />
       </FakeBrowser>
     ),
+    location: 'Zagreb',
     company: 'Supersuperstudio',
     title: 'Peaks',
     headline: 'The best landing page',
-    skills: 'HTML, CSS, Javascript',
+    skills: 'HTML, CSS, Javascript, SCSS, jQuery, Bootstrap',
     responsibilities: [
       {
         title: 'Static Website Development',
@@ -300,10 +317,11 @@ const projects = [
         <Dashboard title="Pimsf" />
       </FakeBrowser>
     ),
+    location: 'Zagreb',
     company: 'AsyncLabs',
     title: 'Pimsf',
     headline: "What's with the pipes?",
-    skills: 'Javascript, React, dc, d3',
+    skills: 'Javascript, React, Redux, dc, d3',
     link: 'https://feromihin.hr/services-and-solutions/solutions/pimsf-pipeline-integrity-management-system/',
     responsibilities: [
       {
@@ -334,7 +352,7 @@ const projects = [
     ],
     conclusion:
       "My role in developing the PIMSF app was pivotal in enhancing its functionality and user experience, particularly in the explorer section. By implementing draggable and resizable D3/DC charts and creating a changelog history tree, I contributed to improving data visualization and user interaction. Additionally, ensuring responsiveness and integrating functionality for pipeline approval and deletion further enhanced the usability of the application. My experience with PIMSF allowed me to leverage JavaScript, React, D3, and other technologies to deliver a robust solution that met the project's requirements.",
-    id: 9,
+    id: 8,
     from: 2019,
     to: 2020,
     cvDescription:
@@ -346,12 +364,13 @@ const projects = [
         <Dashboard title="Tint" />
       </FakeBrowser>
     ),
+    location: 'Remote',
     from: 2016,
     to: 2017,
     company: 'Tint',
     title: 'Tint',
     headline: 'Bring your ideas to life',
-    skills: 'Javascript, Scss',
+    skills: 'HTML, CSS, JavaScript, jQuery, Bootstrap',
     link: 'https://www.tintup.com/',
     responsibilities: [
       {
@@ -377,7 +396,7 @@ const projects = [
     ],
     conclusion:
       "My role in developing Tint's homepage and landing page allowed me to contribute to the enhancement of their online presence and user engagement. By delivering pixel-perfect layouts, coding navigation elements, and developing animations and transitions, I played a key role in creating a visually appealing and functional website. Additionally, the collaborative and friendly atmosphere during design sessions fostered creativity and innovation, making the project an enjoyable and rewarding experience.",
-    id: 10,
+    id: 9,
     cvDescription:
       "During my time at Tint, I had the opportunity to work on the homepage and landing page of their product, contributing to the enhancement of their online presence and user engagement. My responsibilities included implementing pixel-perfect layouts, coding global navigation and footer elements, developing animations and transitions, and collaborating with the team to bring creative ideas to life. These efforts played a key role in creating a visually appealing and functional website that showcased Tint's product effectively.",
   },
@@ -387,10 +406,11 @@ const projects = [
         <Graph />
       </FakeBrowser>
     ),
+    location: 'Zagreb',
     from: 2023,
     to: 2024,
     company: 'Mochalabs',
-    id: 11,
+    id: 10,
     title: 'Funder Pro',
     headline: 'Make your trading exceptional',
     skills: 'Javascript, React, Redux, Typescript, React Query',

@@ -16,55 +16,14 @@
   }
 }
 
-.magic-square {
-  position: absolute;
-  z-index: 0;
-}
-
-.icons-container {
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 20px;
-  position: relative;
-  z-index: 99;
-  button {
-    display: inline-block;
-    background-color: transparent;
-    color: var(--color-black);
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    position: relative;
-    z-index: 99;
-    @include breakpoint(lg) {
-      display: none;
-    }
-  }
-
-  h6 {
-    display: none;
-    @include breakpoint(lg) {
-      display: block;
-    }
-  }
-
-  .icons {
-    gap: 30px;
-    a {
-      transition: transform 0.3s;
-    }
-
-    a:hover {
-      transform: translateY(-5px);
-    }
-  }
-}
-
 div[role='tooltip'] {
   z-index: 9999;
 }
 
 code span {
   font-size: 1.2rem;
+}
+
+img {
+  user-select: none;
 }

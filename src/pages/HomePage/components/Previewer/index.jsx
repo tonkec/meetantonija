@@ -6,6 +6,7 @@ import { RiCactusFill } from 'react-icons/ri'
 import { Triangle } from 'react-loader-spinner'
 
 import './Previewer.scss'
+import Emoji from '../../../../components/Emoji'
 
 const Previewer = () => {
   const [iframeUrl, setIframeUrl] = useState(
@@ -74,15 +75,13 @@ const Previewer = () => {
         <div className="preview">
           {isIframeLoading && (
             <div className="loader">
-              <Triangle color="#f2f2f2" height={100} width={100} />
+              <Emoji />
             </div>
           )}
           <Iframe
             url={iframeUrl}
             width="100%"
             height="500"
-            id="myId"
-            className="myClassname"
             display="initial"
             position="relative"
             onLoad={() => {

@@ -13,6 +13,10 @@ const Navigation = ({ isMobileNavigationOpen }) => {
 
   useEffect(() => {
     const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        return setIsNavigationOpen(false)
+      }
+
       if (event.shiftKey && event.key === 'K') {
         // hack that clears the input and ignores just pressed shift + K as an input value
         return isNavigationOpen

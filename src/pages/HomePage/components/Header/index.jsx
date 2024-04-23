@@ -13,13 +13,12 @@ const Header = () => {
             I am <span className="accent">Antonija</span>,
           </h2>
           <h3>
-            a frontend developer 👩‍💻 from{' '}
+            a frontend developer from{' '}
             <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>,
           </h3>
           <TypedText type="p">
-            {' '}
             I enjoy creating beautiful user interfaces from scratch using React,
-            Javascript, Typescript and CSS in all its forms and glory.{' '}
+            Javascript, Typescript and CSS in all its forms and glory.
           </TypedText>
         </div>
         <Image

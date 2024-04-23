@@ -6,7 +6,7 @@ const Image = ({ hasBackground, src, alt }) => {
   const isImageLoading = useImage(src)
 
   if (isImageLoading) {
-    return <Triangle color="#000" height={50} width={50} />
+    return <Triangle color="#fcfcfc" height={50} width={50} />
   }
 
   if (!src) {

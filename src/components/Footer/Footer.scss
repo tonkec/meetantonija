@@ -1,7 +1,26 @@
 footer {
-  padding-bottom: 50px;
+  padding-bottom: 150px;
   padding-top: 100px;
-
   background-color: var(--color-black);
   color: var(--color-white);
+
+  p {
+    font-size: 1rem;
+
+    .icon {
+      vertical-align: middle;
+    }
+  }
+
+  .skewed-top {
+    &::after,
+    .circle {
+      background-color: var(--color-black);
+    }
+  }
+
+  ::selection {
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
 }
