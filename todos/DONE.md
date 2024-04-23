@@ -1,27 +1,28 @@
 ## GOTOVO
+3. za cv stranicu umjesto print pdfa? https://tailwindui.com/components/application-ui/data-display/description-lists
 4. kad se na projektu stisne na skill da preusmjeri na stranicu s projektima koji koriste samo taj skill ili da redirekta na cv i izlista projekte s tim skillovima? preko query paramsa. Da li da se isto dogodi i na about stranici kad se stisne na technology, isto i na projekt stranici
 1. cv stranica filter prema tehnologiji
-5. dovrsit zenskicu, stavit umjesto loadera
-6. dodat jos tehnologija na revuto, pimsf, peaks, craftstrom, tint
-7. ubit my two cents
-8. close navigation na escape
-9. istipkavanje mog imena u headeru i svaki title u headeru?
-10. bolje rjesenje za post loader
-11. selection highlighter
-12. loader za weather da bude inline a ne ovako da skace
-13. single post page dizajn i content
-14. dodat link na iduci post
-15. dovrsit self typing text
-16. skakanje footera na post page
-17. disable tab when modal open - ned 21.04
-18. Autofocus input - ned 21.04
-19. posts page dizajn?
-20. funderpro link na funderpro, a ne na mochalabs
-21. skip to tldr ne radi
-22. loading za weather, ovako izgleda glupo
-23. dodat loader na iframe loading?
-24. dodat novi tekst u draggable
-25. steps na revuto dodat jos
+1. dovrsit zenskicu, stavit umjesto loadera
+1. dodat jos tehnologija na revuto, pimsf, peaks, craftstrom, tint
+1. ubit my two cents
+1. close navigation na escape
+1. istipkavanje mog imena u headeru i svaki title u headeru?
+1. bolje rjesenje za post loader
+1. selection highlighter
+1. loader za weather da bude inline a ne ovako da skace
+1. single post page dizajn i content
+1. dodat link na iduci post
+1. dovrsit self typing text
+1. skakanje footera na post page
+1. disable tab when modal open - ned 21.04
+1. Autofocus input - ned 21.04
+1. posts page dizajn?
+1. funderpro link na funderpro, a ne na mochalabs
+1. skip to tldr ne radi
+1. loading za weather, ovako izgleda glupo
+1. dodat loader na iframe loading?
+1. dodat novi tekst u draggable
+1. steps na revuto dodat jos
 
 - ne mora biti pravi css
 - mozes dodat i typescript nesto s Pick ili Omit

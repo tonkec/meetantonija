@@ -3,9 +3,11 @@ import Me from '../../images/me.jpeg'
 import './Cv.scss'
 import Image from '../../components/Image'
 import TypedText from '../../components/TypedText'
-import Skills from '../../components/Skills'
 import { useSearchParams } from 'react-router-dom'
 import { arrayHasFullString } from '../../utils'
+import CvProject from './CvProject'
+import { Link } from 'react-router-dom'
+import cv from './../../files/cv.pdf'
 
 const CvPage = () => {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -22,7 +24,12 @@ const CvPage = () => {
   return (
     <main className="container cv-container">
       <div className="flex">
-        <TypedText type="h1">Antonija's CV </TypedText>
+        <div>
+          <TypedText type="h1">Antonija's CV </TypedText>
+          <Link to={cv} target="_blank" download className="download">
+            Download CV
+          </Link>
+        </div>
         <Image hasBackground src={Me} alt="Antonija" />
       </div>
 
@@ -31,40 +38,12 @@ const CvPage = () => {
             .filter((project) =>
               arrayHasFullString(project.skills.split(','), skill)
             )
-            .map((project) => (
-              <article key={project.id}>
-                <h3>
-                  {project.title !== project.company
-                    ? `${project.title} at`
-                    : null}{' '}
-                  {project.company}
-                </h3>
-                <p>
-                  {project.from} - {project.to}
-                </p>
-                <p>{project.cvDescription}</p>
-                <Skills skills={project.skills.split(',')} />
-                <a href={`/project/${project.id}`}>Read more</a>
-              </article>
+            .map((project) => <CvProject key={project.id} project={project} />)
+        : Object.entries(groupedByCompany).map(([, projects]) =>
+            projects.map((project) => (
+              <CvProject key={project.id} project={project} />
             ))
-        : Object.entries(groupedByCompany).map(([company, projects]) => (
-            <section key={company}>
-              {projects.map((project) => (
-                <article key={project.id}>
-                  <h3>
-                    {project.title !== company ? `${project.title} at` : null}{' '}
-                    {company}
-                  </h3>
-                  <p>
-                    {project.from} - {project.to}
-                  </p>
-                  <p>{project.cvDescription}</p>
-                  <Skills skills={project.skills.split(',')} />
-                  <a href={`/project/${project.id}`}>Read more</a>
-                </article>
-              ))}
-            </section>
-          ))}
+          )}
     </main>
   )
 }

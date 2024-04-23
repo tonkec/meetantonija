@@ -104,6 +104,7 @@
 22. dodat emojije na headinge u about page
 23. mystory na about da bude zuti? ili odgovori da budu zuti? ovako je preplavo
 24. social media icons nekako drugacije?
+25. hovere na button uskladit, npr hover na skill i link na website nisu isti hover
 
 #### Novi featuri
 
@@ -112,4 +113,4 @@
 6. favicon
 7. scroll to top
 8. dodat zvuk kad se navigacija otvara
-10. via email u hire me sectionu, dodat tooltip i objasnit zasto ne volim da me se zove
+9. via email u hire me sectionu, dodat tooltip i objasnit zasto ne volim da me se zove

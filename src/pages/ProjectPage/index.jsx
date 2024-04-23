@@ -45,7 +45,7 @@ const ProjectPage = () => {
         <div className="flex container">
           <div>
             <h3>Technologies 🚀</h3>
-           <Skills skills={project.skills.split(',')} />
+            <Skills skills={project.skills.split(',')} />
           </div>
 
           <div>
