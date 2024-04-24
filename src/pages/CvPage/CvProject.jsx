@@ -10,7 +10,7 @@ const CvProject = ({ project }) => {
       <p>
         {project.from} - {project.to}
       </p>
-      <p>{project.cvDescription}</p>
+      <p>{project.description}</p>
       <Skills skills={project.skills.split(',')} />
       <a href={`/project/${project.id}`}>Read more</a>
     </article>

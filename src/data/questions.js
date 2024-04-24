@@ -89,7 +89,7 @@ const questions = [
   {
     id: 18,
     title: 'Can you give me an example of a project you have worked on?',
-    info: 'Sure, you can see an example of a project I have worked on /projects page.',
+    info: 'Sure, you can see an example of a project I have worked in I work with clients section.',
   },
 ]
 

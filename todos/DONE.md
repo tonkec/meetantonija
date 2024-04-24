@@ -1,29 +1,34 @@
 ## GOTOVO
-
-3. za cv stranicu umjesto print pdfa? https://tailwindui.com/components/application-ui/data-display/description-lists
-4. kad se na projektu stisne na skill da preusmjeri na stranicu s projektima koji koriste samo taj skill ili da redirekta na cv i izlista projekte s tim skillovima? preko query paramsa. Da li da se isto dogodi i na about stranici kad se stisne na technology, isto i na projekt stranici
-5. cv stranica filter prema tehnologiji
-6. dovrsit zenskicu, stavit umjesto loadera
-7. dodat jos tehnologija na revuto, pimsf, peaks, craftstrom, tint
-8. ubit my two cents
-9. close navigation na escape
-10. istipkavanje mog imena u headeru i svaki title u headeru?
-11. bolje rjesenje za post loader
-12. selection highlighter
-13. loader za weather da bude inline a ne ovako da skace
-14. single post page dizajn i content
-15. dodat link na iduci post
-16. dovrsit self typing text
-17. skakanje footera na post page
-18. disable tab when modal open - ned 21.04
-19. Autofocus input - ned 21.04
-20. posts page dizajn?
-21. funderpro link na funderpro, a ne na mochalabs
-22. skip to tldr ne radi
-23. loading za weather, ovako izgleda glupo
-24. dodat loader na iframe loading?
-25. dodat novi tekst u draggable
-26. steps na revuto dodat jos
+15. my story malo produzit, kad sam pocela s reactom, zasto sam pocela, koje ja to blogove pratim, kako ucim? produzit i what do I do in my free time. Napravit nekako zabavnije, stavit sliku mene bubnjevi, bajk? dodat nesto o mojoj osobnosti, sta volim, sta ne volim, koje domene volim, koje ne volim. pogledaj onaj stari cover letter
+10. footer skewed top na cv stranici i circle
+11. footer dizajnirat do kraja, dodat kockice u bg kao u headeru?
+12. sta bi se jos moglo istipkavat? (Header na cvu),
+13. zamijenit copyright i coded with love
+14. What I learned in this project? Why did I choose to work on this project, what was team like, was it scrum or kanban, how did we communicate, small or big team, koja je moja bila uloga? junior, mid, senior?
+15. za cv stranicu umjesto print pdfa? https://tailwindui.com/components/application-ui/data-display/description-lists
+16. kad se na projektu stisne na skill da preusmjeri na stranicu s projektima koji koriste samo taj skill ili da redirekta na cv i izlista projekte s tim skillovima? preko query paramsa. Da li da se isto dogodi i na about stranici kad se stisne na technology, isto i na projekt stranici
+17. cv stranica filter prema tehnologiji
+18. dovrsit zenskicu, stavit umjesto loadera
+19. dodat jos tehnologija na revuto, pimsf, peaks, craftstrom, tint
+20. ubit my two cents
+21. close navigation na escape
+22. istipkavanje mog imena u headeru i svaki title u headeru?
+23. bolje rjesenje za post loader
+24. selection highlighter
+25. loader za weather da bude inline a ne ovako da skace
+26. single post page dizajn i content
+27. dodat link na iduci post
+28. dovrsit self typing text
+29. skakanje footera na post page
+30. disable tab when modal open - ned 21.04
+31. Autofocus input - ned 21.04
+32. posts page dizajn?
+33. funderpro link na funderpro, a ne na mochalabs
+34. skip to tldr ne radi
+35. loading za weather, ovako izgleda glupo
+36. dodat loader na iframe loading?
+37. dodat novi tekst u draggable
+38. steps na revuto dodat jos
 
 - ne mora biti pravi css
 - mozes dodat i typescript nesto s Pick ili Omit

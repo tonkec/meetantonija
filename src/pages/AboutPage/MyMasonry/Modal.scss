@@ -1,0 +1,21 @@
+.modal {
+  padding: 20px;
+  outline: none;
+  max-width: 80%;
+    margin: 0 auto;
+  .content {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+
+  p {
+   text-align: center;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+}
+}

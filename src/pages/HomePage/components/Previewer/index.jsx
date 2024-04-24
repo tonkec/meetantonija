@@ -75,7 +75,7 @@ const Previewer = () => {
         <div className="preview">
           {isIframeLoading && (
             <div className="loader">
-              <Emoji />
+              <Triangle color="#f8f9fa" height={100} width={100} />
             </div>
           )}
           <Iframe

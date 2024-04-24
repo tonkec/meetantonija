@@ -48,7 +48,7 @@ const projects = [
     id: 1,
     from: 2023,
     to: 2023,
-    cvDescription:
+    description:
       "As a Senior React Developer at Trustworthy Company, I played a pivotal role in the development and maintenance of critical software applications, contributing to the company's mission of providing reliable and secure solutions to its clients. My responsibilities included providing leadership and mentorship to junior developers, collaborating with cross-functional teams, leading discussions on best practices and code standards, delivering high-quality code, resolving complex technical challenges, and contributing to the successful delivery of projects.",
     position: 'Senior React Developer',
     team: 10,
@@ -108,7 +108,7 @@ const projects = [
       'I learned how to work with a large codebase and how to migrate from Knockout.js to React. I also learned how to work with external services like Contentful, Wordpress, Keycloak, and Jenkins. I even had to read some Java code, but I did not go deep into it.',
     conclusion:
       "My experience at Casumo as a Senior React Developer was characterized by a relentless pursuit of excellence and innovation in the gaming industry. I am proud to have contributed to Casumo's mission of providing an immersive and entertaining gaming experience to players worldwide, and I am grateful for the opportunity to have been part of such a dynamic and forward-thinking team.",
-    cvDescription:
+    description:
       "A significant portion of my role involved a major migration project, transitioning the existing codebase from Knockout.js to React. This initiative aimed to harness the power of React's component-based architecture, fostering a more maintainable, modular, and efficient codebase",
     collaboration: 'Google Meet, Gitlab, Slack, Jira, Confluence',
   },
@@ -154,7 +154,7 @@ const projects = [
       'My experience at Formunauts as an Angular developer showcased my ability to swiftly learn and apply new technologies, design intricate communication architectures, and collaborate effectively with the team. From mastering Angular, Typescript, and RxJS to ensuring seamless API interactions and conducting comprehensive testing, I made significant contributions to enhancing the functionality and performance of the platform.',
     link: 'https://app.formunauts.com/auth/login',
     id: 3,
-    cvDescription:
+    description:
       "During my time at Formunauts, I had the fantastic opportunity to dive into Angular development for the company's platform. My primary role centered around architecting a robust communication framework between the Angular-based user interface and the Raisenow API, which shares similarities with Stripe.",
     from: 2019,
     to: 2020,
@@ -205,7 +205,7 @@ const projects = [
     position: 'Mid React Native Developer',
     learned:
       "I learned how to design and implement user interfaces using React Native, handle user authentication and authorization, and utilize AsyncStorage for data management. This experience allowed me to apply my skills in JavaScript and React Native to a real-world application, contributing to the app's functionality and user experience. I had to solve many responsive design issues",
-    cvDescription:
+    description:
       "I developed the user interface of the Craftstrom mobile app using React Native, ensuring a seamless and visually appealing experience for users. My responsibilities included handling user authentication and authorization, orchestrating Ajax calls to communicate with the backend API, and utilizing AsyncStorage to securely store and manage user tokens. This experience allowed me to apply my skills in JavaScript and React Native to a real-world application, contributing to the app's functionality and user experience.",
   },
   {
@@ -253,7 +253,7 @@ const projects = [
     position: 'Mid React Developer',
     learned:
       'I learned how to work as a single developer and to rely solely on myself, my skills and knowledge. At first, it was challenging, but as I developed stable and scalable architecture, I learned to trust myself as a developer.',
-    cvDescription:
+    description:
       "Revuto was a platform that allowed users to manage their subscriptions efficiently. As the sole developer for Revuto, I played a pivotal role in the platform's evolution, employing technologies such as Axios, interceptors, and React Context to efficiently manage API requests and responses. My responsibilities included integrating APIs into the platform, optimizing data flow and communication, and enhancing the reliability and security of the application. This experience allowed me to hone my skills in API integration and data management, contributing to the platform's success.",
   },
   {
@@ -300,7 +300,7 @@ const projects = [
     id: 6,
     learned:
       'Scss was core part of the project, so I learned how to use it efficiently, especially when it comes to mixins and functions in scss. It was long before CSS variables were introduced, so I had to rely on scss variables.',
-    cvDescription:
+    description:
       "I was product developer, mentor and front end developer. I was responsible for enhancing the functionality and user experience of Code Institute's Learning Management System (LMS) based on Django. My responsibilities included integrating various new components into the existing LMS, coding the interface of every course module, and optimizing the codebase to enhance performance. This experience allowed me to hone my front-end development skills and collaborate with a talented designer to create a sophisticated and user-centric platform.",
   },
   {
@@ -348,7 +348,7 @@ const projects = [
     learned:
       "This was my first job in web development so naturally I learned a lot: I customized jQuery libraries and Bootstrap framework. I read Bootstrap's original code which shaped me into a strong css developer.",
     position: 'Junior Frontend Developer',
-    cvDescription:
+    description:
       'I was super excited to work on the Peaks project at Supersuperstudio, where I was responsible for creating impactful online interfaces that aligned with the provided design concepts. My responsibilities included translating static design visuals into fully functional user interfaces using HTML, SCSS, and JavaScript. By incorporating JavaScript to enhance interactivity and functionality, I was able to create dynamic elements, implement animations, and facilitate user engagement. This experience allowed me to merge design aesthetics with technical proficiency, contributing to the digital presence of various brands.',
   },
   {
@@ -401,7 +401,7 @@ const projects = [
     learned:
       'Using data visualization library was not easy at first, but as I got more familiar with it, I learned how to use it efficiently, I learned how to use Mermaid.js to create a changelog history tree.',
     position: 'Mid React Developer',
-    cvDescription:
+    description:
       'During my time at AsyncLabs, I had the opportunity to work on the PIMSF app, focusing on the explorer section. My responsibilities included implementing D3/DC charts, creating a changelog history tree, ensuring responsiveness of the grid layout, and developing functionality for pipeline approval and deletion. These efforts played a key role in enhancing the functionality and user experience of the application, showcasing my ability to leverage JavaScript, React, D3, and other technologies to deliver impactful solutions.',
   },
   {
@@ -449,7 +449,7 @@ const projects = [
     position: 'Junior Frontend Developer',
     learned:
       'In this job I learned how to use many of the CSS3 properties like transform and transitions. I also learned how to use jQuery to create animations and transitions.',
-    cvDescription:
+    description:
       "During my time at Tint, I had the opportunity to work on the homepage and landing page of their product, contributing to the enhancement of their online presence and user engagement. My responsibilities included implementing pixel-perfect layouts, coding global navigation and footer elements, developing animations and transitions, and collaborating with the team to bring creative ideas to life. These efforts played a key role in creating a visually appealing and functional website that showcased Tint's product effectively.",
   },
   {
@@ -498,7 +498,7 @@ const projects = [
     team: 100,
     conclusion:
       'My role in enhancing the Funder Pro trading platform has been pivotal in elevating its performance, reliability, and user satisfaction. By implementing dynamic and responsive user interfaces with React, ensuring type safety and cleaner code with TypeScript, and optimizing data fetching and state management with React Query, I have contributed to delivering a seamless trading experience for our users. These contributions have played a key role in driving innovation and establishing Funder Pro as a leading platform in the trading industry.',
-    cvDescription:
+    description:
       'During my time at Mochalabs, I had the opportunity to work on the Funder Pro trading platform, where I played a key role in enhancing its performance and user experience. My responsibilities included implementing dynamic and responsive user interfaces, utilizing TypeScript for type safety, and integrating React Query for efficient data fetching and state management. These efforts contributed to delivering a best-in-class trading experience to users and driving innovation within the platform.',
   },
 ]

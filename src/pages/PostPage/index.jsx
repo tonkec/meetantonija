@@ -36,7 +36,7 @@ const PostPage = () => {
   if (isLoading) {
     return (
       <div className="post-loader">
-        <h2>Fetching post data just for you...</h2>
+        <h2>Fetching post data from markdown files...</h2>
       </div>
     )
   }

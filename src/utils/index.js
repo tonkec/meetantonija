@@ -59,3 +59,7 @@ export const arrayHasFullString = (array, string) => {
       removeSpacesAndDashesFromString(string)
   )
 }
+
+export const pickRandomItemFromArray = (array) => {
+  return array[Math.floor(Math.random() * array.length)]
+}

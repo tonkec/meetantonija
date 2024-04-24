@@ -2,6 +2,7 @@
 
 21. forma u cta
 22. animacije na scroll?
+23. project slider random fake content
 
 - dodat onaj gore indicator za reading
 - 8. dodat u navigaciju jedan post i jedan projekt? sub 20.04

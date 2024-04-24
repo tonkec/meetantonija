@@ -8,7 +8,11 @@ import Temperature from '../../components/Temperature'
 import Me from '../../images/me.jpeg'
 import { Tooltip } from 'react-tooltip'
 import useTemperature from '../../hooks/useTemperature'
-import { getValuesAndProperties } from '../../utils'
+import { getValuesAndProperties, pickRandomItemFromArray } from '../../utils'
+import { images } from './images'
+import MyMasonry from './MyMasonry'
+
+const randomImage = pickRandomItemFromArray(images)
 
 const AboutPage = () => {
   const temperatureData = useTemperature()
@@ -150,30 +154,46 @@ const AboutPage = () => {
         <section className="bg-blue">
           <div className="container">
             <h2>My story</h2>
+
             <p>
-              I started coding because I wanted a change in my career, I wanted
-              to have a bright future and be competitive in the market.
-              Initially, I had been learning Ruby on Rails when I tried CSS and
-              Javascript, and instantly fell in love with those languages. I
-              could immediately see the result of my coding. It was back in 2013
-              and I was super active user on Codecademy, the online learning
-              platform for coding.
+              In 2013, I found myself in the depths of depression, yearning for
+              change and renewal. It was during this challenging time that I
+              stumbled upon coding as a beacon of hope. Initially, I immersed
+              myself in the world of Ruby on Rails, seeking to unlock its
+              secrets and find a sense of purpose. However, the journey proved
+              to be daunting, and I struggled to find my footing in its
+              intricate landscape. Determined to persevere, I decided to pivot
+              towards front-end development, driven by my affinity for visual
+              expression. With HTML, CSS, and jQuery as my tools, I embarked on
+              a journey of creativity and discovery. As I crafted digital
+              masterpieces with transitions and animations, I felt a sense of
+              exhilaration and joy wash over me, as if I had finally found my
+              true calling.
             </p>
 
             <p>
-              I do not have a diploma in the software development, but I think I
-              can make up for it with my expreience. I am up to date with all
-              the latest technologies and I follow several blogs and youtubers
-              to see the latest shiny thing in front-end development.
+              By 2018, my coding journey took a significant turn as I
+              encountered React. Its simplicity and elegant syntax resonated
+              deeply with me, and I was captivated by its ability to streamline
+              the development process. With React, I found myself embracing a
+              new paradigm of building user interfaces, one that prioritized
+              clarity and efficiency.
             </p>
 
-            <h2>What do I do in freetime?</h2>
             <p>
-              I drum in the drumming collective where we fight for human and
-              animal rights. I read, mostly fiction and comic books. I play
-              basketball, go to the gym and ride bicycle.
+              Through coding, I not only found solace in the midst of turmoil
+              but also discovered a newfound passion that ignited my spirit. It
+              was a journey marked by challenges and triumphs, darkness and
+              light. Yet, through it all, coding remained a constant source of
+              inspiration and transformation, turning despair into creativity
+              and hope.
             </p>
           </div>
+        </section>
+
+        <section className="bg-white container has-padding">
+          <h2>My free time looks something like this </h2>
+          <MyMasonry images={images} />
         </section>
 
         <section className="search-section">

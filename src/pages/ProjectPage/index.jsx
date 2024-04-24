@@ -94,7 +94,7 @@ const ProjectPage = () => {
 
         <div className="elevated">
           <h2>Description</h2>
-          <p>{project.cvDescription}</p>
+          <p>{project.description}</p>
         </div>
       </section>
 
