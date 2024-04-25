@@ -98,6 +98,12 @@
     color: var(--color-white);
     display: flex;
     align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color-green);
+      color: var(--color-white);
+    }
 
     .icon {
       font-size: 4rem;
@@ -122,5 +128,4 @@
       color: var(--color-white);
     }
   }
- 
 }

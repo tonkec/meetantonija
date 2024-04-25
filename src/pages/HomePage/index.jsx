@@ -55,7 +55,6 @@ const HomePage = () => {
         />
         <Aside numberOfPosts={2} />
         <Videos />
-       
 
         <HireMe />
       </main>

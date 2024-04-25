@@ -26,7 +26,7 @@ const Aside = ({ numberOfPosts }) => {
           Read more
         </button>
       </aside>
-     
+
       <div className="container">
         <h2>👌 I write about technologies I like.</h2>
 

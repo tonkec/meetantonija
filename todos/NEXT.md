@@ -1,7 +1,9 @@
 #### 26.04
+
 17. klik na tehnologiju vodi do cv stranice? about page
 
 #### Bugs/improvements
+
 47. zasto nakon klika na tldr navigacija skrolla to the top 26.04
 48. ne rade tipke gore dolje u navigaciji 26.04
 49. istipkavanje ne radi kad se navigira s jedne stranice na drugu 27.04

@@ -1,36 +1,37 @@
 ## GOTOVO
+
 18. about section ima search u sebi koji u sebi ima opet section
 19. about.scss zasto svi nth childovi imaju istu color
-15. my story malo produzit, kad sam pocela s reactom, zasto sam pocela, koje ja to blogove pratim, kako ucim? produzit i what do I do in my free time. Napravit nekako zabavnije, stavit sliku mene bubnjevi, bajk? dodat nesto o mojoj osobnosti, sta volim, sta ne volim, koje domene volim, koje ne volim. pogledaj onaj stari cover letter
-16. footer skewed top na cv stranici i circle
-17. footer dizajnirat do kraja, dodat kockice u bg kao u headeru?
-18. sta bi se jos moglo istipkavat? (Header na cvu),
-19. zamijenit copyright i coded with love
-20. What I learned in this project? Why did I choose to work on this project, what was team like, was it scrum or kanban, how did we communicate, small or big team, koja je moja bila uloga? junior, mid, senior?
-21. za cv stranicu umjesto print pdfa? https://tailwindui.com/components/application-ui/data-display/description-lists
-22. kad se na projektu stisne na skill da preusmjeri na stranicu s projektima koji koriste samo taj skill ili da redirekta na cv i izlista projekte s tim skillovima? preko query paramsa. Da li da se isto dogodi i na about stranici kad se stisne na technology, isto i na projekt stranici
-23. cv stranica filter prema tehnologiji
-24. dovrsit zenskicu, stavit umjesto loadera
-25. dodat jos tehnologija na revuto, pimsf, peaks, craftstrom, tint
-26. ubit my two cents
-27. close navigation na escape
-28. istipkavanje mog imena u headeru i svaki title u headeru?
-29. bolje rjesenje za post loader
-30. selection highlighter
-31. loader za weather da bude inline a ne ovako da skace
-32. single post page dizajn i content
-33. dodat link na iduci post
-34. dovrsit self typing text
-35. skakanje footera na post page
-36. disable tab when modal open - ned 21.04
-37. Autofocus input - ned 21.04
-38. posts page dizajn?
-39. funderpro link na funderpro, a ne na mochalabs
-40. skip to tldr ne radi
-41. loading za weather, ovako izgleda glupo
-42. dodat loader na iframe loading?
-43. dodat novi tekst u draggable
-44. steps na revuto dodat jos
+20. my story malo produzit, kad sam pocela s reactom, zasto sam pocela, koje ja to blogove pratim, kako ucim? produzit i what do I do in my free time. Napravit nekako zabavnije, stavit sliku mene bubnjevi, bajk? dodat nesto o mojoj osobnosti, sta volim, sta ne volim, koje domene volim, koje ne volim. pogledaj onaj stari cover letter
+21. footer skewed top na cv stranici i circle
+22. footer dizajnirat do kraja, dodat kockice u bg kao u headeru?
+23. sta bi se jos moglo istipkavat? (Header na cvu),
+24. zamijenit copyright i coded with love
+25. What I learned in this project? Why did I choose to work on this project, what was team like, was it scrum or kanban, how did we communicate, small or big team, koja je moja bila uloga? junior, mid, senior?
+26. za cv stranicu umjesto print pdfa? https://tailwindui.com/components/application-ui/data-display/description-lists
+27. kad se na projektu stisne na skill da preusmjeri na stranicu s projektima koji koriste samo taj skill ili da redirekta na cv i izlista projekte s tim skillovima? preko query paramsa. Da li da se isto dogodi i na about stranici kad se stisne na technology, isto i na projekt stranici
+28. cv stranica filter prema tehnologiji
+29. dovrsit zenskicu, stavit umjesto loadera
+30. dodat jos tehnologija na revuto, pimsf, peaks, craftstrom, tint
+31. ubit my two cents
+32. close navigation na escape
+33. istipkavanje mog imena u headeru i svaki title u headeru?
+34. bolje rjesenje za post loader
+35. selection highlighter
+36. loader za weather da bude inline a ne ovako da skace
+37. single post page dizajn i content
+38. dodat link na iduci post
+39. dovrsit self typing text
+40. skakanje footera na post page
+41. disable tab when modal open - ned 21.04
+42. Autofocus input - ned 21.04
+43. posts page dizajn?
+44. funderpro link na funderpro, a ne na mochalabs
+45. skip to tldr ne radi
+46. loading za weather, ovako izgleda glupo
+47. dodat loader na iframe loading?
+48. dodat novi tekst u draggable
+49. steps na revuto dodat jos
 
 - ne mora biti pravi css
 - mozes dodat i typescript nesto s Pick ili Omit

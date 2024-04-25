@@ -1,9 +1,11 @@
-#### Dizajn
-2. testimonial section na homepage?
-1. dizajnirat hire me section. ili da ima gradient ko border ili da ispada iz nekog sectiona
+#### Dizajn?
+
 16. di sam sve pricala dizajnirat do kraja
+17. hompage malo izmijenit
+18. plejsat hire me section
 
 #### Responsive issues
+
 20. aside na homepage nije skroz responsive cca 700px - 900px
 21. padding na mystory about page na malim ekranima i za odgovor na pitanje isto padding
 22. peaks se ne vidi na malim ekranima na homepage na projektima

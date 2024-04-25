@@ -8,51 +8,63 @@ import Temperature from '../../components/Temperature'
 import Me from '../../images/me.jpeg'
 import { Tooltip } from 'react-tooltip'
 import useTemperature from '../../hooks/useTemperature'
-import { getValuesAndProperties } from '../../utils'
+import { getValuesAndProperties,removeSpacesAndDashesFromString } from '../../utils'
 import { images } from './images'
 import MyMasonry from './MyMasonry'
+import { useNavigate } from 'react-router-dom'
 
 const speakingEvents = [
   {
     name: 'CSS tricks',
     year: 2020,
-    link: "https://www.meetup.com/s_css_zagreb/events/266253881/",
-    organizer: "CSS Zagreb"
+    link: 'https://www.meetup.com/s_css_zagreb/events/266253881/',
+    organizer: 'CSS Zagreb',
   },
   {
-    name: "CSS animations",
+    name: 'CSS animations',
     year: 2020,
-    link: "https://www.meetup.com/s_css_zagreb/events/265312074/",
-    organizer: "CSS Zagreb"
+    link: 'https://www.meetup.com/s_css_zagreb/events/265312074/',
+    organizer: 'CSS Zagreb',
   },
   {
-    name: "Free intro to the web development",
+    name: 'Free intro to the web development',
     year: 2024,
-    link: "https://www.meetup.com/kodiraonica/events/298986803/",
-    organizer: "Kodiraonica"
+    link: 'https://www.meetup.com/kodiraonica/events/298986803/',
+    organizer: 'Kodiraonica',
   },
   {
-    name: "Intersection observers and how to use them",
+    name: 'Intersection observers and how to use them',
     year: 2023,
-    link: "https://www.meetup.com/javascript-zagreb/events/297302963/",
-    organizer: "JavaScript Zagreb"
+    link: 'https://www.meetup.com/javascript-zagreb/events/297302963/',
+    organizer: 'JavaScript Zagreb',
   },
   {
-    name: "Mentoring for beginners",
+    name: 'Mentoring for beginners',
     year: 2023,
-    link: "https://devshegoes.five.agency/",
-    organizer: "DevSheGoes"
+    link: 'https://devshegoes.five.agency/',
+    organizer: 'DevSheGoes',
   },
   {
-    name: "How to code a pure css keyboard",
+    name: 'How to code a pure css keyboard',
     year: 2020,
-    link: "https://www.meetup.com/css-in-vienna/events/267266901/",
-    organizer: "CSS in Vienna"
-  }
+    link: 'https://www.meetup.com/css-in-vienna/events/267266901/',
+    organizer: 'CSS in Vienna',
+  },
 ]
 
+const technologies = [
+  { technology: 'HTML', years: 10, icon: FaHtml5 },
+  { technology: 'CSS', years: 10, icon: FaCss3 },
+  { technology: 'JavaScript', years: 8, icon: FaJs },
+  { technology: 'TypeScript', years: 3, icon: SiTypescript },
+  { technology: 'React', years: 4, icon: SiReact },
+  { technology: 'Redux', years: 4, icon: SiRedux },
+  { technology: 'Angular', years: 1, icon: SiAngular },
+  { technology: 'React Native', years: 1, icon: SiReact },
+]
 
 const AboutPage = () => {
+  const navigate = useNavigate();
   const temperatureData = useTemperature()
   const { values, properties } = getValuesAndProperties(temperatureData)
   return (
@@ -122,73 +134,19 @@ const AboutPage = () => {
 
             <h2>Technologies I am familiar with</h2>
             <ul className="technologies">
-              <li>
-                <span>
-                  <FaHtml5 className="icon" />
-                </span>
-                <span>
-                  HTML <br />
-                  10 years
-                </span>
-              </li>
-              <li>
-                <span>
-                  <FaCss3 className="icon" />
-                </span>
-                <span>
-                  CSS <br />
-                  10 years
-                </span>
-              </li>
-              <li>
-                <span>
-                  <FaJs className="icon" />
-                </span>
-                <span>
-                  JavaScript <br />8 years
-                </span>
-              </li>
-              <li>
-                <span>
-                  <SiTypescript className="icon" />
-                </span>
-                <span>
-                  TypeScript <br />3 years
-                </span>
-              </li>
-              <li>
-                <span>
-                  <SiReact className="icon" />
-                </span>
-                <span>
-                  React <br />4 years
-                </span>
-              </li>
-              <li>
-                <span>
-                  <SiRedux className="icon" />
-                </span>
-                <span>
-                  Redux <br />4 years
-                </span>
-              </li>
-
-              <li>
-                <span>
-                  <SiAngular className="icon" />
-                </span>
-                <span>
-                  Angular <br />1 year
-                </span>
-              </li>
-              <li>
-                <span>
-                  <SiReact className="icon" />
-                </span>
-                <span>
-                  React Native <br />1 year
-                </span>
-              </li>
+              {technologies.map((tech, index) => (
+                <li key={index} onClick={() => {
+                  navigate(`/cv?skill=${removeSpacesAndDashesFromString(tech.technology)}`)
+                }}>
+                  <span>
+                    <tech.icon className="icon" />
+                  </span>
+                  <span>
+                    {tech.technology} <br />
+                    {tech.years} years
+                  </span>
+                </li>
+              ))}
             </ul>
           </div>
         </section>
@@ -236,13 +194,13 @@ const AboutPage = () => {
             <ul className="speaking-events">
               {speakingEvents.map((event, index) => (
                 <li key={index}>
-                   <a
-                      href={event.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {event.name}
-                    </a>
+                  <a
+                    href={event.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {event.name}
+                  </a>
                   <p>{event.organizer}</p>
                   <p>{event.year}</p>
                 </li>
@@ -259,7 +217,6 @@ const AboutPage = () => {
         </section>
 
         <HireMe />
-
       </main>
     </>
   )
