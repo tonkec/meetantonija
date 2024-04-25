@@ -1,8 +1,10 @@
 #### Dizajn?
-
 16. di sam sve pricala dizajnirat do kraja
 17. hompage malo izmijenit
 18. plejsat hire me section
+16. mystory na about da bude zuti? ili odgovori da budu zuti? ovako je preplavo
+17. containeri na about page, odzumiraj pa vidi
+10. posts stranicu malo bolje dizajnirat?
 
 #### Responsive issues
 20. aside na homepage nije skroz responsive cca 700px - 900px
@@ -10,22 +12,23 @@
 
 #### Bugs/improvements
 15. pokazat jos pitanja u Is there anything else you would like to know?
-16. mystory na about da bude zuti? ili odgovori da budu zuti? ovako je preplavo
-17. containeri na about page, odzumiraj pa vidi
 18. na cvu kad se stisne na tehnologiju ne bi se trebao pokazat loader, page transition
-19. layout shifting za tpyed text
+19. layout shifting za typed text
 
-#### Novi featuri
+#### Post page
 
-4. animacije na graf na projekt page => 27 i 28.04
-5. cursor dodat neki fensi, mozda? https://github.com/tholman/cursor-effects
-6. favicon
-7. dodat zvuk kad se navigacija otvara
+11. https://www.npmjs.com/package/reading-time ?
+12. tagovi za postove
+13. iduci post => pogledaj ovdje https://preview.themeforest.net/item/zento-modern-lightweight-blog-for-wordpress/full_screen_preview/51579969,
 
-#### Nove stranice
+- maknut trenutni layout za iduci post
+- dodat malo vise detalja o iducem postu
+- mozda dodat arrowe lijevo i desno na postu za iduci kao plus 1 u ruti
 
-5. not found stranicu bacit neku foru http://localhost:3000/project/8
-6. about this website
+40. dodat ipak giscuss?
+41. share this article
+42. quote sentence
+43. code formatting http://localhost:3000/post/2 zasto je uvuceno
 
 #### About this page
 
@@ -55,21 +58,7 @@
 - sta je ostalo u todo
 - pokazat stare verzije stranice?
 
-#### Post page
 
-10. posts stranicu malo bolje dizajnirat?
-11. https://www.npmjs.com/package/reading-time ?
-12. tagovi za postove
-13. iduci post => pogledaj ovdje https://preview.themeforest.net/item/zento-modern-lightweight-blog-for-wordpress/full_screen_preview/51579969,
-
-- maknut trenutni layout za iduci post
-- dodat malo vise detalja o iducem postu
-- mozda dodat arrowe lijevo i desno na postu za iduci kao plus 1 u ruti
-
-40. dodat ipak giscuss?
-41. share this article
-42. quote sentence
-43. code formatting http://localhost:3000/post/2 zasto je uvuceno
 
 #### Code refactor
 
@@ -94,3 +83,15 @@
 #### README.md
 
 - redirect na about this page
+
+#### Novi featuri
+
+4. animacije na graf na projekt page => 27 i 28.04
+5. cursor dodat neki fensi, mozda? https://github.com/tholman/cursor-effects
+6. favicon
+7. dodat zvuk kad se navigacija otvara
+
+#### Nove stranice
+
+5. not found stranicu bacit neku foru http://localhost:3000/project/8
+6. about this website

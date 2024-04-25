@@ -9,4 +9,4 @@
 - social media icons
 
 46. za search bar https://react.dev => dodat samo search icon, i ove tipkice dolje i da se searchaju i postovi i projekti, pogledaj kod sean halpin kad stisnes / sta se dogodi 28.04
-47. ako neko napise neku tehnologiju, izlistat sve projekte s tom tehnologijom i njihove rute? 28.04
+47. ako neko napise neku tehnologiju, izlistat sve projekte s tom tehnologijom i njihove rute? 28.04 => to bi trebalo po tagovima tj skillovima
