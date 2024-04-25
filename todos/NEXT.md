@@ -3,7 +3,6 @@
 55. social iconse extractat u komponentu 29.04
     - stavit listu arrayja s linkom i ikonom
 1. What did I learn in this project? strgan layout
-8. via email u hire me sectionu, dodat tooltip i objasnit zasto ne volim da me se zove
 
 #### Navigacija
 

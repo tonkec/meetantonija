@@ -1,4 +1,5 @@
 ## GOTOVO
+8. via email u hire me sectionu, dodat tooltip i objasnit zasto ne volim da me se zove
 51. dodat emojije na headinge u about page 27.04
 22. peaks se ne vidi na malim ekranima na homepage na projektima
 52. header na homepageu nije skroz responsive, 400px sirine slika ide preko teksta 27.04
