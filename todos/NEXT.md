@@ -1,13 +1,14 @@
 #### Bugs/improvements
 48. ne rade tipke gore dolje u navigaciji 26.04
 49. istipkavanje ne radi kad se navigira s jedne stranice na drugu 27.04
-50. dodat klijenta (company vs title) i location 27.04
 51. dodat emojije na headinge u about page 27.04
 52. header na homepageu nije skroz responsive, 400px sirine slika ide preko teksta 27.04
 53. da li kodiram 10 ili 11 godina 29.04
 54. da li headingsi na homepageu trebaju imat tocku 29.04
 55. social iconse extractat u komponentu 29.04
     - stavit listu arrayja s linkom i ikonom
+1. What did I learn in this project? strgan layout
+
 
 #### Navigacija
 

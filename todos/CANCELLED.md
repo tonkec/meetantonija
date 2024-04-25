@@ -1,9 +1,8 @@
 ## Odbijeno
-
 21. forma u cta
 22. animacije na scroll?
 23. project slider random fake content
-
+50. dodat klijenta (company vs title) i location 27.04
 - dodat onaj gore indicator za reading
 - 8. dodat u navigaciju jedan post i jedan projekt? sub 20.04
 
