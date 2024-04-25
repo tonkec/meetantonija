@@ -159,7 +159,7 @@ section {
 
   aside {
     position: absolute;
-    background-color: var(--color-green);
+    background-color: var(--color-black);
     top: 0;
     right: 0;
     bottom: 0;
@@ -170,6 +170,7 @@ section {
     transition: transform 0.3s;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    color: var(--color-white);
 
     &.show {
       transform: translateX(0);
@@ -186,7 +187,7 @@ section {
     }
 
     button {
-      background-color: var(--color-black);
+      background-color: var(--color-yellow);
       border: none;
       padding: 10px 20px;
       cursor: pointer;

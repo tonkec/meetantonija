@@ -1,9 +1,9 @@
-#### README.md
-
-- redirect na about this page
+#### Dizajn
+2. testimonial section na homepage?
+1. dizajnirat hire me section. ili da ima gradient ko border ili da ispada iz nekog sectiona
+16. di sam sve pricala dizajnirat do kraja
 
 #### Responsive issues
-
 20. aside na homepage nije skroz responsive cca 700px - 900px
 21. padding na mystory about page na malim ekranima i za odgovor na pitanje isto padding
 22. peaks se ne vidi na malim ekranima na homepage na projektima
@@ -14,6 +14,7 @@
 15. pokazat jos pitanja u Is there anything else you would like to know?
 16. mystory na about da bude zuti? ili odgovori da budu zuti? ovako je preplavo
 17. containeri na about page, odzumiraj pa vidi
+18. na cvu kad se stisne na tehnologiju ne bi se trebao pokazat loader, page transition
 
 #### Novi featuri
 
@@ -91,3 +92,7 @@
 13. technologies na about page loop through
 14. napravit loader komponentu i stavit trokut da bude loader
 15. dodat easing na sve transitione, napravit mixin?
+
+#### README.md
+
+- redirect na about this page

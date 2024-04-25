@@ -8,11 +8,49 @@ import Temperature from '../../components/Temperature'
 import Me from '../../images/me.jpeg'
 import { Tooltip } from 'react-tooltip'
 import useTemperature from '../../hooks/useTemperature'
-import { getValuesAndProperties, pickRandomItemFromArray } from '../../utils'
+import { getValuesAndProperties } from '../../utils'
 import { images } from './images'
 import MyMasonry from './MyMasonry'
 
-const randomImage = pickRandomItemFromArray(images)
+const speakingEvents = [
+  {
+    name: 'CSS tricks',
+    year: 2020,
+    link: "https://www.meetup.com/s_css_zagreb/events/266253881/",
+    organizer: "CSS Zagreb"
+  },
+  {
+    name: "CSS animations",
+    year: 2020,
+    link: "https://www.meetup.com/s_css_zagreb/events/265312074/",
+    organizer: "CSS Zagreb"
+  },
+  {
+    name: "Free intro to the web development",
+    year: 2024,
+    link: "https://www.meetup.com/kodiraonica/events/298986803/",
+    organizer: "Kodiraonica"
+  },
+  {
+    name: "Intersection observers and how to use them",
+    year: 2023,
+    link: "https://www.meetup.com/javascript-zagreb/events/297302963/",
+    organizer: "JavaScript Zagreb"
+  },
+  {
+    name: "Mentoring for beginners",
+    year: 2023,
+    link: "https://devshegoes.five.agency/",
+    organizer: "DevSheGoes"
+  },
+  {
+    name: "How to code a pure css keyboard",
+    year: 2020,
+    link: "https://www.meetup.com/css-in-vienna/events/267266901/",
+    organizer: "CSS in Vienna"
+  }
+]
+
 
 const AboutPage = () => {
   const temperatureData = useTemperature()
@@ -60,7 +98,11 @@ const AboutPage = () => {
         </div>
       </header>
       <main className="about-main">
-        <section className="bg-black">
+        <section className="bg-yellow">
+          <div className="skewed-top">
+            <div className="circle"></div>
+            <div className="circle"></div>
+          </div>
           <div className="container">
             <h2>I bring a lot of values to the table.</h2>
 
@@ -151,56 +193,73 @@ const AboutPage = () => {
           </div>
         </section>
 
-        <section className="bg-blue">
+        <section className="container has-padding">
+          <h2>My story</h2>
+
+          <p>
+            In 2013, I found myself in the depths of depression, yearning for
+            change and renewal. It was during this challenging time that I
+            stumbled upon coding as a beacon of hope. Initially, I immersed
+            myself in the world of Ruby on Rails, seeking to unlock its secrets
+            and find a sense of purpose. However, the journey proved to be
+            daunting, and I struggled to find my footing in its intricate
+            landscape. Determined to persevere, I decided to pivot towards
+            front-end development, driven by my affinity for visual expression.
+            With HTML, CSS, and jQuery as my tools, I embarked on a journey of
+            creativity and discovery. As I crafted digital masterpieces with
+            transitions and animations, I felt a sense of exhilaration and joy
+            wash over me, as if I had finally found my true calling.
+          </p>
+
+          <p>
+            By 2018, my coding journey took a significant turn as I encountered
+            React. Its simplicity and elegant syntax resonated deeply with me,
+            and I was captivated by its ability to streamline the development
+            process. With React, I found myself embracing a new paradigm of
+            building user interfaces, one that prioritized clarity and
+            efficiency.
+          </p>
+
+          <p>
+            Through coding, I not only found solace in the midst of turmoil but
+            also discovered a newfound passion that ignited my spirit. It was a
+            journey marked by challenges and triumphs, darkness and light. Yet,
+            through it all, coding remained a constant source of inspiration and
+            transformation, turning despair into creativity and hope.
+          </p>
+        </section>
+
+        <section>
           <div className="container">
-            <h2>My story</h2>
+            <h2>I was a speaker at these events:</h2>
 
-            <p>
-              In 2013, I found myself in the depths of depression, yearning for
-              change and renewal. It was during this challenging time that I
-              stumbled upon coding as a beacon of hope. Initially, I immersed
-              myself in the world of Ruby on Rails, seeking to unlock its
-              secrets and find a sense of purpose. However, the journey proved
-              to be daunting, and I struggled to find my footing in its
-              intricate landscape. Determined to persevere, I decided to pivot
-              towards front-end development, driven by my affinity for visual
-              expression. With HTML, CSS, and jQuery as my tools, I embarked on
-              a journey of creativity and discovery. As I crafted digital
-              masterpieces with transitions and animations, I felt a sense of
-              exhilaration and joy wash over me, as if I had finally found my
-              true calling.
-            </p>
-
-            <p>
-              By 2018, my coding journey took a significant turn as I
-              encountered React. Its simplicity and elegant syntax resonated
-              deeply with me, and I was captivated by its ability to streamline
-              the development process. With React, I found myself embracing a
-              new paradigm of building user interfaces, one that prioritized
-              clarity and efficiency.
-            </p>
-
-            <p>
-              Through coding, I not only found solace in the midst of turmoil
-              but also discovered a newfound passion that ignited my spirit. It
-              was a journey marked by challenges and triumphs, darkness and
-              light. Yet, through it all, coding remained a constant source of
-              inspiration and transformation, turning despair into creativity
-              and hope.
-            </p>
+            <ul className="speaking-events">
+              {speakingEvents.map((event, index) => (
+                <li key={index}>
+                   <a
+                      href={event.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {event.name}
+                    </a>
+                  <p>{event.organizer}</p>
+                  <p>{event.year}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
-        <section className="bg-white container has-padding">
+        <Search />
+
+        <section className="container has-padding">
           <h2>My free time looks something like this </h2>
           <MyMasonry images={images} />
         </section>
 
-        <section className="search-section">
-          <Search />
-        </section>
-
         <HireMe />
+
       </main>
     </>
   )

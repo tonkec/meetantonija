@@ -26,10 +26,7 @@ const Aside = ({ numberOfPosts }) => {
           Read more
         </button>
       </aside>
-      <div className="skewed-bottom">
-        <div className="circle"></div>
-        <div className="circle"></div>
-      </div>
+     
       <div className="container">
         <h2>👌 I write about technologies I like.</h2>
 

@@ -18,7 +18,7 @@ const Code = () => {
         <div className="circle"></div>
       </div>
       <div className="container">
-        <h2>✅ Clicking is so last season</h2>
+        <h2>✅ I think clicking is so last season</h2>
 
         <Draggable bounds="parent">
           <div className="code">

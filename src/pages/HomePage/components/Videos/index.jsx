@@ -19,7 +19,7 @@ const Videos = () => {
             <div className="description">
               <p>
                 {' '}
-                This is a video which shows how to code a responsive dashboard
+                This video shows how to code a responsive dashboard
                 like the one below 👇
               </p>
             </div>

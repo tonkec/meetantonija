@@ -4,8 +4,8 @@ import { useState } from 'react'
 const HireMe = () => {
   const [isCopied, setIsCopied] = useState(false)
   return (
-    <div className="hire-me">
-      <h2>Are you ready to talk?</h2>
+    <div className="hire-me container">
+      <h2>Do you have something in mind?</h2>
       <p>
         If you are interested in working with me, please get in touch via email.
       </p>

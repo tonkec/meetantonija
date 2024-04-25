@@ -2,7 +2,7 @@
   padding: 20px;
   outline: none;
   max-width: 80%;
-    margin: 0 auto;
+  margin: 0 auto;
   .content {
     height: 80vh;
     background-size: cover;
@@ -12,10 +12,17 @@
   }
 
   p {
-   text-align: center;
+    text-align: center;
   }
   img {
     width: 100%;
     object-fit: cover;
+  }
 }
+
+.masonry-item {
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
 }

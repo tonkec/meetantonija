@@ -1,8 +1,8 @@
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 import { useState } from 'react'
 import Modal from 'react-modal'
+import Image from '../../../components/Image'
 import './Modal.scss'
-
 
 const MyMasonry = ({ images }) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -19,13 +19,9 @@ const MyMasonry = ({ images }) => {
                 setSelectedImage(image)
                 setIsModalOpen(true)
               }}
-              style={{ cursor: 'pointer' }}
+              className="masonry-item"
             >
-              <img
-                src={image.src}
-                alt={image.alt}
-                style={{ maxWidth: '100%' }}
-              />
+              <Image src={image.src} alt={image.subtitle} />
             </div>
           ))}
         </Masonry>

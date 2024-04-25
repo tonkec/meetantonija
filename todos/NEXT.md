@@ -1,11 +1,7 @@
-#### About page 26.04
-16. di sam sve pricala, javacript meetup, devshegoes, css meetup, kodiraonica, css vienna
-17. klik na tehnologiju vodi do cv stranice?
-18. about section ima search u sebi koji u sebi ima opet section
-19. about.scss zasto svi nth childovi imaju istu color
+#### 26.04
+17. klik na tehnologiju vodi do cv stranice? about page
 
 #### Bugs/improvements
-
 47. zasto nakon klika na tldr navigacija skrolla to the top 26.04
 48. ne rade tipke gore dolje u navigaciji 26.04
 49. istipkavanje ne radi kad se navigira s jedne stranice na drugu 27.04
@@ -15,8 +11,7 @@
 53. da li kodiram 10 ili 11 godina 29.04
 54. da li headingsi na homepageu trebaju imat tocku 29.04
 55. social iconse extractat u komponentu 29.04
-
-- stavit listu arrayja s linkom i ikonom
+    - stavit listu arrayja s linkom i ikonom
 
 #### Navigacija
 
