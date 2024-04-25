@@ -1,5 +1,6 @@
 ## GOTOVO
-
+47. zasto nakon klika na tldr navigacija skrolla to the top 26.04
+17. klik na tehnologiju vodi do cv stranice? about page
 18. about section ima search u sebi koji u sebi ima opet section
 19. about.scss zasto svi nth childovi imaju istu color
 20. my story malo produzit, kad sam pocela s reactom, zasto sam pocela, koje ja to blogove pratim, kako ucim? produzit i what do I do in my free time. Napravit nekako zabavnije, stavit sliku mene bubnjevi, bajk? dodat nesto o mojoj osobnosti, sta volim, sta ne volim, koje domene volim, koje ne volim. pogledaj onaj stari cover letter

@@ -63,7 +63,6 @@ const Navigation = ({ isMobileNavigationOpen }) => {
               setSearch(event.target.value)
             }}
             value={search}
-            autoFocus
           />
 
           <div className="search-results">
