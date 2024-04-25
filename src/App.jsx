@@ -1,20 +1,12 @@
 import './App.scss'
 import { useState, useEffect, useRef } from 'react'
 import { Routes, Route, Outlet, useLocation } from 'react-router-dom'
-import Navigation from './components/Navigation'
 import routes from './routes'
 import Footer from './components/Footer'
-import { LuLinkedin, LuGithub, LuCodepen } from 'react-icons/lu'
-import { RxHamburgerMenu } from 'react-icons/rx'
+
 import PageTransition from './components/PageTransition'
-import Social from './components/Social'
-
-const socialLinks = [
-  { href: 'https://codepen.io/tonkec', icon: LuCodepen },
-  { href: 'https://github.com/tonkec', icon: LuGithub },
-  { href: 'https://www.linkedin.com/in/antonija-simic/', icon: LuLinkedin },
-];
-
+import SearchBar from './components/SearchBar'
+import Navigation from './components/Navigation'
 
 function Layout() {
   const [isMobileNavigationOpen, setIsMobileNavigationOpen] = useState(false)
@@ -45,18 +37,12 @@ function Layout() {
 
   return (
     <>
-      <Navigation isMobileNavigationOpen={isMobileNavigationOpen} />
+      <SearchBar isMobileNavigationOpen={isMobileNavigationOpen} />
       <div ref={contentWrapper} className="page-content">
-        <div className="container flex icons-container">
-          <button>
-            <RxHamburgerMenu
-              onClick={() => setIsMobileNavigationOpen(!isMobileNavigationOpen)}
-              fontSize={'2rem'}
-            />
-          </button>
-          <h6>Shift + K</h6>
-          <Social icons={socialLinks} />
-        </div>
+        <Navigation
+          isMobileNavigationOpen={isMobileNavigationOpen}
+          setIsMobileNavigationOpen={setIsMobileNavigationOpen}
+        />
         <Outlet />
         <Footer />
       </div>

@@ -1,19 +1,22 @@
 #### Dizajn?
+
 16. di sam sve pricala dizajnirat do kraja
 17. hompage malo izmijenit
 18. plejsat hire me section
-16. mystory na about da bude zuti? ili odgovori da budu zuti? ovako je preplavo
-17. containeri na about page, odzumiraj pa vidi
-10. posts stranicu malo bolje dizajnirat?
+19. mystory na about da bude zuti? ili odgovori da budu zuti? ovako je preplavo
+20. containeri na about page, odzumiraj pa vidi
+21. posts stranicu malo bolje dizajnirat?
 
 #### Responsive issues
+
 20. aside na homepage nije skroz responsive cca 700px - 900px
 21. padding na mystory about page na malim ekranima i za odgovor na pitanje isto padding
 
 #### Bugs/improvements
+
 15. pokazat jos pitanja u Is there anything else you would like to know?
-18. na cvu kad se stisne na tehnologiju ne bi se trebao pokazat loader, page transition
-19. layout shifting za typed text
+16. na cvu kad se stisne na tehnologiju ne bi se trebao pokazat loader, page transition
+17. layout shifting za typed text
 
 #### Post page
 
@@ -57,8 +60,6 @@
   - autofocus zasto nije radio
 - sta je ostalo u todo
 - pokazat stare verzije stranice?
-
-
 
 #### Code refactor
 

@@ -8,7 +8,10 @@ import Temperature from '../../components/Temperature'
 import Me from '../../images/me.jpeg'
 import { Tooltip } from 'react-tooltip'
 import useTemperature from '../../hooks/useTemperature'
-import { getValuesAndProperties,removeSpacesAndDashesFromString } from '../../utils'
+import {
+  getValuesAndProperties,
+  removeSpacesAndDashesFromString,
+} from '../../utils'
 import { images } from './images'
 import MyMasonry from './MyMasonry'
 import { useNavigate } from 'react-router-dom'
@@ -64,7 +67,7 @@ const technologies = [
 ]
 
 const AboutPage = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const temperatureData = useTemperature()
   const { values, properties } = getValuesAndProperties(temperatureData)
   return (
@@ -135,9 +138,14 @@ const AboutPage = () => {
             <h2>🚀 Technologies I am familiar with</h2>
             <ul className="technologies">
               {technologies.map((tech, index) => (
-                <li key={index} onClick={() => {
-                  navigate(`/cv?skill=${removeSpacesAndDashesFromString(tech.technology)}`)
-                }}>
+                <li
+                  key={index}
+                  onClick={() => {
+                    navigate(
+                      `/cv?skill=${removeSpacesAndDashesFromString(tech.technology)}`
+                    )
+                  }}
+                >
                   <span>
                     <tech.icon className="icon" />
                   </span>

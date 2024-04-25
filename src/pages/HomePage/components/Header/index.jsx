@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="container homepage-header">
       <div className="flex">
-      <Image
+        <Image
           src="https://avatars.githubusercontent.com/u/5020758?v=4"
           alt="Antonija"
           hasBackground
@@ -22,10 +22,10 @@ const Header = () => {
             <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>,
           </h3>
           <TypedText type="p">
-            I enjoy creating beautiful user interfaces from scratch using HTML, CSS, Javascript and React.
+            I enjoy creating beautiful user interfaces from scratch using HTML,
+            CSS, Javascript and React.
           </TypedText>
         </div>
-       
       </div>
 
       <Tooltip
