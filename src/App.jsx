@@ -7,6 +7,14 @@ import Footer from './components/Footer'
 import { LuLinkedin, LuGithub, LuCodepen } from 'react-icons/lu'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import PageTransition from './components/PageTransition'
+import Social from './components/Social'
+
+const socialLinks = [
+  { href: 'https://codepen.io/tonkec', icon: LuCodepen },
+  { href: 'https://github.com/tonkec', icon: LuGithub },
+  { href: 'https://www.linkedin.com/in/antonija-simic/', icon: LuLinkedin },
+];
+
 
 function Layout() {
   const [isMobileNavigationOpen, setIsMobileNavigationOpen] = useState(false)
@@ -47,30 +55,7 @@ function Layout() {
             />
           </button>
           <h6>Shift + K</h6>
-          <div className="flex icons">
-            <a
-              href="https://codepen.io/tonkec"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <LuCodepen fontSize={'2rem'} />
-            </a>
-            <a
-              href="https://github.com/tonkec"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {' '}
-              <LuGithub fontSize={'2rem'} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/antonija-simic/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <LuLinkedin fontSize={'2rem'} />
-            </a>
-          </div>
+          <Social icons={socialLinks} />
         </div>
         <Outlet />
         <Footer />
