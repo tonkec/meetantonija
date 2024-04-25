@@ -1,4 +1,10 @@
 ## GOTOVO
+45. u navigaciji maknut trenutnu rutu 27.04
+46. nothing found u navigaciji kad nema nicega 27.04
+47. steps section nije skroz responsive 27.04
+44. border radius od input searcha na navigaciji, ne bi trebao biti dolje 27.04
+55. social iconse extractat u komponentu 29.04
+    - stavit listu arrayja s linkom i ikonom
 8. via email u hire me sectionu, dodat tooltip i objasnit zasto ne volim da me se zove
 51. dodat emojije na headinge u about page 27.04
 22. peaks se ne vidi na malim ekranima na homepage na projektima

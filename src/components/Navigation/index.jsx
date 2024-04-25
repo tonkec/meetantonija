@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import routes from '../../routes'
 import FocusTrap from 'focus-trap-react'
 import './Navigation.scss'
@@ -7,9 +7,26 @@ import './Navigation.scss'
 const delay = 0.1
 
 const Navigation = ({ isMobileNavigationOpen }) => {
+  const location = useLocation()
   const navigate = useNavigate()
   const [search, setSearch] = useState('')
   const [isNavigationOpen, setIsNavigationOpen] = useState(false)
+  const searchResults = routes
+  .filter(
+    (route) => !route.path.includes(':id') && route.path !== '*' && route.path !== location.pathname
+  )
+  .filter((route) => route.path.includes(search))
+  .map((route) => (
+    <button
+      key={route.path}
+      onClick={() => {
+        navigate(route.path)
+        setIsNavigationOpen(false)
+      }}
+    >
+      {route.path}
+    </button>
+  ))
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -66,22 +83,11 @@ const Navigation = ({ isMobileNavigationOpen }) => {
           />
 
           <div className="search-results">
-            {routes
-              .filter(
-                (route) => !route.path.includes(':id') && route.path !== '*'
-              )
-              .filter((route) => route.path.includes(search))
-              .map((route) => (
-                <button
-                  key={route.path}
-                  onClick={() => {
-                    navigate(route.path)
-                    setIsNavigationOpen(false)
-                  }}
-                >
-                  {route.path}
-                </button>
-              ))}
+            {searchResults.length ? (
+              searchResults
+            ) : (
+              <button disabled>No route matches your query</button>
+            )}
           </div>
         </form>
       </div>

@@ -1,4 +1,5 @@
 ## Odbijeno
+45. navigacija drzat height rezultata uvijek isti kao na react dev 28.04
 21. forma u cta
 22. animacije na scroll?
 23. project slider random fake content
