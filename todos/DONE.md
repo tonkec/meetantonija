@@ -1,4 +1,6 @@
 ## GOTOVO
+51. dodat emojije na headinge u about page 27.04
+22. peaks se ne vidi na malim ekranima na homepage na projektima
 52. header na homepageu nije skroz responsive, 400px sirine slika ide preko teksta 27.04
 54. da li headingsi na homepageu trebaju imat tocku 29.04
 53. da li kodiram 10 ili 11 godina 29.04

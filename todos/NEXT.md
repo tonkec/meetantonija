@@ -1,10 +1,9 @@
 #### Bugs/improvements
 48. ne rade tipke gore dolje u navigaciji 26.04
-51. dodat emojije na headinge u about page 27.04
 55. social iconse extractat u komponentu 29.04
     - stavit listu arrayja s linkom i ikonom
 1. What did I learn in this project? strgan layout
-
+8. via email u hire me sectionu, dodat tooltip i objasnit zasto ne volim da me se zove
 
 #### Navigacija
 

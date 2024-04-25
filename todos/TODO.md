@@ -5,14 +5,10 @@
 18. plejsat hire me section
 
 #### Responsive issues
-
 20. aside na homepage nije skroz responsive cca 700px - 900px
 21. padding na mystory about page na malim ekranima i za odgovor na pitanje isto padding
-22. peaks se ne vidi na malim ekranima na homepage na projektima
 
 #### Bugs/improvements
-
-14. Are you ready to talk mozda dodat moju sliku ko na trenutnoj stranici?
 15. pokazat jos pitanja u Is there anything else you would like to know?
 16. mystory na about da bude zuti? ili odgovori da budu zuti? ovako je preplavo
 17. containeri na about page, odzumiraj pa vidi
@@ -25,7 +21,6 @@
 5. cursor dodat neki fensi, mozda? https://github.com/tholman/cursor-effects
 6. favicon
 7. dodat zvuk kad se navigacija otvara
-8. via email u hire me sectionu, dodat tooltip i objasnit zasto ne volim da me se zove
 
 #### Nove stranice
 

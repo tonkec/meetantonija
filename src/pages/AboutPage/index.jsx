@@ -116,7 +116,7 @@ const AboutPage = () => {
             <div className="circle"></div>
           </div>
           <div className="container">
-            <h2>I bring a lot of values to the table.</h2>
+            <h2>💎 I bring a lot of values to the table.</h2>
 
             <p>
               With a decade of experience in front-end development, I bring a
@@ -132,7 +132,7 @@ const AboutPage = () => {
               ensuring high-quality user experiences every time.
             </p>
 
-            <h2>Technologies I am familiar with</h2>
+            <h2>🚀 Technologies I am familiar with</h2>
             <ul className="technologies">
               {technologies.map((tech, index) => (
                 <li key={index} onClick={() => {
@@ -152,7 +152,7 @@ const AboutPage = () => {
         </section>
 
         <section className="container has-padding">
-          <h2>My story</h2>
+          <h2>📖 My story</h2>
 
           <p>
             In 2013, I found myself in the depths of depression, yearning for
@@ -189,7 +189,7 @@ const AboutPage = () => {
 
         <section>
           <div className="container">
-            <h2>I was a speaker at these events:</h2>
+            <h2>🎤 I was a speaker at these events:</h2>
 
             <ul className="speaking-events">
               {speakingEvents.map((event, index) => (
@@ -212,7 +212,7 @@ const AboutPage = () => {
         <Search />
 
         <section className="container has-padding">
-          <h2>My free time looks something like this </h2>
+          <h2>🚴 My free time looks something like this </h2>
           <MyMasonry images={images} />
         </section>
 
