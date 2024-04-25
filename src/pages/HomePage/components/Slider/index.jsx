@@ -12,7 +12,7 @@ const Slider = ({ items, headline }) => {
     slides: {
       perView: size.width > 900 ? 2 : 1,
       origin: 'center',
-      spacing: 5,
+      spacing: 0,
       offset: 0,
     },
   })
