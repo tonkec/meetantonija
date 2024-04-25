@@ -1,4 +1,8 @@
 ## GOTOVO
+52. header na homepageu nije skroz responsive, 400px sirine slika ide preko teksta 27.04
+54. da li headingsi na homepageu trebaju imat tocku 29.04
+53. da li kodiram 10 ili 11 godina 29.04
+49. istipkavanje ne radi kad se navigira s jedne stranice na drugu 27.04
 47. zasto nakon klika na tldr navigacija skrolla to the top 26.04
 17. klik na tehnologiju vodi do cv stranice? about page
 18. about section ima search u sebi koji u sebi ima opet section

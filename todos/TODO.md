@@ -17,6 +17,7 @@
 16. mystory na about da bude zuti? ili odgovori da budu zuti? ovako je preplavo
 17. containeri na about page, odzumiraj pa vidi
 18. na cvu kad se stisne na tehnologiju ne bi se trebao pokazat loader, page transition
+19. layout shifting za tpyed text
 
 #### Novi featuri
 

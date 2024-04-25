@@ -5,7 +5,7 @@ const Videos = () => {
   return (
     <section className="bg-black">
       <div className="container">
-        <h2> 🎥 I create short videos</h2>
+        <h2> 🎥 I create short tutorials.</h2>
 
         <div className="videos">
           <a

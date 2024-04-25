@@ -4,9 +4,7 @@ import { LuMicroscope } from 'react-icons/lu'
 import { FaDog } from 'react-icons/fa'
 import { RiCactusFill } from 'react-icons/ri'
 import { Triangle } from 'react-loader-spinner'
-
 import './Previewer.scss'
-import Emoji from '../../../../components/Emoji'
 
 const Previewer = () => {
   const [iframeUrl, setIframeUrl] = useState(
