@@ -8,10 +8,11 @@
 @import './styles/selection.scss';
 @import './styles/spacings.scss';
 @import './styles/buttons.scss';
+@import './styles/transitions.scss';
 
 .page-content {
   opacity: 0;
-  transition: opacity 0.5s;
+  @include transition(opacity);  
 
   &.enter {
     opacity: 1;

@@ -1,4 +1,5 @@
 @import '../../../../styles//mq.scss';
+@import '../../../../styles/transitions.scss';
 
 .questions {
   margin-top: 20px;
@@ -17,7 +18,7 @@
   color: var(--color-white);
   cursor: pointer;
   opacity: 0;
-  transition: background-color 0.3s;
+  @include transition(opacity);
 
   &:hover {
     background-color: var(--color-accent);

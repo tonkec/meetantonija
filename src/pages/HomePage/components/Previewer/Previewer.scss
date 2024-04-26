@@ -1,5 +1,5 @@
 @import '../../../../styles/mq.scss';
-
+@import '../../../../styles/transitions.scss';
 .iframes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -23,7 +23,7 @@ iframe {
     border-radius: 10px;
     position: relative;
     width: 80%;
-    transition: transform 0.3s;
+    @include transition(transform);
     background-color: var(--color-black);
 
     &:hover,
@@ -44,7 +44,6 @@ iframe {
       transform: translateY(-50%);
       right: 20px;
       font-size: 3rem;
-      border-radius: 10px;
     }
   }
 
@@ -61,7 +60,7 @@ iframe {
     }
 
     .loader {
-      border-radius: 5px;
+      border-radius: var(--border-radius);
       position: absolute;
       z-index: 9;
       background-color: var(--color-black);

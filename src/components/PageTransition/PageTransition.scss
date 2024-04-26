@@ -1,9 +1,11 @@
+@import '../../styles/transitions.scss';
+
 .page-transition {
   position: fixed;
   inset: 0;
   background-color: var(--color-black);
   transform: translateX(100%);
-  transition: transform 1s;
+  @include transition(transform);
   display: flex;
   justify-content: center;
   align-items: center;

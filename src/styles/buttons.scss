@@ -4,7 +4,7 @@ a[role='button'] {
   border-radius: var(--border-radius);
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
+  @include transition((background-color, color));
   text-decoration: none;
 
   &.primary {
