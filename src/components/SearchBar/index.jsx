@@ -22,6 +22,7 @@ const SearchBar = ({ isMobileNavigationOpen }) => {
     .map((route) => (
       <button
         key={route.path}
+        className='secondary block w-full text-left'
         onClick={() => {
           navigate(route.path)
           setIsNavigationOpen(false)
@@ -85,7 +86,7 @@ const SearchBar = ({ isMobileNavigationOpen }) => {
             value={search}
           />
 
-          <div className="search-results">
+          <div>
             {searchResults.length ? (
               searchResults
             ) : (

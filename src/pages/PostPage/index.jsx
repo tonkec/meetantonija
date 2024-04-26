@@ -82,13 +82,13 @@ const PostPage = () => {
       <section>
         <div className="container">
           <h2>Read some other posts</h2>
-          <div className=" other-posts">
+          <div className="other-posts">
             {shuffleArray(otherPosts)
               .slice(0, 2)
               .map((post) => (
                 <div key={post.id} className="other-post">
                   <h4>{post.title}</h4>
-                  <button onClick={() => navigate(`/post/${post.id}`)}>
+                  <button onClick={() => navigate(`/post/${post.id}`)} className='secondary'>
                     Read more
                   </button>
                 </div>

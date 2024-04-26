@@ -12,6 +12,8 @@ const Videos = () => {
             href="https://www.youtube.com/watch?v=GQYJSmaSZow"
             rel="noreferrer"
             target="_blank"
+            role='button'
+            className='primary'
           >
             Watch video
           </a>

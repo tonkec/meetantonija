@@ -18,7 +18,7 @@ const Slider = ({ items, headline }) => {
   })
   return (
     <section className="container">
-      <h3>{headline}</h3>
+      <h2>{headline}</h2>
 
       <div ref={sliderRef} className="keen-slider">
         {items
@@ -29,7 +29,7 @@ const Slider = ({ items, headline }) => {
                 <h3>{project.title}</h3>
                 <BrowserFrame>
                   <p>{project.headline}.</p>
-                  <a href={`/project/${project.id}`}>Read more</a>
+                  <a role='button' className='primary' href={`/project/${project.id}`}>Read more</a>
                 </BrowserFrame>
                 <Skills skills={project.skills.split(',')} />
               </div>

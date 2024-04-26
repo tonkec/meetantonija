@@ -51,30 +51,4 @@
   }
 }
 
-.search-results {
-  button {
-    background-color: var(--color-black);
-    color: var(--color-white);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
-    border-bottom: 1px solid rgba(225, 225, 225, 0.1);
-    text-align: left;
-    &:last-child {
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    &:hover {
-      background-color: var(--color-accent);
-    }
-
-    &:focus {
-      outline: none;
-      background-color: var(--color-accent);
-    }
-  }
-}
-
 

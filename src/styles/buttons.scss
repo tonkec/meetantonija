@@ -1,0 +1,36 @@
+button, a[role="button"] {
+    padding: calc(var(--button-spacing) / 2) var(--button-spacing);
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+
+    &.primary {
+        background-color: var(--color-orange);
+        color: var(--color-white);
+
+        &:hover {
+            background-color: darken(#ff6700, 5%);
+        }
+    }
+
+    &.secondary {
+        background-color: var(--color-blue);
+        color: var(--color-black);
+
+        &:hover {
+            background-color: var(--color-dark-blue);
+        }
+    }
+
+    &.tertiary {
+        background-color: var(--color-white);
+        color: var(--color-black);
+
+        &:hover {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+        }
+    }
+}

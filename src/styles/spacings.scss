@@ -2,26 +2,26 @@
 
 :root {
     --section-heading-spacing: 2rem;
-    --section-paragraph-spacing: 1rem;
-    --section-padding-y: 2rem;
-    --section-padding-x: 1rem;
+    --button-spacing: 1rem;
+    --border-radius: 5px;
 }
 
 
 @include breakpoint('md') {
     :root {
         --section-heading-spacing: 3rem;
-        --section-paragraph-spacing: 1.5rem;
-        --section-padding-y: 3rem;
-        --section-padding-x: 2rem;
+        --button-spacing: 1.5rem;
     }
 }
 
 @include breakpoint('lg') {
     :root {
-        --section-heading-spacing: 4rem;
-        --section-paragraph-spacing: 2rem;
-        --section-padding-y: 4rem;
-        --section-padding-x: 3rem;
+        --section-heading-spacing: 8rem;
+        --button-spacing: 1.2rem;
     }
+}
+
+section h2 {
+    margin-top: var(--section-heading-spacing);
+    margin-bottom: calc(var(--section-heading-spacing) / 2);
 }

@@ -14,12 +14,12 @@ const Previewer = () => {
   const buttonWrapper = useRef(null)
   return (
     <section className="container">
-      <h3>🔥 I design in code.</h3>
+      <h2>🔥 I design in code.</h2>
 
       <div className="flex codepen">
         <div ref={buttonWrapper}>
           <button
-            className="active"
+            className="active primary"
             onClick={() => {
               buttonWrapper.current.childNodes.forEach((button) => {
                 button.classList.remove('active')
@@ -36,6 +36,7 @@ const Previewer = () => {
             <span>I bark in pure CSS</span>
           </button>
           <button
+          className='primary'
             onClick={() => {
               buttonWrapper.current.childNodes.forEach((button) => {
                 button.classList.remove('active')
@@ -53,6 +54,7 @@ const Previewer = () => {
             <span>Watch out for my pure CSS spikes</span>
           </button>
           <button
+          className='primary'
             onClick={() => {
               buttonWrapper.current.childNodes.forEach((button) => {
                 button.classList.remove('active')

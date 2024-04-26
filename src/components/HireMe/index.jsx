@@ -24,6 +24,7 @@ const HireMe = () => {
       </Tooltip>
 
       <button
+      className='tertiary'
         onClick={() => {
           navigator.clipboard.writeText('antonija1023@gmail.com')
           setIsCopied(true)
