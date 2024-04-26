@@ -1,10 +1,12 @@
+@import "./transitions.scss";
+
 button,
 a[role='button'] {
   padding: calc(var(--button-spacing) / 2) var(--button-spacing);
   border-radius: var(--border-radius);
   border: none;
   cursor: pointer;
-  @include transition((background-color, color));
+  @include transition(background-color);
   text-decoration: none;
 
   &.primary {

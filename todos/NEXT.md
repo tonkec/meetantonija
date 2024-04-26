@@ -1,9 +1,9 @@
 #### Redizajnirat skroz sve
 
 1. da sve bude bijelo vecinski, a samo tu i tamo neka boja
-
 - https://coolors.co/palette/ff6700-ebebeb-c0c0c0-3a6ea5-004e98
 - narancasta accent color
+2. todo refactor komentari
 
 #### Bugs/improvements
 

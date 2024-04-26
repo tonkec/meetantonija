@@ -12,7 +12,7 @@
 
 .page-content {
   opacity: 0;
-  @include transition(opacity);  
+  @include transition(opacity);
 
   &.enter {
     opacity: 1;

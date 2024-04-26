@@ -1,4 +1,3 @@
-import './Videos.scss'
 import Dashboard from './components/Dashboard'
 
 const Videos = () => {
@@ -7,7 +6,7 @@ const Videos = () => {
       <div className="container">
         <h2> 🎥 I create short tutorials.</h2>
 
-        <div className="videos">
+        <div>
           <a
             href="https://www.youtube.com/watch?v=GQYJSmaSZow"
             rel="noreferrer"
@@ -17,7 +16,7 @@ const Videos = () => {
           >
             Watch video
           </a>
-          <div className="video">
+          <div className="border-radius">
             <div className="description">
               <p>
                 {' '}

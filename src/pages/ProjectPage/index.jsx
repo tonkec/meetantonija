@@ -96,7 +96,6 @@ const ProjectPage = () => {
 
       <Steps
         steps={project.responsibilities}
-        className="project-steps two-col"
         headline="🦶 These were the steps I took"
       />
 

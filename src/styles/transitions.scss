@@ -1,8 +1,12 @@
 $transitionDuration: 0.3s;
-$timingFunction:cubic-bezier(.52,.59,.84,.29);
+$timingFunction: ease-in-out;
 
-@mixin transition($properties, $duration: $transitionDuration, $timing: $timingFunction) {
-    @for $i from 1 through length($properties) {
+@mixin transition(
+  $properties,
+  $duration: $transitionDuration,
+  $timing: $timingFunction
+) {
+  @for $i from 1 through length($properties) {
     transition: nth($properties, $i) $duration $timing;
-    }
+  }
 }

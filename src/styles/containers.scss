@@ -12,6 +12,7 @@
 }
 
 main {
+  // todo refactor
   input {
     min-width: 100%;
     font-size: 1rem;
@@ -37,17 +38,5 @@ main {
     left: 20px;
     bottom: 20px;
     z-index: 2;
-  }
-}
-
-section {
-  position: relative;
-
-  h2 {
-    margin-bottom: 30px;
-
-    @include breakpoint(lg) {
-      margin-bottom: 50px;
-    }
   }
 }
