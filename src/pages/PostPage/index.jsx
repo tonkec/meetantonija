@@ -79,7 +79,7 @@ const PostPage = () => {
         }}
       />
 
-      <section className="has-padding">
+      <section>
         <div className="container">
           <h2>Read some other posts</h2>
           <div className=" other-posts">

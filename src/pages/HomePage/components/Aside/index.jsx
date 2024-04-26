@@ -7,7 +7,7 @@ import './Aside.scss'
 const Aside = ({ numberOfPosts }) => {
   const [noteContent, setNoteContent] = useState({})
   return (
-    <section className="bg-white has-padding">
+    <section className="aside-section">
       <aside className={noteContent.intro ? 'show' : 'hide'}>
         <IoMdClose
           className="icon"

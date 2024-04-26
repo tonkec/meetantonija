@@ -6,6 +6,7 @@
 @import './styles/tooltip.scss';
 @import './styles/mq.scss';
 @import './styles/selection.scss';
+@import './styles/spacings.scss';
 
 .page-content {
   opacity: 0;
@@ -14,8 +15,4 @@
   &.enter {
     opacity: 1;
   }
-}
-
-code span {
-  font-size: 1.2rem;
 }

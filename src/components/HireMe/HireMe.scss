@@ -33,7 +33,6 @@
       rgba(144, 144, 144, 0.05) 100%
     ),
     linear-gradient(329deg, hsl(148, 0%, 0%), hsl(148, 0%, 0%));
-  padding: 50px;
   border-radius: 5px;
   text-align: center;
   margin-top: 100px;
@@ -44,7 +43,6 @@
     background-color: transparent;
     color: var(--color-white);
     border-radius: 5px;
-    padding: 15px 50px;
     cursor: pointer;
   }
 }

@@ -51,7 +51,6 @@ const HomePage = () => {
                 'Deliver the solution to the client. Make sure it is working as expected.',
             },
           ]}
-          className="has-padding"
         />
         <Aside numberOfPosts={2} />
         <Videos />

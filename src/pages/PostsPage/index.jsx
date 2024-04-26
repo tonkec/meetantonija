@@ -3,7 +3,7 @@ import posts from '../../data/posts'
 const PostsPage = () => {
   return (
     <main className="container">
-      <section className="bg-white has-padding">
+      <section>
         <h2>All of my posts.</h2>
         {posts.map((post) => {
           return (

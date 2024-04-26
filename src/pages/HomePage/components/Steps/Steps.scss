@@ -4,16 +4,12 @@
   }
 }
 
-.steps-container {
-  margin-top: 100px;
-}
 .steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
 
   .step {
-    padding: 20px 40px;
     background-image: linear-gradient(
         200deg,
         rgba(171, 171, 171, 0.05) 0%,

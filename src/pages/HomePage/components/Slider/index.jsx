@@ -17,7 +17,7 @@ const Slider = ({ items, headline }) => {
     },
   })
   return (
-    <section className="container projects-container">
+    <section className="container">
       <h3>{headline}</h3>
 
       <div ref={sliderRef} className="keen-slider">

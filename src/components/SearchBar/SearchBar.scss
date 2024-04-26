@@ -30,7 +30,6 @@
 
   input {
     width: 100%;
-    padding: 15px;
     z-index: 99;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -57,7 +56,6 @@
     background-color: var(--color-black);
     color: var(--color-white);
     border: none;
-    padding: 15px;
     cursor: pointer;
     transition: background-color 0.3s;
     width: 100%;
@@ -69,12 +67,12 @@
     }
 
     &:hover {
-      background-color: var(--color-green);
+      background-color: var(--color-accent);
     }
 
     &:focus {
       outline: none;
-      background-color: var(--color-green);
+      background-color: var(--color-accent);
     }
   }
 }

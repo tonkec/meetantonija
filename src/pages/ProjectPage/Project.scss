@@ -1,7 +1,6 @@
 @import '../../styles//mq.scss';
 
 .project-header {
-  padding-bottom: 150px;
   .flex {
     align-items: flex-start;
     flex-direction: column;
@@ -17,7 +16,6 @@
   button {
     background-color: var(--color-black);
     color: var(--color-white);
-    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -47,11 +45,6 @@
 
     & > div {
       flex: 1;
-      padding: 20px;
-
-      h3 + * {
-        margin-top: 20px;
-      }
     }
 
     a {
@@ -60,7 +53,6 @@
       display: inline-block;
       font-size: 1.2rem;
       background-color: var(--color-black);
-      padding: 10px 20px;
       border-radius: 5px;
     }
   }
@@ -69,7 +61,6 @@
 .elevated {
   background-color: var(--color-black);
   color: var(--color-white);
-  padding: 50px;
 
   @include breakpoint(lg) {
     z-index: 99;
@@ -80,14 +71,4 @@
     right: 0;
     max-width: 90%;
   }
-}
-
-.project-steps {
-  margin-top: 0px;
-  padding-top: 200px;
-  padding-bottom: 50px;
-}
-
-.steps-container ~ #tldr {
-  margin-bottom: 100px;
 }

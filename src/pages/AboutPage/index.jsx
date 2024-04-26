@@ -156,7 +156,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        <section className="container has-padding">
+        <section className="container">
           <h2>📖 My story</h2>
 
           <p>
@@ -216,7 +216,7 @@ const AboutPage = () => {
 
         <Search />
 
-        <section className="container has-padding">
+        <section className="container">
           <h2>🚴 My free time looks something like this </h2>
           <MyMasonry images={images} />
         </section>
