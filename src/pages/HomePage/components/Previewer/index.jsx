@@ -19,7 +19,7 @@ const Previewer = () => {
       <div className="flex codepen">
         <div ref={buttonWrapper}>
           <button
-            className="active primary"
+            className="active primary text-left small-padding"
             onClick={() => {
               buttonWrapper.current.childNodes.forEach((button) => {
                 button.classList.remove('active')
@@ -31,12 +31,11 @@ const Previewer = () => {
               setIsIframeLoading(true)
             }}
           >
-            <span>Dog </span>
             <FaDog className="icon" />
             <span>I bark in pure CSS</span>
           </button>
           <button
-          className='primary'
+          className='primary text-left small-padding'
             onClick={() => {
               buttonWrapper.current.childNodes.forEach((button) => {
                 button.classList.remove('active')
@@ -48,13 +47,12 @@ const Previewer = () => {
               setIsIframeLoading(true)
             }}
           >
-            <span>Cactus </span>
             <RiCactusFill className="icon" />
 
             <span>Watch out for my pure CSS spikes</span>
           </button>
           <button
-          className='primary'
+          className='primary text-left small-padding'
             onClick={() => {
               buttonWrapper.current.childNodes.forEach((button) => {
                 button.classList.remove('active')
@@ -66,7 +64,6 @@ const Previewer = () => {
               setIsIframeLoading(true)
             }}
           >
-            <span>Microscope</span>
             <LuMicroscope className="icon" />
             <span>I enlarge the world in pure CSS</span>
           </button>

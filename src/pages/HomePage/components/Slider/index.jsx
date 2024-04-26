@@ -12,7 +12,7 @@ const Slider = ({ items, headline }) => {
     slides: {
       perView: size.width > 900 ? 2 : 1,
       origin: 'center',
-      spacing: 0,
+      spacing: 20,
       offset: 0,
     },
   })
@@ -25,11 +25,11 @@ const Slider = ({ items, headline }) => {
           .sort((p1, p2) => p2.to - p1.to)
           .map((project) => {
             return (
-              <div key={project.id} className="keen-slider__slide number-slide">
+              <div key={project.id} className="keen-slider__slide">
                 <h3>{project.title}</h3>
                 <BrowserFrame>
-                  <p>{project.headline}.</p>
-                  <a role='button' className='primary' href={`/project/${project.id}`}>Read more</a>
+                  <span className='block'>{project.headline}.</span>
+                  <a role='button' className='ternary inline-block' href={`/project/${project.id}`}>Read more</a>
                 </BrowserFrame>
                 <Skills skills={project.skills.split(',')} />
               </div>

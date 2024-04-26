@@ -24,9 +24,9 @@ button, a[role="button"] {
         }
     }
 
-    &.tertiary {
-        background-color: var(--color-white);
-        color: var(--color-black);
+    &.ternary {
+        background-color: var(--color-black);
+        color: var(--color-white);
 
         &:hover {
             background-color: var(--color-accent);

@@ -19,7 +19,6 @@ iframe {
     flex-direction: row;
   }
   button {
-    text-align: left;
     margin-bottom: 5px;
     border-radius: 10px;
     position: relative;
@@ -46,15 +45,6 @@ iframe {
       right: 20px;
       font-size: 3rem;
       border-radius: 10px;
-    }
-
-    span:first-child {
-      font-size: 1.6rem;
-    }
-
-    span:last-child {
-      margin-top: 10px;
-      display: block;
     }
   }
 
