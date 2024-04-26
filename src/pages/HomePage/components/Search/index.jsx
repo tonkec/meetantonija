@@ -22,7 +22,7 @@ const Search = () => {
 
           <div className="questions">
             {questions
-              .slice(0, 3)
+              .slice(0, 5)
               .filter((question) =>
                 question.title.toLowerCase().includes(search.toLowerCase())
               )
@@ -38,7 +38,7 @@ const Search = () => {
           </div>
         </div>
       </section>
-      <section className="bg-blue">
+      <section>
         <div className="container">
           <h3>{questionContent.title}</h3>
           <p>{questionContent.info}</p>

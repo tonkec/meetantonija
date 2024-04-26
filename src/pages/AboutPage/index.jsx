@@ -113,11 +113,8 @@ const AboutPage = () => {
         </div>
       </header>
       <main className="about-main">
-        <section className="bg-yellow">
-          <div className="skewed-top">
-            <div className="circle"></div>
-            <div className="circle"></div>
-          </div>
+        <section>
+        
           <div className="container">
             <h2>💎 I bring a lot of values to the table.</h2>
 

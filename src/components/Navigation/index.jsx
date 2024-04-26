@@ -1,4 +1,6 @@
 
+import { useState, useEffect } from 'react'
+
 import { RxHamburgerMenu } from 'react-icons/rx'
 import Social from './../../components/Social'
 import { LuLinkedin, LuGithub, LuCodepen } from 'react-icons/lu'

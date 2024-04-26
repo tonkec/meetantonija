@@ -11,7 +11,7 @@ const MyMasonry = ({ images }) => {
   return (
     <>
       <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2 }}>
-        <Masonry gutter="10" columnsCount={2}>
+        <Masonry gutter="20px" columnsCount={2}>
           {images.map((image, index) => (
             <div
               key={index}

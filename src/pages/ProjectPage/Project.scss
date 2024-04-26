@@ -37,16 +37,6 @@
     padding-bottom: 400px;
   }
 
-  .circle {
-    background-color: var(--color-blue);
-  }
-
-  .skewed-top {
-    &::after {
-      background-color: var(--color-blue);
-    }
-  }
-
   .flex {
     color: var(--color-white);
     flex-direction: column;
@@ -96,16 +86,6 @@
   margin-top: 0px;
   padding-top: 200px;
   padding-bottom: 50px;
-
-  .skewed-top {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-
-    .circle {
-      bottom: 0;
-    }
-  }
 }
 
 .steps-container ~ #tldr {

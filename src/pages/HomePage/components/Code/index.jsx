@@ -12,13 +12,9 @@ const typescriptCode =
 
 const Code = () => {
   return (
-    <section className="bg-yellow codes-section">
-      <div className="skewed-top">
-        <div className="circle"></div>
-        <div className="circle"></div>
-      </div>
+    <section className="codes-section">
       <div className="container">
-        <h2>✅ I think clicking is so last season.</h2>
+        <h2>✅ I write beautiful code.</h2>
 
         <Draggable bounds="parent">
           <div className="code">

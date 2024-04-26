@@ -37,19 +37,6 @@
     }
   }
 
-  .bg-blue {
-    background-color: var(--color-blue);
-    color: var(--color-white);
-
-    padding: 50px 20px;
-    @include breakpoint(xl) {
-      padding: 50px;
-      max-width: 30%;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-    }
-  }
-
   .bg-white {
     .circle {
       background-color: var(--color-white);

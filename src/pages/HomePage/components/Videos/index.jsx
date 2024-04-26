@@ -3,7 +3,7 @@ import Dashboard from './components/Dashboard'
 
 const Videos = () => {
   return (
-    <section className="bg-black">
+    <section>
       <div className="container">
         <h2> 🎥 I create short tutorials.</h2>
 

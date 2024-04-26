@@ -50,10 +50,6 @@ const ProjectPage = () => {
       </header>
 
       <section className="bg-blue has-elevated">
-        <div className="skewed-top">
-          <div className="circle"></div>
-          <div className="circle"></div>
-        </div>
         <div className="flex container">
           <div>
             <h3>Technologies 🚀</h3>

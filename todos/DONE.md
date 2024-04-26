@@ -1,5 +1,5 @@
 ## GOTOVO
-
+15. pokazat jos pitanja u Is there anything else you would like to know?
 45. u navigaciji maknut trenutnu rutu 27.04
 46. nothing found u navigaciji kad nema nicega 27.04
 47. steps section nije skroz responsive 27.04

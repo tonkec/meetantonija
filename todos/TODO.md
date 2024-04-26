@@ -1,22 +1,28 @@
 #### Dizajn?
+21. posts stranicu malo bolje dizajnirat
+28. napravit sustav za razmake
+  - razmaci u flex/grid
+  - razmaci u section heading
+  - container size
+  - razmak paragraf
+  - razmak liste
 
-16. di sam sve pricala dizajnirat do kraja
-17. hompage malo izmijenit
-18. plejsat hire me section
-19. mystory na about da bude zuti? ili odgovori da budu zuti? ovako je preplavo
-20. containeri na about page, odzumiraj pa vidi
-21. posts stranicu malo bolje dizajnirat?
+#### Redizajnirat skroz sve
+1. da sve bude bijelo vecinski, a samo tu i tamo neka boja
+  - https://coolors.co/palette/ff6700-ebebeb-c0c0c0-3a6ea5-004e98 
+  - narancasta accent color
 
-#### Responsive issues
-
-20. aside na homepage nije skroz responsive cca 700px - 900px
-21. padding na mystory about page na malim ekranima i za odgovor na pitanje isto padding
 
 #### Bugs/improvements
-
-15. pokazat jos pitanja u Is there anything else you would like to know?
 16. na cvu kad se stisne na tehnologiju ne bi se trebao pokazat loader, page transition
 17. layout shifting za typed text
+
+#### Novi featuri
+
+4. animacije na graf na projekt page => 27 i 28.04
+5. cursor dodat neki fensi, mozda? https://github.com/tholman/cursor-effects
+6. favicon
+
 
 #### Post page
 
@@ -84,13 +90,6 @@
 #### README.md
 
 - redirect na about this page
-
-#### Novi featuri
-
-4. animacije na graf na projekt page => 27 i 28.04
-5. cursor dodat neki fensi, mozda? https://github.com/tholman/cursor-effects
-6. favicon
-7. dodat zvuk kad se navigacija otvara
 
 #### Nove stranice
 

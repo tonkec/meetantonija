@@ -79,10 +79,7 @@ const PostPage = () => {
         }}
       />
 
-      <section className="bg-yellow has-padding">
-        <div className="skewed-top">
-          <div className="circle"></div>
-        </div>
+      <section className="has-padding">
         <div className="container">
           <h2>Read some other posts</h2>
           <div className=" other-posts">
