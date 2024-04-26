@@ -114,7 +114,6 @@ const AboutPage = () => {
       </header>
       <main className="about-main">
         <section>
-        
           <div className="container">
             <h2>💎 I bring a lot of values to the table.</h2>
 

@@ -9,7 +9,10 @@ const Steps = ({ className, steps, headline }) => {
         <div className="grid">
           {steps.map((step, index) => {
             return (
-              <div key={index} className="bg-gradient medium-padding text-white border-radius">
+              <div
+                key={index}
+                className="bg-gradient medium-padding text-white border-radius"
+              >
                 <h3>
                   {index + 1}. {step.title}
                 </h3>

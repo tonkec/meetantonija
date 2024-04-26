@@ -1,40 +1,39 @@
 @import './../../styles//mq.scss';
 
-
 .icons-container {
-    justify-content: space-between;
-    align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 99;
+  button {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-black);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     position: relative;
     z-index: 99;
-    button {
-      display: inline-block;
-      background-color: transparent;
-      color: var(--color-black);
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      position: relative;
-      z-index: 99;
-      @include breakpoint(lg) {
-        display: none;
-      }
-    }
-  
-    h6 {
+    @include breakpoint(lg) {
       display: none;
-      @include breakpoint(lg) {
-        display: block;
-      }
-    }
-  
-    .icons {
-      gap: 30px;
-      a {
-        transition: transform 0.3s;
-      }
-  
-      a:hover {
-        transform: translateY(-5px);
-      }
     }
   }
+
+  h6 {
+    display: none;
+    @include breakpoint(lg) {
+      display: block;
+    }
+  }
+
+  .icons {
+    gap: 30px;
+    a {
+      transition: transform 0.3s;
+    }
+
+    a:hover {
+      transform: translateY(-5px);
+    }
+  }
+}

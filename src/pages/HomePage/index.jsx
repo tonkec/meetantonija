@@ -52,7 +52,7 @@ const HomePage = () => {
             },
           ]}
         />
-        <Aside numberOfPosts={2} />
+        <Aside numberOfPosts={4} />
         <Videos />
 
         <HireMe />

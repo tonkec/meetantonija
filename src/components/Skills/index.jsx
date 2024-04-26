@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { removeSpacesAndDashesFromString } from '../../utils'
- 
+
 const Skills = ({ skills }) => {
   const navigate = useNavigate()
   return (

@@ -1,16 +1,16 @@
 #### Dizajn?
+
 21. posts stranicu malo bolje dizajnirat
-28. napravit sustav za razmake
-  - razmaci u flex/grid
-  - razmaci u section heading
-  - container size
-  - razmak paragraf
-  - razmak liste
+22. napravit sustav za razmake
 
-
-
+- razmaci u flex/grid
+- razmaci u section heading
+- container size
+- razmak paragraf
+- razmak liste
 
 #### Bugs/improvements
+
 16. na cvu kad se stisne na tehnologiju ne bi se trebao pokazat loader, page transition
 17. layout shifting za typed text
 
@@ -19,7 +19,6 @@
 4. animacije na graf na projekt page => 27 i 28.04
 5. cursor dodat neki fensi, mozda? https://github.com/tholman/cursor-effects
 6. favicon
-
 
 #### Post page
 

@@ -35,7 +35,7 @@ const Previewer = () => {
             <span>I bark in pure CSS</span>
           </button>
           <button
-          className='primary text-left small-padding'
+            className="primary text-left small-padding"
             onClick={() => {
               buttonWrapper.current.childNodes.forEach((button) => {
                 button.classList.remove('active')
@@ -52,7 +52,7 @@ const Previewer = () => {
             <span>Watch out for my pure CSS spikes</span>
           </button>
           <button
-          className='primary text-left small-padding'
+            className="primary text-left small-padding"
             onClick={() => {
               buttonWrapper.current.childNodes.forEach((button) => {
                 button.classList.remove('active')

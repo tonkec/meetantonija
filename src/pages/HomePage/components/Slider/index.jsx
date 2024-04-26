@@ -28,8 +28,14 @@ const Slider = ({ items, headline }) => {
               <div key={project.id} className="keen-slider__slide">
                 <h3>{project.title}</h3>
                 <BrowserFrame>
-                  <span className='block'>{project.headline}.</span>
-                  <a role='button' className='ternary inline-block' href={`/project/${project.id}`}>Read more</a>
+                  <span className="block">{project.headline}.</span>
+                  <a
+                    role="button"
+                    className="ternary inline-block"
+                    href={`/project/${project.id}`}
+                  >
+                    Read more
+                  </a>
                 </BrowserFrame>
                 <Skills skills={project.skills.split(',')} />
               </div>

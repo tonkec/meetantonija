@@ -88,7 +88,10 @@ const PostPage = () => {
               .map((post) => (
                 <div key={post.id} className="other-post">
                   <h4>{post.title}</h4>
-                  <button onClick={() => navigate(`/post/${post.id}`)} className='secondary'>
+                  <button
+                    onClick={() => navigate(`/post/${post.id}`)}
+                    className="secondary"
+                  >
                     Read more
                   </button>
                 </div>

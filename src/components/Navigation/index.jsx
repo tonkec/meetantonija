@@ -1,11 +1,9 @@
-
 import { useState, useEffect } from 'react'
 
 import { RxHamburgerMenu } from 'react-icons/rx'
 import Social from './../../components/Social'
 import { LuLinkedin, LuGithub, LuCodepen } from 'react-icons/lu'
-import "./Navigation.scss"
-
+import './Navigation.scss'
 
 const socialLinks = [
   { href: 'https://codepen.io/tonkec', icon: LuCodepen },
@@ -14,7 +12,6 @@ const socialLinks = [
 ]
 
 const Navigation = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
-   
   return (
     <div className="container flex icons-container">
       <button>

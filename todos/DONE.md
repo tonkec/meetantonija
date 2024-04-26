@@ -1,52 +1,53 @@
 ## GOTOVO
+
 15. pokazat jos pitanja u Is there anything else you would like to know?
-45. u navigaciji maknut trenutnu rutu 27.04
-46. nothing found u navigaciji kad nema nicega 27.04
-47. steps section nije skroz responsive 27.04
-48. border radius od input searcha na navigaciji, ne bi trebao biti dolje 27.04
-49. social iconse extractat u komponentu 29.04
+16. u navigaciji maknut trenutnu rutu 27.04
+17. nothing found u navigaciji kad nema nicega 27.04
+18. steps section nije skroz responsive 27.04
+19. border radius od input searcha na navigaciji, ne bi trebao biti dolje 27.04
+20. social iconse extractat u komponentu 29.04
     - stavit listu arrayja s linkom i ikonom
-50. via email u hire me sectionu, dodat tooltip i objasnit zasto ne volim da me se zove
-51. dodat emojije na headinge u about page 27.04
-52. peaks se ne vidi na malim ekranima na homepage na projektima
-53. header na homepageu nije skroz responsive, 400px sirine slika ide preko teksta 27.04
-54. da li headingsi na homepageu trebaju imat tocku 29.04
-55. da li kodiram 10 ili 11 godina 29.04
-56. istipkavanje ne radi kad se navigira s jedne stranice na drugu 27.04
-57. zasto nakon klika na tldr navigacija skrolla to the top 26.04
-58. klik na tehnologiju vodi do cv stranice? about page
-59. about section ima search u sebi koji u sebi ima opet section
-60. about.scss zasto svi nth childovi imaju istu color
-61. my story malo produzit, kad sam pocela s reactom, zasto sam pocela, koje ja to blogove pratim, kako ucim? produzit i what do I do in my free time. Napravit nekako zabavnije, stavit sliku mene bubnjevi, bajk? dodat nesto o mojoj osobnosti, sta volim, sta ne volim, koje domene volim, koje ne volim. pogledaj onaj stari cover letter
-62. footer skewed top na cv stranici i circle
-63. footer dizajnirat do kraja, dodat kockice u bg kao u headeru?
-64. sta bi se jos moglo istipkavat? (Header na cvu),
-65. zamijenit copyright i coded with love
-66. What I learned in this project? Why did I choose to work on this project, what was team like, was it scrum or kanban, how did we communicate, small or big team, koja je moja bila uloga? junior, mid, senior?
-67. za cv stranicu umjesto print pdfa? https://tailwindui.com/components/application-ui/data-display/description-lists
-68. kad se na projektu stisne na skill da preusmjeri na stranicu s projektima koji koriste samo taj skill ili da redirekta na cv i izlista projekte s tim skillovima? preko query paramsa. Da li da se isto dogodi i na about stranici kad se stisne na technology, isto i na projekt stranici
-69. cv stranica filter prema tehnologiji
-70. dovrsit zenskicu, stavit umjesto loadera
-71. dodat jos tehnologija na revuto, pimsf, peaks, craftstrom, tint
-72. ubit my two cents
-73. close navigation na escape
-74. istipkavanje mog imena u headeru i svaki title u headeru?
-75. bolje rjesenje za post loader
-76. selection highlighter
-77. loader za weather da bude inline a ne ovako da skace
-78. single post page dizajn i content
-79. dodat link na iduci post
-80. dovrsit self typing text
-81. skakanje footera na post page
-82. disable tab when modal open - ned 21.04
-83. Autofocus input - ned 21.04
-84. posts page dizajn?
-85. funderpro link na funderpro, a ne na mochalabs
-86. skip to tldr ne radi
-87. loading za weather, ovako izgleda glupo
-88. dodat loader na iframe loading?
-89. dodat novi tekst u draggable
-90. steps na revuto dodat jos
+21. via email u hire me sectionu, dodat tooltip i objasnit zasto ne volim da me se zove
+22. dodat emojije na headinge u about page 27.04
+23. peaks se ne vidi na malim ekranima na homepage na projektima
+24. header na homepageu nije skroz responsive, 400px sirine slika ide preko teksta 27.04
+25. da li headingsi na homepageu trebaju imat tocku 29.04
+26. da li kodiram 10 ili 11 godina 29.04
+27. istipkavanje ne radi kad se navigira s jedne stranice na drugu 27.04
+28. zasto nakon klika na tldr navigacija skrolla to the top 26.04
+29. klik na tehnologiju vodi do cv stranice? about page
+30. about section ima search u sebi koji u sebi ima opet section
+31. about.scss zasto svi nth childovi imaju istu color
+32. my story malo produzit, kad sam pocela s reactom, zasto sam pocela, koje ja to blogove pratim, kako ucim? produzit i what do I do in my free time. Napravit nekako zabavnije, stavit sliku mene bubnjevi, bajk? dodat nesto o mojoj osobnosti, sta volim, sta ne volim, koje domene volim, koje ne volim. pogledaj onaj stari cover letter
+33. footer skewed top na cv stranici i circle
+34. footer dizajnirat do kraja, dodat kockice u bg kao u headeru?
+35. sta bi se jos moglo istipkavat? (Header na cvu),
+36. zamijenit copyright i coded with love
+37. What I learned in this project? Why did I choose to work on this project, what was team like, was it scrum or kanban, how did we communicate, small or big team, koja je moja bila uloga? junior, mid, senior?
+38. za cv stranicu umjesto print pdfa? https://tailwindui.com/components/application-ui/data-display/description-lists
+39. kad se na projektu stisne na skill da preusmjeri na stranicu s projektima koji koriste samo taj skill ili da redirekta na cv i izlista projekte s tim skillovima? preko query paramsa. Da li da se isto dogodi i na about stranici kad se stisne na technology, isto i na projekt stranici
+40. cv stranica filter prema tehnologiji
+41. dovrsit zenskicu, stavit umjesto loadera
+42. dodat jos tehnologija na revuto, pimsf, peaks, craftstrom, tint
+43. ubit my two cents
+44. close navigation na escape
+45. istipkavanje mog imena u headeru i svaki title u headeru?
+46. bolje rjesenje za post loader
+47. selection highlighter
+48. loader za weather da bude inline a ne ovako da skace
+49. single post page dizajn i content
+50. dodat link na iduci post
+51. dovrsit self typing text
+52. skakanje footera na post page
+53. disable tab when modal open - ned 21.04
+54. Autofocus input - ned 21.04
+55. posts page dizajn?
+56. funderpro link na funderpro, a ne na mochalabs
+57. skip to tldr ne radi
+58. loading za weather, ovako izgleda glupo
+59. dodat loader na iframe loading?
+60. dodat novi tekst u draggable
+61. steps na revuto dodat jos
 
 - ne mora biti pravi css
 - mozes dodat i typescript nesto s Pick ili Omit
