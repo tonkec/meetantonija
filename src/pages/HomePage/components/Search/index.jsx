@@ -7,22 +7,20 @@ const Search = () => {
   const [questionContent, setQuestionContent] = useState(questions[0])
 
   return (
-    <div className="flex questions-container">
-      <section>
-        <div className="circle"></div>
-        <div className="circle"></div>
-        <div className="container">
-          <h2> Is there anything else you would like to know?</h2>
+    <div className="flex flex-gap container stretch">
+      <section className='flex-2'>
+      <h3> Is there anything else you would like to know?</h3>
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search for questions"
+            className='xs-padding block border-radius w-full small-margin-top border-black'
           />
 
-          <div className="questions">
+          <div className="flex flex-gap small-margin-top">
             {questions
-              .slice(0, 5)
+              .slice(0, 2)
               .filter((question) =>
                 question.title.toLowerCase().includes(search.toLowerCase())
               )
@@ -30,19 +28,17 @@ const Search = () => {
                 <div
                   key={question.id}
                   onClick={() => setQuestionContent(question)}
-                  className="question"
+                  role='button'
+                  className='bg-black xs-padding border-radius pointer max-w-400'
                 >
                   {question.title}
                 </div>
               ))}
           </div>
-        </div>
       </section>
-      <section>
-        <div className="container">
-          <h3>{questionContent.title}</h3>
-          <p>{questionContent.info}</p>
-        </div>
+      <section className='bg-blue flex-1 small-padding'>
+        <h3>{questionContent.title}</h3>
+        <p>{questionContent.info}</p>
       </section>
     </div>
   )

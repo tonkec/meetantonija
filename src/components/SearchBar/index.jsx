@@ -12,7 +12,7 @@ const SearchResults = ({ searchResults }) => {
       {searchResults.length ? (
         searchResults
       ) : (
-        <p>No route matches your query</p>
+        <p className='text-white'>No route matches your query</p>
       )}
     </div>
   )
@@ -33,7 +33,7 @@ const SearchBar = ({ isMobileNavigationOpen }) => {
     .map((route) => (
       <button
         key={route.path}
-        className="block w-full text-left"
+        className="block w-full text-left secondary"
         onClick={() => {
           navigate(route.path)
           setIsNavigationOpen(false)
@@ -88,9 +88,6 @@ const SearchBar = ({ isMobileNavigationOpen }) => {
     <FocusTrap>
       <div
         className="search-container show"
-        onClick={() => {
-          setIsNavigationOpen(false)
-        }}
       >
         <form onSubmit={onSubmit}>
           <input

@@ -1,4 +1,3 @@
-import './About.scss'
 import Search from '../../pages/HomePage/components/Search'
 import { FaHtml5, FaCss3, FaJs } from 'react-icons/fa'
 import { SiTypescript, SiRedux, SiReact, SiAngular } from 'react-icons/si'
@@ -14,7 +13,6 @@ import {
 } from '../../utils'
 import { images } from './images'
 import MyMasonry from './MyMasonry'
-import { useNavigate } from 'react-router-dom'
 
 const speakingEvents = [
   {
@@ -63,16 +61,22 @@ const technologies = [
   { technology: 'React', years: 4, icon: SiReact },
   { technology: 'Redux', years: 4, icon: SiRedux },
   { technology: 'Angular', years: 1, icon: SiAngular },
-  { technology: 'React Native', years: 1, icon: SiReact },
 ]
 
+const getYearWord = (years) => {
+  if (years === 1) {
+    return 'year'
+  } else {
+    return 'years'
+  }
+}
+
 const AboutPage = () => {
-  const navigate = useNavigate()
   const temperatureData = useTemperature()
   const { values, properties } = getValuesAndProperties(temperatureData)
   return (
     <>
-      <header className="about-header">
+      <header>
         <div className="container">
           <div className="flex">
             <div>
@@ -112,50 +116,49 @@ const AboutPage = () => {
           </div>
         </div>
       </header>
-      <main>
-        <section>
-          <div className="container">
-            <h2>💎 I bring a lot of values to the table.</h2>
+      <section className="large-padding-bottom">
+        <div className="container">
+          <h2>💎 I bring a lot of values to the table.</h2>
 
-            <p>
-              With a decade of experience in front-end development, I bring a
-              wealth of technical expertise to the table. I've mastered various
-              technologies, frameworks, and tools, allowing me to create robust
-              and responsive user interfaces with ease. My problem-solving
-              skills are finely honed after years of tackling challenges in
-              front-end development. I have a knack for identifying issues,
-              debugging code efficiently, and finding creative solutions to
-              complex problems. Attention to detail is one of my strengths. I
-              understand the importance of pixel-perfect precision in
-              implementing designs across different devices and browsers,
-              ensuring high-quality user experiences every time.
-            </p>
+          <p>
+            With a decade of experience in front-end development, I bring a
+            wealth of technical expertise to the table. I've mastered various
+            technologies, frameworks, and tools, allowing me to create robust
+            and responsive user interfaces with ease. My problem-solving skills
+            are finely honed after years of tackling challenges in front-end
+            development. I have a knack for identifying issues, debugging code
+            efficiently, and finding creative solutions to complex problems.
+            Attention to detail is one of my strengths. I understand the
+            importance of pixel-perfect precision in implementing designs across
+            different devices and browsers, ensuring high-quality user
+            experiences every time.
+          </p>
+        </div>
+      </section>
 
-            <h2>🚀 Technologies I am familiar with</h2>
-            <ul className="technologies">
-              {technologies.map((tech, index) => (
-                <li
-                  key={index}
-                  onClick={() => {
-                    navigate(
-                      `/cv?skill=${removeSpacesAndDashesFromString(tech.technology)}`
-                    )
-                  }}
-                >
-                  <span>
-                    <tech.icon className="icon" />
-                  </span>
-                  <span>
-                    {tech.technology} <br />
-                    {tech.years} years
-                  </span>
-                </li>
-              ))}
-            </ul>
+      <section className="bg-black">
+        <div className="container">
+          <h2>🚀 Technologies I am familiar with</h2>
+          <div className="small-grid">
+            {technologies.map((tech, index) => (
+              <a
+                key={index}
+                href={`/cv?skill=${removeSpacesAndDashesFromString(tech.technology)}`}
+                role="button"
+                className="secondary"
+              >
+                <p className='small-font'>
+                  <tech.icon className="small-margin-right" />{tech.years} {getYearWord(tech.years)}
+                </p>
+                <p>{tech.technology}</p>
+              </a>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="container">
+      <section className="bg-black large-padding-bottom">
+        <div className="container">
           <h2>📖 My story</h2>
 
           <p>
@@ -189,39 +192,40 @@ const AboutPage = () => {
             through it all, coding remained a constant source of inspiration and
             transformation, turning despair into creativity and hope.
           </p>
-        </section>
+        </div>
+      </section>
 
-        <section>
-          <div className="container">
-            <h2>🎤 I was a speaker at these events:</h2>
+      <section className='large-padding-bottom'>
+        <div className="container">
+          <h2>🎤 I was a speaker at these events:</h2>
 
-            <ul className="speaking-events">
-              {speakingEvents.map((event, index) => (
-                <li key={index}>
-                  <a
-                    href={event.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {event.name}
-                  </a>
-                  <p>{event.organizer}</p>
-                  <p>{event.year}</p>
-                </li>
-              ))}
-            </ul>
+          <div className="grid">
+            {speakingEvents.map((event, index) => (
+              <a
+                key={index}
+                href={event.link}
+                target="_blank"
+                rel="noreferrer"
+                className="secondary"
+                role='button'
+              >
+                <p>Name: {event.name}</p>
+                <p>Organizer: {event.organizer}</p>
+                <p>Year: {event.year}</p>
+              </a>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <Search />
+      <Search />
 
-        <section className="container">
-          <h2>🚴 My free time looks something like this </h2>
-          <MyMasonry images={images} />
-        </section>
+      <section className="container">
+        <h2>🚴 My free time looks something like this </h2>
+        <MyMasonry images={images} />
+      </section>
 
-        <HireMe />
-      </main>
+      <HireMe />
     </>
   )
 }
