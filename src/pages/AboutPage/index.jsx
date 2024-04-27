@@ -185,7 +185,7 @@ const AboutPage = () => {
             efficiency.
           </p>
 
-          <p className="small-margin-bottom">
+          <p>
             Through coding, I not only found solace in the midst of turmoil but
             also discovered a newfound passion that ignited my spirit. It was a
             journey marked by challenges and triumphs, darkness and light. Yet,
