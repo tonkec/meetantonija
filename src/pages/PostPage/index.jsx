@@ -48,9 +48,9 @@ const PostPage = () => {
         components={{
           h1({ children }) {
             return (
-              <header className='medium-padding-top medium-padding-bottom small-margin-bottom'>
+              <header className="medium-padding-top medium-padding-bottom small-margin-bottom">
                 <div className="container">
-                <TypedText type="h1">{children}</TypedText>
+                  <TypedText type="h1">{children}</TypedText>
                 </div>
               </header>
             )
@@ -81,23 +81,26 @@ const PostPage = () => {
         }}
       />
 
-      <section className='container medium-margin-top bg-black medium-padding border-radius'>
-      <h3 className='small-margin-bottom'>Read some other posts</h3>
-          <div className="grid">
-            {shuffleArray(otherPosts)
-              .slice(0, 2)
-              .map((post) => (
-                <div key={post.id} className="bg-blue medium-padding small-margin-bottom">
-                  <h4>{post.title}</h4>
-                  <button
-                    onClick={() => navigate(`/post/${post.id}`)}
-                    className="ternary small-margin-top inline-block"
-                  >
-                    Read more
-                  </button>
-                </div>
-              ))}
-          </div>
+      <section className="container medium-margin-top bg-black medium-padding border-radius">
+        <h3 className="small-margin-bottom">Read some other posts</h3>
+        <div className="grid">
+          {shuffleArray(otherPosts)
+            .slice(0, 2)
+            .map((post) => (
+              <div
+                key={post.id}
+                className="bg-blue medium-padding small-margin-bottom"
+              >
+                <h4>{post.title}</h4>
+                <button
+                  onClick={() => navigate(`/post/${post.id}`)}
+                  className="ternary small-margin-top inline-block"
+                >
+                  Read more
+                </button>
+              </div>
+            ))}
+        </div>
       </section>
     </div>
   )
