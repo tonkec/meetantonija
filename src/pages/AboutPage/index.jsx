@@ -173,7 +173,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="bg-black large-padding-bottom">
+      <section className="bg-black large-padding-bottom no-padding-top">
         <div className="container">
           <h2>🚀 Technologies I am familiar with</h2>
           <div className="small-grid">

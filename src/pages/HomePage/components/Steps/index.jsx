@@ -13,7 +13,7 @@ const Steps = ({ className, steps, headline }) => {
                 key={index}
                 className="bg-black small-padding text-white border-radius"
               >
-                <h4 className='small-margin-bottom'>
+                <h4 className="small-margin-bottom">
                   {index + 1}. {step.title}
                 </h4>
                 <span>{step.description}</span>

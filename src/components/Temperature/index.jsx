@@ -7,11 +7,11 @@ const Temperature = () => {
   const [isLoading, setIsLoading] = useState(true)
   const temperatureData = useTemperature()
   const getTemperatureMood = (temperature) => {
-    if (Number(temperature) < 20) {
+    if (Number(temperature) < 15) {
       return 'cold'
     }
 
-    if (Number(temperature) > 20) {
+    if (Number(temperature) > 16) {
       return 'warm'
     }
 

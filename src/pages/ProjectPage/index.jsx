@@ -52,36 +52,45 @@ const ProjectPage = () => {
       <section className="bg-black extra-large-padding-bottom relative header-padding-top">
         <div className="container grid medium-margin-bottom space-between">
           <div>
-            <h3 className='small-margin-bottom'> Technologies 🚀</h3>
-            <Skills buttonClass="secondary" skills={project.skills.split(',')} />
+            <h3 className="small-margin-bottom"> Technologies 🚀</h3>
+            <Skills
+              buttonClass="secondary"
+              skills={project.skills.split(',')}
+            />
           </div>
 
           <div>
-            <h3 className='small-margin-bottom'> Timeline 🗓️</h3>
+            <h3 className="small-margin-bottom"> Timeline 🗓️</h3>
             <p>
               {project.from} - {project.to}
             </p>
           </div>
 
           <div>
-            <h3 className='small-margin-bottom'> Link 🌐</h3>
-            <a href={project.link} target="_blank" rel="noreferrer" role='button' className='secondary inline-block'>
+            <h3 className="small-margin-bottom"> Link 🌐</h3>
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noreferrer"
+              role="button"
+              className="secondary inline-block"
+            >
               Open website
             </a>
           </div>
 
           <div>
-            <h3 className='small-margin-bottom'>Position 💼</h3>
+            <h3 className="small-margin-bottom">Position 💼</h3>
             <p>{project.position}</p>
           </div>
 
           <div>
-            <h3 className='small-margin-bottom'>Methodology 👩‍🏫</h3>
+            <h3 className="small-margin-bottom">Methodology 👩‍🏫</h3>
             <p>{project.methodology}</p>
           </div>
 
           <div>
-            <h3 className='small-margin-bottom'>Team 👨‍👩‍👧‍👦</h3>
+            <h3 className="small-margin-bottom">Team 👨‍👩‍👧‍👦</h3>
             <p>{getTeamSize(project.team)}</p>
           </div>
         </div>
@@ -97,7 +106,7 @@ const ProjectPage = () => {
         headline="🦶 These were the steps I took"
       />
 
-      <section className='bg-black'>
+      <section className="bg-black">
         <div className="container">
           <h2>What did I learn in this project?</h2>
           <p>{project.learned}</p>
@@ -108,7 +117,6 @@ const ProjectPage = () => {
           <p>{project.conclusion}</p>
         </div>
       </section>
- 
 
       <Slider
         headline="🏢 Check out other projects"

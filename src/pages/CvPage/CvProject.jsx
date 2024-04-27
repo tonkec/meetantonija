@@ -11,7 +11,9 @@ const CvProject = ({ project }) => {
         {project.from} - {project.to}
       </p>
       <p>{project.description}</p>
-      <Skills skills={project.skills.split(',')} />
+      <div className="small-margin-top small-margin-bottom">
+        <Skills skills={project.skills.split(',')} />
+      </div>
       <a href={`/project/${project.id}`} role="button" className="secondary">
         Read more
       </a>

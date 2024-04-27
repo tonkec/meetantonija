@@ -1,8 +1,10 @@
 .post-page {
-  padding-top: 50px;
   .container {
-    max-width: 1000px;
-    margin-top: 20px;
+   
+
+    span {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -12,17 +14,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.other-posts {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-
-  .other-post {
-    margin-bottom: 20px;
-    background-color: var(--color-black);
-    border-radius: 5px;
-    color: var(--color-white);
-  }
 }

@@ -49,6 +49,7 @@ const HomePage = () => {
               'Deliver the solution to the client. Make sure it is working as expected.',
           },
         ]}
+        className="large-padding-bottom"
       />
       <Aside numberOfPosts={2} />
       <Videos />

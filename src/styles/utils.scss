@@ -118,6 +118,14 @@
   margin-right: calc(var(--small-margin) / 2);
 }
 
+.medium-margin-top {
+  margin-top: calc(var(--small-margin) * 2);
+}
+
+.medium-padding-top {
+  padding-top: calc(var(--card-spacing) * 2);
+}
+
 .space-between {
   justify-content: space-between;
 }
@@ -150,6 +158,10 @@
 
 .no-padding-left {
   padding-left: 0;
+}
+
+.no-padding-top {
+  padding-top: 0;
 }
 
 .stretch {
@@ -194,4 +206,8 @@
 
 .header-padding-top {
   padding-top: calc(var(--card-spacing) * 6);
+}
+
+.max-w-400 {
+  max-width: 400px;
 }

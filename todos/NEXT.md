@@ -2,10 +2,7 @@
 
 1. da sve bude bijelo vecinski, a samo tu i tamo neka boja
 
-   - https://coolors.co/palette/ff6700-ebebeb-c0c0c0-3a6ea5-004e98
-   - narancasta accent color
-
-2. todo refactor komentari
+   - https://coolors.co/palette/03045e-0077b6-00b4d8-90e0ef-caf0f8
 
 #### Bugs/improvements
 
