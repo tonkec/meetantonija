@@ -8,6 +8,10 @@
   max-width: 1200px;
   margin: 0px auto;
   position: relative;
+  padding: 0 20px;
+  @include breakpoint('xl') {
+    padding: 0;
+  }
 }
 
 main {

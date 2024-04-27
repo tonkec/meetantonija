@@ -36,4 +36,13 @@ a[role='button'] {
       color: var(--color-white);
     }
   }
+
+  &.transparent {
+    background-color: transparent;
+    color: var(--color-black);
+
+    &:hover {
+      background-color: var(--color-dark-blue);
+    }
+  }
 }

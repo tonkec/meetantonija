@@ -1,5 +1,4 @@
 import { FaRobot, FaBook } from 'react-icons/fa'
-import { CgDanger } from 'react-icons/cg'
 import { LuPaintbrush2 } from 'react-icons/lu'
 import { GiSpiderWeb } from 'react-icons/gi'
 import { BsQuestionSquare } from 'react-icons/bs'
