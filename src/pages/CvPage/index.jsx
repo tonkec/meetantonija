@@ -1,6 +1,4 @@
 import projects from '../../data/projects'
-import Me from '../../images/me.jpeg'
-import Image from '../../components/Image'
 import TypedText from '../../components/TypedText'
 import { useSearchParams } from 'react-router-dom'
 import { arrayHasFullString } from '../../utils'
@@ -22,27 +20,34 @@ const CvPage = () => {
 
   return (
     <>
-     <header className="container homepage-header large-padding-bottom">
+      <header className="container header-padding-top header-padding-bottom">
         <TypedText type="h1">My CV</TypedText>
-        <Link to={cv} target="_blank" download role='button' className='primary'>
-            Download CV
+        <Link
+          to={cv}
+          target="_blank"
+          download
+          role="button"
+          className="primary"
+        >
+          Download CV
         </Link>
-     </header>
+      </header>
 
-     <section className="container">
-      {skill
-        ? sortedProjects
-            .filter((project) =>
-              arrayHasFullString(project.skills.split(','), skill)
-            )
-            .map((project) => <CvProject key={project.id} project={project} />)
-        : Object.entries(groupedByCompany).map(([, projects]) =>
-            projects.map((project) => (
-              <CvProject key={project.id} project={project} />
-            ))
-          )}
-     </section>
-
+      <section className="container">
+        {skill
+          ? sortedProjects
+              .filter((project) =>
+                arrayHasFullString(project.skills.split(','), skill)
+              )
+              .map((project) => (
+                <CvProject key={project.id} project={project} />
+              ))
+          : Object.entries(groupedByCompany).map(([, projects]) =>
+              projects.map((project) => (
+                <CvProject key={project.id} project={project} />
+              ))
+            )}
+      </section>
     </>
   )
 }

@@ -15,7 +15,7 @@ const HireMe = () => {
       <Tooltip
         id="email"
         style={{
-          backgroundColor: '#ff9f1c',
+          backgroundColor: 'var(--color-blue)',
           maxWidth: '400px',
         }}
       >
@@ -24,7 +24,7 @@ const HireMe = () => {
       </Tooltip>
 
       <button
-        className="primary inline-block small-margin-top"
+        className="secondary inline-block small-margin-top"
         onClick={() => {
           navigator.clipboard.writeText('antonija1023@gmail.com')
           setIsCopied(true)

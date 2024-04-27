@@ -74,9 +74,10 @@ const getYearWord = (years) => {
 const AboutPage = () => {
   const temperatureData = useTemperature()
   const { values, properties } = getValuesAndProperties(temperatureData)
+  const speakingEventsSorted = speakingEvents.sort((a, b) => b.year - a.year)
   return (
     <>
-      <header>
+      <header className="header-padding-bottom header-padding-top">
         <div className="container">
           <div className="flex">
             <div>
@@ -103,13 +104,11 @@ const AboutPage = () => {
               }}
               className="tooltip"
             >
-              <ul>
-                {properties.map((property, index) => (
-                  <li key={index}>
-                    {property}: {values[index]}
-                  </li>
-                ))}
-              </ul>
+              {properties.map((property, index) => (
+                <span className="block" key={index}>
+                  {property}: {values[index]}
+                </span>
+              ))}
             </Tooltip>
 
             <Image hasBackground src={Me} alt="Antonija" />
@@ -162,7 +161,7 @@ const AboutPage = () => {
         <div className="container">
           <h2>📖 My story</h2>
 
-          <p>
+          <p className="small-margin-bottom">
             In 2013, I found myself in the depths of depression, yearning for
             change and renewal. It was during this challenging time that I
             stumbled upon coding as a beacon of hope. Initially, I immersed
@@ -177,7 +176,7 @@ const AboutPage = () => {
             wash over me, as if I had finally found my true calling.
           </p>
 
-          <p>
+          <p className="small-margin-bottom">
             By 2018, my coding journey took a significant turn as I encountered
             React. Its simplicity and elegant syntax resonated deeply with me,
             and I was captivated by its ability to streamline the development
@@ -186,7 +185,7 @@ const AboutPage = () => {
             efficiency.
           </p>
 
-          <p>
+          <p className="small-margin-bottom">
             Through coding, I not only found solace in the midst of turmoil but
             also discovered a newfound passion that ignited my spirit. It was a
             journey marked by challenges and triumphs, darkness and light. Yet,
@@ -201,7 +200,7 @@ const AboutPage = () => {
           <h2>🎤 I was a speaker at these events:</h2>
 
           <div className="grid">
-            {speakingEvents.map((event, index) => (
+            {speakingEventsSorted.map((event, index) => (
               <a
                 key={index}
                 href={event.link}
