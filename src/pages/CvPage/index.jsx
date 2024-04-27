@@ -1,6 +1,5 @@
 import projects from '../../data/projects'
 import Me from '../../images/me.jpeg'
-import './Cv.scss'
 import Image from '../../components/Image'
 import TypedText from '../../components/TypedText'
 import { useSearchParams } from 'react-router-dom'
@@ -22,17 +21,15 @@ const CvPage = () => {
   }, {})
 
   return (
-    <main className="container cv-container">
-      <div className="flex">
-        <div>
-          <TypedText type="h1">Antonija's CV </TypedText>
-          <Link to={cv} target="_blank" download className="download">
+    <>
+     <header className="container homepage-header large-padding-bottom">
+        <TypedText type="h1">My CV</TypedText>
+        <Link to={cv} target="_blank" download role='button' className='primary'>
             Download CV
-          </Link>
-        </div>
-        <Image hasBackground src={Me} alt="Antonija" />
-      </div>
+        </Link>
+     </header>
 
+     <section className="container">
       {skill
         ? sortedProjects
             .filter((project) =>
@@ -44,7 +41,9 @@ const CvPage = () => {
               <CvProject key={project.id} project={project} />
             ))
           )}
-    </main>
+     </section>
+
+    </>
   )
 }
 

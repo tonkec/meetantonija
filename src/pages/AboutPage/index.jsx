@@ -147,8 +147,9 @@ const AboutPage = () => {
                 role="button"
                 className="secondary"
               >
-                <p className='small-font'>
-                  <tech.icon className="small-margin-right" />{tech.years} {getYearWord(tech.years)}
+                <p className="small-font">
+                  <tech.icon className="small-margin-right" />
+                  {tech.years} {getYearWord(tech.years)}
                 </p>
                 <p>{tech.technology}</p>
               </a>
@@ -195,7 +196,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className='large-padding-bottom'>
+      <section className="large-padding-bottom">
         <div className="container">
           <h2>🎤 I was a speaker at these events:</h2>
 
@@ -207,7 +208,7 @@ const AboutPage = () => {
                 target="_blank"
                 rel="noreferrer"
                 className="secondary"
-                role='button'
+                role="button"
               >
                 <p>Name: {event.name}</p>
                 <p>Organizer: {event.organizer}</p>

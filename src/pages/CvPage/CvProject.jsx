@@ -2,7 +2,7 @@ import Skills from '../../components/Skills'
 
 const CvProject = ({ project }) => {
   return (
-    <article key={project.id}>
+    <article key={project.id} className='large-padding-bottom'>
       <h3>
         {project.title !== project.company ? `${project.title} at` : null}{' '}
         {project.company}
@@ -12,7 +12,7 @@ const CvProject = ({ project }) => {
       </p>
       <p>{project.description}</p>
       <Skills skills={project.skills.split(',')} />
-      <a href={`/project/${project.id}`}>Read more</a>
+      <a href={`/project/${project.id}`} role='button' className='secondary'>Read more</a>
     </article>
   )
 }

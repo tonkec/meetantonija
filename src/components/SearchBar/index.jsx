@@ -12,7 +12,7 @@ const SearchResults = ({ searchResults }) => {
       {searchResults.length ? (
         searchResults
       ) : (
-        <p className='text-white'>No route matches your query</p>
+        <p className="text-white">No route matches your query</p>
       )}
     </div>
   )
@@ -86,9 +86,7 @@ const SearchBar = ({ isMobileNavigationOpen }) => {
 
   return (
     <FocusTrap>
-      <div
-        className="search-container show"
-      >
+      <div className="search-container show">
         <form onSubmit={onSubmit}>
           <input
             type="search"
