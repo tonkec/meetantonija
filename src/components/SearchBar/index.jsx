@@ -33,7 +33,7 @@ const SearchBar = ({ isMobileNavigationOpen }) => {
     .map((route) => (
       <button
         key={route.path}
-        className="block w-full text-left secondary"
+        className="block w-full text-left ternary"
         onClick={() => {
           navigate(route.path)
           setIsNavigationOpen(false)

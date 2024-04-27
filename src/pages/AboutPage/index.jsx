@@ -77,7 +77,7 @@ const AboutPage = () => {
   const speakingEventsSorted = speakingEvents.sort((a, b) => b.year - a.year)
   return (
     <>
-      <header className="header-padding-bottom header-padding-top">
+      <header className="header-padding-top">
         <div className="container">
           <div className="flex">
             <div>
@@ -137,28 +137,6 @@ const AboutPage = () => {
 
       <section className="bg-black">
         <div className="container">
-          <h2>🚀 Technologies I am familiar with</h2>
-          <div className="small-grid">
-            {technologies.map((tech, index) => (
-              <a
-                key={index}
-                href={`/cv?skill=${removeSpacesAndDashesFromString(tech.technology)}`}
-                role="button"
-                className="secondary"
-              >
-                <p className="small-font">
-                  <tech.icon className="small-margin-right" />
-                  {tech.years} {getYearWord(tech.years)}
-                </p>
-                <p>{tech.technology}</p>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-black large-padding-bottom">
-        <div className="container">
           <h2>📖 My story</h2>
 
           <p className="small-margin-bottom">
@@ -195,6 +173,28 @@ const AboutPage = () => {
         </div>
       </section>
 
+      <section className="bg-black large-padding-bottom">
+        <div className="container">
+          <h2>🚀 Technologies I am familiar with</h2>
+          <div className="small-grid">
+            {technologies.map((tech, index) => (
+              <a
+                key={index}
+                href={`/cv?skill=${removeSpacesAndDashesFromString(tech.technology)}`}
+                role="button"
+                className="secondary"
+              >
+                <p className="small-font">
+                  <tech.icon className="small-margin-right" />
+                  {tech.years} {getYearWord(tech.years)}
+                </p>
+                <p>{tech.technology}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="large-padding-bottom">
         <div className="container">
           <h2>🎤 I was a speaker at these events:</h2>
@@ -206,7 +206,7 @@ const AboutPage = () => {
                 href={event.link}
                 target="_blank"
                 rel="noreferrer"
-                className="secondary"
+                className="ternary"
                 role="button"
               >
                 <p>Name: {event.name}</p>

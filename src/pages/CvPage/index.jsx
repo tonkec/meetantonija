@@ -27,7 +27,7 @@ const CvPage = () => {
           target="_blank"
           download
           role="button"
-          className="primary"
+          className="ternary"
         >
           Download CV
         </Link>

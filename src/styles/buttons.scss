@@ -1,20 +1,23 @@
 @import './transitions.scss';
 
 button,
-a[role='button'] {
+a[role='button'],
+*[role='button'] {
   padding: calc(var(--button-spacing) / 2) var(--button-spacing);
   border-radius: var(--border-radius);
   border: none;
   cursor: pointer;
-  @include transition(background-color);
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
   text-decoration: none;
 
   &.primary {
-    background-color: var(--color-orange);
-    color: var(--color-white);
+    background-color: var(--color-accent);
+    color: var(--color-black);
 
     &:hover {
-      background-color: darken(#ff6700, 5%);
+      background-color: var(--color-dark-blue);
     }
   }
 
@@ -24,6 +27,7 @@ a[role='button'] {
 
     &:hover {
       background-color: var(--color-dark-blue);
+      color: var(--color-white);
     }
   }
 
@@ -33,7 +37,7 @@ a[role='button'] {
 
     &:hover {
       background-color: var(--color-accent);
-      color: var(--color-white);
+      color: var(--color-black);
     }
   }
 

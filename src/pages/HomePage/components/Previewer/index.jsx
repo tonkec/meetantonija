@@ -19,7 +19,7 @@ const Previewer = () => {
       <div className="flex codepen">
         <div ref={buttonWrapper}>
           <button
-            className="active primary text-left small-padding"
+            className="active ternary text-left small-padding xs-margin-bottom"
             onClick={() => {
               buttonWrapper.current.childNodes.forEach((button) => {
                 button.classList.remove('active')
@@ -35,7 +35,7 @@ const Previewer = () => {
             <p>I bark in pure CSS</p>
           </button>
           <button
-            className="primary text-left small-padding"
+            className="ternary text-left small-padding xs-margin-bottom"
             onClick={() => {
               buttonWrapper.current.childNodes.forEach((button) => {
                 button.classList.remove('active')
@@ -52,7 +52,7 @@ const Previewer = () => {
             <p>Watch out for my pure CSS spikes</p>
           </button>
           <button
-            className="primary text-left small-padding"
+            className="ternary text-left small-padding xs-margin-bottom"
             onClick={() => {
               buttonWrapper.current.childNodes.forEach((button) => {
                 button.classList.remove('active')

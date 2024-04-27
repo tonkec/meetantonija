@@ -37,7 +37,9 @@ const Slider = ({ items, headline }) => {
                     Read more
                   </a>
                 </BrowserFrame>
-                <Skills skills={project.skills.split(',')} />
+               <div className='small-margin-top'>
+               <Skills skills={project.skills.split(',')} />
+               </div>
               </div>
             )
           })}

@@ -1,14 +1,14 @@
 import { useNavigate } from 'react-router-dom'
 import { removeSpacesAndDashesFromString } from '../../utils'
 
-const Skills = ({ skills }) => {
+const Skills = ({ skills, buttonClass }) => {
   const navigate = useNavigate()
   return (
-    <div className="flex flex-gap-small small-padding no-padding-left flex-wrap">
+    <div className="flex flex-gap-small no-padding-left flex-wrap">
       {skills.map((s) => (
         <button
           key={s}
-          className="ternary"
+          className={`${buttonClass ? buttonClass : 'ternary'}`}
           onClick={() => {
             navigate(`/cv?skill=${removeSpacesAndDashesFromString(s)}`)
           }}

@@ -28,14 +28,14 @@ const ProjectPage = () => {
   }
   return (
     <>
-      <header className="project-header">
+      <header className="header-padding-top header-padding-bottom project-header">
         <div className="container">
           <div className="flex">
             <div>
               <h1>{project.title}</h1>
               <p>{project.headline}</p>
               <button
-                className="button"
+                className="button ternary inline-block small-margin-top"
                 onClick={() => {
                   scrollToTheElement('tldr')
                 }}
@@ -49,47 +49,45 @@ const ProjectPage = () => {
         </div>
       </header>
 
-      <section className="bg-blue has-elevated">
-        <div className="flex container">
+      <section className="bg-black extra-large-padding-bottom relative header-padding-top">
+        <div className="container grid medium-margin-bottom space-between">
           <div>
-            <h3>Technologies 🚀</h3>
-            <Skills skills={project.skills.split(',')} />
+            <h3 className='small-margin-bottom'> Technologies 🚀</h3>
+            <Skills buttonClass="secondary" skills={project.skills.split(',')} />
           </div>
 
           <div>
-            <h3>Timeline 🗓️</h3>
+            <h3 className='small-margin-bottom'> Timeline 🗓️</h3>
             <p>
               {project.from} - {project.to}
             </p>
           </div>
 
           <div>
-            <h3>Link 🌐</h3>
-            <a href={project.link} target="_blank" rel="noreferrer">
+            <h3 className='small-margin-bottom'> Link 🌐</h3>
+            <a href={project.link} target="_blank" rel="noreferrer" role='button' className='secondary inline-block'>
               Open website
             </a>
           </div>
-        </div>
 
-        <div className="flex container">
           <div>
-            <h3>Position 💼</h3>
+            <h3 className='small-margin-bottom'>Position 💼</h3>
             <p>{project.position}</p>
           </div>
 
           <div>
-            <h3>Methodology 👩‍🏫</h3>
+            <h3 className='small-margin-bottom'>Methodology 👩‍🏫</h3>
             <p>{project.methodology}</p>
           </div>
 
           <div>
-            <h3>Team 👨‍👩‍👧‍👦</h3>
+            <h3 className='small-margin-bottom'>Team 👨‍👩‍👧‍👦</h3>
             <p>{getTeamSize(project.team)}</p>
           </div>
         </div>
 
-        <div className="elevated">
-          <h2>Description</h2>
+        <div className="bg-blue elevated">
+          <h3>Description</h3>
           <p>{project.description}</p>
         </div>
       </section>
@@ -99,19 +97,18 @@ const ProjectPage = () => {
         headline="🦶 These were the steps I took"
       />
 
-      <section>
+      <section className='bg-black'>
         <div className="container">
           <h2>What did I learn in this project?</h2>
           <p>{project.learned}</p>
         </div>
-      </section>
 
-      <section id="tldr">
-        <div className="container">
+        <div className="container medium-margin-bottom">
           <h2>TL;DR</h2>
           <p>{project.conclusion}</p>
         </div>
       </section>
+ 
 
       <Slider
         headline="🏢 Check out other projects"

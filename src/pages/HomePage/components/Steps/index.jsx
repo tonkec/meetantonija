@@ -3,7 +3,7 @@ import './Steps.scss'
 const Steps = ({ className, steps, headline }) => {
   return (
     <section className={className}>
-      <div className="container large-padding-bottom">
+      <div className="container">
         <h2>{headline}</h2>
 
         <div className="grid">
@@ -11,12 +11,12 @@ const Steps = ({ className, steps, headline }) => {
             return (
               <div
                 key={index}
-                className="bg-gradient medium-padding text-white border-radius"
+                className="bg-black small-padding text-white border-radius"
               >
-                <h3>
+                <h4 className='small-margin-bottom'>
                   {index + 1}. {step.title}
-                </h3>
-                <p>{step.description}</p>
+                </h4>
+                <span>{step.description}</span>
               </div>
             )
           })}
