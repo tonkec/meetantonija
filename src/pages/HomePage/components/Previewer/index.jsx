@@ -32,7 +32,7 @@ const Previewer = () => {
             }}
           >
             <FaDog className="icon" />
-            <span>I bark in pure CSS</span>
+            <p>I bark in pure CSS</p>
           </button>
           <button
             className="primary text-left small-padding"
@@ -49,7 +49,7 @@ const Previewer = () => {
           >
             <RiCactusFill className="icon" />
 
-            <span>Watch out for my pure CSS spikes</span>
+            <p>Watch out for my pure CSS spikes</p>
           </button>
           <button
             className="primary text-left small-padding"
@@ -65,7 +65,7 @@ const Previewer = () => {
             }}
           >
             <LuMicroscope className="icon" />
-            <span>I enlarge the world in pure CSS</span>
+            <p>I enlarge the world in pure CSS</p>
           </button>
         </div>
 

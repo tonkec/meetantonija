@@ -12,31 +12,16 @@ const typescriptCode =
 
 const Code = () => {
   return (
-    <section className="codes-section">
-      <div className="container">
-        <h2>✅ I write beautiful code.</h2>
+    <section className="container">
+      <h2>✅ I write beautiful code.</h2>
 
-        <Draggable bounds="parent">
-          <div className="code">
-            <div className="bar">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <SyntaxHighlighter
-              language="javascript"
-              style={darcula}
-              children={String(javascriptCode).replace(/\n$/, '')}
-            />
-          </div>
-        </Draggable>
-
+      <div className="flex flex-wrap flex-gap relative">
         <Draggable bounds="parent">
           <div className="code css">
-            <div className="bar">
-              <span></span>
-              <span></span>
-              <span></span>
+            <div className="bar flex">
+              <span className="inline-block"></span>
+              <span className="inline-block"></span>
+              <span className="inline-block"></span>
             </div>
             <SyntaxHighlighter
               language="scss"
@@ -48,15 +33,30 @@ const Code = () => {
 
         <Draggable bounds="parent">
           <div className="code ts">
-            <div className="bar">
-              <span></span>
-              <span></span>
-              <span></span>
+            <div className="bar flex">
+              <span className="inline-block"></span>
+              <span className="inline-block"></span>
+              <span className="inline-block"></span>
             </div>
             <SyntaxHighlighter
               language="typescript"
               style={darcula}
               children={String(typescriptCode).replace(/\n$/, '')}
+            />
+          </div>
+        </Draggable>
+
+        <Draggable bounds="parent">
+          <div className="code">
+            <div className="bar flex">
+              <span className="inline-block"></span>
+              <span className="inline-block"></span>
+              <span className="inline-block"></span>
+            </div>
+            <SyntaxHighlighter
+              language="javascript"
+              style={darcula}
+              children={String(javascriptCode).replace(/\n$/, '')}
             />
           </div>
         </Draggable>

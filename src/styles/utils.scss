@@ -39,6 +39,10 @@
   padding: calc(var(--card-spacing) * 2);
 }
 
+.large-padding-bottom {
+  padding-bottom: calc(var(--card-spacing) * 4);
+}
+
 .text-white {
   color: var(--color-white);
 }
@@ -48,7 +52,8 @@
 }
 
 .bg-gradient {
-  background-image: var(--body-gradient);
+  background-image: var(--dark-gradient);
+  color: var(--color-white);
 }
 
 .grid {
@@ -77,15 +82,56 @@
   margin-bottom: var(--small-margin);
 }
 
+.medium-margin-bottom {
+  margin-bottom: calc(var(--small-margin) * 2);
+}
+
 .small-margin-top {
   margin-top: var(--small-margin);
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.bg-black {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.bg-dark-blue {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+}
+.bg-blue {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+.relative {
+  position: relative;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.no-padding-right {
+  padding-right: 0;
+}
+
+.stretch {
+  align-items: stretch;
 }
 
 .pull-right {
   margin-left: auto;
 }
 
-.bg-black {
-  background-color: var(--color-black);
-  color: var(--color-white);
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.pointer {
+  cursor: pointer;
 }

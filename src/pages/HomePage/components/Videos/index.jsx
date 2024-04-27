@@ -2,28 +2,26 @@ import Dashboard from './components/Dashboard'
 
 const Videos = () => {
   return (
-    <section>
+    <section className="bg-black no-padding-bottom">
       <div className="container">
         <h2> 🎥 I create short tutorials.</h2>
-
-        <div>
-          <a
-            href="https://www.youtube.com/watch?v=GQYJSmaSZow"
-            rel="noreferrer"
-            target="_blank"
-            role="button"
-            className="primary"
-          >
-            Watch video
-          </a>
+        <div className="bg-dark-blue dashboard-wrapper border-radius">
+          <div className="flex space-between small-margin-bottom">
+            <p>
+              This video shows how to code a responsive dashboard like the one
+              below 👇
+            </p>
+            <a
+              href="https://www.youtube.com/watch?v=GQYJSmaSZow"
+              rel="noreferrer"
+              target="_blank"
+              role="button"
+              className="primary pull-right inline-block"
+            >
+              Watch video
+            </a>
+          </div>
           <div className="border-radius">
-            <div className="description">
-              <p>
-                {' '}
-                This video shows how to code a responsive dashboard like the one
-                below 👇
-              </p>
-            </div>
             <Dashboard />
           </div>
         </div>

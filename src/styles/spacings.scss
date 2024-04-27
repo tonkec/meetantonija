@@ -1,7 +1,7 @@
 @import './mq.scss';
 
 :root {
-  --section-heading-spacing: 2rem;
+  --section-heading-spacing: 1rem;
   --button-spacing: 1rem;
   --border-radius: 5px;
   --card-spacing: 1rem;
@@ -12,7 +12,7 @@
 
 @include breakpoint('md') {
   :root {
-    --section-heading-spacing: 3rem;
+    --section-heading-spacing: 2rem;
     --button-spacing: 1.5rem;
     --card-spacing: 1.5rem;
     --grid-gap: 30px;
@@ -22,7 +22,7 @@
 
 @include breakpoint('lg') {
   :root {
-    --section-heading-spacing: 8rem;
+    --section-heading-spacing: 6rem;
     --button-spacing: 1.2rem;
     --card-spacing: 1.8rem;
     --grid-gap: 40px;
@@ -30,7 +30,11 @@
   }
 }
 
+section {
+  padding: calc(var(--section-heading-spacing) / 2) 0;
+}
+
 section h2 {
-  margin-top: var(--section-heading-spacing);
-  margin-bottom: calc(var(--section-heading-spacing) / 2);
+  padding-top: var(--section-heading-spacing);
+  padding-bottom: var(--section-heading-spacing);
 }

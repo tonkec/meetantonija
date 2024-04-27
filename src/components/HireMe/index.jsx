@@ -5,7 +5,7 @@ import { useState } from 'react'
 const HireMe = () => {
   const [isCopied, setIsCopied] = useState(false)
   return (
-    <div className="hire-me container">
+    <div className="bg-gradient container cta-section">
       <h2>Do you have a project in mind?</h2>
       <p>
         If you are interested in working with me, please get in touch via{' '}
@@ -24,7 +24,7 @@ const HireMe = () => {
       </Tooltip>
 
       <button
-        className="tertiary"
+        className="primary inline-block small-margin-top"
         onClick={() => {
           navigator.clipboard.writeText('antonija1023@gmail.com')
           setIsCopied(true)

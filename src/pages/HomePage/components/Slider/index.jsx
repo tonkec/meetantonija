@@ -28,7 +28,7 @@ const Slider = ({ items, headline }) => {
               <div key={project.id} className="keen-slider__slide">
                 <h3>{project.title}</h3>
                 <BrowserFrame>
-                  <span className="block">{project.headline}.</span>
+                  <p className="block">{project.headline}.</p>
                   <a
                     role="button"
                     className="ternary inline-block"

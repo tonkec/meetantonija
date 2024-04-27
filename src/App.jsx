@@ -43,7 +43,9 @@ function Layout() {
           isMobileNavigationOpen={isMobileNavigationOpen}
           setIsMobileNavigationOpen={setIsMobileNavigationOpen}
         />
-        <Outlet />
+        <main>
+          <Outlet />
+        </main>
         <Footer />
       </div>
     </>

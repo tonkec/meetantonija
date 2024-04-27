@@ -3,7 +3,7 @@ import './Steps.scss'
 const Steps = ({ className, steps, headline }) => {
   return (
     <section className={className}>
-      <div className="container">
+      <div className="container large-padding-bottom">
         <h2>{headline}</h2>
 
         <div className="grid">

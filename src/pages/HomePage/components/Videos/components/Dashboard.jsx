@@ -1,14 +1,14 @@
 import './Dashboard.scss'
-import { FaSearch } from 'react-icons/fa'
 
 const Dashboard = ({ title }) => {
+  const fakeTitle = title || 'Dashboard'
   return (
     <div className="dashboard">
       <aside>
         <nav>
           <ul>
             <li>
-              <a href="#">{title}</a>
+              <a href="#">{fakeTitle}</a>
             </li>
             <li>
               <a href="#">Users</a>
@@ -25,16 +25,17 @@ const Dashboard = ({ title }) => {
           </ul>
         </nav>
       </aside>
-      <header>
-        <div className="search">
-          <FaSearch className="icon" />
 
-          <input type="text" placeholder="Search..." />
-        </div>
-      </header>
       <main>
-        <div className="content content--left"></div>
-        <div className="content content--right"></div>
+        <header>
+          <div className="search">
+            <input type="text" placeholder="Fake search in dashboard..." />
+          </div>
+        </header>
+        <div className="flex stretch">
+          <div className="content content--left"></div>
+          <div className="content content--right"></div>
+        </div>
       </main>
     </div>
   )

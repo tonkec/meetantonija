@@ -1,9 +1,13 @@
 @import './../../../../../styles/transitions.scss';
+.dashboard-wrapper {
+  padding: 50px;
+  padding-bottom: 0;
+}
 
 .dashboard {
-  // todo refactor
   position: relative;
   flex: 1;
+  background-color: #f5f5f5;
 
   aside {
     width: 200px;
@@ -12,10 +16,11 @@
     left: 0;
     background-color: var(--color-brown);
     position: absolute;
+    padding: var(--card-spacing);
   }
 
   aside a {
-    color: #fff;
+    color: var(--color-white);
     text-decoration: none;
     font-size: 1rem;
     @include transition(color);
@@ -28,73 +33,58 @@
   aside ul {
     list-style: none;
     padding: 0;
-  }
 
-  li {
-    margin-bottom: 1rem;
+    li {
+      margin-bottom: 1rem;
+    }
   }
 
   header {
-    background-color: #cbf3f0; 
-    position: absolute;
-    right: 0;
-    left: 200px;
-    padding: 0 20px;
-    z-index: 2;
-  }
+    padding: 0;
+    margin-bottom: 10px;
 
-  header input {
-    border: none;
-    background-color: transparent;
-    width: 100%;
-    color: #000;
-    font-size: 0.9rem;
-    margin-top: 0;
-    padding-left: 0;
-    padding-bottom: 10px;
-    padding-top: 10px;
-  }
+    input {
+      border: none;
+      background-color: var(--color-white);
+      width: 100%;
+      color: var(--color-black);
+      font-size: 0.9rem;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      padding-left: 10px;
+      border-radius: var(--border-radius);
+      ::placeholder {
+        color: var(--color-black);
+      }
 
-  input:focus {
-    outline: none;
-  }
-
-  ::placeholder {
-    color: #000;
+      :focus {
+        outline: none;
+      }
+    }
   }
 
   main {
-    display: flex;
-    align-items: stretch;
     margin-left: 200px;
     padding: 1.2rem;
-    padding-top: 80px;
     height: 50vh;
-    gap: 1rem;
-    background-color: var(--color-white);
+    background-color: #fafafa;
+  }
+
+  .stretch {
+    height: calc(100% - 50px);
+    gap: 20px;
   }
 
   .content {
     padding: 2rem;
     flex: 1;
-    background-color: var(--color-accent);
-    border: 3px dashed #292929;
+    background-color: var(--color-brown);
+    border: 3px dashed var(--color-black);
     border-radius: 10px;
   }
 
   .content--left {
     flex-grow: 2;
-  }
-
-  .search {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-
-    .icon {
-      margin-right: 10px;
-    }
   }
 
   @media (max-width: 768px) {
@@ -103,11 +93,6 @@
       position: relative;
       padding: 1rem 0;
       height: auto;
-    }
-
-    header {
-      left: 0;
-      position: relative;
     }
 
     aside a {
