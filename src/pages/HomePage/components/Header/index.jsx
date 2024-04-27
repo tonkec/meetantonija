@@ -7,11 +7,6 @@ const Header = () => {
   return (
     <header className="container homepage-header">
       <div className="flex">
-        <Image
-          src="https://avatars.githubusercontent.com/u/5020758?v=4"
-          alt="Antonija"
-          hasBackground
-        />
         <div>
           <h1>Hey 👋</h1>
           <h2>
@@ -26,6 +21,12 @@ const Header = () => {
             CSS, Javascript and React.
           </TypedText>
         </div>
+
+        <Image
+          src="https://avatars.githubusercontent.com/u/5020758?v=4"
+          alt="Antonija"
+          hasBackground
+        />
       </div>
 
       <Tooltip

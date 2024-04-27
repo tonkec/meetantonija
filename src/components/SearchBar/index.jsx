@@ -6,6 +6,17 @@ import './SearchBar.scss'
 
 const delay = 0.1
 
+const SearchResults = ({ searchResults }) => {
+  return (
+    <div className="search-results">
+      {searchResults.length ? (
+        searchResults
+      ) : (
+        <p>No route matches your query</p>
+      )}
+    </div>
+  )
+}
 const SearchBar = ({ isMobileNavigationOpen }) => {
   const location = useLocation()
   const navigate = useNavigate()
@@ -22,7 +33,7 @@ const SearchBar = ({ isMobileNavigationOpen }) => {
     .map((route) => (
       <button
         key={route.path}
-        className="secondary block w-full text-left"
+        className="block w-full text-left"
         onClick={() => {
           navigate(route.path)
           setIsNavigationOpen(false)
@@ -75,7 +86,12 @@ const SearchBar = ({ isMobileNavigationOpen }) => {
 
   return (
     <FocusTrap>
-      <div className="search-container show">
+      <div
+        className="search-container show"
+        onClick={() => {
+          setIsNavigationOpen(false)
+        }}
+      >
         <form onSubmit={onSubmit}>
           <input
             type="search"
@@ -86,13 +102,7 @@ const SearchBar = ({ isMobileNavigationOpen }) => {
             value={search}
           />
 
-          <div>
-            {searchResults.length ? (
-              searchResults
-            ) : (
-              <button disabled>No route matches your query</button>
-            )}
-          </div>
+          <SearchResults searchResults={searchResults} />
         </form>
       </div>
     </FocusTrap>

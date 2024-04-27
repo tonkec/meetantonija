@@ -39,10 +39,7 @@ header {
   }
 
   .image-container {
-    @include breakpoint(lg) {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
+    position: absolute;
+    right: 0px;
   }
 }

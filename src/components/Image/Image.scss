@@ -1,6 +1,8 @@
 @import './../../styles//transitions.scss';
 .image-container {
   @include transition(transform);
+  position: relative;
+  z-index: 2;
   &::after {
     content: '';
     position: absolute;
@@ -13,6 +15,7 @@
     transform: rotate(0deg);
     border-radius: var(--border-radius);
     @include transition(transform);
+    z-index: 1;
   }
 
   &:hover {
@@ -24,6 +27,8 @@
 
   img {
     border-radius: var(--border-radius);
+    z-index: 2;
+    position: relative;
   }
 }
 
