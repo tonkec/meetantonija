@@ -2,9 +2,14 @@ import { useEffect, useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import routes from '../../routes'
 import FocusTrap from 'focus-trap-react'
+import { FaArrowRight } from "react-icons/fa";
+import projects from '../../data/projects';
+import posts from '../../data/posts';
+
 import './SearchBar.scss'
 
 const delay = 0.1
+const maxNumberOfResults = 2
 
 const SearchResults = ({ searchResults }) => {
   return (
@@ -17,16 +22,18 @@ const SearchResults = ({ searchResults }) => {
     </div>
   )
 }
+
 const SearchBar = ({ isMobileNavigationOpen }) => {
   const location = useLocation()
   const navigate = useNavigate()
   const [search, setSearch] = useState('')
   const [isNavigationOpen, setIsNavigationOpen] = useState(false)
-  const searchResults = routes
+  const searchedRoutes = routes
     .filter(
       (route) =>
         !route.path.includes(':id') &&
         route.path !== '*' &&
+        search !== '' &&
         route.path !== location.pathname
     )
     .filter((route) => route.path.includes(search))
@@ -39,7 +46,63 @@ const SearchBar = ({ isMobileNavigationOpen }) => {
           setIsNavigationOpen(false)
         }}
       >
-        {route.path}
+        Page: {route.path}
+      </button>
+    )).slice(0, maxNumberOfResults)
+
+    const searchedProjects = projects
+    .filter(
+      (project) =>
+        {
+          return search !== "" &&  project.title.toLowerCase().includes(search.toLowerCase())
+        }
+    ).map((project) => (
+      <button
+        key={project.title}
+        className="block w-full text-left ternary"
+        onClick={() => {
+          navigate(`/project/${project.id}`)
+          setIsNavigationOpen(false)
+        }}
+      >
+       Project: {project.title}
+      </button>
+    )).slice(0, maxNumberOfResults)
+
+    const searchedPosts = posts
+    .filter(
+      (post) =>
+        {
+          return search !== "" && post.title.toLowerCase().includes(search.toLowerCase()) 
+        }
+    ).map((post) => (
+      <button
+        key={post.title}
+        className="block w-full text-left ternary"
+        onClick={() => {
+          navigate(`/post/${post.id}`)
+          setIsNavigationOpen(false)
+        }}
+      >
+       Post: {post.title}
+      </button>
+    )).slice(0, maxNumberOfResults)
+
+  
+   const searchedResults = searchedRoutes.concat(searchedProjects)
+    .concat(searchedPosts)
+
+   
+    const allRoutes = routes.filter((route) => !route.path.includes(':id') && route.path !== '*').map((route) => (
+      <button
+        key={route.path}
+        className="block w-full text-left ternary"
+        onClick={() => {
+          navigate(route.path)
+          setIsNavigationOpen(false)
+        }}
+      >
+        Page: {route.path}
       </button>
     ))
 
@@ -87,17 +150,18 @@ const SearchBar = ({ isMobileNavigationOpen }) => {
   return (
     <FocusTrap>
       <div className="search-container show">
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} className='relative'>
           <input
-            type="search"
-            placeholder="Where would you like to go?"
+            type="text"
+            placeholder="What are you looking for?"
             onChange={(event) => {
               setSearch(event.target.value)
             }}
             value={search}
           />
-
-          <SearchResults searchResults={searchResults} />
+          
+          <FaArrowRight className='absolute' />
+          <SearchResults searchResults={searchedResults.length ? searchedResults : allRoutes} />
         </form>
       </div>
     </FocusTrap>

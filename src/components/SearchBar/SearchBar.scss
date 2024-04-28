@@ -17,6 +17,13 @@
 
   form {
     width: 400px;
+    border-bottom-left-radius:var(--border-radius);
+    border-bottom-right-radius:var(--border-radius);
+
+    svg {
+      right: 10px;
+      top: 15px;
+    }
   }
 
   &.show {
@@ -26,11 +33,11 @@
   input {
     width: 100%;
     z-index: 99;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius:var(--border-radius);
+    border-top-right-radius:var(--border-radius);
     border: none;
-    font-size: 1.2rem;
-    padding: 10px 20px;
+    font-size: 1rem;
+    padding: 15px 30px 15px 20px;
 
     &:focus {
       outline: none;
@@ -39,9 +46,8 @@
 
   .search-results {
     background-color: var(--color-black);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    z-index: 99;
+    border-bottom-left-radius:var(--border-radius);
+    border-bottom-right-radius:var(--border-radius);
 
     p {
       padding: 10px 20px;
@@ -51,5 +57,10 @@
   button {
     border-radius: 0;
     font-size: 1rem;
+
+    &:last-child {
+      border-bottom-left-radius: var(--border-radius);
+      border-bottom-right-radius: var(--border-radius);
+    }
   }
 }

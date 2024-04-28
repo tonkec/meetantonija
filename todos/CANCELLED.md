@@ -8,7 +8,7 @@
 
 - dodat onaj gore indicator za reading
 - 8. dodat u navigaciju jedan post i jedan projekt? sub 20.04
-
+- dodat mozda neki projekt s githuba?
 12. u top navigaciju stavit hire me button?
 13. Are you ready to talk mozda dodat moju sliku ko na trenutnoj stranici?
 14. https://giscus.app/ => samo na about this website za sad

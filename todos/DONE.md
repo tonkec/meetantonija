@@ -1,5 +1,16 @@
 ## GOTOVO
+49. za search bar https://react.dev => dodat samo search icon, i ove tipkice dolje i da se searchaju i postovi i projekti, pogledaj kod sean halpin kad stisnes / sta se dogodi 28.04
+50. ako neko napise neku tehnologiju, izlistat sve projekte s tom tehnologijom i njihove rute? 28.04 => to bi trebalo po tagovima tj skillovima
+48. inspiracija za navigaciju i postove https://preview.themeforest.net/item/zento-modern-lightweight-blog-for-wordpress/full_screen_preview/51579969
+1. What did I learn in this project? strgan layout
+1. social icons stavit ispod videa umjesto navigacije, mozda koristit elevated
+2. about page dizajn
 
+- di sam sve pricala dizajnirat do kraja
+- mystory na about da bude zuti? ili odgovori da budu zuti? ovako je preplavo
+- containeri na about page, odzumiraj pa vidi
+1. da sve bude bijelo vecinski, a samo tu i tamo neka boja
+   - https://coolors.co/palette/03045e-0077b6-00b4d8-90e0ef-caf0f8
 15. pokazat jos pitanja u Is there anything else you would like to know?
 16. u navigaciji maknut trenutnu rutu 27.04
 17. nothing found u navigaciji kad nema nicega 27.04
