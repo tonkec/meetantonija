@@ -14,11 +14,7 @@ const maxNumberOfResults = 2
 const SearchResults = ({ searchResults }) => {
   return (
     <div className="search-results">
-      {searchResults.length ? (
-        searchResults
-      ) : (
-        <p className="text-white">No route matches your query</p>
-      )}
+     {searchResults}
     </div>
   )
 }

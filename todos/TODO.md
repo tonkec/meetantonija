@@ -1,18 +1,8 @@
-#### Dizajn?
-
-21. posts stranicu malo bolje dizajnirat
-22. napravit sustav za razmake
-
-- razmaci u flex/grid
-- razmaci u section heading
-- container size
-- razmak paragraf
-- razmak liste
 
 #### Bugs/improvements
 
 16. na cvu kad se stisne na tehnologiju ne bi se trebao pokazat loader, page transition
-17. layout shifting za typed text
+
 
 #### Novi featuri
 
@@ -20,20 +10,7 @@
 5. cursor dodat neki fensi, mozda? https://github.com/tholman/cursor-effects
 6. favicon
 
-#### Post page
 
-11. https://www.npmjs.com/package/reading-time ?
-12. tagovi za postove
-13. iduci post => pogledaj ovdje https://preview.themeforest.net/item/zento-modern-lightweight-blog-for-wordpress/full_screen_preview/51579969,
-
-- maknut trenutni layout za iduci post
-- dodat malo vise detalja o iducem postu
-- mozda dodat arrowe lijevo i desno na postu za iduci kao plus 1 u ruti
-
-40. dodat ipak giscuss?
-41. share this article
-42. quote sentence
-43. code formatting http://localhost:3000/post/2 zasto je uvuceno
 
 #### About this page
 

@@ -1,11 +1,22 @@
 ## GOTOVO
+21. posts stranicu malo bolje dizajnirat
+43. code formatting http://localhost:3000/post/2 zasto je uvuceno
+22. napravit sustav za razmake
+- razmaci u flex/grid
+- razmaci u section heading
+- container size
+- razmak paragraf
+- razmak liste
+17. layout shifting za typed text
+1. responsive sve
 49. za search bar https://react.dev => dodat samo search icon, i ove tipkice dolje i da se searchaju i postovi i projekti, pogledaj kod sean halpin kad stisnes / sta se dogodi 28.04
 50. ako neko napise neku tehnologiju, izlistat sve projekte s tom tehnologijom i njihove rute? 28.04 => to bi trebalo po tagovima tj skillovima
 48. inspiracija za navigaciju i postove https://preview.themeforest.net/item/zento-modern-lightweight-blog-for-wordpress/full_screen_preview/51579969
 1. What did I learn in this project? strgan layout
 1. social icons stavit ispod videa umjesto navigacije, mozda koristit elevated
 2. about page dizajn
-
+20. aside na homepage nije skroz responsive cca 700px - 900px
+21. padding na mystory about page na malim ekranima i za odgovor na pitanje isto padding
 - di sam sve pricala dizajnirat do kraja
 - mystory na about da bude zuti? ili odgovori da budu zuti? ovako je preplavo
 - containeri na about page, odzumiraj pa vidi
