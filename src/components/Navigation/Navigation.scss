@@ -4,9 +4,12 @@
 .icons-container {
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  z-index: 99;
-  padding: 20px 0;
+  position: fixed;
+  left: 0;
+  right:0;
+  top: 0;
+  z-index: 99999;
+  padding: 20px;
   button {
     display: inline-block;
     background-color: transparent;
@@ -16,14 +19,14 @@
     cursor: pointer;
     position: relative;
     z-index: 99;
-    @include breakpoint(lg) {
+    @include breakpoint(xl) {
       display: none;
     }
   }
 
   h6 {
     display: none;
-    @include breakpoint(lg) {
+    @include breakpoint(xl) {
       display: block;
     }
   }

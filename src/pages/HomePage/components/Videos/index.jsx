@@ -6,7 +6,7 @@ const Videos = () => {
       <div className="container">
         <h2> 🎥 I create short tutorials.</h2>
         <div className="bg-dark-blue dashboard-wrapper border-radius">
-          <div className="flex space-between small-margin-bottom">
+          <div className="flex flex-responsive flex-gap space-between small-margin-bottom">
             <p>
               This video shows how to code a responsive dashboard like the one
               below 👇
@@ -21,7 +21,7 @@ const Videos = () => {
               Watch video
             </a>
           </div>
-          <div className="border-radius">
+          <div className="border-radius video-dashboard">
             <Dashboard />
           </div>
         </div>

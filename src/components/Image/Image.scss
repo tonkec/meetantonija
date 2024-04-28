@@ -3,6 +3,7 @@
   @include transition(transform);
   position: relative;
   z-index: 2;
+  max-width: 300px;
   &::after {
     content: '';
     position: absolute;

@@ -15,7 +15,7 @@ const Code = () => {
     <section className="container">
       <h2>✅ I write beautiful code.</h2>
 
-      <div className="flex flex-wrap flex-gap relative">
+      <div className="flex flex-responsive flex-wrap flex-gap relative">
         <Draggable bounds="parent">
           <div className="code css">
             <div className="bar flex">

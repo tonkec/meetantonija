@@ -9,14 +9,15 @@ a[role='button'],
   cursor: pointer;
   transition:
     background-color 0.3s ease-in-out,
-    color 0.3s ease-in-out;
+    color 0.3s ease-in-out, outline 0.3s ease-in-out;
   text-decoration: none;
 
   &.primary {
     background-color: var(--color-accent);
     color: var(--color-black);
 
-    &:hover {
+    &:hover, &:focus {
+      outline: solid 2px var(--color-accent);
       background-color: var(--color-dark-blue);
     }
   }
@@ -25,7 +26,8 @@ a[role='button'],
     background-color: var(--color-blue);
     color: var(--color-white);
 
-    &:hover {
+    &:hover, &:focus {
+      outline: solid 2px var(--color-accent);
       background-color: var(--color-dark-blue);
       color: var(--color-white);
     }
@@ -35,7 +37,8 @@ a[role='button'],
     background-color: var(--color-black);
     color: var(--color-white);
 
-    &:hover {
+    &:hover, &:focus {
+      outline: solid 2px var(--color-accent);
       background-color: var(--color-accent);
       color: var(--color-black);
     }
@@ -45,7 +48,8 @@ a[role='button'],
     background-color: transparent;
     color: var(--color-black);
 
-    &:hover {
+    &:hover, &:focus {
+      outline: solid 2px var(--color-accent);
       background-color: var(--color-dark-blue);
     }
   }

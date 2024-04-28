@@ -30,7 +30,7 @@ const ProjectPage = () => {
     <>
       <header className="header-padding-top header-padding-bottom project-header">
         <div className="container">
-          <div className="flex">
+          <div className="flex flex-responsive flex-gap">
             <div>
               <h1>{project.title}</h1>
               <p>{project.headline}</p>
@@ -49,7 +49,7 @@ const ProjectPage = () => {
         </div>
       </header>
 
-      <section className="bg-black extra-large-padding-bottom relative header-padding-top">
+      <section className="bg-black no-padding-bottom relative header-padding-top">
         <div className="container grid medium-margin-bottom space-between">
           <div>
             <h3 className="small-margin-bottom"> Technologies 🚀</h3>
@@ -95,8 +95,8 @@ const ProjectPage = () => {
           </div>
         </div>
 
-        <div className="bg-blue elevated">
-          <h3>Description</h3>
+        <div className="bg-blue pull-right max-w-50 small-padding large-margin-top">
+          <h3 className='small-margin-bottom'>Description</h3>
           <p>{project.description}</p>
         </div>
       </section>
@@ -112,7 +112,7 @@ const ProjectPage = () => {
           <p>{project.learned}</p>
         </div>
 
-        <div className="container medium-margin-bottom">
+        <div className="container medium-margin-bottom" id='tldr'>
           <h2>TL;DR</h2>
           <p>{project.conclusion}</p>
         </div>

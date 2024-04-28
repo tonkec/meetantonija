@@ -6,7 +6,7 @@ import TypedText from '../../../../components/TypedText'
 const Header = () => {
   return (
     <header className="container homepage-header header-padding-top header-padding-bottom">
-      <div className="flex">
+      <div className="flex flex-responsive flex-gap align-start">
         <div>
           <h1>Hey 👋</h1>
           <h2>

@@ -38,11 +38,12 @@ function Layout() {
   return (
     <>
       <SearchBar isMobileNavigationOpen={isMobileNavigationOpen} />
-      <div ref={contentWrapper} className="page-content">
-        <Navigation
+      <Navigation
           isMobileNavigationOpen={isMobileNavigationOpen}
           setIsMobileNavigationOpen={setIsMobileNavigationOpen}
         />
+      <div ref={contentWrapper} className="page-content">
+        
         <main>
           <Outlet />
         </main>

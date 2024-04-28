@@ -9,16 +9,6 @@ header {
     margin-bottom: 50px;
   }
 
-  .flex {
-    gap: 50px;
-    flex-direction: column;
-    align-items: flex-start;
-    @include breakpoint(md) {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
 
   img {
     border-radius: 5px;
@@ -33,10 +23,5 @@ header {
 .homepage-header {
   p {
     max-width: 700px;
-  }
-
-  .image-container {
-    position: absolute;
-    right: 0px;
   }
 }

@@ -22,7 +22,7 @@ const Search = () => {
     ))
 
   return (
-    <div className="flex flex-gap container stretch">
+    <div className="flex flex-responsive flex-gap container stretch">
       <section className="flex-2">
         <h3> Is there anything else you would like to know?</h3>
         <input

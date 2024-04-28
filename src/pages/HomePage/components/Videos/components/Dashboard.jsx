@@ -32,7 +32,7 @@ const Dashboard = ({ title }) => {
             <input type="text" placeholder="Fake search in dashboard..." />
           </div>
         </header>
-        <div className="flex stretch">
+        <div className="flex flex-responsive stretch">
           <div className="content content--left"></div>
           <div className="content content--right"></div>
         </div>

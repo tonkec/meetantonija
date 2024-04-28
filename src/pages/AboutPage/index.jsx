@@ -79,7 +79,7 @@ const AboutPage = () => {
     <>
       <header className="header-padding-top">
         <div className="container">
-          <div className="flex">
+          <div className="flex flex-responsive flex-gap align-start">
             <div>
               <h2>
                 I am <span className="accent">Antonija</span>,

@@ -1,3 +1,5 @@
+@import "./mq.scss";
+
 .accent {
   background-color: var(--color-black);
   background-clip: text;
@@ -122,6 +124,10 @@
   margin-top: calc(var(--small-margin) * 2);
 }
 
+.large-margin-top {
+  margin-top: calc(var(--small-margin) * 4);
+}
+
 .medium-padding-top {
   padding-top: calc(var(--card-spacing) * 2);
 }
@@ -209,10 +215,45 @@
 }
 
 .max-w-400 {
-  max-width: 400px;
+
+
+  @include breakpoint(xl) {
+    max-width: 400px;
+  }
+}
+
+.max-w-50 {
+
+  @include breakpoint(xl) {
+    max-width: 50%;
+  }
 }
 
 
 .absolute {
   position: absolute;
+}
+
+.flex-responsive {
+  flex-direction: column;
+
+  @include breakpoint(lg) {
+    flex-direction: row;
+  }
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.x-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pull-right {
+  margin-left: 0;
+  @include breakpoint(xl) {
+    margin-left: auto;
+  }
 }

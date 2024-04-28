@@ -1,5 +1,3 @@
-import { useState, useEffect } from 'react'
-
 import { RxHamburgerMenu } from 'react-icons/rx'
 import Social from './../../components/Social'
 import { LuLinkedin, LuGithub, LuCodepen } from 'react-icons/lu'
@@ -13,10 +11,13 @@ const socialLinks = [
 
 const Navigation = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
   return (
-    <div className="container flex icons-container">
+    <div className="container flex flex-gap icons-container">
       <button>
         <RxHamburgerMenu
-          onClick={() => setIsMobileNavigationOpen(!isMobileNavigationOpen)}
+          onClick={() => {
+            setIsMobileNavigationOpen(!isMobileNavigationOpen)
+            console.log('clicked')
+          }}
           fontSize={'2rem'}
         />
       </button>
