@@ -1,5 +1,5 @@
 ## GOTOVO
-
+7. navigacija animacija
 21. posts stranicu malo bolje dizajnirat
 22. code formatting http://localhost:3000/post/2 zasto je uvuceno
 23. napravit sustav za razmake

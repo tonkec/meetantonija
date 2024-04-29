@@ -3,8 +3,8 @@
 4. animacije na graf na projekt page => 27 i 28.04
 5. cursor dodat neki fensi, mozda? https://github.com/tholman/cursor-effects
 6. favicon
-7. navigacija animacija
-8. iamges on about border radius
+
+8. images on about border radius
 
 #### About this page
 
