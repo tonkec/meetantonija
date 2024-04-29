@@ -96,7 +96,7 @@ const ProjectPage = () => {
         </div>
 
         <div className="bg-blue pull-right max-w-50 small-padding large-margin-top">
-          <h3 className='small-margin-bottom'>Description</h3>
+          <h3 className="small-margin-bottom">Description</h3>
           <p>{project.description}</p>
         </div>
       </section>
@@ -112,7 +112,7 @@ const ProjectPage = () => {
           <p>{project.learned}</p>
         </div>
 
-        <div className="container medium-margin-bottom" id='tldr'>
+        <div className="container medium-margin-bottom" id="tldr">
           <h2>TL;DR</h2>
           <p>{project.conclusion}</p>
         </div>

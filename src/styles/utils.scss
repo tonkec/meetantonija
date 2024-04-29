@@ -1,4 +1,4 @@
-@import "./mq.scss";
+@import './mq.scss';
 
 .accent {
   background-color: var(--color-black);
@@ -215,20 +215,16 @@
 }
 
 .max-w-400 {
-
-
   @include breakpoint(xl) {
     max-width: 400px;
   }
 }
 
 .max-w-50 {
-
   @include breakpoint(xl) {
     max-width: 50%;
   }
 }
-
 
 .absolute {
   position: absolute;

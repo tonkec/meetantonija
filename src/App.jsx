@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import PageTransition from './components/PageTransition'
 import SearchBar from './components/SearchBar'
 import Navigation from './components/Navigation'
+import useScrollPosition from './hooks/useScrollPosition'
 
 function Layout() {
   const [isMobileNavigationOpen, setIsMobileNavigationOpen] = useState(false)
@@ -39,11 +40,10 @@ function Layout() {
     <>
       <SearchBar isMobileNavigationOpen={isMobileNavigationOpen} />
       <Navigation
-          isMobileNavigationOpen={isMobileNavigationOpen}
-          setIsMobileNavigationOpen={setIsMobileNavigationOpen}
-        />
+        isMobileNavigationOpen={isMobileNavigationOpen}
+        setIsMobileNavigationOpen={setIsMobileNavigationOpen}
+      />
       <div ref={contentWrapper} className="page-content">
-        
         <main>
           <Outlet />
         </main>
