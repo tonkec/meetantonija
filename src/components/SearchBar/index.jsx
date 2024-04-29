@@ -1,26 +1,29 @@
-import { useEffect, useState, useRef, forwardRef } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import routes from '../../routes'
 import FocusTrap from 'focus-trap-react'
 import { FaArrowRight } from 'react-icons/fa'
 import projects from '../../data/projects'
 import posts from '../../data/posts'
-
 import './SearchBar.scss'
 
 const delay = 0.1
 const maxNumberOfResults = 2
 
-const SearchResults = forwardRef(({ searchResults }, ref) => {
-  return (
-    <div ref={ref} className="search-results">
-      {searchResults}
-    </div>
-  )
-})
+const SearchResults = ({ searchResults }) => {
+  return <div className="search-results">{searchResults}</div>
+}
 
-const SearchBar = ({ isMobileNavigationOpen }) => {
-  const searchResultsRef = useRef(null)
+const NavigationButton = ({ onClick, value }) => (
+  <input
+    className="block w-full text-left ternary"
+    onClick={onClick}
+    type="submit"
+    value={value}
+  />
+)
+
+const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
   const location = useLocation()
   const navigate = useNavigate()
   const [search, setSearch] = useState('')
@@ -35,15 +38,13 @@ const SearchBar = ({ isMobileNavigationOpen }) => {
     )
     .filter((route) => route.path.includes(search))
     .map((route) => (
-      <input
+      <NavigationButton
         key={route.path}
-        className="block w-full text-left ternary"
         onClick={() => {
           navigate(route.path)
           setIsNavigationOpen(false)
         }}
         value={`Page: ${route.path}`}
-        type="submit"
       />
     ))
     .slice(0, maxNumberOfResults)
@@ -56,14 +57,12 @@ const SearchBar = ({ isMobileNavigationOpen }) => {
       )
     })
     .map((project) => (
-      <input
+      <NavigationButton
         key={project.title}
-        className="block w-full text-left ternary"
         onClick={() => {
           navigate(`/project/${project.id}`)
           setIsNavigationOpen(false)
         }}
-        type="submit"
         value={`Project: ${project.title}`}
       />
     ))
@@ -76,14 +75,12 @@ const SearchBar = ({ isMobileNavigationOpen }) => {
       )
     })
     .map((post) => (
-      <input
+      <NavigationButton
         key={post.title}
-        className="block w-full text-left ternary"
         onClick={() => {
           navigate(`/post/${post.id}`)
           setIsNavigationOpen(false)
         }}
-        type="submit"
         value={`Post: ${post.title}`}
       />
     ))
@@ -96,35 +93,33 @@ const SearchBar = ({ isMobileNavigationOpen }) => {
   const allRoutes = routes
     .filter((route) => !route.path.includes(':id') && route.path !== '*')
     .map((route) => (
-      <input
+      <NavigationButton
         key={route.path}
-        className="block w-full text-left ternary"
         onClick={() => {
           navigate(route.path)
           setIsNavigationOpen(false)
         }}
-        type="submit"
         value={`Page: ${route.path}`}
       />
     ))
 
+  const closeNavigation = useCallback(() => {
+    setSearch('')
+    setIsNavigationOpen(false)
+    setIsMobileNavigationOpen(false)
+  }, [setIsMobileNavigationOpen])
+
+  const openNavigation = useCallback(() => {
+    setSearch('')
+    setIsNavigationOpen(true)
+    setIsMobileNavigationOpen(true)
+  }, [setIsMobileNavigationOpen])
+
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
-        return setIsNavigationOpen(false)
-      }
-
-      if (event.shiftKey && event.key === 'K') {
-        // hack that clears the input and ignores just pressed shift + K as an input value
-        return isNavigationOpen
-          ? setTimeout(() => {
-              setSearch('')
-              setIsNavigationOpen(false)
-            }, delay)
-          : (setSearch(''),
-            setTimeout(() => {
-              setIsNavigationOpen(true)
-            }, delay))
+        closeNavigation()
+        return
       }
     }
 
@@ -133,7 +128,35 @@ const SearchBar = ({ isMobileNavigationOpen }) => {
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
     }
-  }, [isNavigationOpen])
+  }, [closeNavigation])
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.shiftKey && event.key === 'K') {
+        // hack that clears the input and ignores just pressed shift + K as an input value
+        isNavigationOpen || isMobileNavigationOpen
+          ? setTimeout(() => {
+              closeNavigation()
+            }, delay)
+          : setTimeout(() => {
+              openNavigation()
+            }, delay)
+        return
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [
+    isNavigationOpen,
+    isMobileNavigationOpen,
+    closeNavigation,
+    openNavigation,
+    setIsMobileNavigationOpen,
+  ])
 
   const onSubmit = (event) => {
     event.preventDefault()
@@ -143,21 +166,7 @@ const SearchBar = ({ isMobileNavigationOpen }) => {
     }
   }
 
-  const onKeyDownPress = (event) => {
-    if (event.key === 'Escape') {
-      setIsNavigationOpen(false)
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('keydown', onKeyDownPress)
-
-    return () => {
-      window.removeEventListener('keydown', onKeyDownPress)
-    }
-  }, [])
-
-  const shouldShowNavigation = isMobileNavigationOpen || isNavigationOpen
+  const shouldShowNavigation = isNavigationOpen || isMobileNavigationOpen
 
   if (!shouldShowNavigation) {
     return null
@@ -178,7 +187,6 @@ const SearchBar = ({ isMobileNavigationOpen }) => {
 
           <FaArrowRight className="absolute" />
           <SearchResults
-            ref={searchResultsRef}
             searchResults={searchedResults.length ? searchedResults : allRoutes}
           />
         </form>

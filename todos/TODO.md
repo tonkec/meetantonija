@@ -4,7 +4,7 @@
 5. cursor dodat neki fensi, mozda? https://github.com/tholman/cursor-effects
 6. favicon
 
-8. images on about border radius
+7. images on about border radius
 
 #### About this page
 

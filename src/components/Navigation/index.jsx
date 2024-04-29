@@ -19,14 +19,12 @@ const Navigation = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
   return (
     <div className={navigationClasses}>
       <div className="container flex flex-gap space-between flex-center">
-        <button>
-          <RxHamburgerMenu
-            onClick={() => {
-              setIsMobileNavigationOpen(!isMobileNavigationOpen)
-              console.log('clicked')
-            }}
-            fontSize={'2rem'}
-          />
+        <button
+          onClick={() => {
+            setIsMobileNavigationOpen(true)
+          }}
+        >
+          <RxHamburgerMenu fontSize={'2rem'} />
         </button>
         <h6>Shift + K</h6>
         <Social icons={socialLinks} />

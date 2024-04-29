@@ -1,8 +1,9 @@
 ## GOTOVO
+
 7. navigacija animacija
-21. posts stranicu malo bolje dizajnirat
-22. code formatting http://localhost:3000/post/2 zasto je uvuceno
-23. napravit sustav za razmake
+8. posts stranicu malo bolje dizajnirat
+9. code formatting http://localhost:3000/post/2 zasto je uvuceno
+10. napravit sustav za razmake
 
 - razmaci u flex/grid
 - razmaci u section heading
