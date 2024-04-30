@@ -34,25 +34,21 @@
       }
     }
   }
-  button {
-    display: inline-block;
-    background-color: transparent;
-    color: var(--color-black);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    position: relative;
-    z-index: 99;
-    @include breakpoint(xl) {
-      display: none;
-    }
-  }
+  
 
   h6 {
     display: none;
     color: var(--color-black);
-    @include breakpoint(xl) {
+    @include breakpoint(lg) {
       display: block;
+    }
+  }
+
+  button {
+    display:inline-block;
+
+    @include breakpoint(lg) {
+      display: none;
     }
   }
 

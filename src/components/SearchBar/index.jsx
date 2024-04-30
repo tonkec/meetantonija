@@ -190,7 +190,7 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
             searchResults={searchedResults.length ? searchedResults : allRoutes}
           />
         </form>
-        <button onClick={closeNavigation} className="absolute">
+        <button onClick={closeNavigation} className="absolute secondary">
           Close
         </button>
       </div>

@@ -10,7 +10,7 @@ const socialLinks = [
   { href: 'https://www.linkedin.com/in/antonija-simic/', icon: LuLinkedin },
 ]
 
-const Navigation = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
+const Navigation = ({ setIsMobileNavigationOpen }) => {
   const scrollPosition = useScrollPosition()
 
   const navigationClasses =
@@ -23,6 +23,7 @@ const Navigation = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
           onClick={() => {
             setIsMobileNavigationOpen(true)
           }}
+          className='ternary'
         >
           <RxHamburgerMenu fontSize={'2rem'} />
         </button>

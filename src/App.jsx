@@ -42,7 +42,6 @@ function Layout() {
         setIsMobileNavigationOpen={setIsMobileNavigationOpen}
       />
       <Navigation
-        isMobileNavigationOpen={isMobileNavigationOpen}
         setIsMobileNavigationOpen={setIsMobileNavigationOpen}
       />
       <div ref={contentWrapper} className="page-content">
