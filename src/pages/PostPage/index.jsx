@@ -5,12 +5,10 @@ import PostsImage from './PostsImage'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import './Post.scss'
-import TypedText from '../../components/TypedText'
 import posts from '../../data/posts'
-import { shuffleArray, truncateString } from '../../utils'
+import { shuffleArray } from '../../utils'
 import { readingTime } from 'reading-time-estimator'
-import { TwitterShareButton } from 'react-share'
-import { Tooltip } from 'react-tooltip'
+
 
 const Tags = (tags) => {
   return (
@@ -26,7 +24,6 @@ const Tags = (tags) => {
 
 const PostPage = () => {
   const [isLoading, setIsLoading] = useState(true)
-  const [selection, setSelection] = useState('')
   const navigate = useNavigate()
   const [text, setText] = useState('')
   const { id } = useParams()
