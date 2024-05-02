@@ -34,7 +34,6 @@
       }
     }
   }
-  
 
   h6 {
     display: none;
@@ -45,7 +44,7 @@
   }
 
   button {
-    display:inline-block;
+    display: inline-block;
 
     @include breakpoint(lg) {
       display: none;

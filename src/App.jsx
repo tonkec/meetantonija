@@ -41,9 +41,7 @@ function Layout() {
         isMobileNavigationOpen={isMobileNavigationOpen}
         setIsMobileNavigationOpen={setIsMobileNavigationOpen}
       />
-      <Navigation
-        setIsMobileNavigationOpen={setIsMobileNavigationOpen}
-      />
+      <Navigation setIsMobileNavigationOpen={setIsMobileNavigationOpen} />
       <div ref={contentWrapper} className="page-content">
         <main>
           <Outlet />

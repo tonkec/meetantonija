@@ -23,7 +23,7 @@ const Navigation = ({ setIsMobileNavigationOpen }) => {
           onClick={() => {
             setIsMobileNavigationOpen(true)
           }}
-          className='ternary'
+          className="ternary"
         >
           <RxHamburgerMenu fontSize={'2rem'} />
         </button>

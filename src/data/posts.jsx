@@ -47,7 +47,7 @@ const notes = [
       'I have been using fetch method for a while now. But I never really understood how it works. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. Fetch method is a modern replacement for XMLHttpRequest. It is a simple and powerful window method that allows you to fetch resources across the network. It is promise-based, so you can use it with async/await.',
   },
   {
-    tags: 'Javascript, Nullish coalescing operator',
+    tags: 'Javascript, Fundamentals, ES6',
     title: 'Double question mark operator',
     subtitle: 'What is this all about?',
     id: 5,

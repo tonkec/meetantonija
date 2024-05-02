@@ -7,15 +7,31 @@ import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import './Post.scss'
 import TypedText from '../../components/TypedText'
 import posts from '../../data/posts'
-import { shuffleArray } from '../../utils'
+import { shuffleArray, truncateString } from '../../utils'
+import { readingTime } from 'reading-time-estimator'
+import { TwitterShareButton } from 'react-share'
+import { Tooltip } from 'react-tooltip'
+
+const Tags = (tags) => {
+  return (
+    <p className="small-margin-bottom">
+      {tags.split(',').map((tag) => (
+        <span key={tag} className="tag">
+          {tag}
+        </span>
+      ))}
+    </p>
+  )
+}
 
 const PostPage = () => {
   const [isLoading, setIsLoading] = useState(true)
+  const [selection, setSelection] = useState('')
   const navigate = useNavigate()
   const [text, setText] = useState('')
   const { id } = useParams()
   const otherPosts = posts.filter((post) => post.id !== id)
-
+  const currentPost = posts.find((post) => post.id === Number(id))
   useEffect(() => {
     import(`./../../data/notes/${id}.md`)
       .then((res) => {
@@ -41,6 +57,10 @@ const PostPage = () => {
     )
   }
 
+  const minutesToRead =
+    readingTime(text).minutes === 1
+      ? '1 minute'
+      : `${readingTime(text).minutes} minutes`
   return (
     <div className="post-page">
       <ReactMarkdown
@@ -50,17 +70,15 @@ const PostPage = () => {
             return (
               <header className="medium-padding-top medium-padding-bottom small-margin-bottom">
                 <div className="container">
-                  <TypedText type="h1">{children}</TypedText>
+                  {currentPost && Tags(currentPost.tags)}
+                  <span>{minutesToRead} to read</span>
+                  <h1>{children}</h1>
                 </div>
               </header>
             )
           },
           p({ children }) {
-            return (
-              <div className="container medium-margin-top">
-                <p>{children}</p>
-              </div>
-            )
+            return <p className="container medium-margin-top">{children}</p>
           },
           img({ src }) {
             return <PostsImage src={src} />
@@ -81,26 +99,23 @@ const PostPage = () => {
         }}
       />
 
-      <section className="container medium-margin-top bg-black medium-padding border-radius">
-        <h3 className="small-margin-bottom">Read some other posts</h3>
-        <div className="grid">
-          {shuffleArray(otherPosts)
-            .slice(0, 2)
-            .map((post) => (
-              <div
-                key={post.id}
-                className="bg-blue medium-padding small-margin-bottom"
-              >
-                <h4>{post.title}</h4>
-                <button
-                  onClick={() => navigate(`/post/${post.id}`)}
-                  className="ternary small-margin-top inline-block"
-                >
-                  Read more
-                </button>
-              </div>
-            ))}
-        </div>
+      <section
+        className="container large-margin-top bg-black medium-padding border-radius max-w-600 pointer primary"
+        role="button"
+      >
+        {shuffleArray(otherPosts)
+          .slice(0, 1)
+          .map((post) => (
+            <div
+              key={post.id}
+              className="medium-padding small-margin-bottom text-center"
+              onClick={() => navigate(`/post/${post.id}`)}
+            >
+              <h5>Read next</h5>
+              <h3 className="small-margin-bottom">{post.title}</h3>
+              {post && Tags(post.tags)}
+            </div>
+          ))}
       </section>
     </div>
   )

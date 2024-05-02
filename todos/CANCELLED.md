@@ -7,7 +7,7 @@
 49. dodat klijenta (company vs title) i location 27.04
 50. dodat ipak giscuss?=> onda treba bit public repo a to ne zelim
 51. na cvu kad se stisne na tehnologiju ne bi se trebao pokazat loader, page transition
-49. dodat zvuk kad se navigacija otvara/zatvara
+52. dodat zvuk kad se navigacija otvara/zatvara
 
 - dodat onaj gore indicator za reading
 - 8. dodat u navigaciju jedan post i jedan projekt? sub 20.04

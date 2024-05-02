@@ -34,9 +34,8 @@ const MyMasonry = ({ images }) => {
           style={{
             overlay: {
               zIndex: 1000,
-            }
+            },
           }}
-          
         >
           <div
             className="content"

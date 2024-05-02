@@ -175,7 +175,7 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
   return (
     <FocusTrap>
       <div className="search-container show">
-        <form onSubmit={onSubmit} className="relative" autoFocus>
+        <form onSubmit={onSubmit} className="relative">
           <input
             type="text"
             placeholder="What are you looking for?"

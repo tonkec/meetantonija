@@ -1,4 +1,12 @@
 ## GOTOVO
+
+12. tagovi za postove
+13. iduci post => pogledaj ovdje https://preview.themeforest.net/item/zento-modern-lightweight-blog-for-wordpress/full_screen_preview/51579969,
+
+- maknut trenutni layout za iduci post
+- dodat malo vise detalja o iducem postu
+- mozda dodat arrowe lijevo i desno na postu za iduci kao plus 1 u ruti
+11. https://www.npmjs.com/package/reading-time ?
 50. mobile navigation button je strgan
 1. about page modal kad se klikne na sliku
 2. watch video na homepage na 700px strgan i aside strgan, nema paddinga
