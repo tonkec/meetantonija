@@ -6,7 +6,7 @@ const Videos = () => {
       <div className="container">
         <h2> 🎥 I create short tutorials.</h2>
         <div className="bg-dark-blue dashboard-wrapper border-radius">
-          <div className="flex flex-responsive flex-gap space-between small-margin-bottom">
+          <div className="flex flex-responsive flex-gap space-between small-margin-bottom align-start">
             <p>
               This video shows how to code a responsive dashboard like the one
               below 👇
@@ -16,7 +16,7 @@ const Videos = () => {
               rel="noreferrer"
               target="_blank"
               role="button"
-              className="ternary pull-right inline-block"
+              className="ternary pull-right inline-block text-center max-w-150"
             >
               Watch video
             </a>

@@ -3,7 +3,7 @@ import './Dashboard.scss'
 const Dashboard = ({ title }) => {
   const fakeTitle = title || 'Dashboard'
   return (
-    <div className="dashboard">
+    <div className="dashboard flex-responsive">
       <aside>
         <nav>
           <ul>

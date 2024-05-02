@@ -8,7 +8,7 @@
   top: 0px;
   z-index: 8;
   padding: 20px;
-  background-color: #caf0f8;
+  background-color: var(--color-black);
   margin: 0 auto;
   transition:
     width 0.3s ease-in-out,
@@ -38,7 +38,7 @@
 
   h6 {
     display: none;
-    color: var(--color-black);
+    color: var(--color-white);
     @include breakpoint(lg) {
       display: block;
     }
@@ -54,7 +54,7 @@
 
   .icons {
     a {
-      color: var(--color-black);
+      color: var(--color-white);
       @include transition(transform);
     }
 

@@ -27,7 +27,7 @@ const AsideContent = ({ noteContent }) => {
 const Aside = ({ numberOfPosts }) => {
   const [noteContent, setNoteContent] = useState({})
   return (
-    <section className="aside-section no-padding-bottom bg-black">
+    <section className="aside-section bg-black">
       <div className="container">
         <h2>👌 I write about technologies I like.</h2>
       </div>

@@ -1,4 +1,5 @@
 ## GOTOVO
+50. mobile navigation button je strgan
 
 50. mobile navigation button je strgan
 51. navigacija animacija

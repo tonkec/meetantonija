@@ -1,6 +1,7 @@
 @import './../../../../../styles/transitions.scss';
+@import './../../../../../styles/mq.scss';
 .dashboard-wrapper {
-  padding: 50px;
+  padding: var(--card-spacing);
   padding-bottom: 0;
 }
 
@@ -71,11 +72,14 @@
   }
 
   main {
-    width: 100%;
+    
     height: 100%;
     margin-left: 200px;
     padding: 1.2rem;
     background-color: #fafafa;
+    @include breakpoint(md) {
+      width: calc(100% - 200px);
+    }
   }
 
   .stretch {
@@ -99,7 +103,7 @@
     aside {
       width: 100%;
       position: relative;
-      padding: 1rem 0;
+      padding: 1rem;
       height: auto;
     }
 

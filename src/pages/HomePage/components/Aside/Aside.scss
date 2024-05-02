@@ -20,6 +20,10 @@
   }
 
   .note {
-    max-width: 600px;
+    max-width:400px;
+
+    @include breakpoint(lg) {
+      max-width: 600px;
+    }
   }
 }
