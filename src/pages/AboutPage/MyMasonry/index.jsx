@@ -31,6 +31,12 @@ const MyMasonry = ({ images }) => {
           isOpen={isModalOpen}
           onRequestClose={() => setIsModalOpen(false)}
           className="modal"
+          style={{
+            overlay: {
+              zIndex: 1000,
+            }
+          }}
+          
         >
           <div
             className="content"
