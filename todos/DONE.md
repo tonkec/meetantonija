@@ -1,5 +1,10 @@
 ## GOTOVO
 50. mobile navigation button je strgan
+1. about page modal kad se klikne na sliku
+2. watch video na homepage na 700px strgan i aside strgan, nema paddinga
+3. aside na homepage je prekratak kod posts
+4. next project browser bar je strgan
+5. fake dashboard aside nije responsive, trebao bi ici iznad maina
 
 50. mobile navigation button je strgan
 51. navigacija animacija

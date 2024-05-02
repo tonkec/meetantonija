@@ -1,11 +1,6 @@
 #### Bugs/improvements
 
 48. ne rade tipke gore dolje u navigaciji 26.04
-1. about page modal kad se klikne na sliku
-2. watch video na homepage na 700px strgan i aside strgan, nema paddinga
-3. aside na homepage je prekratak kod posts
-4. next project browser bar je strgan
-5. fake dashboard aside nije responsive, trebao bi ici iznad maina
 
 #### Post page
 
