@@ -1,8 +1,9 @@
 ## GOTOVO
+
 52. images on about border radius
 
-12. tagovi za postove
-13. iduci post => pogledaj ovdje https://preview.themeforest.net/item/zento-modern-lightweight-blog-for-wordpress/full_screen_preview/51579969,
+53. tagovi za postove
+54. iduci post => pogledaj ovdje https://preview.themeforest.net/item/zento-modern-lightweight-blog-for-wordpress/full_screen_preview/51579969,
 
 - maknut trenutni layout za iduci post
 - dodat malo vise detalja o iducem postu

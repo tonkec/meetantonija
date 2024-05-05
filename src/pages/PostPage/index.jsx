@@ -8,6 +8,7 @@ import './Post.scss'
 import posts from '../../data/posts'
 import { shuffleArray } from '../../utils'
 import { readingTime } from 'reading-time-estimator'
+import Quotable from '../../components/Quotable'
 
 const Tags = (tags) => {
   return (
@@ -59,6 +60,7 @@ const PostPage = () => {
       : `${readingTime(text).minutes} minutes`
   return (
     <div className="post-page">
+      <Quotable />
       <ReactMarkdown
         children={text}
         components={{
