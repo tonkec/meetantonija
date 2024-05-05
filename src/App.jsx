@@ -3,7 +3,6 @@ import { useState, useEffect, useRef } from 'react'
 import { Routes, Route, Outlet, useLocation } from 'react-router-dom'
 import routes from './routes'
 import Footer from './components/Footer'
-
 import PageTransition from './components/PageTransition'
 import SearchBar from './components/SearchBar'
 import Navigation from './components/Navigation'

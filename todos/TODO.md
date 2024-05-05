@@ -1,10 +1,3 @@
-#### Novi featuri
-
-4. animacije na graf na projekt page => 27 i 28.04
-5. cursor dodat neki fensi, mozda? https://github.com/tholman/cursor-effects
-6. favicon
-7. images on about border radius
-
 #### About this page
 
 37. dodat about this page => mozda napravit kao post?, u obliku README.md?
@@ -32,26 +25,6 @@
   - autofocus zasto nije radio
 - sta je ostalo u todo
 - pokazat stare verzije stranice?
-
-#### Code refactor
-
-2. previewer pametnije napravit
-
-- iterirat kroz listu
-
-3. pogledat kaj se dogada s browser stilovima, zasto se krse medusobno
-4. skewed-top i skewed-bottom u svoju komponentu s pozicijom kao propom
-5. pogledaj posts page, da li se main ponavlja? zawrappat outlet u main u App.jsx?
-6. anchori u Homepage/Videos/Dashboard
-7. linear gradient za steps i ostalo izdvojit u svoju varijablu
-8. refactorat PageTransition i ekipu
-9. zasto body i root overwritaju gradient sa background-color: var(--color-white);, linij 28 u global.scss
-10. input izvadit iz container.scss
-11. napravit button komponentu i uskladit sve buttone
-12. napravit Link komponentu i uskladit sve linkove
-13. technologies na about page loop through
-14. napravit loader komponentu i stavit trokut da bude loader
-15. dodat easing na sve transitione, napravit mixin?
 
 #### README.md
 

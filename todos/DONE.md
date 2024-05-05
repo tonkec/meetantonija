@@ -6,19 +6,20 @@
 - maknut trenutni layout za iduci post
 - dodat malo vise detalja o iducem postu
 - mozda dodat arrowe lijevo i desno na postu za iduci kao plus 1 u ruti
-11. https://www.npmjs.com/package/reading-time ?
-50. mobile navigation button je strgan
-1. about page modal kad se klikne na sliku
-2. watch video na homepage na 700px strgan i aside strgan, nema paddinga
-3. aside na homepage je prekratak kod posts
-4. next project browser bar je strgan
-5. fake dashboard aside nije responsive, trebao bi ici iznad maina
 
-50. mobile navigation button je strgan
-51. navigacija animacija
-52. posts stranicu malo bolje dizajnirat
-53. code formatting http://localhost:3000/post/2 zasto je uvuceno
-54. napravit sustav za razmake
+11. https://www.npmjs.com/package/reading-time ?
+12. mobile navigation button je strgan
+13. about page modal kad se klikne na sliku
+14. watch video na homepage na 700px strgan i aside strgan, nema paddinga
+15. aside na homepage je prekratak kod posts
+16. next project browser bar je strgan
+17. fake dashboard aside nije responsive, trebao bi ici iznad maina
+
+18. mobile navigation button je strgan
+19. navigacija animacija
+20. posts stranicu malo bolje dizajnirat
+21. code formatting http://localhost:3000/post/2 zasto je uvuceno
+22. napravit sustav za razmake
 
 - razmaci u flex/grid
 - razmaci u section heading
@@ -152,3 +153,23 @@
 29. napravit bolju navigaciju, command plus 1,2,3 ili da se trenutna filtrira na tipkanje
 30. kad se scrolla da se animacija pojavi za pitanja
 31. i write beautiful code section do kraja
+
+#### Code refactor
+
+2. previewer pametnije napravit
+
+- iterirat kroz listu
+
+3. pogledat kaj se dogada s browser stilovima, zasto se krse medusobno
+4. skewed-top i skewed-bottom u svoju komponentu s pozicijom kao propom
+5. pogledaj posts page, da li se main ponavlja? zawrappat outlet u main u App.jsx?
+6. anchori u Homepage/Videos/Dashboard
+7. linear gradient za steps i ostalo izdvojit u svoju varijablu
+8. refactorat PageTransition i ekipu
+9. zasto body i root overwritaju gradient sa background-color: var(--color-white);, linij 28 u global.scss
+10. input izvadit iz container.scss
+11. napravit button komponentu i uskladit sve buttone
+12. napravit Link komponentu i uskladit sve linkove
+13. technologies na about page loop through
+14. napravit loader komponentu i stavit trokut da bude loader
+15. dodat easing na sve transitione, napravit mixin?

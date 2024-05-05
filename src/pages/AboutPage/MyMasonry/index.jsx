@@ -38,7 +38,7 @@ const MyMasonry = ({ images }) => {
           }}
         >
           <div
-            className="content"
+            className="content border-radius"
             style={{ backgroundImage: `url(${selectedImage.src})` }}
           ></div>
           <p>{selectedImage.subtitle}</p>

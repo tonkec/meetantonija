@@ -9,7 +9,6 @@ import posts from '../../data/posts'
 import { shuffleArray } from '../../utils'
 import { readingTime } from 'reading-time-estimator'
 
-
 const Tags = (tags) => {
   return (
     <p className="small-margin-bottom">

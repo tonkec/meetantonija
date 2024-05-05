@@ -1,6 +1,10 @@
 #### Bugs/improvements
 
 48. ne rade tipke gore dolje u navigaciji 26.04
+49. animacije na graf na projekt page
+50. cursor dodat neki fensi, mozda? https://github.com/tholman/cursor-effects
+51. favicon
+52. images on about border radius
 
 #### Post page
 
