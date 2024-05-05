@@ -4,8 +4,7 @@
 49. animacije na graf na projekt page
 50. cursor dodat neki fensi, mozda? https://github.com/tholman/cursor-effects
 51. favicon
-52. images on about border radius
-
+K
 #### Post page
 
 41. share this article

@@ -26,7 +26,7 @@ const PostPage = () => {
   const navigate = useNavigate()
   const [text, setText] = useState('')
   const { id } = useParams()
-  const otherPosts = posts.filter((post) => post.id !== id)
+  const otherPosts = posts.filter((post) => post.id !== Number(id))
   const currentPost = posts.find((post) => post.id === Number(id))
   useEffect(() => {
     import(`./../../data/notes/${id}.md`)
