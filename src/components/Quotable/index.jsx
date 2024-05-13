@@ -3,47 +3,6 @@ import { useRef, useState, useEffect, useCallback } from 'react'
 import { truncateString } from '../../utils'
 import { FaTwitter } from 'react-icons/fa'
 
-const QuotableContent = ({ text }) => {
-  return (
-    text.map((text, index) => () => (
-      <>
-        <span key={index} data-tooltip-id={`text-${index}`}>
-          {text}
-        </span>
-        <Tooltip
-          id={`text-${index}`}
-          effect="solid"
-          className="select-none"
-          isOpen={!!text}
-          style={{
-            maxWidth: '400px',
-          }}
-          globalEventOff="click"
-          clickable
-        >
-          adsd
-        </Tooltip>
-      </>
-    )) || (
-      <>
-        <span data-tooltip-id="quotable">{text}</span>
-        <Tooltip
-          id={'quotable'}
-          effect="solid"
-          className="select-none"
-          isOpen={!!text}
-          style={{
-            maxWidth: '400px',
-          }}
-          globalEventOff="click"
-          clickable
-        >
-          adsd
-        </Tooltip>
-      </>
-    )
-  )
-}
 
 const Quotable = ({ children }) => {
   const [selectionStartIndex, setSelectionStartIndex] = useState(0)
