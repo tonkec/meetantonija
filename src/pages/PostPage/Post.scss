@@ -3,7 +3,6 @@
 }
 
 .post-loader {
-  background-color: var(--color-white);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -14,7 +13,7 @@
   background-color: var(--color-black);
   color: var(--color-white);
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   margin-right: 0.2rem;
   margin-bottom: 0.5rem;
   display: inline-block;

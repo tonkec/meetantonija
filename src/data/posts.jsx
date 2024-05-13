@@ -58,14 +58,14 @@ const notes = [
   },
   {
     tags: 'React, useRef, useState',
-    title: "When to use useRef and when to use useState?",
+    title: 'When to use useRef and when to use useState?',
     subtitle: 'Be careful of rerendering',
     id: 6,
     icon: () => <FaRobot />,
     objectType: 'note',
     intro:
       'I have been using useRef and useState hooks for a while now. But I never really understood when to use which. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. useRef is used to access the DOM element directly. It does not trigger re-rendering. useState is used to store the state of the component. It triggers re-rendering.',
-  }
+  },
 ]
 
 export default notes

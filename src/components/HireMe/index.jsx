@@ -5,7 +5,7 @@ import { useState } from 'react'
 const HireMe = () => {
   const [isCopied, setIsCopied] = useState(false)
   return (
-    <div className="bg-black container cta-section border-radius">
+    <div className="bg-black container cta-section border-radius border-radius-none-xs">
       <h2>Do you have a project in mind?</h2>
       <p>
         If you are interested in working with me, please get in touch via{' '}

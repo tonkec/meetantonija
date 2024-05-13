@@ -32,5 +32,4 @@
 
 #### Nove stranice
 
-5. not found stranicu bacit neku foru http://localhost:3000/project/8
 6. about this website

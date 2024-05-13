@@ -1,7 +1,53 @@
 import { Tooltip } from 'react-tooltip'
 import { useRef, useState, useEffect, useCallback } from 'react'
+import { truncateString } from '../../utils'
+import { FaTwitter } from 'react-icons/fa'
 
-const Quotable = () => {
+const QuotableContent = ({ text }) => {
+  return (
+    text.map((text, index) => () => (
+      <>
+        <span key={index} data-tooltip-id={`text-${index}`}>
+          {text}
+        </span>
+        <Tooltip
+          id={`text-${index}`}
+          effect="solid"
+          className="select-none"
+          isOpen={!!text}
+          style={{
+            maxWidth: '400px',
+          }}
+          globalEventOff="click"
+          clickable
+        >
+          adsd
+        </Tooltip>
+      </>
+    )) || (
+      <>
+        <span data-tooltip-id="quotable">{text}</span>
+        <Tooltip
+          id={'quotable'}
+          effect="solid"
+          className="select-none"
+          isOpen={!!text}
+          style={{
+            maxWidth: '400px',
+          }}
+          globalEventOff="click"
+          clickable
+        >
+          adsd
+        </Tooltip>
+      </>
+    )
+  )
+}
+
+const Quotable = ({ children }) => {
+  const [selectionStartIndex, setSelectionStartIndex] = useState(0)
+  const [selectionEndIndex, setSelectionEndIndex] = useState(0)
   const [selectedText, setSelectedText] = useState('')
   const childrenRef = useRef()
 
@@ -37,34 +83,100 @@ const Quotable = () => {
     }
   }, [handleClickOutside])
 
+  const getPreSelectedText = (children) => {
+    if (typeof children === 'string') {
+      return children.slice(0, selectionStartIndex)
+    }
+
+    if (Array.isArray(children)) {
+      return;
+    }
+
+    return children
+  }
+  const getPostSelectedText = (children) => {
+    if (typeof children === 'string') {
+      return children.slice(selectionEndIndex, children.length)
+    }
+
+   
+    if (Array.isArray(children)) {
+      return;
+    }
+
+    return children
+  }
+
   return (
     <>
-      <div className="container inline" ref={childrenRef}>
-        <span
-          data-tooltip-id="quotable"
-          className="quotable"
-          onMouseUp={() => {
-            const selection = window.getSelection().toString()
-            if (selection) {
-              setSelectedText(selection)
-            }
-          }}
-          onMouseDown={() => {
-            if (selectedText) {
-              setSelectedText('')
-              removeAllSelectionFromWindow()
-            }
-          }}
-        >
-          Quotable
-        </span>
+      <span
+        ref={childrenRef}
+        onMouseUp={() => {
+          const selection = window.getSelection()
+          const selectionString = selection.toString()
+          if (selectionString.trim()) {
+            setSelectedText(selectionString)
+            setSelectionStartIndex(
+              selection.anchorOffset < selection.focusOffset
+                ? selection.anchorOffset
+                : selection.focusOffset
+            )
+            setSelectionEndIndex(
+              selection.anchorOffset < selection.focusOffset
+                ? selection.focusOffset
+                : selection.anchorOffset
+            )
+          }
+        }}
+        onMouseDown={() => {
+          removeAllSelectionFromWindow()
+          setSelectedText('')
+          setSelectionStartIndex(0)
+          setSelectionEndIndex(0)
+        }}
 
-        {!!selectedText && (
-          <Tooltip id="quotable" effect="solid" className="select-none" isOpen={!!selectedText}>
-            <span>{selectedText}</span>
-          </Tooltip>
+       
+        
+      >
+        {console.log({getPreSelectedText: getPreSelectedText(children)})}
+        {console.log({getPostSelectedText: getPostSelectedText(children)})}
+        {console.log({selectedText})}
+        {selectedText.length > 0 ? (
+          <>
+            <span style={{userSelect: "none"}}>{getPreSelectedText(children)}</span>
+            <span style={{backgroundColor: "orange", userSelect: "none"}}>{
+              selectedText
+            }</span>
+            <span style={{userSelect: "none"}}>{getPostSelectedText(children)}</span>
+          </>
+        ) : (
+          <>{children} </>
         )}
-      </div>
+      </span>
+
+      {!!selectedText && (
+        <Tooltip
+          id="quotable"
+          effect="solid"
+          className="select-none"
+          isOpen={!!selectedText}
+          style={{
+            maxWidth: '400px',
+          }}
+          globalEventOff="click"
+          clickable
+        >
+          <a
+            href={`https://twitter.com/intent/tweet?text=${selectedText}`}
+            className="text-white no-underline"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {`"${truncateString(selectedText, 200).trim()}"`}{' '}
+            <FaTwitter fontSize="10px" color="#1DA1F2" />
+          </a>
+        </Tooltip>
+      )}
     </>
   )
 }

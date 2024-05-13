@@ -1,7 +1,8 @@
 ## GOTOVO
 
-52. images on about border radius
+- button na navigaciji je predaleko, preveliki padding
 
+52. images on about border radius
 53. tagovi za postove
 54. iduci post => pogledaj ovdje https://preview.themeforest.net/item/zento-modern-lightweight-blog-for-wordpress/full_screen_preview/51579969,
 

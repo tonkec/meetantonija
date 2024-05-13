@@ -48,7 +48,7 @@ const PostPage = () => {
 
   if (isLoading) {
     return (
-      <div className="post-loader">
+      <div className="post-loader container">
         <h2>Fetching post data from markdown files...</h2>
       </div>
     )
@@ -60,7 +60,6 @@ const PostPage = () => {
       : `${readingTime(text).minutes} minutes`
   return (
     <div className="post-page">
-      <Quotable />
       <ReactMarkdown
         children={text}
         components={{
@@ -76,7 +75,11 @@ const PostPage = () => {
             )
           },
           p({ children }) {
-            return <p className="container medium-margin-top">{children}</p>
+            return (
+              <p className="container medium-margin-top">
+                <Quotable>{children}</Quotable>
+              </p>
+            )
           },
           img({ src }) {
             return <PostsImage src={src} />
@@ -98,7 +101,7 @@ const PostPage = () => {
       />
 
       <section
-        className="container large-margin-top bg-black medium-padding border-radius max-w-600 pointer primary"
+        className="container large-margin-top bg-black medium-padding border-radius max-w-600 pointer primary border-radius-none-xs"
         role="button"
       >
         {shuffleArray(otherPosts)

@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
 import './PageTransition.scss'
-import Emoji from '../Emoji'
 import { Triangle } from 'react-loader-spinner'
 
 const PageTransition = () => {
@@ -16,6 +15,7 @@ const PageTransition = () => {
       }, 2000)
     }
   }, [pageTransition])
+
   return (
     <div ref={pageTransition} className="page-transition">
       <Triangle color="#f8f9fa" height={100} width={100} />

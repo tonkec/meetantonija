@@ -221,7 +221,7 @@
 }
 
 .max-w-600 {
-  @include breakpoint(xl) {
+  @include breakpoint(lg) {
     max-width: 600px;
   }
 }
@@ -269,4 +269,16 @@
 
 .select-none {
   user-select: none;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.border-radius-none-xs {
+  border-radius: 0;
+
+  @include breakpoint(md) {
+    border-radius: var(--border-radius);
+  }
 }
