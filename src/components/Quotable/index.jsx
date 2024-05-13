@@ -3,7 +3,6 @@ import { useRef, useState, useEffect, useCallback } from 'react'
 import { truncateString } from '../../utils'
 import { FaTwitter } from 'react-icons/fa'
 
-
 const Quotable = ({ children }) => {
   const [selectionStartIndex, setSelectionStartIndex] = useState(0)
   const [selectionEndIndex, setSelectionEndIndex] = useState(0)
@@ -48,7 +47,7 @@ const Quotable = ({ children }) => {
     }
 
     if (Array.isArray(children)) {
-      return;
+      return
     }
 
     return children
@@ -58,9 +57,8 @@ const Quotable = ({ children }) => {
       return children.slice(selectionEndIndex, children.length)
     }
 
-   
     if (Array.isArray(children)) {
-      return;
+      return
     }
 
     return children
@@ -93,20 +91,18 @@ const Quotable = ({ children }) => {
           setSelectionStartIndex(0)
           setSelectionEndIndex(0)
         }}
-
-       
-        
       >
-        {console.log({getPreSelectedText: getPreSelectedText(children)})}
-        {console.log({getPostSelectedText: getPostSelectedText(children)})}
-        {console.log({selectedText})}
         {selectedText.length > 0 ? (
           <>
-            <span style={{userSelect: "none"}}>{getPreSelectedText(children)}</span>
-            <span style={{backgroundColor: "orange", userSelect: "none"}}>{
-              selectedText
-            }</span>
-            <span style={{userSelect: "none"}}>{getPostSelectedText(children)}</span>
+            <span style={{ userSelect: 'none' }}>
+              {getPreSelectedText(children)}
+            </span>
+            <span style={{ backgroundColor: 'orange', userSelect: 'none' }}>
+              {selectedText}
+            </span>
+            <span style={{ userSelect: 'none' }}>
+              {getPostSelectedText(children)}
+            </span>
           </>
         ) : (
           <>{children} </>
