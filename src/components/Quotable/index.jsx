@@ -27,6 +27,8 @@ const Quotable = ({ children }) => {
       if (childrenRef.current && !childrenRef.current.contains(event.target)) {
         if (selectedText) {
           setSelectedText('')
+          setSelectionStartIndex(0)
+          setSelectionEndIndex(0)
           removeAllSelectionFromWindow()
         }
       }
@@ -42,23 +44,22 @@ const Quotable = ({ children }) => {
   }, [handleClickOutside])
 
   const getPreSelectedText = (children) => {
+    if (selectedText.trim() === children) {
+      return
+    }
     if (typeof children === 'string') {
       return children.slice(0, selectionStartIndex)
-    }
-
-    if (Array.isArray(children)) {
-      return
     }
 
     return children
   }
   const getPostSelectedText = (children) => {
-    if (typeof children === 'string') {
-      return children.slice(selectionEndIndex, children.length)
+    if (selectedText.trim() === children) {
+      return
     }
 
-    if (Array.isArray(children)) {
-      return
+    if (typeof children === 'string') {
+      return children.slice(selectionEndIndex)
     }
 
     return children
@@ -97,8 +98,32 @@ const Quotable = ({ children }) => {
             <span style={{ userSelect: 'none' }}>
               {getPreSelectedText(children)}
             </span>
-            <span style={{ backgroundColor: 'orange', userSelect: 'none' }}>
+            <span
+              style={{ textDecoration: 'none', userSelect: 'none' }}
+              data-tooltip-id="quotable"
+            >
               {selectedText}
+              <Tooltip
+                id="quotable"
+                effect="solid"
+                className="select-none"
+                isOpen={!!selectedText}
+                style={{
+                  maxWidth: '400px',
+                }}
+                globalEventOff="click"
+                clickable
+              >
+                <a
+                  href={`https://twitter.com/intent/tweet?text=${selectedText}`}
+                  className="text-white no-underline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {`"${truncateString(selectedText, 200).trim()}"`}{' '}
+                  <FaTwitter fontSize="10px" color="#1DA1F2" />
+                </a>
+              </Tooltip>
             </span>
             <span style={{ userSelect: 'none' }}>
               {getPostSelectedText(children)}
@@ -108,30 +133,6 @@ const Quotable = ({ children }) => {
           <>{children} </>
         )}
       </span>
-
-      {!!selectedText && (
-        <Tooltip
-          id="quotable"
-          effect="solid"
-          className="select-none"
-          isOpen={!!selectedText}
-          style={{
-            maxWidth: '400px',
-          }}
-          globalEventOff="click"
-          clickable
-        >
-          <a
-            href={`https://twitter.com/intent/tweet?text=${selectedText}`}
-            className="text-white no-underline"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {`"${truncateString(selectedText, 200).trim()}"`}{' '}
-            <FaTwitter fontSize="10px" color="#1DA1F2" />
-          </a>
-        </Tooltip>
-      )}
     </>
   )
 }
