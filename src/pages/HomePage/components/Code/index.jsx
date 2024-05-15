@@ -17,7 +17,7 @@ const Code = () => {
   const isMobile = width < 768;
 
   return (
-    <section className="container">
+    <section className="container header-padding-bottom">
       <h2>✅ I write beautiful code.</h2>
 
       <div className="flex flex-responsive flex-wrap flex-gap relative">

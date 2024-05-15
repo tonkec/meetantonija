@@ -136,6 +136,18 @@
   padding-top: calc(var(--card-spacing) * 2);
 }
 
+.large-padding-top {
+  padding-top: calc(var(--card-spacing) * 6);
+
+  @include breakpoint(sm) {
+    padding-top: calc(var(--card-spacing) * 5);
+  }
+
+  @include breakpoint(lg) {
+    padding-top: calc(var(--card-spacing) * 2);
+  }
+}
+
 .space-between {
   justify-content: space-between;
 }
