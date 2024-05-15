@@ -16,7 +16,8 @@
   background-color: #f5f5f5;
   display: flex;
   height: calc(100% - 50px); // height of top bar in nav
-
+  flex: 1 1 auto;
+  flex-flow: column;
   aside {
     width: 200px;
     top: 0;
@@ -76,14 +77,16 @@
     margin-left: 200px;
     padding: 1.2rem;
     background-color: #fafafa;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
     @include breakpoint(md) {
       width: calc(100% - 200px);
     }
   }
 
   .stretch {
-    height: calc(100% - 50px);
-    gap: 20px;
+    flex: 1 1 auto;
   }
 
   .content {

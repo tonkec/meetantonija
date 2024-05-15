@@ -21,7 +21,7 @@ const Image = ({ hasBackground, src, alt }) => {
     )
   }
 
-  return <img src={src} alt={alt} className="border-radius" />
+  return <img src={src} alt={alt} className="border-radius w-full" />
 }
 
 export default Image

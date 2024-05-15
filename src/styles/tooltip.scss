@@ -3,14 +3,6 @@ span[data-tooltip-id]:not(span[class='quotable']) {
   cursor: help;
 }
 
-.tooltip {
-  img {
-    border: none;
-    border-radius: 0;
-    max-width: 400px;
-  }
-}
-
 div[role='tooltip'] {
   z-index: 9999;
 }

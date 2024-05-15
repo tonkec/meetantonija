@@ -4,19 +4,25 @@
   background-color: var(--color-block-code);
   color: var(--color-white);
   border-radius: var(--border-radius);
-  font-size: 1.2rem;
-  max-width: 500px;
+  font-size: 1rem;
+  max-width: 100%;
   position: relative;
 
-  &:nth-child(2) {
-    top: 100px;
-    left: 20px;
+  @include breakpoint('md') {
+    max-width: 400px;
+
+    &:nth-child(2) {
+      top: 100px;
+      left: 20px;
+    }
+  
+    &:last-child {
+      bottom: 0;
+      right: 0;
+    }
   }
 
-  &:last-child {
-    bottom: 0;
-    right: 0;
-  }
+ 
 
   pre {
     overflow-x: auto;

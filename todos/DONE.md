@@ -1,5 +1,27 @@
 ## GOTOVO
+7. meetantonija u footer nek vodi na homepage
+5. cv page
 
+- razmak izmedu read more i tagova
+6. post page
+
+- fetching data nije u containeru
+- next post border radius ne treba na malim ekranima
+3. global
+
+- premali paddings na sectionima
+2. project page
+
+- do you have a project in mind border-radius ne treba na malim ekranima
+- dashboard strgan
+
+1. homepage
+
+- slika se mice kod typed text
+- code presiroki
+- sveta nedelja tooltip presirok
+- disejblaj select na tooltip opener text
+- disejblaj dnd na malim ekranima
 - button na navigaciji je predaleko, preveliki padding
 
 52. images on about border radius

@@ -99,7 +99,7 @@ const Quotable = ({ children }) => {
               {getPreSelectedText(children)}
             </span>
             <span
-              style={{ textDecoration: 'none', userSelect: 'none' }}
+              style={{ userSelect: 'none', textDecoration: 'none', cursor: "pointer"}}
               data-tooltip-id="quotable"
             >
               {selectedText}
@@ -107,12 +107,13 @@ const Quotable = ({ children }) => {
                 id="quotable"
                 effect="solid"
                 className="select-none"
-                isOpen={!!selectedText}
+                isOpen={true}
                 style={{
                   maxWidth: '400px',
                 }}
                 globalEventOff="click"
                 clickable
+          
               >
                 <a
                   href={`https://twitter.com/intent/tweet?text=${selectedText}`}

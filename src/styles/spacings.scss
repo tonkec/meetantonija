@@ -22,11 +22,17 @@
 
 @include breakpoint('lg') {
   :root {
-    --section-y-spacing: 6rem;
+    --section-y-spacing: 2.8rem;
     --button-spacing: 1.2rem;
     --card-spacing: 1.8rem;
     --grid-gap: 40px;
     --small-margin: 1.5rem;
+  }
+}
+
+@include breakpoint('xl') {
+  :root {
+    --section-y-spacing: 4rem;
   }
 }
 

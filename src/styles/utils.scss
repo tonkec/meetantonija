@@ -207,11 +207,11 @@
 }
 
 .header-padding-bottom {
-  padding-bottom: calc(var(--card-spacing) * 6);
+  padding-bottom: calc(var(--card-spacing) * 3);
 }
 
 .header-padding-top {
-  padding-top: calc(var(--card-spacing) * 8);
+  padding-top: calc(var(--card-spacing) * 6);
 }
 
 .max-w-400 {
@@ -276,9 +276,9 @@
 }
 
 .border-radius-none-xs {
-  border-radius: 0;
+  border-radius: 0 !important;
 
-  @include breakpoint(md) {
-    border-radius: var(--border-radius);
+  @include breakpoint(xl) {
+    border-radius: var(--border-radius) !important;
   }
 }
