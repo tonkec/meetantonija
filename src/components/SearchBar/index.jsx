@@ -108,21 +108,30 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
     setSearch('')
     setIsNavigationOpen(false)
     setIsMobileNavigationOpen(false)
-    const body = document.querySelector('body')
-    body.style.overflow = 'auto'
-    const html = document.querySelector('html')
-    html.style.overflow = 'auto'
+    enableSrcoll()
   }, [setIsMobileNavigationOpen])
 
   const openNavigation = useCallback(() => {
     setSearch('')
     setIsNavigationOpen(true)
     setIsMobileNavigationOpen(true)
+    preventScroll()
+  }, [setIsMobileNavigationOpen])
+
+  const preventScroll = () => {
     const body = document.querySelector('body')
     body.style.overflow = 'hidden'
     const html = document.querySelector('html')
     html.style.overflow = 'hidden'
-  }, [setIsMobileNavigationOpen])
+  }
+
+  const enableSrcoll = () => {
+    console.log('enable scroll')
+    const body = document.querySelector('body')
+    body.style.overflow = 'auto'
+    const html = document.querySelector('html')
+    html.style.overflow = 'auto'
+  }
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -198,9 +207,11 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
 
   const onSubmit = (event) => {
     event.preventDefault()
+    enableSrcoll()
     const route = routes.find((route) => route.path === search)
     if (route) {
       navigate(route.path)
+
     }
   }
 
