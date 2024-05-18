@@ -66,16 +66,16 @@ const notes = [
     intro:
       'I have been using useRef and useState hooks for a while now. But I never really understood when to use which. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. useRef is used to access the DOM element directly. It does not trigger re-rendering. useState is used to store the state of the component. It triggers re-rendering.',
   },
-  {
-    id: 7,
-    tags: 'CSS, flexbox, height',
-    title: "How to stretch height to match the parent's",
-    subtitle: 'It is not that straightforward as it seems',
-    icon: () => <LuPaintbrush2 />,
-    objectType: 'note',
-    intro:
-      'I have been using flexbox for a while now, but it did not occur to me that it can be used to control the height of the elements.',
-  },
+  // {
+  //   id: 7,
+  //   tags: 'CSS, flexbox, height',
+  //   title: "How to stretch height to match the parent's",
+  //   subtitle: 'It is not that straightforward as it seems',
+  //   icon: () => <LuPaintbrush2 />,
+  //   objectType: 'note',
+  //   intro:
+  //     'I have been using flexbox for a while now, but it did not occur to me that it can be used to control the height of the elements.',
+  // },
 ]
 
 export default notes
