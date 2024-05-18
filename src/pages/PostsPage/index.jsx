@@ -3,7 +3,7 @@ import posts from '../../data/posts'
 const PostsPage = () => {
   return (
     <section className="container large-padding-top">
-      <h2>I like to write about technology.</h2>
+      <h2>I like to write about the technology.</h2>
       <div className="grid">
         {posts.map((post) => {
           return (

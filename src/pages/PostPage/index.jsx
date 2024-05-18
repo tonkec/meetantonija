@@ -77,26 +77,42 @@ const PostPage = () => {
           p({ children }) {
             return (
               <p className="container medium-margin-top">
-                <Quotable>{children}</Quotable>
+                {children}
               </p>
             )
           },
-          img({ src }) {
-            return <PostsImage src={src} />
+          a: ({ node, children, ...props }) => {
+            return (
+              <a {...props} target="_blank" rel="noreferrer">
+                {children}
+              </a>
+            )
+          },
+          img({ src, alt }) {
+             return <PostsImage src={src} alt={alt} />
           },
           code({ node, inline, className, children, ...props }) {
             return (
-              <div className="container">
+              <span>
                 <SyntaxHighlighter
                   {...props}
                   children={String(children).replace(/\n$/, '')}
-                  language={'Javascript'}
-                  PreTag="div"
+                  language={String(className).replace("language-", "")}
                   style={monoBlue}
+                  customStyle={{
+                    display: "inline",
+                  }}
                 />
-              </div>
+              </span>
             )
           },
+          pre({ node, inline, className, children, ...props }) {
+            return (
+              <div className='container code-block'>             
+                {children}
+              </div>
+            )
+          }
         }}
       />
 

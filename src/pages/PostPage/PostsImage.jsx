@@ -1,5 +1,5 @@
-const PostsImage = ({ src }) => (
-  <img src={src} alt="note" style={{ width: '100%' }} />
+const PostsImage = ({ src, alt }) => (
+  <img src={src.trim()} alt={alt} style={{ width: '100%' }} />
 )
 
 export default PostsImage

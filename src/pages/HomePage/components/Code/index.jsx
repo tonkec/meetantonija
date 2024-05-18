@@ -12,9 +12,8 @@ const typescriptCode =
   "type DevSkills = 'html' | 'css' | 'javascript' | 'typescript' | 'react';\ninterface ExperiencedDeveveloper {\n  skills: DevSkills[];\n  neverStopsLearning: boolean;\n  enjoysCoding: boolean;\n  isCreative: boolean;\n}\n"
 
 const Code = () => {
-
-  const {width} = useWindowSize();
-  const isMobile = width < 768;
+  const { width } = useWindowSize()
+  const isMobile = width < 768
 
   return (
     <section className="container header-padding-bottom">

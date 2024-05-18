@@ -62,6 +62,7 @@ const Quotable = ({ children }) => {
       return children.slice(selectionEndIndex)
     }
 
+
     return children
   }
 
@@ -99,21 +100,25 @@ const Quotable = ({ children }) => {
               {getPreSelectedText(children)}
             </span>
             <span
-              style={{ userSelect: 'none', textDecoration: 'none', cursor: "pointer"}}
+              style={{
+                userSelect: 'none',
+                textDecoration: 'none',
+                cursor: 'pointer',
+              }}
               data-tooltip-id="quotable"
+              data-event="click"
             >
               {selectedText}
-              <Tooltip
+            </span>
+            {/* https://codesandbox.io/p/sandbox/gifted-parm-42xel?file=%2Fsrc%2FTooltip.tsx%3A40%2C7-40%2C25 */}
+            <Tooltip
                 id="quotable"
                 effect="solid"
-                className="select-none"
-                isOpen={true}
                 style={{
                   maxWidth: '400px',
                 }}
-                globalEventOff="click"
                 clickable
-          
+                globalEventOff={"click"}
               >
                 <a
                   href={`https://twitter.com/intent/tweet?text=${selectedText}`}
@@ -125,13 +130,12 @@ const Quotable = ({ children }) => {
                   <FaTwitter fontSize="10px" color="#1DA1F2" />
                 </a>
               </Tooltip>
-            </span>
             <span style={{ userSelect: 'none' }}>
               {getPostSelectedText(children)}
             </span>
           </>
         ) : (
-          <>{children} </>
+          <>{children}</>
         )}
       </span>
     </>
