@@ -16,7 +16,7 @@ const SearchResults = ({ searchResults }) => {
 
 const NavigationButton = ({ onClick, value }) => (
   <input
-    className="block w-full text-left ternary"
+    className="block w-full text-left ternary active navigation-button"
     onClick={onClick}
     type="submit"
     value={value}
@@ -28,6 +28,7 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
   const navigate = useNavigate()
   const [search, setSearch] = useState('')
   const [isNavigationOpen, setIsNavigationOpen] = useState(false)
+  const [keyPressCounter, setKeyPressCounter] = useState(0)
   const searchedRoutes = routes
     .filter(
       (route) =>
@@ -107,12 +108,20 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
     setSearch('')
     setIsNavigationOpen(false)
     setIsMobileNavigationOpen(false)
+    const body = document.querySelector('body')
+    body.style.overflow = 'auto'
+    const html = document.querySelector('html')
+    html.style.overflow = 'auto'
   }, [setIsMobileNavigationOpen])
 
   const openNavigation = useCallback(() => {
     setSearch('')
     setIsNavigationOpen(true)
     setIsMobileNavigationOpen(true)
+    const body = document.querySelector('body')
+    body.style.overflow = 'hidden'
+    const html = document.querySelector('html')
+    html.style.overflow = 'hidden'
   }, [setIsMobileNavigationOpen])
 
   useEffect(() => {
@@ -129,6 +138,35 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
       window.removeEventListener('keydown', handleKeyDown)
     }
   }, [closeNavigation])
+
+  useEffect(() => {
+    const handleNavigationWithArrowKeys = (event) => {
+      if (event.key === 'ArrowDown') {
+        // on each arrow down key press, focus on the next navigation button
+        const navigationButtons = document.querySelectorAll('.navigation-button')
+        if (navigationButtons.length) {
+          navigationButtons[keyPressCounter].focus()
+          setKeyPressCounter((prev) => (prev + 1) % navigationButtons.length)
+        }
+      }
+
+      if (event.key === 'ArrowUp') {
+        const navigationButtons = document.querySelectorAll('.navigation-button')
+        if (navigationButtons.length) {
+          navigationButtons[keyPressCounter].focus()
+          setKeyPressCounter(
+            (prev) => (prev - 1 + navigationButtons.length) % navigationButtons.length
+          )
+        }
+      }
+    }
+
+    window.addEventListener('keydown', handleNavigationWithArrowKeys)
+
+    return () => {
+      window.removeEventListener('keydown', handleNavigationWithArrowKeys)
+    }
+  })
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -173,7 +211,7 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
   }
 
   return (
-    <FocusTrap>
+    <FocusTrap active>
       <div className="search-container show">
         <form onSubmit={onSubmit} className="relative">
           <input
@@ -182,6 +220,7 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
             onChange={(event) => {
               setSearch(event.target.value)
             }}
+            className='navigation-input'
             value={search}
           />
 
