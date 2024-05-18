@@ -1,4 +1,9 @@
 ## GOTOVO
+### Post page
+5. strgan graf na http://localhost:3000/project/10
+
+- syntax higlighting za razlicite jezike -
+- `code` ne radi -
 
 7. meetantonija u footer nek vodi na homepage
 8. cv page

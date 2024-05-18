@@ -1,5 +1,5 @@
 ## Odbijeno
-
+41. share this article 18.05
 45. navigacija drzat height rezultata uvijek isti kao na react dev 28.04
 46. forma u cta
 47. animacije na scroll?
