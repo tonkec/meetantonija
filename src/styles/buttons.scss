@@ -1,5 +1,9 @@
 @import './transitions.scss';
 
+button {
+  display: inline-block;
+}
+
 button,
 a[role='button'],
 *[role='button'],
@@ -13,7 +17,6 @@ input[type='submit'] {
     color 0.3s ease-in-out,
     outline 0.3s ease-in-out;
   text-decoration: none;
-  display: inline-block;
 
   &.primary {
     background-color: var(--color-accent);
