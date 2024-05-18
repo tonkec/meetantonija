@@ -62,7 +62,6 @@ const Quotable = ({ children }) => {
       return children.slice(selectionEndIndex)
     }
 
-
     return children
   }
 
@@ -96,9 +95,7 @@ const Quotable = ({ children }) => {
       >
         {selectedText.length > 0 ? (
           <>
-            <span style={{ userSelect: 'none' }}>
-              {getPreSelectedText(children)}
-            </span>
+            <span>{getPreSelectedText(children)}</span>
             <span
               style={{
                 userSelect: 'none',
@@ -107,37 +104,37 @@ const Quotable = ({ children }) => {
               }}
               data-tooltip-id="quotable"
               data-event="click"
+              className="bg-orange selection underline"
             >
               {selectedText}
             </span>
-            {/* https://codesandbox.io/p/sandbox/gifted-parm-42xel?file=%2Fsrc%2FTooltip.tsx%3A40%2C7-40%2C25 */}
-            <Tooltip
-                id="quotable"
-                effect="solid"
-                style={{
-                  maxWidth: '400px',
-                }}
-                clickable
-                globalEventOff={"click"}
-              >
-                <a
-                  href={`https://twitter.com/intent/tweet?text=${selectedText}`}
-                  className="text-white no-underline"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {`"${truncateString(selectedText, 200).trim()}"`}{' '}
-                  <FaTwitter fontSize="10px" color="#1DA1F2" />
-                </a>
-              </Tooltip>
-            <span style={{ userSelect: 'none' }}>
-              {getPostSelectedText(children)}
-            </span>
+            <span>{getPostSelectedText(children)}</span>
           </>
         ) : (
           <>{children}</>
         )}
       </span>
+      {selectedText.length > 0 && (
+        <Tooltip
+          id="quotable"
+          effect="solid"
+          style={{
+            maxWidth: '400px',
+          }}
+          clickable
+          globalEventOff="click"
+        >
+          <a
+            href={`https://twitter.com/intent/tweet?text=${selectedText}`}
+            className="text-white no-underline"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {`"${truncateString(selectedText, 200).trim()}"`}{' '}
+            <FaTwitter fontSize="10px" color="#1DA1F2" />
+          </a>
+        </Tooltip>
+      )}
     </>
   )
 }

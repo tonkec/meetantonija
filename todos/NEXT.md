@@ -8,5 +8,3 @@
 4. navigacija
 
 - fokus nema na mobile
-
-

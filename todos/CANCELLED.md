@@ -1,13 +1,14 @@
 ## Odbijeno
+
 41. share this article 18.05
-45. navigacija drzat height rezultata uvijek isti kao na react dev 28.04
-46. forma u cta
-47. animacije na scroll?
-48. project slider random fake content
-49. dodat klijenta (company vs title) i location 27.04
-50. dodat ipak giscuss?=> onda treba bit public repo a to ne zelim
-51. na cvu kad se stisne na tehnologiju ne bi se trebao pokazat loader, page transition
-52. dodat zvuk kad se navigacija otvara/zatvara
+42. navigacija drzat height rezultata uvijek isti kao na react dev 28.04
+43. forma u cta
+44. animacije na scroll?
+45. project slider random fake content
+46. dodat klijenta (company vs title) i location 27.04
+47. dodat ipak giscuss?=> onda treba bit public repo a to ne zelim
+48. na cvu kad se stisne na tehnologiju ne bi se trebao pokazat loader, page transition
+49. dodat zvuk kad se navigacija otvara/zatvara
 
 - dodat onaj gore indicator za reading
 - 8. dodat u navigaciju jedan post i jedan projekt? sub 20.04

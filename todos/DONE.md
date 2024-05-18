@@ -1,7 +1,8 @@
 ## GOTOVO
+
 42. ne rade tipke gore dolje u navigaciji -
 
-5. strgan graf na http://localhost:3000/project/10
+43. strgan graf na http://localhost:3000/project/10
 
 - syntax higlighting za razlicite jezike -
 - `code` ne radi -

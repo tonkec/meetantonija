@@ -294,3 +294,12 @@
     border-radius: var(--border-radius) !important;
   }
 }
+
+.selection {
+  padding: 2.5px 0;
+}
+
+.bg-orange {
+  background-color: var(--color-orange);
+  color: var(--color-black);
+}

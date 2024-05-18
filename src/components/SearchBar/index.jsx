@@ -152,7 +152,8 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
     const handleNavigationWithArrowKeys = (event) => {
       if (event.key === 'ArrowDown') {
         // on each arrow down key press, focus on the next navigation button
-        const navigationButtons = document.querySelectorAll('.navigation-button')
+        const navigationButtons =
+          document.querySelectorAll('.navigation-button')
         if (navigationButtons.length) {
           navigationButtons[keyPressCounter].focus()
           setKeyPressCounter((prev) => (prev + 1) % navigationButtons.length)
@@ -160,11 +161,13 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
       }
 
       if (event.key === 'ArrowUp') {
-        const navigationButtons = document.querySelectorAll('.navigation-button')
+        const navigationButtons =
+          document.querySelectorAll('.navigation-button')
         if (navigationButtons.length) {
           navigationButtons[keyPressCounter].focus()
           setKeyPressCounter(
-            (prev) => (prev - 1 + navigationButtons.length) % navigationButtons.length
+            (prev) =>
+              (prev - 1 + navigationButtons.length) % navigationButtons.length
           )
         }
       }
@@ -211,7 +214,6 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
     const route = routes.find((route) => route.path === search)
     if (route) {
       navigate(route.path)
-
     }
   }
 
@@ -231,7 +233,7 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
             onChange={(event) => {
               setSearch(event.target.value)
             }}
-            className='navigation-input'
+            className="navigation-input"
             value={search}
           />
 
