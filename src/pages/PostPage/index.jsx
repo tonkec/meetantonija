@@ -74,10 +74,17 @@ const PostPage = () => {
               </header>
             )
           },
+
+          h4({ children }) {
+            return (
+              <h4 className="container medium-margin-top">{children}</h4>
+            )
+          },
+          
           p({ children }) {
             return (
               <p className="container medium-margin-top">
-                <Quotable>{children}</Quotable>
+               {children}
               </p>
             )
           },
@@ -91,6 +98,13 @@ const PostPage = () => {
               >
                 {children}
               </a>
+            )
+          },
+          blockquote({ children }) {
+            return (
+              <blockquote className="container medium-margin-top">
+                {children}
+              </blockquote>
             )
           },
           img({ src, alt }) {
@@ -111,6 +125,10 @@ const PostPage = () => {
               </span>
             )
           },
+          ol({ children }) {
+            return <div className="container"><ol>{children}</ol></div>
+          },
+         
           pre({ node, inline, className, children, ...props }) {
             return <div className="container code-block">{children}</div>
           },
