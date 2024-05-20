@@ -18,6 +18,10 @@
   border-radius: 0;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.03);
 
+  @include breakpoint(lg) {
+    padding: 20px;
+  }
+
   &.scrolled-to-top {
     background-color: var(--color-black);
     top: 20px;
