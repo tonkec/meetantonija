@@ -7,6 +7,7 @@ const Quotable = ({ children }) => {
   const [selectionStartIndex, setSelectionStartIndex] = useState(0)
   const [selectionEndIndex, setSelectionEndIndex] = useState(0)
   const [selectedText, setSelectedText] = useState('')
+
   const childrenRef = useRef()
 
   const removeAllSelectionFromWindow = () => {
@@ -22,18 +23,22 @@ const Quotable = ({ children }) => {
     }
   }
 
+  const resetSelection = useCallback(() => {
+    setSelectedText('')
+    setSelectionStartIndex(0)
+    setSelectionEndIndex(0)
+    removeAllSelectionFromWindow()
+  }, [])
+
   const handleClickOutside = useCallback(
     (event) => {
       if (childrenRef.current && !childrenRef.current.contains(event.target)) {
         if (selectedText) {
-          setSelectedText('')
-          setSelectionStartIndex(0)
-          setSelectionEndIndex(0)
-          removeAllSelectionFromWindow()
+          resetSelection()
         }
       }
     },
-    [selectedText]
+    [selectedText, resetSelection]
   )
 
   useEffect(() => {
@@ -51,6 +56,10 @@ const Quotable = ({ children }) => {
       return children.slice(0, selectionStartIndex)
     }
 
+    if (Array.isArray(children)) {
+      resetSelection()
+    }
+
     return children
   }
   const getPostSelectedText = (children) => {
@@ -62,7 +71,9 @@ const Quotable = ({ children }) => {
       return children.slice(selectionEndIndex)
     }
 
-    return children
+    if (Array.isArray(children)) {
+      resetSelection()
+    }
   }
 
   return (
@@ -75,15 +86,17 @@ const Quotable = ({ children }) => {
           if (selectionString.trim()) {
             setSelectedText(selectionString)
             setSelectionStartIndex(
-              selection.anchorOffset < selection.focusOffset
-                ? selection.anchorOffset
-                : selection.focusOffset
-            )
-            setSelectionEndIndex(
-              selection.anchorOffset < selection.focusOffset
+              selection.anchorOffset > selection.focusOffset
                 ? selection.focusOffset
                 : selection.anchorOffset
             )
+            setSelectionEndIndex(
+              selection.anchorOffset > selection.focusOffset
+                ? selection.anchorOffset
+                : selection.focusOffset
+            )
+
+            selection.removeAllRanges()
           }
         }}
         onMouseDown={() => {
@@ -95,7 +108,9 @@ const Quotable = ({ children }) => {
       >
         {selectedText.length > 0 ? (
           <>
-            <span>{getPreSelectedText(children)}</span>
+            <span>
+              {getPreSelectedText(children)}
+            </span>
             <span
               style={{
                 userSelect: 'none',

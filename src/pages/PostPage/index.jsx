@@ -83,7 +83,12 @@ const PostPage = () => {
           },
           a: ({ node, children, ...props }) => {
             return (
-              <a {...props} target="_blank" rel="noreferrer">
+              <a
+                {...props}
+                target="_blank"
+                rel="noreferrer"
+                className="post-link"
+              >
                 {children}
               </a>
             )
