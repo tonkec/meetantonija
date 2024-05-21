@@ -8,7 +8,7 @@ import './Post.scss'
 import posts from '../../data/posts'
 import { shuffleArray } from '../../utils'
 import { readingTime } from 'reading-time-estimator'
-import Quotable from '../../components/Quotable'
+import { Helmet } from 'react-helmet'
 
 const Tags = (tags) => {
   return (
@@ -60,6 +60,9 @@ const PostPage = () => {
       : `${readingTime(text).minutes} minutes`
   return (
     <div className="post-page">
+      <Helmet>
+        <title>Meetantonija | {currentPost.title}</title>
+      </Helmet>
       <ReactMarkdown
         children={text}
         components={{
@@ -76,17 +79,11 @@ const PostPage = () => {
           },
 
           h4({ children }) {
-            return (
-              <h4 className="container medium-margin-top">{children}</h4>
-            )
+            return <h4 className="container medium-margin-top">{children}</h4>
           },
-          
+
           p({ children }) {
-            return (
-              <p className="container medium-margin-top">
-               {children}
-              </p>
-            )
+            return <p className="container medium-margin-top">{children}</p>
           },
           a: ({ node, children, ...props }) => {
             return (
@@ -126,9 +123,13 @@ const PostPage = () => {
             )
           },
           ol({ children }) {
-            return <div className="container"><ol>{children}</ol></div>
+            return (
+              <div className="container">
+                <ol>{children}</ol>
+              </div>
+            )
           },
-         
+
           pre({ node, inline, className, children, ...props }) {
             return <div className="container code-block">{children}</div>
           },

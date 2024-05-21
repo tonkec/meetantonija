@@ -108,9 +108,7 @@ const Quotable = ({ children }) => {
       >
         {selectedText.length > 0 ? (
           <>
-            <span>
-              {getPreSelectedText(children)}
-            </span>
+            <span>{getPreSelectedText(children)}</span>
             <span
               style={{
                 userSelect: 'none',

@@ -13,6 +13,7 @@ import {
 } from '../../utils'
 import { images } from './images'
 import MyMasonry from './MyMasonry'
+import { Helmet } from 'react-helmet'
 
 const speakingEvents = [
   {
@@ -77,6 +78,9 @@ const AboutPage = () => {
   const speakingEventsSorted = speakingEvents.sort((a, b) => b.year - a.year)
   return (
     <>
+      <Helmet>
+        <title>Meetantonija | About Me</title>
+      </Helmet>
       <header className="header-padding-top">
         <div className="container">
           <div className="flex flex-responsive flex-gap align-start">

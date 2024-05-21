@@ -5,6 +5,7 @@ import { arrayHasFullString } from '../../utils'
 import CvProject from './CvProject'
 import { Link } from 'react-router-dom'
 import cv from './../../files/cv.pdf'
+import { Helmet } from 'react-helmet'
 
 const CvPage = () => {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -20,6 +21,10 @@ const CvPage = () => {
 
   return (
     <>
+      {' '}
+      <Helmet>
+        <title>Meetantonija | My CV</title>
+      </Helmet>
       <header className="container header-padding-top header-padding-bottom">
         <TypedText type="h1">My CV</TypedText>
         <Link
@@ -32,7 +37,6 @@ const CvPage = () => {
           Download CV
         </Link>
       </header>
-
       <section className="container">
         {skill
           ? sortedProjects

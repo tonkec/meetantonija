@@ -6,7 +6,9 @@ const NotFound = () => {
   )
   return (
     <div className="container">
-      <h1 className='large-margin-top'>Nothing to be found here. Some other pages you might like:</h1>
+      <h1 className="large-margin-top">
+        Nothing to be found here. Some other pages you might like:
+      </h1>
 
       <ul>
         {filteredRoutes.map((route, index) => (

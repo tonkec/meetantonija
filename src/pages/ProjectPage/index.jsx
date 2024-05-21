@@ -6,6 +6,7 @@ import HireMe from '../../components/HireMe'
 import Slider from '../HomePage/components/Slider'
 import { scrollToTheElement } from '../../utils'
 import Skills from '../../components/Skills'
+import { Helmet } from 'react-helmet'
 
 const getTeamSize = (team) => {
   if (team <= 1) {
@@ -28,6 +29,9 @@ const ProjectPage = () => {
   }
   return (
     <>
+     <Helmet>
+        <title>Meetantonija | {project.title}</title>
+      </Helmet>
       <header className="header-padding-top header-padding-bottom project-header">
         <div className="container">
           <div className="flex flex-responsive flex-gap">

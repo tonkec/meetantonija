@@ -68,14 +68,14 @@ const notes = [
   },
   {
     id: 7,
-    tags: "Codewars, Javascript, Algorithms",
-    title: "String incrementer",
-    subtitle: "Increment the number in a string",
+    tags: 'Codewars, Javascript, Algorithms',
+    title: 'String incrementer',
+    subtitle: 'Increment the number in a string',
     icon: () => <FaRobot />,
-    objectType: "note",
+    objectType: 'note',
     intro:
-      "I have been doing a lot of coding challenges lately on Code Wars. I saw this interesting challenge called string incrementer. I will write about solution that I submitted.",
-  }
+      'I have been doing a lot of coding challenges lately on Code Wars. I saw this interesting challenge called string incrementer. I will write about solution that I submitted.',
+  },
 ]
 
 export default notes
