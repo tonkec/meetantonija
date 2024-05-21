@@ -1,11 +1,11 @@
 ## GOTOVO
-
+43. favicon u sub 18.05
 42. ne rade tipke gore dolje u navigaciji -
-
+45. project slider random fake content
 43. strgan graf na http://localhost:3000/project/10
-
 - syntax higlighting za razlicite jezike -
 - `code` ne radi -
+- 8. dodat u navigaciju jedan post i jedan projekt? sub 20.04
 
 7. meetantonija u footer nek vodi na homepage
 8. cv page

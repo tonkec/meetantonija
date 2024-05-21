@@ -1,10 +1,9 @@
-#### Bugs/improvements
+## New features
+1. toggle dark mode
+2. qoutable pitat Carmen?
+3. dodat zvuk kad se navigacija otvara/zatvara
 
-43. favicon u sub 18.05
-44. not found stranicu bacit neku foru http://localhost:3000/project/8 18.05
 
-#### Responsive issues
-
+## Bugs/improvements
 4. navigacija
-
-- fokus nema na mobile
+    - fokus nema na mobile
