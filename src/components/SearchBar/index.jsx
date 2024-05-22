@@ -208,6 +208,10 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
     setIsMobileNavigationOpen,
   ])
 
+  useEffect(() => {
+    setKeyPressCounter(0)
+  }, [])
+
   const onSubmit = (event) => {
     event.preventDefault()
     enableSrcoll()

@@ -41,13 +41,6 @@
     &:focus {
       outline: none;
     }
-
-    &.active {
-      &:first-child {
-        background-color: var(--color-accent);
-        color: var(--color-black);
-      }
-    }
   }
 
   .search-results {
