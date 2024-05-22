@@ -1,7 +1,2 @@
 [functions]
   node_bundler = "esbuild"
-
-[build.environment]
-  # Environment variables are set here
-  NODE_VERSION = "20.9.0"
-  NPM_VERSION = "10.1.0"
