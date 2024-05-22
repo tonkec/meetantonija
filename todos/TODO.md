@@ -38,8 +38,6 @@
 - kod od emojija
 - kako sam napravila page transition
 - koje fora package koristim
-- kako sam napravila skewed section
-- dodat giscuss samo na tu stranicu?
 - problemi s navigacijom
   - fokus trap
   - maknut trenutnu rutu
