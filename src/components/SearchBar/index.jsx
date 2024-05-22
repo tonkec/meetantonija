@@ -126,7 +126,6 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
   }
 
   const enableSrcoll = () => {
-    console.log('enable scroll')
     const body = document.querySelector('body')
     body.style.overflow = 'auto'
     const html = document.querySelector('html')

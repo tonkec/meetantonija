@@ -9,7 +9,7 @@ const javascriptCode =
 const scssCode =
   '.scss-master {\n  color: black;\n  font-weight: bold;\n  font-size: large;\n  visibility: visible;\n}\n\n.react-dev {\n  display: 💪;\n}'
 const typescriptCode =
-  "type DevSkills = 'html' | 'css' | 'javascript' | 'typescript' | 'react';\ninterface ExperiencedDeveveloper {\n  skills: DevSkills[];\n  neverStopsLearning: boolean;\n  enjoysCoding: boolean;\n  isCreative: boolean;\n}\n"
+  "type DevSkills = 'html' | 'css' | 'javascript' | 'typescript' | 'react';\ninterface ExperiencedDeveveloper {\n  skills: DevSkills[];\n  neverStopsLearning: boolean;\n  enjoysCoding: boolean;\n  isCreative: boolean;\n}"
 
 const Code = () => {
   const { width } = useWindowSize()

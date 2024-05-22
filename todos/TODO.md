@@ -1,3 +1,6 @@
+#### New features
+1. toggle dark mode
+
 #### Blog redesign
 - centrirat da bude sve skupa uze, presiroko je sad
 - kod blokove protegnut od lijevo na desno
@@ -12,7 +15,7 @@
   - napravit na firebase-u samo za lajk, stavit zvjezdicu
 - sliku smanjit
 - slika da bude klikable
-- slika u heeader od posta
+- slika u header od posta
 - dodat vise iducih postova kao ovdje na dnu https://www.totaltypescript.com/you-can-stop-hating-react-fc
 - dodat back to all posts
 - search through articles kao ovdje https://www.totaltypescript.com/articles 
