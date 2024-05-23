@@ -28,13 +28,12 @@ const PostPage = () => {
   const navigate = useNavigate()
   const [text, setText] = useState('')
   const { title } = useParams()
-  const otherPosts =
-    posts.filter((post) => formatNoteTitle(post.title) !==
-    formatNoteTitle(title)) 
-  const currentPost =
-    posts.find((post) => formatNoteTitle(post.title)  === formatNoteTitle(title))
-
-    console.log(currentPost)
+  const otherPosts = posts.filter(
+    (post) => formatNoteTitle(post.title) !== formatNoteTitle(title)
+  )
+  const currentPost = posts.find(
+    (post) => formatNoteTitle(post.title) === formatNoteTitle(title)
+  )
 
   useEffect(() => {
     import(`./../../data/notes/${title}.md`)

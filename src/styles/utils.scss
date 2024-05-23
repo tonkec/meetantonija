@@ -303,3 +303,11 @@
   background-color: var(--color-orange);
   color: var(--color-black);
 }
+
+.border {
+  border: 2px solid var(--color-black);
+
+  &:focus {
+    outline: none;
+  }
+}
