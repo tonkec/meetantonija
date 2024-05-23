@@ -1,7 +1,12 @@
 import { useState } from 'react'
 import { IoMdClose } from 'react-icons/io'
 import notes from '../../../../data/posts'
-import { truncateString } from '../../../../utils'
+import {
+  addUnderscoreBetweenWords,
+  removeQuestionMarkFromString,
+  removeUnderScoresFromString,
+  truncateString,
+} from '../../../../utils'
 import './Aside.scss'
 
 const AsideContent = ({ noteContent }) => {
@@ -15,7 +20,7 @@ const AsideContent = ({ noteContent }) => {
       <button
         className="ternary small-margin-top"
         onClick={() => {
-          window.location.href = `/post/${noteContent.id}`
+          window.location.href = `/post/${addUnderscoreBetweenWords(removeQuestionMarkFromString(noteContent.title.toLowerCase()))}`
         }}
       >
         Read more
