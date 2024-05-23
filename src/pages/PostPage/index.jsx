@@ -48,7 +48,7 @@ const PostPage = () => {
 
   if (isLoading) {
     return (
-      <div className="post-loader container">
+      <div className="post-loader post-container">
         <h2>Fetching post data from markdown files...</h2>
       </div>
     )
@@ -69,7 +69,7 @@ const PostPage = () => {
           h1({ children }) {
             return (
               <header className="medium-padding-top medium-padding-bottom small-margin-bottom">
-                <div className="container">
+                <div className="post-container">
                   {currentPost && Tags(currentPost.tags)}
                   <span>{minutesToRead} to read</span>
                   <h1>{children}</h1>
@@ -79,11 +79,11 @@ const PostPage = () => {
           },
 
           h4({ children }) {
-            return <h4 className="container medium-margin-top">{children}</h4>
+            return <h4 className="post-container medium-margin-top">{children}</h4>
           },
 
           p({ children }) {
-            return <p className="container medium-margin-top">{children}</p>
+            return <p className="post-container medium-margin-top">{children}</p>
           },
           a: ({ node, children, ...props }) => {
             return (
@@ -99,7 +99,7 @@ const PostPage = () => {
           },
           blockquote({ children }) {
             return (
-              <blockquote className="container medium-margin-top">
+              <blockquote className="post-container medium-margin-top">
                 {children}
               </blockquote>
             )
@@ -124,20 +124,20 @@ const PostPage = () => {
           },
           ol({ children }) {
             return (
-              <div className="container">
+              <div className="post-container">
                 <ol>{children}</ol>
               </div>
             )
           },
 
           pre({ node, inline, className, children, ...props }) {
-            return <div className="container code-block">{children}</div>
+            return <div className="post-container code-block">{children}</div>
           },
         }}
       />
 
       <section
-        className="container large-margin-top bg-black medium-padding border-radius max-w-600 pointer primary border-radius-none-xs"
+        className="post-container large-margin-top bg-black medium-padding border-radius max-w-600 pointer primary border-radius-none-xs"
         role="button"
       >
         {shuffleArray(otherPosts)
