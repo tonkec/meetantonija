@@ -6,12 +6,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import './Post.scss'
 import posts from '../../data/posts'
-import {
-  addUnderscoreBetweenWords,
-  removeQuestionMarkFromString,
-  removeUnderScoresFromString,
-  shuffleArray,
-} from '../../utils'
+import { formatNoteTitle, shuffleArray } from '../../utils'
 import { readingTime } from 'reading-time-estimator'
 import { Helmet } from 'react-helmet'
 import { IoIosArrowRoundBack } from 'react-icons/io'
@@ -33,18 +28,14 @@ const PostPage = () => {
   const navigate = useNavigate()
   const [text, setText] = useState('')
   const { title } = useParams()
-  const otherPosts = posts.filter(
-    (post) =>
-      addUnderscoreBetweenWords(
-        removeUnderScoresFromString(post.title.toLowerCase())
-      ) !== removeUnderScoresFromString(title.toLowerCase())
-  )
-  const currentPost = posts.find(
-    (post) =>
-      addUnderscoreBetweenWords(
-        removeUnderScoresFromString(post.title.toLowerCase())
-      ) !== removeUnderScoresFromString(title.toLowerCase())
-  )
+  const otherPosts =
+    posts.filter((post) => formatNoteTitle(post.title) !==
+    formatNoteTitle(title)) 
+  const currentPost =
+    posts.find((post) => formatNoteTitle(post.title)  === formatNoteTitle(title))
+
+    console.log(currentPost)
+
   useEffect(() => {
     import(`./../../data/notes/${title}.md`)
       .then((res) => {
@@ -174,9 +165,7 @@ const PostPage = () => {
               key={post.id}
               className="medium-padding small-margin-bottom text-center"
               onClick={() =>
-                navigate(
-                  `/post/${addUnderscoreBetweenWords(removeQuestionMarkFromString(post.title.toLowerCase()))}`
-                )
+                navigate(`/post/${formatNoteTitle(post.title.toLowerCase())}`)
               }
             >
               <h5>Read next</h5>

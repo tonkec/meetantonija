@@ -52,16 +52,18 @@ export const removeSpacesAndDashesFromString = (string) => {
   return string.toLowerCase().replace(/\s/g, '').replace(/-/g, '')
 }
 
-export const removeUnderScoresFromString = (string) => {
-  return string.replace(/_/g, ' ')
-}
-
 export const addUnderscoreBetweenWords = (string) => {
   return string.replace(/\s/g, '_')
 }
 
 export const removeQuestionMarkFromString = (string) => {
   return string.replace(/\?/g, '')
+}
+
+export const formatNoteTitle = (string) => {
+  return addUnderscoreBetweenWords(
+    removeQuestionMarkFromString(string.toLowerCase())
+  )
 }
 
 export const arrayHasFullString = (array, string) => {
