@@ -43,7 +43,7 @@ const PostPage = () => {
             navigate('/')
           })
       })
-      // .catch(() => navigate('/404'))
+      .catch(() => navigate('/404'))
   }, [title, navigate])
 
   if (isLoading) {
