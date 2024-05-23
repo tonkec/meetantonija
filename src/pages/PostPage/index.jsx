@@ -1,14 +1,20 @@
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import PostsImage from './PostsImage'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import './Post.scss'
 import posts from '../../data/posts'
-import { addUnderscoreBetweenWords, removeUnderScoresFromString, shuffleArray } from '../../utils'
+import {
+  addUnderscoreBetweenWords,
+  removeQuestionMarkFromString,
+  removeUnderScoresFromString,
+  shuffleArray,
+} from '../../utils'
 import { readingTime } from 'reading-time-estimator'
 import { Helmet } from 'react-helmet'
+import { IoIosArrowRoundBack } from 'react-icons/io'
 
 const Tags = (tags) => {
   return (
@@ -27,8 +33,18 @@ const PostPage = () => {
   const navigate = useNavigate()
   const [text, setText] = useState('')
   const { title } = useParams()
-  const otherPosts = posts.filter((post) => addUnderscoreBetweenWords(removeUnderScoresFromString(post.title)) !== removeUnderScoresFromString(title))
-  const currentPost = posts.find((post) =>  addUnderscoreBetweenWords(removeUnderScoresFromString(post.title)) !== removeUnderScoresFromString(title))
+  const otherPosts = posts.filter(
+    (post) =>
+      addUnderscoreBetweenWords(
+        removeUnderScoresFromString(post.title.toLowerCase())
+      ) !== removeUnderScoresFromString(title.toLowerCase())
+  )
+  const currentPost = posts.find(
+    (post) =>
+      addUnderscoreBetweenWords(
+        removeUnderScoresFromString(post.title.toLowerCase())
+      ) !== removeUnderScoresFromString(title.toLowerCase())
+  )
   useEffect(() => {
     import(`./../../data/notes/${title}.md`)
       .then((res) => {
@@ -70,6 +86,13 @@ const PostPage = () => {
             return (
               <header className="medium-padding-top medium-padding-bottom small-margin-bottom">
                 <div className="post-container">
+                  <Link
+                    to="/posts"
+                    className="post-link flex flex-center medium-margin-bottom"
+                  >
+                    <IoIosArrowRoundBack fontSize="2rem" />{' '}
+                    <h5> Back to all posts</h5>
+                  </Link>
                   {currentPost && Tags(currentPost.tags)}
                   <span>{minutesToRead} to read</span>
                   <h1>{children}</h1>
@@ -79,11 +102,15 @@ const PostPage = () => {
           },
 
           h4({ children }) {
-            return <h4 className="post-container medium-margin-top">{children}</h4>
+            return (
+              <h4 className="post-container medium-margin-top">{children}</h4>
+            )
           },
 
           p({ children }) {
-            return <p className="post-container medium-margin-top">{children}</p>
+            return (
+              <p className="post-container medium-margin-top">{children}</p>
+            )
           },
           a: ({ node, children, ...props }) => {
             return (
@@ -114,7 +141,7 @@ const PostPage = () => {
                   {...props}
                   children={String(children).replace(/\n$/, '')}
                   language={String(className).replace('language-', '')}
-                  style={monoBlue}
+                  style={atomOneDark}
                   customStyle={{
                     display: 'inline',
                   }}
@@ -130,7 +157,7 @@ const PostPage = () => {
             )
           },
 
-          pre({ node, inline, className, children, ...props }) {
+          pre({ children }) {
             return <div className="post-container code-block">{children}</div>
           },
         }}
@@ -146,7 +173,11 @@ const PostPage = () => {
             <div
               key={post.id}
               className="medium-padding small-margin-bottom text-center"
-              onClick={() => navigate(`/post/${addUnderscoreBetweenWords(removeUnderScoresFromString(post.title.toLowerCase()))}`)}
+              onClick={() =>
+                navigate(
+                  `/post/${addUnderscoreBetweenWords(removeQuestionMarkFromString(post.title.toLowerCase()))}`
+                )
+              }
             >
               <h5>Read next</h5>
               <h3 className="small-margin-bottom">{post.title}</h3>

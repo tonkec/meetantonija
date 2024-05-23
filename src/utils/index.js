@@ -60,6 +60,10 @@ export const addUnderscoreBetweenWords = (string) => {
   return string.replace(/\s/g, '_')
 }
 
+export const removeQuestionMarkFromString = (string) => {
+  return string.replace(/\?/g, '')
+}
+
 export const arrayHasFullString = (array, string) => {
   return array.some(
     (item) =>

@@ -58,7 +58,7 @@ const notes = [
   },
   {
     tags: 'React, useRef, useState',
-    title: 'When to use useRef and when to use useState?',
+    title: 'When to use useRef and useState?',
     subtitle: 'Be careful of rerendering',
     id: 6,
     icon: () => <FaRobot />,

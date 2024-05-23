@@ -29,7 +29,7 @@ const ProjectPage = () => {
   }
   return (
     <>
-     <Helmet>
+      <Helmet>
         <title>Meetantonija | {project.title}</title>
       </Helmet>
       <header className="header-padding-top header-padding-bottom project-header">
