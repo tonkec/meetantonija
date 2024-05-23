@@ -52,6 +52,14 @@ export const removeSpacesAndDashesFromString = (string) => {
   return string.toLowerCase().replace(/\s/g, '').replace(/-/g, '')
 }
 
+export const removeUnderScoresFromString = (string) => {
+  return string.replace(/_/g, ' ')
+}
+
+export const addUnderscoreBetweenWords = (string) => {
+  return string.replace(/\s/g, '_')
+}
+
 export const arrayHasFullString = (array, string) => {
   return array.some(
     (item) =>

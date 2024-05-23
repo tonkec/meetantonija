@@ -6,7 +6,7 @@ import { BsQuestionSquare } from 'react-icons/bs'
 const notes = [
   {
     tags: 'Javascript, Arrays, Sort',
-    title: 'Reintroduction to the sort method',
+    title: 'Reintroduction to sort method',
     subtitle:
       'It is time to know how this method works even in the middle of the night',
     id: 1,

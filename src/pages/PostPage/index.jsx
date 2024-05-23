@@ -6,7 +6,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import './Post.scss'
 import posts from '../../data/posts'
-import { shuffleArray } from '../../utils'
+import { addUnderscoreBetweenWords, removeUnderScoresFromString, shuffleArray } from '../../utils'
 import { readingTime } from 'reading-time-estimator'
 import { Helmet } from 'react-helmet'
 
@@ -26,11 +26,11 @@ const PostPage = () => {
   const [isLoading, setIsLoading] = useState(true)
   const navigate = useNavigate()
   const [text, setText] = useState('')
-  const { id } = useParams()
-  const otherPosts = posts.filter((post) => post.id !== Number(id))
-  const currentPost = posts.find((post) => post.id === Number(id))
+  const { title } = useParams()
+  const otherPosts = posts.filter((post) => addUnderscoreBetweenWords(removeUnderScoresFromString(post.title)) !== removeUnderScoresFromString(title))
+  const currentPost = posts.find((post) =>  addUnderscoreBetweenWords(removeUnderScoresFromString(post.title)) !== removeUnderScoresFromString(title))
   useEffect(() => {
-    import(`./../../data/notes/${id}.md`)
+    import(`./../../data/notes/${title}.md`)
       .then((res) => {
         fetch(res.default)
           .then((response) => response.text())
@@ -43,8 +43,8 @@ const PostPage = () => {
             navigate('/')
           })
       })
-      .catch(() => navigate('/404'))
-  }, [id, navigate])
+      // .catch(() => navigate('/404'))
+  }, [title, navigate])
 
   if (isLoading) {
     return (
@@ -146,7 +146,7 @@ const PostPage = () => {
             <div
               key={post.id}
               className="medium-padding small-margin-bottom text-center"
-              onClick={() => navigate(`/post/${post.id}`)}
+              onClick={() => navigate(`/post/${addUnderscoreBetweenWords(removeUnderScoresFromString(post.title.toLowerCase()))}`)}
             >
               <h5>Read next</h5>
               <h3 className="small-margin-bottom">{post.title}</h3>

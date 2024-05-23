@@ -1,5 +1,6 @@
 import posts from '../../data/posts'
 import { Helmet } from 'react-helmet'
+import { addUnderscoreBetweenWords, removeSpacesAndDashesFromString } from '../../utils'
 
 const PostsPage = () => {
   return (
@@ -13,7 +14,7 @@ const PostsPage = () => {
           {posts.map((post) => {
             return (
               <a
-                href={`/post/${post.id}`}
+                href={`/post/${addUnderscoreBetweenWords(post.title.toLowerCase())}`}
                 key={post.id}
                 role="button"
                 className="ternary inline-block small-margin-bottom"

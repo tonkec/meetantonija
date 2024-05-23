@@ -29,7 +29,7 @@ const routes = [
     navigationName: 'CV',
   },
   {
-    path: '/post/:id',
+    path: '/post/:title',
     element: <PostPage />,
     navigationName: 'Post',
   },

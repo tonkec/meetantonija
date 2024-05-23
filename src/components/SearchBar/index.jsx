@@ -6,6 +6,7 @@ import { FaArrowRight } from 'react-icons/fa'
 import projects from '../../data/projects'
 import posts from '../../data/posts'
 import './SearchBar.scss'
+import { addUnderscoreBetweenWords, removeUnderScoresFromString } from '../../utils'
 
 const delay = 0.1
 const maxNumberOfResults = 2
@@ -33,6 +34,7 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
     .filter(
       (route) =>
         !route.path.includes(':id') &&
+        !route.path.includes(':title') &&
         route.path !== '*' &&
         search !== '' &&
         route.path !== location.pathname
@@ -79,7 +81,7 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
       <NavigationButton
         key={post.title}
         onClick={() => {
-          navigate(`/post/${post.id}`)
+          navigate(`/post/${addUnderscoreBetweenWords(removeUnderScoresFromString(post.title.toLowerCase()))}`)
           setIsNavigationOpen(false)
         }}
         value={`Post: ${post.title}`}
@@ -92,7 +94,7 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
     .concat(searchedPosts)
 
   const allRoutes = routes
-    .filter((route) => !route.path.includes(':id') && route.path !== '*')
+    .filter((route) => !route.path.includes(':id') &&  !route.path.includes(':title') && route.path !== '*')
     .map((route) => (
       <NavigationButton
         key={route.path}
