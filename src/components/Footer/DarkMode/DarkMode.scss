@@ -1,0 +1,15 @@
+.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track,
+.react-toggle--checked .react-toggle-track {
+  background-color: var(--color-black);
+}
+
+.react-toggle--checked .react-toggle-thumb {
+  background-color: var(--color-black);
+  border: 1px solid var(--color-white);
+}
+
+.react-toggle-track-check,
+.react-toggle-track-x {
+  font-size: 0.6rem;
+  top: 50%;
+}

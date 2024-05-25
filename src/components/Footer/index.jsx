@@ -1,5 +1,6 @@
 import { FaHeart, FaCoffee } from 'react-icons/fa'
 import Emoji from './../../components/Emoji'
+import DarkMode from './DarkMode'
 import './Footer.scss'
 
 const Footer = () => {
@@ -12,8 +13,13 @@ const Footer = () => {
           <FaHeart className="icon" color="red" /> and{' '}
           <FaCoffee color="#6F4E37" className="icon" />
         </p>
-        <span> Copyright &copy; </span>
-        <span>{new Date().getFullYear()}</span> <a href="/">meetantonija</a>
+        <div className="flex space-between">
+          <span>
+            <span> Copyright &copy; </span>
+            <span>{new Date().getFullYear()}</span> <a href="/">meetantonija</a>
+          </span>
+          <DarkMode />
+        </div>
       </div>
     </footer>
   )

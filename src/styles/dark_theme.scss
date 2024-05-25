@@ -1,5 +1,8 @@
-@media (prefers-color-scheme: dark) {
-  :root {
+@mixin dark-theme {
+  body {
+    color: #fff;
+    background-color: #000;
+    --color-black: #3e3e3e;
     --body-gradient: repeating-linear-gradient(
         90deg,
         hsla(57, 0%, 42%, 0.09) 0px,
@@ -29,12 +32,10 @@
         transparent 10px
       ),
       linear-gradient(90deg, rgb(20, 20, 20), rgb(20, 20, 20));
-      --color-black: #313337;
-  }
 
-  html > body {
-    color: #fff;
-    background-color: #000;
+    form {
+      color: var(--color-black);
+    }
 
     .accent {
       background-color: var(--color-white);
@@ -97,8 +98,8 @@
       background-color: var(--color-brown);
     }
   }
+}
 
-  form {
-    color: var(--color-black);
-  }
+.dark-theme {
+  @include dark-theme;
 }
