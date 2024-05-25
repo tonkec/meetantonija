@@ -157,12 +157,15 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
   useEffect(() => {
     const handleNavigationWithArrowKeys = (event) => {
       if (event.key === 'ArrowDown') {
-        // on each arrow down key press, focus on the next navigation button
         const navigationButtons =
           document.querySelectorAll('.navigation-button')
         if (navigationButtons.length) {
+          if (keyPressCounter === navigationButtons.length) {
+            return
+          }
+          setKeyPressCounter((prev) => (prev + 1))
           navigationButtons[keyPressCounter].focus()
-          setKeyPressCounter((prev) => (prev + 1) % navigationButtons.length)
+
         }
       }
 
@@ -170,11 +173,20 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
         const navigationButtons =
           document.querySelectorAll('.navigation-button')
         if (navigationButtons.length) {
-          navigationButtons[keyPressCounter].focus()
-          setKeyPressCounter(
-            (prev) =>
-              (prev - 1 + navigationButtons.length) % navigationButtons.length
-          )
+       
+          if (keyPressCounter === 0) {
+            return
+          }
+
+          
+          if (keyPressCounter === 1) {
+            setKeyPressCounter((prev) => (prev - 1))
+            navigationButtons[keyPressCounter - 1].focus()
+            return
+          }
+          setKeyPressCounter((prev) => (prev - 1))
+          navigationButtons[keyPressCounter - 2].focus()
+
         }
       }
     }
