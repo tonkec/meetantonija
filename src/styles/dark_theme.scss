@@ -1,0 +1,67 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+      --body-gradient:repeating-linear-gradient(90deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 60px),repeating-linear-gradient(0deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 60px),repeating-linear-gradient(0deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 10px),repeating-linear-gradient(90deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 10px),linear-gradient(90deg, rgb(20,20,20),rgb(20,20,20));
+    }
+  
+    html >body {
+      color: var(--color-white);
+      background-color: #000;
+  
+      .accent {
+        background-color: var(--color-accent);
+        text-shadow: 0 0 5px var(--color-accent);
+      }
+  
+      ::selection {
+        background-color: var(--color-white);
+        color: var(--color-black);
+      }
+  
+      a {
+        color: var(--color-blue);
+      }
+  
+      button.primary, a[role=button].primary, *[role=button].primary, input[type=submit].primary {
+        background-color: var(--color-black);
+        color: var(--color-white);
+  
+        &:hover, &:focus {
+          background-color: var(--color-dark-blue);
+        }
+      }
+  
+      button.ternary, a[role=button].ternary, *[role=button].ternary, input[type=submit].ternary {
+        background-color: var(--color-dark-blue);
+        color: var(--color-white);
+  
+        &:hover, &:focus {
+          background-color: var(--color-blue);
+        }
+      }
+  
+      .tag {
+        background-color: var(--color-brown);
+      }
+  
+      footer {
+        color: var(--color-white);
+      }
+  
+      .browser {
+        background-color: var(--color-black);
+        color: var(--color-white);
+  
+        .fake-content span {
+          background-color: var(--color-dark-blue);
+        }
+      }
+  
+      .bg-dark-blue {
+        background-color: var(--color-brown);
+      }
+    }
+
+    form {
+        color: var(--color-black);
+    }
+}
