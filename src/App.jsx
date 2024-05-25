@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import PageTransition from './components/PageTransition'
 import SearchBar from './components/SearchBar'
 import Navigation from './components/Navigation'
+import DarkMode from './components/DarkMode'
 
 function Layout() {
   const [isMobileNavigationOpen, setIsMobileNavigationOpen] = useState(false)

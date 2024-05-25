@@ -1,14 +1,10 @@
 import { RxHamburgerMenu } from 'react-icons/rx'
 import Social from './../../components/Social'
-import { LuLinkedin, LuGithub, LuCodepen } from 'react-icons/lu'
 import useScrollPosition from './../../hooks/useScrollPosition'
+import DarkMode from '../DarkMode'
 import './Navigation.scss'
 
-const socialLinks = [
-  { href: 'https://codepen.io/tonkec', icon: LuCodepen },
-  { href: 'https://github.com/tonkec', icon: LuGithub },
-  { href: 'https://www.linkedin.com/in/antonija-simic/', icon: LuLinkedin },
-]
+
 
 const Navigation = ({ setIsMobileNavigationOpen }) => {
   const scrollPosition = useScrollPosition()
@@ -27,8 +23,9 @@ const Navigation = ({ setIsMobileNavigationOpen }) => {
         >
           <RxHamburgerMenu fontSize={'2rem'} />
         </button>
-        <h6>Shift + K</h6>
-        <Social icons={socialLinks} />
+         <h6>Shift + K</h6>
+        {/* <Social icons={socialLinks} /> */}
+        <DarkMode />
       </div>
     </div>
   )
