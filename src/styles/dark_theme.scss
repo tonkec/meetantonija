@@ -4,12 +4,12 @@
     }
   
     html >body {
-      color: var(--color-white);
+      color: #fff;
       background-color: #000;
   
       .accent {
-        background-color: var(--color-accent);
-        text-shadow: 0 0 5px var(--color-accent);
+        background-color: var(--color-white);
+        text-shadow: 0 0 5px var(--color-white);
       }
   
       ::selection {
