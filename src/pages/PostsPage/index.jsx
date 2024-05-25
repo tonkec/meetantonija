@@ -28,19 +28,23 @@ const PostsPage = () => {
           />
         </div>
         <div className="grid">
-          {postsToRender.length ? postsToRender.map((post) => {
-            return (
-              <a
-                href={`/post/${formatNoteTitle(post.title.toLowerCase())}`}
-                key={post.id}
-                role="button"
-                className="ternary inline-block small-margin-bottom"
-              >
-                <h3>{post.title}</h3>
-                <p>{post.subtitle}</p>
-              </a>
-            )
-          }): <p>No posts found.</p>}
+          {postsToRender.length ? (
+            postsToRender.map((post) => {
+              return (
+                <a
+                  href={`/post/${formatNoteTitle(post.title.toLowerCase())}`}
+                  key={post.id}
+                  role="button"
+                  className="ternary inline-block small-margin-bottom"
+                >
+                  <h3>{post.title}</h3>
+                  <p>{post.subtitle}</p>
+                </a>
+              )
+            })
+          ) : (
+            <p>No posts found.</p>
+          )}
         </div>
       </section>
     </>

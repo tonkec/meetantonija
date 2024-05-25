@@ -163,9 +163,8 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
           if (keyPressCounter === navigationButtons.length) {
             return
           }
-          setKeyPressCounter((prev) => (prev + 1))
+          setKeyPressCounter((prev) => prev + 1)
           navigationButtons[keyPressCounter].focus()
-
         }
       }
 
@@ -173,20 +172,17 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
         const navigationButtons =
           document.querySelectorAll('.navigation-button')
         if (navigationButtons.length) {
-       
           if (keyPressCounter === 0) {
             return
           }
 
-          
           if (keyPressCounter === 1) {
-            setKeyPressCounter((prev) => (prev - 1))
+            setKeyPressCounter((prev) => prev - 1)
             navigationButtons[keyPressCounter - 1].focus()
             return
           }
-          setKeyPressCounter((prev) => (prev - 1))
+          setKeyPressCounter((prev) => prev - 1)
           navigationButtons[keyPressCounter - 2].focus()
-
         }
       }
     }
