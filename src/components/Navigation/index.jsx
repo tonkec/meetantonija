@@ -4,8 +4,6 @@ import useScrollPosition from './../../hooks/useScrollPosition'
 import DarkMode from '../DarkMode'
 import './Navigation.scss'
 
-
-
 const Navigation = ({ setIsMobileNavigationOpen }) => {
   const scrollPosition = useScrollPosition()
 
@@ -23,7 +21,7 @@ const Navigation = ({ setIsMobileNavigationOpen }) => {
         >
           <RxHamburgerMenu fontSize={'2rem'} />
         </button>
-         <h6>Shift + K</h6>
+        <h6>Shift + K</h6>
         {/* <Social icons={socialLinks} /> */}
         <DarkMode />
       </div>

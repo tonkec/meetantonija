@@ -1,0 +1,12 @@
+@import './../../styles/transitions.scss';
+
+.icons {
+  a {
+    color: var(--color-white);
+    @include transition(transform);
+  }
+
+  a:hover {
+    transform: translateY(-5px);
+  }
+}

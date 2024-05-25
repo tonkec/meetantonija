@@ -1,3 +1,5 @@
+import "./Social.scss";
+
 const Social = ({ icons }) => {
   return (
     <div className="flex flex-gap icons flex-center">
