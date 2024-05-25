@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react'
 import useTemperature from '../../hooks/useTemperature'
 import { Triangle } from 'react-loader-spinner'
+import usePrefersDarkMode from '../../hooks/usePrefersDarkMode'
 
 const Temperature = () => {
   const [temperature, setTemperature] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
   const temperatureData = useTemperature()
+  const isDark = usePrefersDarkMode()
+
   const getTemperatureMood = (temperature) => {
     if (temperature < 10) return 'cold'
     if (temperature >= 10 && temperature < 20) return 'moderate'
@@ -26,7 +29,7 @@ const Temperature = () => {
     return (
       <Triangle
         wrapperStyle={{ display: 'inline' }}
-        color="#000"
+        color={isDark ? 'var(--color-white)' : 'var(--color-black)'}
         height={50}
         width={50}
       />
