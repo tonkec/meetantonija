@@ -164,7 +164,9 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
             return
           }
           setKeyPressCounter((prev) => prev + 1)
-          navigationButtons[keyPressCounter].focus()
+          if (navigationButtons[keyPressCounter]) {
+            navigationButtons[keyPressCounter].focus()
+          }
         }
       }
 
@@ -181,8 +183,11 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
             navigationButtons[keyPressCounter - 1].focus()
             return
           }
-          setKeyPressCounter((prev) => prev - 1)
-          navigationButtons[keyPressCounter - 2].focus()
+          if (navigationButtons[keyPressCounter - 1]) { {
+            setKeyPressCounter((prev) => prev - 1)
+          navigationButtons[keyPressCounter - 1].focus()  
+          }
+         }
         }
       }
     }
