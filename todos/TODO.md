@@ -1,27 +1,15 @@
 #### New features
-1. toggle dark mode
+
+2. qoutable pitat Carmen
+3. pretvorit komentare u lajk/unlajk
 
 #### Blog redesign
-- centrirat da bude sve skupa uze, presiroko je sad
-- kod blokove protegnut od lijevo na desno
-- code block da se moze kopirat
-- paginacija na postove
-- poredat postove prema datumu
-  - stavit recently posted kao posebnu kategoriju
-- napravit tags stranicu
-  - tags example https://kentcdodds.com/blog
-- share this article
+
+- paginacija na postove => kad bude vise postova
 - dodat neku interkaciju s publikom
   - napravit na firebase-u samo za lajk, stavit zvjezdicu
 - sliku smanjit
 - slika da bude klikable
-- slika u header od posta
-- dodat vise iducih postova kao ovdje na dnu https://www.totaltypescript.com/you-can-stop-hating-react-fc
-- dodat back to all posts
-- search through articles kao ovdje https://www.totaltypescript.com/articles 
-- headings ko linkovi
-- zamijenit /broj s /title-blog-posta
-
 
 #### About this page
 

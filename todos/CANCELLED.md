@@ -1,14 +1,21 @@
 ## Odbijeno
+
+- headings ko linkovi
+  - treba hendlat router da se ne pokaze loader
+- dodat vise iducih postova kao ovdje na dnu https://www.totaltypescript.com/you-can-stop-hating-react-fc
+- centrirat da bude sve skupa uze, presiroko je sad, blog
+- code block da se moze kopirat
+
 21. social media icons nekako drugacije? https://preview.themeforest.net/item/maktub-minimal-lightweight-blog-for-wordpress/full_screen_preview/38348402 => fora social icons
 22. text effect umjesto ovog kojeg imam? https://preview.themeforest.net/item/porto-multipurpose-ghost-blog-theme/full_screen_preview/47642992
-41. share this article 18.05
-42. navigacija drzat height rezultata uvijek isti kao na react dev 28.04
-43. forma u cta
-44. animacije na scroll?
-23. animacije na graf na projekt page
-46. dodat klijenta (company vs title) i location 27.04
-47. dodat ipak giscuss?=> onda treba bit public repo a to ne zelim
-48. na cvu kad se stisne na tehnologiju ne bi se trebao pokazat loader, page transition
+23. share this article 18.05
+24. navigacija drzat height rezultata uvijek isti kao na react dev 28.04
+25. forma u cta
+26. animacije na scroll?
+27. animacije na graf na projekt page
+28. dodat klijenta (company vs title) i location 27.04
+29. dodat ipak giscuss?=> onda treba bit public repo a to ne zelim
+30. na cvu kad se stisne na tehnologiju ne bi se trebao pokazat loader, page transition
 
 - dodat onaj gore indicator za reading
 - dodat mozda neki projekt s githuba?
