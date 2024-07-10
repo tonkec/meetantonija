@@ -183,10 +183,9 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
             navigationButtons[keyPressCounter - 1].focus()
             return
           }
-          if (navigationButtons[keyPressCounter - 1]) { {
+          if (navigationButtons[keyPressCounter - 1]) { 
             setKeyPressCounter((prev) => prev - 1)
-          navigationButtons[keyPressCounter - 1].focus()  
-          }
+            navigationButtons[keyPressCounter - 1].focus() 
          }
         }
       }
