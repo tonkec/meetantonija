@@ -12,7 +12,7 @@ const Navigation = ({ setIsMobileNavigationOpen }) => {
 
   return (
     <div className={navigationClasses}>
-      <div className="container flex flex-gap space-between flex-center">
+      <div className="container flex flex-gap space-between flex-y-center">
         <button
           onClick={() => {
             setIsMobileNavigationOpen(true)

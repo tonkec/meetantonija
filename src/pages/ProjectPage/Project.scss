@@ -24,8 +24,18 @@
   @include breakpoint(md) {
     padding-top: calc(var(--card-spacing) * 4);
   }
-
   @include breakpoint(lg) {
     padding-top: calc(var(--card-spacing) * 2);
   }
+}
+
+.project-bg {
+  height: 40vh;
+  border-radius: var(--border-radius);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: var(--border-radius);
+  position: relative;
+  max-width: 400px;
 }

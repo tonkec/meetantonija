@@ -17,7 +17,7 @@ const PostsPage = () => {
       </Helmet>
       <section className="container large-padding-top">
         <h2>I like to write about technology.</h2>
-        <div className="flex flex-center medium-margin-bottom">
+        <div className="flex flex-y-center medium-margin-bottom">
           <input
             type="text"
             placeholder={`Search ${posts.length} posts`}

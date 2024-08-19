@@ -111,6 +111,15 @@ const ProjectPage = () => {
         className="steps-section"
       />
 
+      <section className='bg-black no-padding-bottom no-padding-top'>
+        <div className="container">
+        <h2>📸 Here are some photos</h2>
+        <div className="flex">
+          <div className='project-bg flex-1' style={{backgroundImage: `url(${project.headerImage})`}}></div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-black">
         <div className="container">
           <h2>What did I learn in this project?</h2>

@@ -17,7 +17,7 @@ const DarkMode = () => {
   }, [value])
 
   return (
-    <label className="flex flex-center">
+    <label className="flex flex-y-center">
       <span className="text-white small-margin-right">Set the mood</span>
       <Toggle
         checked={isDark}

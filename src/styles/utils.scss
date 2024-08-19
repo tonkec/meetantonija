@@ -152,6 +152,15 @@
   justify-content: space-between;
 }
 
+.flex-x-center {
+  justify-content: center;
+}
+
+.bg-white {
+  background-color: #fff;
+  color: var(--color-black);
+}
+
 .bg-black {
   background-color: var(--color-black);
   color: var(--color-white);
@@ -190,7 +199,7 @@
   align-items: stretch;
 }
 
-.flex-center {
+.flex-y-center {
   align-items: center;
 }
 

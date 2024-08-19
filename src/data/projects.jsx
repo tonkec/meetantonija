@@ -3,61 +3,18 @@ import Graph from '../pages/ProjectPage/components/Graph'
 import Dashboard from '../pages/HomePage/components/Videos/components/Dashboard'
 import Board from '../pages/ProjectPage/components/Board'
 import Mountains from '../pages/ProjectPage/components/Mountains'
+import funderpro from '../images/funderpro/1.png'
+import casumo from '../images/casumo/1.jpg'
+import formunauts from '../images/formunauts/1.png'
+import crafstrom from '../images/crafstrom/1.png'
+import revuto from '../images/revuto/1.png'
+import codeinstitute from '../images/codeinstitute/1.png'
+import peaks from '../images/peaks/1.jpeg'
+import tint from '../images/tint/1.jpeg'
 
 const projects = [
   {
-    fakeContent: (
-      <FakeBrowser className="fake-dashboard">
-        <Dashboard title="Trustworthy" />
-      </FakeBrowser>
-    ),
-    location: 'Remote',
-    company: 'Trustworthy',
-    title: 'Trustworthy',
-    headline: 'A family operating system',
-    skills: 'React, Typescript, Styled Components, Redux Toolkit Query, auth0',
-    link: 'https://www.trustworthy.com/',
-    responsibilities: [
-      {
-        title: 'Led the development of critical software applications',
-        description:
-          'Provided leadership and mentorship to junior developers, fostering a culture of collaboration, learning, and excellence within the team.',
-      },
-      {
-        title: 'Collaborated with cross-functional teams',
-        description:
-          'Led discussions on best practices and code standards, delivering high-quality code, resolving complex technical challenges, and contributing to the successful delivery of projects.',
-      },
-      {
-        title: 'Delivered high-quality code',
-        description:
-          'Resolved complex technical challenges, and contributed to the successful delivery of projects.',
-      },
-      {
-        title: 'Resolved complex technical challenges',
-        description: 'Contributed to the successful delivery of projects.',
-      },
-      {
-        title: 'Contributed to the successful delivery of projects',
-        description: 'Resolved complex technical challenges.',
-      },
-    ],
-    conclusion:
-      "Overall, my experience at Trustworthy Company as a Senior React Developer equipped me with valuable skills in leadership, architectural design, technical excellence, problem-solving, and delivery. I am proud of my contributions to the company's success and grateful for the opportunities for growth and development that I experienced during my time there.",
-    year: 2023,
-    id: 1,
-    from: 2023,
-    to: 2023,
-    description:
-      "As a Senior React Developer at Trustworthy Company, I played a pivotal role in the development and maintenance of critical software applications, contributing to the company's mission of providing reliable and secure solutions to its clients. My responsibilities included providing leadership and mentorship to junior developers, collaborating with cross-functional teams, leading discussions on best practices and code standards, delivering high-quality code, resolving complex technical challenges, and contributing to the successful delivery of projects.",
-    position: 'Senior React Developer',
-    team: 10,
-    learned:
-      'I got familiar with Redux Toolkit and Redux Toolkit Query which improved me as a developer. I also learned from the core developer about architecture and design patterns.',
-    collaboration: 'Github issues, Slack, Google Meet, Github',
-    methodology: 'Kanban',
-  },
-  {
+    headerImage: casumo,
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Graph />
@@ -113,6 +70,7 @@ const projects = [
     collaboration: 'Google Meet, Gitlab, Slack, Jira, Confluence',
   },
   {
+    headerImage: formunauts,
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Dashboard title="Formunauts" />
@@ -166,6 +124,7 @@ const projects = [
     methodology: 'Scrum',
   },
   {
+    headerImage: crafstrom,
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Dashboard title="Crafstrom" />
@@ -209,6 +168,7 @@ const projects = [
       "I developed the user interface of the Craftstrom mobile app using React Native, ensuring a seamless and visually appealing experience for users. My responsibilities included handling user authentication and authorization, orchestrating Ajax calls to communicate with the backend API, and utilizing AsyncStorage to securely store and manage user tokens. This experience allowed me to apply my skills in JavaScript and React Native to a real-world application, contributing to the app's functionality and user experience.",
   },
   {
+    headerImage: revuto,
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Graph />
@@ -257,6 +217,7 @@ const projects = [
       "Revuto was a platform that allowed users to manage their subscriptions efficiently. As the sole developer for Revuto, I played a pivotal role in the platform's evolution, employing technologies such as Axios, interceptors, and React Context to efficiently manage API requests and responses. My responsibilities included integrating APIs into the platform, optimizing data flow and communication, and enhancing the reliability and security of the application. This experience allowed me to hone my skills in API integration and data management, contributing to the platform's success.",
   },
   {
+    headerImage: codeinstitute,
     fakeContent: (
       <FakeBrowser>
         <Board />
@@ -304,6 +265,7 @@ const projects = [
       "I was product developer, mentor and front end developer. I was responsible for enhancing the functionality and user experience of Code Institute's Learning Management System (LMS) based on Django. My responsibilities included integrating various new components into the existing LMS, coding the interface of every course module, and optimizing the codebase to enhance performance. This experience allowed me to hone my front-end development skills and collaborate with a talented designer to create a sophisticated and user-centric platform.",
   },
   {
+    headerImage: peaks,
     fakeContent: (
       <FakeBrowser>
         <Mountains />
@@ -405,6 +367,7 @@ const projects = [
       'During my time at AsyncLabs, I had the opportunity to work on the PIMSF app, focusing on the explorer section. My responsibilities included implementing D3/DC charts, creating a changelog history tree, ensuring responsiveness of the grid layout, and developing functionality for pipeline approval and deletion. These efforts played a key role in enhancing the functionality and user experience of the application, showcasing my ability to leverage JavaScript, React, D3, and other technologies to deliver impactful solutions.',
   },
   {
+    headerImage: tint,
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Dashboard title="Tint" />
@@ -453,6 +416,7 @@ const projects = [
       "During my time at Tint, I had the opportunity to work on the homepage and landing page of their product, contributing to the enhancement of their online presence and user engagement. My responsibilities included implementing pixel-perfect layouts, coding global navigation and footer elements, developing animations and transitions, and collaborating with the team to bring creative ideas to life. These efforts played a key role in creating a visually appealing and functional website that showcased Tint's product effectively.",
   },
   {
+    headerImage: funderpro,
     fakeContent: (
       <FakeBrowser>
         <Graph />

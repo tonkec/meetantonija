@@ -78,7 +78,7 @@ const PostPage = () => {
                 <div className="post-container">
                   <Link
                     to="/posts"
-                    className="post-link flex flex-center medium-margin-bottom"
+                    className="post-link flex flex-y-center medium-margin-bottom"
                   >
                     <IoIosArrowRoundBack fontSize="2rem" />{' '}
                     <h5> Back to all posts</h5>
