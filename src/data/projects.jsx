@@ -55,28 +55,34 @@ const projects = [
     responsibilities: [
       {
         title:
-          'Led the migration of the existing codebase from Knockout.js to React',
+          'Led the migration of the existing codebase',
         description:
-          'Architected and implemented a robust migration strategy, ensuring a seamless transition to React while maintaining the platform’s functionality and performance.',
+          'Architected and implemented a robust migration strategy, ensuring a seamless transition to React while maintaining the platform’s functionality and performance. Migrated the existing codebase from Knockout.js to React, leveraging React’s component-based architecture to enhance maintainability and efficiency.',
       },
       {
         title:
-          'Collaborated with cross-functional teams to develop cutting-edge features and enhancements',
+          'Collaborated with cross-functional teams',
         description:
           'Worked closely with designers, backend developers, and QA engineers to deliver captivating gaming experiences to players worldwide.',
       },
       {
         title:
-          'Contributed to the development of real-time interactive features using GraphQL',
+          'Contributed to the development of features using GraphQL',
         description:
           'Leveraged GraphQL to optimize data fetching and improve the performance of the platform, enhancing the user experience and enabling real-time interactions.',
       },
       {
         title:
-          'Integrated external services such as Contentful, Wordpress, Keycloak, and Jenkins',
+          'Integrated external services',
         description:
           'Ensured seamless integration of third-party services, enhancing the platform’s functionality and enabling new features and capabilities for players.',
       },
+      {
+        title:
+          'Optimized the platform’s performance',
+        description:
+          'Implemented best practices in React development, optimized code performance, and enhanced the user experience through responsive design and interactive features.',
+      }
     ],
     from: 2022,
     to: 2023,
@@ -134,6 +140,11 @@ const projects = [
         description:
           'Successfully integrated the Angular UI with the Raisenow API, navigating its intricacies to ensure smooth data synchronization and accurate transaction handling.',
       },
+      {
+        title: 'Collaborating with the Team',
+        description:
+          'Collaborated closely with the development team to ensure alignment on project goals, resolve technical challenges, and deliver high-quality code that met the platform’s requirements.',
+      }
     ],
     conclusion:
       'My experience at Formunauts as an Angular developer showcased my ability to swiftly learn and apply new technologies, design intricate communication architectures, and collaborate effectively with the team. From mastering Angular, Typescript, and RxJS to ensuring seamless API interactions and conducting comprehensive testing, I made significant contributions to enhancing the functionality and performance of the platform.',
@@ -183,6 +194,16 @@ const projects = [
         description:
           'Utilized AsyncStorage to securely store and manage user tokens, ensuring the integrity of user data and facilitating smooth interactions for returning users.',
       },
+      {
+        title: 'Solving Responsive Design Issues',
+        description:
+          'Solved numerous responsive design issues to ensure the app’s compatibility with various devices and screen sizes, enhancing the user experience and usability of the application.',
+      },
+      {
+        title: 'Optimizing Performance',
+        description:
+          'Optimized the app’s performance by implementing best practices in React Native development, ensuring smooth navigation, fast loading times, and a seamless user experience.',
+      }
     ],
     conclusion:
       "My tenure at Craftstrom as a React Native developer was an enriching journey of learning and growth. Working hands-on with JavaScript and React Native allowed me to apply my skills and creativity to a real-world application, witnessing the tangible impact of my work on the app's functionality and user experience. I am proud of the contributions I made to Craftstrom and carry with me the valuable lessons and accomplishments gained during my time there as I continue to progress in my career.",
@@ -328,6 +349,11 @@ const projects = [
         description:
           'Incorporated JavaScript to enhance interactivity and functionality, creating dynamic elements, implementing animations, and facilitating user engagement.',
       },
+      {
+        title: 'Collaboration with Design Team',
+        description:
+          'Collaborated closely with the design team to bring creative ideas to life, ensuring that the final product aligned with the design vision and provided a visually stunning and functionally robust interface.',
+      }
     ],
     conclusion:
       'My role at Supersuperstudio as a static website developer provided an exciting blend of creativity and technical expertise. By converting design concepts into live websites using HTML, SCSS, and JavaScript, I contributed to the digital presence of various brands while continuously pushing my boundaries to create visually stunning and functionally robust interfaces. Each project presented unique challenges that fueled my continuous learning journey and allowed me to merge design aesthetics with technical proficiency.',
@@ -428,10 +454,20 @@ const projects = [
       },
       {
         title:
-          'Driving Innovation and Delivering Best-in-Class Trading Experience',
+          'Driving Innovation',
         description:
           'Contributed to driving innovation and delivering a best-in-class trading experience to users by harnessing the power of React, TypeScript, and React Query.',
       },
+      {
+        title: "Delivering Best-in-Class Trading Experience",
+        description:
+          "Contributed to delivering a seamless trading experience for users by implementing dynamic and responsive user interfaces with React, ensuring type safety and cleaner code with TypeScript, and optimizing data fetching and state management with React Query.",
+      },
+      {
+        title: 'Collaboration with Cross-Functional Teams',
+        description:
+          'Collaborated closely with cross-functional teams to develop cutting-edge features and enhancements, ensuring seamless integration of new technologies and functionalities.',
+      }
     ],
     collaboration: 'Jira, Slack, Gitlab, Google Meet, Notion',
     learned:
