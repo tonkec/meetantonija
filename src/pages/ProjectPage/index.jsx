@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import projects from '../../data/projects'
 import Steps from '../HomePage/components/Steps'
@@ -7,6 +8,8 @@ import Slider from '../HomePage/components/Slider'
 import { scrollToTheElement } from '../../utils'
 import Skills from '../../components/Skills'
 import { Helmet } from 'react-helmet'
+import Modal from 'react-modal'
+import usePrefersDarkMode from '../../hooks/usePrefersDarkMode'
 
 const getTeamSize = (team) => {
   if (team <= 1) {
@@ -21,36 +24,90 @@ const getTeamSize = (team) => {
 }
 
 const ProjectPhotos = ({ project }) => {
+  const isDark = usePrefersDarkMode()
+
+  const [currentPhoto, setCurrentPhoto] = useState(0)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   if (project.title === 'Craftstrom') {
     return (
-      <div className="flex flex-gap flex-wrap">
-        {project.photos.map((photo, index) => (
+      <>
+        <div className="flex flex-gap flex-wrap">
+          {project.photos.map((photo, index) => (
+            <div
+              id={index}
+              className="project-bg"
+              style={{
+                backgroundImage: `url(${photo})`,
+                height: 550,
+                minWidth: 300,
+                backgroundPositionX: 'center',
+                backgroundPositionY: 'center',
+              }}
+              onClick={() => {
+                setCurrentPhoto(photo)
+                setIsModalOpen(true)
+              }}
+            ></div>
+          ))}
+        </div>
+        <Modal
+          isOpen={isModalOpen}
+          onRequestClose={() => setIsModalOpen(false)}
+          className="modal"
+          style={{
+            overlay: {
+              zIndex: 1000,
+              backgroundColor: isDark
+                ? 'rgba(0, 0, 0, 0.8)'
+                : 'rgba(255, 255, 255, 0.8)',
+            },
+          }}
+        >
           <div
-            id={index}
-            className="project-bg"
-            style={{
-              backgroundImage: `url(${photo})`,
-              height: 550,
-              minWidth: 300,
-              backgroundPositionX: 'center',
-              backgroundPositionY: 'center',
-            }}
+            className="content contain border-radius"
+            style={{ backgroundImage: `url(${currentPhoto})` }}
           ></div>
-        ))}
-      </div>
+        </Modal>
+      </>
     )
   }
 
   return (
-    <div className="flex flex-responsive flex-gap flex-wrap">
-      {project.photos.map((photo, index) => (
+    <>
+      <div className="flex flex-responsive flex-gap flex-wrap">
+        {project.photos.map((photo, index) => (
+          <div
+            id={index}
+            className="project-bg"
+            style={{ backgroundImage: `url(${photo})` }}
+            onClick={() => {
+              setCurrentPhoto(photo)
+              setIsModalOpen(true)
+            }}
+          ></div>
+        ))}
+      </div>
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={() => setIsModalOpen(false)}
+        className="modal"
+        style={{
+          overlay: {
+            zIndex: 1000,
+            backgroundColor: isDark
+              ? 'rgba(0, 0, 0, 0.8)'
+              : 'rgba(255, 255, 255, 0.8)',
+          },
+        }}
+      >
         <div
-          id={index}
-          className="project-bg"
-          style={{ backgroundImage: `url(${photo})` }}
+          className="content contain border-radius"
+          style={{ backgroundImage: `url(${currentPhoto})` }}
         ></div>
-      ))}
-    </div>
+      </Modal>
+      
+    </>
   )
 }
 
@@ -61,6 +118,7 @@ const ProjectPage = () => {
   if (!project) {
     return <h1>Project not found</h1>
   }
+  
   return (
     <>
       <Helmet>
