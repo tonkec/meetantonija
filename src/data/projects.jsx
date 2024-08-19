@@ -4,17 +4,38 @@ import Dashboard from '../pages/HomePage/components/Videos/components/Dashboard'
 import Board from '../pages/ProjectPage/components/Board'
 import Mountains from '../pages/ProjectPage/components/Mountains'
 import funderpro from '../images/funderpro/1.png'
-import casumo from '../images/casumo/1.jpg'
-import formunauts from '../images/formunauts/1.png'
-import crafstrom from '../images/crafstrom/1.png'
+import casumo1 from '../images/casumo/1.jpg'
+import casumo2 from '../images/casumo/2.jpg'
+import casumo3 from '../images/casumo/3.jpg'
+import casumo4 from '../images/casumo/4.jpg'
+import formunauts1 from '../images/formunauts/1.png'
+import formunauts2 from '../images/formunauts/2.png'
+import formunauts3 from '../images/formunauts/3.png'
+import formunauts4 from '../images/formunauts/4.png'
+import crafstrom1 from '../images/crafstrom/1.png'
+import crafstrom2 from '../images/crafstrom/2.png'
+import crafstrom3 from '../images/crafstrom/3.png'
+import crafstrom4 from '../images/crafstrom/4.png'
 import revuto from '../images/revuto/1.png'
-import codeinstitute from '../images/codeinstitute/1.png'
-import peaks from '../images/peaks/1.jpeg'
-import tint from '../images/tint/1.jpeg'
+import codeinstitute1 from '../images/codeinstitute/1.png'
+import codeinstitute2 from '../images/codeinstitute/2.png'
+import codeinstitute3 from '../images/codeinstitute/3.png'
+import codeinstitute4 from '../images/codeinstitute/4.png'
+import peaks1 from '../images/peaks/1.jpeg'
+import peaks2 from '../images/peaks/2.jpeg'
+import peaks3 from '../images/peaks/3.jpeg'
+import peaks4 from '../images/peaks/4.jpeg'
+import tint1 from '../images/tint/1.jpeg'
+import tint2 from '../images/tint/2.png'
 
 const projects = [
   {
-    headerImage: casumo,
+    photos: [
+      casumo1,
+      casumo2,
+      casumo3,
+      casumo4,
+    ],
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Graph />
@@ -70,7 +91,12 @@ const projects = [
     collaboration: 'Google Meet, Gitlab, Slack, Jira, Confluence',
   },
   {
-    headerImage: formunauts,
+    photos: [
+      formunauts1,
+      formunauts2,
+      formunauts3,
+      formunauts4,
+    ],
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Dashboard title="Formunauts" />
@@ -124,7 +150,12 @@ const projects = [
     methodology: 'Scrum',
   },
   {
-    headerImage: crafstrom,
+    photos: [
+      crafstrom1,
+      crafstrom2,
+      crafstrom3,
+      crafstrom4,
+    ],
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Dashboard title="Crafstrom" />
@@ -168,7 +199,7 @@ const projects = [
       "I developed the user interface of the Craftstrom mobile app using React Native, ensuring a seamless and visually appealing experience for users. My responsibilities included handling user authentication and authorization, orchestrating Ajax calls to communicate with the backend API, and utilizing AsyncStorage to securely store and manage user tokens. This experience allowed me to apply my skills in JavaScript and React Native to a real-world application, contributing to the app's functionality and user experience.",
   },
   {
-    headerImage: revuto,
+    photos: [revuto],
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Graph />
@@ -201,8 +232,7 @@ const projects = [
           'Enhanced data visualization and management capabilities of the platform, leveraging React Context and other state management techniques to provide users with real-time insights into their subscriptions, payments, and account details.',
       },
     ],
-    conclusion:
-      'My engagement with AsyncLabs allowed me to make meaningful contributions as a sole developer, enhancing the functionality of the Revuto platform through meticulous API integration, React Context utilization, and a keen focus on user experience. Additionally, my work on the PIMSF app reinforced my expertise in data visualization, further showcasing my ability to deliver impactful solutions across diverse projects.',
+    conclusion: "My engagement with AsyncLabs allowed me to make meaningful contributions as a sole developer, enhancing the functionality of the Revuto platform through meticulous API integration, React Context utilization, and a keen focus on user experience.",
     link: 'https://revuto.com/',
     id: 5,
     from: 2019,
@@ -217,7 +247,7 @@ const projects = [
       "Revuto was a platform that allowed users to manage their subscriptions efficiently. As the sole developer for Revuto, I played a pivotal role in the platform's evolution, employing technologies such as Axios, interceptors, and React Context to efficiently manage API requests and responses. My responsibilities included integrating APIs into the platform, optimizing data flow and communication, and enhancing the reliability and security of the application. This experience allowed me to hone my skills in API integration and data management, contributing to the platform's success.",
   },
   {
-    headerImage: codeinstitute,
+    photos: [codeinstitute1, codeinstitute2, codeinstitute3, codeinstitute4],
     fakeContent: (
       <FakeBrowser>
         <Board />
@@ -265,7 +295,7 @@ const projects = [
       "I was product developer, mentor and front end developer. I was responsible for enhancing the functionality and user experience of Code Institute's Learning Management System (LMS) based on Django. My responsibilities included integrating various new components into the existing LMS, coding the interface of every course module, and optimizing the codebase to enhance performance. This experience allowed me to hone my front-end development skills and collaborate with a talented designer to create a sophisticated and user-centric platform.",
   },
   {
-    headerImage: peaks,
+    photos: [peaks1, peaks2, peaks3, peaks4],
     fakeContent: (
       <FakeBrowser>
         <Mountains />
@@ -314,60 +344,7 @@ const projects = [
       'I was super excited to work on the Peaks project at Supersuperstudio, where I was responsible for creating impactful online interfaces that aligned with the provided design concepts. My responsibilities included translating static design visuals into fully functional user interfaces using HTML, SCSS, and JavaScript. By incorporating JavaScript to enhance interactivity and functionality, I was able to create dynamic elements, implement animations, and facilitate user engagement. This experience allowed me to merge design aesthetics with technical proficiency, contributing to the digital presence of various brands.',
   },
   {
-    fakeContent: (
-      <FakeBrowser className="fake-dashboard">
-        <Dashboard title="Pimsf" />
-      </FakeBrowser>
-    ),
-    location: 'Zagreb',
-    company: 'AsyncLabs',
-    title: 'Pimsf',
-    headline: "What's with the pipes?",
-    skills: 'Javascript, React, Redux, dc, d3',
-    link: 'https://feromihin.hr/services-and-solutions/solutions/pimsf-pipeline-integrity-management-system/',
-    responsibilities: [
-      {
-        title: 'Implementation of D3/DC Charts',
-        description:
-          'Implemented D3/DC charts into the explorer section of the PIMSF app, making them draggable and resizable using the react-grid-layout npm package.',
-      },
-      {
-        title: 'Creation of Draggable and Resizable Grid Layout',
-        description:
-          'Created a plain draggable and resizable 8-column grid layout and added graphs to columns, ensuring that the graphs followed the height and width of the parent column.',
-      },
-      {
-        title: 'Ensuring Responsiveness of Grid Layout',
-        description:
-          'Ensured responsiveness of the grid layout by utilizing built-in properties and functions of react-grid-layout to create a grid based on breakpoints.',
-      },
-      {
-        title: 'Development of Changelog History Tree',
-        description:
-          'Developed a changelog history tree to display each version of a pipeline using Mermaid.js, where each new version is treated as a child and each old version as a parent.',
-      },
-      {
-        title: 'Utilization of Axios for API Data Fetching',
-        description:
-          'Utilized Axios to fetch data points from the API and implemented functionality to delete or approve pipelines, dynamically changing their color based on approval status.',
-      },
-    ],
-    conclusion:
-      "My role in developing the PIMSF app was pivotal in enhancing its functionality and user experience, particularly in the explorer section. By implementing draggable and resizable D3/DC charts and creating a changelog history tree, I contributed to improving data visualization and user interaction. Additionally, ensuring responsiveness and integrating functionality for pipeline approval and deletion further enhanced the usability of the application. My experience with PIMSF allowed me to leverage JavaScript, React, D3, and other technologies to deliver a robust solution that met the project's requirements.",
-    id: 8,
-    from: 2019,
-    to: 2020,
-    team: 20,
-    methodology: 'Scrum',
-    collaboration: 'Gitlab, Slack, Google Meet',
-    learned:
-      'Using data visualization library was not easy at first, but as I got more familiar with it, I learned how to use it efficiently, I learned how to use Mermaid.js to create a changelog history tree.',
-    position: 'Mid React Developer',
-    description:
-      'During my time at AsyncLabs, I had the opportunity to work on the PIMSF app, focusing on the explorer section. My responsibilities included implementing D3/DC charts, creating a changelog history tree, ensuring responsiveness of the grid layout, and developing functionality for pipeline approval and deletion. These efforts played a key role in enhancing the functionality and user experience of the application, showcasing my ability to leverage JavaScript, React, D3, and other technologies to deliver impactful solutions.',
-  },
-  {
-    headerImage: tint,
+    photos: [tint1, tint2],
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Dashboard title="Tint" />
@@ -416,7 +393,7 @@ const projects = [
       "During my time at Tint, I had the opportunity to work on the homepage and landing page of their product, contributing to the enhancement of their online presence and user engagement. My responsibilities included implementing pixel-perfect layouts, coding global navigation and footer elements, developing animations and transitions, and collaborating with the team to bring creative ideas to life. These efforts played a key role in creating a visually appealing and functional website that showcased Tint's product effectively.",
   },
   {
-    headerImage: funderpro,
+    photos: [funderpro],
     fakeContent: (
       <FakeBrowser>
         <Graph />

@@ -20,6 +20,18 @@ const getTeamSize = (team) => {
   }
 }
 
+const ProjectPhotos = ({ project }) => {
+  if (project.title === "Craftstrom") {
+    return project.photos.map((photo, index) => (
+      <div id={index} className='project-bg' style={{backgroundImage: `url(${photo})`, height: 550, minWidth: 300, backgroundPositionX: "center", backgroundPositionY: "center"}}></div>
+    ))
+  }
+
+  return project.photos.map((photo, index) => (
+    <div id={index} className='project-bg' style={{backgroundImage: `url(${photo})`}}></div>
+  ))
+}
+
 const ProjectPage = () => {
   const { id } = useParams()
   const project = projects.find((project) => project.id === Number(id))
@@ -114,9 +126,9 @@ const ProjectPage = () => {
       <section className='bg-black no-padding-bottom no-padding-top'>
         <div className="container">
         <h2>📸 Here are some photos</h2>
-        <div className="flex">
-          <div className='project-bg flex-1' style={{backgroundImage: `url(${project.headerImage})`}}></div>
-          </div>
+        <div className="flex flex-responsive flex-gap flex-wrap">
+          <ProjectPhotos project={project} />
+        </div>
         </div>
       </section>
 
