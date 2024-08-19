@@ -22,14 +22,20 @@ const getTeamSize = (team) => {
 
 const ProjectPhotos = ({ project }) => {
   if (project.title === "Craftstrom") {
-    return project.photos.map((photo, index) => (
+    return     <div className="flex flex-gap flex-wrap">
+      {project.photos.map((photo, index) => (
       <div id={index} className='project-bg' style={{backgroundImage: `url(${photo})`, height: 550, minWidth: 300, backgroundPositionX: "center", backgroundPositionY: "center"}}></div>
-    ))
+    ))}
+    </div>
   }
 
-  return project.photos.map((photo, index) => (
+  return     <div className="flex flex-responsive flex-gap flex-wrap">
+    {project.photos.map((photo, index) => (
     <div id={index} className='project-bg' style={{backgroundImage: `url(${photo})`}}></div>
-  ))
+  ))}
+  </div> 
+  
+  
 }
 
 const ProjectPage = () => {
@@ -126,9 +132,8 @@ const ProjectPage = () => {
       <section className='bg-black no-padding-bottom no-padding-top'>
         <div className="container">
         <h2>📸 Here are some photos</h2>
-        <div className="flex flex-responsive flex-gap flex-wrap">
-          <ProjectPhotos project={project} />
-        </div>
+        <ProjectPhotos project={project} />
+       
         </div>
       </section>
 
