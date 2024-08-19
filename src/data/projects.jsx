@@ -3,7 +3,8 @@ import Graph from '../pages/ProjectPage/components/Graph'
 import Dashboard from '../pages/HomePage/components/Videos/components/Dashboard'
 import Board from '../pages/ProjectPage/components/Board'
 import Mountains from '../pages/ProjectPage/components/Mountains'
-import funderpro from '../images/funderpro/1.png'
+import funderpro1 from '../images/funderpro/1.png'
+import funderpro2 from '../images/funderpro/2.png'
 import casumo1 from '../images/casumo/1.jpg'
 import casumo2 from '../images/casumo/2.jpg'
 import casumo3 from '../images/casumo/3.jpg'
@@ -393,7 +394,7 @@ const projects = [
       "During my time at Tint, I had the opportunity to work on the homepage and landing page of their product, contributing to the enhancement of their online presence and user engagement. My responsibilities included implementing pixel-perfect layouts, coding global navigation and footer elements, developing animations and transitions, and collaborating with the team to bring creative ideas to life.  ",
   },
   {
-    photos: [funderpro],
+    photos: [funderpro1, funderpro2],
     fakeContent: (
       <FakeBrowser>
         <Graph />
