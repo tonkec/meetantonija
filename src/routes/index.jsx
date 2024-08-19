@@ -34,7 +34,7 @@ const routes = [
     navigationName: 'Post',
   },
   {
-    path: '/project/:id',
+    path: '/project/:title',
     element: <ProjectPage />,
     navigationName: 'Project',
   },

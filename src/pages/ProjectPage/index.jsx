@@ -4,7 +4,10 @@ import Steps from '../HomePage/components/Steps'
 import './Project.scss'
 import HireMe from '../../components/HireMe'
 import Slider from '../HomePage/components/Slider'
-import { scrollToTheElement } from '../../utils'
+import {
+  removeSpacesAndDashesFromString,
+  scrollToTheElement,
+} from '../../utils'
 import Skills from '../../components/Skills'
 import { Helmet } from 'react-helmet'
 import ProjectPhotos from './components/ProjectPhotos'
@@ -22,8 +25,10 @@ const getTeamSize = (team) => {
 }
 
 const ProjectPage = () => {
-  const { id } = useParams()
-  const project = projects.find((project) => project.id === Number(id))
+  const { title } = useParams()
+  const project = projects.find(
+    (project) => removeSpacesAndDashesFromString(project.title) === title
+  )
 
   if (!project) {
     return <h1>Project not found</h1>
