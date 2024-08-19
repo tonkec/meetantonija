@@ -53,18 +53,15 @@ const ProjectPage = () => {
         </div>
       </header>
 
-      <section className="bg-black no-padding-bottom relative header-padding-top">
+      <section className="bg-black relative extra-large-padding-bottom relative header-padding-top flex-gap">
         <div className="container grid medium-margin-bottom space-between">
           <div>
-            <h3 className="small-margin-bottom"> Technologies 🚀</h3>
-            <Skills
-              buttonClass="secondary"
-              skills={project.skills.split(',')}
-            />
+            <h3 className="small-margin-bottom">Position 💼</h3>
+            <p>{project.position}</p>
           </div>
 
           <div>
-            <h3 className="small-margin-bottom"> Timeline 🗓️</h3>
+            <h3 className="small-margin-bottom"> Years 🗓️</h3>
             <p>
               {project.from} - {project.to}
             </p>
@@ -84,8 +81,11 @@ const ProjectPage = () => {
           </div>
 
           <div>
-            <h3 className="small-margin-bottom">Position 💼</h3>
-            <p>{project.position}</p>
+            <h3 className="small-margin-bottom"> Technologies 🚀</h3>
+            <Skills
+              buttonClass="secondary"
+              skills={project.skills.split(',')}
+            />
           </div>
 
           <div>
@@ -99,7 +99,7 @@ const ProjectPage = () => {
           </div>
         </div>
 
-        <div className="bg-blue pull-right max-w-50 small-padding large-margin-top">
+        <div className="bg-blue elevated">
           <h3 className="small-margin-bottom">Description</h3>
           <p>{project.description}</p>
         </div>
@@ -108,6 +108,7 @@ const ProjectPage = () => {
       <Steps
         steps={project.responsibilities}
         headline="🦶 These were the steps I took"
+        className="steps-section"
       />
 
       <section className="bg-black">

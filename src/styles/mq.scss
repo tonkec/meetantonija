@@ -1,4 +1,12 @@
 $breakpoints: (
+  xxs: (
+    min: 320px,
+    max: 319.98px,
+  ),
+  xs: (
+    min: 375px,
+    max: 575px,
+  ),
   sm: (
     min: 576px,
     max: 575.98px,

@@ -1,14 +1,31 @@
-@import '../../styles//mq.scss';
+@import '../../styles/mq.scss';
 
 .elevated {
-  padding: var(--card-spacing);
+  max-width: 1000px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.steps-section {
+  padding-top: calc(var(--card-spacing) * 30);
+  @include breakpoint(xxs) {
+    padding-top: calc(var(--card-spacing) * 30);
+  }
+  @include breakpoint(xs) {
+    padding-top: calc(var(--card-spacing) * 20);
+  }
+  @include breakpoint(sm) {
+    padding-top: calc(var(--card-spacing) * 12);
+  }
+  @include breakpoint(md) {
+    padding-top: calc(var(--card-spacing) * 4);
+  }
 
   @include breakpoint(lg) {
-    z-index: 99;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    position: relative;
-    right: 0;
-    max-width: 50%;
+    padding-top: calc(var(--card-spacing) * 2);
   }
 }
