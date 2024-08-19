@@ -31,12 +31,7 @@ import tint2 from '../images/tint/2.png'
 
 const projects = [
   {
-    photos: [
-      casumo1,
-      casumo2,
-      casumo3,
-      casumo4,
-    ],
+    photos: [casumo1, casumo2, casumo3, casumo4],
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Graph />
@@ -54,35 +49,30 @@ const projects = [
       'During my tenure as a Senior React Developer at Casumo, an innovative online casino, I played a pivotal role in shaping the frontend architecture and user experience of their gaming platform. With a focus on delivering captivating gaming experiences, I collaborated closely with cross-functional teams to develop cutting-edge features and enhancements.',
     responsibilities: [
       {
-        title:
-          'Led the migration of the existing codebase',
+        title: 'Led the migration of the existing codebase',
         description:
           'Architected and implemented a robust migration strategy, ensuring a seamless transition to React while maintaining the platform’s functionality and performance. Migrated the existing codebase from Knockout.js to React, leveraging React’s component-based architecture to enhance maintainability and efficiency.',
       },
       {
-        title:
-          'Collaborated with cross-functional teams',
+        title: 'Collaborated with cross-functional teams',
         description:
           'Worked closely with designers, backend developers, and QA engineers to deliver captivating gaming experiences to players worldwide.',
       },
       {
-        title:
-          'Contributed to the development of features using GraphQL',
+        title: 'Contributed to the development of features using GraphQL',
         description:
           'Leveraged GraphQL to optimize data fetching and improve the performance of the platform, enhancing the user experience and enabling real-time interactions.',
       },
       {
-        title:
-          'Integrated external services',
+        title: 'Integrated external services',
         description:
           'Ensured seamless integration of third-party services, enhancing the platform’s functionality and enabling new features and capabilities for players.',
       },
       {
-        title:
-          'Optimized the platform’s performance',
+        title: 'Optimized the platform’s performance',
         description:
           'Implemented best practices in React development, optimized code performance, and enhanced the user experience through responsive design and interactive features.',
-      }
+      },
     ],
     from: 2022,
     to: 2023,
@@ -98,12 +88,7 @@ const projects = [
     collaboration: 'Google Meet, Gitlab, Slack, Jira, Confluence',
   },
   {
-    photos: [
-      formunauts1,
-      formunauts2,
-      formunauts3,
-      formunauts4,
-    ],
+    photos: [formunauts1, formunauts2, formunauts3, formunauts4],
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Dashboard title="Formunauts" />
@@ -144,7 +129,7 @@ const projects = [
         title: 'Collaborating with the Team',
         description:
           'Collaborated closely with the development team to ensure alignment on project goals, resolve technical challenges, and deliver high-quality code that met the platform’s requirements.',
-      }
+      },
     ],
     conclusion:
       'My experience at Formunauts as an Angular developer showcased my ability to swiftly learn and apply new technologies, design intricate communication architectures, and collaborate effectively with the team. From mastering Angular, Typescript, and RxJS to ensuring seamless API interactions and conducting comprehensive testing, I made significant contributions to enhancing the functionality and performance of the platform.',
@@ -162,12 +147,7 @@ const projects = [
     methodology: 'Scrum',
   },
   {
-    photos: [
-      crafstrom1,
-      crafstrom2,
-      crafstrom3,
-      crafstrom4,
-    ],
+    photos: [crafstrom1, crafstrom2, crafstrom3, crafstrom4],
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Dashboard title="Crafstrom" />
@@ -203,7 +183,7 @@ const projects = [
         title: 'Optimizing Performance',
         description:
           'Optimized the app’s performance by implementing best practices in React Native development, ensuring smooth navigation, fast loading times, and a seamless user experience.',
-      }
+      },
     ],
     conclusion:
       "My tenure at Craftstrom as a React Native developer was an enriching journey of learning and growth. Working hands-on with JavaScript and React Native allowed me to apply my skills and creativity to a real-world application, witnessing the tangible impact of my work on the app's functionality and user experience. I am proud of the contributions I made to Craftstrom and carry with me the valuable lessons and accomplishments gained during my time there as I continue to progress in my career.",
@@ -216,9 +196,9 @@ const projects = [
     methodology: 'Kanban',
     position: 'Mid React Native Developer',
     learned:
-      "I learned how to design and implement user interfaces using React Native, handle user authentication and authorization, and utilize AsyncStorage for data management.  I had to solve many responsive design issues",
+      'I learned how to design and implement user interfaces using React Native, handle user authentication and authorization, and utilize AsyncStorage for data management.  I had to solve many responsive design issues',
     description:
-      "I developed the user interface of the Craftstrom mobile app using React Native, ensuring a seamless and visually appealing experience for users. My responsibilities included handling user authentication and authorization, orchestrating Ajax calls to communicate with the backend API, and utilizing AsyncStorage to securely store and manage user tokens. ",
+      'I developed the user interface of the Craftstrom mobile app using React Native, ensuring a seamless and visually appealing experience for users. My responsibilities included handling user authentication and authorization, orchestrating Ajax calls to communicate with the backend API, and utilizing AsyncStorage to securely store and manage user tokens. ',
   },
   {
     photos: [revuto],
@@ -254,7 +234,8 @@ const projects = [
           'Enhanced data visualization and management capabilities of the platform, leveraging React Context and other state management techniques to provide users with real-time insights into their subscriptions, payments, and account details.',
       },
     ],
-    conclusion: "My engagement with AsyncLabs allowed me to make meaningful contributions as a sole developer, enhancing the functionality of the Revuto platform through meticulous API integration, React Context utilization, and a keen focus on user experience.",
+    conclusion:
+      'My engagement with AsyncLabs allowed me to make meaningful contributions as a sole developer, enhancing the functionality of the Revuto platform through meticulous API integration, React Context utilization, and a keen focus on user experience.',
     link: 'https://revuto.com/',
     id: 5,
     from: 2019,
@@ -353,7 +334,7 @@ const projects = [
         title: 'Collaboration with Design Team',
         description:
           'Collaborated closely with the design team to bring creative ideas to life, ensuring that the final product aligned with the design vision and provided a visually stunning and functionally robust interface.',
-      }
+      },
     ],
     conclusion:
       'My role at Supersuperstudio as a static website developer provided an exciting blend of creativity and technical expertise. By converting design concepts into live websites using HTML, SCSS, and JavaScript, I contributed to the digital presence of various brands while continuously pushing my boundaries to create visually stunning and functionally robust interfaces. Each project presented unique challenges that fueled my continuous learning journey and allowed me to merge design aesthetics with technical proficiency.',
@@ -417,7 +398,7 @@ const projects = [
     learned:
       'In this job I learned how to use many of the CSS3 properties like transform and transitions. I also learned how to use jQuery to create animations and transitions.',
     description:
-      "During my time at Tint, I had the opportunity to work on the homepage and landing page of their product, contributing to the enhancement of their online presence and user engagement. My responsibilities included implementing pixel-perfect layouts, coding global navigation and footer elements, developing animations and transitions, and collaborating with the team to bring creative ideas to life.  ",
+      'During my time at Tint, I had the opportunity to work on the homepage and landing page of their product, contributing to the enhancement of their online presence and user engagement. My responsibilities included implementing pixel-perfect layouts, coding global navigation and footer elements, developing animations and transitions, and collaborating with the team to bring creative ideas to life.  ',
   },
   {
     photos: [funderpro1, funderpro2],
@@ -453,21 +434,20 @@ const projects = [
           'Integrated React Query into the Funder Pro platform to facilitate efficient data fetching and state management, optimizing network requests and improving platform performance.',
       },
       {
-        title:
-          'Driving Innovation',
+        title: 'Driving Innovation',
         description:
           'Contributed to driving innovation and delivering a best-in-class trading experience to users by harnessing the power of React, TypeScript, and React Query.',
       },
       {
-        title: "Delivering Best-in-Class Trading Experience",
+        title: 'Delivering Best-in-Class Trading Experience',
         description:
-          "Contributed to delivering a seamless trading experience for users by implementing dynamic and responsive user interfaces with React, ensuring type safety and cleaner code with TypeScript, and optimizing data fetching and state management with React Query.",
+          'Contributed to delivering a seamless trading experience for users by implementing dynamic and responsive user interfaces with React, ensuring type safety and cleaner code with TypeScript, and optimizing data fetching and state management with React Query.',
       },
       {
         title: 'Collaboration with Cross-Functional Teams',
         description:
           'Collaborated closely with cross-functional teams to develop cutting-edge features and enhancements, ensuring seamless integration of new technologies and functionalities.',
-      }
+      },
     ],
     collaboration: 'Jira, Slack, Gitlab, Google Meet, Notion',
     learned:

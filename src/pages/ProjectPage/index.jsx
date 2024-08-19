@@ -21,21 +21,37 @@ const getTeamSize = (team) => {
 }
 
 const ProjectPhotos = ({ project }) => {
-  if (project.title === "Craftstrom") {
-    return     <div className="flex flex-gap flex-wrap">
-      {project.photos.map((photo, index) => (
-      <div id={index} className='project-bg' style={{backgroundImage: `url(${photo})`, height: 550, minWidth: 300, backgroundPositionX: "center", backgroundPositionY: "center"}}></div>
-    ))}
-    </div>
+  if (project.title === 'Craftstrom') {
+    return (
+      <div className="flex flex-gap flex-wrap">
+        {project.photos.map((photo, index) => (
+          <div
+            id={index}
+            className="project-bg"
+            style={{
+              backgroundImage: `url(${photo})`,
+              height: 550,
+              minWidth: 300,
+              backgroundPositionX: 'center',
+              backgroundPositionY: 'center',
+            }}
+          ></div>
+        ))}
+      </div>
+    )
   }
 
-  return     <div className="flex flex-responsive flex-gap flex-wrap">
-    {project.photos.map((photo, index) => (
-    <div id={index} className='project-bg' style={{backgroundImage: `url(${photo})`}}></div>
-  ))}
-  </div> 
-  
-  
+  return (
+    <div className="flex flex-responsive flex-gap flex-wrap">
+      {project.photos.map((photo, index) => (
+        <div
+          id={index}
+          className="project-bg"
+          style={{ backgroundImage: `url(${photo})` }}
+        ></div>
+      ))}
+    </div>
+  )
 }
 
 const ProjectPage = () => {
@@ -129,11 +145,10 @@ const ProjectPage = () => {
         className="steps-section"
       />
 
-      <section className='bg-black no-padding-bottom no-padding-top'>
+      <section className="bg-black no-padding-bottom no-padding-top">
         <div className="container">
-        <h2>📸 Here are some photos</h2>
-        <ProjectPhotos project={project} />
-       
+          <h2>📸 Here are some photos</h2>
+          <ProjectPhotos project={project} />
         </div>
       </section>
 

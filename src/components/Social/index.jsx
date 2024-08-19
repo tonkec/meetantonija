@@ -1,4 +1,4 @@
-import "./Social.scss";
+import './Social.scss'
 
 const Social = ({ icons }) => {
   return (
