@@ -69,15 +69,9 @@ const HomePage = () => {
                   {project.id}. {project.title}
                 </h3>
                 <p className="small-margin-bottom">{project.description}</p>
-                <div key={project.projects[0].id}>
+                <div>
                   <div className="grid">
-                    {project.projects[0].photos.map((image, index) => (
-                      <Image
-                        key={index}
-                        src={image}
-                        alt={project.projects[0].title}
-                      />
-                    ))}
+                    <Image src={project.mainPhoto} alt={project.title} />
                   </div>
                 </div>
 

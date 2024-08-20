@@ -18,9 +18,9 @@ const HobbyPage = () => {
       <Helmet>
         <title>Meetantonija | {project.title}</title>
       </Helmet>
-      <header className="header-padding-top header-padding-bottom project-header">
+      <header className="header-padding-top header-padding-bottom bg-black">
         <div className="container">
-          <div className="flex flex-responsive flex-gap">
+          <div className="flex flex-responsive flex-gap space-between">
             <div>
               <h1>{project.title}</h1>
               <p>{project.description}</p>
@@ -28,6 +28,12 @@ const HobbyPage = () => {
           </div>
         </div>
       </header>
+
+      <section>
+        <div className="container">
+          
+        </div>
+      </section>
     </>
   )
 }

@@ -75,7 +75,7 @@ const ProjectPage = () => {
       </header>
 
       <section className="bg-black relative extra-large-padding-bottom relative header-padding-top flex-gap">
-        <div className="container grid medium-margin-bottom space-between">
+        <div className="container grid medium-margin-bottom">
           <div>
             <h3 className="small-margin-bottom">Position 💼</h3>
             <p>{project.position}</p>

@@ -1,6 +1,16 @@
 import kodiraonica from '../images/kodiraonica/1.png'
 import duga1 from '../images/duga/1.png'
 import hover1 from '../images/hover/1.png'
+import lms1 from '../images/kodiraonica/lms/1.png'
+import lms2 from '../images/kodiraonica/lms/2.png'
+import lms3 from '../images/kodiraonica/lms/3.png'
+import landing1 from '../images/kodiraonica/landing_page/1.png'
+import landing2 from '../images/kodiraonica/landing_page/2.png'
+import landing3 from '../images/kodiraonica/landing_page/3.png'
+import chat1 from '../images/duga/chat/1.png'
+import chat2 from '../images/duga/chat/2.png'
+import chat3 from '../images/duga/chat/3.png'
+import chat4 from '../images/duga/chat/4.png'
 
 const hobbyProjects = [
   {
@@ -8,6 +18,7 @@ const hobbyProjects = [
     description: 'Text hover effects',
     timeline: '2016 - 2017',
     id: 0,
+    mainPhoto: hover1,
     projects: [
       {
         title: 'Scss library for hover effects',
@@ -15,10 +26,16 @@ const hobbyProjects = [
         link: 'https://antonijasimic.bitbucket.io/text_hover_effects/index.html',
         photos: [hover1],
         technologies: ['Scss'],
-        role: 'Founder',
         motivation:
           'I wanted to create a library of hover effects for text elements.',
-        sourceCode: '',
+        sourceCode: null,
+        team: [
+          {
+            name: 'Antonija Šimić',
+            role: 'Lead developer',
+            linkedin: 'https://www.linkedin.com/in/antonija-simic/',
+          },
+        ],
       },
     ],
   },
@@ -27,12 +44,13 @@ const hobbyProjects = [
     description: 'A coding school for everyone.',
     timeline: '2020 - present',
     id: 1,
+    mainPhoto: kodiraonica,
     projects: [
       {
         title: 'Main website',
         description: 'Main landing page',
         link: 'https://kodiraonica.dev',
-        photos: [kodiraonica],
+        photos: [landing1, landing2, landing3],
         technologies: [
           'React',
           'Javacript',
@@ -40,25 +58,14 @@ const hobbyProjects = [
           'Netlify',
           'Typescript',
         ],
-        role: 'Lead developer',
         motivation:
           'I knew how difficult it is to learn to code alone and I wanted to help others. I wanted to create a community where everyone can learn to code and share their knowledge.',
-        sourceCode: 'https://github.com/kodiraonica/',
+        sourceCode: null,
         team: [
           {
             name: 'Antonija Šimić',
             role: 'Lead developer and founder',
             linkedin: 'https://www.linkedin.com/in/antonija-simic/',
-          },
-          {
-            name: 'Denis Martin Budinski',
-            role: 'Teacher',
-            linkedin: 'https://www.linkedin.com/in/denis-martin-budinski//',
-          },
-          {
-            name: 'Matija Katić',
-            role: 'Teacher',
-            linkedin: 'https://www.linkedin.com/in/matijakatic/',
           },
           {
             name: 'Petra Sedlanić Kereša',
@@ -77,6 +84,55 @@ const hobbyProjects = [
           },
         ],
       },
+      {
+        title: 'Blog',
+        description: 'A blog for sharing knowledge.',
+        link: 'https://blog.kodiraonica.dev/',
+        photos: [kodiraonica],
+        technologies: ['Hugo', 'Netlify', 'Markdown', 'HTML', 'CSS'],
+        motivation:
+          'I wanted to create a community where everyone can learn to code and share their knowledge.',
+        sourceCode: null,
+        team: [
+          {
+            name: 'Antonija Šimić',
+            role: 'Lead developer and founder',
+            linkedin: 'https://www.linkedin.com/in/antonija-simic/',
+          },
+          {
+            name: 'Petar Kramar',
+            role: 'Content writer',
+            linkedin: 'https://www.linkedin.com/in/petar-kramar-124346209/',
+          },
+        ],
+      },
+      {
+        title: 'Kodiraonica platform',
+        description: 'A platform for students to learn to code.',
+        link: 'https://cryptic-basin-19078.herokuapp.com/',
+        photos: [lms1, lms2, lms3],
+        technologies: ['Rails', 'Ruby', 'Devise', 'Postgres', 'Heroku'],
+        motivation:
+          'I wanted to create a community where everyone can learn to code and share their knowledge.',
+        sourceCode: null,
+        team: [
+          {
+            name: 'Antonija Šimić',
+            role: 'Lead fullstack developer and founder',
+            linkedin: 'https://www.linkedin.com/in/antonija-simic/',
+          },
+          {
+            name: 'Matija Katić',
+            role: 'Senior Rails Developer',
+            linkedin: 'https://www.linkedin.com/in/matijakatic/',
+          },
+          {
+            name: "Petar Kramar",
+            role: "Content writer",
+            linkedin: "https://www.linkedin.com/in/petar-kramar-124346209/",
+          }
+        ],
+      },
     ],
   },
   {
@@ -85,14 +141,14 @@ const hobbyProjects = [
     team: '4 people',
     timeline: '2020 - present',
     id: 2,
+    mainPhoto: duga1,
     projects: [
       {
         title: 'Landing page',
         description: 'A landing page to acquire users.',
-        link: 'https://relaxed-meitner-01252f.netlify.app/',
-        photos: [duga1],
+        link: 'https://duga.app/',
+        photos: [chat1, chat2, chat3, chat4],
         technologies: ['React', 'Javacript', 'Typescript'],
-        role: 'Lead developer',
         motivation:
           'I wanted to create a safe space for LGBTQ+ community in Balkans to meet and connect.',
         sourceCode: 'https://github.com/duga-dating-app',
@@ -124,10 +180,26 @@ const hobbyProjects = [
           'Postgres',
           'AWS S3',
         ],
-        role: 'Lead Fullstack developer',
         motivation:
           'I wanted to create a safe space for LGBTQ+ community in Balkans to meet and connect.',
         sourceCode: 'https://github.com/tonkec/duga_frontend',
+        team: [
+          {
+            name: 'Antonija Šimić',
+            role: 'Lead developer and founder',
+            linkedin: 'https://www.linkedin.com/in/antonija-simic/',
+          },
+          {
+            name: 'Veronika Šimić',
+            role: 'Junior React developer',
+            linkedin: 'https://www.linkedin.com/in/veronika-s-662355211/',
+          },
+          {
+            name: 'Eva Kalogjera',
+            role: 'Junior React developer',
+            linkedin: 'https://github.com/evakalo',
+          },
+        ],
       },
     ],
   },
