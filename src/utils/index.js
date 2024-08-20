@@ -48,7 +48,7 @@ export const typeString = (string, speed) => {
   }, 200)
 }
 
-export const removeSpacesAndDashesFromString = (string) => {
+export const removeSpacesAndDashes = (string) => {
   return string.toLowerCase().replace(/\s/g, '').replace(/-/g, '')
 }
 
@@ -68,8 +68,6 @@ export const formatNoteTitle = (string) => {
 
 export const arrayHasFullString = (array, string) => {
   return array.some(
-    (item) =>
-      removeSpacesAndDashesFromString(item) ===
-      removeSpacesAndDashesFromString(string)
+    (item) => removeSpacesAndDashes(item) === removeSpacesAndDashes(string)
   )
 }

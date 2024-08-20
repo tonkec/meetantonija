@@ -10,7 +10,7 @@ import projects from '../../data/projects'
 import hobbyProjects from '../../data/hobby'
 import Image from '../../components/Image'
 import { Helmet } from 'react-helmet'
-import { removeSpacesAndDashesFromString } from '../../utils'
+import { removeSpacesAndDashes } from '../../utils'
 
 const HomePage = () => {
   return (
@@ -77,7 +77,7 @@ const HomePage = () => {
 
                 <a
                   className="normal-font small-margin-top inline-block"
-                  href={`hobby/${removeSpacesAndDashesFromString(project.title.toLocaleLowerCase())}`}
+                  href={`hobby/${removeSpacesAndDashes(project.title.toLocaleLowerCase())}`}
                 >
                   {' '}
                   Read More

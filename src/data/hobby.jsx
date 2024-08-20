@@ -1,6 +1,7 @@
 import kodiraonica from '../images/kodiraonica/1.png'
 import duga1 from '../images/duga/1.png'
 import hover1 from '../images/hover/1.png'
+import hover2 from '../images/hover/2.png'
 import lms1 from '../images/kodiraonica/lms/1.png'
 import lms2 from '../images/kodiraonica/lms/2.png'
 import lms3 from '../images/kodiraonica/lms/3.png'
@@ -24,7 +25,7 @@ const hobbyProjects = [
         title: 'Scss library for hover effects',
         description: 'A library of hover effects for text elements.',
         link: 'https://antonijasimic.bitbucket.io/text_hover_effects/index.html',
-        photos: [hover1],
+        photos: [hover1, hover2],
         technologies: ['Scss'],
         motivation:
           'I wanted to create a library of hover effects for text elements.',
@@ -127,10 +128,10 @@ const hobbyProjects = [
             linkedin: 'https://www.linkedin.com/in/matijakatic/',
           },
           {
-            name: "Petar Kramar",
-            role: "Content writer",
-            linkedin: "https://www.linkedin.com/in/petar-kramar-124346209/",
-          }
+            name: 'Petar Kramar',
+            role: 'Content writer',
+            linkedin: 'https://www.linkedin.com/in/petar-kramar-124346209/',
+          },
         ],
       },
     ],
@@ -144,7 +145,7 @@ const hobbyProjects = [
     mainPhoto: duga1,
     projects: [
       {
-        title: 'Landing page',
+        title: 'Website',
         description: 'A landing page to acquire users.',
         link: 'https://duga.app/',
         photos: [chat1, chat2, chat3, chat4],
@@ -166,7 +167,7 @@ const hobbyProjects = [
         ],
       },
       {
-        title: 'A chat application',
+        title: 'App',
         description: 'A chat application for users to connect.',
         link: 'https://unique-custard-ca4ace.netlify.app/',
         photos: [kodiraonica],

@@ -1,5 +1,5 @@
 import Skills from '../../components/Skills'
-import { removeSpacesAndDashesFromString } from '../../utils'
+import { removeSpacesAndDashes } from '../../utils'
 
 const CvProject = ({ project }) => {
   return (
@@ -16,7 +16,7 @@ const CvProject = ({ project }) => {
         <Skills skills={project.skills.split(',')} />
       </div>
       <a
-        href={`/project/${removeSpacesAndDashesFromString(project.title.toLowerCase())}`}
+        href={`/project/${removeSpacesAndDashes(project.title.toLowerCase())}`}
         role="button"
         className="secondary"
       >

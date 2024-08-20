@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { removeSpacesAndDashesFromString } from '../../utils'
+import { removeSpacesAndDashes } from '../../utils'
 
 const Skills = ({ skills, buttonClass }) => {
   const navigate = useNavigate()
@@ -10,7 +10,7 @@ const Skills = ({ skills, buttonClass }) => {
           key={s}
           className={`${buttonClass ? buttonClass : 'ternary'}`}
           onClick={() => {
-            navigate(`/cv?skill=${removeSpacesAndDashesFromString(s)}`)
+            navigate(`/cv?skill=${removeSpacesAndDashes(s)}`)
           }}
         >
           {s}

@@ -4,7 +4,7 @@ import BrowserFrame from '../../../../components/BrowserFrame'
 import './Slider.scss'
 import { useWindowSize } from '../../../../hooks/useWindowSize'
 import Skills from '../../../../components/Skills'
-import { removeSpacesAndDashesFromString } from '../../../../utils'
+import { removeSpacesAndDashes } from '../../../../utils'
 
 const Slider = ({ items, headline }) => {
   const size = useWindowSize()
@@ -33,7 +33,7 @@ const Slider = ({ items, headline }) => {
                   <a
                     role="button"
                     className="ternary inline-block"
-                    href={`/project/${removeSpacesAndDashesFromString(project.title.toLowerCase())}`}
+                    href={`/project/${removeSpacesAndDashes(project.title.toLowerCase())}`}
                   >
                     Read more
                   </a>

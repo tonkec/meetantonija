@@ -4,10 +4,7 @@ import Steps from '../HomePage/components/Steps'
 import './Project.scss'
 import HireMe from '../../components/HireMe'
 import Slider from '../HomePage/components/Slider'
-import {
-  removeSpacesAndDashesFromString,
-  scrollToTheElement,
-} from '../../utils'
+import { removeSpacesAndDashes, scrollToTheElement } from '../../utils'
 import Skills from '../../components/Skills'
 import { Helmet } from 'react-helmet'
 import ProjectPhotos from './components/ProjectPhotos'
@@ -27,7 +24,7 @@ const getTeamSize = (team) => {
 const ProjectPage = () => {
   const { title } = useParams()
   const project = projects.find(
-    (project) => removeSpacesAndDashesFromString(project.title) === title
+    (project) => removeSpacesAndDashes(project.title) === title
   )
 
   if (!project) {

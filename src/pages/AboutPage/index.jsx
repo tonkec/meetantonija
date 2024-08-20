@@ -7,10 +7,7 @@ import Temperature from '../../components/Temperature'
 import Me from '../../images/me.jpeg'
 import { Tooltip } from 'react-tooltip'
 import useTemperature from '../../hooks/useTemperature'
-import {
-  getValuesAndProperties,
-  removeSpacesAndDashesFromString,
-} from '../../utils'
+import { getValuesAndProperties, removeSpacesAndDashes } from '../../utils'
 import { images } from './images'
 import MyMasonry from './MyMasonry'
 import { Helmet } from 'react-helmet'
@@ -184,7 +181,7 @@ const AboutPage = () => {
             {technologies.map((tech, index) => (
               <a
                 key={index}
-                href={`/cv?skill=${removeSpacesAndDashesFromString(tech.technology)}`}
+                href={`/cv?skill=${removeSpacesAndDashes(tech.technology)}`}
                 role="button"
                 className="secondary"
               >
