@@ -15,7 +15,11 @@ const CvProject = ({ project }) => {
       <div className="small-margin-top small-margin-bottom">
         <Skills skills={project.skills.split(',')} />
       </div>
-      <a href={`/project/${removeSpacesAndDashesFromString(project.title.toLowerCase())}`} role="button" className="secondary">
+      <a
+        href={`/project/${removeSpacesAndDashesFromString(project.title.toLowerCase())}`}
+        role="button"
+        className="secondary"
+      >
         Read more
       </a>
     </article>

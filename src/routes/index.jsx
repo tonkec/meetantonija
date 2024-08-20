@@ -5,6 +5,7 @@ import AboutPage from '../pages/AboutPage'
 import CvPage from '../pages/CvPage'
 import NotFound from '../components/NotFound'
 import PostPage from '../pages/PostPage'
+import HobbyPage from '../pages/HobbyPage'
 
 const routes = [
   {
@@ -37,6 +38,11 @@ const routes = [
     path: '/project/:title',
     element: <ProjectPage />,
     navigationName: 'Project',
+  },
+  {
+    path: '/hobby/:title',
+    element: <HobbyPage />,
+    navigationName: 'Hobby',
   },
   {
     path: '*',

@@ -1,4 +1,4 @@
-@import "../../../styles/mq.scss";
+@import '../../../styles/mq.scss';
 
 .modal {
   outline: none;
@@ -10,7 +10,7 @@
     background-position: center;
     background-repeat: no-repeat;
     margin: 20px auto;
-    
+
     @include breakpoint(lg) {
       margin-top: 100px;
     }
@@ -19,7 +19,7 @@
       background-size: contain;
       min-height: 80vh;
       @include breakpoint(lg) {
-       min-height: auto;
+        min-height: auto;
       }
     }
   }
