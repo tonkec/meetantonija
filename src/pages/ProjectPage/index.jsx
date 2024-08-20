@@ -31,7 +31,21 @@ const ProjectPage = () => {
   )
 
   if (!project) {
-    return <h1>Project not found</h1>
+    return (
+      <header className="header-padding-top header-padding-bottom project-header">
+        <div className="container">
+          <h1>Project not found</h1>
+          <p>The project you are looking for does not exist.</p>
+          <p>
+            Try to go back to the
+            <a className="normal-font" href="/">
+              homepage
+            </a>
+            and find the project you are looking for.
+          </p>
+        </div>
+      </header>
+    )
   }
 
   return (

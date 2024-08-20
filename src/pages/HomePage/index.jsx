@@ -71,7 +71,7 @@ const HomePage = () => {
                 <p className="small-margin-bottom">{project.description}</p>
                 <div key={project.projects[0].id}>
                   <div className="grid">
-                    {project.projects[0].images.map((image, index) => (
+                    {project.projects[0].photos.map((image, index) => (
                       <Image
                         key={index}
                         src={image}
