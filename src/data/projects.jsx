@@ -486,7 +486,7 @@ const projects = [
       'During my time at Tint, I had the opportunity to work on the homepage and landing page of their product, contributing to the enhancement of their online presence and user engagement. My responsibilities included implementing pixel-perfect layouts, coding global navigation and footer elements, developing animations and transitions, and collaborating with the team to bring creative ideas to life.  ',
     problem: "The most challenging part of the project was developing animations and transitions from scratch using custom CSS and jQuery/JavaScript. I had to ensure that the animations and transitions were smooth, visually appealing, and enhanced the user experience.",
     manager: <span>
-      My manager was Daniel Baldwin, who provided valuable guidance and support throughout the project. He was instrumental in helping me navigate the complexities of the Tint project and ensuring the successful implementation of the homepage and landing page.
+      My manager was <a className='normal-font text-white' href="https://www.linkedin.com/in/danielbaldwinco/" target='_blank' rel='noreferrer'>Daniel Baldwin</a>, who provided valuable guidance and support throughout the project. He was instrumental in helping me navigate the complexities of the Tint project and ensuring the successful implementation of the homepage and landing page.
     </span>
   },
   {
