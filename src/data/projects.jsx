@@ -84,6 +84,10 @@ const projects = [
     conclusion:
       "My experience at Casumo as a Senior React Developer was characterized by a relentless pursuit of excellence and innovation in the gaming industry. I am proud to have contributed to Casumo's mission of providing an immersive and entertaining gaming experience to players worldwide, and I am grateful for the opportunity to have been part of such a dynamic and forward-thinking team.",
     collaboration: 'Google Meet, Gitlab, Slack, Jira, Confluence',
+    problem: "The most challenging part of the project was migrating the existing codebase from Knockout.js to React. It required a deep understanding of both frameworks and a meticulous approach to ensure a seamless transition without compromising the platform's functionality and performance.",
+    manager: <span>
+      My manager was <a className='text-white normal-font' href="https://www.linkedin.com/in/armandofernandez/" target='_blank' rel='noreferrer'>Armando Fernandez</a>, who was a great mentor and provided valuable guidance throughout the project. He was always available to answer questions, provide feedback, and offer support when needed.
+    </span>
   },
   {
     photos: [formunauts1, formunauts2, formunauts3, formunauts4],
@@ -143,6 +147,10 @@ const projects = [
     position: 'Mid Angular Developer',
     collaboration: 'Google Meet, Github, Slack, Jira, Confluence',
     methodology: 'Scrum',
+    problem: "The most challenging part of the project was mastering Angular within a month to architect a robust communication framework between the Angular-based user interface and the Raisenow API, similar to Stripe.",
+    manager: <span>
+      My manager was <a className='text-white normal-font' href="https://www.linkedin.com/in/metakermit/" target='_blank' rel='noreferrer'>Dražen Lučanin</a> who provided valuable guidance and support throughout the project. He was instrumental in helping me navigate the complexities of the Formunauts platform and ensuring the successful integration of the Angular UI with the Raisenow API.
+    </span>
   },
   {
     photos: [crafstrom1, crafstrom2, crafstrom3, crafstrom4],
@@ -197,6 +205,10 @@ const projects = [
       'I learned how to design and implement user interfaces using React Native, handle user authentication and authorization, and utilize AsyncStorage for data management.  I had to solve many responsive design issues',
     description:
       'I developed the user interface of the Craftstrom mobile app using React Native, ensuring a seamless and visually appealing experience for users. My responsibilities included handling user authentication and authorization, orchestrating Ajax calls to communicate with the backend API, and utilizing AsyncStorage to securely store and manage user tokens. ',
+    problem: "The most challenging part of the project was solving numerous responsive design issues to ensure the app’s compatibility with various devices and screen sizes, enhancing the user experience and usability of the application.",
+    manager: <span>
+      My manager was <a className='text-white normal-font' href="https://www.linkedin.com/in/metakermit/" target='_blank' rel='noreferrer'>Dražen Lučanin</a> who provided valuable guidance and support throughout the project. He was instrumental in helping me navigate the complexities of the Craftstrom app and ensuring the successful implementation of user authentication and authorization.
+    </span>
   },
   {
     photos: [revuto],
@@ -246,7 +258,11 @@ const projects = [
       'I learned how to work as a single developer and to rely solely on myself, my skills and knowledge. At first, it was challenging, but as I developed stable and scalable architecture, I learned to trust myself as a developer.',
     description:
       "Revuto was a platform that allowed users to manage their subscriptions efficiently. As the sole developer for Revuto, I played a pivotal role in the platform's evolution, employing technologies such as Axios, interceptors, and React Context to efficiently manage API requests and responses. ",
-  },
+    problem: "The most challenging part of the project was being the sole developer for Revuto, which required me to take on multiple responsibilities and ensure the platform's stability and scalability. I had to rely solely on myself, my skills, and knowledge to develop a robust and efficient architecture.",
+    manager: <span>
+      I was the sole developer for Revuto, which allowed me to take full ownership of the project and make decisions independently. I was responsible for the platform's development, maintenance, and optimization, ensuring that it met the requirements and expectations of the users.
+    </span>
+    },
   {
     photos: [codeinstitute1, codeinstitute2, codeinstitute3, codeinstitute4],
     fakeContent: (
@@ -294,6 +310,10 @@ const projects = [
       'Scss was core part of the project, so I learned how to use it efficiently, especially when it comes to mixins and functions in scss. It was long before CSS variables were introduced, so I had to rely on scss variables.',
     description:
       "I was product developer, mentor and front end developer. I was responsible for enhancing the functionality and user experience of Code Institute's Learning Management System (LMS) based on Django. My responsibilities included integrating various new components into the existing LMS, coding the interface of every course module, and optimizing the codebase to enhance performance. ",
+    problem: "The most challenging part of the project was optimizing the existing LMS codebase to enhance performance, resulting in a cleaner and swifter platform that improved user experience and streamlined backend processes.",
+    manager: <span>
+       My manager was <a className='text-white normal-font' href="https://www.linkedin.com/in/brian-o-grady-18a2153/" target='_blank' rel='noreferrer'>Brian O'Grady</a> , who provided valuable guidance and support throughout the project. He was instrumental in helping me navigate the complexities of the LMS codebase and ensuring the successful integration of new components and features.
+    </span>
   },
   {
     photos: [peaks1, peaks2, peaks3, peaks4],
@@ -347,7 +367,11 @@ const projects = [
       "This was my first job in web development so naturally I learned a lot: I customized jQuery libraries and Bootstrap framework. I read Bootstrap's original code which shaped me into a strong css developer.",
     position: 'Junior Frontend Developer',
     description:
-      'I was super excited to work on the Peaks project at Supersuperstudio, where I was responsible for creating impactful online interfaces that aligned with the provided design concepts. My responsibilities included translating static design visuals into fully functional user interfaces using HTML, SCSS, and JavaScript. By incorporating JavaScript to enhance interactivity and functionality, I was able to create dynamic elements, implement animations, and facilitate user engagement.  ',
+      'I was super excited to work on the Peaks project at Supersuperstudio, where I was responsible for creating impactful online interfaces that aligned with the provided design concepts. My responsibilities included translating static design visuals into fully functional user interfaces using HTML, SCSS, and JavaScript.  ',
+    problem: "The most challenging part of the project was implementing parallax scrolling and animations to create a visually stunning and engaging user experience. I had to leverage JavaScript to enhance interactivity and functionality, creating dynamic elements, implementing animations, and facilitating user engagement.",
+    manager: <span>
+      My manager was <a className='text-white normal-font' href="https://www.linkedin.com/in/mariostipetic/" target='_blank' rel='noreferrer'>Mario Stipetić</a>, who provided valuable guidance and support throughout the project. He was instrumental in helping me navigate the complexities of the Peaks project and ensuring the successful implementation of the design vision.
+    </span>
   },
   {
     photos: [tint1, tint2],
@@ -397,6 +421,10 @@ const projects = [
       'In this job I learned how to use many of the CSS3 properties like transform and transitions. I also learned how to use jQuery to create animations and transitions.',
     description:
       'During my time at Tint, I had the opportunity to work on the homepage and landing page of their product, contributing to the enhancement of their online presence and user engagement. My responsibilities included implementing pixel-perfect layouts, coding global navigation and footer elements, developing animations and transitions, and collaborating with the team to bring creative ideas to life.  ',
+    problem: "The most challenging part of the project was developing animations and transitions from scratch using custom CSS and jQuery/JavaScript. I had to ensure that the animations and transitions were smooth, visually appealing, and enhanced the user experience.",
+    manager: <span>
+      My manager was Daniel Baldwin, who provided valuable guidance and support throughout the project. He was instrumental in helping me navigate the complexities of the Tint project and ensuring the successful implementation of the homepage and landing page.
+    </span>
   },
   {
     photos: [funderpro1, funderpro2],
@@ -456,6 +484,10 @@ const projects = [
       'My role in enhancing the Funder Pro trading platform has been pivotal in elevating its performance, reliability, and user satisfaction. By implementing dynamic and responsive user interfaces with React, ensuring type safety and cleaner code with TypeScript, and optimizing data fetching and state management with React Query, I have contributed to delivering a seamless trading experience for our users. These contributions have played a key role in driving innovation and establishing Funder Pro as a leading platform in the trading industry.',
     description:
       'During my time at Mochalabs, I had the opportunity to work on the Funder Pro trading platform, where I played a key role in enhancing its performance and user experience. My responsibilities included implementing dynamic and responsive user interfaces, utilizing TypeScript for type safety, and integrating React Query for efficient data fetching and state management.',
+    problem: "The most challenging part of the project was integrating React Query into the Funder Pro platform to facilitate efficient data fetching and state management. I had to optimize network requests and improve platform performance while ensuring seamless integration of new technologies and functionalities.",
+    manager: <span>
+      My manager was <a className='text-white normal-font' href="https://www.linkedin.com/in/mateosimonovic/" target='_blank' rel='noreferrer'>Mateo Simonović</a>, who provided valuable guidance and support throughout the project. He was instrumental in helping me navigate the complexities of the Funder Pro platform and ensuring the successful implementation of dynamic and responsive user interfaces with React, TypeScript, and React Query.
+    </span>
   },
 ]
 

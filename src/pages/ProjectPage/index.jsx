@@ -131,6 +131,16 @@ const ProjectPage = () => {
           <p>{project.learned}</p>
         </div>
 
+        <div className="container">
+          <h2>What was the most difficult part?</h2>
+          <p>{project.problem}</p>
+        </div>
+
+        <div className="container">
+          <h2>Who was my manager?</h2>
+          <p className='text-white'>{project.manager}</p>
+        </div>
+
         <div className="container medium-margin-bottom" id="tldr">
           <h2>TL;DR</h2>
           <p>{project.conclusion}</p>
