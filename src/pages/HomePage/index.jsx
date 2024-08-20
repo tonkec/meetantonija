@@ -81,7 +81,13 @@ const HomePage = () => {
                   </div>
                 </div>
 
-                <a className='normal-font small-margin-top inline-block' href={`hobby/${removeSpacesAndDashesFromString(project.title.toLocaleLowerCase())}`}> Read More</a>
+                <a
+                  className="normal-font small-margin-top inline-block"
+                  href={`hobby/${removeSpacesAndDashesFromString(project.title.toLocaleLowerCase())}`}
+                >
+                  {' '}
+                  Read More
+                </a>
               </div>
             ))}
           </div>
