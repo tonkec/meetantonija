@@ -50,7 +50,7 @@ const projects = [
     link: 'https://sjgrand.cn/technology/kwikdroid/',
     id: 11,
     description:
-      'I was responsible for the development of the Kwikdroid platform, an online platform for managing your accounts and transactions. My responsibilities included implementing designs from Figma into the Rails frontend, developing user authentication and authorization features, optimizing database queries for performance, and integrating third-party APIs for additional functionality.',
+      'I was responsible for the development of the Zoomero platform, an online platform for managing your accounts and transactions. My responsibilities included implementing designs from Figma into the Rails frontend, developing user authentication and authorization features, optimizing database queries for performance, and integrating third-party APIs for additional functionality.',
     responsibilities: [
       {
         title: 'Implemented designs from Figma into Rails frontend',
@@ -86,11 +86,11 @@ const projects = [
     learned:
       'I learned the basics of Rails development, including MVC architecture, routing, and database management. I also gained experience in working with third-party APIs and optimizing database queries for performance.',
     conclusion:
-      "My experience at PunkRockDev as a Junior Rails Developer was characterized by a focus on learning and growth. I had the opportunity to work on the Kwikdroid platform, where I developed user authentication and authorization features, optimized database queries for performance, and integrated third-party APIs for additional functionality. I am proud of the contributions I made to the platform and the valuable experience I gained during my time at PunkRockDev.",
+      "My experience at PunkRockDev as a Junior Rails Developer was characterized by a focus on learning and growth. I had the opportunity to work on the Zoomero platform, where I developed user authentication and authorization features, optimized database queries for performance, and integrated third-party APIs for additional functionality. I am proud of the contributions I made to the platform and the valuable experience I gained during my time at PunkRockDev.",
     collaboration: 'Google Meet, Gitlab, Slack, Jira, Confluence',
     problem: "The most challenging part of the project was implementing designs from Figma into the Rails frontend, ensuring pixel-perfect accuracy and responsiveness across devices. It required attention to detail and a meticulous approach to ensure the designs were faithfully translated into the final product.",
     manager: <span>
-      My manager was <a className='text-white normal-font' href="https://www.linkedin.com/in/metakermit/" target='_blank' rel='noreferrer'>Dražen Lučanin</a> who provided valuable guidance and support throughout the project. He was instrumental in helping me navigate the complexities of the Kwikdroid platform and ensuring the successful implementation of user authentication and authorization features.
+      My manager was <a className='text-white normal-font' href="https://www.linkedin.com/in/metakermit/" target='_blank' rel='noreferrer'>Dražen Lučanin</a> who provided valuable guidance and support throughout the project. He was instrumental in helping me navigate the complexities of the Zoomero platform and ensuring the successful implementation of user authentication and authorization features.
     </span>
   },
   {
