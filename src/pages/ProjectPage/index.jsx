@@ -138,7 +138,7 @@ const ProjectPage = () => {
 
         <div className="container">
           <h2>Who was my manager?</h2>
-          <p className='text-white'>{project.manager}</p>
+          <p>{project.manager}</p>
         </div>
 
         <div className="container medium-margin-bottom" id="tldr">
