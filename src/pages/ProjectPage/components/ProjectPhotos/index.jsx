@@ -15,7 +15,7 @@ const ProjectPhotos = ({ project }) => {
           {project.photos.map((photo, index) => (
             <div
               id={index}
-              className="project-bg"
+              className="project-bg pointer"
               style={{
                 backgroundImage: `url(${photo})`,
                 height: 550,
@@ -58,7 +58,7 @@ const ProjectPhotos = ({ project }) => {
         {project.photos.map((photo, index) => (
           <div
             id={index}
-            className="project-bg"
+            className="project-bg pointer"
             style={{ backgroundImage: `url(${photo})` }}
             onClick={() => {
               setCurrentPhoto(photo)
