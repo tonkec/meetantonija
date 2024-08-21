@@ -7,10 +7,8 @@ import Code from './components/Code'
 import Videos from './components/Videos/'
 import Steps from './components/Steps'
 import projects from '../../data/projects'
-import hobbyProjects from '../../data/hobby'
-import Image from '../../components/Image'
 import { Helmet } from 'react-helmet'
-import { removeSpacesAndDashes } from '../../utils'
+import Tabs from './components/Tabs'
 
 const HomePage = () => {
   return (
@@ -53,40 +51,17 @@ const HomePage = () => {
               'Deliver the solution to the client. Make sure it is working as expected.',
           },
         ]}
-        className="large-padding-bottom"
       />
+
+      <section className="bg-blue">
+        <div className="container">
+          <h2 className="text-black">🎨 I work on side projects.</h2>
+        </div>
+        <Tabs />
+      </section>
       <Aside numberOfPosts={2} />
       <Videos />
 
-      <section className="">
-        <div className="container">
-          <h2>🎨 I work on side projects.</h2>
-
-          <div className="flex flex-responsive flex-gap">
-            {hobbyProjects.map((project, index) => (
-              <div key={index} className="project">
-                <h3>
-                  {project.id}. {project.title}
-                </h3>
-                <p className="small-margin-bottom">{project.description}</p>
-                <div>
-                  <div className="grid">
-                    <Image src={project.mainPhoto} alt={project.title} />
-                  </div>
-                </div>
-
-                <a
-                  className="normal-font small-margin-top inline-block"
-                  href={`hobby/${removeSpacesAndDashes(project.title.toLocaleLowerCase())}`}
-                >
-                  {' '}
-                  Read More
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
       <HireMe />
     </>
   )

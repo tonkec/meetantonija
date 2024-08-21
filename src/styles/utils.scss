@@ -61,8 +61,17 @@
   color: var(--color-white);
 }
 
+.text-black {
+  color: var(--color-black);
+}
+
 .border-radius {
   border-radius: var(--border-radius);
+}
+
+.border-top-radius {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
 }
 
 .bg-gradient {
@@ -231,6 +240,10 @@
   font-size: 1rem;
 }
 
+.large-font {
+  font-size: 1.5rem;
+}
+
 .header-padding-bottom {
   padding-bottom: calc(var(--card-spacing) * 3);
 }
@@ -325,6 +338,14 @@
   }
 }
 
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
 .small-margin-right {
   margin-right: 10px;
 }
@@ -332,4 +353,8 @@
 .margin-center {
   margin-left: auto;
   margin-right: auto;
+}
+
+.hidden {
+  display: none;
 }

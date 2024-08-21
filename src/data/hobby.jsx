@@ -1,5 +1,4 @@
 import kodiraonica from '../images/kodiraonica/1.png'
-import duga1 from '../images/duga/1.png'
 import hover1 from '../images/hover/1.png'
 import hover2 from '../images/hover/2.png'
 import lms1 from '../images/kodiraonica/lms/1.png'
@@ -15,11 +14,10 @@ import chat4 from '../images/duga/chat/4.png'
 
 const hobbyProjects = [
   {
-    title: 'Scss library',
+    title: 'Library',
     description: 'Text hover effects',
     timeline: '2016 - 2017',
     id: 0,
-    mainPhoto: hover1,
     projects: [
       {
         title: 'Scss library for hover effects',
@@ -45,7 +43,6 @@ const hobbyProjects = [
     description: 'A coding school for everyone.',
     timeline: '2020 - present',
     id: 1,
-    mainPhoto: kodiraonica,
     projects: [
       {
         title: 'Main website',
@@ -109,7 +106,7 @@ const hobbyProjects = [
       },
       {
         title: 'Kodiraonica platform',
-        description: 'A platform for students to learn to code.',
+        description: 'A platform for learning to code.',
         link: 'https://cryptic-basin-19078.herokuapp.com/',
         photos: [lms1, lms2, lms3],
         technologies: ['Rails', 'Ruby', 'Devise', 'Postgres', 'Heroku'],
@@ -142,7 +139,6 @@ const hobbyProjects = [
     team: '4 people',
     timeline: '2020 - present',
     id: 2,
-    mainPhoto: duga1,
     projects: [
       {
         title: 'Website',
