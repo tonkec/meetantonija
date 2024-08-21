@@ -6,7 +6,6 @@ import CvPage from '../pages/CvPage'
 import NotFound from '../components/NotFound'
 import PostPage from '../pages/PostPage'
 import HobbyPage from '../pages/HobbyPage'
-import HobbySubPage from '../pages/HobbySubPage'
 
 const routes = [
   {
@@ -37,10 +36,6 @@ const routes = [
   {
     path: '/hobby/:title',
     element: <HobbyPage />,
-  },
-  {
-    path: '/hobby/:title/:subproject',
-    element: <HobbySubPage />,
   },
   {
     path: '*',

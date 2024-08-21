@@ -20,6 +20,7 @@ const hobbyProjects = [
     id: 0,
     projects: [
       {
+        route: 'hover-effects',
         title: 'Scss library for hover effects',
         description: 'A library of hover effects for text elements.',
         link: 'https://antonijasimic.bitbucket.io/text_hover_effects/index.html',
@@ -45,6 +46,7 @@ const hobbyProjects = [
     id: 1,
     projects: [
       {
+        route: 'main-website',
         title: 'Main website',
         description: 'Main landing page',
         link: 'https://kodiraonica.dev',
@@ -83,6 +85,7 @@ const hobbyProjects = [
         ],
       },
       {
+        route: 'blog',
         title: 'Blog',
         description: 'A blog for sharing knowledge.',
         link: 'https://blog.kodiraonica.dev/',
@@ -105,6 +108,7 @@ const hobbyProjects = [
         ],
       },
       {
+        route: 'lms',
         title: 'Kodiraonica platform',
         description: 'A platform for learning to code.',
         link: 'https://cryptic-basin-19078.herokuapp.com/',
@@ -141,6 +145,7 @@ const hobbyProjects = [
     id: 2,
     projects: [
       {
+        route: 'website',
         title: 'Website',
         description: 'A landing page to acquire users.',
         link: 'https://duga.app/',
@@ -163,6 +168,7 @@ const hobbyProjects = [
         ],
       },
       {
+        route: 'chat-app',
         title: 'App',
         description: 'A chat application for users to connect.',
         link: 'https://unique-custard-ca4ace.netlify.app/',

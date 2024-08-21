@@ -1,17 +1,20 @@
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import projects from '../../data/hobby'
-import { removeSpacesAndDashes } from '../../utils'
 import { Helmet } from 'react-helmet'
 
+const findProjectByRoute = (projects, route) => {
+  for (const hobby of projects) {
+    const project = hobby.projects.find(project => project.route === route);
+    if (project) {
+      return project;
+    }
+  }
+  return null; 
+};
+
 const HobbyPage = () => {
-  const navigate = useNavigate()
   const { title } = useParams()
-  const project = projects.find(
-    (project) => removeSpacesAndDashes(project.title) === title
-  )
-
-  const hasSubprojects = project.projects.length > 0
-
+  const project = findProjectByRoute(projects, title);
   if (!project) {
     return <h1>Project not found</h1>
   }
@@ -31,31 +34,6 @@ const HobbyPage = () => {
           </div>
         </div>
       </header>
-
-      {hasSubprojects && (
-        <section>
-          <div className="container">
-            <h2>Subprojects are listed below</h2>
-            <div className="flex flex-responsive flex-gap">
-              {project.projects.map((subproject, index) => (
-                <div
-                  onClick={() => {
-                    navigate(
-                      `/hobby/${removeSpacesAndDashes(project.title)}/${removeSpacesAndDashes(subproject.title)}`
-                    )
-                  }}
-                  className="bg-black small-padding border-radius pointer ternary"
-                  role="button"
-                  key={index}
-                >
-                  <h3>{subproject.title}</h3>
-                  <p>{subproject.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
     </>
   )
 }
