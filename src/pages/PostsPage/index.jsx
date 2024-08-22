@@ -66,7 +66,7 @@ const PostsPage = () => {
 
         <input
           type="text"
-          placeholder="Search posts"
+          placeholder="Search posts by title"
           className="small-margin-top small-margin-bottom w-full border border-radius xs-padding"
           onChange={(e) => {
             setSearch(e.target.value)

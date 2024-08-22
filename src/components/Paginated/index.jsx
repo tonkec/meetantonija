@@ -18,10 +18,11 @@ export const setQueryParams = (params) => {
 }
 
 const Pagination = ({ data }) => {
-  const [paginatedPosts, setPaginatedPosts] = useState(data.slice(0, 2))
+  const postsPerPage = 4
+  const [paginatedPosts, setPaginatedPosts] = useState(data.slice(0, postsPerPage))
 
   const [currentPage, setCurrentPage] = useState(1)
-  const postsPerPage = 2
+ 
   const totalPages = Math.ceil(data.length / postsPerPage)
 
   useEffect(() => {
@@ -47,6 +48,9 @@ const Pagination = ({ data }) => {
     }
     setCurrentPage(page)
   }
+
+  const shouldShowButtons = totalPages > 1
+
   return (
     <>
       <div
@@ -66,25 +70,27 @@ const Pagination = ({ data }) => {
         )}
       </div>
 
-      <div className="medium-margin-top flex flex-x-center flex-y-center flex-gap">
-        <button
-          onClick={() => onPageChange(currentPage - 1)}
-          disabled={currentPage === 1}
-          className="secondary"
-        >
-          Previous
-        </button>
-        <span>
-          {currentPage}/ {totalPages}
-        </span>
-        <button
-          onClick={() => onPageChange(currentPage + 1)}
-          disabled={currentPage === totalPages}
-          className="secondary"
-        >
-          Next
-        </button>
-      </div>
+      {shouldShowButtons && (
+        <div className="medium-margin-top flex flex-x-center flex-y-center flex-gap">
+          <button
+            onClick={() => onPageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            className="secondary"
+          >
+            Previous
+          </button>
+          <span>
+            {currentPage}/ {totalPages}
+          </span>
+          <button
+            onClick={() => onPageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className="secondary"
+          >
+            Next
+          </button>
+        </div>
+      )}
     </>
   )
 }
