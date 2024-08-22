@@ -1,8 +1,13 @@
-import { useState } from 'react'
 import posts from '../../data/posts'
 import { Helmet } from 'react-helmet'
 import { formatNoteTitle } from '../../utils'
 import Image from '../../components/Image'
+import Paginated, { setQueryParams } from '../../components/Paginated'
+import { useState } from 'react'
+
+const sortedPosts = posts.sort((a, b) => {
+  return new Date(b.date) - new Date(a.date)
+})
 
 export const SinglePost = ({ post }) => {
   return (
@@ -46,11 +51,11 @@ export const SinglePost = ({ post }) => {
 
 const PostsPage = () => {
   const [search, setSearch] = useState('')
-  const filteredPosts = posts.filter((post) => {
+
+  const filteredPosts = sortedPosts.filter((post) => {
     return post.title.toLowerCase().includes(search.toLowerCase())
   })
 
-  const postsToRender = search ? filteredPosts : posts
   return (
     <>
       <Helmet>
@@ -58,32 +63,18 @@ const PostsPage = () => {
       </Helmet>
       <section className="container large-padding-top">
         <h2>I like to write about technology.</h2>
-        <div className="flex flex-y-center medium-margin-bottom">
-          <input
-            type="text"
-            placeholder={`Search ${posts.length} posts`}
-            onChange={(e) => {
-              setSearch(e.target.value)
-            }}
-            className="w-full xs-padding border border-radius"
-          />
-        </div>
-        <div
-          className="grid"
-          style={
-            postsToRender.length === 1
-              ? { maxWidth: '50%' }
-              : { maxWidth: 'none' }
-          }
-        >
-          {postsToRender.length ? (
-            postsToRender.map((post) => {
-              return <SinglePost post={post} />
-            })
-          ) : (
-            <p>No posts found.</p>
-          )}
-        </div>
+
+        <input
+          type="text"
+          placeholder="Search posts"
+          className="small-margin-top small-margin-bottom w-full border border-radius xs-padding"
+          onChange={(e) => {
+            setSearch(e.target.value)
+            setQueryParams({ search: e.target.value })
+            setQueryParams({ page: 1 })
+          }}
+        />
+        <Paginated data={filteredPosts} />
       </section>
     </>
   )
