@@ -133,6 +133,7 @@ const hobbyProjects = [
         route: 'website',
         title: 'Website',
         description: 'A landing page to acquire users.',
+        longDescription: "The landing page for the LGBTQ+ dating app, built with React, is designed to effectively attract and engage potential users. Utilizing React's dynamic capabilities, the page offers a seamless and responsive experience, instantly capturing the attention of visitors. It highlights the app's core features, such as real-time chat and a secure, inclusive environment, ensuring users immediately understand the value of joining. With a modern, clean design, the landing page guides users through the app's unique offerings, emphasizing its commitment to providing a safe space for the LGBTQ+ community. Clear calls-to-action encourage visitors to sign up, while testimonials and community stories build trust and credibility. The page is optimized for performance, ensuring fast load times and smooth navigation, which is crucial for retaining the interest of potential users. By effectively communicating the app's benefits and fostering a sense of belonging, the landing page plays a vital role in driving user acquisition and building a thriving, engaged community around the dating platform.",
         link: 'https://duga.app/',
         photos: [dugaLanding1, dugaLanding2],
         technologies: ['React', 'Javacript', 'Typescript'],
