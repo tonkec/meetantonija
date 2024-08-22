@@ -1,4 +1,3 @@
-import kodiraonica from '../images/kodiraonica/1.png'
 import hover1 from '../images/hover/1.png'
 import hover2 from '../images/hover/2.png'
 import lms1 from '../images/kodiraonica/lms/1.png'
