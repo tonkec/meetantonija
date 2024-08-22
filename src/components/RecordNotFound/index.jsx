@@ -11,11 +11,11 @@ const RecordNotFound = () => {
           <h1>Project not found.</h1>
           <p>The project you are looking for does not exist.</p>
           <p>
-            Try to go back to the {" "}
+            Try to go back to the{' '}
             <a className="normal-font" href="/">
               homepage
-            </a>
-            {" "}and go from there.
+            </a>{' '}
+            and go from there.
           </p>
         </div>
       </header>

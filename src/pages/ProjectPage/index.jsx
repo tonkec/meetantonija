@@ -29,9 +29,7 @@ const ProjectPage = () => {
   )
 
   if (!project) {
-    return (
-      <RecordNotFound />
-    )
+    return <RecordNotFound />
   }
 
   return (

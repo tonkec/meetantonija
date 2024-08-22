@@ -10,7 +10,10 @@ const getTabItems = () => {
         <div className="text-black">
           <div className="flex flex-responsive flex-gap">
             {hobby.projects.map((project, index) => (
-              <div className="small-margin-bottom flex-1" key={index}>
+              <div
+                className="flex-1 bg-black max-w-50 small-padding border-radius"
+                key={index}
+              >
                 <h4>{project.title}</h4>
                 <p>{project.description}</p>
                 <a

@@ -5,6 +5,7 @@ import Image from '../../components/Image'
 import { useState } from 'react'
 import ImageModal from './../../components/ImageModal'
 import RecordNotFound from '../../components/RecordNotFound'
+import HireMe from '../../components/HireMe'
 
 const findProjectByRoute = (projects, route) => {
   for (const hobby of projects) {
@@ -23,9 +24,7 @@ const HobbyPage = () => {
   const project = findProjectByRoute(projects, title)
 
   if (!project) {
-    return (
-      <RecordNotFound />
-    )
+    return <RecordNotFound />
   }
 
   return (
@@ -55,6 +54,10 @@ const HobbyPage = () => {
 
       <section className="bg-blue">
         <div className="container">
+          <div>
+            <h2>What is this project about?</h2>
+            <p>{project.longDescription}</p>
+          </div>
           <div>
             <h2>What was my motivation?</h2>
             <p>{project.motivation}</p>
@@ -124,7 +127,7 @@ const HobbyPage = () => {
                     role="button"
                     href={member.linkedin}
                   >
-                    LinkedIn
+                    Linkedin
                   </a>
                 </div>
               ))}
@@ -132,6 +135,8 @@ const HobbyPage = () => {
           </div>
         </section>
       )}
+
+      <HireMe />
     </>
   )
 }
