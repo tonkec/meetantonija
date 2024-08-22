@@ -44,7 +44,7 @@ const ProjectPhotos = ({ project }) => {
           }}
         >
           <div
-            className="content contain border-radius"
+            className="content contain"
             style={{ backgroundImage: `url(${currentPhoto})` }}
           ></div>
         </Modal>
@@ -81,7 +81,7 @@ const ProjectPhotos = ({ project }) => {
         }}
       >
         <div
-          className="content contain border-radius"
+          className="content contain"
           style={{ backgroundImage: `url(${currentPhoto})` }}
         ></div>
       </Modal>

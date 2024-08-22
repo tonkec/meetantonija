@@ -27,11 +27,11 @@ const hobbyProjects = [
         description: 'A library of hover effects for text elements.',
         link: 'https://antonijasimic.bitbucket.io/text_hover_effects/index.html',
         photos: [hover1, hover2],
-        technologies: ['Scss', "html", "css", "bower", "javascript"],
+        technologies: ['Scss', 'html', 'css', 'bower', 'javascript'],
         motivation:
           'I wanted to create a library of hover effects for text elements. I have used many times hover effects on text elements and I wanted to create a library that I can use in the future. This was my first bower package that I published.',
         sourceCode: null,
-        role: "I was the only developer on this project.",
+        role: 'I was the only developer on this project.',
       },
     ],
   },
@@ -67,9 +67,9 @@ const hobbyProjects = [
             name: 'Sara Budija',
             role: 'Lead designer',
             linkedin: 'https://www.linkedin.com/in/sara-budija-3063a9153/',
-          }
+          },
         ],
-        role: "I was the Lead React developer on this project.",
+        role: 'I was the Lead React developer on this project.',
       },
       {
         route: 'blog',
@@ -81,7 +81,7 @@ const hobbyProjects = [
         motivation:
           'I wanted to create a community where everyone can learn to code and share their knowledge.',
         sourceCode: null,
-        role: "I was the only developer on this project.",
+        role: 'I was the only developer on this project.',
         team: [
           {
             name: 'Petar Kramar',
@@ -100,7 +100,7 @@ const hobbyProjects = [
         motivation:
           'I wanted to create a community where everyone can learn to code and share their knowledge.',
         sourceCode: null,
-        role: "I was the Lead Rails developer on this project.",
+        role: 'I was the Lead Rails developer on this project.',
         team: [
           {
             name: 'Matija Katić',
@@ -133,7 +133,7 @@ const hobbyProjects = [
         motivation:
           'I wanted to create a safe space for LGBTQ+ community in Balkans to meet and connect.',
         sourceCode: 'https://github.com/duga-dating-app',
-        role: "I was the Lead React developer on this project.",
+        role: 'I was the Lead React developer on this project.',
         team: [
           {
             name: 'Matija Marohnić',
@@ -148,7 +148,7 @@ const hobbyProjects = [
         description: 'A chat application for users to connect.',
         link: 'https://unique-custard-ca4ace.netlify.app/',
         photos: [chat1, chat2, chat3, chat4],
-        role: "I was the Lead Full Stack developer on this project.",
+        role: 'I was the Lead Full Stack developer on this project.',
         technologies: [
           'React',
           'Javacript',
