@@ -8,6 +8,7 @@ import { removeSpacesAndDashes, scrollToTheElement } from '../../utils'
 import Skills from '../../components/Skills'
 import { Helmet } from 'react-helmet'
 import ProjectPhotos from './components/ProjectPhotos'
+import RecordNotFound from '../../components/RecordNotFound'
 
 const getTeamSize = (team) => {
   if (team <= 1) {
@@ -29,19 +30,7 @@ const ProjectPage = () => {
 
   if (!project) {
     return (
-      <header className="header-padding-top header-padding-bottom project-header">
-        <div className="container">
-          <h1>Project not found</h1>
-          <p>The project you are looking for does not exist.</p>
-          <p>
-            Try to go back to the
-            <a className="normal-font" href="/">
-              homepage
-            </a>
-            and find the project you are looking for.
-          </p>
-        </div>
-      </header>
+      <RecordNotFound />
     )
   }
 

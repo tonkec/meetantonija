@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 import Image from '../../components/Image'
 import { useState } from 'react'
 import ImageModal from './../../components/ImageModal'
+import RecordNotFound from '../../components/RecordNotFound'
 
 const findProjectByRoute = (projects, route) => {
   for (const hobby of projects) {
@@ -23,18 +24,7 @@ const HobbyPage = () => {
 
   if (!project) {
     return (
-      <>
-        <Helmet>
-          <title>Meetantonija | 404</title>
-        </Helmet>
-        <header className="header-padding-top header-padding-bottom bg-black">
-          <div className="container">
-            <div className="flex flex-responsive flex-gap space-between">
-              <h1 className="no-margin">Project not found.</h1>
-            </div>
-          </div>
-        </header>
-      </>
+      <RecordNotFound />
     )
   }
 
