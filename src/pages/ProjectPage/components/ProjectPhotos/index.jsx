@@ -49,7 +49,7 @@ const ProjectPhotos = ({ project }) => {
                 minWidth: 300,
                 backgroundPositionX: 'center',
                 backgroundPositionY: 'center',
-                backgroundSize: "contain"
+                backgroundSize: 'contain',
               }}
               onClick={() => {
                 setCurrentPhoto(photo)
