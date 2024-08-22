@@ -112,7 +112,7 @@ const AboutPage = () => {
               ))}
             </Tooltip>
 
-            <Image hasBackground src={Me} alt="Antonija" />
+            <Image hasColoredBackground src={Me} alt="Antonija" />
           </div>
         </div>
       </header>

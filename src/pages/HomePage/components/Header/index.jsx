@@ -25,7 +25,7 @@ const Header = () => {
         <Image
           src="https://avatars.githubusercontent.com/u/5020758?v=4"
           alt="Antonija"
-          hasBackground
+          hasColoredBackground
         />
       </div>
 
@@ -39,7 +39,6 @@ const Header = () => {
         className="tooltip"
       >
         <Image
-          hasBackground={false}
           src="https://grad-svetanedelja.hr/wp-content/uploads/2020/04/Crkva-Sveta-Nedelja-zalazak-polje-800x450.jpg"
           alt="Sveta Nedelja"
         />

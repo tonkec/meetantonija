@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet'
 import Image from '../../components/Image'
 import { useState } from 'react'
 import Modal from 'react-modal'
-import usePrefersDarkMode  from '../../hooks/usePrefersDarkMode'
+import usePrefersDarkMode from '../../hooks/usePrefersDarkMode'
 
 const findProjectByRoute = (projects, route) => {
   for (const hobby of projects) {
@@ -85,10 +85,14 @@ const HobbyPage = () => {
           <h2>📸 Here are some photos</h2>
           <div className="grid">
             {project.photos.map((photo, index) => (
-              <div className='pointer' key={index} onClick={() => {
-                setCurrentPhoto(photo)
-                setIsModalOpen(true)
-              }}>
+              <div
+                className="pointer"
+                key={index}
+                onClick={() => {
+                  setCurrentPhoto(photo)
+                  setIsModalOpen(true)
+                }}
+              >
                 <Image src={photo} alt={project.title} />
               </div>
             ))}

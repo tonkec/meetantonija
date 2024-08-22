@@ -37,3 +37,13 @@
 img {
   user-select: none;
 }
+
+.isBackgroundImage {
+  height: 50vh;
+  border-radius: var(--border-radius);
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  min-width: 48%;
+}

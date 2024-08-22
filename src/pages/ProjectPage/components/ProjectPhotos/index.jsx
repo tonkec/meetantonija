@@ -1,10 +1,36 @@
 import Modal from 'react-modal'
 import usePrefersDarkMode from '../../../../hooks/usePrefersDarkMode'
 import { useState } from 'react'
+import Image from '../../../../components/Image'
 
-const ProjectPhotos = ({ project }) => {
+const ProjectPhotosModal = ({
+  project,
+  isModalOpen,
+  setIsModalOpen,
+  currentPhoto,
+}) => {
   const isDark = usePrefersDarkMode()
 
+  return (
+    <Modal
+      isOpen={isModalOpen}
+      onRequestClose={() => setIsModalOpen(false)}
+      className="modal"
+      style={{
+        overlay: {
+          zIndex: 1000,
+          backgroundColor: isDark
+            ? 'rgba(0, 0, 0, 0.8)'
+            : 'rgba(255, 255, 255, 0.8)',
+        },
+      }}
+    >
+      <Image isBackgroundImage={true} src={currentPhoto} alt={project.title} />
+    </Modal>
+  )
+}
+
+const ProjectPhotos = ({ project }) => {
   const [currentPhoto, setCurrentPhoto] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -13,41 +39,32 @@ const ProjectPhotos = ({ project }) => {
       <>
         <div className="flex flex-gap flex-wrap">
           {project.photos.map((photo, index) => (
-            <div
-              id={index}
-              className="project-bg pointer"
+            <Image
+              key={index}
+              isBackgroundImage={true}
+              src={photo}
+              alt={project.title}
               style={{
-                backgroundImage: `url(${photo})`,
                 height: 550,
                 minWidth: 300,
                 backgroundPositionX: 'center',
                 backgroundPositionY: 'center',
+                backgroundSize: "contain"
               }}
               onClick={() => {
                 setCurrentPhoto(photo)
                 setIsModalOpen(true)
               }}
-            ></div>
+            />
           ))}
         </div>
-        <Modal
-          isOpen={isModalOpen}
-          onRequestClose={() => setIsModalOpen(false)}
-          className="modal"
-          style={{
-            overlay: {
-              zIndex: 1000,
-              backgroundColor: isDark
-                ? 'rgba(0, 0, 0, 0.8)'
-                : 'rgba(255, 255, 255, 0.8)',
-            },
-          }}
-        >
-          <div
-            className="content contain"
-            style={{ backgroundImage: `url(${currentPhoto})` }}
-          ></div>
-        </Modal>
+
+        <ProjectPhotosModal
+          project={project}
+          isModalOpen={isModalOpen}
+          setIsModalOpen={setIsModalOpen}
+          currentPhoto={currentPhoto}
+        />
       </>
     )
   }
@@ -56,35 +73,24 @@ const ProjectPhotos = ({ project }) => {
     <>
       <div className="flex flex-responsive flex-gap flex-wrap">
         {project.photos.map((photo, index) => (
-          <div
-            id={index}
-            className="project-bg pointer"
-            style={{ backgroundImage: `url(${photo})` }}
+          <Image
+            key={index}
+            src={photo}
+            alt={project.title}
             onClick={() => {
               setCurrentPhoto(photo)
               setIsModalOpen(true)
             }}
-          ></div>
+            isBackgroundImage={true}
+          />
         ))}
       </div>
-      <Modal
-        isOpen={isModalOpen}
-        onRequestClose={() => setIsModalOpen(false)}
-        className="modal"
-        style={{
-          overlay: {
-            zIndex: 1000,
-            backgroundColor: isDark
-              ? 'rgba(0, 0, 0, 0.8)'
-              : 'rgba(255, 255, 255, 0.8)',
-          },
-        }}
-      >
-        <div
-          className="content contain"
-          style={{ backgroundImage: `url(${currentPhoto})` }}
-        ></div>
-      </Modal>
+      <ProjectPhotosModal
+        project={project}
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+        currentPhoto={currentPhoto}
+      />
     </>
   )
 }
