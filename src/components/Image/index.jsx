@@ -13,7 +13,7 @@ const Image = ({
 }) => {
   const isImageLoading = useImage(src)
   const isDark = usePrefersDarkMode()
- 
+
   if (isImageLoading) {
     return (
       <Triangle color={isDark ? '#fcfcfc' : '#292929'} height={50} width={50} />

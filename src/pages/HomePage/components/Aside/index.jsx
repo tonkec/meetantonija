@@ -1,9 +1,13 @@
 import { useState } from 'react'
 import { IoMdClose } from 'react-icons/io'
 import notes from '../../../../data/posts'
-import { formatNoteTitle, truncateString } from '../../../../utils'
+import {
+  formatNoteTitle,
+  shuffleArray,
+  truncateString,
+} from '../../../../utils'
 import './Aside.scss'
-
+const shuffledNotes = shuffleArray(notes)
 const AsideContent = ({ noteContent }) => {
   if (!noteContent.intro) {
     return null
@@ -32,7 +36,7 @@ const Aside = ({ numberOfPosts }) => {
         <h2>👌 I write about technologies I like.</h2>
       </div>
       <div className="container overflow-x-hidden relative flex flex-column">
-        {notes.slice(0, numberOfPosts).map((note) => {
+        {shuffledNotes.slice(0, numberOfPosts).map((note) => {
           return (
             <button
               key={note.id}
