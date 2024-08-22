@@ -10,12 +10,16 @@ import { formatNoteTitle, shuffleArray } from '../../utils'
 import { readingTime } from 'reading-time-estimator'
 import { Helmet } from 'react-helmet'
 import { IoIosArrowRoundBack } from 'react-icons/io'
+import { SinglePost } from '../PostsPage'
 
 const Tags = (tags) => {
   return (
     <p className="small-margin-bottom">
       {tags.split(',').map((tag) => (
-        <span key={tag} className="tag bg-black small-margin-right border-radius">
+        <span
+          key={tag}
+          className="tag bg-black small-margin-right border-radius"
+        >
           {tag}
         </span>
       ))}
@@ -108,7 +112,7 @@ const PostPage = () => {
                 {...props}
                 target="_blank"
                 rel="noreferrer"
-                className="post-link"
+                className="normal-font text-black"
               >
                 {children}
               </a>
@@ -153,24 +157,14 @@ const PostPage = () => {
         }}
       />
 
-      <section
-        className="post-container large-margin-top bg-black medium-padding border-radius pointer primary border-radius-none-xs"
-        role="button"
-      >
-        {shuffleArray(otherPosts)
-          .slice(0, 1)
-          .map((post) => (
-            <div
-              key={post.id}
-              className="medium-padding small-margin-bottom text-center"
-              onClick={() =>
-                navigate(`/post/${formatNoteTitle(post.title.toLowerCase())}`)
-              }
-            >
-              <h5>Read next</h5>
-              <h3 className="small-margin-bottom">{post.title}</h3>
-            </div>
-          ))}
+      <section className="post-container">
+        <div className="extra-large-margin-top large-margin-bottom">
+          {shuffleArray(otherPosts)
+            .slice(0, 1)
+            .map((post) => (
+              <SinglePost post={post} />
+            ))}
+        </div>
       </section>
     </div>
   )
