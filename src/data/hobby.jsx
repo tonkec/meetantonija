@@ -173,6 +173,11 @@ const hobbyProjects = [
             role: 'Junior React developer',
             linkedin: 'https://github.com/evakalo',
           },
+          {
+            name: 'Luka Nikčević',
+            role: 'Junior React developer',
+            linkedin: 'https://www.linkedin.com/in/nikcevicluka/',
+          },
         ],
       },
     ],

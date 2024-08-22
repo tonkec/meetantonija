@@ -1,34 +1,6 @@
-import Modal from 'react-modal'
-import usePrefersDarkMode from '../../../../hooks/usePrefersDarkMode'
 import { useState } from 'react'
 import Image from '../../../../components/Image'
-
-const ProjectPhotosModal = ({
-  project,
-  isModalOpen,
-  setIsModalOpen,
-  currentPhoto,
-}) => {
-  const isDark = usePrefersDarkMode()
-
-  return (
-    <Modal
-      isOpen={isModalOpen}
-      onRequestClose={() => setIsModalOpen(false)}
-      className="modal"
-      style={{
-        overlay: {
-          zIndex: 1000,
-          backgroundColor: isDark
-            ? 'rgba(0, 0, 0, 0.8)'
-            : 'rgba(255, 255, 255, 0.8)',
-        },
-      }}
-    >
-      <Image isBackgroundImage={true} src={currentPhoto} alt={project.title} />
-    </Modal>
-  )
-}
+import ImageModal from '../../../../components/ImageModal'
 
 const ProjectPhotos = ({ project }) => {
   const [currentPhoto, setCurrentPhoto] = useState(0)
@@ -59,7 +31,7 @@ const ProjectPhotos = ({ project }) => {
           ))}
         </div>
 
-        <ProjectPhotosModal
+        <ImageModal
           project={project}
           isModalOpen={isModalOpen}
           setIsModalOpen={setIsModalOpen}
@@ -85,7 +57,7 @@ const ProjectPhotos = ({ project }) => {
           />
         ))}
       </div>
-      <ProjectPhotosModal
+      <ImageModal
         project={project}
         isModalOpen={isModalOpen}
         setIsModalOpen={setIsModalOpen}

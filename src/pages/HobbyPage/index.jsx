@@ -3,8 +3,7 @@ import projects from '../../data/hobby'
 import { Helmet } from 'react-helmet'
 import Image from '../../components/Image'
 import { useState } from 'react'
-import Modal from 'react-modal'
-import usePrefersDarkMode from '../../hooks/usePrefersDarkMode'
+import ImageModal from './../../components/ImageModal'
 
 const findProjectByRoute = (projects, route) => {
   for (const hobby of projects) {
@@ -17,14 +16,26 @@ const findProjectByRoute = (projects, route) => {
 }
 
 const HobbyPage = () => {
-  const isDark = usePrefersDarkMode()
-
   const [currentPhoto, setCurrentPhoto] = useState('')
   const [isModalOpen, setIsModalOpen] = useState(false)
   const { title } = useParams()
   const project = findProjectByRoute(projects, title)
+
   if (!project) {
-    return <h1>Project not found</h1>
+    return (
+      <>
+        <Helmet>
+          <title>Meetantonija | 404</title>
+        </Helmet>
+        <header className="header-padding-top header-padding-bottom bg-black">
+          <div className="container">
+            <div className="flex flex-responsive flex-gap space-between">
+              <h1 className="no-margin">Project not found.</h1>
+            </div>
+          </div>
+        </header>
+      </>
+    )
   }
 
   return (
@@ -99,24 +110,12 @@ const HobbyPage = () => {
           </div>
         </div>
 
-        <Modal
-          isOpen={isModalOpen}
-          onRequestClose={() => setIsModalOpen(false)}
-          className="modal"
-          style={{
-            overlay: {
-              zIndex: 1000,
-              backgroundColor: isDark
-                ? 'rgba(0, 0, 0, 0.8)'
-                : 'rgba(255, 255, 255, 0.8)',
-            },
-          }}
-        >
-          <div
-            className="content contain"
-            style={{ backgroundImage: `url(${currentPhoto})` }}
-          ></div>
-        </Modal>
+        <ImageModal
+          project={project}
+          isModalOpen={isModalOpen}
+          setIsModalOpen={setIsModalOpen}
+          currentPhoto={currentPhoto}
+        />
       </section>
 
       {project.team && (
