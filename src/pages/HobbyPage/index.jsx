@@ -115,7 +115,7 @@ const HobbyPage = () => {
         <section>
           <div className="container">
             <h2>👩‍💻 Contributors</h2>
-            <div className="flex flex-gap">
+            <div className="flex flex-gap flex-responsive">
               {project.team.map((member, index) => (
                 <div key={index}>
                   <h3>{member.name}</h3>
