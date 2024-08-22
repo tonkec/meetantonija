@@ -15,7 +15,7 @@ const Tags = (tags) => {
   return (
     <p className="small-margin-bottom">
       {tags.split(',').map((tag) => (
-        <span key={tag} className="tag">
+        <span key={tag} className="tag bg-black small-margin-right border-radius">
           {tag}
         </span>
       ))}
@@ -154,7 +154,7 @@ const PostPage = () => {
       />
 
       <section
-        className="post-container large-margin-top bg-black medium-padding border-radius max-w-600 pointer primary border-radius-none-xs"
+        className="post-container large-margin-top bg-black medium-padding border-radius pointer primary border-radius-none-xs"
         role="button"
       >
         {shuffleArray(otherPosts)
@@ -169,7 +169,6 @@ const PostPage = () => {
             >
               <h5>Read next</h5>
               <h3 className="small-margin-bottom">{post.title}</h3>
-              {post && Tags(post.tags)}
             </div>
           ))}
       </section>

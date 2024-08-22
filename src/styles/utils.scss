@@ -81,13 +81,13 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: var(--grid-gap);
 }
 
 .small-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(00px, 1fr));
   grid-gap: var(--small-grid-gap);
 }
 
@@ -163,6 +163,11 @@
 
 .flex-x-center {
   justify-content: center;
+}
+
+.bg-dark {
+  background-color: #000;
+  color: var(--color-white);
 }
 
 .bg-white {
@@ -242,6 +247,10 @@
 
 .large-font {
   font-size: 1.5rem;
+}
+
+.extra-large-font {
+  font-size: 2.5rem;
 }
 
 .header-padding-bottom {
@@ -361,4 +370,8 @@
 
 .hidden {
   display: none;
+}
+
+.circle {
+  border-radius: 50%;
 }
