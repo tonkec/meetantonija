@@ -17,8 +17,8 @@ const DarkMode = () => {
   }, [value])
 
   return (
-    <label className="flex flex-y-center">
-      <h6 className="small-margin-right">Shift + K</h6>
+   <div className="container small-margin-bottom">
+     <label className="flex flex-y-center">
       <Toggle
         checked={isDark}
         onChange={({ target }) => setIsDark(target.checked)}
@@ -27,6 +27,7 @@ const DarkMode = () => {
         className="small-margin-right"
       />
     </label>
+   </div>
   )
 }
 

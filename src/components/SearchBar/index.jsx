@@ -7,6 +7,7 @@ import projects from '../../data/projects'
 import posts from '../../data/posts'
 import './SearchBar.scss'
 import { formatNoteTitle } from '../../utils'
+import { FaKeyboard } from "react-icons/fa";
 
 const delay = 0.1
 const maxNumberOfResults = 2
@@ -17,7 +18,7 @@ const SearchResults = ({ searchResults }) => {
 
 const NavigationButton = ({ onClick, value }) => (
   <input
-    className="block w-full text-left ternary active navigation-button"
+    className="block w-full text-left ternary active navigation-button pointer"
     onClick={onClick}
     type="submit"
     value={value}
@@ -252,7 +253,7 @@ const SearchBar = () => {
             value={search}
           />
 
-          <FaArrowRight className="absolute" />
+          <FaKeyboard className="keyboard-icon absolute" fontSize="2rem"/>
           <SearchResults
             searchResults={searchedResults.length ? searchedResults : allRoutes}
           />

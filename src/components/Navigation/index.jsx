@@ -88,8 +88,8 @@ const Navigation = () => {
             ))}
           </div>
         )}
-
-        <DarkMode />
+        
+        <h6 className='text-white medium-margin-right'>Shift + K</h6>
       </div>
       <MobileNavigation
         isOpen={isMobileNavigationOpen}
