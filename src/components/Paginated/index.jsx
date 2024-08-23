@@ -81,7 +81,7 @@ const Pagination = ({ data = [], clearSearch, searchValue }) => {
         </button>
       )}
       <div
-        className="grid"
+        className="medium-grid"
         style={
           paginatedPosts.length === 1
             ? { maxWidth: '50%' }
