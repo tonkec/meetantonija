@@ -13,7 +13,7 @@ const CvProject = ({ project }) => {
         {project.from} - {project.to || 'Present'}
       </p>
 
-      <p className='max-w-1000'>{project.description}</p>
+      <p className="max-w-1000">{project.description}</p>
       <div className="small-margin-top small-margin-bottom">
         <Skills skills={project.skills.split(',')} />
       </div>

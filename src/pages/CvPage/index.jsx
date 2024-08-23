@@ -52,19 +52,19 @@ const reversedProjects = (groupByStartYear) => {
 
 const filteredByStart = (groupByStartYear, start) => {
   return Object.entries(groupByStartYear)
-  .reverse()
-  .map(([entry, projects]) =>
-    entry === start
-      ? projects.map((project, index) => (
-          <CvProjectWrapper
-            key={index}
-            project={project}
-            index={index}
-            entry={entry}
-          />
-        ))
-      : null
-  )
+    .reverse()
+    .map(([entry, projects]) =>
+      entry === start
+        ? projects.map((project, index) => (
+            <CvProjectWrapper
+              key={index}
+              project={project}
+              index={index}
+              entry={entry}
+            />
+          ))
+        : null
+    )
 }
 
 const CvPage = () => {

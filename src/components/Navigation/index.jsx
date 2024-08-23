@@ -10,9 +10,37 @@ import { RiHome2Line } from 'react-icons/ri'
 import { RiEmotionLine } from 'react-icons/ri'
 import { RiBook2Line } from 'react-icons/ri'
 import { RiBriefcase2Line } from 'react-icons/ri'
+import { RiSettings4Fill } from 'react-icons/ri'
+import Modal from 'react-modal'
+import usePrefersDarkMode from '../../hooks/usePrefersDarkMode'
 
 export const NavigationLink = ({ children, href }) => {
+  const isDark = usePrefersDarkMode()
+  const [isOpen, setIsOpen] = useState(false)
   const activeLink = window.location.pathname
+
+  if (href === '/settings') {
+    return (
+      <>
+        <button
+          className="transparent text-white medium-font nav-link"
+          onClick={() => {
+            setIsOpen(!isOpen)
+          }}
+        >
+          {children}
+        </button>
+        <MobileNavigation
+          isOpen={isOpen}
+          isSettings={true}
+          onClose={() => {
+            setIsOpen(false)
+          }}
+        />
+      </>
+    )
+  }
+
   if (activeLink === href) {
     return (
       <Link
@@ -56,7 +84,22 @@ const navigationLinks = [
     label: 'CV',
     icon: <RiBriefcase2Line />,
   },
+  {
+    href: '/settings',
+    label: 'Settings',
+    icon: <RiSettings4Fill />,
+  },
 ]
+
+const getNavigationLinks = (navigationLinks) => {
+  return navigationLinks.map((link, index) => {
+    return (
+      <NavigationLink key={link.href} href={link.href}>
+        {index}. {link.label}
+      </NavigationLink>
+    )
+  })
+}
 
 const Navigation = () => {
   const [isMobileNavigationOpen, setIsMobileNavigationOpen] = useState(false)
@@ -80,13 +123,7 @@ const Navigation = () => {
             <RxHamburgerMenu fontSize="1.5rem" />
           </button>
         ) : (
-          <div className="flex">
-            {navigationLinks.map((link, index) => (
-              <NavigationLink key={link.href} href={link.href}>
-                {index}. {link.label}
-              </NavigationLink>
-            ))}
-          </div>
+          <div className="flex">{getNavigationLinks(navigationLinks)}</div>
         )}
 
         <h6 className="text-white medium-margin-right">Shift + K</h6>

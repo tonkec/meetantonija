@@ -1,5 +1,4 @@
 import { FaHeart, FaCoffee } from 'react-icons/fa'
-import Emoji from './../../components/Emoji'
 import { LuLinkedin, LuGithub, LuCodepen } from 'react-icons/lu'
 import Social from './../../components/Social'
 import './Footer.scss'
@@ -13,26 +12,24 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-brown">
+    <footer>
       <div className="container">
-        <div className="flex space-between flex-responsive small-margin-bottom">
+        <div className="flex space-between flex-responsive">
+          <p className="small-margin-bottom">
+            Coded by Antonija Šimić with lots of{' '}
+            <FaHeart className="icon" color="red" /> and{' '}
+            <FaCoffee color="#6F4E37" className="icon" />
+          </p>
           <Social icons={socialLinks} />
         </div>
-        <p className="small-margin-bottom">
-          Coded by Antonija Šimić with lots of{' '}
-          <FaHeart className="icon" color="red" /> and{' '}
-          <FaCoffee color="#6F4E37" className="icon" />
-        </p>
 
         <span className="inline-block small-margin-bottom">
           <span> Copyright &copy; </span>
           <span>{new Date().getFullYear()}</span>{' '}
-          <a href="/" className="text-white font-normal">
+          <a href="/" className="text-black font-normal">
             meetantonija
           </a>
         </span>
-
-        <DarkMode />
       </div>
     </footer>
   )
