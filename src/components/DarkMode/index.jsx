@@ -17,7 +17,7 @@ const DarkMode = () => {
   }, [value])
 
   return (
-   <div className="container small-margin-bottom">
+   <div>
      <label className="flex flex-y-center">
       <Toggle
         checked={isDark}

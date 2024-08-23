@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 import PageTransition from './components/PageTransition'
 import SearchBar from './components/SearchBar'
 import Navigation from './components/Navigation'
-import DarkMode from './components/DarkMode'
+import Emoji from './components/Emoji'
 
 function Layout() {
   const [isOutletLoaded, setIsOutletLoaded] = useState(false)
@@ -41,8 +41,8 @@ function Layout() {
         <main>
           <Outlet />
         </main>
+        <Emoji  />
         <Footer />
-        <DarkMode />
       </div>
     </>
   )

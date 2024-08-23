@@ -79,6 +79,11 @@
   color: var(--color-white);
 }
 
+.bg-brown {
+  background-color: var(--color-brown);
+  color: var(--color-white);
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

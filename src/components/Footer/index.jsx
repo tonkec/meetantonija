@@ -3,6 +3,7 @@ import Emoji from './../../components/Emoji'
 import { LuLinkedin, LuGithub, LuCodepen } from 'react-icons/lu'
 import Social from './../../components/Social'
 import './Footer.scss'
+import DarkMode from '../DarkMode'
 
 const socialLinks = [
   { href: 'https://codepen.io/tonkec', icon: LuCodepen },
@@ -12,22 +13,24 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className='bg-brown'>
       <div className="container">
-        <Emoji />
+       
+        <div className="flex space-between flex-responsive small-margin-bottom">
+          <Social icons={socialLinks} />
+        </div>
         <p className="small-margin-bottom">
           Coded by Antonija Šimić with lots of{' '}
           <FaHeart className="icon" color="red" /> and{' '}
           <FaCoffee color="#6F4E37" className="icon" />
         </p>
-        <div className="flex space-between flex-responsive">
-          <span className="inline-block small-margin-bottom">
-            <span> Copyright &copy; </span>
-            <span>{new Date().getFullYear()}</span> <a href="/">meetantonija</a>
-          </span>
 
-          <Social icons={socialLinks} />
-        </div>
+        <span className="inline-block small-margin-bottom">
+            <span> Copyright &copy; </span>
+            <span>{new Date().getFullYear()}</span> <a href="/" className='text-white font-normal'>meetantonija</a>
+          </span>
+        
+        <DarkMode />
       </div>
     </footer>
   )

@@ -2,7 +2,9 @@ import './Emoji.scss'
 
 const Emoji = () => {
   return (
-    <div className="wrapper">
+   <section>
+     <div className="container">
+     <div className="wrapper">
       <div className="face">
         <div className="straight-hair"></div>
         <div className="hair"></div>
@@ -18,6 +20,8 @@ const Emoji = () => {
       <div className="body"></div>
       <div className="laptop"></div>
     </div>
+     </div>
+   </section>
   )
 }
 
