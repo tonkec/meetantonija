@@ -24,7 +24,7 @@ const MyMasonry = ({ images }) => {
               }}
               className="masonry-item"
             >
-              <Image src={image.src} alt={image.subtitle} />
+              <Image src={image.src} alt={image.subtitle} className="pointer" />
             </div>
           ))}
         </Masonry>

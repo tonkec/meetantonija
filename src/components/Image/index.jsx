@@ -10,6 +10,7 @@ const Image = ({
   isBackgroundImage,
   style,
   onClick,
+  className,
 }) => {
   const isImageLoading = useImage(src)
   const isDark = usePrefersDarkMode()
@@ -46,7 +47,7 @@ const Image = ({
     <img
       src={src}
       alt={alt}
-      className="border-radius w-full pointer"
+      className={`border-radius w-full ${className}`}
       style={style}
       onClick={onClick}
     />
