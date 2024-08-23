@@ -1,7 +1,7 @@
 import projects from '../../data/projects'
 import { useSearchParams } from 'react-router-dom'
 import { arrayHasFullString } from '../../utils'
-import CvProject from './CvProject'
+import CvProject from './components/Project'
 import { Link } from 'react-router-dom'
 import cv from './../../files/cv.pdf'
 import { Helmet } from 'react-helmet'
@@ -16,9 +16,61 @@ const CvProjectWrapper = ({ project, index, entry }) => {
   )
 }
 
+const filteredBySkill = (groupByStartYear, skill) => {
+  return Object.entries(groupByStartYear)
+    .reverse()
+    .map(([entry, projects]) =>
+      projects
+        .filter((project) =>
+          arrayHasFullString(project.skills.split(','), skill)
+        )
+        .map((project, index) => (
+          <CvProjectWrapper
+            key={index}
+            project={project}
+            entry={entry}
+            index={index}
+          />
+        ))
+    )
+}
+
+const reversedProjects = (groupByStartYear) => {
+  return Object.entries(groupByStartYear)
+    .reverse()
+    .map(([entry, projects]) =>
+      projects.map((project, index) => (
+        <CvProjectWrapper
+          key={index}
+          project={project}
+          index={index}
+          entry={entry}
+        />
+      ))
+    )
+}
+
+const filteredByStart = (groupByStartYear, start) => {
+  return Object.entries(groupByStartYear)
+  .reverse()
+  .map(([entry, projects]) =>
+    entry === start
+      ? projects.map((project, index) => (
+          <CvProjectWrapper
+            key={index}
+            project={project}
+            index={index}
+            entry={entry}
+          />
+        ))
+      : null
+  )
+}
+
 const CvPage = () => {
   const [searchParams, setSearchParams] = useSearchParams()
   const skill = searchParams.get('skill')
+  const start = searchParams.get('start')
 
   const sortedProjects = projects.sort((a, b) => b.from - a.from)
 
@@ -30,6 +82,8 @@ const CvPage = () => {
     return acc
   }, {})
 
+  const shouldShowResetButton = skill || start
+
   return (
     <>
       <Helmet>
@@ -38,7 +92,6 @@ const CvPage = () => {
       <header className="container header-padding-top header-padding-bottom">
         <div className="flex flex-gap flex-responsive space-between flex-y-center">
           <h1 className="no-margin">Antonija's CV</h1>
-
           <div className="flex flex-gap-small flex-y-center">
             <Link
               to={cv}
@@ -50,7 +103,7 @@ const CvPage = () => {
               Download CV
             </Link>
 
-            {skill && (
+            {shouldShowResetButton && (
               <button
                 className="ternary"
                 onClick={() => {
@@ -64,35 +117,11 @@ const CvPage = () => {
         </div>
       </header>
       <section className="container">
-        {skill
-          ? Object.entries(groupByStartYear)
-              .reverse()
-              .map(([entry, projects]) =>
-                projects
-                  .filter((project) =>
-                    arrayHasFullString(project.skills.split(','), skill)
-                  )
-                  .map((project, index) => (
-                    <CvProjectWrapper
-                      key={index}
-                      project={project}
-                      entry={entry}
-                      index={index}
-                    />
-                  ))
-              )
-          : Object.entries(groupByStartYear)
-              .reverse()
-              .map(([entry, projects]) =>
-                projects.map((project, index) => (
-                  <CvProjectWrapper
-                    key={index}
-                    project={project}
-                    index={index}
-                    entry={entry}
-                  />
-                ))
-              )}
+        {start
+          ? filteredByStart(groupByStartYear, start)
+          : skill
+            ? filteredBySkill(groupByStartYear, skill)
+            : reversedProjects(groupByStartYear)}
       </section>
     </>
   )

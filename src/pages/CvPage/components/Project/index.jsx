@@ -1,5 +1,5 @@
-import Skills from '../../components/Skills'
-import { removeSpacesAndDashes } from '../../utils'
+import Skills from '../../../../components/Skills'
+import { removeSpacesAndDashes } from '../../../../utils'
 
 const CvProject = ({ project }) => {
   return (
@@ -13,7 +13,7 @@ const CvProject = ({ project }) => {
         {project.from} - {project.to || 'Present'}
       </p>
 
-      <p>{project.description}</p>
+      <p className='max-w-1000'>{project.description}</p>
       <div className="small-margin-top small-margin-bottom">
         <Skills skills={project.skills.split(',')} />
       </div>
