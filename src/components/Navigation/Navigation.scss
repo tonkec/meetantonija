@@ -27,39 +27,18 @@
     h6 {
       color: var(--color-white);
     }
-    .icons {
-      a {
-        color: var(--color-white);
-      }
-    }
-
-    button {
-      padding: 0;
-    }
   }
 
   h6 {
-    display: none;
     color: var(--color-white);
-    @include breakpoint(lg) {
-      display: block;
-    }
-  }
-
-  button {
-    display: inline-block;
-
-    @include breakpoint(lg) {
-      display: none;
-    }
   }
 
   .nav-link {
     padding: 20px;
     border-radius: 0;
-    &.active{
-     background-color: var(--color-accent);
-     color: var(--color-black) !important;
+    &.active {
+      background-color: var(--color-accent);
+      color: var(--color-black) !important;
     }
   }
 }

@@ -24,7 +24,7 @@ const NavigationButton = ({ onClick, value }) => (
   />
 )
 
-const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
+const SearchBar = () => {
   const location = useLocation()
   const navigate = useNavigate()
   const [search, setSearch] = useState('')
@@ -114,16 +114,16 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
   const closeNavigation = useCallback(() => {
     setSearch('')
     setIsNavigationOpen(false)
-    setIsMobileNavigationOpen(false)
+    // setIsMobileNavigationOpen(false)
     enableSrcoll()
-  }, [setIsMobileNavigationOpen])
+  }, [])
 
   const openNavigation = useCallback(() => {
     setSearch('')
     setIsNavigationOpen(true)
-    setIsMobileNavigationOpen(true)
+    // setIsMobileNavigationOpen(true)
     preventScroll()
-  }, [setIsMobileNavigationOpen])
+  }, [])
 
   const preventScroll = () => {
     const body = document.querySelector('body')
@@ -202,7 +202,7 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
     const handleKeyDown = (event) => {
       if (event.shiftKey && event.key === 'K') {
         // hack that clears the input and ignores just pressed shift + K as an input value
-        isNavigationOpen || isMobileNavigationOpen
+        isNavigationOpen
           ? setTimeout(() => {
               closeNavigation()
             }, delay)
@@ -218,13 +218,7 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
     }
-  }, [
-    isNavigationOpen,
-    isMobileNavigationOpen,
-    closeNavigation,
-    openNavigation,
-    setIsMobileNavigationOpen,
-  ])
+  }, [isNavigationOpen, closeNavigation, openNavigation])
 
   useEffect(() => {
     setKeyPressCounter(0)
@@ -239,7 +233,7 @@ const SearchBar = ({ isMobileNavigationOpen, setIsMobileNavigationOpen }) => {
     }
   }
 
-  const shouldShowNavigation = isNavigationOpen || isMobileNavigationOpen
+  const shouldShowNavigation = isNavigationOpen
 
   if (!shouldShowNavigation) {
     return null

@@ -8,13 +8,11 @@ import SearchBar from './components/SearchBar'
 import Navigation from './components/Navigation'
 
 function Layout() {
-  const [isMobileNavigationOpen, setIsMobileNavigationOpen] = useState(false)
   const [isOutletLoaded, setIsOutletLoaded] = useState(false)
   const location = useLocation()
   const contentWrapper = useRef(null)
 
   useEffect(() => {
-    setIsMobileNavigationOpen(false)
     setIsOutletLoaded(false)
   }, [location])
 
@@ -36,11 +34,8 @@ function Layout() {
 
   return (
     <>
-      <SearchBar
-        isMobileNavigationOpen={isMobileNavigationOpen}
-        setIsMobileNavigationOpen={setIsMobileNavigationOpen}
-      />
-      <Navigation setIsMobileNavigationOpen={setIsMobileNavigationOpen} />
+      <SearchBar />
+      <Navigation />
       <div ref={contentWrapper} className="page-content">
         <main>
           <Outlet />

@@ -18,13 +18,13 @@ const DarkMode = () => {
 
   return (
     <label className="flex flex-y-center">
-      <h6 className='small-margin-right'>Shift + K</h6> 
+      <h6 className="small-margin-right">Shift + K</h6>
       <Toggle
         checked={isDark}
         onChange={({ target }) => setIsDark(target.checked)}
         icons={{ checked: '🌙', unchecked: '🔆' }}
         aria-label="Dark mode toggle"
-        className='small-margin-right'
+        className="small-margin-right"
       />
     </label>
   )
