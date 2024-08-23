@@ -245,11 +245,10 @@ const SearchBar = () => {
         <form onSubmit={onSubmit} className="relative">
           <input
             type="text"
-            placeholder="What are you looking for?"
+            placeholder="Search pages, posts or projects"
             onChange={(event) => {
               setSearch(event.target.value)
             }}
-            className="navigation-input"
             value={search}
           />
 
@@ -258,7 +257,7 @@ const SearchBar = () => {
             searchResults={searchedResults.length ? searchedResults : allRoutes}
           />
         </form>
-        <button onClick={closeNavigation} className="absolute secondary">
+        <button onClick={closeNavigation} className="absolute ternary">
           Close
         </button>
       </div>
