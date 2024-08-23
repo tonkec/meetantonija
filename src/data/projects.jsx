@@ -162,6 +162,7 @@ const projects = [
     conclusion:
       "My experience at Casumo as a Senior React Developer was characterized by a relentless pursuit of excellence and innovation in the gaming industry. I am proud to have contributed to Casumo's mission of providing an immersive and entertaining gaming experience to players worldwide, and I am grateful for the opportunity to have been part of such a dynamic and forward-thinking team.",
     collaboration: 'Google Meet, Gitlab, Slack, Jira, Confluence',
+    team: 300,
     problem:
       "The most challenging part of the project was migrating the existing codebase from Knockout.js to React. It required a deep understanding of both frameworks and a meticulous approach to ensure a seamless transition without compromising the platform's functionality and performance.",
     manager: (
