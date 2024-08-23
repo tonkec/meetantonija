@@ -3,14 +3,15 @@ import { removeSpacesAndDashes } from '../../utils'
 
 const CvProject = ({ project }) => {
   return (
-    <article key={project.id} className="large-padding-bottom">
+    <article
+      key={project.id}
+      className="large-padding-bottom medium-margin-top"
+    >
       <h3>
         {project.title !== project.company ? `${project.title} at` : null}{' '}
         {project.company}
       </h3>
-      <p>
-        {project.from} - {project.to}
-      </p>
+
       <p>{project.description}</p>
       <div className="small-margin-top small-margin-bottom">
         <Skills skills={project.skills.split(',')} />

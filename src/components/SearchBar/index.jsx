@@ -6,7 +6,7 @@ import projects from '../../data/projects'
 import posts from '../../data/posts'
 import './SearchBar.scss'
 import { formatNoteTitle, removeSpacesAndDashes } from '../../utils'
-import { FaKeyboard } from "react-icons/fa";
+import { FaKeyboard } from 'react-icons/fa'
 
 const delay = 0.1
 const maxNumberOfResults = 2
@@ -254,7 +254,7 @@ const SearchBar = () => {
             value={search}
           />
 
-          <FaKeyboard className="keyboard-icon absolute" fontSize="2rem"/>
+          <FaKeyboard className="keyboard-icon absolute" fontSize="2rem" />
           <SearchResults
             searchResults={searchedResults.length ? searchedResults : allRoutes}
           />

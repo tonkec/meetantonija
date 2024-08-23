@@ -13,9 +13,8 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className='bg-brown'>
+    <footer className="bg-brown">
       <div className="container">
-       
         <div className="flex space-between flex-responsive small-margin-bottom">
           <Social icons={socialLinks} />
         </div>
@@ -26,10 +25,13 @@ const Footer = () => {
         </p>
 
         <span className="inline-block small-margin-bottom">
-            <span> Copyright &copy; </span>
-            <span>{new Date().getFullYear()}</span> <a href="/" className='text-white font-normal'>meetantonija</a>
-          </span>
-        
+          <span> Copyright &copy; </span>
+          <span>{new Date().getFullYear()}</span>{' '}
+          <a href="/" className="text-white font-normal">
+            meetantonija
+          </a>
+        </span>
+
         <DarkMode />
       </div>
     </footer>

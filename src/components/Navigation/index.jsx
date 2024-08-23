@@ -6,10 +6,10 @@ import './Navigation.scss'
 import { Link } from 'react-router-dom'
 import { useWindowSize } from '@uidotdev/usehooks'
 import MobileNavigation from './MobileNavigation'
-import { RiHome2Line } from "react-icons/ri";
-import { RiEmotionLine } from "react-icons/ri";
-import { RiBook2Line } from "react-icons/ri";
-import { RiBriefcase2Line } from "react-icons/ri";
+import { RiHome2Line } from 'react-icons/ri'
+import { RiEmotionLine } from 'react-icons/ri'
+import { RiBook2Line } from 'react-icons/ri'
+import { RiBriefcase2Line } from 'react-icons/ri'
 
 export const NavigationLink = ({ children, href }) => {
   const activeLink = window.location.pathname
@@ -88,8 +88,8 @@ const Navigation = () => {
             ))}
           </div>
         )}
-        
-        <h6 className='text-white medium-margin-right'>Shift + K</h6>
+
+        <h6 className="text-white medium-margin-right">Shift + K</h6>
       </div>
       <MobileNavigation
         isOpen={isMobileNavigationOpen}

@@ -1,6 +1,6 @@
 import HireMe from '../../HireMe'
 import { NavigationLink } from '../index'
-import "./MobileNavigation.scss"
+import './MobileNavigation.scss'
 
 const MobileNavigation = ({ isOpen, links, onClose }) => {
   if (!isOpen) {
@@ -12,8 +12,8 @@ const MobileNavigation = ({ isOpen, links, onClose }) => {
       <div className="flex flex-column links">
         {links.map((link, index) => (
           <NavigationLink key={index} href={link.href}>
-            <span className='flex flex-y-center flex-gap-small'>
-            {index}. {link.label} {link.icon}
+            <span className="flex flex-y-center flex-gap-small">
+              {index}. {link.label} {link.icon}
             </span>
           </NavigationLink>
         ))}
@@ -21,11 +21,14 @@ const MobileNavigation = ({ isOpen, links, onClose }) => {
 
       <HireMe />
 
-      <button className='w-full bg-blue inline-block absolute bottom-0 small-padding' onClick={() => {
-        onClose()
-      }}>
+      <button
+        className="w-full bg-blue inline-block absolute bottom-0 small-padding"
+        onClick={() => {
+          onClose()
+        }}
+      >
         Close
-        </button>
+      </button>
     </div>
   )
 }

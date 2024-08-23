@@ -41,7 +41,7 @@ function Layout() {
         <main>
           <Outlet />
         </main>
-        <Emoji  />
+        <Emoji />
         <Footer />
       </div>
     </>

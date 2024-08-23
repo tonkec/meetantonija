@@ -17,17 +17,17 @@ const DarkMode = () => {
   }, [value])
 
   return (
-   <div>
-     <label className="flex flex-y-center">
-      <Toggle
-        checked={isDark}
-        onChange={({ target }) => setIsDark(target.checked)}
-        icons={{ checked: '🌙', unchecked: '🔆' }}
-        aria-label="Dark mode toggle"
-        className="small-margin-right"
-      />
-    </label>
-   </div>
+    <div>
+      <label className="flex flex-y-center">
+        <Toggle
+          checked={isDark}
+          onChange={({ target }) => setIsDark(target.checked)}
+          icons={{ checked: '🌙', unchecked: '🔆' }}
+          aria-label="Dark mode toggle"
+          className="small-margin-right"
+        />
+      </label>
+    </div>
   )
 }
 
