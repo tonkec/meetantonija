@@ -14,13 +14,16 @@ const JobAlert = () => {
     <div className="job flex flex-y-center">
       <span
         onClick={() => {
-            saveOpen(false)
+          saveOpen(false)
         }}
-        className='pointer'
+        className="pointer"
       >
         <IoCloseOutline className="text-white" fontSize="1.5rem" />
       </span>
-      <p className='small-margin-left'> Looking for a part time job! <ButtonCopy text={"Copy email"} /> </p>
+      <p className="small-margin-left">
+        {' '}
+        Looking for a part time job! <ButtonCopy text={'Copy email'} />{' '}
+      </p>
     </div>
   )
 }
