@@ -320,6 +320,14 @@
   }
 }
 
+.flex-responsive-reverse {
+  flex-direction: column-reverse;
+
+  @include breakpoint(lg) {
+    flex-direction: row;
+  }
+}
+
 .align-start {
   align-items: flex-start;
 }

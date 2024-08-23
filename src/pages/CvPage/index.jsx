@@ -1,5 +1,4 @@
 import projects from '../../data/projects'
-import TypedText from '../../components/TypedText'
 import { useSearchParams } from 'react-router-dom'
 import { arrayHasFullString } from '../../utils'
 import CvProject from './CvProject'
@@ -7,6 +6,15 @@ import { Link } from 'react-router-dom'
 import cv from './../../files/cv.pdf'
 import { Helmet } from 'react-helmet'
 import Timeline from './components/Timeline'
+
+const CvProjectWrapper = ({ project, index, entry }) => {
+  return (
+    <div className="flex flex-responsive-reverse flex-gap">
+      <CvProject key={project.id} project={project} />
+      {index > 0 ? null : <Timeline start={entry} />}
+    </div>
+  )
+}
 
 const CvPage = () => {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -28,18 +36,30 @@ const CvPage = () => {
         <title>Meetantonija | My CV</title>
       </Helmet>
       <header className="container header-padding-top header-padding-bottom">
-        <div className="flex flex-gap flex-responsive space-between">
-          <div>
-            <TypedText type="h1">My CV</TypedText>
+        <div className="flex flex-gap flex-responsive space-between flex-y-center">
+          <h1 className="no-margin">Antonija's CV</h1>
+
+          <div className="flex flex-gap-small flex-y-center">
             <Link
               to={cv}
               target="_blank"
               download
               role="button"
-              className="ternary small-margin-bottom inline-block"
+              className="ternary inline-block"
             >
               Download CV
             </Link>
+
+            {skill && (
+              <button
+                className="ternary"
+                onClick={() => {
+                  setSearchParams({})
+                }}
+              >
+                Reset filters
+              </button>
+            )}
           </div>
         </div>
       </header>
@@ -53,20 +73,24 @@ const CvPage = () => {
                     arrayHasFullString(project.skills.split(','), skill)
                   )
                   .map((project, index) => (
-                    <div className="flex">
-                      <CvProject key={project.id} project={project} />
-                      {index > 0 ? null : <Timeline start={entry} />}
-                    </div>
+                    <CvProjectWrapper
+                      key={index}
+                      project={project}
+                      entry={entry}
+                      index={index}
+                    />
                   ))
               )
           : Object.entries(groupByStartYear)
               .reverse()
               .map(([entry, projects]) =>
                 projects.map((project, index) => (
-                  <div className="flex">
-                    <CvProject key={project.id} project={project} />
-                    {index > 0 ? null : <Timeline start={entry} />}
-                  </div>
+                  <CvProjectWrapper
+                    key={index}
+                    project={project}
+                    index={index}
+                    entry={entry}
+                  />
                 ))
               )}
       </section>

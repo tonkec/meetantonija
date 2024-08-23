@@ -609,7 +609,6 @@ const projects = [
     ),
     location: 'Zagreb',
     from: 2023,
-    to: 2024,
     company: 'Mochalabs',
     id: 10,
     title: 'Funder Pro',
