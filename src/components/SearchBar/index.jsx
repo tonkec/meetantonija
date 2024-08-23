@@ -2,11 +2,10 @@ import { useEffect, useState, useCallback } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import routes from '../../routes'
 import FocusTrap from 'focus-trap-react'
-import { FaArrowRight } from 'react-icons/fa'
 import projects from '../../data/projects'
 import posts from '../../data/posts'
 import './SearchBar.scss'
-import { formatNoteTitle } from '../../utils'
+import { formatNoteTitle, removeSpacesAndDashes } from '../../utils'
 import { FaKeyboard } from "react-icons/fa";
 
 const delay = 0.1
@@ -64,7 +63,7 @@ const SearchBar = () => {
       <NavigationButton
         key={project.title}
         onClick={() => {
-          navigate(`/project/${project.id}`)
+          navigate(`/project/${removeSpacesAndDashes(project.title)}`)
           setIsNavigationOpen(false)
         }}
         value={`Project: ${project.title}`}
@@ -115,14 +114,12 @@ const SearchBar = () => {
   const closeNavigation = useCallback(() => {
     setSearch('')
     setIsNavigationOpen(false)
-    // setIsMobileNavigationOpen(false)
     enableSrcoll()
   }, [])
 
   const openNavigation = useCallback(() => {
     setSearch('')
     setIsNavigationOpen(true)
-    // setIsMobileNavigationOpen(true)
     preventScroll()
   }, [])
 
@@ -224,6 +221,10 @@ const SearchBar = () => {
   useEffect(() => {
     setKeyPressCounter(0)
   }, [])
+
+  useEffect(() => {
+    closeNavigation()
+  }, [closeNavigation])
 
   const onSubmit = (event) => {
     event.preventDefault()
