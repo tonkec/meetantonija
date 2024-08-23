@@ -62,6 +62,10 @@ input[type='submit'] {
     background-color: transparent;
     color: var(--color-black);
 
+    &.text-white {
+      color: var(--color-white);
+    }
+
     &:hover,
     &:focus {
       outline: none;

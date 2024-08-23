@@ -63,7 +63,7 @@ const Tabs = () => {
               <label
                 role="button"
                 className={`pointer ${
-                  activeTab === index ? 'bg-dark-blue' : 'ternary'
+                  activeTab === index ? 'primary' : 'ternary'
                 }`}
                 htmlFor={`tab-${index}`}
               >

@@ -452,7 +452,7 @@ const projects = [
           rel="noreferrer"
         >
           Brian O'Grady
-        </a>{' '}
+        </a>
         , who provided valuable guidance and support throughout the project. He
         was instrumental in helping me navigate the complexities of the LMS
         codebase and ensuring the successful integration of new components and
