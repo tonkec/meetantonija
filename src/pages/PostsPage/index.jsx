@@ -9,7 +9,7 @@ const sortedPosts = posts.sort((a, b) => {
   return new Date(b.date) - new Date(a.date)
 })
 
-export const SinglePost = ({ post }) => {
+export const SinglePost = ({ post, onClick }) => {
   return (
     <div key={post.id} className="bg-black small-padding border-radius">
       <span className="flex flex-y-center small-margin-bottom flex-gap-small">
@@ -29,7 +29,13 @@ export const SinglePost = ({ post }) => {
 
       <p className="small-margin-top flex flex-gap-small">
         {post.tags.split(', ').map((tag) => (
-          <span key={tag} className="tag bg-dark border-radius">
+          <span
+            key={tag}
+            className="tag bg-dark border-radiu pointer"
+            onClick={() => {
+              onClick(tag)
+            }}
+          >
             {tag}
           </span>
         ))}

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { removeSpacesAndDashes } from '../../utils'
 import { SinglePost } from '../../pages/PostsPage'
 
 export const setQueryParams = (params) => {
@@ -17,36 +18,49 @@ export const setQueryParams = (params) => {
   )
 }
 
-const Pagination = ({ data }) => {
-  const postsPerPage = 4
-  const [paginatedPosts, setPaginatedPosts] = useState(data.slice(0, postsPerPage))
+const Pagination = ({ data = [] }) => {
+  const searchParams = new URLSearchParams(window.location.search)
+  const page = searchParams.get('page')
+  const tag = searchParams.get('tag')
+  const [tagParam, setTagParam] = useState(tag ? tag.toLowerCase() : '')
 
+  const [paginatedPosts, setPaginatedPosts] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
- 
-  const totalPages = Math.ceil(data.length / postsPerPage)
+
+  const postsPerPage = 4
+
+  const filteredData = tagParam
+    ? data.filter((post) =>
+        post.tags
+          .split(', ')
+          .map((t) => removeSpacesAndDashes(t).toLowerCase())
+          .includes(removeSpacesAndDashes(tagParam).toLowerCase())
+      )
+    : data
+
+  const totalPages = Math.ceil(filteredData.length / postsPerPage)
 
   useEffect(() => {
-    const searchParams = new URLSearchParams(window.location.search)
-    const page = searchParams.get('page')
-    if (page) {
-      setCurrentPage(Number(page))
-      setPaginatedPosts(
-        data.slice((page - 1) * postsPerPage, page * postsPerPage)
-      )
-    } else {
-      setQueryParams({ page: 1 })
-    }
-  }, [totalPages, data])
+    const currentPage = page ? Number(page) : 1
+
+    const startIdx = (currentPage - 1) * postsPerPage
+    const endIdx = startIdx + postsPerPage
+
+    setPaginatedPosts(filteredData.slice(startIdx, endIdx))
+    setCurrentPage(currentPage)
+  }, [page, tagParam, data])
 
   const onPageChange = (page) => {
-    setQueryParams({ page })
-    setPaginatedPosts(
-      data.slice((page - 1) * postsPerPage, page * postsPerPage)
-    )
-    if (page < 1 || page > totalPages) {
-      return
-    }
+    if (page < 1 || page > totalPages) return
+
+    setQueryParams({ page, tag: tagParam })
     setCurrentPage(page)
+  }
+
+  const handleTagClick = (tag) => {
+    const lowercasedTag = tag.toLowerCase()
+    setTagParam(lowercasedTag)
+    setQueryParams({ page: 1, tag: lowercasedTag })
   }
 
   const shouldShowButtons = totalPages > 1
@@ -62,9 +76,13 @@ const Pagination = ({ data }) => {
         }
       >
         {paginatedPosts.length ? (
-          paginatedPosts.map((post) => {
-            return <SinglePost post={post} />
-          })
+          paginatedPosts.map((post) => (
+            <SinglePost
+              key={post.id}
+              post={post}
+              onClick={(tag) => handleTagClick(tag)}
+            />
+          ))
         ) : (
           <p>No posts found.</p>
         )}
@@ -80,7 +98,7 @@ const Pagination = ({ data }) => {
             Previous
           </button>
           <span>
-            {currentPage}/ {totalPages}
+            {currentPage}/{totalPages}
           </span>
           <button
             onClick={() => onPageChange(currentPage + 1)}

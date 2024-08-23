@@ -6,19 +6,27 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import './Post.scss'
 import posts from '../../data/posts'
-import { formatNoteTitle, shuffleArray } from '../../utils'
+import {
+  formatNoteTitle,
+  removeSpacesAndDashes,
+  shuffleArray,
+} from '../../utils'
 import { readingTime } from 'reading-time-estimator'
 import { Helmet } from 'react-helmet'
 import { IoIosArrowRoundBack } from 'react-icons/io'
 import { SinglePost } from '../PostsPage'
+import { setQueryParams } from '../../components/Paginated'
 
-const Tags = (tags) => {
+const Tags = (tags, handleTagClick) => {
   return (
     <p className="small-margin-bottom">
       {tags.split(',').map((tag) => (
         <span
           key={tag}
-          className="tag bg-black small-margin-right border-radius"
+          className="tag bg-black small-margin-right border-radius pointer"
+          onClick={() => {
+            handleTagClick(tag)
+          }}
         >
           {tag}
         </span>
@@ -38,6 +46,12 @@ const PostPage = () => {
   const currentPost = posts.find(
     (post) => formatNoteTitle(post.title) === formatNoteTitle(title)
   )
+
+  const handleTagClick = (tag) => {
+    navigate('/posts')
+    const lowercasedTag = removeSpacesAndDashes(tag).toLowerCase()
+    setQueryParams({ page: 1, tag: lowercasedTag })
+  }
 
   useEffect(() => {
     import(`./../../data/notes/${title}.md`)
@@ -87,7 +101,7 @@ const PostPage = () => {
                     <IoIosArrowRoundBack fontSize="2rem" />{' '}
                     <h5> Back to all posts</h5>
                   </Link>
-                  {currentPost && Tags(currentPost.tags)}
+                  {currentPost && Tags(currentPost.tags, handleTagClick)}
                   <span>{minutesToRead} to read</span>
                   <h1>{children}</h1>
                 </div>
@@ -162,7 +176,13 @@ const PostPage = () => {
           {shuffleArray(otherPosts)
             .slice(0, 1)
             .map((post) => (
-              <SinglePost post={post} />
+              <SinglePost
+                key={post.id}
+                post={post}
+                onClick={(tag) => {
+                  handleTagClick(tag)
+                }}
+              />
             ))}
         </div>
       </section>
