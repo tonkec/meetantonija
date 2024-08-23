@@ -7,6 +7,7 @@ import PageTransition from './components/PageTransition'
 import SearchBar from './components/SearchBar'
 import Navigation from './components/Navigation'
 import Emoji from './components/Emoji'
+import JobAlert from './components/JobAlert'
 
 function Layout() {
   const [isOutletLoaded, setIsOutletLoaded] = useState(false)
@@ -37,6 +38,7 @@ function Layout() {
     <>
       <SearchBar />
       <Navigation />
+      <JobAlert />
       <div ref={contentWrapper} className="page-content">
         <main>
           <Outlet />

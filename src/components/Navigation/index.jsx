@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import useScrollPosition from './../../hooks/useScrollPosition'
-import DarkMode from '../DarkMode'
 import './Navigation.scss'
 import { Link } from 'react-router-dom'
 import { useWindowSize } from '@uidotdev/usehooks'
@@ -11,11 +10,8 @@ import { RiEmotionLine } from 'react-icons/ri'
 import { RiBook2Line } from 'react-icons/ri'
 import { RiBriefcase2Line } from 'react-icons/ri'
 import { RiSettings4Fill } from 'react-icons/ri'
-import Modal from 'react-modal'
-import usePrefersDarkMode from '../../hooks/usePrefersDarkMode'
 
 export const NavigationLink = ({ children, href }) => {
-  const isDark = usePrefersDarkMode()
   const [isOpen, setIsOpen] = useState(false)
   const activeLink = window.location.pathname
 

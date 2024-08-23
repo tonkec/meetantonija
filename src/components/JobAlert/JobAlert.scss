@@ -1,0 +1,14 @@
+.job {
+  position: fixed;
+  right: 0;
+  background-color: var(--color-orange);
+  opacity: 0.9;
+  padding: 10px 20px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  p {
+    font-size: 0.8rem;
+    color: var(--color-white);
+  }
+}

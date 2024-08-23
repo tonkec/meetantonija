@@ -1,9 +1,8 @@
 import { Tooltip } from 'react-tooltip'
 import './HireMe.scss'
-import { useState } from 'react'
+import ButtonCopy from '../ButtonCopy'
 
 const HireMe = () => {
-  const [isCopied, setIsCopied] = useState(false)
   return (
     <div className="bg-black container cta-section border-radius border-radius-none-xs">
       <h2>Do you have a project in mind?</h2>
@@ -23,19 +22,7 @@ const HireMe = () => {
         do that. Email is the best way to reach me.
       </Tooltip>
 
-      <button
-        className="secondary inline-block small-margin-top"
-        onClick={() => {
-          navigator.clipboard.writeText('antonija1023@gmail.com')
-          setIsCopied(true)
-
-          setTimeout(() => {
-            setIsCopied(false)
-          }, 2000)
-        }}
-      >
-        {isCopied ? 'Copied!' : 'Copy email'}
-      </button>
+      <ButtonCopy text={"Copy Email"} />
     </div>
   )
 }
