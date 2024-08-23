@@ -68,7 +68,7 @@ const PostsPage = () => {
         <title>Meetantonija | All Posts</title>
       </Helmet>
       <section className="container large-padding-top">
-        <h2>I like to write about technology.</h2>
+        <h2>I like to write about the technology.</h2>
 
         <input
           type="text"
@@ -79,8 +79,15 @@ const PostsPage = () => {
             setQueryParams({ search: e.target.value })
             setQueryParams({ page: 1 })
           }}
+          value={search}
         />
-        <Paginated data={filteredPosts} />
+        <Paginated
+          data={filteredPosts}
+          searchValue={search}
+          clearSearch={() => {
+            setSearch('')
+          }}
+        />
       </section>
     </>
   )

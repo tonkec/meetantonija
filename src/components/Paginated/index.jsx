@@ -18,7 +18,7 @@ export const setQueryParams = (params) => {
   )
 }
 
-const Pagination = ({ data = [] }) => {
+const Pagination = ({ data = [], clearSearch, searchValue }) => {
   const searchParams = new URLSearchParams(window.location.search)
   const page = searchParams.get('page')
   const tag = searchParams.get('tag')
@@ -64,9 +64,22 @@ const Pagination = ({ data = [] }) => {
   }
 
   const shouldShowButtons = totalPages > 1
+  const shouldShowClearButton = tagParam !== '' || searchValue !== ''
 
   return (
     <>
+      {shouldShowClearButton && (
+        <button
+          onClick={() => {
+            setTagParam('')
+            setQueryParams({ search: '', page: 1, tag: '' })
+            clearSearch()
+          }}
+          className="ternary small-margin-bottom"
+        >
+          Clear filters
+        </button>
+      )}
       <div
         className="grid"
         style={
