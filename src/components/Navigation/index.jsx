@@ -6,6 +6,10 @@ import './Navigation.scss'
 import { Link } from 'react-router-dom'
 import { useWindowSize } from '@uidotdev/usehooks'
 import MobileNavigation from './MobileNavigation'
+import { RiHome2Line } from "react-icons/ri";
+import { RiEmotionLine } from "react-icons/ri";
+import { RiBook2Line } from "react-icons/ri";
+import { RiBriefcase2Line } from "react-icons/ri";
 
 export const NavigationLink = ({ children, href }) => {
   const activeLink = window.location.pathname
@@ -35,18 +39,22 @@ const navigationLinks = [
   {
     href: '/',
     label: 'Home',
+    icon: <RiHome2Line />,
   },
   {
     href: '/about',
     label: 'About',
+    icon: <RiEmotionLine />,
   },
   {
     href: '/posts',
     label: 'Posts',
+    icon: <RiBook2Line />,
   },
   {
     href: '/cv',
     label: 'CV',
+    icon: <RiBriefcase2Line />,
   },
 ]
 
@@ -67,9 +75,9 @@ const Navigation = () => {
             onClick={() => {
               setIsMobileNavigationOpen(!isMobileNavigationOpen)
             }}
-            className="transparent small-margin-left"
+            className="ternary"
           >
-            <RxHamburgerMenu fontSize={'2rem'} />
+            <RxHamburgerMenu fontSize="1.5rem" />
           </button>
         ) : (
           <div className="flex">
@@ -85,8 +93,8 @@ const Navigation = () => {
       </div>
       <MobileNavigation
         isOpen={isMobileNavigationOpen}
-        onClose={() => setIsMobileNavigationOpen(false)}
         links={navigationLinks}
+        onClose={() => setIsMobileNavigationOpen(false)}
       />
     </div>
   )

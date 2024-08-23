@@ -1,26 +1,31 @@
+import HireMe from '../../HireMe'
 import { NavigationLink } from '../index'
+import "./MobileNavigation.scss"
 
-const MobileNavigation = ({ isOpen, onClose, links }) => {
+const MobileNavigation = ({ isOpen, links, onClose }) => {
   if (!isOpen) {
     return null
   }
+
   return (
-    <div className="fixed inset-0 bg-black z-999 flex flex-y-center flex-x-center">
-      <button
-        className="primary absolute top-0 left-0 small-margin-left small-margin-top"
-        onClick={() => {
-          onClose()
-        }}
-      >
-        Close
-      </button>
-      <div className="flex flex-column flex-y-center">
+    <div className="fixed top-0 bottom-0 right-0 bg-black z-999 mobile-nav w-full">
+      <div className="flex flex-column links">
         {links.map((link, index) => (
           <NavigationLink key={index} href={link.href}>
-            {index}. {link.label}
+            <span className='flex flex-y-center flex-gap-small'>
+            {index}. {link.label} {link.icon}
+            </span>
           </NavigationLink>
         ))}
       </div>
+
+      <HireMe />
+
+      <button className='w-full bg-blue inline-block absolute bottom-0 small-padding' onClick={() => {
+        onClose()
+      }}>
+        Close
+        </button>
     </div>
   )
 }
