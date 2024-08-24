@@ -9,7 +9,7 @@ const MobileNavigation = ({ isOpen, links, onClose, isSettings }) => {
   }
 
   return (
-    <div className="fixed top-0 bottom-0 right-0 bg-black z-999 mobile-nav w-full">
+    <div className="fixed flex flex-column space-between overflow-auto top-0 bottom-0 right-0 bg-black z-999 mobile-nav w-full">
       <div className="flex flex-column links">
         {isSettings ? (
           <DarkMode />
@@ -27,7 +27,7 @@ const MobileNavigation = ({ isOpen, links, onClose, isSettings }) => {
       <HireMe />
 
       <button
-        className="w-full bg-blue inline-block absolute bottom-0 small-padding"
+        className="w-full bg-blue inline-block small-padding normal-font"
         onClick={() => {
           onClose()
         }}

@@ -22,6 +22,7 @@ export const NavigationLink = ({ children, href }) => {
           className="transparent text-white medium-font nav-link"
           onClick={() => {
             setIsOpen(!isOpen)
+            
           }}
         >
           {children}

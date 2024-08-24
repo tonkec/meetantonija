@@ -6,8 +6,8 @@
   }
   .links {
     a,
-    button {
-      font-size: 2rem;
+    button:not(.normal-font) {
+      font-size:2rem;
     }
   }
 

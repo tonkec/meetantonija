@@ -247,6 +247,10 @@
   align-items: center;
 }
 
+.overflow-auto {
+  overflow: auto;
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
 }
@@ -316,9 +320,20 @@
 .max-w-70 {
   max-width: 70px;
 }
+.max-w-50-xs {
+  @include breakpoint(xs) {
+    max-width: 50%;
+  }
+}
 
 .max-w-50-sm {
   @include breakpoint(sm) {
+    max-width: 50%;
+  }
+}
+
+.max-w-50-md {
+  @include breakpoint(md) {
     max-width: 50%;
   }
 }

@@ -17,7 +17,7 @@ const AsideContent = ({ noteContent }) => {
       <span>{noteContent.intro && truncateString(noteContent.intro, 300)}</span>
       <br />
       <button
-        className="ternary small-margin-top"
+        className="ternary small-margin-top small-margin-bottom"
         onClick={() => {
           window.location.href = `/post/${formatNoteTitle(noteContent.title)}`
         }}
@@ -40,7 +40,7 @@ const Aside = ({ numberOfPosts }) => {
           return (
             <button
               key={note.id}
-              className="note block secondary text-left small-margin-bottom"
+              className="max-w-50-md block secondary text-left small-margin-bottom"
               onClick={() => {
                 setNoteContent(note)
               }}
@@ -56,6 +56,7 @@ const Aside = ({ numberOfPosts }) => {
             onClick={() => {
               setNoteContent({})
             }}
+            fontSize="1.2rem"
           />
           <AsideContent noteContent={noteContent} />
         </aside>
