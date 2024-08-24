@@ -15,15 +15,14 @@ const Footer = () => {
     <footer>
       <div className="container">
         <div className="flex flex-x-center small-margin-bottom">
-          
           <Social icons={socialLinks} />
         </div>
 
         <p className="text-center">
-            Coded by Antonija Šimić with lots of{' '}
-            <FaHeart className="icon" color="red" /> and{' '}
-            <FaCoffee color="#6F4E37" className="icon" />
-          </p>
+          Coded by Antonija Šimić with lots of{' '}
+          <FaHeart className="icon" color="red" /> and{' '}
+          <FaCoffee color="#6F4E37" className="icon" />
+        </p>
         <a href="/" className="text-black font-normal">
           <Logo />
         </a>

@@ -8,6 +8,7 @@ import SearchBar from './components/SearchBar'
 import Navigation from './components/Navigation'
 import Emoji from './components/Emoji'
 import JobAlert from './components/JobAlert'
+import ScrollToTop from './components/ScrollToTop'
 
 function Layout() {
   const [isOutletLoaded, setIsOutletLoaded] = useState(false)
@@ -36,6 +37,7 @@ function Layout() {
 
   return (
     <>
+      <ScrollToTop />
       <SearchBar />
       <Navigation />
       <JobAlert />
