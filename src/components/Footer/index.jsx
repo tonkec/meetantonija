@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="container">
-        <div className="flex flex-x-center small-margin-bottom flex-responsive">
+        <div className="flex flex-x-center small-margin-bottom">
           
           <Social icons={socialLinks} />
         </div>
