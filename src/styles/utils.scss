@@ -1,4 +1,5 @@
 @import './mq.scss';
+@import './transitions.scss';
 
 .accent {
   background-color: var(--color-black);
@@ -102,8 +103,14 @@
 
 .small-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(00px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: var(--small-grid-gap);
+}
+
+.meetups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
 }
 
 .flex-wrap {
@@ -310,6 +317,12 @@
   max-width: 70px;
 }
 
+.max-w-50-sm {
+  @include breakpoint(sm) {
+    max-width: 50%;
+  }
+}
+
 .max-w-50 {
   @include breakpoint(xl) {
     max-width: 50%;
@@ -456,4 +469,11 @@
 
 .right-0 {
   right: 0;
+}
+
+.bg-blue-hover {
+  @include transition(background-color);
+  &:hover {
+    background-color: var(--color-blue);
+  }
 }

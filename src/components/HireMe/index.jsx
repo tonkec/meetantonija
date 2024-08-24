@@ -22,7 +22,9 @@ const HireMe = () => {
         do that. Email is the best way to reach me.
       </Tooltip>
 
-      <ButtonCopy text={'Copy Email'} />
+      <div className="small-margin-top">
+        <ButtonCopy text={'Copy Email'} />
+      </div>
     </div>
   )
 }

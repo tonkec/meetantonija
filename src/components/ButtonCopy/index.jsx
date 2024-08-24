@@ -4,7 +4,7 @@ const ButtonCopy = ({ text }) => {
   const [isCopied, setIsCopied] = useState(false)
   return (
     <button
-      className="secondary inline-block"
+      className="secondary inline-block cl"
       onClick={() => {
         navigator.clipboard.writeText('antonija1023@gmail.com')
         setIsCopied(true)

@@ -1,7 +1,5 @@
 import bike from './images/bike.jpg'
 import basketball from './images/basketball.jpg'
-import javascript from './images/javascript.jpg'
-import dev from './images/dev.jpg'
 
 export const images = [
   {
@@ -13,15 +11,5 @@ export const images = [
     src: basketball,
     alt: 'enjoy a game of basketball.',
     subtitle: 'Me exploring backetball courts all over Croatia.',
-  },
-  {
-    src: javascript,
-    alt: 'Speaking art JavaScript Meetup.',
-    subtitle: 'Me speaking at JavaScript Meetup.',
-  },
-  {
-    src: dev,
-    alt: 'Speaking at Dev She Goes.',
-    subtitle: 'Me speaking at Dev She Goes.',
   },
 ]

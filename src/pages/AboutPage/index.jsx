@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Search from '../../pages/HomePage/components/Search'
 import { FaHtml5, FaCss3, FaJs } from 'react-icons/fa'
 import {
@@ -21,6 +22,12 @@ import { getValuesAndProperties, removeSpacesAndDashes } from '../../utils'
 import { images } from './images'
 import MyMasonry from './MyMasonry'
 import { Helmet } from 'react-helmet'
+import CSS from './../../images/meetups/css.webp'
+import Javascript from './../../images/meetups/javascript.jpg'
+import dev from './../../images/meetups/dev.jpg'
+import vienna from './../../images/meetups/vienna.jpg'
+import intro from './../../images/meetups/intro.jpg'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const speakingEvents = [
   {
@@ -28,36 +35,50 @@ const speakingEvents = [
     year: 2020,
     link: 'https://www.meetup.com/s_css_zagreb/events/266253881/',
     organizer: 'CSS Zagreb',
-  },
-  {
-    name: 'CSS animations',
-    year: 2020,
-    link: 'https://www.meetup.com/s_css_zagreb/events/265312074/',
-    organizer: 'CSS Zagreb',
+    photo: CSS,
+    content:
+      'I talked about the latest CSS tricks and how to use them in your projects.',
+    location: 'Zagreb',
   },
   {
     name: 'Free intro to the web development',
     year: 2024,
     link: 'https://www.meetup.com/kodiraonica/events/298986803/',
     organizer: 'Kodiraonica',
+    photo: intro,
+    content:
+      'I talked about the basics of web development and how to start your journey.',
+    location: 'Samobor',
   },
   {
     name: 'Intersection observers and how to use them',
     year: 2023,
     link: 'https://www.meetup.com/javascript-zagreb/events/297302963/',
     organizer: 'JavaScript Zagreb',
+    photo: Javascript,
+    content:
+      'This was my first talk on Javascript Zagreb meetup. I had huge stage fright, but I managed to pull it off.',
+    location: 'Zagreb',
   },
   {
     name: 'Mentoring for beginners',
     year: 2023,
     link: 'https://devshegoes.five.agency/',
     organizer: 'DevSheGoes',
+    photo: dev,
+    content:
+      'I have been mentoring my whole career and I love to help beginners to start their journey. This event was a great opportunity to share my knowledge.',
+    location: 'Zagreb',
   },
   {
     name: 'How to code a pure css keyboard',
     year: 2020,
     link: 'https://www.meetup.com/css-in-vienna/events/267266901/',
     organizer: 'CSS in Vienna',
+    photo: vienna,
+    content:
+      'This was my first talk outside Croatia. I was so excited and I met a lot of new people. I coded a pure CSS keyboard in front of the live audience.',
+    location: 'Vienna',
   },
 ]
 
@@ -89,6 +110,7 @@ const getYearWord = (years) => {
 }
 
 const AboutPage = () => {
+  const [event, setEvent] = useState(speakingEvents[0])
   const temperatureData = useTemperature()
   const { values, properties } = getValuesAndProperties(temperatureData)
   const speakingEventsSorted = speakingEvents.sort((a, b) => b.year - a.year)
@@ -245,21 +267,32 @@ const AboutPage = () => {
         <div className="container">
           <h2>🎤 I was a speaker at these events:</h2>
 
-          <div className="grid">
-            {speakingEventsSorted.map((event, index) => (
-              <a
-                key={index}
-                href={event.link}
-                target="_blank"
-                rel="noreferrer"
-                className="ternary"
-                role="button"
-              >
-                <p>Name: {event.name}</p>
-                <p>Organizer: {event.organizer}</p>
-                <p>Year: {event.year}</p>
-              </a>
-            ))}
+          <div className="flex flex-responsive flex-gap align-start">
+            <div className="meetups flex-1 max-w-50">
+              {speakingEventsSorted.map((event, index) => (
+                <span
+                  key={index}
+                  className="bg-black bg-blue-hover xs-padding border-radius pointer"
+                  onClick={() => setEvent(event)}
+                >
+                  <p>
+                    {event.name} @ {event.organizer}
+                  </p>
+                </span>
+              ))}
+            </div>
+            <div className="bg-black small-padding border-radius max-w-50-sm">
+              <div className="flex small-margin-bottom flex-y-center flex-gap-small">
+                <p>
+                  {event.organizer}, {event.year} in {event.location} |{' '}
+                  <a className="text-white normal-font" href={event.link}>
+                    <FaExternalLinkAlt fontSize="1rem" />{' '}
+                  </a>
+                </p>
+              </div>
+              <Image src={event.photo} alt={event.name} />
+              <p className="normal-font small-margin-top">{event.content}</p>
+            </div>
           </div>
         </div>
       </section>
