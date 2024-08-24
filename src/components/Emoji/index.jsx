@@ -2,7 +2,7 @@ import './Emoji.scss'
 
 const Emoji = () => {
   return (
-    <section>
+    <section className='large-margin-top'>
       <div className="container">
         <div className="wrapper">
           <div className="face">
