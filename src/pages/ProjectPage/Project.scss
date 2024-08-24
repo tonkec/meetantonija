@@ -4,11 +4,15 @@
   max-width: 1000px;
   left: 0;
   right: 0;
-  bottom: -100px;
+  bottom: -200px;
   margin: 0 auto;
   padding: 2rem;
-  border-radius: 10px;
   position: absolute;
+
+  @include breakpoint(md) {
+    bottom: -100px;
+    border-radius: var(--border-radius);
+  }
 }
 
 .steps-section {
