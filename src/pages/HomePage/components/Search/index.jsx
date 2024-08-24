@@ -6,7 +6,7 @@ const Search = () => {
   const [search, setSearch] = useState(questions[0].title)
   const [questionContent, setQuestionContent] = useState(questions[0])
   const resultQuestions = questions
-    .slice(0, 2)
+    .slice(0, 4)
     .filter((question) =>
       question.title.toLowerCase().includes(search.toLowerCase())
     )
@@ -33,7 +33,7 @@ const Search = () => {
           className="xs-padding block border-radius w-full small-margin-top border-black"
         />
 
-        <div className="flex flex-gap small-margin-top">
+        <div className="flex flex-gap-small flex-wrap small-margin-top">
           {resultQuestions.length ? (
             resultQuestions
           ) : (
