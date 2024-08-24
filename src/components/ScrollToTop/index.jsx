@@ -1,10 +1,19 @@
 import { FaAngleDoubleUp } from 'react-icons/fa'
 import useScrollPosition from './../../hooks/useScrollPosition'
+import { useWindowSize } from '../../hooks/useWindowSize'
 const ScrollToTop = () => {
   const scrollPosition = useScrollPosition()
-  
-  if (scrollPosition < 500) {
-    return null
+  const { width } = useWindowSize()
+  const isMobile = width < 1000
+
+  if (isMobile) {
+    if (scrollPosition < 300) {
+      return null
+    }
+  }
+
+  if (scrollPosition < 600) {
+    return
   }
 
   return (
@@ -12,7 +21,7 @@ const ScrollToTop = () => {
       onClick={() => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
       }}
-      className="primary fixed bottom-20 right-20"
+      className="primary fixed bottom-20 right-30 z-2"
     >
       <FaAngleDoubleUp />
     </button>
