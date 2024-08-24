@@ -49,7 +49,7 @@ const Previewer = () => {
           >
             <RiCactusFill className="icon" />
 
-            <p className='max-w-50-xs'>Watch out for my pure CSS spikes</p>
+            <p className="max-w-50-xs">Watch out for my pure CSS spikes</p>
           </button>
           <button
             className="ternary text-left small-padding xs-margin-bottom"
@@ -65,7 +65,7 @@ const Previewer = () => {
             }}
           >
             <LuMicroscope className="icon" />
-            <p className='max-w-50-xs'>I enlarge the world in pure CSS</p>
+            <p className="max-w-50-xs">I enlarge the world in pure CSS</p>
           </button>
         </div>
 

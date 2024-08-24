@@ -10,6 +10,7 @@ import { RiEmotionLine } from 'react-icons/ri'
 import { RiBook2Line } from 'react-icons/ri'
 import { RiBriefcase2Line } from 'react-icons/ri'
 import { RiSettings4Fill } from 'react-icons/ri'
+import Logo from '../Logo'
 
 export const NavigationLink = ({ children, href }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -22,7 +23,6 @@ export const NavigationLink = ({ children, href }) => {
           className="transparent text-white medium-font nav-link"
           onClick={() => {
             setIsOpen(!isOpen)
-            
           }}
         >
           {children}
