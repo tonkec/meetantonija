@@ -1,6 +1,16 @@
 import Search from '../../pages/HomePage/components/Search'
 import { FaHtml5, FaCss3, FaJs } from 'react-icons/fa'
-import { SiTypescript, SiRedux, SiReact, SiAngular } from 'react-icons/si'
+import {
+  SiTypescript,
+  SiRedux,
+  SiReact,
+  SiRubyonrails,
+  SiAngular,
+  SiNodedotjs,
+  SiMongodb,
+  SiSocketdotio,
+  SiPostgresql,
+} from 'react-icons/si'
 import HireMe from '../../components/HireMe'
 import Image from '../../components/Image'
 import Temperature from '../../components/Temperature'
@@ -58,7 +68,16 @@ const technologies = [
   { technology: 'TypeScript', years: 3, icon: SiTypescript },
   { technology: 'React', years: 4, icon: SiReact },
   { technology: 'Redux', years: 4, icon: SiRedux },
+]
+
+const playedWithTechnologies = [
+  { technology: 'Rails', years: 2, icon: SiRubyonrails },
   { technology: 'Angular', years: 1, icon: SiAngular },
+  { technology: 'Node', years: 2, icon: SiNodedotjs },
+  { technology: 'MongoDB', years: 2, icon: SiMongodb },
+  { technology: 'Socket.io', years: 1, icon: SiSocketdotio },
+  { technology: 'Postgres', years: 1, icon: SiPostgresql },
+  { technology: 'React Native', years: 1, icon: SiReact },
 ]
 
 const getYearWord = (years) => {
@@ -176,22 +195,48 @@ const AboutPage = () => {
 
       <section className="bg-black large-padding-bottom no-padding-top">
         <div className="container">
-          <h2>🚀 Technologies I am familiar with</h2>
-          <div className="small-grid">
-            {technologies.map((tech, index) => (
-              <a
-                key={index}
-                href={`/cv?skill=${removeSpacesAndDashes(tech.technology)}`}
-                role="button"
-                className="secondary"
-              >
-                <p className="small-font">
-                  <tech.icon className="small-margin-right" />
-                  {tech.years} {getYearWord(tech.years)}
-                </p>
-                <p>{tech.technology}</p>
-              </a>
-            ))}
+          <div className="flex flex-gap flex-responsive">
+            <div className="flex-1">
+              <h2>🚀 Technologies I have mastered</h2>
+              <div className="flex flex-gap-small flex-wrap">
+                {technologies.map((tech, index) => (
+                  <a
+                    key={index}
+                    href={`/cv?skill=${removeSpacesAndDashes(tech.technology)}`}
+                    role="button"
+                    className="secondary"
+                  >
+                    <p className="small-font">
+                      <tech.icon className="small-margin-right" />
+                      {tech.years} {getYearWord(tech.years)}
+                    </p>
+                    <p>{tech.technology}</p>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex-1">
+              <h2>🎨 Technologies I have played with</h2>
+              <div className="flex flex-gap-small flex-wrap">
+                {playedWithTechnologies
+                  .sort((a, b) => {
+                    return b.years - a.years
+                  })
+                  .map((tech, index) => (
+                    <span
+                      key={index}
+                      className="bg-blue xs-padding border-radius"
+                    >
+                      <p className="small-font">
+                        <tech.icon className="small-margin-right" />
+                        {tech.years} {getYearWord(tech.years)}
+                      </p>
+                      <p>{tech.technology}</p>
+                    </span>
+                  ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
