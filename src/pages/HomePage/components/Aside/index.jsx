@@ -52,7 +52,7 @@ const Aside = ({ numberOfPosts }) => {
         })}
         <aside className={noteContent.intro ? 'show' : 'hide'}>
           <IoMdClose
-            className="pull-right block small-margin-bottom pointer"
+            className="block small-margin-bottom pointer"
             onClick={() => {
               setNoteContent({})
             }}
