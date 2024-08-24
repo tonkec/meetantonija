@@ -68,7 +68,7 @@ const ProjectPage = () => {
           <div>
             <h3 className="small-margin-bottom"> Years 🗓️</h3>
             <p>
-              {project.from} - {project.to}
+              {project.from} - {project.to || 'Present'}
             </p>
           </div>
 
