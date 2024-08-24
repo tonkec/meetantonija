@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { removeSpacesAndDashes } from '../../utils'
 import { SinglePost } from '../../pages/PostsPage'
 
+
+
 export const setQueryParams = (params) => {
   const searchParams = new URLSearchParams(window.location.search)
   for (const [key, value] of Object.entries(params)) {
@@ -67,7 +69,13 @@ const Pagination = ({ data = [], clearSearch, searchValue }) => {
   const shouldShowClearButton = tagParam !== '' || searchValue !== ''
 
   return (
-    <>
+    <>  {tagParam && (
+      <>
+      <h5 className="small-margin-top flex flex-gap-small flex-responsive">
+        Tags: <span className="tag bg-dark border-radius">{tagParam}</span>
+      </h5>
+      </>
+    )}
       {shouldShowClearButton && (
         <button
           onClick={() => {
@@ -75,11 +83,13 @@ const Pagination = ({ data = [], clearSearch, searchValue }) => {
             setQueryParams({ search: '', page: 1, tag: '' })
             clearSearch()
           }}
-          className="ternary small-margin-bottom"
+          className="ternary small-margin-bottom small-margin-top"
         >
-          Clear filters
+          Clear all filters
         </button>
       )}
+
+    
       <div
         className="medium-grid"
         style={

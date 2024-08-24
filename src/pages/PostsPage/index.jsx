@@ -41,7 +41,7 @@ export const SinglePost = ({ post, onClick }) => {
         ))}
       </p>
 
-      <span className="flex flex-y-center flex-gap space-between medium-margin-top">
+      <span className="flex align-start flex-gap space-between medium-margin-top">
         <a
           className="secondary xs-padding border-radius inline-block no-underline normal-font"
           href={`/post/${formatNoteTitle(post.title.toLowerCase())}`}
