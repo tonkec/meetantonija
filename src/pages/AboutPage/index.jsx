@@ -285,7 +285,7 @@ const AboutPage = () => {
               <div className="flex small-margin-bottom flex-y-center flex-gap-small">
                 <p>
                   {event.organizer}, {event.year} in {event.location} |{' '}
-                  <a className="text-white normal-font" href={event.link}>
+                  <a className="text-white normal-font" href={event.link} target='_blank' rel='noreferrer'>
                     <FaExternalLinkAlt fontSize="1rem" />{' '}
                   </a>
                 </p>
