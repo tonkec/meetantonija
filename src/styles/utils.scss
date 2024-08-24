@@ -302,6 +302,14 @@
   }
 }
 
+.max-w-100 {
+  max-width: 100px;
+}
+
+.max-w-70 {
+  max-width: 70px;
+}
+
 .max-w-50 {
   @include breakpoint(xl) {
     max-width: 50%;

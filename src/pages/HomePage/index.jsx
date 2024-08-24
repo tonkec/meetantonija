@@ -9,6 +9,35 @@ import Steps from './components/Steps'
 import projects from '../../data/projects'
 import { Helmet } from 'react-helmet'
 import Tabs from './components/Tabs'
+import Testimonial from './components/Testimonial'
+
+import Brian from '../../images/testimonials/brian.jpeg'
+import Mario from '../../images/testimonials/mario.jpeg'
+import Daniel from '../../images/testimonials/daniel.jpeg'
+
+const testimonials = [
+  {
+    content:
+      "Antonija is a superb developer. She is detail focused and she helped us make a superb educational product. She is a pleasure to work with. I'd highly recommend her.",
+    author: "Brian O'Grady",
+    project: 'Code Institute',
+    avatar: Brian,
+  },
+  {
+    content:
+      'It was a pleasure to work with Antonija. She is a very fast working developer with a large scope of frontend technologies. She takes every task in great detail and brings her advice and insight into development.  In the end she did great development.',
+    author: 'Mario Stipetić',
+    project: 'Peaks',
+    avatar: Mario,
+  },
+  {
+    content:
+      "Thank you so much for staying dedicated and working hard on all of the TINT projects we give you. You've made our lives easier and have allowed Joel and I to focus more on growing our brand and enhancing our UX",
+    author: 'Daniel Baldwin',
+    project: 'TINT',
+    avatar: Daniel,
+  },
+]
 
 const HomePage = () => {
   return (
@@ -20,6 +49,7 @@ const HomePage = () => {
       <Previewer />
       <Code />
       <Slider headline="🏢 I work with clients." items={projects} />
+
       <Steps
         headline={'🚀 My development process.'}
         steps={[
@@ -52,6 +82,17 @@ const HomePage = () => {
           },
         ]}
       />
+
+      <section>
+        <div className="container">
+          <h2>🗣 What clients say about me.</h2>
+          <div className="grid">
+            {testimonials.map((testimonial, index) => (
+              <Testimonial key={index} testimonial={testimonial} />
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="bg-blue">
         <div className="container">
