@@ -1,5 +1,11 @@
 @import '../../styles/mq.scss';
 
+.elevated-container {
+  @include breakpoint(md, max) {
+    padding-bottom: 0;
+  }
+}
+
 .elevated {
   max-width: 1000px;
   left: 0;
@@ -7,25 +13,16 @@
   bottom: -200px;
   margin: 0 auto;
   padding: 2rem;
-  position: absolute;
+ 
 
   @include breakpoint(md) {
+    position: absolute;
     bottom: -100px;
     border-radius: var(--border-radius);
   }
 }
 
 .steps-section {
-  padding-top: calc(var(--card-spacing) * 30);
-  @include breakpoint(xxs) {
-    padding-top: calc(var(--card-spacing) * 30);
-  }
-  @include breakpoint(xs) {
-    padding-top: calc(var(--card-spacing) * 20);
-  }
-  @include breakpoint(sm) {
-    padding-top: calc(var(--card-spacing) * 12);
-  }
   @include breakpoint(md) {
     padding-top: calc(var(--card-spacing) * 4);
   }
