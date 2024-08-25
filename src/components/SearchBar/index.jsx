@@ -1,11 +1,11 @@
 import { useEffect, useState, useCallback } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import routes from '../../routes'
+import routes from 'routes'
 import FocusTrap from 'focus-trap-react'
-import projects from '../../data/projects'
-import posts from '../../data/posts'
+import projects from 'data/projects'
+import posts from 'data/posts'
 import './SearchBar.scss'
-import { formatNoteTitle, removeSpacesAndDashes } from '../../utils'
+import { formatNoteTitle, removeSpacesAndDashes } from 'utils'
 import { FaKeyboard } from 'react-icons/fa'
 
 const delay = 0.1

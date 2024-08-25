@@ -1,10 +1,10 @@
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
-import BrowserFrame from '../../../../components/BrowserFrame'
+import BrowserFrame from 'components/BrowserFrame'
 import './Slider.scss'
-import { useWindowSize } from '../../../../hooks/useWindowSize'
-import Skills from '../../../../components/Skills'
-import { removeSpacesAndDashes } from '../../../../utils'
+import { useWindowSize } from 'hooks/useWindowSize'
+import Skills from 'components/Skills'
+import { removeSpacesAndDashes } from 'utils'
 
 const Slider = ({ items, headline }) => {
   const size = useWindowSize()

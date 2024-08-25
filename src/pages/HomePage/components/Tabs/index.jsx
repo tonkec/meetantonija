@@ -1,6 +1,6 @@
 import './Tabs.scss'
 import { useState } from 'react'
-import hobbyProjects from '../../../../data/hobby'
+import hobbyProjects from 'data/hobby'
 
 const getTabItems = () => {
   return hobbyProjects.map((hobby) => {

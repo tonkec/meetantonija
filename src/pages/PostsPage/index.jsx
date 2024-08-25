@@ -1,8 +1,8 @@
-import posts from '../../data/posts'
+import posts from 'data/posts'
 import { Helmet } from 'react-helmet'
-import { formatNoteTitle } from '../../utils'
-import Image from '../../components/Image'
-import Paginated, { setQueryParams } from '../../components/Paginated'
+import { formatNoteTitle } from 'utils'
+import Image from 'components/Image'
+import Paginated, { setQueryParams } from 'components/Paginated'
 import { useState } from 'react'
 
 const sortedPosts = posts.sort((a, b) => {

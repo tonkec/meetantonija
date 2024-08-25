@@ -1,14 +1,14 @@
 import { useParams } from 'react-router-dom'
-import projects from '../../data/projects'
+import projects from 'data/projects'
 import Steps from '../HomePage/components/Steps'
 import './Project.scss'
-import HireMe from '../../components/HireMe'
+import HireMe from 'components/HireMe'
 import Slider from '../HomePage/components/Slider'
-import { removeSpacesAndDashes, scrollToTheElement } from '../../utils'
-import Skills from '../../components/Skills'
+import { removeSpacesAndDashes, scrollToTheElement } from 'utils'
+import Skills from 'components/Skills'
 import { Helmet } from 'react-helmet'
 import ProjectPhotos from './components/ProjectPhotos'
-import RecordNotFound from '../../components/RecordNotFound'
+import RecordNotFound from 'components/RecordNotFound'
 
 const getTeamSize = (team) => {
   if (team <= 1) {

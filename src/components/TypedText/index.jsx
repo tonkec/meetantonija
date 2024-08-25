@@ -1,4 +1,4 @@
-import { typeString } from '../../utils'
+import { typeString } from 'utils'
 
 const typingSpeed = 20
 

@@ -1,7 +1,7 @@
 import { FaHeart, FaCoffee } from 'react-icons/fa'
 import { LuLinkedin, LuGithub, LuCodepen } from 'react-icons/lu'
-import Social from './../../components/Social'
-import Logo from './../../components/Logo'
+import Social from 'components/Social'
+import Logo from 'components/Logo'
 import './Footer.scss'
 
 const socialLinks = [

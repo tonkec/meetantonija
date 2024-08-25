@@ -1,4 +1,4 @@
-import { rootImageUrl } from '../../rootImageUrl'
+import { rootImageUrl } from 'rootImageUrl'
 
 export const images = [
   {

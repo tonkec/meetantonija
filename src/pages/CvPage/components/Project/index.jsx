@@ -1,5 +1,5 @@
-import Skills from '../../../../components/Skills'
-import { removeSpacesAndDashes } from '../../../../utils'
+import Skills from 'components/Skills'
+import { removeSpacesAndDashes } from 'utils'
 
 const CvProject = ({ project }) => {
   return (

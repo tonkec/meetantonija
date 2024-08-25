@@ -1,5 +1,5 @@
-import Image from '../../../../components/Image'
-import { removeSpacesAndDashes } from '../../../../utils'
+import Image from 'components/Image'
+import { removeSpacesAndDashes } from 'utils'
 
 const Testimonial = ({ testimonial }) => {
   return (

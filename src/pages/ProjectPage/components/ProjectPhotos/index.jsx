@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import Image from '../../../../components/Image'
-import ImageModal from '../../../../components/ImageModal'
+import Image from 'components/Image'
+import ImageModal from 'components/ImageModal'
 
 const ProjectPhotos = ({ project }) => {
   const [currentPhoto, setCurrentPhoto] = useState(0)

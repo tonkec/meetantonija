@@ -1,11 +1,7 @@
 import { useState } from 'react'
 import { IoMdClose } from 'react-icons/io'
-import notes from '../../../../data/posts'
-import {
-  formatNoteTitle,
-  shuffleArray,
-  truncateString,
-} from '../../../../utils'
+import notes from 'data/posts'
+import { formatNoteTitle, shuffleArray, truncateString } from 'utils'
 import './Aside.scss'
 const shuffledNotes = shuffleArray(notes)
 const AsideContent = ({ noteContent }) => {

@@ -1,10 +1,10 @@
-import FakeBrowser from '../pages/ProjectPage/components/FakeBrowser'
-import Graph from '../pages/ProjectPage/components/Graph'
-import Dashboard from '../pages/HomePage/components/Videos/components/Dashboard'
-import Board from '../pages/ProjectPage/components/Board'
-import Mountains from '../pages/ProjectPage/components/Mountains'
+import FakeBrowser from 'pages/ProjectPage/components/FakeBrowser'
+import Graph from 'pages/ProjectPage/components/Graph'
+import Dashboard from 'pages/HomePage/components/Videos/components/Dashboard'
+import Board from 'pages/ProjectPage/components/Board'
+import Mountains from 'pages/ProjectPage/components/Mountains'
 
-import { rootImageUrl } from '../rootImageUrl'
+import { rootImageUrl } from 'rootImageUrl'
 
 const projects = [
   {

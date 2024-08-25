@@ -1,5 +1,5 @@
 import Modal from 'react-modal'
-import Image from '../../components/Image'
+import Image from 'components/Image'
 import { useLocalStorage } from '@uidotdev/usehooks'
 
 const PhotoModal = ({ project, isModalOpen, setIsModalOpen, currentPhoto }) => {

@@ -2,7 +2,7 @@ import Draggable from 'react-draggable'
 import './Code.scss'
 import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/default-highlight'
 import { darcula } from 'react-syntax-highlighter/dist/esm/styles/hljs'
-import { useWindowSize } from '../../../../hooks/useWindowSize'
+import { useWindowSize } from 'hooks/useWindowSize'
 
 const javascriptCode =
   "import { skiils } from 'frontend-developer';\nconst { html, css, javascript, typescript, react } = skills;\nconst frontendDeveloper = {\n  name: 'Antonija',\n  age: 30,\n  skills: [html, css, javascript, typescript, react],\n  neverStopsLearning: true,\n  enjoysCoding: true,\n  isCreative: true,\n}"

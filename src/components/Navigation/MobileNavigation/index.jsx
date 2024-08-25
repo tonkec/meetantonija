@@ -1,5 +1,5 @@
-import DarkMode from '../../DarkMode'
-import HireMe from '../../HireMe'
+import DarkMode from 'components/DarkMode'
+import HireMe from 'components/HireMe'
 import { NavigationLink } from '../index'
 import './MobileNavigation.scss'
 

@@ -1,7 +1,7 @@
 import { Tooltip } from 'react-tooltip'
-import Image from './../../../../components/Image'
+import Image from 'components/Image'
 import './Header.scss'
-import TypedText from '../../../../components/TypedText'
+import TypedText from 'components/TypedText'
 
 const Header = () => {
   return (

@@ -1,5 +1,5 @@
 import './Image.scss'
-import useImage from '../../hooks/useImage'
+import useImage from 'hooks/useImage'
 import { Triangle } from 'react-loader-spinner'
 import { useLocalStorage } from '@uidotdev/usehooks'
 const Image = ({

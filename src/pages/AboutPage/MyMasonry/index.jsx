@@ -1,7 +1,7 @@
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 import { useState } from 'react'
 import Modal from 'react-modal'
-import Image from '../../../components/Image'
+import Image from 'components/Image'
 import { useLocalStorage } from '@uidotdev/usehooks'
 import './Modal.scss'
 

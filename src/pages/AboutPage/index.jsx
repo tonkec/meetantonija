@@ -12,12 +12,12 @@ import {
   SiSocketdotio,
   SiPostgresql,
 } from 'react-icons/si'
-import HireMe from '../../components/HireMe'
-import Image from '../../components/Image'
-import Temperature from '../../components/Temperature'
+import HireMe from 'components/HireMe'
+import Image from 'components/Image'
+import Temperature from 'components/Temperature'
 import { Tooltip } from 'react-tooltip'
-import useTemperature from '../../hooks/useTemperature'
-import { getValuesAndProperties, removeSpacesAndDashes } from '../../utils'
+import useTemperature from 'hooks/useTemperature'
+import { getValuesAndProperties, removeSpacesAndDashes } from 'utils'
 import { images } from './images'
 import MyMasonry from './MyMasonry'
 import { Helmet } from 'react-helmet'

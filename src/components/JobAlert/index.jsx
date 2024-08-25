@@ -1,7 +1,7 @@
 import './JobAlert.scss'
 import { IoCloseOutline } from 'react-icons/io5'
 import { useLocalStorage } from '@uidotdev/usehooks'
-import ButtonCopy from '../ButtonCopy'
+import ButtonCopy from 'components/ButtonCopy'
 
 const JobAlert = () => {
   const [isOpen, saveOpen] = useLocalStorage('isAlertShown', true)

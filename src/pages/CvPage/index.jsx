@@ -1,9 +1,9 @@
-import projects from '../../data/projects'
+import projects from 'data/projects'
 import { useSearchParams } from 'react-router-dom'
-import { arrayHasFullString } from '../../utils'
+import { arrayHasFullString } from 'utils'
 import CvProject from './components/Project'
 import { Link } from 'react-router-dom'
-import cv from './../../files/cv.pdf'
+import cv from 'files/cv.pdf'
 import { Helmet } from 'react-helmet'
 import Timeline from './components/Timeline'
 

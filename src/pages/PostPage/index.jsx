@@ -5,7 +5,7 @@ import PostsImage from './PostsImage'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import './Post.scss'
-import posts from '../../data/posts'
+import posts from 'data/posts'
 import {
   formatNoteTitle,
   removeSpacesAndDashes,

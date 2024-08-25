@@ -1,11 +1,11 @@
 import { useParams } from 'react-router-dom'
-import projects from '../../data/hobby'
+import projects from 'data/hobby'
 import { Helmet } from 'react-helmet'
-import Image from '../../components/Image'
+import Image from 'components/Image'
 import { useState } from 'react'
-import ImageModal from './../../components/ImageModal'
-import RecordNotFound from '../../components/RecordNotFound'
-import HireMe from '../../components/HireMe'
+import ImageModal from 'components/ImageModal'
+import RecordNotFound from 'components/RecordNotFound'
+import HireMe from 'components/HireMe'
 
 const findProjectByRoute = (projects, route) => {
   for (const hobby of projects) {

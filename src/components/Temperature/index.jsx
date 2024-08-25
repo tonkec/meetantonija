@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import useTemperature from '../../hooks/useTemperature'
+import useTemperature from 'hooks/useTemperature'
 import { Triangle } from 'react-loader-spinner'
 import { useLocalStorage } from '@uidotdev/usehooks'
 

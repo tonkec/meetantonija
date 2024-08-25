@@ -1,11 +1,11 @@
-import HomePage from '../pages/HomePage'
-import PostsPage from '../pages/PostsPage'
-import ProjectPage from '../pages/ProjectPage'
-import AboutPage from '../pages/AboutPage'
-import CvPage from '../pages/CvPage'
-import NotFound from '../components/NotFound'
-import PostPage from '../pages/PostPage'
-import HobbyPage from '../pages/HobbyPage'
+import HomePage from 'pages/HomePage'
+import PostsPage from 'pages/PostsPage'
+import ProjectPage from 'pages/ProjectPage'
+import AboutPage from 'pages/AboutPage'
+import CvPage from 'pages/CvPage'
+import NotFound from 'components/NotFound'
+import PostPage from 'pages/PostPage'
+import HobbyPage from 'pages/HobbyPage'
 
 const routes = [
   {

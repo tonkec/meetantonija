@@ -1,6 +1,6 @@
 import { Tooltip } from 'react-tooltip'
 import { useRef, useState, useEffect, useCallback } from 'react'
-import { truncateString } from '../../utils'
+import { truncateString } from 'utils'
 import { FaTwitter } from 'react-icons/fa'
 
 const Quotable = ({ children }) => {

@@ -1,7 +1,7 @@
 import Toggle from 'react-toggle'
 import 'react-toggle/style.css'
 import './DarkMode.scss'
-import useIsDarkMode from '../../hooks/useIsDarkMode'
+import useIsDarkMode from 'hooks/useIsDarkMode'
 
 const DarkMode = () => {
   const [isDarkLocalStorage, saveIsDark] = useIsDarkMode()

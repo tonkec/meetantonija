@@ -1,6 +1,6 @@
 import { FaAngleDoubleUp } from 'react-icons/fa'
-import useScrollPosition from './../../hooks/useScrollPosition'
-import { useWindowSize } from '../../hooks/useWindowSize'
+import useScrollPosition from 'hooks/useScrollPosition'
+import { useWindowSize } from 'hooks/useWindowSize'
 const ScrollToTop = () => {
   const scrollPosition = useScrollPosition()
   const { width } = useWindowSize()
