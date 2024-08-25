@@ -19,6 +19,9 @@ const PhotoModal = ({ project, isModalOpen, setIsModalOpen, currentPhoto }) => {
         },
       }}
     >
+      <button className='small-margin-top secondary' onClick={() => {
+        setIsModalOpen(false)
+      }}>Close </button>
       <Image isBackgroundImage={true} src={currentPhoto} alt={project.title} />
     </Modal>
   )
