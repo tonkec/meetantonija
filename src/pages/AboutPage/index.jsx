@@ -15,19 +15,14 @@ import {
 import HireMe from '../../components/HireMe'
 import Image from '../../components/Image'
 import Temperature from '../../components/Temperature'
-import Me from '../../images/me.jpeg'
 import { Tooltip } from 'react-tooltip'
 import useTemperature from '../../hooks/useTemperature'
 import { getValuesAndProperties, removeSpacesAndDashes } from '../../utils'
 import { images } from './images'
 import MyMasonry from './MyMasonry'
 import { Helmet } from 'react-helmet'
-import CSS from './../../images/meetups/css.webp'
-import Javascript from './../../images/meetups/javascript.jpg'
-import dev from './../../images/meetups/dev.jpg'
-import vienna from './../../images/meetups/vienna.jpg'
-import intro from './../../images/meetups/intro.jpg'
 import { FaExternalLinkAlt } from 'react-icons/fa'
+import { rootImageUrl } from '../../rootImageUrl'
 
 const speakingEvents = [
   {
@@ -35,7 +30,7 @@ const speakingEvents = [
     year: 2020,
     link: 'https://www.meetup.com/s_css_zagreb/events/266253881/',
     organizer: 'CSS Zagreb',
-    photo: CSS,
+    photo: rootImageUrl + 'meetups/css.webp',
     content:
       'I talked about the latest CSS tricks and how to use them in your projects.',
     location: 'Zagreb',
@@ -45,7 +40,7 @@ const speakingEvents = [
     year: 2024,
     link: 'https://www.meetup.com/kodiraonica/events/298986803/',
     organizer: 'Kodiraonica',
-    photo: intro,
+    photo: rootImageUrl + 'meetups/intro.jpg',
     content:
       'I talked about the basics of web development and how to start your journey.',
     location: 'Samobor',
@@ -55,7 +50,7 @@ const speakingEvents = [
     year: 2023,
     link: 'https://www.meetup.com/javascript-zagreb/events/297302963/',
     organizer: 'JavaScript Zagreb',
-    photo: Javascript,
+    photo: rootImageUrl + 'meetups/javascript.jpg',
     content:
       'This was my first talk on Javascript Zagreb meetup. I had huge stage fright, but I managed to pull it off.',
     location: 'Zagreb',
@@ -65,7 +60,7 @@ const speakingEvents = [
     year: 2023,
     link: 'https://devshegoes.five.agency/',
     organizer: 'DevSheGoes',
-    photo: dev,
+    photo: rootImageUrl + 'meetups/dev.jpg',
     content:
       'I have been mentoring my whole career and I love to help beginners to start their journey. This event was a great opportunity to share my knowledge.',
     location: 'Zagreb',
@@ -75,7 +70,7 @@ const speakingEvents = [
     year: 2020,
     link: 'https://www.meetup.com/css-in-vienna/events/267266901/',
     organizer: 'CSS in Vienna',
-    photo: vienna,
+    photo: rootImageUrl + 'meetups/vienna.jpg',
     content:
       'This was my first talk outside Croatia. I was so excited and I met a lot of new people. I coded a pure CSS keyboard in front of the live audience.',
     location: 'Vienna',
@@ -153,7 +148,11 @@ const AboutPage = () => {
               ))}
             </Tooltip>
 
-            <Image hasColoredBackground src={Me} alt="Antonija" />
+            <Image
+              hasColoredBackground
+              src={`${rootImageUrl}/me.jpeg`}
+              alt="Antonija"
+            />
           </div>
         </div>
       </header>

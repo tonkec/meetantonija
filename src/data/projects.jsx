@@ -3,39 +3,17 @@ import Graph from '../pages/ProjectPage/components/Graph'
 import Dashboard from '../pages/HomePage/components/Videos/components/Dashboard'
 import Board from '../pages/ProjectPage/components/Board'
 import Mountains from '../pages/ProjectPage/components/Mountains'
-import funderpro1 from '../images/funderpro/1.png'
-import funderpro2 from '../images/funderpro/2.png'
-import casumo1 from '../images/casumo/1.jpg'
-import casumo2 from '../images/casumo/2.jpg'
-import casumo3 from '../images/casumo/3.jpg'
-import casumo4 from '../images/casumo/4.jpg'
-import formunauts1 from '../images/formunauts/1.png'
-import formunauts2 from '../images/formunauts/2.png'
-import formunauts3 from '../images/formunauts/3.png'
-import formunauts4 from '../images/formunauts/4.png'
-import crafstrom1 from '../images/crafstrom/1.png'
-import crafstrom2 from '../images/crafstrom/2.png'
-import crafstrom3 from '../images/crafstrom/3.png'
-import crafstrom4 from '../images/crafstrom/4.png'
-import revuto from '../images/revuto/1.png'
-import codeinstitute1 from '../images/codeinstitute/1.png'
-import codeinstitute2 from '../images/codeinstitute/2.png'
-import codeinstitute3 from '../images/codeinstitute/3.png'
-import codeinstitute4 from '../images/codeinstitute/4.png'
-import peaks1 from '../images/peaks/1.jpeg'
-import peaks2 from '../images/peaks/2.jpeg'
-import peaks3 from '../images/peaks/3.jpeg'
-import peaks4 from '../images/peaks/4.jpeg'
-import tint1 from '../images/tint/1.png'
-import tint2 from '../images/tint/2.png'
-import kwikdroid1 from '../images/kwikdroid/1.png'
-import kwikdroid2 from '../images/kwikdroid/2.png'
-import kwikdroid3 from '../images/kwikdroid/3.png'
-import kwikdroid4 from '../images/kwikdroid/4.png'
+
+import { rootImageUrl } from '../rootImageUrl'
 
 const projects = [
   {
-    photos: [kwikdroid1, kwikdroid2, kwikdroid3, kwikdroid4],
+    photos: [
+      rootImageUrl + 'kwikdroid/1.png',
+      rootImageUrl + 'kwikdroid/2.png',
+      rootImageUrl + 'kwikdroid/3.png',
+      rootImageUrl + 'kwikdroid/4.png',
+    ],
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Graph />
@@ -109,7 +87,12 @@ const projects = [
     ),
   },
   {
-    photos: [casumo1, casumo2, casumo3, casumo4],
+    photos: [
+      rootImageUrl + 'casumo/1.jpg',
+      rootImageUrl + 'casumo/2.jpg',
+      rootImageUrl + 'casumo/3.jpg',
+      rootImageUrl + 'casumo/4.jpg',
+    ],
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Graph />
@@ -183,7 +166,12 @@ const projects = [
     ),
   },
   {
-    photos: [formunauts1, formunauts2, formunauts3, formunauts4],
+    photos: [
+      rootImageUrl + 'formunauts/1.png',
+      rootImageUrl + 'formunauts/2.png',
+      rootImageUrl + 'formunauts/3.png',
+      rootImageUrl + 'formunauts/4.png',
+    ],
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Dashboard title="Formunauts" />
@@ -261,7 +249,12 @@ const projects = [
     ),
   },
   {
-    photos: [crafstrom1, crafstrom2, crafstrom3, crafstrom4],
+    photos: [
+      rootImageUrl + 'crafstrom/1.png',
+      rootImageUrl + 'crafstrom/2.png',
+      rootImageUrl + 'crafstrom/3.png',
+      rootImageUrl + 'crafstrom/4.png',
+    ],
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Dashboard title="Crafstrom" />
@@ -334,7 +327,7 @@ const projects = [
     ),
   },
   {
-    photos: [revuto],
+    photos: [rootImageUrl + 'revuto/1.png'],
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Graph />
@@ -394,7 +387,12 @@ const projects = [
     ),
   },
   {
-    photos: [codeinstitute1, codeinstitute2, codeinstitute3, codeinstitute4],
+    photos: [
+      rootImageUrl + 'codeinstitute/1.png',
+      rootImageUrl + 'codeinstitute/2.png',
+      rootImageUrl + 'codeinstitute/3.png',
+      rootImageUrl + 'codeinstitute/4.png',
+    ],
     fakeContent: (
       <FakeBrowser>
         <Board />
@@ -461,7 +459,12 @@ const projects = [
     ),
   },
   {
-    photos: [peaks1, peaks2, peaks3, peaks4],
+    photos: [
+      rootImageUrl + 'peaks/1.jpeg',
+      rootImageUrl + 'peaks/2.jpeg',
+      rootImageUrl + 'peaks/3.jpeg',
+      rootImageUrl + 'peaks/4.jpeg',
+    ],
     fakeContent: (
       <FakeBrowser>
         <Mountains />
@@ -533,7 +536,7 @@ const projects = [
     ),
   },
   {
-    photos: [tint1, tint2],
+    photos: [rootImageUrl + 'tint/1.png', rootImageUrl + 'tint/2.png'],
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
         <Dashboard title="Tint" />
@@ -601,7 +604,10 @@ const projects = [
     ),
   },
   {
-    photos: [funderpro1, funderpro2],
+    photos: [
+      rootImageUrl + 'funderpro/1.png',
+      rootImageUrl + 'funderpro/2.png',
+    ],
     fakeContent: (
       <FakeBrowser>
         <Graph />
