@@ -71,7 +71,7 @@ const Pagination = ({ data = [], clearSearch, searchValue }) => {
       {' '}
       {tagParam && (
         <>
-          <h5 className="small-margin-top flex flex-gap-small flex-responsive">
+          <h5 className="small-margin-toP">
             Tags: <span className="tag bg-dark border-radius">{tagParam}</span>
           </h5>
         </>
@@ -90,11 +90,6 @@ const Pagination = ({ data = [], clearSearch, searchValue }) => {
       )}
       <div
         className="medium-grid"
-        style={
-          paginatedPosts.length === 1
-            ? { maxWidth: '50%' }
-            : { maxWidth: 'none' }
-        }
       >
         {paginatedPosts.length ? (
           paginatedPosts.map((post) => (

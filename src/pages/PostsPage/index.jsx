@@ -27,7 +27,7 @@ export const SinglePost = ({ post, onClick }) => {
 
       <p>{post.subtitle}</p>
 
-      <p className="small-margin-top flex flex-gap-small">
+      <p className="small-margin-top flex flex-wrap flex-gap-small">
         {post.tags.split(', ').map((tag) => (
           <span
             key={tag}
