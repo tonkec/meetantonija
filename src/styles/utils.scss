@@ -454,6 +454,13 @@
   display: none;
 }
 
+.hidden-mobile {
+  display: none;
+  @include breakpoint(lg) {
+    display: block;
+  }
+}
+
 .circle {
   border-radius: 50%;
 }

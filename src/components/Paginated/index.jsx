@@ -89,7 +89,7 @@ const Pagination = ({ data = [], clearSearch, searchValue }) => {
         </button>
       )}
       <div
-        className="medium-grid"
+        className="medium-grid max-w-50"
       >
         {paginatedPosts.length ? (
           paginatedPosts.map((post) => (

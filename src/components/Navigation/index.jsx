@@ -122,7 +122,7 @@ const Navigation = () => {
           <div className="flex">{getNavigationLinks(navigationLinks)}</div>
         )}
 
-        <h6 className="text-white medium-margin-right">Shift + K</h6>
+        <h6 className="text-white medium-margin-right hidden-mobile">Shift + K</h6>
       </div>
       <MobileNavigation
         isOpen={isMobileNavigationOpen}
