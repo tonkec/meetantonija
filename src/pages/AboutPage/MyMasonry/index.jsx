@@ -2,14 +2,14 @@ import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 import { useState } from 'react'
 import Modal from 'react-modal'
 import Image from '../../../components/Image'
-import usePrefersDarkMode from '../../../hooks/usePrefersDarkMode'
+import { useLocalStorage } from '@uidotdev/usehooks'
 import './Modal.scss'
 
 const MyMasonry = ({ images }) => {
+  const [isDarkLocalStorage] = useLocalStorage('dark-mode', false)
+
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedImage, setSelectedImage] = useState(null)
-
-  const isDark = usePrefersDarkMode()
 
   return (
     <>
@@ -37,7 +37,7 @@ const MyMasonry = ({ images }) => {
           style={{
             overlay: {
               zIndex: 1000,
-              backgroundColor: isDark
+              backgroundColor: isDarkLocalStorage
                 ? 'rgba(0, 0, 0, 0.8)'
                 : 'rgba(255, 255, 255, 0.8)',
             },

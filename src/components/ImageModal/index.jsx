@@ -1,9 +1,9 @@
 import Modal from 'react-modal'
-import usePrefersDarkMode from '../../hooks/usePrefersDarkMode'
 import Image from '../../components/Image'
+import { useLocalStorage } from '@uidotdev/usehooks'
 
 const PhotoModal = ({ project, isModalOpen, setIsModalOpen, currentPhoto }) => {
-  const isDark = usePrefersDarkMode()
+  const [isDarkLocalStorage] = useLocalStorage('dark-mode', false)
 
   return (
     <Modal
@@ -13,7 +13,7 @@ const PhotoModal = ({ project, isModalOpen, setIsModalOpen, currentPhoto }) => {
       style={{
         overlay: {
           zIndex: 1000,
-          backgroundColor: isDark
+          backgroundColor: isDarkLocalStorage
             ? 'rgba(0, 0, 0, 0.8)'
             : 'rgba(255, 255, 255, 0.8)',
         },

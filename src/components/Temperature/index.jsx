@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react'
 import useTemperature from '../../hooks/useTemperature'
 import { Triangle } from 'react-loader-spinner'
-import usePrefersDarkMode from '../../hooks/usePrefersDarkMode'
+import { useLocalStorage } from '@uidotdev/usehooks'
 
 const Temperature = () => {
+  const [isDarkLocalStorage] = useLocalStorage('dark-mode', false)
+
   const [temperature, setTemperature] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
   const temperatureData = useTemperature()
-  const isDark = usePrefersDarkMode()
 
   const getTemperatureMood = (temperature) => {
     if (temperature < 10) return 'cold'
@@ -29,7 +30,7 @@ const Temperature = () => {
     return (
       <Triangle
         wrapperStyle={{ display: 'inline' }}
-        color={isDark ? 'var(--color-white)' : 'var(--color-black)'}
+        color={isDarkLocalStorage ? 'var(--color-white)' : 'var(--color-black)'}
         height={50}
         width={50}
       />

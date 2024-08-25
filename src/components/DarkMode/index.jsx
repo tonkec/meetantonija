@@ -5,8 +5,8 @@ import 'react-toggle/style.css'
 import './DarkMode.scss'
 
 const DarkMode = () => {
-  const [isDark, setIsDark] = useLocalStorage('dark-mode', false)
-  const value = useMemo(() => !!isDark, [isDark])
+  const [isDarkLocalStorage, saveIsDark] = useLocalStorage('dark-mode', false)
+  const value = useMemo(() => !!isDarkLocalStorage, [isDarkLocalStorage])
 
   useEffect(() => {
     if (value) {
@@ -21,8 +21,8 @@ const DarkMode = () => {
       <label className="flex flex-y-center space-between">
         <h2 className="small-margin-right">Toggle the mood </h2>{' '}
         <Toggle
-          checked={isDark}
-          onChange={({ target }) => setIsDark(target.checked)}
+          checked={isDarkLocalStorage}
+          onChange={({ target }) => saveIsDark(target.checked)}
           icons={{ checked: '🌙', unchecked: '🔆' }}
           aria-label="Dark mode toggle"
           className="small-margin-right"

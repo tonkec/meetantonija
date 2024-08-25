@@ -1,8 +1,7 @@
 import './Image.scss'
 import useImage from '../../hooks/useImage'
 import { Triangle } from 'react-loader-spinner'
-import usePrefersDarkMode from '../../hooks/usePrefersDarkMode'
-
+import { useLocalStorage } from '@uidotdev/usehooks'
 const Image = ({
   hasColoredBackground,
   src,
@@ -13,11 +12,15 @@ const Image = ({
   className,
 }) => {
   const isImageLoading = useImage(src)
-  const isDark = usePrefersDarkMode()
+  const [isDarkLocalStorage] = useLocalStorage('dark-mode', false)
 
   if (isImageLoading) {
     return (
-      <Triangle color={isDark ? '#fcfcfc' : '#292929'} height={50} width={50} />
+      <Triangle
+        color={isDarkLocalStorage ? '#fcfcfc' : '#292929'}
+        height={50}
+        width={50}
+      />
     )
   }
 
