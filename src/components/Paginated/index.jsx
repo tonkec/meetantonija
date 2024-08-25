@@ -1,6 +1,20 @@
 import { useEffect, useState } from 'react'
 import { removeSpacesAndDashes } from '../../utils'
 import { SinglePost } from '../../pages/PostsPage'
+import { useWindowSize } from '../../hooks/useWindowSize'
+const getMaxWidth = (posts, windowSize) => {
+
+  if (windowSize < 768) {
+    return { maxWidth: '100%' }
+  }
+
+  if (posts.length === 1) {
+    return { maxWidth: '50%' }
+  }
+
+  return { maxWidth: '100%' }
+
+}
 
 export const setQueryParams = (params) => {
   const searchParams = new URLSearchParams(window.location.search)
@@ -19,6 +33,7 @@ export const setQueryParams = (params) => {
 }
 
 const Pagination = ({ data = [], clearSearch, searchValue }) => {
+  const {width} = useWindowSize()
   const searchParams = new URLSearchParams(window.location.search)
   const page = searchParams.get('page')
   const tag = searchParams.get('tag')
@@ -71,7 +86,7 @@ const Pagination = ({ data = [], clearSearch, searchValue }) => {
       {' '}
       {tagParam && (
         <>
-          <h5 className="small-margin-toP">
+          <h5 className="small-margin-top">
             Tags: <span className="tag bg-dark border-radius">{tagParam}</span>
           </h5>
         </>
@@ -89,15 +104,17 @@ const Pagination = ({ data = [], clearSearch, searchValue }) => {
         </button>
       )}
       <div
-        className="medium-grid max-w-50"
+        className="medium-grid"
       >
         {paginatedPosts.length ? (
           paginatedPosts.map((post) => (
-            <SinglePost
+            <div style={getMaxWidth(paginatedPosts, width)}>
+              <SinglePost
               key={post.id}
               post={post}
               onClick={(tag) => handleTagClick(tag)}
             />
+            </div>
           ))
         ) : (
           <p>No posts found.</p>
