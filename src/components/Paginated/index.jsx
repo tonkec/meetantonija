@@ -3,7 +3,6 @@ import { removeSpacesAndDashes } from '../../utils'
 import { SinglePost } from '../../pages/PostsPage'
 import { useWindowSize } from '../../hooks/useWindowSize'
 const getMaxWidth = (posts, windowSize) => {
-
   if (windowSize < 768) {
     return { maxWidth: '100%' }
   }
@@ -13,7 +12,6 @@ const getMaxWidth = (posts, windowSize) => {
   }
 
   return { maxWidth: '100%' }
-
 }
 
 export const setQueryParams = (params) => {
@@ -33,7 +31,7 @@ export const setQueryParams = (params) => {
 }
 
 const Pagination = ({ data = [], clearSearch, searchValue }) => {
-  const {width} = useWindowSize()
+  const { width } = useWindowSize()
   const searchParams = new URLSearchParams(window.location.search)
   const page = searchParams.get('page')
   const tag = searchParams.get('tag')
@@ -103,17 +101,15 @@ const Pagination = ({ data = [], clearSearch, searchValue }) => {
           Clear all filters
         </button>
       )}
-      <div
-        className="medium-grid"
-      >
+      <div className="medium-grid">
         {paginatedPosts.length ? (
           paginatedPosts.map((post) => (
             <div style={getMaxWidth(paginatedPosts, width)}>
               <SinglePost
-              key={post.id}
-              post={post}
-              onClick={(tag) => handleTagClick(tag)}
-            />
+                key={post.id}
+                post={post}
+                onClick={(tag) => handleTagClick(tag)}
+              />
             </div>
           ))
         ) : (

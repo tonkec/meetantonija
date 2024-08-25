@@ -100,8 +100,6 @@
   grid-gap: var(--grid-gap);
   @include breakpoint(xs) {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-  
   }
   @include breakpoint(sm) {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
