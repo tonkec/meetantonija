@@ -1,20 +1,10 @@
-import { useEffect, useMemo } from 'react'
 import Toggle from 'react-toggle'
-import { useLocalStorage } from '@uidotdev/usehooks'
 import 'react-toggle/style.css'
 import './DarkMode.scss'
+import useIsDarkMode from '../../hooks/useIsDarkMode'
 
 const DarkMode = () => {
-  const [isDarkLocalStorage, saveIsDark] = useLocalStorage('dark-mode', false)
-  const value = useMemo(() => !!isDarkLocalStorage, [isDarkLocalStorage])
-
-  useEffect(() => {
-    if (value) {
-      document.documentElement.classList.add('dark-theme')
-    } else {
-      document.documentElement.classList.remove('dark-theme')
-    }
-  }, [value])
+  const [isDarkLocalStorage, saveIsDark] = useIsDarkMode()
 
   return (
     <div className="small-padding">
