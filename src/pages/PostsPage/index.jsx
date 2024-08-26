@@ -11,7 +11,10 @@ const sortedPosts = posts.sort((a, b) => {
 
 export const SinglePost = ({ post, onClick }) => {
   return (
-    <div key={post.id} className="bg-black small-padding border-radius h-full">
+    <div
+      key={post.id}
+      className="bg-black small-padding border-radius h-full flex flex-wrap flex-y-center"
+    >
       <span className="flex flex-y-center small-margin-bottom flex-gap-small">
         <Image
           src="https://avatars.githubusercontent.com/u/5020758?v=4"
