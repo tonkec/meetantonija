@@ -12,7 +12,7 @@ const notes = [
     level: 'beginner',
     tags: 'Javascript, Arrays, Methods',
     title: 'Group by method',
-    subtitle: 'Group array elements by a key',
+    subtitle: 'Group array elements by any property',
     id: 8,
     icon: () => <FaRobot />,
     intro:
