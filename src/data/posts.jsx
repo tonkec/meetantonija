@@ -7,6 +7,16 @@ import { FaPlus } from 'react-icons/fa'
 
 const notes = [
   {
+    date: '2024-01-15',
+    author: 'Antonija Šimić',
+    level: 'beginner',
+    tags: 'Javascript, Algorithms',
+    title: 'All about reduce',
+    subtitle: 'Decrease the complexity of your code',
+    id: 9,
+    icon: () => <FaRobot />,
+  },
+  {
     date: '2024-06-21',
     author: 'Antonija Šimić',
     level: 'beginner',

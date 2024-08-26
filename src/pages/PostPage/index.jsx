@@ -113,6 +113,11 @@ const PostPage = () => {
               <h4 className="post-container medium-margin-top">{children}</h4>
             )
           },
+          h5({ children }) {
+            return (
+              <h5 className="post-container medium-margin-top">{children}</h5>
+            )
+          },
           b({ children }) {
             return <b className="bols">{children}</b>
           },
@@ -174,17 +179,22 @@ const PostPage = () => {
 
       <section className="post-container">
         <div className="extra-large-margin-top large-margin-bottom">
+          <div className="flex flex-gap flex-responsive">
           {shuffleArray(otherPosts)
-            .slice(0, 1)
+            .slice(0, 2)
             .map((post) => (
-              <SinglePost
+              <div className="flex-1">
+                <SinglePost
                 key={post.id}
                 post={post}
                 onClick={(tag) => {
                   handleTagClick(tag)
                 }}
               />
+              </div>
             ))}
+          </div>
+          
         </div>
       </section>
     </div>
