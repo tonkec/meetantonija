@@ -4,6 +4,8 @@ import { GiSpiderWeb } from 'react-icons/gi'
 import { BsQuestionSquare } from 'react-icons/bs'
 import { FaSortAlphaDown } from 'react-icons/fa'
 import { FaPlus } from 'react-icons/fa'
+import { MdDataArray } from "react-icons/md";
+import { FaUserGroup } from "react-icons/fa6";
 
 const notes = [
   {
@@ -24,7 +26,7 @@ const notes = [
     title: 'Group by method',
     subtitle: 'New method in Javascript',
     id: 8,
-    icon: () => <FaRobot />,
+    icon: () => <FaUserGroup />,
     intro:
       'I have been using group by method for a while now. But I never really understood how it works. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. Group by method is a method that is used to group array elements by a key. It is a very useful method when you want to group array elements by some property.',
   },
@@ -36,7 +38,7 @@ const notes = [
     title: 'Spread and rest operator',
     subtitle: 'What is the difference?',
     id: 0,
-    icon: () => <FaRobot />,
+    icon: () => <MdDataArray />,
     intro:
       'I have been using spread and rest operator for a while now. But I never really understood the difference between them. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. Spread operator is used to split up array elements or object properties. Rest operator is used to merge a list of function arguments into an array.',
   },
