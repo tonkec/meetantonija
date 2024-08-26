@@ -7,6 +7,18 @@ import { FaPlus } from 'react-icons/fa'
 
 const notes = [
   {
+    date: '2024-06-21',
+    author: 'Antonija Šimić',
+    level: 'beginner',
+    tags: 'Javascript, Arrays, Methods',
+    title: 'Group by method',
+    subtitle: 'Group array elements by a key',
+    id: 8,
+    icon: () => <FaRobot />,
+    intro:
+      'I have been using group by method for a while now. But I never really understood how it works. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. Group by method is a method that is used to group array elements by a key. It is a very useful method when you want to group array elements by some property.',
+  },
+  {
     date: '2024-08-26',
     author: 'Antonija Šimić',
     level: 'beginner',
