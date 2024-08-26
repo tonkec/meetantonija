@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { removeSpacesAndDashes } from '../../utils'
+import { removeSpacesAndDashes } from 'utils'
 import { SinglePost } from 'pages/PostsPage'
 import { useWindowSize } from 'hooks/useWindowSize'
 const getMaxWidth = (posts, windowSize) => {

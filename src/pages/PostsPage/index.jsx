@@ -13,7 +13,7 @@ export const SinglePost = ({ post, onClick }) => {
   return (
     <div
       key={post.id}
-      className="bg-black small-padding border-radius h-full flex flex-wrap flex-y-center"
+      className="bg-black small-padding border-radius h-full"
     >
       <span className="flex flex-y-center small-margin-bottom flex-gap-small">
         <Image
