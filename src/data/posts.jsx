@@ -7,7 +7,7 @@ import { FaPlus } from 'react-icons/fa'
 
 const notes = [
   {
-    date: '2024-26-08',
+    date: '2024-08-26',
     author: 'Antonija Šimić',
     level: 'beginner',
     tags: 'Javascript, Arrays, Rest',
