@@ -85,7 +85,7 @@ const Pagination = ({ data = [], clearSearch, searchValue }) => {
       {tagParam && (
         <>
           <h5 className="small-margin-top">
-            Tags: <span className="tag bg-dark border-radius">{tagParam}</span>
+            Tag: <span className="tag bg-dark border-radius">{tagParam}</span>
           </h5>
         </>
       )}
