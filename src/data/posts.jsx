@@ -7,6 +7,18 @@ import { FaPlus } from 'react-icons/fa'
 
 const notes = [
   {
+    date: '2024-26-08',
+    author: 'Antonija Šimić',
+    level: 'beginner',
+    tags: 'Javascript, Arrays, Rest',
+    title: 'Spread and rest operator',
+    subtitle: 'What is the difference?',
+    id: 0,
+    icon: () => <FaRobot />,
+    intro:
+      'I have been using spread and rest operator for a while now. But I never really understood the difference between them. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. Spread operator is used to split up array elements or object properties. Rest operator is used to merge a list of function arguments into an array.',
+  },
+  {
     date: '2021-09-01',
     author: 'Antonija Šimić',
     level: 'beginner',

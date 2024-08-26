@@ -7,4 +7,3 @@
 7. why do we need keys in react
 8. sta je singleton
 9. rel=”noreferrer”
-10. a/b testing

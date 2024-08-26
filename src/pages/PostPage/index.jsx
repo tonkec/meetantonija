@@ -108,13 +108,14 @@ const PostPage = () => {
               </header>
             )
           },
-
           h4({ children }) {
             return (
               <h4 className="post-container medium-margin-top">{children}</h4>
             )
           },
-
+          b({ children }) {
+            return <b className="bols">{children}</b>
+          },
           p({ children }) {
             return (
               <p className="post-container medium-margin-top">{children}</p>
