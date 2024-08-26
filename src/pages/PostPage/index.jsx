@@ -180,21 +180,20 @@ const PostPage = () => {
       <section className="post-container">
         <div className="extra-large-margin-top large-margin-bottom">
           <div className="flex flex-gap flex-responsive">
-          {shuffleArray(otherPosts)
-            .slice(0, 2)
-            .map((post) => (
-              <div className="flex-1">
-                <SinglePost
-                key={post.id}
-                post={post}
-                onClick={(tag) => {
-                  handleTagClick(tag)
-                }}
-              />
-              </div>
-            ))}
+            {shuffleArray(otherPosts)
+              .slice(0, 2)
+              .map((post) => (
+                <div className="flex-1">
+                  <SinglePost
+                    key={post.id}
+                    post={post}
+                    onClick={(tag) => {
+                      handleTagClick(tag)
+                    }}
+                  />
+                </div>
+              ))}
           </div>
-          
         </div>
       </section>
     </div>

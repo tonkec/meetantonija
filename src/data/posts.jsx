@@ -4,8 +4,8 @@ import { GiSpiderWeb } from 'react-icons/gi'
 import { BsQuestionSquare } from 'react-icons/bs'
 import { FaSortAlphaDown } from 'react-icons/fa'
 import { FaPlus } from 'react-icons/fa'
-import { MdDataArray } from "react-icons/md";
-import { FaUserGroup } from "react-icons/fa6";
+import { MdDataArray } from 'react-icons/md'
+import { FaUserGroup } from 'react-icons/fa6'
 
 const notes = [
   {

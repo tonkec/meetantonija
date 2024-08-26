@@ -6,24 +6,24 @@ I want to group this array by year.
 
 ```js
 const languages = [
-    { title: "Project 1 title", year: 2018 },
-    { title: "Project 2 title", year: 2021},
-    { title: "Project 3 title", year: 2018 },
-    { title: "Project 4 title", year: 2021 },
-    { title: "Project 5 title", year: 2020 },
+  { title: 'Project 1 title', year: 2018 },
+  { title: 'Project 2 title', year: 2021 },
+  { title: 'Project 3 title', year: 2018 },
+  { title: 'Project 4 title', year: 2021 },
+  { title: 'Project 5 title', year: 2020 },
 ]
 ```
- 
+
 Instead of using `reduce` and `Object.values` methods
 
 ```js
 const sortedLanguages = Object.values(
   languages.reduce((acc, language) => {
     if (!acc[language.year]) {
-      acc[language.year] = [];
+      acc[language.year] = []
     }
-    acc[language.year].push(language);
-    return acc;
+    acc[language.year].push(language)
+    return acc
   }, {})
 )
 ```
@@ -31,7 +31,7 @@ const sortedLanguages = Object.values(
 we can simply use `groupBy` method likewise:
 
 ```js
-Object.groupBy(languages, ({ year }) => year);
+Object.groupBy(languages, ({ year }) => year)
 ```
 
 Amazing! Right?
