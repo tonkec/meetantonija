@@ -5,14 +5,22 @@ import { Triangle } from 'react-loader-spinner'
 const PageTransition = () => {
   const pageTransition = useRef(null)
   useEffect(() => {
-    if (pageTransition.current) {
+    const current = pageTransition.current
+    if (current) {
       setTimeout(() => {
-        pageTransition.current.classList.add('enter')
+        current.classList.add('enter')
       }, 100)
 
       setTimeout(() => {
-        pageTransition.current.classList.add('exit')
-      }, 2000)
+        current.classList.remove('enter')
+        current.classList.add('exit')
+      }, 700)
+
+      
+      return () => {
+        current.classList.remove('enter')
+        current.classList.remove('exit')
+      }
     }
   }, [pageTransition])
 

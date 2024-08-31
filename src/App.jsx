@@ -17,7 +17,6 @@ function Layout() {
 
   const [isOutletLoaded, setIsOutletLoaded] = useState(false)
   const location = useLocation()
-  const contentWrapper = useRef(null)
 
   useEffect(() => {
     if (value) {
@@ -34,14 +33,9 @@ function Layout() {
   useEffect(() => {
     setTimeout(() => {
       setIsOutletLoaded(true)
-    }, 2500)
+    }, 1000)
   }, [location])
 
-  useEffect(() => {
-    if (isOutletLoaded) {
-      contentWrapper.current.classList.add('enter')
-    }
-  }, [isOutletLoaded])
 
   if (!isOutletLoaded) {
     return <PageTransition />
@@ -53,13 +47,13 @@ function Layout() {
       <SearchBar />
       <Navigation />
       <JobAlert />
-      <div ref={contentWrapper} className="page-content">
+      <>
         <main>
           <Outlet />
         </main>
         <Emoji />
         <Footer />
-      </div>
+      </>
     </>
   )
 }

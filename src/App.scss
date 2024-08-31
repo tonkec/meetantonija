@@ -11,16 +11,7 @@
 @import './styles/transitions.scss';
 @import './styles/dark_theme.scss';
 
-.page-content {
-  opacity: 0;
-  @include transition(opacity);
-
-  &.enter {
-    opacity: 1;
-  }
-}
 
 main {
-  // padding-top: var(--small-margin);
   padding-bottom: var(--small-margin);
 }
