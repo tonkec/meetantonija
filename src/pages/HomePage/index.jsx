@@ -3,7 +3,6 @@ import Header from './components/Header'
 import Previewer from './components/Previewer'
 import Slider from './components/Slider'
 import Aside from './components/Aside'
-import Code from './components/Code'
 import Videos from './components/Videos/'
 import Steps from './components/Steps'
 import projects from '../../data/projects'
@@ -45,7 +44,6 @@ const HomePage = () => {
       </Helmet>
       <Header />
       <Previewer />
-      <Code />
       <Slider headline="🏢 I work with clients." items={projects} />
 
       <Steps
