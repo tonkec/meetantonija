@@ -46,7 +46,6 @@ function Layout() {
       <ScrollToTop />
       <SearchBar />
       <Navigation />
-      <JobAlert />
       <>
         <main>
           <Outlet />
