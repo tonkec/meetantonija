@@ -2,7 +2,6 @@
 @import '../../../../styles/transitions.scss';
 .aside-section {
   aside {
-    position: absolute;
     background-color: var(--color-pink);
     right: 0;
     z-index: 9;
@@ -11,9 +10,15 @@
     transform: translateX(110%);
     @include transition(transform);
     color: var(--color-white);
-    top: 0;
+
     bottom: 0;
     max-height: fit-content;
+    @include breakpoint(md) {
+      position: absolute;
+      top: 0;
+      width: 400px;
+    }
+
     @include breakpoint(lg) {
       width: 500px;
     }
