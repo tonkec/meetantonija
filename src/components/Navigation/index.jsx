@@ -11,15 +11,17 @@ import { RiBook2Line } from 'react-icons/ri'
 import { RiBriefcase2Line } from 'react-icons/ri'
 import { RiSettings4Fill } from 'react-icons/ri'
 
-export const NavigationLink = ({ children, href }) => {
+export const NavigationLink = ({ children, href, buttonClassName }) => {
   const [isOpen, setIsOpen] = useState(false)
   const activeLink = window.location.pathname
+  const { width } = useWindowSize()
+  const isMobile = width < 1000
 
   if (href === '/settings') {
     return (
       <>
         <button
-          className="transparent text-white medium-font nav-link"
+          className={`medium-font nav-link ${isMobile ? 'primary' : "secondary"}`}
           onClick={() => {
             setIsOpen(!isOpen)
           }}
@@ -42,7 +44,7 @@ export const NavigationLink = ({ children, href }) => {
       <Link
         to={href}
         role="button"
-        className="transparent text-white medium-font active nav-link"
+        className={`medium-font nav-link active ${buttonClassName}`}
       >
         {children}
       </Link>
@@ -52,7 +54,7 @@ export const NavigationLink = ({ children, href }) => {
     <Link
       to={href}
       role="button"
-      className="transparent text-white medium-font nav-link"
+      className={`medium-font nav-link ${buttonClassName}`}
     >
       {children}
     </Link>
@@ -90,7 +92,7 @@ const navigationLinks = [
 const getNavigationLinks = (navigationLinks) => {
   return navigationLinks.map((link, index) => {
     return (
-      <NavigationLink key={link.href} href={link.href}>
+      <NavigationLink key={link.href} href={link.href} buttonClassName="secondary">
         {index}. {link.label}
       </NavigationLink>
     )
@@ -114,7 +116,7 @@ const Navigation = () => {
             onClick={() => {
               setIsMobileNavigationOpen(!isMobileNavigationOpen)
             }}
-            className="ternary"
+            className="primary"
           >
             <RxHamburgerMenu fontSize="1.5rem" />
           </button>

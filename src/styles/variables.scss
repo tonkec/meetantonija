@@ -1,17 +1,22 @@
-// https://coolors.co/palette/03045e-0077b6-00b4d8-90e0ef-caf0f8
+// https://coolors.co/palette/03045e-0077b6-00b4d8-90e0ef-caf0f8 => staro
+// https://coolors.co/palette/969a97-d6d1cd-e5ece9-c60f7b-f90093
 
 :root {
+  --color-pink: #f90093;
+  --color-rose: #ec72e8;
+  --color-purple: #c8b1ff;
+  --color-sky-blue: #a9e4ff;
   --color-orange: #ff6700;
-  --color-white: #ebebeb;
+  --color-white: #E5ECE9;
   --color-gray: #c0c0c0;
   --color-blue: #00b4d8;
   --color-dark-blue: #0077b6;
-  --color-black: #03045e;
+  --color-black: #554148;
   --color-light-gray: #f5f5f5;
   --color-gray: #dbdbdb;
   --color-brown: #292929;
   --color-block-code: rgb(43, 43, 43);
-  --color-accent: #90e0ef;
+  --color-accent: #a9e4ff; // sky-blue
   --color-red: #ff0000;
   --color-green: #7bd47b;
   --font-family: 'Reddit Mono', monospace;

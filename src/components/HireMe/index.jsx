@@ -4,7 +4,7 @@ import ButtonCopy from 'components/ButtonCopy'
 
 const HireMe = () => {
   return (
-    <div className="bg-black container cta-section border-radius border-radius-none-xs">
+    <div className="bg-pink container cta-section border-radius border-radius-none-xs">
       <h2>Do you have a project in mind?</h2>
       <p>
         If you are interested in working with me, please get in touch via{' '}
