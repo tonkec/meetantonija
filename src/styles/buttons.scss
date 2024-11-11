@@ -31,12 +31,12 @@ input[type='submit'] {
     &:hover,
     &:focus {
       outline: none;
-      background-color: var(--color-rose);
+      background-color: var(--color-pink-dark);
     }
   }
 
   &.secondary {
-    background-color: var(--color-rose);
+    background-color: var(--color-dark-blue);
     color: var(--color-black);
 
     &:hover,
@@ -54,7 +54,7 @@ input[type='submit'] {
     &:hover,
     &:focus {
       outline: none;
-      background-color: var(--color-rose);
+      background-color: #9ac6ef;
       color: var(--color-black);
     }
   }

@@ -18,6 +18,10 @@
   height: calc(100% - 50px); // height of top bar in nav
   flex: 1;
   flex-flow: column;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+
+
   aside {
     width: 200px;
     top: 0;
@@ -26,6 +30,7 @@
     position: absolute;
     padding: var(--card-spacing);
     height: 100%;
+    border-top-left-radius: var(--border-radius);
   }
 
   aside a {
@@ -80,6 +85,8 @@
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
+    border-top-right-radius: var(--border-radius);
+
     @include breakpoint(md) {
       width: calc(100% - 200px);
     }

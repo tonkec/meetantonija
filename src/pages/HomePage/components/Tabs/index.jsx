@@ -7,27 +7,25 @@ const getTabItems = () => {
     return {
       title: hobby.title,
       content: (
-        <div className="text-black">
-          <div className="flex flex-responsive flex-gap">
-            {hobby.projects.map((project, index) => (
-              <div
-                className="flex-1 bg-pink max-w-50 small-padding border-radius"
-                key={index}
-              >
-                <h4>{project.title}</h4>
-                <p>{project.description}</p>
-                <a
-                  href={`/hobby/${project.route}`}
-                  className="small-margin-top ternary inline-block"
-                  role="button"
-                >
-                  {' '}
-                  Read more
-                </a>
-              </div>
-            ))}
+        <div className="flex flex-responsive flex-gap">
+        {hobby.projects.map((project, index) => (
+          <div
+            className="flex-1 bg-pink max-w-50 small-padding border-radius"
+            key={index}
+          >
+            <h4>{project.title}</h4>
+            <p>{project.description}</p>
+            <a
+              href={`/hobby/${project.route}`}
+              className="small-margin-top ternary inline-block"
+              role="button"
+            >
+              {' '}
+              Read more
+            </a>
           </div>
-        </div>
+        ))}
+      </div>
       ),
     }
   })
@@ -63,7 +61,7 @@ const Tabs = () => {
               <label
                 role="button"
                 className={`pointer ${
-                  activeTab === index ? 'primary' : 'ternary'
+                  activeTab === index ? 'secondary' : 'ternary'
                 }`}
                 htmlFor={`tab-${index}`}
               >

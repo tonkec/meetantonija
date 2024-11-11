@@ -4,9 +4,9 @@ import ButtonCopy from 'components/ButtonCopy'
 
 const HireMe = () => {
   return (
-    <div className="bg-pink container cta-section border-radius border-radius-none-xs">
-      <h2>Do you have a project in mind?</h2>
-      <p>
+    <div className="bg-pink large-padding-top large-padding-bottom">
+      <div className="container text-center small-padding "><h2>Do you have a project in mind?</h2>
+      <p className='small-margin-top medium-margin-bottom'>
         If you are interested in working with me, please get in touch via{' '}
         <span data-tooltip-id="email">email</span>.
       </p>
@@ -24,7 +24,7 @@ const HireMe = () => {
 
       <div className="small-margin-top">
         <ButtonCopy text={'Copy Email'} />
-      </div>
+      </div></div>
     </div>
   )
 }

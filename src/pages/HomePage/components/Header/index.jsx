@@ -1,22 +1,20 @@
 import { Tooltip } from 'react-tooltip'
 import Image from 'components/Image'
-import './Header.scss'
-import TypedText from 'components/TypedText'
 
 const Header = () => {
   return (
     <header className="container homepage-header header-padding-top header-padding-bottom">
-      <div className="flex flex-responsive flex-gap align-start">
-        <div>
-          <h1>Hey 👋</h1>
-          <h2>
-            I am <span className="accent">Antonija</span>,
-          </h2>
-          <h3>
-            a frontend developer from{' '}
-            <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>
-          </h3>
-          <TypedText type="p">I  enjoy creating beautiful user interfaces from scratch using HTML, CSS, Javascript and React.</TypedText>
+      <div className="flex flex-responsive space-between flex-gap flex-y-center">
+        <div className='max-w-50'>
+          <h1 className='no-margin-bottom'>Hello!</h1>
+          <h1>
+            I'm <span className="accent">Antonija.</span>
+          </h1>
+          <p>
+            I am frontend developer from{' '}
+            <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>, Croatia. I am  passionate about building beautiful, user-friendly web experiences. I craft interfaces that are not only visually engaging but also highly functional.
+          </p>
+         
         </div>
 
         <Image
@@ -25,11 +23,21 @@ const Header = () => {
           hasColoredBackground
         />
       </div>
+      
+      <div className="flex small-margin-top flex-gap-small">
+        <button className='primary'>
+          Contact
+        </button>
+
+        <button className='ternary'>
+          Download CV
+        </button>
+      </div>
 
       <Tooltip
         id="my-tooltip"
         style={{
-          backgroundColor: 'var(--color-black)',
+          backgroundColor: 'var(--color-pink)',
           padding: '10px',
           borderRadius: '5px',
         }}
@@ -40,7 +48,7 @@ const Header = () => {
           alt="Sveta Nedelja"
         />
         <br />
-        <span>A small town in Croatia.</span>
+        <span>A small town near the capital.</span>
       </Tooltip>
     </header>
   )

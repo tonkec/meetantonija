@@ -13,7 +13,7 @@ const AsideContent = ({ noteContent }) => {
       <span>{noteContent.intro && truncateString(noteContent.intro, 200)}</span>
       <br />
       <button
-        className="ternary small-margin-top small-margin-bottom"
+        className="secondary small-margin-top small-margin-bottom"
         onClick={() => {
           window.location.href = `/post/${formatNoteTitle(noteContent.title)}`
         }}
@@ -27,16 +27,16 @@ const AsideContent = ({ noteContent }) => {
 const Aside = ({ numberOfPosts }) => {
   const [noteContent, setNoteContent] = useState({})
   return (
-    <section className="aside-section bg-black">
+    <section className="aside-section bg-sky-blue">
       <div className="container">
-        <h2>👌 I write about technologies I like.</h2>
+        <h2 className='text-black'>👌 I write about technologies I like.</h2>
       </div>
       <div className="container overflow-x-hidden relative flex flex-column">
         {shuffledNotes.slice(0, numberOfPosts).map((note) => {
           return (
             <button
               key={note.id}
-              className="max-w-50-md block secondary text-left small-margin-bottom"
+              className="max-w-50-md block primary text-left small-margin-bottom"
               onClick={() => {
                 setNoteContent(note)
               }}

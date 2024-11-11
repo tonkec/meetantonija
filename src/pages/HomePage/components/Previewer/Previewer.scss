@@ -21,17 +21,11 @@ iframe {
 
     &:hover,
     &.active {
-      background-color: var(--color-sky-blue);
       transform: translateX(10px);
-      color: var(--color-black);
-
-      .icon {
-        color: var(--color-black);
-      }
     }
 
     .icon {
-      color: var(--color-black);
+      color: var(--color-white);
       position: absolute;
       top: 50%;
       transform: translateY(-50%);

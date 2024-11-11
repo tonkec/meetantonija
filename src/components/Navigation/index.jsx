@@ -14,14 +14,12 @@ import { RiSettings4Fill } from 'react-icons/ri'
 export const NavigationLink = ({ children, href, buttonClassName }) => {
   const [isOpen, setIsOpen] = useState(false)
   const activeLink = window.location.pathname
-  const { width } = useWindowSize()
-  const isMobile = width < 1000
 
   if (href === '/settings') {
     return (
       <>
         <button
-          className={`medium-font nav-link ${isMobile ? 'primary' : "secondary"}`}
+          className={`medium-font nav-link primary`}
           onClick={() => {
             setIsOpen(!isOpen)
           }}
@@ -92,7 +90,7 @@ const navigationLinks = [
 const getNavigationLinks = (navigationLinks) => {
   return navigationLinks.map((link, index) => {
     return (
-      <NavigationLink key={link.href} href={link.href} buttonClassName="secondary">
+      <NavigationLink key={link.href} href={link.href} buttonClassName="primary">
         {index}. {link.label}
       </NavigationLink>
     )
@@ -124,7 +122,7 @@ const Navigation = () => {
           <div className="flex">{getNavigationLinks(navigationLinks)}</div>
         )}
 
-        <p className="medium-margin-right hidden-mobile">
+        <p className="medium-margin-right hidden-mobile text-white">
           Shift + K
         </p>
       </div>
