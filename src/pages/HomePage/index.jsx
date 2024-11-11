@@ -35,6 +35,12 @@ const testimonials = [
     project: 'TINT',
     avatar: rootImageUrl + 'testimonials/daniel.jpeg',
   },
+  {
+    content: "Antonija has demonstrated a strong command of React Native, consistently creating smooth, functional mobile applications with a keen attention to UI/UX detail. Leveraging React Native’s core strengths, Antonija adept at building cross-platform apps that perform seamlessly on both iOS and Android.",
+    author: 'Dražen Lučanin',
+    project: 'Craftstrom',
+    avatar: rootImageUrl + 'testimonials/daniel.jpeg',
+  }
 ]
 
 const HomePage = () => {
@@ -115,7 +121,7 @@ const HomePage = () => {
       <section>
         <div className="container">
           <h2>🗣 What they say about me.</h2>
-          <div className="grid grid-auto-rows">
+          <div className="grid">
             {testimonials.map((testimonial, index) => (
               <Testimonial key={index} testimonial={testimonial} />
             ))}
