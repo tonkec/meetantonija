@@ -17,7 +17,7 @@ const getTabItems = () => {
               <p>{project.description}</p>
               <a
                 href={`/hobby/${project.route}`}
-                className="small-margin-top ternary inline-block"
+                className="small-margin-top secondary inline-block"
                 role="button"
               >
                 {' '}
@@ -61,7 +61,7 @@ const Tabs = () => {
               <label
                 role="button"
                 className={`pointer ${
-                  activeTab === index ? 'secondary' : 'ternary'
+                  activeTab === index ? 'primary' : 'ternary'
                 }`}
                 htmlFor={`tab-${index}`}
               >

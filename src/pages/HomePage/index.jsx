@@ -123,7 +123,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <Aside numberOfPosts={2} />
+      <Aside numberOfPosts={3} />
 
       <Videos />
 

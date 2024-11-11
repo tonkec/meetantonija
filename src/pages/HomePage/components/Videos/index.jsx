@@ -16,7 +16,7 @@ const Videos = () => {
               rel="noreferrer"
               target="_blank"
               role="button"
-              className="ternary pull-right inline-block text-center max-w-150"
+              className="secondary pull-right inline-block text-center max-w-150"
             >
               Watch video
             </a>

@@ -43,9 +43,10 @@ h6 {
 }
 
 p,
-span {
+span, q {
   font-size: 1rem;
   line-height: 1.4;
+  font-family: var(--font-family);
   @include breakpoint(lg) {
     line-height: 1.6;
   }
