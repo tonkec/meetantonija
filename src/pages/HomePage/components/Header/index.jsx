@@ -14,12 +14,9 @@ const Header = () => {
           </h2>
           <h3>
             a frontend developer from{' '}
-            <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>,
+            <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>
           </h3>
-          <TypedText type="p">
-            I enjoy creating beautiful user interfaces from scratch using HTML,
-            CSS, Javascript and React.
-          </TypedText>
+          <TypedText type="p">I  enjoy creating beautiful user interfaces from scratch using HTML, CSS, Javascript and React.</TypedText>
         </div>
 
         <Image

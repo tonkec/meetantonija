@@ -1,33 +1,34 @@
-import { typeString } from 'utils'
+import { useEffect, useState } from 'react'
 
-const typingSpeed = 20
+const TypedText = ({ children, type, speed =20 }) => {
+  const [text, setText] = useState('');
 
-const TypedText = ({ children, type }) => {
-  if (type === 'h1') {
-    return <h1 className="typed-text">{typeString(children, typingSpeed)}</h1>
-  }
+  useEffect(() => {
+    if (!children) return;
 
-  if (type === 'h2') {
-    return <h2 className="typed-text">{typeString(children, typingSpeed)}</h2>
-  }
+    const textArray = children.split("");
+    let i = 0;
 
-  if (type === 'h3') {
-    return <h3 className="typed-text">{typeString(children, typingSpeed)}</h3>
-  }
+    const interval = setInterval(() => {
+      if (i < textArray.length -1) {
+        setText((prev) => prev + textArray[i]);
+        i++;
+      } else {
+        clearInterval(interval);
+      }
+    }, speed);
 
-  if (type === 'h4') {
-    return <h4 className="typed-text">{typeString(children, typingSpeed)}</h4>
-  }
+    return () => clearInterval(interval);
+  }, [children, speed]);
 
-  if (type === 'h5') {
-    return <h5 className="typed-text">{typeString(children, typingSpeed)}</h5>
-  }
+  if (type === 'h1') return <h1 className="typed-text">{text}</h1>;
+  if (type === 'h2') return <h2 className="typed-text">{text}</h2>;
+  if (type === 'h3') return <h3 className="typed-text">{text}</h3>;
+  if (type === 'h4') return <h4 className="typed-text">{text}</h4>;
+  if (type === 'h5') return <h5 className="typed-text">{text}</h5>;
+  if (type === 'h6') return <h6 className="typed-text">{text}</h6>;
 
-  if (type === 'h6') {
-    return <h6 className="typed-text">{typeString(children, typingSpeed)}</h6>
-  }
-
-  return <p className="typed-text">{typeString(children, typingSpeed)}</p>
-}
+  return <p className="typed-text">{text}</p>;
+};
 
 export default TypedText

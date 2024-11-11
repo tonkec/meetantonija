@@ -34,20 +34,6 @@ export const scrollToTheElement = (id) => {
   element.scrollIntoView({ behavior: 'smooth' })
 }
 
-export const typeString = (string, speed) => {
-  const text = string.split('')
-  setTimeout(() => {
-    for (let i = 0; i < text.length; i++) {
-      setTimeout(() => {
-        const elements = document.getElementsByClassName('typed-text')
-        Array.from(elements).forEach((element) => {
-          element.innerHTML += text[i]
-        })
-      }, speed * i)
-    }
-  }, 200)
-}
-
 export const removeSpacesAndDashes = (string) => {
   return string.toLowerCase().replace(/\s/g, '').replace(/-/g, '')
 }
