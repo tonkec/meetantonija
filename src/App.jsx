@@ -36,7 +36,6 @@ function Layout() {
     }, 1000)
   }, [location])
 
-
   if (!isOutletLoaded) {
     return <PageTransition />
   }

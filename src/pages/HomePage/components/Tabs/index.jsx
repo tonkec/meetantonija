@@ -8,24 +8,24 @@ const getTabItems = () => {
       title: hobby.title,
       content: (
         <div className="flex flex-responsive flex-gap">
-        {hobby.projects.map((project, index) => (
-          <div
-            className="flex-1 bg-pink max-w-50 small-padding border-radius"
-            key={index}
-          >
-            <h4>{project.title}</h4>
-            <p>{project.description}</p>
-            <a
-              href={`/hobby/${project.route}`}
-              className="small-margin-top ternary inline-block"
-              role="button"
+          {hobby.projects.map((project, index) => (
+            <div
+              className="flex-1 bg-pink max-w-50 small-padding border-radius"
+              key={index}
             >
-              {' '}
-              Read more
-            </a>
-          </div>
-        ))}
-      </div>
+              <h4>{project.title}</h4>
+              <p>{project.description}</p>
+              <a
+                href={`/hobby/${project.route}`}
+                className="small-margin-top ternary inline-block"
+                role="button"
+              >
+                {' '}
+                Read more
+              </a>
+            </div>
+          ))}
+        </div>
       ),
     }
   })

@@ -16,7 +16,6 @@ const PageTransition = () => {
         current.classList.add('exit')
       }, 700)
 
-      
       return () => {
         current.classList.remove('enter')
         current.classList.remove('exit')

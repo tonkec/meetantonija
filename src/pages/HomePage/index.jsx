@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet'
 import Tabs from './components/Tabs'
 import Testimonial from './components/Testimonial'
 import { useCallback, useRef } from 'react'
-import { FaChevronDown } from "react-icons/fa6";
+import { FaChevronDown } from 'react-icons/fa6'
 
 import { rootImageUrl } from '../../rootImageUrl'
 import { removeSpacesAndDashes } from 'utils'
@@ -38,11 +38,11 @@ const testimonials = [
 ]
 
 const HomePage = () => {
-  const myRef = useRef(null);
+  const myRef = useRef(null)
 
   const handleScrollToElement = useCallback(() => {
-    myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, []);
+    myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }, [])
   return (
     <>
       <Helmet>
@@ -51,38 +51,63 @@ const HomePage = () => {
       <Header />
 
       <div className="container">
-      <div className="text-center">
-        <FaChevronDown onClick={() => handleScrollToElement()}  className='pointer' fontSize={50}  color='var(--color-pink)' />
+        <div className="text-center">
+          <FaChevronDown
+            onClick={() => handleScrollToElement()}
+            className="pointer"
+            fontSize={50}
+            color="var(--color-pink)"
+          />
+        </div>
       </div>
-      </div>
-     
-      <Previewer/>
+
+      <Previewer />
       <section className="">
         <div className="container">
           <h2 className="text-black">🎨 I work on side projects.</h2>
         </div>
         <Tabs />
-      </section> 
-    
+      </section>
+
       <section>
         <div className="container">
           <h2>💼 I work with clients.</h2>
 
           <div className="flex flex-responsive flex-wrap">
-          {projects.sort((a,b) => b.from - a.from).slice(0,4).map((project, index) => (
-            <div className='flex-50 small-padding no-padding-left' key={index}>
-              <h3> {project.title}</h3>
-              <p><b>Headline:</b> {project.headline}</p>
-              <p><b>Position: </b>{project.position}</p>
-              <p><b>About:</b> {project.description}</p>
-              <span className='flex flex-wrap line-height-1'>
-                <b>Skills: </b> {project.skills.split(" ").map((skill, index) => (
-                  <span key={index}>{skill}</span>
-                ))}
-              </span>
-              <a className='primary small-margin-top inline-block' role='button' href={`project/${removeSpacesAndDashes(project.title)}`}>Read more</a>
-              </div>
-          ))}
+            {projects
+              .sort((a, b) => b.from - a.from)
+              .slice(0, 4)
+              .map((project, index) => (
+                <div
+                  className="flex-50 small-padding no-padding-left"
+                  key={index}
+                >
+                  <h3> {project.title}</h3>
+                  <p>
+                    <b>Headline:</b> {project.headline}
+                  </p>
+                  <p>
+                    <b>Position: </b>
+                    {project.position}
+                  </p>
+                  <p>
+                    <b>About:</b> {project.description}
+                  </p>
+                  <span className="flex flex-wrap line-height-1">
+                    <b>Skills: </b>{' '}
+                    {project.skills.split(' ').map((skill, index) => (
+                      <span key={index}>{skill}</span>
+                    ))}
+                  </span>
+                  <a
+                    className="primary small-margin-top inline-block"
+                    role="button"
+                    href={`project/${removeSpacesAndDashes(project.title)}`}
+                  >
+                    Read more
+                  </a>
+                </div>
+              ))}
           </div>
         </div>
       </section>
@@ -100,16 +125,9 @@ const HomePage = () => {
 
       <Aside numberOfPosts={2} />
 
-       
       <Videos />
 
-     
-    
-
       <HireMe />
-
-
-      
     </>
   )
 }

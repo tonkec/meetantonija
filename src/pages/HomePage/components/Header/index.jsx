@@ -5,16 +5,18 @@ const Header = () => {
   return (
     <header className="container homepage-header header-padding-top header-padding-bottom">
       <div className="flex flex-responsive space-between flex-gap flex-y-center">
-        <div className='max-w-50'>
-          <h1 className='no-margin-bottom'>Hello!</h1>
+        <div className="max-w-50">
+          <h1 className="no-margin-bottom">Hello!</h1>
           <h1>
             I'm <span className="accent">Antonija.</span>
           </h1>
           <p>
             I am frontend developer from{' '}
-            <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>, Croatia. I am  passionate about building beautiful, user-friendly web experiences. I craft interfaces that are not only visually engaging but also highly functional.
+            <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>, Croatia. I
+            am passionate about building beautiful, user-friendly web
+            experiences. I craft interfaces that are not only visually engaging
+            but also highly functional.
           </p>
-         
         </div>
 
         <Image
@@ -23,15 +25,11 @@ const Header = () => {
           hasColoredBackground
         />
       </div>
-      
-      <div className="flex small-margin-top flex-gap-small">
-        <button className='primary'>
-          Contact
-        </button>
 
-        <button className='ternary'>
-          Download CV
-        </button>
+      <div className="flex small-margin-top flex-gap-small">
+        <button className="primary">Contact</button>
+
+        <button className="ternary">Download CV</button>
       </div>
 
       <Tooltip

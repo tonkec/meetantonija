@@ -14,7 +14,11 @@ const MobileNavigation = ({ isOpen, links, onClose, isSettings }) => {
           <DarkMode />
         ) : (
           links.map((link, index) => (
-            <NavigationLink key={index} href={link.href} buttonClassName="primary">
+            <NavigationLink
+              key={index}
+              href={link.href}
+              buttonClassName="primary"
+            >
               <span className="flex flex-y-center flex-gap-small">
                 {index}. {link.label} {link.icon}
               </span>
