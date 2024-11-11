@@ -23,10 +23,11 @@ const Header = () => {
           src="https://avatars.githubusercontent.com/u/5020758?v=4"
           alt="Antonija"
           hasColoredBackground
+          className="hidden-mobile"
         />
       </div>
 
-      <div className="flex small-margin-top flex-gap-small">
+      <div className="flex flex-gap-small small-margin-top">
         <button className="primary">Contact</button>
 
         <button className="ternary">Download CV</button>
@@ -38,6 +39,7 @@ const Header = () => {
           backgroundColor: 'var(--color-pink)',
           padding: '10px',
           borderRadius: '5px',
+          maxWidth: '300px',
         }}
         className="tooltip"
       >

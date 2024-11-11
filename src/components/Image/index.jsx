@@ -40,7 +40,7 @@ const Image = ({
 
   if (hasColoredBackground) {
     return (
-      <div className="image-container" style={style} onClick={onClick}>
+      <div className={`image-container ${className}`} style={style} onClick={onClick}>
         <img src={src} alt={alt} />
       </div>
     )
