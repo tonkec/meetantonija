@@ -46,42 +46,9 @@ const HomePage = () => {
       <Previewer />
       <Slider headline="🏢 I work with clients." items={projects} />
 
-      <Steps
-        headline={'🚀 My development process.'}
-        steps={[
-          {
-            title: 'Understand the problem',
-            description: 'Understanding the problem is half the solution.',
-          },
-          {
-            title: 'Plan',
-            description: 'Plan the solution and create a roadmap.',
-          },
-          {
-            title: 'Investigate',
-            description:
-              'Check the codebase, explore the web, read the documentation, ask the team.',
-          },
-          {
-            title: 'Code',
-            description:
-              'Write the code in a clean manner. Junior and senior should both understand it.',
-          },
-          {
-            title: 'Test',
-            description: 'Test the code, increase coverage.',
-          },
-          {
-            title: 'Deliver',
-            description:
-              'Deliver the solution to the client. Make sure it is working as expected.',
-          },
-        ]}
-      />
-
       <section>
         <div className="container">
-          <h2>🗣 What clients say about me.</h2>
+          <h2>🗣 What they say about me.</h2>
           <div className="grid">
             {testimonials.map((testimonial, index) => (
               <Testimonial key={index} testimonial={testimonial} />
@@ -90,9 +57,9 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="bg-blue">
+      <section className="bg-rose">
         <div className="container">
-          <h2 className="text-black">🎨 I work on side projects.</h2>
+          <h2 className="text-white">🎨 I work on side projects.</h2>
         </div>
         <Tabs />
       </section>
