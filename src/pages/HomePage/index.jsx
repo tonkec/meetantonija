@@ -115,7 +115,7 @@ const HomePage = () => {
       <section>
         <div className="container">
           <h2>🗣 What they say about me.</h2>
-          <div className="grid">
+          <div className="grid grid-auto-rows">
             {testimonials.map((testimonial, index) => (
               <Testimonial key={index} testimonial={testimonial} />
             ))}

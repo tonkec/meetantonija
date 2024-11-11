@@ -10,7 +10,7 @@ const AsideContent = ({ noteContent }) => {
   }
   return (
     <>
-      <span>{noteContent.intro && truncateString(noteContent.intro, 350)}</span>
+      <span>{noteContent.intro && truncateString(noteContent.intro, 300)}</span>
       <br />
       <button
         className="secondary small-margin-top"

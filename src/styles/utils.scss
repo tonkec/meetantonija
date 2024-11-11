@@ -95,6 +95,10 @@
   grid-gap: var(--grid-gap);
 }
 
+.grid-auto-rows {
+  grid-auto-rows: 1fr;
+}
+
 .medium-grid {
   display: grid;
   grid-gap: var(--grid-gap);

@@ -17,6 +17,7 @@ const notes = [
     subtitle: 'Decrease the complexity of your code',
     id: 9,
     icon: () => <FaRobot />,
+    intro: 'Reduce method is a method that is used to reduce an array to a single value. It is a very useful method when you want to sum up all the elements of an array or when you want to find the maximum or minimum value of an array.',
   },
   {
     date: '2024-06-21',
