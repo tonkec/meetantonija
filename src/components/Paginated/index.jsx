@@ -96,7 +96,7 @@ const Pagination = ({ data = [], clearSearch, searchValue }) => {
             setQueryParams({ search: '', page: 1, tag: '' })
             clearSearch()
           }}
-          className="ternary small-margin-bottom small-margin-top"
+          className="secondary small-margin-bottom small-margin-top"
         >
           Clear all filters
         </button>
@@ -121,7 +121,7 @@ const Pagination = ({ data = [], clearSearch, searchValue }) => {
           <button
             onClick={() => onPageChange(currentPage - 1)}
             disabled={currentPage === 1}
-            className="secondary"
+            className="primary"
           >
             Previous
           </button>
@@ -131,7 +131,7 @@ const Pagination = ({ data = [], clearSearch, searchValue }) => {
           <button
             onClick={() => onPageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
-            className="secondary"
+            className="primary"
           >
             Next
           </button>

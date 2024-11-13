@@ -11,7 +11,7 @@ const sortedPosts = posts.sort((a, b) => {
 
 export const SinglePost = ({ post, onClick }) => {
   return (
-    <div key={post.id} className="bg-black small-padding border-radius h-full">
+    <div key={post.id} className="bg-pink small-padding border-radius h-full">
       <span className="flex flex-y-center small-margin-bottom flex-gap-small">
         <Image
           src="https://avatars.githubusercontent.com/u/5020758?v=4"
@@ -43,7 +43,7 @@ export const SinglePost = ({ post, onClick }) => {
 
       <span className="flex align-start flex-gap space-between medium-margin-top">
         <a
-          className="secondary xs-padding border-radius inline-block no-underline normal-font"
+          className="ternary xs-padding border-radius inline-block no-underline"
           href={`/post/${formatNoteTitle(post.title.toLowerCase())}`}
           role="button"
         >
