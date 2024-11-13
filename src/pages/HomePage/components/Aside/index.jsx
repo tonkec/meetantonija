@@ -46,7 +46,11 @@ const Aside = ({ numberOfPosts }) => {
             </button>
           )
         })}
-        <aside className={noteContent.intro ? 'show border-radius' : 'hide border-radius'}>
+        <aside
+          className={
+            noteContent.intro ? 'show border-radius' : 'hide border-radius'
+          }
+        >
           <IoMdClose
             className="block small-margin-bottom pointer"
             onClick={() => {

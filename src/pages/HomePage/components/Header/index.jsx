@@ -1,5 +1,7 @@
 import { Tooltip } from 'react-tooltip'
 import Image from 'components/Image'
+import cv from 'files/cv.pdf'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -28,9 +30,23 @@ const Header = () => {
       </div>
 
       <div className="flex flex-gap-small small-margin-top">
-        <button className="primary">Contact</button>
+        <a
+          className="primary"
+          role="button"
+          href="mailto:antonija1023@gmail.com"
+        >
+          Contact
+        </a>
 
-        <button className="ternary">Download CV</button>
+        <Link
+          to={cv}
+          target="_blank"
+          download
+          role="button"
+          className="ternary inline-block"
+        >
+          Download CV
+        </Link>
       </div>
 
       <Tooltip
