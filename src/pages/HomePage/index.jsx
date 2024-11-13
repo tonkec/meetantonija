@@ -67,7 +67,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <Previewer />
+      <Previewer ref={myRef} />
       <section className="">
         <div className="container">
           <h2 className="text-black">🎨 I work on side projects.</h2>
