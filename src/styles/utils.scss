@@ -385,9 +385,11 @@
 }
 
 .max-w-600 {
-  @include breakpoint(lg) {
-    max-width: 600px;
-  }
+  max-width: 600px;
+}
+
+.max-w-320 {
+  max-width: 320px;
 }
 
 .max-w-150 {

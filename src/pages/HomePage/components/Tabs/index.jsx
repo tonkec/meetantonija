@@ -10,7 +10,7 @@ const getTabItems = () => {
         <div className="flex flex-responsive flex-gap">
           {hobby.projects.map((project, index) => (
             <div
-              className="flex-1 bg-pink max-w-50 small-padding border-radius"
+              className="max-w-320 flex-1 bg-pink small-padding border-radius"
               key={index}
             >
               <h4>{project.title}</h4>
@@ -41,7 +41,7 @@ const Tab = ({ content }) => {
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(0)
-  const tabItems = getTabItems()
+  const tabItems = getTabItems().reverse()
   return (
     <>
       <div className="container">

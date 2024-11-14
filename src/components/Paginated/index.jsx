@@ -34,7 +34,7 @@ const Pagination = ({
   clearSearch,
   searchValue,
   singleEntry: SingleEntry,
-  postsPerPage = 4
+  postsPerPage = 4,
 }) => {
   const { width } = useWindowSize()
   const searchParams = new URLSearchParams(window.location.search)

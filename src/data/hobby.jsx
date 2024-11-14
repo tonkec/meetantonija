@@ -8,8 +8,8 @@ const hobbyProjects = [
     projects: [
       {
         route: 'hover-effects',
-        title: 'Scss library for hover effects',
-        description: 'A library of hover effects for text elements.',
+        title: 'Scss library',
+        description: 'A library of typography hover effects',
         longDescription:
           "A SCSS library for text hover effects is an invaluable tool for web developers and designers looking to enhance the interactivity and visual appeal of their websites. This library provides a collection of predefined, reusable hover effects specifically tailored for text elements, allowing for a more dynamic and engaging user experience. In modern web design, interactivity plays a crucial role in capturing users' attention and guiding them through a website's content. Text, being a primary medium for communication on the web, can often appear static and unremarkable. However, by adding subtle animations or changes in style when a user hovers over text, designers can create a more immersive and engaging experience. These hover effects can draw attention to important information, indicate interactivity, or simply add a layer of sophistication to the website's design. The SCSS library for text hover effects solves several problems commonly faced in web development. First, it addresses the challenge of maintaining consistency across different pages or sections of a website. With a library of predefined effects, developers can easily apply the same hover animations to multiple text elements without having to rewrite the CSS for each one.  ",
         link: 'https://antonijasimic.bitbucket.io/text_hover_effects/index.html',

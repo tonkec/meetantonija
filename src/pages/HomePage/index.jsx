@@ -112,12 +112,6 @@ const HomePage = () => {
       </div>
 
       <Previewer ref={myRef} />
-      <section className="">
-        <div className="container">
-          <h2 className="text-black">🎨 I work on side projects.</h2>
-        </div>
-        <Tabs />
-      </section>
 
       <section>
         <div className="container">
@@ -144,6 +138,13 @@ const HomePage = () => {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="">
+        <div className="container">
+          <h2 className="text-black">🎨 I work on side projects.</h2>
+        </div>
+        <Tabs />
       </section>
 
       <Aside numberOfPosts={3} />
