@@ -129,6 +129,7 @@ const HomePage = () => {
             clearSearch={() => {
               console.log('Clear  search')
             }}
+            postsPerPage={2}
             singleEntry={(project) => <SingleProject post={project} />}
           />
         </div>

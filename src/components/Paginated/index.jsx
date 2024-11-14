@@ -34,6 +34,7 @@ const Pagination = ({
   clearSearch,
   searchValue,
   singleEntry: SingleEntry,
+  postsPerPage = 4
 }) => {
   const { width } = useWindowSize()
   const searchParams = new URLSearchParams(window.location.search)
@@ -43,8 +44,6 @@ const Pagination = ({
 
   const [paginatedPosts, setPaginatedPosts] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
-
-  const postsPerPage = 4
 
   const filteredData = () => {
     return tagParam

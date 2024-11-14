@@ -473,7 +473,7 @@ const projects = [
     company: 'Supersuperstudio',
     title: 'Peaks',
     headline: 'The best landing page',
-    skills: 'HTML, CSS, Javascript, SCSS, jQuery, Bootstrap',
+    skills: 'Javascript, jQuery, Bootstrap',
     responsibilities: [
       {
         title: 'Static Website Development',
