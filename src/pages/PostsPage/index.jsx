@@ -9,47 +9,56 @@ const sortedPosts = posts.sort((a, b) => {
   return new Date(b.date) - new Date(a.date)
 })
 
-export const SinglePost = ({ post, onClick }) => {
+export const SinglePost = ({ post, onClick}) => {
+  const currentPost = post.data ? post.data : post
+  const onSinglePostClick = post.onClick ? post.onClick : onClick
+
   return (
-    <div key={post.id} className="bg-pink small-padding border-radius h-full">
+    <div
+      key={currentPost.id}
+      className="bg-pink small-padding border-radius h-full"
+    >
       <span className="flex flex-y-center small-margin-bottom flex-gap-small">
         <Image
           src="https://avatars.githubusercontent.com/u/5020758?v=4"
           style={{ width: 50, height: 50, borderRadius: '50%' }}
         />
         <h6>
-          {post.author} | {post.date}{' '}
+          {currentPost.author} | {currentPost.date}{' '}
         </h6>
       </span>
       <span className="inline-block">
-        <h3>{post.title}</h3>
+        <h3>{currentPost.title}</h3>
       </span>
 
-      <p>{post.subtitle}</p>
+      <p>{currentPost.subtitle}</p>
 
-      <p className="small-margin-top flex flex-wrap flex-gap-small">
-        {post.tags.split(', ').map((tag) => (
-          <span
-            key={tag}
-            className="tag bg-dark border-radiu pointer"
-            onClick={() => {
-              onClick(tag)
-            }}
-          >
-            {tag}
-          </span>
-        ))}
-      </p>
-
+      {currentPost.tags && (
+        <p className="small-margin-top flex flex-wrap flex-gap-small">
+          {currentPost.tags.split(', ').map((tag) => (
+            <span
+              key={tag}
+              className="tag bg-dark border-radiu pointer"
+              onClick={() => {
+                onSinglePostClick(tag)
+              }}
+            >
+              {tag}
+            </span>
+          ))}
+        </p>
+      )}
       <span className="flex align-start flex-gap space-between medium-margin-top">
         <a
           className="ternary xs-padding border-radius inline-block no-underline"
-          href={`/post/${formatNoteTitle(post.title.toLowerCase())}`}
+          href={`/post/${formatNoteTitle(currentPost.title.toLowerCase())}`}
           role="button"
         >
           Read post
         </a>
-        <span className="extra-large-font">{post.icon()}</span>
+        {currentPost.hasOwnProperty('icon') && (
+          <span className="extra-large-font">{currentPost.icon()}</span>
+        )}
       </span>
     </div>
   )
@@ -86,6 +95,9 @@ const PostsPage = () => {
           searchValue={search}
           clearSearch={() => {
             setSearch('')
+          }}
+          singleEntry={(post, onClick) => {
+            return <SinglePost post={post} onClick={onClick} />
           }}
         />
       </section>

@@ -30,7 +30,12 @@ export const setQueryParams = (params) => {
   )
 }
 
-const Pagination = ({ data = [], clearSearch, searchValue }) => {
+const Pagination = ({
+  data = [],
+  clearSearch,
+  searchValue,
+  singleEntry: SingleEntry,
+}) => {
   const { width } = useWindowSize()
   const searchParams = new URLSearchParams(window.location.search)
   const page = searchParams.get('page')
@@ -42,26 +47,27 @@ const Pagination = ({ data = [], clearSearch, searchValue }) => {
 
   const postsPerPage = 4
 
-  const filteredData = tagParam
-    ? data.filter((post) =>
-        post.tags
-          .split(', ')
-          .map((t) => removeSpacesAndDashes(t).toLowerCase())
-          .includes(removeSpacesAndDashes(tagParam).toLowerCase())
-      )
-    : data
+  const filteredData = () => {
+    return tagParam
+      ? data.filter((post) => {
+          return post.tags
+            .split(', ')
+            .map((t) => removeSpacesAndDashes(t).toLowerCase())
+            .includes(removeSpacesAndDashes(tagParam).toLowerCase())
+        })
+      : data
+  }
 
-  const totalPages = Math.ceil(filteredData.length / postsPerPage)
+  const totalPages = Math.ceil(filteredData().length / postsPerPage)
 
   useEffect(() => {
     const currentPage = page ? Number(page) : 1
 
     const startIdx = (currentPage - 1) * postsPerPage
     const endIdx = startIdx + postsPerPage
-
-    setPaginatedPosts(filteredData.slice(startIdx, endIdx))
+    setPaginatedPosts(filteredData().slice(startIdx, endIdx))
     setCurrentPage(currentPage)
-  }, [page, tagParam, data])
+  }, [page, data])
 
   const onPageChange = (page) => {
     if (page < 1 || page > totalPages) return
@@ -70,18 +76,15 @@ const Pagination = ({ data = [], clearSearch, searchValue }) => {
     setCurrentPage(page)
   }
 
+  const shouldShowButtons = totalPages > 1
+  const shouldShowClearButton = tagParam !== '' || searchValue !== ''
   const handleTagClick = (tag) => {
     const lowercasedTag = tag.toLowerCase()
     setTagParam(lowercasedTag)
     setQueryParams({ page: 1, tag: lowercasedTag })
   }
-
-  const shouldShowButtons = totalPages > 1
-  const shouldShowClearButton = tagParam !== '' || searchValue !== ''
-
   return (
     <>
-      {' '}
       {tagParam && (
         <>
           <h5 className="small-margin-top">
@@ -103,17 +106,13 @@ const Pagination = ({ data = [], clearSearch, searchValue }) => {
       )}
       <div className="medium-grid">
         {paginatedPosts.length ? (
-          paginatedPosts.map((post) => (
+          paginatedPosts.map((post, index) => (
             <div style={getMaxWidth(paginatedPosts, width)}>
-              <SinglePost
-                key={post.id}
-                post={post}
-                onClick={(tag) => handleTagClick(tag)}
-              />
+              <SingleEntry key={index} data={post} onClick={(tag) => handleTagClick(tag)} />
             </div>
           ))
         ) : (
-          <p>No posts found.</p>
+          <p>No data found.</p>
         )}
       </div>
       {shouldShowButtons && (

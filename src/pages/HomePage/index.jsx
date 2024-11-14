@@ -12,6 +12,7 @@ import { FaChevronDown } from 'react-icons/fa6'
 
 import { rootImageUrl } from '../../rootImageUrl'
 import { removeSpacesAndDashes } from 'utils'
+import Paginated from 'components/Paginated'
 
 const testimonials = [
   {
@@ -80,42 +81,14 @@ const HomePage = () => {
         <div className="container">
           <h2>💼 I work with clients.</h2>
 
-          <div className="flex flex-responsive flex-wrap">
-            {projects
-              .sort((a, b) => b.from - a.from)
-              .slice(0, 4)
-              .map((project, index) => (
-                <div
-                  className="flex-50 small-padding no-padding-left"
-                  key={index}
-                >
-                  <h3> {project.title}</h3>
-                  <p>
-                    <b>Headline:</b> {project.headline}
-                  </p>
-                  <p>
-                    <b>Position: </b>
-                    {project.position}
-                  </p>
-                  <p>
-                    <b>About:</b> {project.description}
-                  </p>
-                  <span className="flex flex-wrap line-height-1">
-                    <b>Skills: </b>{' '}
-                    {project.skills.split(' ').map((skill, index) => (
-                      <span key={index}>{skill}</span>
-                    ))}
-                  </span>
-                  <a
-                    className="primary small-margin-top inline-block"
-                    role="button"
-                    href={`project/${removeSpacesAndDashes(project.title)}`}
-                  >
-                    Read more
-                  </a>
-                </div>
-              ))}
-          </div>
+          <Paginated
+            data={projects}
+            searchValue={''}
+            clearSearch={() => {
+              console.log('Clear  search')
+            }}
+            singleEntry={(project) => <p>{project.data.title}</p>}
+          />
         </div>
       </section>
 
