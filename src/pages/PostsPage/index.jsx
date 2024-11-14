@@ -9,7 +9,7 @@ const sortedPosts = posts.sort((a, b) => {
   return new Date(b.date) - new Date(a.date)
 })
 
-export const SinglePost = ({ post, onClick}) => {
+export const SinglePost = ({ post, onClick }) => {
   const currentPost = post.data ? post.data : post
   const onSinglePostClick = post.onClick ? post.onClick : onClick
 

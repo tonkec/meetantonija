@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { removeSpacesAndDashes } from 'utils'
-import { SinglePost } from 'pages/PostsPage'
 import { useWindowSize } from 'hooks/useWindowSize'
 const getMaxWidth = (posts, windowSize) => {
   if (windowSize < 768) {
@@ -107,8 +106,15 @@ const Pagination = ({
       <div className="medium-grid">
         {paginatedPosts.length ? (
           paginatedPosts.map((post, index) => (
-            <div style={getMaxWidth(paginatedPosts, width)}>
-              <SingleEntry key={index} data={post} onClick={(tag) => handleTagClick(tag)} />
+            <div
+              style={getMaxWidth(paginatedPosts, width)}
+              className="flex flex-column"
+            >
+              <SingleEntry
+                key={index}
+                data={post}
+                onClick={(tag) => handleTagClick(tag)}
+              />
             </div>
           ))
         ) : (

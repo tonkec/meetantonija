@@ -23,7 +23,7 @@ const projects = [
     company: 'PunkRockDev',
     title: 'Zoomero',
     headline: 'Access your data wherever you are',
-    skills: 'Rails, Ruby, HTML, CSS, Javascript',
+    skills: 'Rails, Ruby, Javascript',
     link: 'https://sjgrand.cn/technology/kwikdroid/',
     id: 11,
     description:
@@ -102,8 +102,7 @@ const projects = [
     company: 'Casumo',
     title: 'Casumo',
     headline: 'A friendly online casino',
-    skills:
-      'React, Typescript, graphQl, Contentful, Wordpress, Knockout.js, Keycloak, Jenkins',
+    skills: 'React, Typescript, Contentful, Knockout.js, Keycloak',
     link: 'https://casumo.com/',
     id: 2,
     description:
@@ -337,7 +336,7 @@ const projects = [
     company: 'AsyncLabs',
     title: 'Revuto',
     headline: 'Manage your subscriptions',
-    skills: 'React, Redux, Axios, JavaScript, TypeScript, SCSS, HTML, CSS',
+    skills: 'React, Redux, JavaScript, TypeScript',
     responsibilities: [
       {
         title: 'Platform Development for Revuto',
@@ -402,7 +401,7 @@ const projects = [
     company: 'Code Institute',
     title: 'Code Institute',
     headline: 'A coding bootcamp',
-    skills: 'HTML, CSS, Javascript, Django, Python',
+    skills: 'Javascript, Django, Python',
     link: 'https://codeinstitute.net/global/',
     from: 2016,
     to: 2021,
@@ -620,7 +619,7 @@ const projects = [
     title: 'Funder Pro',
     methodology: 'Scrum',
     headline: 'Make your trading exceptional',
-    skills: 'Javascript, React, Redux, Typescript, React Query',
+    skills: 'Javascript, React, Redux, Typescript',
     link: 'https://prop.funderpro.com/',
     responsibilities: [
       {

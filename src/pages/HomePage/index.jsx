@@ -11,8 +11,50 @@ import { useCallback, useRef } from 'react'
 import { FaChevronDown } from 'react-icons/fa6'
 
 import { rootImageUrl } from '../../rootImageUrl'
-import { removeSpacesAndDashes } from 'utils'
 import Paginated from 'components/Paginated'
+import { removeSpacesAndDashes, truncateString } from 'utils'
+import { useNavigate } from 'react-router-dom'
+
+const SingleProject = ({ post }) => {
+  const navigate = useNavigate()
+  return (
+    <>
+      <article className="flex flex-grow-1 flex-responsive">
+        <div className="bg-pink xs-padding border-top-left-radius">
+          <h5>{post.data.title}</h5>
+          <h6>{post.data.headline}.</h6>
+          <p className="small-margin-top">
+            {truncateString(post.data.conclusion, 300)}
+          </p>
+        </div>
+
+        <div className="bg-pink-dark xs-padding flex-1 border-top-right-radius">
+          <h5 className="small-margin-bottom"> Skills:</h5>
+          {post.data.skills.split(', ').map((skill, index) => (
+            <span
+              key={index}
+              className="tag dark border-radius small-margin-right small-margin-bottom"
+              role="button"
+              onClick={() => {
+                navigate(`/cv?skill=${removeSpacesAndDashes(skill)}`)
+              }}
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </article>
+      <button
+        onClick={() => {
+          navigate(`/project/${removeSpacesAndDashes(post.data.title)}`)
+        }}
+        className="dark w-full no-border-radius border-bottom-left-radius border-bottom-right-radius "
+      >
+        Read more
+      </button>
+    </>
+  )
+}
 
 const testimonials = [
   {
@@ -82,12 +124,12 @@ const HomePage = () => {
           <h2>💼 I work with clients.</h2>
 
           <Paginated
-            data={projects}
+            data={projects.sort((a, b) => b.from - a.from)}
             searchValue={''}
             clearSearch={() => {
               console.log('Clear  search')
             }}
-            singleEntry={(project) => <p>{project.data.title}</p>}
+            singleEntry={(project) => <SingleProject post={project} />}
           />
         </div>
       </section>
