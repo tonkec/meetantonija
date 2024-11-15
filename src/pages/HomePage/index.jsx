@@ -83,7 +83,7 @@ const testimonials = [
       'Antonija has demonstrated a strong command of React Native, consistently creating smooth, functional mobile applications with a keen attention to UI/UX detail. Leveraging React Native’s core strengths, Antonija adept at building cross-platform apps that perform seamlessly on both iOS and Android.',
     author: 'Dražen Lučanin',
     project: 'Craftstrom',
-    avatar: rootImageUrl + 'testimonials/daniel.jpeg',
+    avatar: rootImageUrl + 'testimonials/drazen.jpeg',
   },
 ]
 
