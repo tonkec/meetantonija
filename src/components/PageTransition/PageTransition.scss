@@ -3,7 +3,7 @@
 .page-transition {
   position: fixed;
   inset: 0;
-  background-color: var(--color-black);
+  background-color: var(--color-pink);
   transform: translateX(100%);
   @include transition(transform);
   display: flex;

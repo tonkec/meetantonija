@@ -93,6 +93,7 @@ const HomePage = () => {
   const handleScrollToElement = useCallback(() => {
     myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }, [])
+
   return (
     <>
       <Helmet>
@@ -119,10 +120,6 @@ const HomePage = () => {
 
           <Paginated
             data={projects.sort((a, b) => b.from - a.from)}
-            searchValue={''}
-            clearSearch={() => {
-              console.log('Clear  search')
-            }}
             postsPerPage={2}
             singleEntry={(project) => <SingleProject post={project} />}
           />

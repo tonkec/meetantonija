@@ -31,8 +31,8 @@ export const setQueryParams = (params) => {
 
 const Pagination = ({
   data = [],
-  clearSearch,
-  searchValue,
+  clearSearch = () => {},
+  searchValue = '',
   singleEntry: SingleEntry,
   postsPerPage = 4,
 }) => {
