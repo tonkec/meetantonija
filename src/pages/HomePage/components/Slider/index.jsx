@@ -30,17 +30,20 @@ const Slider = ({ items, headline }) => {
                 <h3>{project.title}</h3>
                 <BrowserFrame>
                   <p className="block">{project.headline}.</p>
+                  <div className="small-margin-bottom small-margin-top">
+                    <Skills
+                      buttonClass="xs-font ternary"
+                      skills={project.skills.split(',')}
+                    />
+                  </div>
                   <a
                     role="button"
-                    className="ternary inline-block"
+                    className="dark inline-block no-margin-top"
                     href={`/project/${removeSpacesAndDashes(project.title.toLowerCase())}`}
                   >
                     Read more
                   </a>
                 </BrowserFrame>
-                <div className="small-margin-top">
-                  <Skills skills={project.skills.split(',')} />
-                </div>
               </div>
             )
           })}

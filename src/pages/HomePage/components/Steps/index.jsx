@@ -1,8 +1,8 @@
 import './Steps.scss'
 
-const Steps = ({ className, steps, headline }) => {
+const Steps = ({ steps, headline }) => {
   return (
-    <section className={className}>
+    <section className="small-padding-top">
       <div className="container">
         <h2>{headline}</h2>
 
@@ -11,12 +11,12 @@ const Steps = ({ className, steps, headline }) => {
             return (
               <div
                 key={index}
-                className="bg-black small-padding text-white border-radius"
+                className="bg-sky-blue small-padding text-white border-radius"
               >
-                <h4 className="small-margin-bottom">
+                <h4 className="small-margin-bottom text-black">
                   {index + 1}. {step.title}
                 </h4>
-                <span>{step.description}</span>
+                <span className="text-black">{step.description}</span>
               </div>
             )
           })}

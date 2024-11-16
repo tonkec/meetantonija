@@ -8,7 +8,7 @@ const Skills = ({ skills, buttonClass }) => {
       {skills.map((s) => (
         <button
           key={s}
-          className={`${buttonClass ? buttonClass : 'ternary'}`}
+          className={`button ${buttonClass}`}
           onClick={() => {
             navigate(`/cv?skill=${removeSpacesAndDashes(s)}`)
           }}

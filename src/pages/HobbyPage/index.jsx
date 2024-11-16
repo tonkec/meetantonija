@@ -3,7 +3,6 @@ import projects from 'data/hobby'
 import { Helmet } from 'react-helmet'
 import Image from 'components/Image'
 import { useState } from 'react'
-import ImageModal from 'components/ImageModal'
 import RecordNotFound from 'components/RecordNotFound'
 import HireMe from 'components/HireMe'
 
@@ -102,13 +101,6 @@ const HobbyPage = () => {
             ))}
           </div>
         </div>
-
-        <ImageModal
-          project={project}
-          isModalOpen={isModalOpen}
-          setIsModalOpen={setIsModalOpen}
-          currentPhoto={currentPhoto}
-        />
       </section>
 
       {project.team && (

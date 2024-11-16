@@ -46,6 +46,10 @@
   padding: var(--card-spacing);
 }
 
+.small-padding-top {
+  padding-top: var(--card-spacing);
+}
+
 .medium-padding {
   padding: calc(var(--card-spacing) * 1.2);
 }
@@ -362,6 +366,10 @@
   font-size: 1rem;
 }
 
+.xs-font {
+  font-size: 0.8rem;
+}
+
 .large-font {
   font-size: 1.5rem;
 }
@@ -435,6 +443,11 @@
 
 .max-w-1000 {
   max-width: 1000px;
+}
+
+.max-w-50-flex {
+  flex-basis: 48%;
+  max-width: 48%;
 }
 
 .absolute {
@@ -513,6 +526,10 @@
 
 .no-margin-bottom {
   margin-bottom: 0 !important;
+}
+
+.no-margin-top {
+  margin-top: 0 !important;
 }
 
 .no-padding {

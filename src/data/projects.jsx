@@ -27,7 +27,7 @@ const projects = [
     link: 'https://sjgrand.cn/technology/kwikdroid/',
     id: 11,
     description:
-      'I was responsible for the development of the Zoomero platform, an online platform for managing your accounts and transactions. My responsibilities included implementing designs from Figma into the Rails frontend, developing user authentication and authorization features, optimizing database queries for performance, and integrating third-party APIs for additional functionality.',
+      'Zoomero is an online platform for managing your bank accounts. I was responsible for the development of the Zoomero platform, an online platform for managing your accounts and transactions. My responsibilities included implementing designs from Figma into the Rails frontend, developing user authentication and authorization features, optimizing database queries for performance, and integrating third-party APIs for additional functionality.',
     responsibilities: [
       {
         title: 'Implemented designs from Figma into Rails frontend',
@@ -72,7 +72,7 @@ const projects = [
       <span>
         My manager was{' '}
         <a
-          className="text-white normal-font"
+          className="text-black"
           href="https://www.linkedin.com/in/metakermit/"
           target="_blank"
           rel="noreferrer"
@@ -89,9 +89,9 @@ const projects = [
   {
     photos: [
       rootImageUrl + 'casumo/1.jpg',
-      rootImageUrl + 'casumo/2.jpg',
-      rootImageUrl + 'casumo/3.jpg',
       rootImageUrl + 'casumo/4.jpg',
+      rootImageUrl + 'casumo/3.jpg',
+      rootImageUrl + 'casumo/2.jpg',
     ],
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
@@ -102,11 +102,11 @@ const projects = [
     company: 'Casumo',
     title: 'Casumo',
     headline: 'A friendly online casino',
-    skills: 'React, Typescript, Contentful, Knockout.js, Keycloak',
+    skills: 'React, Typescript, Contentful, Keycloak',
     link: 'https://casumo.com/',
     id: 2,
     description:
-      'During my tenure as a Senior React Developer at Casumo, an innovative online casino, I played a pivotal role in shaping the frontend architecture and user experience of their gaming platform. With a focus on delivering captivating gaming experiences, I collaborated closely with cross-functional teams to develop cutting-edge features and enhancements.',
+      'Casumo is an online casino with many games to choose from. During my tenure as a Senior React Developer at Casumo, an innovative online casino, I played a pivotal role in shaping the frontend architecture and user experience of their gaming platform. With a focus on delivering captivating gaming experiences, I collaborated closely with cross-functional teams to develop cutting-edge features and enhancements.',
     responsibilities: [
       {
         title: 'Led the migration of the existing codebase',
@@ -151,7 +151,7 @@ const projects = [
       <span>
         My manager was{' '}
         <a
-          className="text-white normal-font"
+          className="text-black"
           href="https://www.linkedin.com/in/armandofernandez/"
           target="_blank"
           rel="noreferrer"
@@ -166,7 +166,6 @@ const projects = [
   },
   {
     photos: [
-      rootImageUrl + 'formunauts/1.png',
       rootImageUrl + 'formunauts/2.png',
       rootImageUrl + 'formunauts/3.png',
       rootImageUrl + 'formunauts/4.png',
@@ -218,7 +217,7 @@ const projects = [
     link: 'https://app.formunauts.com/auth/login',
     id: 3,
     description:
-      "I dove deep into Angular development for the company's platform. My primary role centered around architecting a robust communication framework between the Angular-based user interface and the Raisenow API, which shares similarities with Stripe.",
+      "This app allows users to fund NGOs. I dove deep into Angular development for the company's platform. My primary role centered around architecting a robust communication framework between the Angular-based user interface and the Raisenow API, which shares similarities with Stripe.",
     from: 2019,
     to: 2020,
     team: 30,
@@ -233,7 +232,7 @@ const projects = [
       <span>
         My manager was{' '}
         <a
-          className="text-white normal-font"
+          className="text-black"
           href="https://www.linkedin.com/in/metakermit/"
           target="_blank"
           rel="noreferrer"
@@ -304,14 +303,14 @@ const projects = [
     learned:
       'I learned how to design and implement user interfaces using React Native, handle user authentication and authorization, and utilize AsyncStorage for data management.  I had to solve many responsive design issues',
     description:
-      'I developed the user interface of the Craftstrom mobile app using React Native, ensuring a seamless and visually appealing experience for users. My responsibilities included handling user authentication and authorization, orchestrating Ajax calls to communicate with the backend API, and utilizing AsyncStorage to securely store and manage user tokens. ',
+      'This app connects to the solar system you have in your home and generates data accordingly. I developed the user interface of the Craftstrom mobile app using React Native, ensuring a seamless and visually appealing experience for users. My responsibilities included handling user authentication and authorization, orchestrating Ajax calls to communicate with the backend API, and utilizing AsyncStorage to securely store and manage user tokens. ',
     problem:
       'The most challenging part of the project was solving numerous responsive design issues to ensure the app’s compatibility with various devices and screen sizes, enhancing the user experience and usability of the application.',
     manager: (
       <span>
         My manager was{' '}
         <a
-          className="text-white normal-font"
+          className="text-black"
           href="https://www.linkedin.com/in/metakermit/"
           target="_blank"
           rel="noreferrer"
@@ -372,7 +371,7 @@ const projects = [
     learned:
       'I learned how to work as a single developer and to rely solely on myself, my skills and knowledge. At first, it was challenging, but as I developed stable and scalable architecture, I learned to trust myself as a developer.',
     description:
-      "Revuto was a platform that allowed users to manage their subscriptions efficiently. As the sole developer for Revuto, I played a pivotal role in the platform's evolution, employing technologies such as Axios, interceptors, and React Context to efficiently manage API requests and responses. ",
+      "Revuto is a platform that allowed users to manage their subscriptions efficiently. As the sole developer for Revuto, I played a pivotal role in the platform's evolution, employing technologies such as Axios, interceptors, and React Context to efficiently manage API requests and responses. ",
     problem:
       "The most challenging part of the project was being the sole developer for Revuto, which required me to take on multiple responsibilities and ensure the platform's stability and scalability. I had to rely solely on myself, my skills, and knowledge to develop a robust and efficient architecture.",
     manager: (
@@ -388,8 +387,6 @@ const projects = [
   {
     photos: [
       rootImageUrl + 'codeinstitute/1.png',
-      rootImageUrl + 'codeinstitute/2.png',
-      rootImageUrl + 'codeinstitute/3.png',
       rootImageUrl + 'codeinstitute/4.png',
     ],
     fakeContent: (
@@ -436,14 +433,14 @@ const projects = [
     learned:
       'Scss was core part of the project, so I learned how to use it efficiently, especially when it comes to mixins and functions in scss. It was long before CSS variables were introduced, so I had to rely on scss variables.',
     description:
-      "I was product developer, mentor and front end developer. I was responsible for enhancing the functionality and user experience of Code Institute's Learning Management System (LMS) based on Django. My responsibilities included integrating various new components into the existing LMS, coding the interface of every course module, and optimizing the codebase to enhance performance. ",
+      "Code Institute is an irisih bootcamp where you learn to code, from zero to hero. I was product developer, mentor and front end developer. I was responsible for enhancing the functionality and user experience of Code Institute's Learning Management System (LMS) based on Django. My responsibilities included integrating various new components into the existing LMS, coding the interface of every course module, and optimizing the codebase to enhance performance. ",
     problem:
       'The most challenging part of the project was optimizing the existing LMS codebase to enhance performance, resulting in a cleaner and swifter platform that improved user experience and streamlined backend processes.',
     manager: (
       <span>
         My manager was{' '}
         <a
-          className="text-white normal-font"
+          className="text-black"
           href="https://www.linkedin.com/in/brian-o-grady-18a2153/"
           target="_blank"
           rel="noreferrer"
@@ -461,7 +458,6 @@ const projects = [
     photos: [
       rootImageUrl + 'peaks/1.jpeg',
       rootImageUrl + 'peaks/2.jpeg',
-      rootImageUrl + 'peaks/3.jpeg',
       rootImageUrl + 'peaks/4.jpeg',
     ],
     fakeContent: (
@@ -514,14 +510,14 @@ const projects = [
       "This was my first job in web development so naturally I learned a lot: I customized jQuery libraries and Bootstrap framework. I read Bootstrap's original code which shaped me into a strong css developer.",
     position: 'Junior Frontend Developer',
     description:
-      'I was super excited to work on the Peaks project at Supersuperstudio, where I was responsible for creating impactful online interfaces that aligned with the provided design concepts. My responsibilities included translating static design visuals into fully functional user interfaces using HTML, SCSS, and JavaScript.  ',
+      'Peaks is a landing page template used for marekting. I was super excited to work on the Peaks project at Supersuperstudio, where I was responsible for creating impactful online interfaces that aligned with the provided design concepts. My responsibilities included translating static design visuals into fully functional user interfaces using HTML, SCSS, and JavaScript.  ',
     problem:
       'The most challenging part of the project was implementing parallax scrolling and animations to create a visually stunning and engaging user experience. I had to leverage JavaScript to enhance interactivity and functionality, creating dynamic elements, implementing animations, and facilitating user engagement.',
     manager: (
       <span>
         My manager was{' '}
         <a
-          className="text-white normal-font"
+          className="text-black normal-font"
           href="https://www.linkedin.com/in/mariostipetic/"
           target="_blank"
           rel="noreferrer"
@@ -581,7 +577,7 @@ const projects = [
     learned:
       'In this job I learned how to use many of the CSS3 properties like transform and transitions. I also learned how to use jQuery to create animations and transitions.',
     description:
-      'I had the opportunity to work on the homepage and landing page of their product, contributing to the enhancement of their online presence and user engagement. My responsibilities included implementing pixel-perfect layouts, coding global navigation and footer elements, developing animations and transitions, and collaborating with the team to bring creative ideas to life.  ',
+      'Tint is a platform that allows users to create and manage social media content. I had the opportunity to work on the homepage and landing page of their product, contributing to the enhancement of their online presence and user engagement.My responsibilities included implementing pixel- perfect layouts, coding global navigation and footer elements, developing animations and transitions, and collaborating with the team to bring creative ideas to life.  ',
     problem:
       'The most challenging part of the project was developing animations and transitions from scratch using custom CSS and jQuery/JavaScript. I had to ensure that the animations and transitions were smooth, visually appealing, and enhanced the user experience.',
     manager: (
@@ -603,10 +599,7 @@ const projects = [
     ),
   },
   {
-    photos: [
-      rootImageUrl + 'funderpro/1.png',
-      rootImageUrl + 'funderpro/2.png',
-    ],
+    photos: [rootImageUrl + 'funderpro/2.png'],
     fakeContent: (
       <FakeBrowser>
         <Graph />
@@ -661,14 +654,14 @@ const projects = [
     conclusion:
       'My role in enhancing the Funder Pro trading platform has been pivotal in elevating its performance, reliability, and user satisfaction. By implementing dynamic and responsive user interfaces with React, ensuring type safety and cleaner code with TypeScript, and optimizing data fetching and state management with React Query, I have contributed to delivering a seamless trading experience for our users. These contributions have played a key role in driving innovation and establishing Funder Pro as a leading platform in the trading industry.',
     description:
-      'I played a key role in enhancing its performance and user experience. My responsibilities included implementing dynamic and responsive user interfaces, utilizing TypeScript for type safety, and integrating React Query for efficient data fetching and state management.',
+      'Funderpro is a prop firm. I played a key role in enhancing its performance and user experience. My responsibilities included implementing dynamic and responsive user interfaces, utilizing TypeScript for type safety, and integrating React Query for efficient data fetching and state management.',
     problem:
       'The most challenging part of the project was integrating React Query into the Funder Pro platform to facilitate efficient data fetching and state management. I had to optimize network requests and improve platform performance while ensuring seamless integration of new technologies and functionalities.',
     manager: (
       <span>
         My manager was{' '}
         <a
-          className="text-white normal-font"
+          className="text-black"
           href="https://www.linkedin.com/in/mateosimonovic/"
           target="_blank"
           rel="noreferrer"
