@@ -4,7 +4,7 @@ import { LuMicroscope } from 'react-icons/lu'
 import { FaDog } from 'react-icons/fa'
 import { RiCactusFill } from 'react-icons/ri'
 import { Triangle } from 'react-loader-spinner'
-import { FaCodepen } from "react-icons/fa";
+import { FaCodepen } from 'react-icons/fa'
 
 import './Previewer.scss'
 
@@ -74,17 +74,12 @@ const Previewer = forwardRef(function Previewer(_, ref) {
             <button
               className="primary text-left small-padding xs-margin-bottom"
               onClick={() => {
-                window.open(
-                  'https://codepen.io/collection/AywEyO',
-                  '_blank'
-                )
-              }
-              }
+                window.open('https://codepen.io/collection/AywEyO', '_blank')
+              }}
             >
               <FaCodepen className="icon" />
               <p className="max-w-50-xs">See more on codepen</p>
             </button>
-
           </div>
 
           <div className="preview">
