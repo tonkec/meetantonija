@@ -5,7 +5,7 @@ const Testimonial = ({ testimonial }) => {
   return (
     <div className="small-margin-top flex flex-column space-between">
       <q className="medium-font">{testimonial.content}</q>
-      <div className="flex flex-gap-small flex-y-center small-margin-top">
+      <div className="flex flex-gap-small flex-y-center xs-margin-top">
         <div className="flex max-w-70">
           <Image
             src={testimonial.avatar}

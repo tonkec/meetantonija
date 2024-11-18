@@ -2,9 +2,9 @@
 @import '../../../../styles/transitions.scss';
 .aside-section {
   aside {
-    background-color: var(--color-pink);
+    background-color: var(--color-pink-dark);
     right: 0;
-    z-index: 9;
+    z-index: 8;
     width: 100%;
     padding: 20px;
     transform: translateX(110%);

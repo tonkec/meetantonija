@@ -212,6 +212,10 @@
   margin-top: var(--small-margin);
 }
 
+.xs-margin-top {
+  margin-top: calc(var(--small-margin) / 2);
+}
+
 .small-margin-right {
   margin-right: calc(var(--small-margin) / 2);
 }

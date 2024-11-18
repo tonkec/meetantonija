@@ -5,9 +5,9 @@ import ButtonCopy from 'components/ButtonCopy'
 const HireMe = () => {
   return (
     <section className="small-padding large-margin-top">
-      <div className="container text-center large-padding bg-pink border-radius">
-        <h3 className="no-margin">Do you have a project in mind?</h3>
-        <p className="small-margin-top small-margin-bottom">
+      <div className="container text-center large-padding bg-sky-blue border-radius">
+        <h3 className="no-margin text-black">Do you have a project in mind?</h3>
+        <p className="small-margin-top small-margin-bottom text-black">
           If you are interested in working with me, please get in touch via{' '}
           <span data-tooltip-id="email">email</span>.
         </p>
