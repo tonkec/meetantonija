@@ -28,7 +28,7 @@ const MobileNavigation = ({ isOpen, links, onClose, isSettings }) => {
       </div>
 
       <button
-        className="w-full bg-black inline-block small-padding normal-font"
+        className="w-full secondary inline-block normal-font"
         onClick={() => {
           onClose()
         }}

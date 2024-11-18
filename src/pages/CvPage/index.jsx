@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import cv from 'files/cv.pdf'
 import { Helmet } from 'react-helmet'
 import Timeline from './components/Timeline'
+import { FaDownload } from 'react-icons/fa'
 
 const CvProjectWrapper = ({ project, index, entry }) => {
   return (
@@ -87,20 +88,20 @@ const CvPage = () => {
   return (
     <>
       <Helmet>
-        <title>Meetantonija | My CV</title>
+        <title>Meetantonija | CV</title>
       </Helmet>
       <header className="container header-padding-top header-padding-bottom">
-        <div className="flex flex-gap flex-responsive space-between flex-y-center">
-          <h1 className="no-margin">Work history</h1>
+        <div>
+          <h1 className="small-margin-bottom">Work history</h1>
           <div className="flex flex-gap-small flex-y-center">
             <Link
               to={cv}
               target="_blank"
               download
               role="button"
-              className="primary inline-block"
+              className="dark inline-block"
             >
-              Download CV
+              <span> Download CV</span> <FaDownload />
             </Link>
 
             {shouldShowResetButton && (

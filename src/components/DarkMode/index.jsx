@@ -18,8 +18,6 @@ const DarkMode = () => {
           className="small-margin-right"
         />
       </label>
-
-      <div className="divider"></div>
     </div>
   )
 }
