@@ -3,24 +3,21 @@ import { removeSpacesAndDashes } from 'utils'
 
 const CvProject = ({ project }) => {
   return (
-    <article key={project.id} className="large-padding-bottom">
-      <h3>
-        {project.title !== project.company ? `${project.title} at` : null}{' '}
-        {project.company}
-      </h3>
+    <article key={project.id} className="medium-padding-bottom">
+      <h4>{project.title}</h4>
 
-      <p>
+      <p className="small-margin-bottom">
         {project.from} - {project.to || 'Present'}
       </p>
 
-      <p className="max-w-1000">{project.description}</p>
+      <p className="max-w-600">{project.description}</p>
       <div className="small-margin-top small-margin-bottom">
-        <Skills skills={project.skills.split(',')} />
+        <Skills buttonClass="ternary" skills={project.skills.split(',')} />
       </div>
       <a
         href={`/project/${removeSpacesAndDashes(project.title.toLowerCase())}`}
         role="button"
-        className="secondary"
+        className="primary"
       >
         Read more
       </a>

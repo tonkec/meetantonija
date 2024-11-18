@@ -91,14 +91,14 @@ const CvPage = () => {
       </Helmet>
       <header className="container header-padding-top header-padding-bottom">
         <div className="flex flex-gap flex-responsive space-between flex-y-center">
-          <h1 className="no-margin">Antonija's CV</h1>
+          <h1 className="no-margin">Work history</h1>
           <div className="flex flex-gap-small flex-y-center">
             <Link
               to={cv}
               target="_blank"
               download
               role="button"
-              className="ternary inline-block"
+              className="primary inline-block"
             >
               Download CV
             </Link>
