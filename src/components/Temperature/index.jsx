@@ -35,7 +35,7 @@ const Temperature = () => {
         width={50}
       />
     )
-  return <span>{getTemperatureMood(temperature)}</span>
+  return <span className="large-font">{getTemperatureMood(temperature)}</span>
 }
 
 export default Temperature

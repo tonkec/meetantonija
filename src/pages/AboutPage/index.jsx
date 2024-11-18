@@ -23,6 +23,7 @@ import MyMasonry from './MyMasonry'
 import { Helmet } from 'react-helmet'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import { rootImageUrl } from '../../rootImageUrl'
+import { Triangle } from 'react-loader-spinner'
 
 const speakingEvents = [
   {
@@ -114,22 +115,22 @@ const AboutPage = () => {
       <Helmet>
         <title>Meetantonija | About Me</title>
       </Helmet>
-      <header className="header-padding-top">
+      <header className="header-padding-top header-padding-bottom">
         <div className="container">
-          <div className="flex flex-responsive flex-gap align-start">
+          <div className="flex flex-responsive flex-gap align-start space-between">
             <div>
               <h2>
                 I am <span className="accent">Antonija</span>,
               </h2>
 
-              <h3>
+              <p className="line-height-2">
                 a frontend developer from Sveta Nedelja <br /> which currently
                 has a{' '}
                 <span data-tooltip-id="temperature-tooltip">
                   <Temperature />
                 </span>{' '}
                 weather.
-              </h3>
+              </p>
             </div>
 
             <Tooltip
@@ -156,65 +157,47 @@ const AboutPage = () => {
           </div>
         </div>
       </header>
-      <section className="large-padding-bottom">
-        <div className="container">
-          <h2>💎 I bring a lot of values to the table.</h2>
 
-          <p>
-            With a decade of experience in front-end development, I bring a
-            wealth of technical expertise to the table. I've mastered various
-            technologies, frameworks, and tools, allowing me to create robust
-            and responsive user interfaces with ease. My problem-solving skills
-            are finely honed after years of tackling challenges in front-end
-            development. I have a knack for identifying issues, debugging code
-            efficiently, and finding creative solutions to complex problems.
-            Attention to detail is one of my strengths. I understand the
-            importance of pixel-perfect precision in implementing designs across
-            different devices and browsers, ensuring high-quality user
-            experiences every time.
-          </p>
-        </div>
-      </section>
-
-      <section className="bg-black">
+      <section className="bg-pink">
         <div className="container">
           <h2>📖 My story</h2>
 
-          <p className="small-margin-bottom">
-            In 2013, I found myself in the depths of depression, yearning for
-            change and renewal. It was during this challenging time that I
-            stumbled upon coding as a beacon of hope. Initially, I immersed
-            myself in the world of Ruby on Rails, seeking to unlock its secrets
-            and find a sense of purpose. However, the journey proved to be
-            daunting, and I struggled to find my footing in its intricate
+          <p className="small-margin-bottom line-height-2">
+            In <span className="extra-large-font">2013</span>, I found myself in
+            the depths of <span className="extra-large-font">depression</span>,
+            yearning for change and renewal. It was during this challenging time
+            that I stumbled upon coding as a beacon of{' '}
+            <span className="extra-large-font">hope</span>. Initially, I
+            immersed myself in the world of Ruby on{' '}
+            <span className="extra-large-font">Rails</span>, seeking to unlock
+            its secrets and find a sense of purpose. However, the journey proved
+            to be daunting, and I struggled to find my footing in its intricate
             landscape. Determined to persevere, I decided to pivot towards
-            front-end development, driven by my affinity for visual expression.
-            With HTML, CSS, and jQuery as my tools, I embarked on a journey of
-            creativity and discovery. As I crafted digital masterpieces with
-            transitions and animations, I felt a sense of exhilaration and joy
-            wash over me, as if I had finally found my true calling.
-          </p>
-
-          <p className="small-margin-bottom">
-            By 2018, my coding journey took a significant turn as I encountered
-            React. Its simplicity and elegant syntax resonated deeply with me,
-            and I was captivated by its ability to streamline the development
-            process. With React, I found myself embracing a new paradigm of
-            building user interfaces, one that prioritized clarity and
-            efficiency.
-          </p>
-
-          <p>
-            Through coding, I not only found solace in the midst of turmoil but
-            also discovered a newfound passion that ignited my spirit. It was a
-            journey marked by challenges and triumphs, darkness and light. Yet,
-            through it all, coding remained a constant source of inspiration and
-            transformation, turning despair into creativity and hope.
+            <span className="extra-large-font">front-end</span> development,
+            driven by my affinity for visual expression. With HTML, CSS, and
+            jQuery as my tools, I embarked on a journey of creativity and
+            discovery. As I crafted digital masterpieces with transitions and
+            animations, I felt a sense of exhilaration and{' '}
+            <span className="extra-large-font">joy</span> wash over me, as if I
+            had finally found my true calling. By{' '}
+            <span className="extra-large-font">2018,</span> my coding journey
+            took a significant turn as I encountered{' '}
+            <span className="extra-large-font">React</span>. Its simplicity and
+            elegant syntax resonated deeply with me, and I was captivated by its
+            ability to streamline the development process. With React, I found
+            myself embracing a new paradigm of building user interfaces, one
+            that prioritized clarity and efficiency. Through coding, I not only
+            found solace in the midst of turmoil but also discovered a newfound{' '}
+            <span className="extra-large-font">passion</span> that ignited my
+            spirit. It was a journey marked by challenges and triumphs, darkness
+            and light. Yet, through it all, coding remained a constant source of
+            inspiration and transformation, turning despair into creativity and
+            hope.
           </p>
         </div>
       </section>
 
-      <section className="bg-black large-padding-bottom no-padding-top">
+      <section className="bg-pink large-padding-bottom no-padding-top">
         <div className="container">
           <div className="flex flex-gap flex-responsive">
             <div className="flex-1">
@@ -225,7 +208,7 @@ const AboutPage = () => {
                     key={index}
                     href={`/cv?skill=${removeSpacesAndDashes(tech.technology)}`}
                     role="button"
-                    className="secondary"
+                    className="ternary"
                   >
                     <p className="small-font">
                       <tech.icon className="small-margin-right" />
@@ -247,13 +230,13 @@ const AboutPage = () => {
                   .map((tech, index) => (
                     <span
                       key={index}
-                      className="bg-blue xs-padding border-radius"
+                      className="bg-sky-blue xs-padding border-radius"
                     >
-                      <p className="small-font">
-                        <tech.icon className="small-margin-right" />
+                      <p className="small-font text-black">
+                        <tech.icon className="small-margin-right text-black" />
                         {tech.years} {getYearWord(tech.years)}
                       </p>
-                      <p>{tech.technology}</p>
+                      <p className="text-black">{tech.technology}</p>
                     </span>
                   ))}
               </div>
@@ -266,38 +249,44 @@ const AboutPage = () => {
         <div className="container">
           <h2>🎤 I was a speaker at these events:</h2>
 
-          <div className="flex flex-responsive flex-gap align-start">
-            <div className="meetups flex-1 max-w-50">
-              {speakingEventsSorted.map((event, index) => (
-                <span
-                  key={index}
-                  className="bg-black bg-blue-hover xs-padding border-radius pointer"
-                  onClick={() => setEvent(event)}
-                >
-                  <p>
-                    {event.name} @ {event.organizer}
-                  </p>
-                </span>
-              ))}
-            </div>
-            <div className="bg-black small-padding border-radius max-w-50-sm">
-              <div className="flex small-margin-bottom flex-y-center flex-gap-small">
-                <p>
-                  {event.organizer}, {event.year} in {event.location} |{' '}
-                  <a
-                    className="text-white normal-font"
-                    href={event.link}
-                    target="_blank"
-                    rel="noreferrer"
+          {event ? (
+            <div className="flex flex-responsive flex-gap space-between">
+              <div className="flex-1">
+                {speakingEventsSorted.map((event, index) => (
+                  <span
+                    key={index}
+                    className="bg-pink xs-margin-bottom xs-padding border-radius pointer w-full flex-1 block"
+                    onClick={() => setEvent(event)}
                   >
-                    <FaExternalLinkAlt fontSize="1rem" />{' '}
-                  </a>
-                </p>
+                    <p>
+                      {event.name} @ {event.organizer}
+                    </p>
+                  </span>
+                ))}
               </div>
-              <Image src={event.photo} alt={event.name} />
-              <p className="normal-font small-margin-top">{event.content}</p>
+              <div className="bg-pink small-padding border-radius max-w-30 max-w-50-sm">
+                <div className="flex small-margin-bottom flex-y-center flex-gap-small">
+                  <p>
+                    {event.organizer}, {event.year} in {event.location}{' '}
+                    <a
+                      className="text-white normal-font"
+                      href={event.link}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FaExternalLinkAlt fontSize="1rem" />{' '}
+                    </a>
+                  </p>
+                </div>
+                <Image src={event.photo} alt={event.name} />
+                <p className="small-margin-top">{event.content}</p>
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="loader">
+              <Triangle color="#f8f9fa" height={100} width={100} />
+            </div>
+          )}
         </div>
       </section>
 

@@ -15,15 +15,15 @@ const Search = () => {
         key={question.id}
         onClick={() => setQuestionContent(question)}
         role="button"
-        className="ternary xs-padding border-radius pointer max-w-400"
+        className="primary xs-padding border-radius pointer max-w-400"
       >
         {question.title}
       </div>
     ))
 
   return (
-    <div className="flex flex-responsive flex-gap container stretch">
-      <section className="flex-2">
+    <div className="flex flex-responsive flex-gap container large-margin-bottom">
+      <section className="flex-2 no-padding">
         <h3> Is there anything else you would like to know?</h3>
         <input
           type="text"
@@ -46,8 +46,8 @@ const Search = () => {
           )}
         </div>
       </section>
-      <section className="bg-black flex-1 small-padding">
-        <h3>{questionContent.title}</h3>
+      <section className="bg-pink flex-1 small-padding border-radius">
+        <h4>{questionContent.title}</h4>
         <p>{questionContent.info}</p>
       </section>
     </div>
