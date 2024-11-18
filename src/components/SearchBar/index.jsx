@@ -254,14 +254,21 @@ const SearchBar = () => {
             value={search}
           />
 
-          <FaKeyboard className="keyboard-icon absolute" fontSize="2rem" />
+          <FaKeyboard
+            className="keyboard-icon absolute"
+            fontSize="2rem"
+            style={{ marginTop: '-7px' }}
+          />
           <SearchResults
             searchResults={searchedResults.length ? searchedResults : allRoutes}
           />
+          <button
+            onClick={closeNavigation}
+            className="ternary w-full dark no-border-radius border-bottom-left-radius border-bottom-right-radius"
+          >
+            Close
+          </button>
         </form>
-        <button onClick={closeNavigation} className="absolute ternary">
-          Close
-        </button>
       </div>
     </FocusTrap>
   )

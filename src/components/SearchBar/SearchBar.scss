@@ -56,11 +56,6 @@
   input[type='submit'] {
     border-radius: 0;
     font-size: 1rem;
-
-    &:last-child {
-      border-bottom-left-radius: var(--border-radius);
-      border-bottom-right-radius: var(--border-radius);
-    }
   }
 
   button {

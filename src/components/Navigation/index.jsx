@@ -5,7 +5,7 @@ import './Navigation.scss'
 import { Link } from 'react-router-dom'
 import { useWindowSize } from '@uidotdev/usehooks'
 import MobileNavigation from './MobileNavigation'
-import { RiHome2Line } from 'react-icons/ri'
+import { RiH5, RiHome2Line } from 'react-icons/ri'
 import { RiEmotionLine } from 'react-icons/ri'
 import { RiBook2Line } from 'react-icons/ri'
 import { RiBriefcase2Line } from 'react-icons/ri'
@@ -126,9 +126,9 @@ const Navigation = () => {
           <div className="flex">{getNavigationLinks(navigationLinks)}</div>
         )}
 
-        <p className="medium-margin-right hidden-mobile text-white">
+        <h6 className="medium-margin-right hidden-mobile text-white">
           Shift + K
-        </p>
+        </h6>
       </div>
       <MobileNavigation
         isOpen={isMobileNavigationOpen}
