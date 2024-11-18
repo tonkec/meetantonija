@@ -1,10 +1,10 @@
 import { useParams } from 'react-router-dom'
 import projects from 'data/hobby'
 import { Helmet } from 'react-helmet'
-import Image from 'components/Image'
-import { useState } from 'react'
+import ProjectPhotos from 'components/ProjectPhotos'
 import RecordNotFound from 'components/RecordNotFound'
 import HireMe from 'components/HireMe'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const findProjectByRoute = (projects, route) => {
   for (const hobby of projects) {
@@ -17,8 +17,6 @@ const findProjectByRoute = (projects, route) => {
 }
 
 const HobbyPage = () => {
-  const [currentPhoto, setCurrentPhoto] = useState('')
-  const [isModalOpen, setIsModalOpen] = useState(false)
   const { title } = useParams()
   const project = findProjectByRoute(projects, title)
 
@@ -31,75 +29,82 @@ const HobbyPage = () => {
       <Helmet>
         <title>Meetantonija | {project.title}</title>
       </Helmet>
-      <header className="header-padding-top header-padding-bottom bg-black">
+      <header className="header-padding-top header-padding-bottom bg-pink">
         <div className="container">
-          <div className="flex flex-responsive flex-gap space-between">
-            <div>
-              <h1 className="no-margin">{project.title}</h1>
-              <p>{project.description}</p>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                className="secondary small-margin-top inline-block"
-                role="button"
-                href={project.link}
-              >
-                Open project
-              </a>
-            </div>
+          <div className="text-center">
+            <h1 className="no-margin">{project.title}</h1>
+            <p>{project.description}</p>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className="secondary small-margin-top inline-block"
+              role="button"
+              href={project.link}
+            >
+              <span> Live demo</span>{' '}
+              <FaExternalLinkAlt style={{ marginTop: 'px' }} />
+            </a>
           </div>
         </div>
       </header>
 
-      <section className="bg-blue">
+      <section className="bg-sky-blue small-padding">
         <div className="container">
-          <div>
-            <h2>What is this project about?</h2>
-            <p>{project.longDescription}</p>
-          </div>
-          <div>
-            <h2>What was my motivation?</h2>
-            <p>{project.motivation}</p>
-          </div>
+          <h2 className="text-black">🤔 Having some questions? </h2>
+        </div>
 
-          <div>
-            <h2>What was my role?</h2>
-            <p>{project.role}</p>
-          </div>
+        <div className="container">
+          <div className="flex flex-gap flex-responsive">
+            <div className="flex-1">
+              <h4 className="text-black small-margin-bottom">
+                What is this project about?
+              </h4>
+              <p className="text-black">{project.longDescription}</p>
+            </div>
+            <div className="flex-1">
+              <h4 className="text-black small-margin-bottom">
+                What was my motivation?
+              </h4>
+              <p className="text-black">{project.motivation}</p>
 
-          <div>
-            <h2>What technologies did I use?</h2>
-            <div className="flex flex-wrap">
-              {project.technologies.map((technology, index) => (
-                <span
-                  key={index}
-                  className="small-margin-bottom bg-black xs-padding small-margin-right border-radius"
-                >
-                  {technology}
-                </span>
-              ))}
+              <div>
+                <h4 className="text-black small-margin-bottom small-margin-top">
+                  What was my role?
+                </h4>
+                <p className="text-black">{project.role}</p>
+              </div>
+
+              <div>
+                <h4 className="text-black small-margin-bottom small-margin-top">
+                  What technologies did I use?
+                </h4>
+                <div className="flex flex-wrap">
+                  {project.technologies.map((technology, index) => (
+                    <span
+                      key={index}
+                      className="bg-black xs-padding small-margin-right border-radius small-margin-bottom"
+                    >
+                      {technology}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section>
+      <section className="bg-white">
         <div className="container">
-          <h2>📸 Here are some photos</h2>
-          <div className="grid">
-            {project.photos.map((photo, index) => (
-              <div
-                className="pointer"
-                key={index}
-                onClick={() => {
-                  setCurrentPhoto(photo)
-                  setIsModalOpen(true)
-                }}
-              >
-                <Image src={photo} alt={project.title} />
-              </div>
-            ))}
-          </div>
+          <h2>
+            📸{' '}
+            {project.photos.length > 1
+              ? 'Here are some photos'
+              : 'Here is a photo of the app'}
+          </h2>
+        </div>
+        <div className="small-container">
+          <ProjectPhotos project={project} />
         </div>
       </section>
 
@@ -115,7 +120,7 @@ const HobbyPage = () => {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    className="secondary inline-block small-margin-top"
+                    className="ternary inline-block small-margin-top"
                     role="button"
                     href={member.linkedin}
                   >

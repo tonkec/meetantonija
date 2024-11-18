@@ -6,7 +6,7 @@ import Slider from '../HomePage/components/Slider'
 import { removeSpacesAndDashes, scrollToTheElement } from 'utils'
 import Skills from 'components/Skills'
 import { Helmet } from 'react-helmet'
-import ProjectPhotos from './components/ProjectPhotos'
+import ProjectPhotos from 'components/ProjectPhotos'
 import RecordNotFound from 'components/RecordNotFound'
 
 const getTeamSize = (team) => {
@@ -122,7 +122,7 @@ const ProjectPage = () => {
         <div className="container">
           <h2>
             📸{' '}
-            {project.photos.lenght > 1
+            {project.photos.length > 1
               ? 'Here are some photos'
               : 'Here is a photo of the app'}
           </h2>

@@ -38,7 +38,7 @@ const Slider = ({ items, headline }) => {
                   </div>
                   <a
                     role="button"
-                    className="dark inline-block no-margin-top"
+                    className="primary inline-block no-margin-top"
                     href={`/project/${removeSpacesAndDashes(project.title.toLowerCase())}`}
                   >
                     Read more
