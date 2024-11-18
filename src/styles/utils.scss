@@ -50,6 +50,10 @@
   padding-top: var(--card-spacing);
 }
 
+.small-padding-bottom {
+  padding-bottom: var(--card-spacing);
+}
+
 .medium-padding {
   padding: calc(var(--card-spacing) * 1.2);
 }

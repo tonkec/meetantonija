@@ -3,6 +3,7 @@ import { LuLinkedin, LuGithub, LuCodepen } from 'react-icons/lu'
 import Social from 'components/Social'
 import Logo from 'components/Logo'
 import './Footer.scss'
+import Emoji from 'components/Emoji'
 
 const socialLinks = [
   { href: 'https://codepen.io/tonkec', icon: LuCodepen },
@@ -13,12 +14,12 @@ const socialLinks = [
 const Footer = () => {
   return (
     <footer>
-      <div className="container">
+      <div className="container large-margin-top">
+        <Emoji />
         <div className="flex flex-x-center small-margin-bottom">
           <Social icons={socialLinks} />
-        </div>
-
-        <p className="text-center">
+        </div>{' '}
+        <p className="text-center xs-margin-bottom">
           Coded by Antonija Šimić with lots of{' '}
           <FaHeart className="icon" color="red" /> and{' '}
           <FaCoffee color="#6F4E37" className="icon" />
