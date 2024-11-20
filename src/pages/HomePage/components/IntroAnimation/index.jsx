@@ -15,7 +15,7 @@ const IntroAnimation = ({ introAnimationDuration }) => {
 
   return (
     <div
-      className={`bg-pink fixed text-center flex-y-center flex flex-column top-0 bottom-0 left-0 right-0 flex-x-center ${count === 0 ? 'fadeOut' : 'fadeIn'}`}
+      className={`small-padding bg-pink fixed text-center flex-y-center flex flex-column top-0 bottom-0 left-0 right-0 flex-x-center ${count === 0 ? 'fadeOut' : 'fadeIn'}`}
     >
       <div>
         <h1>{count}.</h1>
