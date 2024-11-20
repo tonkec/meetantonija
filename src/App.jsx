@@ -18,7 +18,7 @@ function Layout() {
   const [isOutletLoaded, setIsOutletLoaded] = useState(true)
 
   const location = useLocation()
-  const introAnimationDuration = 4000
+  const introAnimationDuration = 5000
   const outletTransitionDuration = 1000
 
   useEffect(() => {

@@ -19,7 +19,7 @@ const IntroAnimation = ({ introAnimationDuration }) => {
     >
       <div>
         <h1>{count}.</h1>
-        <p>Nothing to load. Just showing off 😆</p>
+        <p>Nothing to load. Just playing with animations 😆</p>
       </div>
     </div>
   )
