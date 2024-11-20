@@ -384,6 +384,10 @@
   font-size: 2.5rem;
 }
 
+.super-extra-large-font {
+  font-size: 10rem;
+}
+
 .header-padding-bottom {
   padding-bottom: calc(var(--card-spacing) * 2);
 }
@@ -454,8 +458,10 @@
 }
 
 .max-w-50-flex {
-  flex-basis: 48%;
-  max-width: 48%;
+  @include breakpoint(lg) {
+    flex-basis: 48%;
+    max-width: 48%;
+  }
 }
 
 .absolute {

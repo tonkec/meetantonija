@@ -6,12 +6,12 @@ const Steps = ({ steps, headline }) => {
       <div className="container">
         <h2>{headline}</h2>
 
-        <div className="grid">
+        <div className="flex flex-wrap flex-gap flex-responsive">
           {steps.map((step, index) => {
             return (
               <div
                 key={index}
-                className="bg-sky-blue small-padding text-white border-radius"
+                className="bg-sky-blue small-padding text-white border-radius max-w-50-flex"
               >
                 <h4 className="small-margin-bottom text-black">
                   {index + 1}. {step.title}

@@ -18,8 +18,7 @@ const IntroAnimation = ({ introAnimationDuration }) => {
       className={`small-padding bg-pink fixed text-center flex-y-center flex flex-column top-0 bottom-0 left-0 right-0 flex-x-center ${count === 0 ? 'fadeOut' : 'fadeIn'}`}
     >
       <div>
-        <h1>{count}.</h1>
-        <p>Nothing to load. Just playing with animations 😆</p>
+        <h1 className="super-extra-large-font orbitron">{count}.</h1>
       </div>
     </div>
   )

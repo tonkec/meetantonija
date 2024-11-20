@@ -159,7 +159,7 @@ const ProjectPage = () => {
               <p className="text-black">{project.manager}</p>
             </div>
 
-            <div className="container medium-margin-bottom flex-1">
+            <div className="medium-margin-bottom flex-1">
               <h4 className="text-black">TL;DR</h4>
               <p className="text-black">{project.conclusion}</p>
             </div>
