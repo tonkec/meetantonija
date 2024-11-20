@@ -1,6 +1,7 @@
 import './Search.scss'
 import questions from 'data/questions'
 import { useState } from 'react'
+import { RiCloseLargeLine } from 'react-icons/ri'
 
 const Search = () => {
   const [search, setSearch] = useState(questions[0].title)
@@ -13,7 +14,10 @@ const Search = () => {
     .map((question) => (
       <div
         key={question.id}
-        onClick={() => setQuestionContent(question)}
+        onClick={() => {
+          setQuestionContent(question)
+          setSearch(question.title)
+        }}
         role="button"
         className="primary xs-padding border-radius pointer max-w-400"
       >
@@ -25,13 +29,20 @@ const Search = () => {
     <div className="flex flex-responsive flex-gap container large-margin-bottom">
       <section className="flex-2 no-padding">
         <h3> Is there anything else you would like to know?</h3>
-        <input
-          type="text"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search for questions"
-          className="xs-padding block border-radius w-full small-margin-top border-black"
-        />
+        <div className="relative">
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search for questions"
+            className="xs-padding block border-radius w-full small-margin-top border-black"
+          />
+          <RiCloseLargeLine
+            className="absolute top-50 right-20 pointer"
+            fontSize="1rem"
+            onClick={() => setSearch('')}
+          />
+        </div>
 
         <div className="flex flex-gap-small flex-wrap small-margin-top">
           {resultQuestions.length ? (
