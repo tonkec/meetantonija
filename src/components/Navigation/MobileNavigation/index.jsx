@@ -28,7 +28,7 @@ const MobileNavigation = ({ isOpen, links, onClose, isSettings }) => {
       </div>
 
       <button
-        className="w-full secondary inline-block normal-font"
+        className="w-full ternary inline-block normal-font no-border-radius"
         onClick={() => {
           onClose()
         }}

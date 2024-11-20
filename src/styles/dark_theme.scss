@@ -4,35 +4,9 @@
     color: #fff;
     background-color: #000;
     --color-black: #3e3e3e;
-    --body-gradient: repeating-linear-gradient(
-        90deg,
-        hsla(57, 0%, 42%, 0.09) 0px,
-        hsla(57, 0%, 42%, 0.09) 1px,
-        transparent 1px,
-        transparent 60px
-      ),
-      repeating-linear-gradient(
-        0deg,
-        hsla(57, 0%, 42%, 0.09) 0px,
-        hsla(57, 0%, 42%, 0.09) 1px,
-        transparent 1px,
-        transparent 60px
-      ),
-      repeating-linear-gradient(
-        0deg,
-        hsla(57, 0%, 42%, 0.09) 0px,
-        hsla(57, 0%, 42%, 0.09) 1px,
-        transparent 1px,
-        transparent 10px
-      ),
-      repeating-linear-gradient(
-        90deg,
-        hsla(57, 0%, 42%, 0.09) 0px,
-        hsla(57, 0%, 42%, 0.09) 1px,
-        transparent 1px,
-        transparent 10px
-      ),
-      linear-gradient(90deg, rgb(20, 20, 20), rgb(20, 20, 20));
+    --color-pink: #929292;
+    --color-pink-dark: #6b6b6b;
+    --color-sky-blue: #4a4a4a;
 
     form {
       color: var(--color-black);
@@ -56,7 +30,7 @@
     a[role='button'].primary,
     *[role='button'].primary,
     input[type='submit'].primary {
-      background-color: var(--color-black);
+      background-color: var(--color-pink);
       color: var(--color-white);
 
       &:hover,
@@ -75,6 +49,16 @@
       &:hover,
       &:focus {
         background-color: var(--color-blue);
+      }
+    }
+
+    button.dark {
+      background-color: var(--color-black);
+      color: var(--color-white);
+
+      &:hover,
+      &:focus {
+        background-color: var(--color-dark-blue);
       }
     }
 
