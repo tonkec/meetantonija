@@ -136,9 +136,10 @@ const AboutPage = () => {
             <Tooltip
               id="temperature-tooltip"
               style={{
-                backgroundColor: 'var(--color-black)',
+                backgroundColor: 'var(--color-white)',
                 padding: '10px',
                 borderRadius: '5px',
+                color: 'var(--color-black)',
               }}
               className="tooltip"
             >

@@ -1,9 +1,9 @@
 ::selection {
-  background-color: var(--color-black);
+  background-color: var(--color-pink);
   color: var(--color-white);
 }
 
-.bg-black {
+.bg-pink {
   ::selection {
     background-color: var(--color-white);
     color: var(--color-black);
