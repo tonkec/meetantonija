@@ -50,7 +50,7 @@ export const SinglePost = ({ post, onClick }) => {
       )}
       <span className="flex align-start flex-gap space-between medium-margin-top">
         <a
-          className="ternary xs-padding border-radius inline-block no-underline"
+          className="secondary xs-padding border-radius inline-block no-underline"
           href={`/post/${formatNoteTitle(currentPost.title.toLowerCase())}`}
           role="button"
         >
@@ -82,7 +82,7 @@ const PostsPage = () => {
         <input
           type="text"
           placeholder="Search posts by title"
-          className="small-margin-top small-margin-bottom w-full border border-radius xs-padding"
+          className="small-margin-top large-margin-bottom w-full border border-radius xs-padding"
           onChange={(e) => {
             setSearch(e.target.value)
             setQueryParams({ search: e.target.value })

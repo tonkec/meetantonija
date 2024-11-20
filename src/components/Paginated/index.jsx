@@ -65,7 +65,7 @@ const Pagination = ({
     const endIdx = startIdx + postsPerPage
     setPaginatedPosts(filteredData().slice(startIdx, endIdx))
     setCurrentPage(currentPage)
-  }, [page, data])
+  }, [page, data, postsPerPage, tagParam])
 
   const onPageChange = (page) => {
     if (page < 1 || page > totalPages) return
@@ -84,11 +84,9 @@ const Pagination = ({
   return (
     <>
       {tagParam && (
-        <>
-          <h5 className="small-margin-top">
-            Tag: <span className="tag bg-dark border-radius">{tagParam}</span>
-          </h5>
-        </>
+        <h5 className="small-margin-top">
+          Tag: <span className="tag bg-dark border-radius">{tagParam}</span>
+        </h5>
       )}
       {shouldShowClearButton && (
         <button
@@ -97,7 +95,7 @@ const Pagination = ({
             setQueryParams({ search: '', page: 1, tag: '' })
             clearSearch()
           }}
-          className="secondary small-margin-bottom small-margin-top"
+          className="ternary small-margin-bottom small-margin-top"
         >
           Clear all filters
         </button>
