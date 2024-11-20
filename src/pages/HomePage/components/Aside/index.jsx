@@ -3,8 +3,10 @@ import { IoMdClose } from 'react-icons/io'
 import notes from 'data/posts'
 import { formatNoteTitle, shuffleArray, truncateString } from 'utils'
 import './Aside.scss'
+import { useNavigate } from 'react-router-dom'
 const shuffledNotes = shuffleArray(notes)
 const AsideContent = ({ noteContent }) => {
+  const navigate = useNavigate()
   if (!noteContent.intro) {
     return null
   }
@@ -15,7 +17,7 @@ const AsideContent = ({ noteContent }) => {
       <button
         className="secondary small-margin-top"
         onClick={() => {
-          window.location.href = `/post/${formatNoteTitle(noteContent.title)}`
+          navigate(`/post/${formatNoteTitle(noteContent.title)}`)
         }}
       >
         Read more

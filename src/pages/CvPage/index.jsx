@@ -93,7 +93,7 @@ const CvPage = () => {
       <header className="container header-padding-top header-padding-bottom">
         <div>
           <h1 className="small-margin-bottom">Work history</h1>
-          <div className="flex flex-gap-small flex-y-center">
+          <div>
             <Link
               to={cv}
               target="_blank"
@@ -106,7 +106,7 @@ const CvPage = () => {
 
             {shouldShowResetButton && (
               <button
-                className="ternary"
+                className="ternary block small-margin-top"
                 onClick={() => {
                   setSearchParams({})
                 }}

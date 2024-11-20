@@ -4,12 +4,14 @@ import { formatNoteTitle } from 'utils'
 import Image from 'components/Image'
 import Paginated, { setQueryParams } from 'components/Paginated'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const sortedPosts = posts.sort((a, b) => {
   return new Date(b.date) - new Date(a.date)
 })
 
 export const SinglePost = ({ post, onClick }) => {
+  const navigate = useNavigate()
   const currentPost = post.data ? post.data : post
   const onSinglePostClick = post.onClick ? post.onClick : onClick
 
@@ -49,13 +51,14 @@ export const SinglePost = ({ post, onClick }) => {
         </p>
       )}
       <span className="flex align-start flex-gap space-between medium-margin-top">
-        <a
+        <button
           className="secondary xs-padding border-radius inline-block no-underline"
-          href={`/post/${formatNoteTitle(currentPost.title.toLowerCase())}`}
-          role="button"
+          onClick={() => {
+            navigate(`/post/${formatNoteTitle(currentPost.title)}`)
+          }}
         >
           Read post
-        </a>
+        </button>
         {currentPost.hasOwnProperty('icon') && (
           <span className="extra-large-font">{currentPost.icon()}</span>
         )}

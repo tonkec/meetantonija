@@ -1,22 +1,25 @@
 import './App.scss'
-import { useState, useEffect, useRef, useMemo } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { Routes, Route, Outlet, useLocation } from 'react-router-dom'
 import routes from './routes'
 import Footer from './components/Footer'
 import PageTransition from './components/PageTransition'
 import SearchBar from './components/SearchBar'
 import Navigation from './components/Navigation'
-import Emoji from './components/Emoji'
-import JobAlert from './components/JobAlert'
 import ScrollToTop from './components/ScrollToTop'
 import useIsDarkMode from './hooks/useIsDarkMode'
+import IntroAnimation from 'pages/HomePage/components/IntroAnimation'
 
 function Layout() {
   const [isDarkLocalStorage] = useIsDarkMode()
   const value = useMemo(() => !!isDarkLocalStorage, [isDarkLocalStorage])
 
-  const [isOutletLoaded, setIsOutletLoaded] = useState(false)
+  const [isIntroAnimationActive, setIsIntroAnimationActive] = useState(true)
+  const [isOutletLoaded, setIsOutletLoaded] = useState(true)
+
   const location = useLocation()
+  const introAnimationDuration = 4000
+  const outletTransitionDuration = 1000
 
   useEffect(() => {
     if (value) {
@@ -27,31 +30,43 @@ function Layout() {
   }, [value])
 
   useEffect(() => {
+    setTimeout(() => {
+      setIsIntroAnimationActive(false)
+
+      setTimeout(() => {
+        setIsOutletLoaded(true)
+      }, outletTransitionDuration)
+    }, introAnimationDuration + 1000)
+  }, [])
+
+  useEffect(() => {
     setIsOutletLoaded(false)
-  }, [location])
+  }, [location.pathname])
 
   useEffect(() => {
     setTimeout(() => {
       setIsOutletLoaded(true)
-    }, 1000)
-  }, [location])
+    }, outletTransitionDuration)
+  }, [location.pathname])
 
-  if (!isOutletLoaded) {
+  if (isIntroAnimationActive) {
+    return <IntroAnimation introAnimationDuration={introAnimationDuration} />
+  }
+
+  if (!isOutletLoaded && !isIntroAnimationActive) {
     return <PageTransition />
   }
 
   return (
-    <>
+    <div className="fadeIn">
       <ScrollToTop />
       <SearchBar />
       <Navigation />
-      <>
-        <main>
-          <Outlet />
-        </main>
-        <Footer />
-      </>
-    </>
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
   )
 }
 
