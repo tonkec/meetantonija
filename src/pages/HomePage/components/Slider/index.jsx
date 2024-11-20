@@ -5,8 +5,10 @@ import './Slider.scss'
 import { useWindowSize } from 'hooks/useWindowSize'
 import Skills from 'components/Skills'
 import { removeSpacesAndDashes } from 'utils'
+import { useNavigate } from 'react-router-dom'
 
 const Slider = ({ items, headline }) => {
+  const navigate = useNavigate()
   const size = useWindowSize()
   const [sliderRef] = useKeenSlider({
     mode: 'free-snap',
@@ -36,13 +38,16 @@ const Slider = ({ items, headline }) => {
                       skills={project.skills.split(',')}
                     />
                   </div>
-                  <a
-                    role="button"
-                    className="primary inline-block no-margin-top"
-                    href={`/project/${removeSpacesAndDashes(project.title.toLowerCase())}`}
+                  <button
+                    className="primary inline-block no-margin-top small-margin-bottom"
+                    onClick={() => {
+                      navigate(
+                        `/project/${removeSpacesAndDashes(project.title.toLowerCase())}`
+                      )
+                    }}
                   >
                     Read more
-                  </a>
+                  </button>
                 </BrowserFrame>
               </div>
             )
