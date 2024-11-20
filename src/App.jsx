@@ -36,7 +36,7 @@ function Layout() {
       setTimeout(() => {
         setIsOutletLoaded(true)
       }, outletTransitionDuration)
-    }, introAnimationDuration + 1000)
+    }, introAnimationDuration + 1000) // delay for the fade out animation
   }, [])
 
   useEffect(() => {
