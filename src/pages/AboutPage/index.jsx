@@ -81,20 +81,10 @@ const speakingEvents = [
 const technologies = [
   { technology: 'HTML', years: 10, icon: FaHtml5 },
   { technology: 'CSS', years: 10, icon: FaCss3 },
-  { technology: 'JavaScript', years: 8, icon: FaJs },
-  { technology: 'TypeScript', years: 3, icon: SiTypescript },
-  { technology: 'React', years: 4, icon: SiReact },
-  { technology: 'Redux', years: 4, icon: SiRedux },
-]
-
-const playedWithTechnologies = [
-  { technology: 'Rails', years: 2, icon: SiRubyonrails },
-  { technology: 'Angular', years: 1, icon: SiAngular },
-  { technology: 'Node', years: 2, icon: SiNodedotjs },
-  { technology: 'MongoDB', years: 2, icon: SiMongodb },
-  { technology: 'Socket.io', years: 1, icon: SiSocketdotio },
-  { technology: 'Postgres', years: 1, icon: SiPostgresql },
-  { technology: 'React Native', years: 1, icon: SiReact },
+  { technology: 'JavaScript', years: 9, icon: FaJs },
+  { technology: 'TypeScript', years: 4, icon: SiTypescript },
+  { technology: 'React', years: 5, icon: SiReact },
+  { technology: 'Redux', years: 5, icon: SiRedux },
 ]
 
 const getYearWord = (years) => {
