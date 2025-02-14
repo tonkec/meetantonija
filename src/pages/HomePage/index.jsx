@@ -20,38 +20,36 @@ const SingleProject = ({ post }) => {
   return (
     <>
       <article className="flex flex-grow-1 flex-responsive">
-        <div className="bg-pink xs-padding border-top-left-radius">
-          <h5>{post.data.title}</h5>
+        <div className="bg-white xs-padding">
+          <h5
+            className="pointer underline"
+            onClick={() => {
+              navigate(`/project/${removeSpacesAndDashes(post.data.title)}`)
+            }}
+          >
+            {post.data.title}
+          </h5>
           <h6>{post.data.headline}.</h6>
           <p className="small-margin-top">
             {truncateString(post.data.conclusion, 300)}
           </p>
-        </div>
 
-        <div className="bg-pink-dark xs-padding flex-1 border-top-right-radius">
-          <h5 className="small-margin-bottom"> Skills:</h5>
-          {post.data.skills.split(', ').map((skill, index) => (
-            <span
-              key={index}
-              className="tag dark border-radius small-margin-right small-margin-bottom"
-              role="button"
-              onClick={() => {
-                navigate(`/cv?skill=${removeSpacesAndDashes(skill)}`)
-              }}
-            >
-              {skill}
-            </span>
-          ))}
+          <div className="bg-white small-margin-top">
+            {post.data.skills.split(', ').map((skill, index) => (
+              <span
+                key={index}
+                className="tag dark border-radius small-margin-right small-margin-bottom"
+                role="button"
+                onClick={() => {
+                  navigate(`/cv?skill=${removeSpacesAndDashes(skill)}`)
+                }}
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
         </div>
       </article>
-      <button
-        onClick={() => {
-          navigate(`/project/${removeSpacesAndDashes(post.data.title)}`)
-        }}
-        className="dark w-full no-border-radius border-bottom-left-radius border-bottom-right-radius "
-      >
-        Read more
-      </button>
     </>
   )
 }
@@ -135,13 +133,6 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-      </section>
-
-      <section className="">
-        <div className="container">
-          <h2 className="text-black">🎨 I work on side projects.</h2>
-        </div>
-        <Tabs />
       </section>
 
       <Aside numberOfPosts={3} />

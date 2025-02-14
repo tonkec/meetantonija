@@ -80,11 +80,6 @@ const navigationLinks = [
     label: 'CV',
     icon: <RiBriefcase2Line />,
   },
-  {
-    href: '/settings',
-    label: 'Settings',
-    icon: <RiSettings4Fill />,
-  },
 ]
 
 const getNavigationLinks = (navigationLinks) => {

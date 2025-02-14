@@ -250,8 +250,6 @@ const projects = [
     photos: [
       rootImageUrl + 'crafstrom/1.png',
       rootImageUrl + 'crafstrom/2.png',
-      rootImageUrl + 'crafstrom/3.png',
-      rootImageUrl + 'crafstrom/4.png',
     ],
     fakeContent: (
       <FakeBrowser className="fake-dashboard">

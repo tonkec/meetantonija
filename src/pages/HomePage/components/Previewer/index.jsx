@@ -72,7 +72,7 @@ const Previewer = forwardRef(function Previewer(_, ref) {
             </button>
 
             <button
-              className="primary text-left small-padding xs-margin-bottom"
+              className="dark text-left small-padding xs-margin-bottom"
               onClick={() => {
                 window.open('https://codepen.io/collection/AywEyO', '_blank')
               }}

@@ -509,6 +509,10 @@
   text-decoration: none;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 .border-radius-none-xs {
   border-radius: 0 !important;
 
@@ -659,4 +663,8 @@
 
 .line-height-2 {
   line-height: 2;
+}
+
+.border-black {
+  border: 2px solid var(--color-black);
 }

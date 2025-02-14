@@ -18,7 +18,7 @@ export const SinglePost = ({ post, onClick }) => {
   return (
     <div
       key={currentPost.id}
-      className="bg-pink small-padding border-radius h-full"
+      className="border-black small-padding border-radius h-full"
     >
       <span className="flex flex-y-center small-margin-bottom flex-gap-small">
         <Image
@@ -50,9 +50,9 @@ export const SinglePost = ({ post, onClick }) => {
           ))}
         </p>
       )}
-      <span className="flex align-start flex-gap space-between medium-margin-top">
+      <span className="flex align-start flex-gap space-between small-margin-top">
         <button
-          className="secondary xs-padding border-radius inline-block no-underline"
+          className="primary xs-padding border-radius inline-block no-underline"
           onClick={() => {
             navigate(`/post/${formatNoteTitle(currentPost.title)}`)
           }}
@@ -85,7 +85,7 @@ const PostsPage = () => {
         <input
           type="text"
           placeholder="Search posts by title"
-          className="small-margin-top large-margin-bottom w-full border border-radius xs-padding"
+          className="small-margin-top bg-white large-margin-bottom w-full border border-radius xs-padding"
           onChange={(e) => {
             setSearch(e.target.value)
             setQueryParams({ search: e.target.value })

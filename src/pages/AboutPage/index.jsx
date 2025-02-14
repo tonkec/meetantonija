@@ -159,46 +159,7 @@ const AboutPage = () => {
         </div>
       </header>
 
-      <section className="bg-pink">
-        <div className="container">
-          <h2>📖 My story</h2>
-
-          <p className="small-margin-bottom line-height-2">
-            In <span className="extra-large-font">2013</span>, I found myself in
-            the depths of <span className="extra-large-font">depression</span>,
-            yearning for change and renewal. It was during this challenging time
-            that I stumbled upon coding as a beacon of{' '}
-            <span className="extra-large-font">hope</span>. Initially, I
-            immersed myself in the world of Ruby on{' '}
-            <span className="extra-large-font">Rails</span>, seeking to unlock
-            its secrets and find a sense of purpose. However, the journey proved
-            to be daunting, and I struggled to find my footing in its intricate
-            landscape. Determined to persevere, I decided to pivot towards
-            <span className="extra-large-font">front-end</span> development,
-            driven by my affinity for visual expression. With HTML, CSS, and
-            jQuery as my tools, I embarked on a journey of creativity and
-            discovery. As I crafted digital masterpieces with transitions and
-            animations, I felt a sense of exhilaration and{' '}
-            <span className="extra-large-font">joy</span> wash over me, as if I
-            had finally found my true calling. By{' '}
-            <span className="extra-large-font">2018,</span> my coding journey
-            took a significant turn as I encountered{' '}
-            <span className="extra-large-font">React</span>. Its simplicity and
-            elegant syntax resonated deeply with me, and I was captivated by its
-            ability to streamline the development process. With React, I found
-            myself embracing a new paradigm of building user interfaces, one
-            that prioritized clarity and efficiency. Through coding, I not only
-            found solace in the midst of turmoil but also discovered a newfound{' '}
-            <span className="extra-large-font">passion</span> that ignited my
-            spirit. It was a journey marked by challenges and triumphs, darkness
-            and light. Yet, through it all, coding remained a constant source of
-            inspiration and transformation, turning despair into creativity and
-            hope.
-          </p>
-        </div>
-      </section>
-
-      <section className="bg-pink large-padding-bottom no-padding-top">
+      <section className=" no-padding-top">
         <div className="container">
           <div className="flex flex-gap flex-responsive">
             <div className="flex-1">
@@ -220,28 +181,6 @@ const AboutPage = () => {
                 ))}
               </div>
             </div>
-
-            <div className="flex-1">
-              <h2>🎨 Technologies I have played with</h2>
-              <div className="flex flex-gap-small flex-wrap">
-                {playedWithTechnologies
-                  .sort((a, b) => {
-                    return b.years - a.years
-                  })
-                  .map((tech, index) => (
-                    <span
-                      key={index}
-                      className="bg-sky-blue xs-padding border-radius"
-                    >
-                      <p className="small-font text-black">
-                        <tech.icon className="small-margin-right text-black" />
-                        {tech.years} {getYearWord(tech.years)}
-                      </p>
-                      <p className="text-black">{tech.technology}</p>
-                    </span>
-                  ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -252,11 +191,11 @@ const AboutPage = () => {
 
           {event ? (
             <div className="flex flex-responsive flex-gap space-between">
-              <div className="flex-1">
+              <div className="">
                 {speakingEventsSorted.map((event, index) => (
                   <span
                     key={index}
-                    className="bg-pink xs-margin-bottom xs-padding border-radius pointer w-full flex-1 block"
+                    className="bg-pink xs-margin-bottom xs-padding border-radius pointer block"
                     onClick={() => setEvent(event)}
                   >
                     <p>
@@ -265,7 +204,7 @@ const AboutPage = () => {
                   </span>
                 ))}
               </div>
-              <div className="bg-pink small-padding border-radius max-w-30 max-w-50-sm">
+              <div className="bg-pink small-padding border-radius max-w-400">
                 <div className="flex small-margin-bottom flex-y-center flex-gap-small">
                   <p>
                     {event.organizer}, {event.year} in {event.location}{' '}
@@ -279,7 +218,7 @@ const AboutPage = () => {
                     </a>
                   </p>
                 </div>
-                <Image src={event.photo} alt={event.name} />
+                <Image src={event.photo} alt={event.name} className="w-full" />
                 <p className="small-margin-top">{event.content}</p>
               </div>
             </div>

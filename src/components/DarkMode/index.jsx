@@ -9,7 +9,7 @@ const DarkMode = () => {
   return (
     <div className="small-padding">
       <label className="flex flex-y-center space-between">
-        <h2 className="small-margin-right">Toggle the mood </h2>{' '}
+        <h4 className="small-margin-right">Toggle the mood </h4>{' '}
         <Toggle
           checked={isDarkLocalStorage}
           onChange={({ target }) => saveIsDark(target.checked)}
