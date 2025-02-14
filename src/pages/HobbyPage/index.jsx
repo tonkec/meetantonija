@@ -94,7 +94,7 @@ const HobbyPage = () => {
         </div>
       </section>
 
-      <section className="bg-white">
+      <section className="bg-pink-light">
         <div className="container">
           <h2>
             📸{' '}

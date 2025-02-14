@@ -20,7 +20,7 @@ const SingleProject = ({ post }) => {
   return (
     <>
       <article className="flex flex-grow-1 flex-responsive">
-        <div className="bg-white xs-padding">
+        <div className="bg-pink-light xs-padding">
           <h5
             className="pointer underline"
             onClick={() => {
@@ -34,7 +34,7 @@ const SingleProject = ({ post }) => {
             {truncateString(post.data.conclusion, 300)}
           </p>
 
-          <div className="bg-white small-margin-top">
+          <div className="bg-pink-light small-margin-top">
             {post.data.skills.split(', ').map((skill, index) => (
               <span
                 key={index}

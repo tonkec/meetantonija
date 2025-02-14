@@ -8,7 +8,7 @@ const MobileNavigation = ({ isOpen, links, onClose, isSettings }) => {
   }
 
   return (
-    <div className="fixed flex flex-column space-between overflow-auto top-0 bottom-0 right-0 bg-white z-999 mobile-nav w-full">
+    <div className="fixed flex flex-column space-between overflow-auto top-0 bottom-0 right-0 bg-pink-light z-999 mobile-nav w-full">
       <div className="flex flex-column links">
         {links.map((link, index) => (
           <NavigationLink

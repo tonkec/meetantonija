@@ -53,7 +53,7 @@ const ProjectPage = () => {
         </div>
       </header>
 
-      <section className="bg-white">
+      <section className="bg-pink-light">
         <div className="container flex flex-wrap flex-gap medium-margin-bottom space-between">
           <div>
             <div className="medium-margin-bottom">
@@ -118,7 +118,7 @@ const ProjectPage = () => {
         headline="✅ These were the tasks I had"
       />
 
-      <section className="bg-white">
+      <section className="bg-pink-light">
         <div className="container">
           <h2>
             📸{' '}
