@@ -1,7 +1,9 @@
 import Skills from 'components/Skills'
 import { removeSpacesAndDashes } from 'utils'
+import { useNavigate } from 'react-router-dom'
 
 const CvProject = ({ project }) => {
+  const navigate = useNavigate()
   return (
     <article key={project.id} className="medium-padding-bottom">
       <h4>{project.title}</h4>
@@ -14,13 +16,16 @@ const CvProject = ({ project }) => {
       <div className="small-margin-top small-margin-bottom">
         <Skills buttonClass="ternary" skills={project.skills.split(',')} />
       </div>
-      <a
-        href={`/project/${removeSpacesAndDashes(project.title.toLowerCase())}`}
-        role="button"
-        className="primary"
+      <button
+        className="bg-black"
+        onClick={() => {
+          navigate(
+            `/project/${removeSpacesAndDashes(project.title.toLowerCase())}`
+          )
+        }}
       >
         Read more
-      </a>
+      </button>
     </article>
   )
 }
