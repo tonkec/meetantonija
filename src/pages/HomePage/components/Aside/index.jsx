@@ -15,7 +15,7 @@ const AsideContent = ({ noteContent }) => {
       <span>{noteContent.intro && truncateString(noteContent.intro, 200)}</span>
       <br />
       <button
-        className="secondary small-margin-top"
+        className="primary small-margin-top"
         onClick={() => {
           navigate(`/post/${formatNoteTitle(noteContent.title)}`)
         }}

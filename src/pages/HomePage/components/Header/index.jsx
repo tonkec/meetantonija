@@ -8,17 +8,36 @@ const Header = () => {
     <header className="container homepage-header header-padding-top header-padding-bottom">
       <div className="flex flex-responsive space-between flex-gap flex-y-center">
         <div className="max-w-50">
-          <h1 className="no-margin-bottom">Hello!</h1>
           <h1>
             I'm <span className="accent">Antonija.</span>
           </h1>
           <p>
-            I am frontend developer from{' '}
-            <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>, Croatia. I
-            am passionate about building beautiful, user-friendly web
-            experiences. I craft interfaces that are not only visually engaging
-            but also highly functional.
+            I am a frontend developer from{' '}
+            <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>, Croatia,
+            passionate about building beautiful, user-friendly web experiences.
+            I craft interfaces that are not only visually engaging but also
+            highly functional.
           </p>
+
+          <div className="flex flex-gap-small small-margin-top">
+            <a
+              className="primary"
+              role="button"
+              href="mailto:antonija1023@gmail.com"
+            >
+              Contact
+            </a>
+
+            <Link
+              to={cv}
+              target="_blank"
+              download
+              role="button"
+              className="ternary inline-block"
+            >
+              Download CV
+            </Link>
+          </div>
         </div>
 
         <Image
@@ -27,26 +46,6 @@ const Header = () => {
           hasColoredBackground
           className="hidden-mobile"
         />
-      </div>
-
-      <div className="flex flex-gap-small small-margin-top">
-        <a
-          className="primary"
-          role="button"
-          href="mailto:antonija1023@gmail.com"
-        >
-          Contact
-        </a>
-
-        <Link
-          to={cv}
-          target="_blank"
-          download
-          role="button"
-          className="ternary inline-block"
-        >
-          Download CV
-        </Link>
       </div>
 
       <Tooltip
