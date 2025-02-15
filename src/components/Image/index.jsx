@@ -31,7 +31,7 @@ const Image = ({
   if (isBackgroundImage) {
     return (
       <div
-        className="content contain isBackgroundImage pointer"
+        className="content contain isBackgroundImage"
         style={{ backgroundImage: `url(${src})`, ...style }}
         onClick={onClick}
       ></div>

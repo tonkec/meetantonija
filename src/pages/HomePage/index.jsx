@@ -10,21 +10,16 @@ import { useCallback, useRef } from 'react'
 import { FaChevronDown } from 'react-icons/fa6'
 import { rootImageUrl } from '../../rootImageUrl'
 import Paginated from 'components/Paginated'
-import { removeSpacesAndDashes, truncateString } from 'utils'
+import { removeSpacesAndDashes } from 'utils'
 import { useNavigate } from 'react-router-dom'
 import Image from 'components/Image'
 import Cta from 'components/Cta'
-import ButtonCopy from 'components/ButtonCopy'
 
 const SingleProject = ({ post }) => {
   const navigate = useNavigate()
   return (
     <div className="bg-pink-light xs-padding flex flex-responsive flex-gap space-between">
-      <Image
-        src={post.data.coverPhoto}
-        alt={post.data.title}
-        isBackgroundImage
-      />
+      <Image src={post.data.coverPhoto} isBackgroundImage />
       <div>
         <h2 className="no-padding">{post.data.title}</h2>
         <p className="small-margin-top">{post.data.conclusion}</p>
