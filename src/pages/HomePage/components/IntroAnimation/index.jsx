@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 
 const IntroAnimation = () => {
-  const text = 'meetantonija'
+  const text = 'antonija'
   const [displayText, setDisplayText] = useState('')
   const currentIndexRef = useRef(0)
 
@@ -20,12 +20,14 @@ const IntroAnimation = () => {
 
   return (
     <div
-      className={`small-padding bg-pink fixed text-center flex-y-center flex flex-column top-0 bottom-0 left-0 right-0 flex-x-center ${
+      className={`small-padding bg-pink-light fixed text-center flex-y-center flex flex-column top-0 bottom-0 left-0 right-0 flex-x-center ${
         displayText.length === text.length ? 'fadeOut' : 'fadeIn'
       }`}
     >
       <div>
-        <h1 className="super-extra-large-font orbitron">{displayText}</h1>
+        <h1 className="super-extra-large-font text-black orbitron">
+          {displayText}
+        </h1>
       </div>
     </div>
   )

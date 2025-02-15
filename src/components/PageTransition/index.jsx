@@ -25,7 +25,7 @@ const PageTransition = () => {
 
   return (
     <div ref={pageTransition} className="page-transition">
-      <Triangle color="#f8f9fa" height={100} width={100} />
+      <Triangle color="#000" height={100} width={100} />
     </div>
   )
 }

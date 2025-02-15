@@ -29,22 +29,22 @@ const AsideContent = ({ noteContent }) => {
 const Aside = ({ numberOfPosts }) => {
   const [noteContent, setNoteContent] = useState({})
   return (
-    <section className="aside-section bg-pink small-padding-bottom border-radius">
+    <section className="aside-section bg-pink-light small-padding-bottom border-radius">
       <div className="container">
-        <h2 className="text-white">👌 I write about technologies I like.</h2>
+        <h2>👌 I write about technologies I like.</h2>
       </div>
       <div className="container overflow-x-hidden relative flex flex-column">
         {shuffledNotes.slice(0, numberOfPosts).map((note) => {
           return (
             <button
               key={note.id}
-              className="max-w-50-md block text-left xs-margin-bottom border-radius bg-pink-dark"
+              className="max-w-50-md block text-left xs-margin-bottom border-radius bg-sky-blue text-black padding"
               onClick={() => {
                 setNoteContent(note)
               }}
             >
-              <h4>{note.title}</h4>
-              <p>{note.subtitle}</p>
+              <h4 className="text-black">{note.title}</h4>
+              <p className="text-black">{note.subtitle}</p>
             </button>
           )
         })}

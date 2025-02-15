@@ -2,9 +2,9 @@ import Dashboard from './components/Dashboard'
 
 const Videos = () => {
   return (
-    <section className="bg-pink no-padding-bottom">
+    <section className="bg-pink-light no-padding-bottom">
       <div className="container">
-        <h2 className="text-white"> 🎥 I create short tutorials.</h2>
+        <h2 className="text-black"> 🎥 I create short tutorials.</h2>
         <div className="bg-sky-blue dashboard-wrapper border-top-left-radius border-top-right-radius">
           <div className="flex flex-responsive flex-gap space-between small-margin-bottom align-start">
             <p className="text-black">

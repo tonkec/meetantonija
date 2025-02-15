@@ -22,7 +22,7 @@ const Previewer = forwardRef(function Previewer(_, ref) {
         <div className="flex codepen">
           <div ref={buttonWrapper}>
             <button
-              className="active primary text-left small-padding xs-margin-bottom"
+              className="active text-left small-padding xs-margin-bottom"
               onClick={() => {
                 buttonWrapper.current.childNodes.forEach((button) => {
                   button.classList.remove('active')
@@ -70,28 +70,18 @@ const Previewer = forwardRef(function Previewer(_, ref) {
               <LuMicroscope className="icon" />
               <p className="max-w-50-xs">I enlarge the world in pure CSS</p>
             </button>
-
-            <button
-              className="dark text-left small-padding xs-margin-bottom"
-              onClick={() => {
-                window.open('https://codepen.io/collection/AywEyO', '_blank')
-              }}
-            >
-              <FaCodepen className="icon" />
-              <p className="max-w-50-xs">See more on codepen</p>
-            </button>
           </div>
 
           <div className="preview">
             {isIframeLoading && (
               <div className="loader">
-                <Triangle color="#f8f9fa" height={100} width={100} />
+                <Triangle color="#000" height={100} width={100} />
               </div>
             )}
             <Iframe
               url={iframeUrl}
               width="100%"
-              height="420"
+              height="400"
               display="initial"
               position="relative"
               onLoad={() => {

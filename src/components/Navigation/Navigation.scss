@@ -29,12 +29,12 @@
     background-color: var(--color-pink-light);
 
     &:hover {
-      background-color: var(--color-dark-blue);
+      background-color: var(--color-pink);
       color: var(--color-white);
     }
 
     &.active {
-      background-color: var(--color-dark-blue);
+      background-color: var(--color-pink);
       color: var(--color-white);
     }
   }
