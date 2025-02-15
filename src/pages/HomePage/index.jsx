@@ -22,7 +22,7 @@ const SingleProject = ({ post }) => {
         <div className="bg-pink-light xs-padding flex flex-column space-between align-start">
           <div>
             <h5 className="pointer">{post.data.title}</h5>
-            <h6>{post.data.headline}.</h6>
+            <p>{post.data.headline}.</p>
             <p className="small-margin-top">
               {truncateString(post.data.conclusion, 500)}
             </p>

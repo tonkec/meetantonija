@@ -17,7 +17,7 @@ const SearchResults = ({ searchResults }) => {
 
 const NavigationButton = ({ onClick, value }) => (
   <input
-    className="block w-full text-left ternary active navigation-button pointer"
+    className="block w-full text-left primary active navigation-button pointer"
     onClick={onClick}
     type="submit"
     value={value}
@@ -252,6 +252,7 @@ const SearchBar = () => {
               setSearch(event.target.value)
             }}
             value={search}
+            className="bg-pink-light"
           />
 
           <FaKeyboard
@@ -264,7 +265,7 @@ const SearchBar = () => {
           />
           <button
             onClick={closeNavigation}
-            className="ternary w-full dark no-border-radius border-bottom-left-radius border-bottom-right-radius"
+            className="ternary w-full no-border-radius border-bottom-left-radius border-bottom-right-radius"
           >
             Close
           </button>
