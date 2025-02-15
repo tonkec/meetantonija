@@ -18,7 +18,7 @@ export const SinglePost = ({ post, onClick }) => {
   return (
     <div
       key={currentPost.id}
-      className="border-black small-padding border-radius h-full"
+      className="small-padding border-radius h-full bg-pink-light"
     >
       <span className="flex flex-y-center small-margin-bottom flex-gap-small">
         <Image
@@ -85,7 +85,7 @@ const PostsPage = () => {
         <input
           type="text"
           placeholder="Search posts by title"
-          className="small-margin-top bg-pink-light small-margin-bottom w-full border border-radius xs-padding"
+          className="small-margin-top bg-pink-light border-none small-margin-bottom w-full border-radius xs-padding"
           onChange={(e) => {
             setSearch(e.target.value)
             setQueryParams({ search: e.target.value })

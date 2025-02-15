@@ -3,7 +3,6 @@ import 'keen-slider/keen-slider.min.css'
 import BrowserFrame from 'components/BrowserFrame'
 import './Slider.scss'
 import { useWindowSize } from 'hooks/useWindowSize'
-import Skills from 'components/Skills'
 import { removeSpacesAndDashes } from 'utils'
 import { useNavigate } from 'react-router-dom'
 
@@ -34,7 +33,7 @@ const Slider = ({ items, headline }) => {
                   <p className="block">{project.headline}.</p>
 
                   <button
-                    className="bg-black inline-block small-margin-top small-margin-bottom"
+                    className="primary inline-block small-margin-top small-margin-bottom"
                     onClick={() => {
                       navigate(
                         `/project/${removeSpacesAndDashes(project.title.toLowerCase())}`

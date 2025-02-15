@@ -53,7 +53,7 @@ const ProjectPage = () => {
         </div>
       </header>
 
-      <section className="bg-pink-light">
+      <section>
         <div className="container flex flex-wrap flex-gap medium-margin-bottom space-between">
           <div>
             <div className="medium-margin-bottom">
@@ -106,7 +106,7 @@ const ProjectPage = () => {
         </div>
       </section>
 
-      <section className="no-padding-top">
+      <section>
         <div className="container">
           <h3 className="small-margin-bottom">Description</h3>
           <p>{project.description}</p>
