@@ -18,7 +18,7 @@ function Layout() {
   const [isOutletLoaded, setIsOutletLoaded] = useState(true)
 
   const location = useLocation()
-  const introAnimationDuration = 3000
+  const introAnimationDuration = 1500
   const outletTransitionDuration = 1000
 
   useEffect(() => {
@@ -50,7 +50,7 @@ function Layout() {
   }, [location.pathname])
 
   if (isIntroAnimationActive) {
-    return <IntroAnimation introAnimationDuration={introAnimationDuration} />
+    return <IntroAnimation />
   }
 
   if (!isOutletLoaded && !isIntroAnimationActive) {

@@ -394,7 +394,13 @@
 }
 
 .super-extra-large-font {
-  font-size: 10rem;
+  font-size: 2rem;
+  @include breakpoint(md) {
+    font-size: 5rem;
+  }
+  @include breakpoint(lg) {
+    font-size: 10rem;
+  }
 }
 
 .header-padding-bottom {
