@@ -13,6 +13,8 @@ import Paginated from 'components/Paginated'
 import { removeSpacesAndDashes, truncateString } from 'utils'
 import { useNavigate } from 'react-router-dom'
 import Image from 'components/Image'
+import Cta from 'components/Cta'
+import ButtonCopy from 'components/ButtonCopy'
 
 const SingleProject = ({ post }) => {
   const navigate = useNavigate()
@@ -110,6 +112,8 @@ const HomePage = () => {
         </div>
       </section>
 
+      <HireMe />
+
       <section>
         <div className="container">
           <h2>🗣 What they say about me.</h2>
@@ -125,7 +129,7 @@ const HomePage = () => {
 
       <Videos />
 
-      <HireMe />
+      <Cta />
     </>
   )
 }
