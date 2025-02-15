@@ -18,18 +18,14 @@ export const NavigationLink = ({ children, href, buttonClassName }) => {
       <Link
         to={href}
         role="button"
-        className={`medium-font nav-link active ${buttonClassName}`}
+        className={`nav-link active ${buttonClassName}`}
       >
         {children}
       </Link>
     )
   }
   return (
-    <Link
-      to={href}
-      role="button"
-      className={`medium-font nav-link ${buttonClassName}`}
-    >
+    <Link to={href} role="button" className={`nav-link ${buttonClassName}`}>
       {children}
     </Link>
   )
