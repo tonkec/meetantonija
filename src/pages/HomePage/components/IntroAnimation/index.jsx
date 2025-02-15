@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 
 const IntroAnimation = () => {
-  const text = 'antonija'
+  const text = 'antonija.'
   const [displayText, setDisplayText] = useState('')
   const currentIndexRef = useRef(0)
 
@@ -25,7 +25,7 @@ const IntroAnimation = () => {
       }`}
     >
       <div>
-        <h1 className="super-extra-large-font text-black orbitron">
+        <h1 className="super-extra-large-font text-pink orbitron">
           {displayText}
         </h1>
       </div>
