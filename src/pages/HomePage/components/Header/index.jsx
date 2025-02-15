@@ -59,7 +59,7 @@ const Header = () => {
           alt="Sveta Nedelja"
         />
         <br />
-        <span>A small town near the capital.</span>
+        <span>A small town near Zagreb</span>
       </Tooltip>
     </header>
   )

@@ -194,7 +194,7 @@ const AboutPage = () => {
 
           {event ? (
             <div className="flex flex-responsive flex-gap space-between">
-              <div className="">
+              <div>
                 {speakingEventsSorted.map((event, index) => (
                   <span
                     key={index}
