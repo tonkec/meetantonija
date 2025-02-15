@@ -28,9 +28,9 @@ const SingleProject = ({ post }) => {
             </p>
           </div>
           <button
-            onClick={() =>
-              navigate(`/projects/${removeSpacesAndDashes(post.id)}`)
-            }
+            onClick={() => {
+              navigate(`/project/${removeSpacesAndDashes(post.data.title)}`)
+            }}
             className="primary small-margin-top"
           >
             See more
