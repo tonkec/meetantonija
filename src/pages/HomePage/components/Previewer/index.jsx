@@ -91,7 +91,7 @@ const Previewer = forwardRef(function Previewer(_, ref) {
             <Iframe
               url={iframeUrl}
               width="100%"
-              height="500"
+              height="420"
               display="initial"
               position="relative"
               onLoad={() => {
