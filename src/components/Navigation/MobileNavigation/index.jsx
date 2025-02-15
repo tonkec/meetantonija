@@ -1,4 +1,3 @@
-import DarkMode from 'components/DarkMode'
 import { NavigationLink } from '../index'
 import './MobileNavigation.scss'
 
@@ -13,7 +12,7 @@ const MobileNavigation = ({ isOpen, links, onClose, isSettings }) => {
         {links.map((link, index) => (
           <NavigationLink key={index} href={link.href}>
             <span className="flex flex-y-center flex-gap-small">
-              {index}. {link.label} {link.icon}
+              {link.label} {link.icon}
             </span>
           </NavigationLink>
         ))}

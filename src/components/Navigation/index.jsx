@@ -87,7 +87,7 @@ const Navigation = () => {
             onClick={() => {
               setIsMobileNavigationOpen(!isMobileNavigationOpen)
             }}
-            className="primary"
+            className="transparent"
           >
             <RxHamburgerMenu fontSize="1.5rem" />
           </button>
