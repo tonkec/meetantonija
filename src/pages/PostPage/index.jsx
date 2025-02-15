@@ -16,6 +16,7 @@ import { Helmet } from 'react-helmet'
 import { IoIosArrowRoundBack } from 'react-icons/io'
 import { SinglePost } from '../PostsPage'
 import { setQueryParams } from '../../components/Paginated'
+import HireMe from 'components/HireMe'
 
 const Tags = (tags, handleTagClick) => {
   return (
@@ -72,7 +73,7 @@ const PostPage = () => {
 
   if (isLoading) {
     return (
-      <div className="post-loader post-container">
+      <div className="post-loader container">
         <h2>Fetching post data from markdown files...</h2>
       </div>
     )
@@ -93,7 +94,7 @@ const PostPage = () => {
           h1({ children }) {
             return (
               <header className="medium-padding-top medium-padding-bottom small-margin-bottom">
-                <div className="post-container">
+                <div className="container">
                   <Link
                     to="/posts"
                     className="post-link flex flex-y-center medium-margin-bottom"
@@ -109,22 +110,16 @@ const PostPage = () => {
             )
           },
           h4({ children }) {
-            return (
-              <h4 className="post-container medium-margin-top">{children}</h4>
-            )
+            return <h4 className="container medium-margin-top">{children}</h4>
           },
           h5({ children }) {
-            return (
-              <h5 className="post-container medium-margin-top">{children}</h5>
-            )
+            return <h5 className="container medium-margin-top">{children}</h5>
           },
           b({ children }) {
             return <b className="bols">{children}</b>
           },
           p({ children }) {
-            return (
-              <p className="post-container medium-margin-top">{children}</p>
-            )
+            return <p className="container medium-margin-top">{children}</p>
           },
           a: ({ node, children, ...props }) => {
             return (
@@ -140,7 +135,7 @@ const PostPage = () => {
           },
           blockquote({ children }) {
             return (
-              <blockquote className="post-container medium-margin-top">
+              <blockquote className="container medium-margin-top">
                 {children}
               </blockquote>
             )
@@ -165,19 +160,19 @@ const PostPage = () => {
           },
           ol({ children }) {
             return (
-              <div className="post-container">
+              <div className="container">
                 <ol>{children}</ol>
               </div>
             )
           },
 
           pre({ children }) {
-            return <div className="post-container code-block">{children}</div>
+            return <div className="container code-block">{children}</div>
           },
         }}
       />
 
-      <section className="post-container">
+      <section className="container">
         <div className="extra-large-margin-top large-margin-bottom">
           <div className="flex flex-gap flex-responsive">
             {shuffleArray(otherPosts)
@@ -196,6 +191,8 @@ const PostPage = () => {
           </div>
         </div>
       </section>
+
+      <HireMe />
     </div>
   )
 }
