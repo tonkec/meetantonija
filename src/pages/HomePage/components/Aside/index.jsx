@@ -31,7 +31,7 @@ const Aside = ({ numberOfPosts }) => {
   return (
     <section className="aside-section bg-pink-light small-padding-bottom border-radius">
       <div className="container">
-        <h2>👌 I write about technologies I like.</h2>
+        <h2>📚 I write about technologies I like.</h2>
       </div>
       <div className="container overflow-x-hidden relative flex flex-column">
         {shuffledNotes.slice(0, numberOfPosts).map((note) => {

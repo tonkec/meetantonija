@@ -39,22 +39,22 @@ const navigationLinks = [
   {
     href: '/',
     label: 'Home',
-    icon: <RiHome2Line />,
+    icon: <RiHome2Line fontSize={20} />,
   },
   {
     href: '/about',
     label: 'About',
-    icon: <RiEmotionLine />,
+    icon: <RiEmotionLine fontSize={20} />,
   },
   {
     href: '/posts',
     label: 'Posts',
-    icon: <RiBook2Line />,
+    icon: <RiBook2Line fontSize={20} />,
   },
   {
     href: '/cv',
     label: 'CV',
-    icon: <RiBriefcase2Line />,
+    icon: <RiBriefcase2Line fontSize={20} />,
   },
 ]
 
@@ -62,7 +62,9 @@ const getNavigationLinks = (navigationLinks) => {
   return navigationLinks.map((link) => {
     return (
       <NavigationLink key={link.href} href={link.href}>
-        {link.label}
+        <span className="flex flex-y-center flex-gap-small">
+          {link.label} {link.icon}
+        </span>
       </NavigationLink>
     )
   })

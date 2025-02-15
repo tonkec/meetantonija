@@ -9,8 +9,9 @@ const Header = () => {
     <header className="container homepage-header header-padding-top header-padding-bottom">
       <div className="flex flex-responsive space-between flex-gap flex-y-center">
         <div className="max-w-50">
+          <h2>👋</h2>
           <h1>
-            I'm <span className="accent">Antonija.</span>
+            I'm <span className="accent">Antonija</span>
           </h1>
           <p>
             I am a frontend developer from{' '}
