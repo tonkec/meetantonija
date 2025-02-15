@@ -2,6 +2,7 @@ import { Tooltip } from 'react-tooltip'
 import Image from 'components/Image'
 import cv from 'files/cv.pdf'
 import { Link } from 'react-router-dom'
+import ButtonCopy from 'components/ButtonCopy'
 
 const Header = () => {
   return (
@@ -20,13 +21,7 @@ const Header = () => {
           </p>
 
           <div className="flex flex-gap-small small-margin-top">
-            <a
-              className="primary"
-              role="button"
-              href="mailto:antonija1023@gmail.com"
-            >
-              Contact
-            </a>
+            <ButtonCopy text="Copy Email" />
 
             <Link
               to={cv}
