@@ -218,8 +218,8 @@ const projects = [
     id: 3,
     description:
       "This app allows users to fund NGOs. I dove deep into Angular development for the company's platform. My primary role centered around architecting a robust communication framework between the Angular-based user interface and the Raisenow API, which shares similarities with Stripe.",
-    from: 2019,
-    to: 2020,
+    from: 2020,
+    to: 2021,
     team: 30,
     learned:
       'I learned how to work with Angular, Typescript, and RxJS., how integrate systems and ensure code quality through comprehensive testing using Jest.',
