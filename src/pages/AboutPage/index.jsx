@@ -107,26 +107,38 @@ const AboutPage = () => {
       </Helmet>
       <header className="header-padding-top header-padding-bottom">
         <div className="container">
-          <div className="flex flex-responsive flex-gap align-start space-between">
+          <div className="flex flex-responsive flex-gap-large align-start space-between">
             <div>
               <h2>
                 I am <span className="accent">Antonija</span>,
               </h2>
 
               <p className="line-height-2">
-                a frontend developer from Sveta Nedelja <br /> which currently
-                has a{' '}
+                a frontend developer from Sveta Nedelja which currently has a{' '}
                 <span data-tooltip-id="temperature-tooltip">
                   <Temperature />
                 </span>{' '}
                 weather.
+              </p>
+              <p className="line-height-2">
+                I'm a dedicated and forward-thinking front-end engineer with a
+                passion for building cutting-edge web applications. My expertise
+                lies in harnessing the power of modern JavaScript frameworks to
+                create seamless, user-centric experiences. I pride myself on
+                optimizing performance and translating complex ideas into
+                intuitive interfaces. I continuously challenge myself to learn
+                new technologies and refine my problem-solving skills.
+                Collaboration is at the heart of my work, and I thrive in
+                environments where creativity and technical excellence merge. I
+                am excited to leverage my skills to drive innovation and make a
+                meaningful impact on every project I undertake.
               </p>
             </div>
 
             <Tooltip
               id="temperature-tooltip"
               style={{
-                backgroundColor: 'var(--color-white)',
+                backgroundColor: 'var(--color-sky-blue)',
                 padding: '10px',
                 borderRadius: '5px',
                 color: 'var(--color-black)',
