@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react'
 import { removeSpacesAndDashes } from 'utils'
 import { useWindowSize } from 'hooks/useWindowSize'
-const getMaxWidth = (posts, windowSize) => {
+const getMaxWidth = (posts, windowSize, postsPerPage) => {
+  if (postsPerPage === 1) {
+    return { maxWidth: '100%' }
+  }
   if (windowSize < 768) {
     return { maxWidth: '100%' }
   }
@@ -104,7 +107,7 @@ const Pagination = ({
         {paginatedPosts.length ? (
           paginatedPosts.map((post, index) => (
             <div
-              style={getMaxWidth(paginatedPosts, width)}
+              style={getMaxWidth(paginatedPosts, width, postsPerPage)}
               className="flex flex-column"
             >
               <SingleEntry

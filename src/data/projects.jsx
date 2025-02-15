@@ -8,6 +8,7 @@ import { rootImageUrl } from 'rootImageUrl'
 
 const projects = [
   {
+    coverPhoto: rootImageUrl + 'kwikdroid/robot.jpg',
     photos: [
       rootImageUrl + 'kwikdroid/1.png',
       rootImageUrl + 'kwikdroid/2.png',
@@ -87,6 +88,7 @@ const projects = [
     ),
   },
   {
+    coverPhoto: rootImageUrl + 'casumo/cubes.jpg',
     photos: [
       rootImageUrl + 'casumo/1.jpg',
       rootImageUrl + 'casumo/4.jpg',
@@ -165,6 +167,7 @@ const projects = [
     ),
   },
   {
+    coverPhoto: rootImageUrl + 'formunauts/money.jpg',
     photos: [
       rootImageUrl + 'formunauts/2.png',
       rootImageUrl + 'formunauts/3.png',
@@ -247,6 +250,7 @@ const projects = [
     ),
   },
   {
+    coverPhoto: rootImageUrl + 'crafstrom/bulb.jpg',
     photos: [
       rootImageUrl + 'crafstrom/1.png',
       rootImageUrl + 'crafstrom/2.png',
@@ -323,6 +327,7 @@ const projects = [
     ),
   },
   {
+    coverPhoto: rootImageUrl + 'revuto/graph.jpg',
     photos: [rootImageUrl + 'revuto/1.png'],
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
@@ -383,6 +388,7 @@ const projects = [
     ),
   },
   {
+    coverPhoto: rootImageUrl + 'codeinstitute/board.jpg',
     photos: [
       rootImageUrl + 'codeinstitute/1.png',
       rootImageUrl + 'codeinstitute/4.png',
@@ -453,6 +459,7 @@ const projects = [
     ),
   },
   {
+    coverPhoto: rootImageUrl + 'peaks/mountains.jpg',
     photos: [
       rootImageUrl + 'peaks/1.jpeg',
       rootImageUrl + 'peaks/2.jpeg',
@@ -529,6 +536,7 @@ const projects = [
     ),
   },
   {
+    coverPhoto: rootImageUrl + 'tint/social.jpg',
     photos: [rootImageUrl + 'tint/1.png', rootImageUrl + 'tint/2.png'],
     fakeContent: (
       <FakeBrowser className="fake-dashboard">
@@ -597,6 +605,7 @@ const projects = [
     ),
   },
   {
+    coverPhoto: rootImageUrl + 'funderpro/tokens.jpg',
     photos: [rootImageUrl + 'funderpro/2.png'],
     fakeContent: (
       <FakeBrowser>

@@ -8,36 +8,35 @@ import { Helmet } from 'react-helmet'
 import Testimonial from './components/Testimonial'
 import { useCallback, useRef } from 'react'
 import { FaChevronDown } from 'react-icons/fa6'
-
 import { rootImageUrl } from '../../rootImageUrl'
 import Paginated from 'components/Paginated'
 import { removeSpacesAndDashes, truncateString } from 'utils'
 import { useNavigate } from 'react-router-dom'
+import Image from 'components/Image'
 
 const SingleProject = ({ post }) => {
   const navigate = useNavigate()
   return (
-    <>
-      <article className="flex flex-grow-1 flex-responsive">
-        <div className="bg-pink-light xs-padding flex flex-column space-between align-start">
-          <div>
-            <h5 className="pointer">{post.data.title}</h5>
-            <p>{post.data.headline}.</p>
-            <p className="small-margin-top">
-              {truncateString(post.data.conclusion, 500)}
-            </p>
-          </div>
-          <button
-            onClick={() => {
-              navigate(`/project/${removeSpacesAndDashes(post.data.title)}`)
-            }}
-            className="primary small-margin-top"
-          >
-            See more
-          </button>
-        </div>
-      </article>
-    </>
+    <div className="bg-pink-light xs-padding flex flex-responsive flex-gap space-between">
+      <Image
+        src={post.data.coverPhoto}
+        alt={post.data.title}
+        isBackgroundImage
+      />
+      <div>
+        <h2 className="no-padding">{post.data.title}</h2>
+        <p className="small-margin-top">{post.data.conclusion}</p>
+
+        <button
+          onClick={() => {
+            navigate(`/project/${removeSpacesAndDashes(post.data.title)}`)
+          }}
+          className="primary small-margin-top"
+        >
+          Read more
+        </button>
+      </div>
+    </div>
   )
 }
 
@@ -105,7 +104,7 @@ const HomePage = () => {
 
           <Paginated
             data={projects.sort((a, b) => b.from - a.from)}
-            postsPerPage={2}
+            postsPerPage={1}
             singleEntry={(project) => <SingleProject post={project} />}
           />
         </div>
