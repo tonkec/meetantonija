@@ -17,7 +17,7 @@ const Image = ({
   if (isImageLoading) {
     return (
       <Triangle
-        color={isDarkLocalStorage ? '#fcfcfc' : '#292929'}
+        color={isDarkLocalStorage ? '#fcfcfc' : '#000'}
         height={50}
         width={50}
       />
