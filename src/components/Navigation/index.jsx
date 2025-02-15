@@ -9,33 +9,9 @@ import { RiHome2Line } from 'react-icons/ri'
 import { RiEmotionLine } from 'react-icons/ri'
 import { RiBook2Line } from 'react-icons/ri'
 import { RiBriefcase2Line } from 'react-icons/ri'
-import { RiSettings4Fill } from 'react-icons/ri'
 
 export const NavigationLink = ({ children, href, buttonClassName }) => {
-  const [isOpen, setIsOpen] = useState(false)
   const activeLink = window.location.pathname
-
-  if (href === '/settings') {
-    return (
-      <>
-        <button
-          className={`medium-font nav-link primary`}
-          onClick={() => {
-            setIsOpen(!isOpen)
-          }}
-        >
-          {children}
-        </button>
-        <MobileNavigation
-          isOpen={isOpen}
-          isSettings={true}
-          onClose={() => {
-            setIsOpen(false)
-          }}
-        />
-      </>
-    )
-  }
 
   if (activeLink === href) {
     return (
@@ -88,9 +64,9 @@ const getNavigationLinks = (navigationLinks) => {
       <NavigationLink
         key={link.href}
         href={link.href}
-        buttonClassName="primary"
+        buttonClassName="ternary"
       >
-        {index}. {link.label}
+        {link.label}
       </NavigationLink>
     )
   })
@@ -121,9 +97,7 @@ const Navigation = () => {
           <div className="flex">{getNavigationLinks(navigationLinks)}</div>
         )}
 
-        <h6 className="medium-margin-right hidden-mobile text-white">
-          Shift + K
-        </h6>
+        <h6 className="medium-margin-right hidden-mobile">Shift + K</h6>
       </div>
       <MobileNavigation
         isOpen={isMobileNavigationOpen}
