@@ -42,7 +42,7 @@ const ProjectPage = () => {
             <h1>{project.title}</h1>
             <p>{project.headline}</p>
             <button
-              className="button secondary inline-block medium-margin-top"
+              className="button ternary inline-block medium-margin-top"
               onClick={() => {
                 scrollToTheElement('tldr')
               }}
