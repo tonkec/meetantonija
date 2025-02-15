@@ -18,7 +18,7 @@ const Header = () => {
             <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>, Croatia,
             passionate about building beautiful, user-friendly web experiences.
             I craft interfaces that are not only visually engaging but also
-            highly functional.
+            highly functional using React, Typescript and Tailwind CSS.
           </p>
 
           <div className="flex flex-gap-small small-margin-top">

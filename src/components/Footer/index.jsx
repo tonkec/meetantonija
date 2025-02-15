@@ -16,7 +16,7 @@ const Footer = () => {
     <footer>
       <div className="container large-margin-top">
         <Emoji />
-        <div className="flex flex-x-center small-margin-bottom">
+        <div className="flex flex-x-center small-margin-bottom medium-margin-top">
           <Social icons={socialLinks} />
         </div>{' '}
         <p className="text-center xs-margin-bottom">
