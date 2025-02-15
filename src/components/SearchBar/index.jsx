@@ -17,7 +17,7 @@ const SearchResults = ({ searchResults }) => {
 
 const NavigationButton = ({ onClick, value }) => (
   <input
-    className="block w-full text-left primary active navigation-button pointer"
+    className="block w-full text-left active navigation-button pointer"
     onClick={onClick}
     type="submit"
     value={value}
