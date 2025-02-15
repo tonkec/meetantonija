@@ -61,11 +61,7 @@ const navigationLinks = [
 const getNavigationLinks = (navigationLinks) => {
   return navigationLinks.map((link, index) => {
     return (
-      <NavigationLink
-        key={link.href}
-        href={link.href}
-        buttonClassName="ternary"
-      >
+      <NavigationLink key={link.href} href={link.href}>
         {link.label}
       </NavigationLink>
     )

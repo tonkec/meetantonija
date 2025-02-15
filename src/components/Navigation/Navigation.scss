@@ -7,7 +7,7 @@
   right: 0;
   top: 0px;
   z-index: 10;
-  background-color: var(--color-sky-blue);
+  background-color: var(--color-pink-light);
   margin: 0 auto;
   transition:
     width 0.3s ease-in-out,
@@ -26,6 +26,12 @@
   .nav-link {
     padding: 20px;
     border-radius: 0;
+    background-color: var(--color-pink-light);
+
+    &:hover {
+      background-color: var(--color-dark-blue);
+      color: var(--color-white);
+    }
 
     &.active {
       background-color: var(--color-dark-blue);
