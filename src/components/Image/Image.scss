@@ -1,4 +1,5 @@
-@import './../../styles//transitions.scss';
+@import './../../styles/transitions.scss';
+@import './../../styles/mq.scss';
 .image-container {
   @include transition(transform);
   position: relative;
@@ -39,11 +40,14 @@ img {
 }
 
 .isBackgroundImage {
-  height: 50vh;
+  height: 30vh;
   border-radius: var(--border-radius);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   min-width: 48%;
+  @include breakpoint('md') {
+    height: 50vh;
+  }
 }
