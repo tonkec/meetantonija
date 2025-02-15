@@ -19,34 +19,22 @@ const SingleProject = ({ post }) => {
   return (
     <>
       <article className="flex flex-grow-1 flex-responsive">
-        <div className="bg-pink-light xs-padding">
-          <h5
-            className="pointer underline"
-            onClick={() => {
-              navigate(`/project/${removeSpacesAndDashes(post.data.title)}`)
-            }}
-          >
-            {post.data.title}
-          </h5>
-          <h6>{post.data.headline}.</h6>
-          <p className="small-margin-top">
-            {truncateString(post.data.conclusion, 300)}
-          </p>
-
-          <div className="bg-pink-light small-margin-top">
-            {post.data.skills.split(', ').map((skill, index) => (
-              <span
-                key={index}
-                className="tag dark border-radius small-margin-right small-margin-bottom"
-                role="button"
-                onClick={() => {
-                  navigate(`/cv?skill=${removeSpacesAndDashes(skill)}`)
-                }}
-              >
-                {skill}
-              </span>
-            ))}
+        <div className="bg-pink-light xs-padding flex flex-column space-between align-start">
+          <div>
+            <h5 className="pointer">{post.data.title}</h5>
+            <h6>{post.data.headline}.</h6>
+            <p className="small-margin-top">
+              {truncateString(post.data.conclusion, 500)}
+            </p>
           </div>
+          <button
+            onClick={() =>
+              navigate(`/projects/${removeSpacesAndDashes(post.id)}`)
+            }
+            className="primary small-margin-top"
+          >
+            See more
+          </button>
         </div>
       </article>
     </>

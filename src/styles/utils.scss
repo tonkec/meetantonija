@@ -254,6 +254,10 @@
   justify-content: space-between;
 }
 
+.content-end {
+  justify-content: flex-end;
+}
+
 .flex-x-center {
   justify-content: center;
 }
@@ -339,6 +343,10 @@
 
 .stretch {
   align-items: stretch;
+}
+
+.items-end {
+  align-items: flex-end;
 }
 
 .flex-y-center {
