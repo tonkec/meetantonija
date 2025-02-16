@@ -1,3 +1,5 @@
+import { FaKeyboard } from 'react-icons/fa'
+
 const Cta = () => {
   return (
     <section className="small-padding large-margin-top hidden-mobile">
@@ -6,6 +8,11 @@ const Cta = () => {
         <p className="small-margin-top small-margin-bottom text-black">
           Try pressing shift + k
         </p>
+        <FaKeyboard
+          className="text-black"
+          fontSize="2rem"
+          style={{ marginTop: '-7px' }}
+        />
       </div>
     </section>
   )
