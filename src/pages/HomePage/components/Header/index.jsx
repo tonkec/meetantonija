@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className="container homepage-header header-padding-top header-padding-bottom">
       <div className="flex flex-responsive space-between flex-gap flex-y-center">
-        <div className="max-w-50">
+        <div className="flex-1">
           <h2>👋</h2>
           <h1>
             I'm <span className="accent">Antonija</span>,
@@ -36,12 +36,14 @@ const Header = () => {
           </div>
         </div>
 
-        <Image
-          src="https://avatars.githubusercontent.com/u/5020758?v=4"
-          alt="Antonija"
-          hasColoredBackground
-          className="hidden-mobile"
-        />
+        <div className="content-end flex flex-1 medium-margin-right">
+          <Image
+            src="https://avatars.githubusercontent.com/u/5020758?v=4"
+            alt="Antonija"
+            hasColoredBackground
+            className="hidden-mobile"
+          />
+        </div>
       </div>
 
       <Tooltip

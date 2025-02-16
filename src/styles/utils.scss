@@ -415,7 +415,10 @@
     font-size: 5rem;
   }
   @include breakpoint(lg) {
-    font-size: 10rem;
+    font-size: 6rem;
+  }
+  @include breakpoint(xl) {
+    font-size: 12rem;
   }
 }
 

@@ -18,8 +18,8 @@
   overflow: hidden;
 
   &.scrolled-to-top {
+    width: 1200px;
     top: 20px;
-    width: 90%;
     border-radius: var(--border-radius);
   }
 
