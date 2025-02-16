@@ -1,9 +1,3 @@
-import FakeBrowser from 'pages/ProjectPage/components/FakeBrowser'
-import Graph from 'pages/ProjectPage/components/Graph'
-import Dashboard from 'pages/HomePage/components/Videos/components/Dashboard'
-import Board from 'pages/ProjectPage/components/Board'
-import Mountains from 'pages/ProjectPage/components/Mountains'
-
 import { rootImageUrl } from 'rootImageUrl'
 
 const projects = [
@@ -15,11 +9,7 @@ const projects = [
       rootImageUrl + 'kwikdroid/3.png',
       rootImageUrl + 'kwikdroid/4.png',
     ],
-    fakeContent: (
-      <FakeBrowser className="fake-dashboard">
-        <Graph />
-      </FakeBrowser>
-    ),
+
     location: 'Remote',
     company: 'PunkRockDev',
     title: 'Zoomero',
@@ -95,11 +85,7 @@ const projects = [
       rootImageUrl + 'casumo/3.jpg',
       rootImageUrl + 'casumo/2.jpg',
     ],
-    fakeContent: (
-      <FakeBrowser className="fake-dashboard">
-        <Graph />
-      </FakeBrowser>
-    ),
+
     location: 'Remote',
     company: 'Casumo',
     title: 'Casumo',
@@ -173,11 +159,7 @@ const projects = [
       rootImageUrl + 'formunauts/3.png',
       rootImageUrl + 'formunauts/4.png',
     ],
-    fakeContent: (
-      <FakeBrowser className="fake-dashboard">
-        <Dashboard title="Formunauts" />
-      </FakeBrowser>
-    ),
+
     company: 'Formunauts',
     location: 'Remote',
     title: 'Formunauts',
@@ -255,11 +237,6 @@ const projects = [
       rootImageUrl + 'crafstrom/1.png',
       rootImageUrl + 'crafstrom/2.png',
     ],
-    fakeContent: (
-      <FakeBrowser className="fake-dashboard">
-        <Dashboard title="Crafstrom" />
-      </FakeBrowser>
-    ),
     location: 'Remote',
     company: 'Craftstrom',
     title: 'Craftstrom',
@@ -329,11 +306,6 @@ const projects = [
   {
     coverPhoto: rootImageUrl + 'revuto/graph.jpg',
     photos: [rootImageUrl + 'revuto/1.png'],
-    fakeContent: (
-      <FakeBrowser className="fake-dashboard">
-        <Graph />
-      </FakeBrowser>
-    ),
     location: 'Remote',
     company: 'AsyncLabs',
     title: 'Revuto',
@@ -393,11 +365,6 @@ const projects = [
       rootImageUrl + 'codeinstitute/1.png',
       rootImageUrl + 'codeinstitute/4.png',
     ],
-    fakeContent: (
-      <FakeBrowser>
-        <Board />
-      </FakeBrowser>
-    ),
     location: 'Remote',
     company: 'Code Institute',
     title: 'Code Institute',
@@ -465,11 +432,6 @@ const projects = [
       rootImageUrl + 'peaks/2.jpeg',
       rootImageUrl + 'peaks/4.jpeg',
     ],
-    fakeContent: (
-      <FakeBrowser>
-        <Mountains />
-      </FakeBrowser>
-    ),
     location: 'Zagreb',
     company: 'Supersuperstudio',
     title: 'Peaks',
@@ -538,11 +500,6 @@ const projects = [
   {
     coverPhoto: rootImageUrl + 'tint/social.jpg',
     photos: [rootImageUrl + 'tint/1.png', rootImageUrl + 'tint/2.png'],
-    fakeContent: (
-      <FakeBrowser className="fake-dashboard">
-        <Dashboard title="Tint" />
-      </FakeBrowser>
-    ),
     location: 'Remote',
     from: 2016,
     to: 2017,
@@ -590,7 +547,7 @@ const projects = [
       <span>
         My manager was{' '}
         <a
-          className="normal-font text-white"
+          className="normal-font text-black"
           href="https://www.linkedin.com/in/danielbaldwinco/"
           target="_blank"
           rel="noreferrer"
@@ -607,11 +564,6 @@ const projects = [
   {
     coverPhoto: rootImageUrl + 'funderpro/tokens.jpg',
     photos: [rootImageUrl + 'funderpro/2.png'],
-    fakeContent: (
-      <FakeBrowser>
-        <Graph />
-      </FakeBrowser>
-    ),
     location: 'Zagreb',
     from: 2023,
     company: 'Mochalabs',
