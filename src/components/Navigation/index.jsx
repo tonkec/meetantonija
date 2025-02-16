@@ -9,6 +9,7 @@ import { RiHome2Line } from 'react-icons/ri'
 import { RiEmotionLine } from 'react-icons/ri'
 import { RiBook2Line } from 'react-icons/ri'
 import { RiBriefcase2Line } from 'react-icons/ri'
+import ButtonCopy from 'components/ButtonCopy'
 
 export const NavigationLink = ({ children, href, buttonClassName }) => {
   const activeLink = window.location.pathname
@@ -91,7 +92,9 @@ const Navigation = () => {
           <div className="flex">{getNavigationLinks(navigationLinks)}</div>
         )}
 
-        <h6 className="medium-margin-right hidden-mobile">shift + k</h6>
+        <div className="flex flex-gap medium-margin-right">
+          <ButtonCopy text="Copy email" />
+        </div>
       </div>
       <MobileNavigation
         isOpen={isMobileNavigationOpen}
