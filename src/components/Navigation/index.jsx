@@ -92,8 +92,10 @@ const Navigation = () => {
           <div className="flex">{getNavigationLinks(navigationLinks)}</div>
         )}
 
-        <div className="flex flex-gap medium-margin-right hidden-mobile">
-          <ButtonCopy text="Copy email" />
+        <div className="flex flex-gap-small medium-margin-right flex-y-center">
+          <div className="hidden-mobile">
+            <ButtonCopy text="Copy email" />
+          </div>
           <DarkMode />
         </div>
       </div>
