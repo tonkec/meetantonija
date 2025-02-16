@@ -70,6 +70,10 @@
   padding-bottom: calc(var(--card-spacing) * 4);
 }
 
+.extra-large-padding-top {
+  padding-top: calc(var(--card-spacing) * 8);
+}
+
 .extra-large-padding-bottom {
   padding-bottom: calc(var(--card-spacing) * 8);
 }
@@ -247,10 +251,6 @@
 
   @include breakpoint(sm) {
     padding-top: calc(var(--card-spacing) * 5);
-  }
-
-  @include breakpoint(lg) {
-    padding-top: calc(var(--card-spacing) * 2);
   }
 }
 

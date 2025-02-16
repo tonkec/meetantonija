@@ -14,13 +14,7 @@ const Testimonial = ({ testimonial }) => {
           />
         </div>{' '}
         <p>
-          {testimonial.author} @{' '}
-          <a
-            className="normal-font"
-            href={`project/${removeSpacesAndDashes(testimonial.project)}`}
-          >
-            {testimonial.project}
-          </a>
+          {testimonial.author} @ {testimonial.project}
         </p>
       </div>
     </div>

@@ -156,7 +156,7 @@ const AboutPage = () => {
               hasColoredBackground
               src={`${rootImageUrl}/me.jpeg`}
               alt="Antonija"
-              className="hidden-mobile"
+              className="hidden-mobile medium-margin-right"
             />
           </div>
         </div>
