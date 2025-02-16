@@ -10,7 +10,7 @@ This is my personal portfolio website built using React, showcasing my projects,
 
 ## Tech Stack
 
-- **Frontend:** React.js, TypeScript, Tailwind CSS
+- **Frontend:** React.js
 - **State Management:** React Context API
 - **Deployment:** Netlify
 
