@@ -9,6 +9,7 @@ import { RiEmotionLine } from 'react-icons/ri'
 import { RiBriefcase2Line } from 'react-icons/ri'
 import ButtonCopy from 'components/ButtonCopy'
 import { MdLibraryBooks, MdHome } from 'react-icons/md'
+import DarkMode from 'components/DarkMode'
 
 export const NavigationLink = ({ children, href, buttonClassName }) => {
   const activeLink = window.location.pathname
@@ -93,6 +94,7 @@ const Navigation = () => {
 
         <div className="flex flex-gap medium-margin-right hidden-mobile">
           <ButtonCopy text="Copy email" />
+          <DarkMode />
         </div>
       </div>
       <MobileNavigation
