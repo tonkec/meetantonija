@@ -11,10 +11,10 @@ const Header = () => {
         <div className="max-w-50">
           <h2>👋</h2>
           <h1>
-            I'm <span className="accent">Antonija</span>
+            I'm <span className="accent">Antonija</span>,
           </h1>
           <p>
-            I am a frontend developer from{' '}
+            a frontend developer from{' '}
             <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>, Croatia,
             passionate about building beautiful, user-friendly web experiences.
             I craft interfaces that are not only visually engaging but also

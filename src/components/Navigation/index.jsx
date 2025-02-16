@@ -5,11 +5,10 @@ import './Navigation.scss'
 import { Link } from 'react-router-dom'
 import { useWindowSize } from '@uidotdev/usehooks'
 import MobileNavigation from './MobileNavigation'
-import { RiHome2Line } from 'react-icons/ri'
 import { RiEmotionLine } from 'react-icons/ri'
-import { RiBook2Line } from 'react-icons/ri'
 import { RiBriefcase2Line } from 'react-icons/ri'
 import ButtonCopy from 'components/ButtonCopy'
+import { MdLibraryBooks, MdHome } from 'react-icons/md'
 
 export const NavigationLink = ({ children, href, buttonClassName }) => {
   const activeLink = window.location.pathname
@@ -36,7 +35,7 @@ const navigationLinks = [
   {
     href: '/',
     label: 'Home',
-    icon: <RiHome2Line fontSize={20} />,
+    icon: <MdHome fontSize={20} />,
   },
   {
     href: '/about',
@@ -45,8 +44,8 @@ const navigationLinks = [
   },
   {
     href: '/posts',
-    label: 'Posts',
-    icon: <RiBook2Line fontSize={20} />,
+    label: 'Notes',
+    icon: <MdLibraryBooks fontSize={20} />,
   },
   {
     href: '/cv',
