@@ -18,9 +18,11 @@
   overflow: hidden;
 
   &.scrolled-to-top {
-    width: 1200px;
-    top: 20px;
-    border-radius: var(--border-radius);
+    @include breakpoint(xl) {
+      width: 1200px;
+      top: 20px;
+      border-radius: var(--border-radius);
+    }
   }
 
   .nav-link {
