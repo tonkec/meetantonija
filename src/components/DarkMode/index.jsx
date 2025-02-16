@@ -1,4 +1,3 @@
-import 'react-toggle/style.css'
 import './DarkMode.scss'
 import useIsDarkMode from 'hooks/useIsDarkMode'
 
