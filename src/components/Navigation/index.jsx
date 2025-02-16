@@ -92,7 +92,7 @@ const Navigation = () => {
         )}
 
         <div className="flex flex-gap medium-margin-right hidden-mobile">
-          <ButtonCopy text="Email me" />
+          <ButtonCopy text="Send email" />
         </div>
       </div>
       <MobileNavigation
