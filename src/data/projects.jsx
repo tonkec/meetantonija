@@ -2,82 +2,6 @@ import { rootImageUrl } from 'rootImageUrl'
 
 const projects = [
   {
-    coverPhoto: rootImageUrl + 'kwikdroid/robot.jpg',
-    photos: [
-      rootImageUrl + 'kwikdroid/1.png',
-      rootImageUrl + 'kwikdroid/2.png',
-      rootImageUrl + 'kwikdroid/3.png',
-      rootImageUrl + 'kwikdroid/4.png',
-    ],
-
-    location: 'Remote',
-    company: 'PunkRockDev',
-    title: 'Zoomero',
-    headline: 'Access your data wherever you are',
-    skills: 'Rails, Ruby, Javascript',
-    link: 'https://sjgrand.cn/technology/kwikdroid/',
-    id: 11,
-    description:
-      'Zoomero is an online platform for managing your bank accounts. I was responsible for the development of the Zoomero platform, an online platform for managing your accounts and transactions. My responsibilities included implementing designs from Figma into the Rails frontend, developing user authentication and authorization features, optimizing database queries for performance, and integrating third-party APIs for additional functionality.',
-    responsibilities: [
-      {
-        title: 'Implemented designs from Figma into Rails frontend',
-        description:
-          'Implemented designs from Figma into Rails frontend, ensuring pixel-perfect accuracy and responsiveness across devices.',
-      },
-      {
-        title: 'Developed user authentication and authorization features',
-        description:
-          'Developed user authentication and authorization features, ensuring secure access to user accounts and transactions.',
-      },
-      {
-        title: 'Optimized database queries for performance',
-        description:
-          'Optimized database queries for performance, ensuring fast and efficient data retrieval and processing.',
-      },
-      {
-        title: 'Integrated third-party APIs for additional functionality',
-        description:
-          'Integrated third-party APIs for additional functionality, enhancing the platform’s capabilities and user experience.',
-      },
-      {
-        title:
-          'Collaborated with cross-functional teams for feature development',
-        description:
-          'Collaborated with cross-functional teams for feature development, ensuring alignment with project goals and requirements.',
-      },
-    ],
-    from: 2018,
-    to: 2019,
-    methodology: 'Kanban',
-    position: 'Junior Rails Developer',
-    team: 5,
-    learned:
-      'I learned the basics of Rails development, including MVC architecture, routing, and database management. I also gained experience in working with third-party APIs and optimizing database queries for performance.',
-    conclusion:
-      'My experience at PunkRockDev as a Junior Rails Developer was characterized by a focus on learning and growth. I had the opportunity to work on the Zoomero platform, where I developed user authentication and authorization features, optimized database queries for performance, and integrated third-party APIs for additional functionality. I am proud of the contributions I made to the platform and the valuable experience I gained during my time at PunkRockDev.',
-    collaboration: 'Google Meet, Gitlab, Slack, Jira, Confluence',
-    problem:
-      'The most challenging part of the project was implementing designs from Figma into the Rails frontend, ensuring pixel-perfect accuracy and responsiveness across devices. It required attention to detail and a meticulous approach to ensure the designs were faithfully translated into the final product.',
-    manager: (
-      <span>
-        My manager was{' '}
-        <a
-          className="text-black"
-          href="https://www.linkedin.com/in/metakermit/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Dražen Lučanin
-        </a>{' '}
-        who provided valuable guidance and support throughout the project. He
-        was instrumental in helping me navigate the complexities of the Zoomero
-        platform and ensuring the successful implementation of user
-        authentication and authorization features.
-      </span>
-    ),
-  },
-  {
     coverPhoto: rootImageUrl + 'casumo/cubes.jpg',
     photos: [
       rootImageUrl + 'casumo/1.jpg',
@@ -203,8 +127,8 @@ const projects = [
     id: 3,
     description:
       "This app allows users to fund NGOs. I dove deep into Angular development for the company's platform. My primary role centered around architecting a robust communication framework between the Angular-based user interface and the Raisenow API, which shares similarities with Stripe.",
-    from: 2020,
-    to: 2021,
+    from: 2021,
+    to: 2022,
     team: 30,
     learned:
       'I learned how to work with Angular, Typescript, and RxJS., how integrate systems and ensure code quality through comprehensive testing using Jest.',
@@ -228,78 +152,6 @@ const projects = [
         was instrumental in helping me navigate the complexities of the
         Formunauts platform and ensuring the successful integration of the
         Angular UI with the Raisenow API.
-      </span>
-    ),
-  },
-  {
-    coverPhoto: rootImageUrl + 'crafstrom/bulb.jpg',
-    photos: [
-      rootImageUrl + 'crafstrom/1.png',
-      rootImageUrl + 'crafstrom/2.png',
-    ],
-    location: 'Remote',
-    company: 'Craftstrom',
-    title: 'Craftstrom',
-    headline: 'Your at home solar system',
-    skills: 'ReactNative, Typescript, JavaScript',
-    responsibilities: [
-      {
-        title: 'Designing and Implementing User Interface',
-        description:
-          'Designed and implemented the user interface of the mobile app using React Native, leveraging libraries such as react-native-elements and react-native to ensure a seamless and visually appealing experience for users.',
-      },
-      {
-        title: 'Handling User Authentication and Authorization',
-        description:
-          'Handled user authentication and authorization, orchestrating Ajax calls to communicate with the backend API, and validating user credentials to ensure the security and privacy of our users.',
-      },
-      {
-        title: 'Utilizing AsyncStorage for Data Management',
-        description:
-          'Utilized AsyncStorage to securely store and manage user tokens, ensuring the integrity of user data and facilitating smooth interactions for returning users.',
-      },
-      {
-        title: 'Solving Responsive Design Issues',
-        description:
-          'Solved numerous responsive design issues to ensure the app’s compatibility with various devices and screen sizes, enhancing the user experience and usability of the application.',
-      },
-      {
-        title: 'Optimizing Performance',
-        description:
-          'Optimized the app’s performance by implementing best practices in React Native development, ensuring smooth navigation, fast loading times, and a seamless user experience.',
-      },
-    ],
-    conclusion:
-      "My tenure at Craftstrom as a React Native developer was an enriching journey of learning and growth. Working hands-on with JavaScript and React Native allowed me to apply my skills and creativity to a real-world application, witnessing the tangible impact of my work on the app's functionality and user experience. I am proud of the contributions I made to Craftstrom and carry with me the valuable lessons and accomplishments gained during my time there as I continue to progress in my career.",
-    link: 'https://play.google.com/store/apps/details?id=com.craftstrom&hl=en&gl=US',
-    id: 4,
-    from: 2018,
-    to: 2019,
-    team: 5,
-    collaboration: 'Github, Trello, Slack',
-    methodology: 'Kanban',
-    position: 'Mid React Native Developer',
-    learned:
-      'I learned how to design and implement user interfaces using React Native, handle user authentication and authorization, and utilize AsyncStorage for data management.  I had to solve many responsive design issues',
-    description:
-      'This app connects to the solar system you have in your home and generates data accordingly. I developed the user interface of the Craftstrom mobile app using React Native, ensuring a seamless and visually appealing experience for users. My responsibilities included handling user authentication and authorization, orchestrating Ajax calls to communicate with the backend API, and utilizing AsyncStorage to securely store and manage user tokens. ',
-    problem:
-      'The most challenging part of the project was solving numerous responsive design issues to ensure the app’s compatibility with various devices and screen sizes, enhancing the user experience and usability of the application.',
-    manager: (
-      <span>
-        My manager was{' '}
-        <a
-          className="text-black"
-          href="https://www.linkedin.com/in/metakermit/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Dražen Lučanin
-        </a>{' '}
-        who provided valuable guidance and support throughout the project. He
-        was instrumental in helping me navigate the complexities of the
-        Craftstrom app and ensuring the successful implementation of user
-        authentication and authorization.
       </span>
     ),
   },
@@ -337,8 +189,8 @@ const projects = [
       'My engagement with AsyncLabs allowed me to make meaningful contributions as a sole developer, enhancing the functionality of the Revuto platform through meticulous API integration, React Context utilization, and a keen focus on user experience.',
     link: 'https://revuto.com/',
     id: 5,
-    from: 2019,
-    to: 2020,
+    from: 2020,
+    to: 2021,
     team: 1,
     methodology: 'Kanban',
     collaboration: 'Jira, Slack, Bitbucket',
@@ -371,8 +223,8 @@ const projects = [
     headline: 'A coding bootcamp',
     skills: 'Javascript, Django, Python',
     link: 'https://codeinstitute.net/global/',
-    from: 2016,
-    to: 2021,
+    from: 2017,
+    to: 2020,
     team: 100,
     responsibilities: [
       {
@@ -426,82 +278,10 @@ const projects = [
     ),
   },
   {
-    coverPhoto: rootImageUrl + 'peaks/mountains.jpg',
-    photos: [
-      rootImageUrl + 'peaks/1.jpeg',
-      rootImageUrl + 'peaks/2.jpeg',
-      rootImageUrl + 'peaks/4.jpeg',
-    ],
-    location: 'Zagreb',
-    company: 'Supersuperstudio',
-    title: 'Peaks',
-    headline: 'The best landing page',
-    skills: 'Javascript, jQuery, Bootstrap',
-    responsibilities: [
-      {
-        title: 'Static Website Development',
-        description:
-          'Assumed the role of a static website developer at Supersuperstudio, responsible for creating impactful online interfaces that aligned with provided design concepts.',
-      },
-      {
-        title: 'Translation of Design Visuals',
-        description:
-          'Translated static design visuals into fully functional user interfaces using HTML, SCSS, and JavaScript.',
-      },
-      {
-        title: 'Creation of Interactive Web Pages',
-        description:
-          "Meticulously transformed static visuals into interactive and engaging web pages, leveraging HTML as the structural backbone and SCSS to style elements to mirror the design's aesthetics.",
-      },
-      {
-        title: 'Implementation of JavaScript',
-        description:
-          'Incorporated JavaScript to enhance interactivity and functionality, creating dynamic elements, implementing animations, and facilitating user engagement.',
-      },
-      {
-        title: 'Collaboration with Design Team',
-        description:
-          'Collaborated closely with the design team to bring creative ideas to life, ensuring that the final product aligned with the design vision and provided a visually stunning and functionally robust interface.',
-      },
-    ],
-    conclusion:
-      'My role at Supersuperstudio as a static website developer provided an exciting blend of creativity and technical expertise. By converting design concepts into live websites using HTML, SCSS, and JavaScript, I contributed to the digital presence of various brands while continuously pushing my boundaries to create visually stunning and functionally robust interfaces. Each project presented unique challenges that fueled my continuous learning journey and allowed me to merge design aesthetics with technical proficiency.',
-    link: 'https://antonijasimic.bitbucket.io/peaks/',
-    id: 7,
-    from: 2015,
-    to: 2016,
-    team: 4,
-    methodology: 'Kanban',
-    collaboration: 'Slack, Bitbucket, Google Meet',
-    learned:
-      "This was my first job in web development so naturally I learned a lot: I customized jQuery libraries and Bootstrap framework. I read Bootstrap's original code which shaped me into a strong css developer.",
-    position: 'Junior Frontend Developer',
-    description:
-      'Peaks is a landing page template used for marekting. I was super excited to work on the Peaks project at Supersuperstudio, where I was responsible for creating impactful online interfaces that aligned with the provided design concepts. My responsibilities included translating static design visuals into fully functional user interfaces using HTML, SCSS, and JavaScript.  ',
-    problem:
-      'The most challenging part of the project was implementing parallax scrolling and animations to create a visually stunning and engaging user experience. I had to leverage JavaScript to enhance interactivity and functionality, creating dynamic elements, implementing animations, and facilitating user engagement.',
-    manager: (
-      <span>
-        My manager was{' '}
-        <a
-          className="text-black normal-font"
-          href="https://www.linkedin.com/in/mariostipetic/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Mario Stipetić
-        </a>
-        , who provided valuable guidance and support throughout the project. He
-        was instrumental in helping me navigate the complexities of the Peaks
-        project and ensuring the successful implementation of the design vision.
-      </span>
-    ),
-  },
-  {
     coverPhoto: rootImageUrl + 'tint/social.jpg',
     photos: [rootImageUrl + 'tint/1.png', rootImageUrl + 'tint/2.png'],
     location: 'Remote',
-    from: 2016,
+    from: 2015,
     to: 2017,
     company: 'Tint',
     title: 'Tint',
