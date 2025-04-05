@@ -47,24 +47,10 @@ const testimonials = [
   },
   {
     content:
-      'It was a pleasure to work with Antonija. She is a very fast working developer with a large scope of frontend technologies. She takes every task in great detail and brings her advice and insight into development.  In the end she did great development.',
-    author: 'Mario Stipetić',
-    project: 'Peaks',
-    avatar: rootImageUrl + 'testimonials/mario.jpeg',
-  },
-  {
-    content:
       "Thank you so much for staying dedicated and working hard on all of the TINT projects we give you. You've made our lives easier and have allowed Joel and I to focus more on growing our brand and enhancing our UX",
     author: 'Daniel Baldwin',
     project: 'TINT',
     avatar: rootImageUrl + 'testimonials/daniel.jpeg',
-  },
-  {
-    content:
-      'Antonija has demonstrated a strong command of React Native, consistently creating smooth, functional mobile applications with a keen attention to UI/UX detail. Leveraging React Native’s core strengths, Antonija adept at building cross-platform apps that perform seamlessly on both iOS and Android.',
-    author: 'Dražen Lučanin',
-    project: 'Craftstrom',
-    avatar: rootImageUrl + 'testimonials/drazen.jpeg',
   },
 ]
 
