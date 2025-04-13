@@ -35,7 +35,7 @@ const Search = () => {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search for questions"
-            className="xs-padding bg-pink-light block border-radius w-full small-margin-top border-none"
+            className="xs-padding block border-radius w-full small-margin-top"
           />
           <RiCloseLargeLine
             className="absolute top-50 right-20 pointer"
@@ -57,7 +57,7 @@ const Search = () => {
           )}
         </div>
       </section>
-      <section className="bg-pink flex-1 small-padding border-radius">
+      <section className="bg-pink-light flex-1 small-padding border-radius">
         <h4>{questionContent.title}</h4>
         <p>{questionContent.info}</p>
       </section>

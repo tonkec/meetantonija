@@ -198,7 +198,7 @@ const AboutPage = () => {
                 {speakingEventsSorted.map((event, index) => (
                   <span
                     key={index}
-                    className="bg-pink xs-margin-bottom xs-padding border-radius pointer block"
+                    className="bg-pink-light xs-margin-bottom xs-padding border-radius pointer block"
                     onClick={() => setEvent(event)}
                   >
                     <p>
@@ -207,7 +207,7 @@ const AboutPage = () => {
                   </span>
                 ))}
               </div>
-              <div className="bg-pink small-padding border-radius max-w-400">
+              <div className="bg-pink-light small-padding border-radius max-w-400">
                 <div className="flex small-margin-bottom flex-y-center flex-gap-small">
                   <p>
                     {event.organizer}, {event.year} in {event.location}{' '}
