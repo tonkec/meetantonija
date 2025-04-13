@@ -40,7 +40,7 @@ export const SinglePost = ({ post, onClick }) => {
           {currentPost.tags.split(', ').map((tag) => (
             <span
               key={tag}
-              className="tag bg-dark border-radiu pointer"
+              className="tag bg-dark border-radius pointer"
               onClick={() => {
                 onSinglePostClick(tag)
               }}
@@ -79,13 +79,17 @@ const PostsPage = () => {
       <Helmet>
         <title>Meetantonija | All Posts</title>
       </Helmet>
-      <section className="container extra-large-padding-top">
-        <h2 className="no-padding">I like to write about the technology.</h2>
-
+      <header className="header-padding-top">
+        <div className="container">
+          <h1 className="no-padding">Notes.</h1>
+          <p>Here you can find all of my posts, sorted by date.</p>
+        </div>
+      </header>
+      <section className="container medium-margin-top">
         <input
           type="text"
           placeholder="Search posts by title"
-          className="small-margin-top bg-pink-light border-none small-margin-bottom w-full border-radius xs-padding"
+          className="small-margin-top small-margin-bottom w-full border-radius xs-padding"
           onChange={(e) => {
             setSearch(e.target.value)
             setQueryParams({ search: e.target.value })
