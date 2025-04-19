@@ -12,7 +12,7 @@ const notes = [
     date: '2025-04-19',
     author: 'Antonija Šimić',
     level: 'beginner',
-    tags: 'React, useRef, useState',
+    tags: 'React, useState',
     title: 'Regular variables and useState',
     subtitle: 'Do you want to trigger a rerender?',
     id: 10,
