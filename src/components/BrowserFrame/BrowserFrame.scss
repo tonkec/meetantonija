@@ -3,7 +3,7 @@
   min-width: 90%;
   border-radius: var(--border-radius);
   position: relative;
-  border: 6px solid var(--color-sky-blue);
+  border: 6px solid var(--color-black);
 
   .content {
     margin-left: 20px;
@@ -15,7 +15,7 @@
   }
 
   .bar {
-    background-color: var(--color-sky-blue);
+    background-color: var(--color-black);
     position: relative;
     padding: calc(var(--card-spacing) / 2) 0;
 
@@ -47,7 +47,7 @@
   .fake-content {
     padding: calc(var(--card-spacing) / 2);
     span {
-      background-color: var(--color-sky-blue);
+      background-color: var(--color-black);
       width: 90%;
       height: 20px;
       display: block;
