@@ -14,7 +14,7 @@ const notes = [
     level: 'beginner',
     tags: 'React, useRef, useState',
     title: 'Regular variables and useState',
-    subtitle: 'Be careful of rerendering',
+    subtitle: 'Do you want to trigger a rerender?',
     id: 10,
     icon: () => <FaRobot />,
     intro:
