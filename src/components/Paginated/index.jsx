@@ -107,6 +107,7 @@ const Pagination = ({
         {paginatedPosts.length ? (
           paginatedPosts.map((post, index) => (
             <div
+              key={index}
               style={getMaxWidth(paginatedPosts, width, postsPerPage)}
               className="flex flex-column"
             >
