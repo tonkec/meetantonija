@@ -88,7 +88,7 @@ const PostsPage = () => {
       <section className="container medium-margin-top">
         <input
           type="text"
-          placeholder="Search posts by title"
+          placeholder="Search posts by their title"
           className="small-margin-top small-margin-bottom w-full border-radius xs-padding"
           onChange={(e) => {
             setSearch(e.target.value)
