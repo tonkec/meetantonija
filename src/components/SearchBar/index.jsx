@@ -247,12 +247,12 @@ const SearchBar = () => {
         <form onSubmit={onSubmit} className="relative">
           <input
             type="text"
-            placeholder="Search pages, posts or projects"
+            placeholder="Search pages, posts or projects by their title"
             onChange={(event) => {
               setSearch(event.target.value)
             }}
             value={search}
-            className="bg-pink-light"
+            className="bg-white"
           />
 
           <FaKeyboard
