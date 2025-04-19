@@ -212,9 +212,8 @@ const PostPage = () => {
             {shuffleArray(otherPosts)
               .slice(0, 2)
               .map((post) => (
-                <div className="flex-1">
+                <div className="flex-1" key={post.id}>
                   <SinglePost
-                    key={post.id}
                     post={post}
                     onClick={(tag) => {
                       handleTagClick(tag)
