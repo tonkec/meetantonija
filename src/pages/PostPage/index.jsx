@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import PostsImage from './PostsImage'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import './Post.scss'
 import posts from 'data/posts'
 import {
@@ -93,7 +92,7 @@ const PostPage = () => {
         components={{
           h1({ children }) {
             return (
-              <header className="medium-padding-top medium-padding-bottom small-margin-bottom">
+              <header className="medium-padding-top no-padding-bottom small-margin-bottom">
                 <div className="container">
                   <Link
                     to="/posts"
@@ -119,7 +118,11 @@ const PostPage = () => {
             return <b className="bols">{children}</b>
           },
           p({ children }) {
-            return <p className="container medium-margin-top">{children}</p>
+            return (
+              <p className="container medium-margin-top line-height-2">
+                {children}
+              </p>
+            )
           },
           a: ({ node, children, ...props }) => {
             return (
@@ -150,7 +153,6 @@ const PostPage = () => {
                   {...props}
                   children={String(children).replace(/\n$/, '')}
                   language={String(className).replace('language-', '')}
-                  style={atomOneDark}
                   customStyle={{
                     display: 'inline',
                   }}
@@ -166,6 +168,13 @@ const PostPage = () => {
             )
           },
 
+          ul({ children }) {
+            return (
+              <div className="container">
+                <ul>{children}</ul>
+              </div>
+            )
+          },
           pre({ children }) {
             return <div className="container code-block">{children}</div>
           },
@@ -173,7 +182,13 @@ const PostPage = () => {
       />
 
       <section className="container">
-        <div className="extra-large-margin-top large-margin-bottom">
+        <div className="large-margin-top large-margin-bottom">
+          <h2 className="no-margin-bottom no-padding-bottom no-padding-top text-center">
+            Read more posts
+          </h2>
+          <p className="medium-margin-bottom text-center">
+            Here are some of my other posts that you might find interesting.
+          </p>
           <div className="flex flex-gap flex-responsive">
             {shuffleArray(otherPosts)
               .slice(0, 2)

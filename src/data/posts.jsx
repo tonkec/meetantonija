@@ -1,4 +1,4 @@
-import { FaRobot, FaBook } from 'react-icons/fa'
+import { FaRobot, FaBook, FaBrain, FaBox } from 'react-icons/fa'
 import { LuPaintbrush2 } from 'react-icons/lu'
 import { GiSpiderWeb } from 'react-icons/gi'
 import { BsQuestionSquare } from 'react-icons/bs'
@@ -16,9 +16,21 @@ const notes = [
     title: 'Regular variables and useState',
     subtitle: 'Do you want to trigger a rerender?',
     id: 10,
-    icon: () => <FaRobot />,
+    icon: () => <FaBrain />,
     intro:
       'A practical guide to understanding the difference between regular variables and state in React, with clear examples that show why only state updates trigger UI changes.',
+  },
+  {
+    date: '2025-03-11',
+    author: 'Antonija Šimić',
+    level: 'senior',
+    tags: 'React, hooks',
+    title: 'Two effects in React',
+    subtitle: 'When to use which?',
+    id: 11,
+    icon: () => <FaBox />,
+    intro:
+      'A practical guide to understanding the differences between useLayoutEffect and useEffect in React, with clear examples that show when to use each hook for optimal performance.',
   },
   {
     date: '2024-01-15',
