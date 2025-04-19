@@ -114,8 +114,27 @@ const PostPage = () => {
           h5({ children }) {
             return <h5 className="container medium-margin-top">{children}</h5>
           },
+
+          h2({ children }) {
+            return <h2 className="container medium-margin-top">{children}</h2>
+          },
+          h3({ children }) {
+            return <h3 className="container medium-margin-top">{children}</h3>
+          },
+          h6({ children }) {
+            return <h6 className="container medium-margin-top">{children}</h6>
+          },
+          strong({ children }) {
+            return <strong>{children}</strong>
+          },
+          em({ children }) {
+            return <em>{children}</em>
+          },
+          i({ children }) {
+            return <i>{children}</i>
+          },
           b({ children }) {
-            return <b className="bols">{children}</b>
+            return <b>{children}</b>
           },
           p({ children }) {
             return (
@@ -138,8 +157,8 @@ const PostPage = () => {
           },
           blockquote({ children }) {
             return (
-              <blockquote className="container medium-margin-top">
-                {children}
+              <blockquote className="medium-margin-top">
+                <i>{children}</i>
               </blockquote>
             )
           },

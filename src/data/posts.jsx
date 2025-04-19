@@ -21,6 +21,18 @@ const notes = [
       'A practical guide to understanding the difference between regular variables and state in React, with clear examples that show why only state updates trigger UI changes.',
   },
   {
+    date: '2025-02-08',
+    title: 'Paint vs Render',
+    author: 'Antonija Šimić',
+    level: 'senior',
+    tags: 'React, Performance, Rendering',
+    id: 12,
+    icon: () => <LuPaintbrush2 />,
+    subtitle: 'What is paint in React?',
+    intro:
+      'A deep dive into the differences between painting and rendering in React, with practical examples to help developers optimize their applications for better performance.',
+  },
+  {
     date: '2025-03-11',
     author: 'Antonija Šimić',
     level: 'senior',
