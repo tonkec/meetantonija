@@ -100,7 +100,7 @@ const PostPage = () => {
                     className="post-link flex flex-y-center medium-margin-bottom"
                   >
                     <IoIosArrowRoundBack fontSize="2rem" />{' '}
-                    <h5> Back to all posts</h5>
+                    <h5> Back to all notes.</h5>
                   </Link>
                   {currentPost && Tags(currentPost.tags, handleTagClick)}
                   <span>{minutesToRead} to read</span>
