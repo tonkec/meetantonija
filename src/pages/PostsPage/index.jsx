@@ -99,7 +99,7 @@ const PostsPage = () => {
         />
         <Paginated
           data={filteredPosts}
-          postsPerPage={2}
+          postsPerPage={6}
           searchValue={search}
           clearSearch={() => {
             setSearch('')
