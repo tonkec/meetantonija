@@ -1,4 +1,11 @@
-import { FaRobot, FaBook, FaBrain, FaBox, FaLaptop } from 'react-icons/fa'
+import {
+  FaRobot,
+  FaBook,
+  FaBrain,
+  FaBox,
+  FaLaptop,
+  FaKey,
+} from 'react-icons/fa'
 import { LuPaintbrush2 } from 'react-icons/lu'
 import { GiSpiderWeb } from 'react-icons/gi'
 import { BsQuestionSquare } from 'react-icons/bs'
@@ -8,6 +15,18 @@ import { MdDataArray } from 'react-icons/md'
 import { FaUserGroup } from 'react-icons/fa6'
 
 const notes = [
+  {
+    title: 'Cleanup function',
+    author: 'Antonija Šimić',
+    date: '2025-01-15',
+    level: 'beginner',
+    tags: 'React, useEffect',
+    id: 14,
+    intro:
+      'A practical guide to understanding cleanup functions in React, with clear examples that show how to use them effectively to prevent memory leaks and optimize performance.',
+    icon: () => <FaKey />,
+    subtitle: 'How to prevent memory leaks?',
+  },
   {
     date: '2025-04-19',
     author: 'Antonija Šimić',

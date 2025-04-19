@@ -109,20 +109,30 @@ const PostPage = () => {
             )
           },
           h4({ children }) {
-            return <h4 className="container medium-margin-top">{children}</h4>
+            return (
+              <h4 className="container small-padding-bottom">{children}</h4>
+            )
           },
           h5({ children }) {
-            return <h5 className="container medium-margin-top">{children}</h5>
+            return (
+              <h5 className="container small-padding-bottom">{children}</h5>
+            )
           },
 
           h2({ children }) {
-            return <h2 className="container medium-margin-top">{children}</h2>
+            return (
+              <h2 className="container small-padding-bottom">{children}</h2>
+            )
           },
           h3({ children }) {
-            return <h3 className="container medium-margin-top">{children}</h3>
+            return (
+              <h3 className="container small-padding-bottom">{children}</h3>
+            )
           },
           h6({ children }) {
-            return <h6 className="container medium-margin-top">{children}</h6>
+            return (
+              <h6 className="container small-padding-bottom">{children}</h6>
+            )
           },
           strong({ children }) {
             return <strong>{children}</strong>
@@ -138,7 +148,7 @@ const PostPage = () => {
           },
           p({ children }) {
             return (
-              <p className="container medium-margin-top line-height-2">
+              <p className="container small-padding-bottom line-height-2">
                 {children}
               </p>
             )
