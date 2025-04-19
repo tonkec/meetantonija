@@ -9,6 +9,18 @@ import { FaUserGroup } from 'react-icons/fa6'
 
 const notes = [
   {
+    date: '2025-04-19',
+    author: 'Antonija Šimić',
+    level: 'beginner',
+    tags: 'React, useRef, useState',
+    title: 'Regular variables and useState',
+    subtitle: 'Be careful of rerendering',
+    id: 10,
+    icon: () => <FaRobot />,
+    intro:
+      'A practical guide to understanding the difference between regular variables and state in React, with clear examples that show why only state updates trigger UI changes.',
+  },
+  {
     date: '2024-01-15',
     author: 'Antonija Šimić',
     level: 'beginner',
