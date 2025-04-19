@@ -1,4 +1,4 @@
-import { FaRobot, FaBook, FaBrain, FaBox } from 'react-icons/fa'
+import { FaRobot, FaBook, FaBrain, FaBox, FaLaptop } from 'react-icons/fa'
 import { LuPaintbrush2 } from 'react-icons/lu'
 import { GiSpiderWeb } from 'react-icons/gi'
 import { BsQuestionSquare } from 'react-icons/bs'
@@ -19,6 +19,18 @@ const notes = [
     icon: () => <FaBrain />,
     intro:
       'A practical guide to understanding the difference between regular variables and state in React, with clear examples that show why only state updates trigger UI changes.',
+  },
+  {
+    date: '2024-12-08',
+    author: 'Antonija Šimić',
+    title: 'When does a component rerender?',
+    level: 'beginner',
+    tags: 'React, Performance',
+    id: 13,
+    intro:
+      'A comprehensive guide to understanding component re-rendering in React, with practical examples and tips to optimize performance and avoid unnecessary renders.',
+    icon: () => <FaLaptop />,
+    subtitle: 'How to avoid unnecessary renders?',
   },
   {
     date: '2025-02-08',
