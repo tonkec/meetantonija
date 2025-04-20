@@ -16,6 +16,18 @@ import { FaUserGroup } from 'react-icons/fa6'
 
 const notes = [
   {
+    title: 'Reference vs Value',
+    author: 'Antonija Šimić',
+    date: '2024-05-01',
+    level: 'beginner',
+    tags: 'Javascript, Reference, Value',
+    id: 15,
+    intro:
+      'A practical guide to understanding the difference between reference and value types in JavaScript, with clear examples that show how they affect memory management and performance.',
+    icon: () => <FaPlus />,
+    subtitle: 'What is the difference?',
+  },
+  {
     title: 'Cleanup function',
     author: 'Antonija Šimić',
     date: '2025-01-15',

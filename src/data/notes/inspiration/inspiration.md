@@ -1,9 +1,6 @@
 1. immutability u reactu
-2. reference vs value
-3. state vs obicna varijable u reactu
-4. useEffect vs useLayoutEffect
-5. controlled vs uncontrolled inputs
-6. destructuring arrays and objects
-7. why do we need keys in react
-8. sta je singleton
-9. rel=”noreferrer”
+2. controlled vs uncontrolled inputs
+3. destructuring arrays and objects
+4. why do we need keys in react
+5. sta je singleton
+6. rel=”noreferrer”
