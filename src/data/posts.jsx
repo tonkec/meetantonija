@@ -17,6 +17,18 @@ import { FaUserGroup } from 'react-icons/fa6'
 
 const notes = [
   {
+    title: 'Generics',
+    author: 'Antonija Šimić',
+    date: '2024-02-15',
+    level: 'senior',
+    tags: 'Typescript, Generics',
+    id: 18,
+    intro:
+      'A practical guide to understanding generics in TypeScript, with clear examples that show how to use them effectively to create reusable and type-safe components.',
+    icon: () => <FaRobot />,
+    subtitle: 'How to create reusable components?',
+  },
+  {
     title: 'Throttle and debounce',
     author: 'Antonija Šimić',
     date: '2024-03-01',
