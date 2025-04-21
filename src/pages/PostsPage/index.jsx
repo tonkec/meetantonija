@@ -82,13 +82,16 @@ const PostsPage = () => {
       <header className="header-padding-top">
         <div className="container">
           <h1 className="no-padding">Notes.</h1>
-          <p>Here you can find all of my posts, sorted by date.</p>
+          <p>
+            Here you can find all of my short notes in which I write about cool
+            stuff that I learned.
+          </p>
         </div>
       </header>
       <section className="container medium-margin-top">
         <input
           type="text"
-          placeholder="Search posts by their title..."
+          placeholder={`Search ${posts.length} notes by their title`}
           className="small-margin-top small-margin-bottom w-full border-radius xs-padding"
           onChange={(e) => {
             setSearch(e.target.value)
