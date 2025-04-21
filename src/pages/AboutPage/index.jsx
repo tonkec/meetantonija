@@ -27,26 +27,6 @@ import { Triangle } from 'react-loader-spinner'
 
 const speakingEvents = [
   {
-    name: 'CSS tricks',
-    year: 2020,
-    link: 'https://www.meetup.com/s_css_zagreb/events/266253881/',
-    organizer: 'CSS Zagreb',
-    photo: rootImageUrl + 'meetups/css.webp',
-    content:
-      'I talked about the latest CSS tricks and how to use them in your projects.',
-    location: 'Zagreb',
-  },
-  {
-    name: 'Free intro to the web development',
-    year: 2024,
-    link: 'https://www.meetup.com/kodiraonica/events/298986803/',
-    organizer: 'Kodiraonica',
-    photo: rootImageUrl + 'meetups/intro.jpg',
-    content:
-      'I talked about the basics of web development and how to start your journey.',
-    location: 'Samobor',
-  },
-  {
     name: 'Intersection observers and how to use them',
     year: 2023,
     link: 'https://www.meetup.com/javascript-zagreb/events/297302963/',
@@ -194,7 +174,7 @@ const AboutPage = () => {
 
           {event ? (
             <div className="flex flex-responsive flex-gap space-between">
-              <div>
+              <div className="flex-1">
                 {speakingEventsSorted.map((event, index) => (
                   <span
                     key={index}
@@ -212,7 +192,7 @@ const AboutPage = () => {
                   <p>
                     {event.organizer}, {event.year} in {event.location}{' '}
                     <a
-                      className="text-white normal-font"
+                      className="text-black normal-font"
                       href={event.link}
                       target="_blank"
                       rel="noreferrer"
