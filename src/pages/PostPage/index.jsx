@@ -213,10 +213,10 @@ const PostPage = () => {
       <section className="container">
         <div className="large-margin-top large-margin-bottom">
           <h2 className="no-margin-bottom no-padding-bottom no-padding-top text-center">
-            Read more posts
+            Read more
           </h2>
           <p className="medium-margin-bottom text-center">
-            Here are some of my other posts that you might find interesting.
+            Here are some of my other notes that you might find interesting.
           </p>
           <div className="flex flex-gap-small flex-responsive">
             {shuffleArray(otherPosts)
