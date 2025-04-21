@@ -10,7 +10,7 @@ const getMaxWidth = (posts, windowSize, postsPerPage) => {
   }
 
   if (posts.length === 1) {
-    return { maxWidth: '50%' }
+    return { maxWidth: '33.33333%' }
   }
 
   return { maxWidth: '100%' }
