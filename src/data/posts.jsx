@@ -5,6 +5,7 @@ import {
   FaBox,
   FaLaptop,
   FaKey,
+  FaBurn,
 } from 'react-icons/fa'
 import { LuPaintbrush2 } from 'react-icons/lu'
 import { GiSpiderWeb } from 'react-icons/gi'
@@ -15,6 +16,18 @@ import { MdDataArray } from 'react-icons/md'
 import { FaUserGroup } from 'react-icons/fa6'
 
 const notes = [
+  {
+    title: 'Throttle and debounce',
+    author: 'Antonija Šimić',
+    date: '2024-03-01',
+    level: 'senior',
+    tags: 'Javascript, Performance',
+    id: 17,
+    intro:
+      'A practical guide to understanding the difference between throttle and debounce in JavaScript, with clear examples that show how to use them effectively to optimize performance.',
+    icon: () => <FaBurn />,
+    subtitle: 'How to optimize performance?',
+  },
   {
     title: 'Reference vs Value',
     author: 'Antonija Šimić',
