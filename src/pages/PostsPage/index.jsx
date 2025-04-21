@@ -30,7 +30,7 @@ export const SinglePost = ({ post, onClick }) => {
         </h6>
       </span>
       <span className="inline-block">
-        <h3>{currentPost.title}</h3>
+        <h4>{currentPost.title}</h4>
       </span>
 
       <p>{currentPost.subtitle}</p>
