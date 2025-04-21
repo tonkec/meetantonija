@@ -218,9 +218,9 @@ const PostPage = () => {
           <p className="medium-margin-bottom text-center">
             Here are some of my other posts that you might find interesting.
           </p>
-          <div className="flex flex-gap flex-responsive">
+          <div className="flex flex-gap-small flex-responsive">
             {shuffleArray(otherPosts)
-              .slice(0, 2)
+              .slice(0, 3)
               .map((post) => (
                 <div className="flex-1" key={post.id}>
                   <SinglePost
