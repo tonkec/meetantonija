@@ -36,21 +36,21 @@ export const SinglePost = ({ post, onClick }) => {
       <p>{currentPost.subtitle}</p>
 
       {currentPost.tags && (
-        <p className="small-margin-top flex flex-wrap flex-gap-small">
+        <p className="small-margin-bottom flex flex-wrap flex-gap-small">
           {currentPost.tags.split(', ').map((tag) => (
             <span
               key={tag}
-              className="tag bg-dark border-radius pointer"
+              className="pointer underline"
               onClick={() => {
                 onSinglePostClick(tag)
               }}
             >
-              {tag}
+              #{tag.toLowerCase()}
             </span>
           ))}
         </p>
       )}
-      <span className="flex align-start flex-gap space-between small-margin-top">
+      <span className="flex align-start flex-gap space-between ">
         <button
           className="primary border-radius inline-block no-underline"
           onClick={() => {
@@ -59,9 +59,6 @@ export const SinglePost = ({ post, onClick }) => {
         >
           Read post
         </button>
-        {currentPost.hasOwnProperty('icon') && (
-          <span className="extra-large-font">{currentPost.icon()}</span>
-        )}
       </span>
     </div>
   )
@@ -102,7 +99,7 @@ const PostsPage = () => {
         />
         <Paginated
           data={filteredPosts}
-          postsPerPage={6}
+          postsPerPage={3}
           searchValue={search}
           clearSearch={() => {
             setSearch('')

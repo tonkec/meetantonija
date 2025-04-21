@@ -1,20 +1,3 @@
-import {
-  FaRobot,
-  FaBook,
-  FaBrain,
-  FaBox,
-  FaLaptop,
-  FaKey,
-  FaBurn,
-} from 'react-icons/fa'
-import { LuPaintbrush2 } from 'react-icons/lu'
-import { GiSpiderWeb } from 'react-icons/gi'
-import { BsQuestionSquare } from 'react-icons/bs'
-import { FaSortAlphaDown } from 'react-icons/fa'
-import { FaPlus } from 'react-icons/fa'
-import { MdDataArray } from 'react-icons/md'
-import { FaUserGroup } from 'react-icons/fa6'
-
 const notes = [
   {
     title: 'Generics',
@@ -25,7 +8,6 @@ const notes = [
     id: 18,
     intro:
       'A practical guide to understanding generics in TypeScript, with clear examples that show how to use them effectively to create reusable and type-safe components.',
-    icon: () => <FaRobot />,
     subtitle: 'How to create reusable components?',
   },
   {
@@ -37,7 +19,6 @@ const notes = [
     id: 17,
     intro:
       'A practical guide to understanding the difference between throttle and debounce in JavaScript, with clear examples that show how to use them effectively to optimize performance.',
-    icon: () => <FaBurn />,
     subtitle: 'How to optimize performance?',
   },
   {
@@ -49,7 +30,6 @@ const notes = [
     id: 15,
     intro:
       'A practical guide to understanding the difference between reference and value types in JavaScript, with clear examples that show how they affect memory management and performance.',
-    icon: () => <FaPlus />,
     subtitle: 'What is the difference?',
   },
   {
@@ -61,7 +41,6 @@ const notes = [
     id: 14,
     intro:
       'A practical guide to understanding cleanup functions in React, with clear examples that show how to use them effectively to prevent memory leaks and optimize performance.',
-    icon: () => <FaKey />,
     subtitle: 'How to prevent memory leaks?',
   },
   {
@@ -72,7 +51,6 @@ const notes = [
     title: 'Regular variables and useState',
     subtitle: 'Do you want to trigger a rerender?',
     id: 10,
-    icon: () => <FaBrain />,
     intro:
       'A practical guide to understanding the difference between regular variables and state in React, with clear examples that show why only state updates trigger UI changes.',
   },
@@ -85,7 +63,6 @@ const notes = [
     id: 13,
     intro:
       'A comprehensive guide to understanding component re-rendering in React, with practical examples and tips to optimize performance and avoid unnecessary renders.',
-    icon: () => <FaLaptop />,
     subtitle: 'How to avoid unnecessary renders?',
   },
   {
@@ -95,7 +72,6 @@ const notes = [
     level: 'senior',
     tags: 'React, Performance, Rendering',
     id: 12,
-    icon: () => <LuPaintbrush2 />,
     subtitle: 'What is paint in React?',
     intro:
       'A deep dive into the differences between painting and rendering in React, with practical examples to help developers optimize their applications for better performance.',
@@ -108,7 +84,6 @@ const notes = [
     title: 'Two effects in React',
     subtitle: 'When to use which?',
     id: 11,
-    icon: () => <FaBox />,
     intro:
       'A practical guide to understanding the differences between useLayoutEffect and useEffect in React, with clear examples that show when to use each hook for optimal performance.',
   },
@@ -120,7 +95,6 @@ const notes = [
     title: 'All about reduce',
     subtitle: 'Decrease the complexity of your code',
     id: 9,
-    icon: () => <FaRobot />,
     intro:
       'Reduce method is a method that is used to reduce an array to a single value. It is a very useful method when you want to sum up all the elements of an array or when you want to find the maximum or minimum value of an array.',
   },
@@ -132,7 +106,6 @@ const notes = [
     title: 'Group by method',
     subtitle: 'New method in Javascript',
     id: 8,
-    icon: () => <FaUserGroup />,
     intro:
       'I have been using group by method for a while now. But I never really understood how it works. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. Group by method is a method that is used to group array elements by a key. It is a very useful method when you want to group array elements by some property.',
   },
@@ -144,7 +117,6 @@ const notes = [
     title: 'Spread and rest operator',
     subtitle: 'What is the difference?',
     id: 0,
-    icon: () => <MdDataArray />,
     intro:
       'I have been using spread and rest operator for a while now. But I never really understood the difference between them. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. Spread operator is used to split up array elements or object properties. Rest operator is used to merge a list of function arguments into an array.',
   },
@@ -157,7 +129,6 @@ const notes = [
     subtitle:
       'It is time to know how this method works even in the middle of the night',
     id: 1,
-    icon: () => <FaSortAlphaDown />,
     intro:
       'I have a small trauma when it comes to this little array method in Javascript. I got asked in an interview to sort some array and I could not remember by my heart what does a sort function looks like. I always google it. That is why I decided to write a post about it, mainly to teach myself once and for all, how its syntax looks like. Here is an array with random numbers. If you want to sort it from the smallest number to the biggest number, just use minus operator for two parameters.',
   },
@@ -170,7 +141,6 @@ const notes = [
     subtitle:
       'I know what lexical means in lingustics, but what about Javascript?',
     id: 2,
-    icon: () => <FaBook />,
     intro:
       "Of course I know what lexical means, this is one of the rare cases where my diploma in linguistics helps me 💪. But still it was confusing to apply that knowledge to Javascript. Let's dive in! First things first. Lexical in general means a definition, an explanation, a meaning. It points to the definition part of the object in contrast to the execution.",
   },
@@ -182,7 +152,6 @@ const notes = [
     title: 'What is a pure function?',
     subtitle: 'Stay away from dirty and smelly code',
     id: 3,
-    icon: () => <LuPaintbrush2 />,
     intro:
       'I have been hearing about pure functions for a while now. I know that they are good and I should use them. But I never really understood why. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. Pure functions are functions that always return the same output if the input is the same. They do not have side effects. They are predictable and easy to test.',
   },
@@ -194,7 +163,6 @@ const notes = [
     title: 'How to fetch data in React?',
     subtitle: 'You can not be developer without handling data',
     id: 4,
-    icon: () => <GiSpiderWeb />,
     intro:
       'I have been using fetch method for a while now. But I never really understood how it works. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. Fetch method is a modern replacement for XMLHttpRequest. It is a simple and powerful window method that allows you to fetch resources across the network. It is promise-based, so you can use it with async/await.',
   },
@@ -206,7 +174,6 @@ const notes = [
     title: 'Double question mark operator',
     subtitle: 'What is this all about?',
     id: 5,
-    icon: () => <BsQuestionSquare />,
     intro:
       'I have been seeing this operator a lot lately. I know that it is called double question mark operator. But I never really understood how it works. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. Double question mark operator is a new operator in Javascript. It is called nullish coalescing operator. It returns the right-hand operand when the left-hand operand is null or undefined.',
   },
@@ -218,7 +185,6 @@ const notes = [
     title: 'When to use useRef and useState?',
     subtitle: 'Be careful of rerendering',
     id: 6,
-    icon: () => <FaRobot />,
     intro:
       'I have been using useRef and useState hooks for a while now. But I never really understood when to use which. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. useRef is used to access the DOM element directly. It does not trigger re-rendering. useState is used to store the state of the component. It triggers re-rendering.',
   },
@@ -230,7 +196,6 @@ const notes = [
     tags: 'Codewars, Javascript, Algorithms',
     title: 'String incrementer',
     subtitle: 'Increment the number in a string',
-    icon: () => <FaPlus />,
     intro:
       'I have been doing a lot of coding challenges lately on Code Wars. I saw this interesting challenge called string incrementer. I will write about solution that I submitted.',
   },
