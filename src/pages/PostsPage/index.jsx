@@ -5,6 +5,7 @@ import Image from 'components/Image'
 import Paginated, { setQueryParams } from 'components/Paginated'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import HireMe from 'components/HireMe'
 
 const sortedPosts = posts.sort((a, b) => {
   return new Date(b.date) - new Date(a.date)
@@ -109,6 +110,8 @@ const PostsPage = () => {
           }}
         />
       </section>
+
+      <HireMe className="medium-margin-top" />
     </>
   )
 }
