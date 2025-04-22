@@ -92,7 +92,7 @@ const Navigation = () => {
           <div className="flex">{getNavigationLinks(navigationLinks)}</div>
         )}
 
-        <div className="flex flex-gap-small medium-margin-right flex-y-center">
+        <div className="flex medium-margin-right flex-y-center">
           <div className="hidden-mobile">
             <ButtonCopy text="Copy email" />
           </div>

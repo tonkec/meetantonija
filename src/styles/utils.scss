@@ -230,6 +230,10 @@
   margin-right: calc(var(--small-margin) / 2);
 }
 
+.extra-small-margin-right {
+  margin-right: calc(var(--small-margin) / 4);
+}
+
 .medium-margin-top {
   margin-top: calc(var(--small-margin) * 2);
 }
@@ -370,7 +374,15 @@
 }
 
 .border-black {
-  border: 2px solid var(--color-black);
+  border: 1px solid var(--color-black);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.border-pink {
+  border: 1px solid var(--color-pink);
 
   &:focus {
     outline: none;
