@@ -123,7 +123,7 @@ const ProjectPage = () => {
           <h2>
             📸{' '}
             {project.photos.length > 1
-              ? 'Here are some photos'
+              ? 'Here are some photos of the app'
               : 'Here is a photo of the app'}
           </h2>
         </div>
