@@ -51,7 +51,7 @@ export const SinglePost = ({ post, onClick }) => {
           ))}
         </p>
       )}
-      <span className="flex align-start flex-gap space-between ">
+      <span className="flex align-start flex-gap space-between">
         <button
           className="primary border-radius inline-block no-underline"
           onClick={() => {
