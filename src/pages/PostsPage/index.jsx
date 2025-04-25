@@ -17,10 +17,7 @@ export const SinglePost = ({ post, onClick }) => {
   const onSinglePostClick = post.onClick ? post.onClick : onClick
 
   return (
-    <div
-      key={currentPost.id}
-      className="small-padding border-radius h-full bg-pink-light flex flex-column space-between"
-    >
+    <div className="small-padding border-radius h-full bg-pink-light flex flex-column space-between">
       <span className="flex flex-y-center small-margin-bottom flex-gap-small">
         <Image
           src="https://avatars.githubusercontent.com/u/5020758?v=4"
