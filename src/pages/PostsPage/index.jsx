@@ -58,7 +58,7 @@ export const SinglePost = ({ post, onClick }) => {
             navigate(`/post/${formatNoteTitle(currentPost.title)}`)
           }}
         >
-          Read post
+          Read note
         </button>
       </span>
     </div>
