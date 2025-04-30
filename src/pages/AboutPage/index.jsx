@@ -1,17 +1,7 @@
 import { useState } from 'react'
 import Search from '../../pages/HomePage/components/Search'
 import { FaHtml5, FaCss3, FaJs } from 'react-icons/fa'
-import {
-  SiTypescript,
-  SiRedux,
-  SiReact,
-  SiRubyonrails,
-  SiAngular,
-  SiNodedotjs,
-  SiMongodb,
-  SiSocketdotio,
-  SiPostgresql,
-} from 'react-icons/si'
+import { SiTypescript, SiRedux, SiReact } from 'react-icons/si'
 import HireMe from 'components/HireMe'
 import Image from 'components/Image'
 import Temperature from 'components/Temperature'
