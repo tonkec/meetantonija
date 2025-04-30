@@ -103,11 +103,11 @@ const AboutPage = () => {
               <p className="line-height-2">
                 I'm a dedicated and forward-thinking front-end engineer with a
                 passion for building cutting-edge web applications. My expertise
-                lies in harnessing the power of modern JavaScript frameworks to
-                create seamless, user-centric experiences. I pride myself on
-                optimizing performance and translating complex ideas into
-                intuitive interfaces. I continuously challenge myself to learn
-                new technologies and refine my problem-solving skills.
+                lies in harnessing the power of modern JavaScript frameworks
+                such as React to create seamless, user-centric experiences. I
+                pride myself on optimizing performance and translating complex
+                ideas into intuitive interfaces. I continuously challenge myself
+                to learn new technologies and refine my problem-solving skills.
                 Collaboration is at the heart of my work, and I thrive in
                 environments where creativity and technical excellence merge. I
                 am excited to leverage my skills to drive innovation and make a
