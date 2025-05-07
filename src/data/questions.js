@@ -22,19 +22,14 @@ const questions = [
     info: 'I enjoy working with VSCode, Git, Github, and Figma.',
   },
   {
-    id: 5,
-    title: 'Can you solve complex algorithms?',
-    info: 'Yes, I can solve complex algorithms. I enjoy working on Leetcode and Codewars.',
-  },
-  {
     id: 6,
     title: 'Have you written any blog posts?',
-    info: 'Yes, I have written a few blog posts. You can find them here.',
+    info: 'Yes, I have written a few blog posts. You can find them on this website.',
   },
   {
     id: 7,
     title: 'For how long have you been working as a developer?',
-    info: 'I have been working as a developer for 9 years now.',
+    info: 'I have been working as a developer for 10 years now.',
   },
   {
     id: 8,
@@ -44,7 +39,7 @@ const questions = [
   {
     id: 9,
     title: 'Are you able to work remotely?',
-    info: 'Yes, I am able to work remotely. I have been working remotely for 9 years now.',
+    info: 'Yes, I am able to work remotely. I have been working remotely for 10 years now.',
   },
   {
     id: 10,
