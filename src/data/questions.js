@@ -81,11 +81,6 @@ const questions = [
     title: 'Where can you see my code?',
     info: 'You can see my code on my github page. I have many projects there.',
   },
-  {
-    id: 18,
-    title: 'Can you give me an example of a project you have worked on?',
-    info: 'Sure, you can see an example of a project I have worked in I work with clients section.',
-  },
 ]
 
 export default questions
