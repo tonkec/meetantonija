@@ -79,7 +79,7 @@ const questions = [
   {
     id: 17,
     title: 'Where can you see my code?',
-    info: 'You can see my code on my github page. I have many projects there.',
+    info: 'You can see my code on my github and on codepen.',
   },
 ]
 
