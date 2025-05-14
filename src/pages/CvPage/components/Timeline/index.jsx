@@ -2,7 +2,7 @@ import './Timeline.scss'
 import { useSearchParams } from 'react-router-dom'
 
 const Timeline = ({ start }) => {
-  const [searchParams, setSearchParams] = useSearchParams()
+  const [, setSearchParams] = useSearchParams()
   return (
     <section className="container">
       <h1
