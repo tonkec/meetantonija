@@ -1,4 +1,3 @@
-import './DarkMode.scss'
 import useIsDarkMode from 'hooks/useIsDarkMode'
 
 const DarkMode = () => {
