@@ -6,7 +6,7 @@ const Cta = () => {
       <div className="container text-center large-padding bg-sky-blue border-radius">
         <h3 className="no-margin text-black">Looking for something else?</h3>
         <p className="small-margin-top small-margin-bottom text-black">
-          Press Shift + K to open the search bar and find what you need.
+          Press Shift + K to open the search bar.
         </p>
         <FaKeyboard
           className="text-black"
