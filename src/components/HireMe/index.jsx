@@ -1,5 +1,4 @@
 import { Tooltip } from 'react-tooltip'
-import './HireMe.scss'
 import ButtonCopy from 'components/ButtonCopy'
 
 const HireMe = () => {
