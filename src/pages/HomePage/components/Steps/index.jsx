@@ -1,5 +1,3 @@
-import './Steps.scss'
-
 const Steps = ({ steps, headline }) => {
   return (
     <section className="small-padding-top">
