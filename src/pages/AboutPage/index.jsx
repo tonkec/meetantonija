@@ -132,7 +132,7 @@ const AboutPage = () => {
         </div>
       </header>
 
-      <section className=" no-padding-top">
+      <section className="no-padding-top">
         <div className="container">
           <div className="flex flex-gap flex-responsive">
             <div className="flex-1">
