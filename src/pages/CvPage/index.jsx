@@ -88,7 +88,7 @@ const CvPage = () => {
   return (
     <>
       <Helmet>
-        <title>Meetantonija | CV</title>
+        <title>Meetantonija | My CV</title>
       </Helmet>
       <header className="container header-padding-top header-padding-bottom">
         <div>
