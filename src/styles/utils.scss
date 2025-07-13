@@ -6,8 +6,11 @@
   background-clip: text;
   color: transparent;
   text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
-  font-size: larger;
+  font-size: 2rem;
   letter-spacing: 0.1em;
+  @include breakpoint('lg') {
+    font-size: 5rem;
+  }
 }
 
 .flex {

@@ -3,17 +3,27 @@ import Image from 'components/Image'
 import cv from 'files/cv.pdf'
 import { Link } from 'react-router-dom'
 import ButtonCopy from 'components/ButtonCopy'
+import { useWindowSize } from 'hooks/useWindowSize'
 
 const Header = () => {
+  const { width } = useWindowSize()
+  const isMobile = width < 800
+  const isExtraSmall = width < 576
+
   return (
-    <header className="container homepage-header header-padding-top header-padding-bottom">
-      <div className="flex flex-responsive space-between flex-gap flex-y-center">
+    <header className="container header-padding-top header-padding-bottom">
+      <div
+        className={isMobile ? 'flex-column' : 'flex'}
+        style={{
+          flexDirection: isExtraSmall ? 'column' : 'row',
+        }}
+      >
         <div className="flex-1">
           <h2>👋</h2>
-          <h1>
+          <h1 className={isMobile ? 'normal-font' : ''}>
             I'm <span className="accent">Antonija</span>,
           </h1>
-          <p>
+          <p className="small-margin-right">
             a frontend developer from{' '}
             <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>, Croatia,
             passionate about building beautiful, user-friendly web experiences.
@@ -36,12 +46,21 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="content-end flex flex-1 medium-margin-right">
+        <div
+          className={
+            isMobile ? '' : 'content-end flex flex-1 medium-margin-right'
+          }
+        >
           <Image
             src="https://avatars.githubusercontent.com/u/5020758?v=4"
             alt="Antonija"
-            hasColoredBackground
-            className="hidden-mobile"
+            hasColoredBackground={isMobile ? false : true}
+            style={{
+              width: isExtraSmall ? '220px' : isMobile ? '320px' : 'auto',
+              height: isExtraSmall ? '220px' : isMobile ? '320px' : 'auto',
+              marginTop: isMobile ? '20px' : '0px',
+            }}
+            className="border-radius-50"
           />
         </div>
       </div>
