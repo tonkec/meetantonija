@@ -1,9 +1,7 @@
 import { Tooltip } from 'react-tooltip'
 import Image from 'components/Image'
-import cv from 'files/cv.pdf'
-import { Link } from 'react-router-dom'
-import ButtonCopy from 'components/ButtonCopy'
 import { useWindowSize } from 'hooks/useWindowSize'
+import ActionButtons from '../ActionButtons'
 
 const Header = () => {
   const { width } = useWindowSize()
@@ -26,8 +24,8 @@ const Header = () => {
           <p
             className={
               isMobile
-                ? 'normal-font large-margin-bottom small-margin-right'
-                : 'small-margin-right'
+                ? 'normal-font small-margin-bottom small-margin-right'
+                : ''
             }
             style={{ fontSize: isMobile ? '0.9rem' : '1rem' }}
           >
@@ -38,32 +36,7 @@ const Header = () => {
             highly functional using React, Typescript and Tailwind CSS.
           </p>
 
-          <div
-            className={
-              isExtraSmall ? 'block' : 'flex flex-gap-small small-margin-top'
-            }
-          >
-            <div>
-              <ButtonCopy
-                text="Copy Email"
-                className={isExtraSmall ? 'full-width' : 'inline-block'}
-              />
-            </div>
-
-            <Link
-              to={cv}
-              target="_blank"
-              download
-              role="button"
-              className={
-                isExtraSmall
-                  ? 'full-width ternary block text-center small-margin-top'
-                  : 'ternary inline-block '
-              }
-            >
-              Download CV
-            </Link>
-          </div>
+          {!isMobile && <ActionButtons />}
         </div>
 
         <div
@@ -79,12 +52,13 @@ const Header = () => {
             style={{
               width: isExtraSmall ? '100%' : isMobile ? '320px' : 'auto',
               height: isExtraSmall ? '100%' : isMobile ? '320px' : '400px',
-              marginTop: isMobile ? '20px' : '0px',
             }}
             className="border-radius-50"
           />
         </div>
       </div>
+
+      {isMobile && <ActionButtons />}
 
       <Tooltip
         id="my-tooltip"
