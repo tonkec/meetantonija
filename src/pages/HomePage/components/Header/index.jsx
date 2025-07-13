@@ -24,8 +24,12 @@ const Header = () => {
             I'm <span className="accent">Antonija</span>,
           </h1>
           <p
-            className="small-margin-right large-margin-bottom"
-            style={{ fontSize: isMobile ? '0.9rem' : '1.5rem' }}
+            className={
+              isMobile
+                ? 'normal-font large-margin-bottom small-margin-right'
+                : ''
+            }
+            style={{ fontSize: isMobile ? '0.9rem' : '1rem' }}
           >
             a frontend developer from{' '}
             <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>, Croatia,
