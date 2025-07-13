@@ -8,7 +8,7 @@ import { useWindowSize } from 'hooks/useWindowSize'
 const Header = () => {
   const { width } = useWindowSize()
   const isMobile = width < 800
-  const isExtraSmall = width < 576
+  const isExtraSmall = width < 400
 
   return (
     <header className="container header-padding-top header-padding-bottom">
@@ -27,7 +27,7 @@ const Header = () => {
             className={
               isMobile
                 ? 'normal-font large-margin-bottom small-margin-right'
-                : ''
+                : 'small-margin-right'
             }
             style={{ fontSize: isMobile ? '0.9rem' : '1rem' }}
           >
@@ -38,15 +38,28 @@ const Header = () => {
             highly functional using React, Typescript and Tailwind CSS.
           </p>
 
-          <div className="flex flex-gap-small small-margin-top">
-            <ButtonCopy text="Copy Email" />
+          <div
+            className={
+              isExtraSmall ? 'block' : 'flex flex-gap-small small-margin-top'
+            }
+          >
+            <div>
+              <ButtonCopy
+                text="Copy Email"
+                className={isExtraSmall ? 'full-width' : 'inline-block'}
+              />
+            </div>
 
             <Link
               to={cv}
               target="_blank"
               download
               role="button"
-              className="ternary inline-block"
+              className={
+                isExtraSmall
+                  ? 'full-width ternary block text-center small-margin-top'
+                  : 'ternary inline-block '
+              }
             >
               Download CV
             </Link>
@@ -64,8 +77,8 @@ const Header = () => {
             alt="Antonija"
             hasColoredBackground={isMobile ? false : true}
             style={{
-              width: isExtraSmall ? '220px' : isMobile ? '320px' : 'auto',
-              height: isExtraSmall ? '220px' : isMobile ? '320px' : '400px',
+              width: isExtraSmall ? '100%' : isMobile ? '320px' : 'auto',
+              height: isExtraSmall ? '100%' : isMobile ? '320px' : '400px',
               marginTop: isMobile ? '20px' : '0px',
             }}
             className="border-radius-50"
