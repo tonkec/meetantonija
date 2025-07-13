@@ -5,9 +5,6 @@
   margin: 0px auto;
   position: relative;
   padding: 0 15px;
-  @include breakpoint('xl') {
-    padding: 0;
-  }
 }
 
 .small-container {
