@@ -85,7 +85,7 @@ const HomePage = () => {
 
       <Previewer ref={myRef} />
 
-      <section className="small-padding large-margin-top hidden-mobile">
+      <section className="small-padding large-margin-top">
         <div className="container text-center large-padding bg-sky-blue border-radius">
           <h3 className="text-black small-margin-bottom">
             🏃‍♀️ Are you in a hurry?
