@@ -34,7 +34,7 @@ const Previewer = forwardRef(function Previewer(_, ref) {
               }}
             >
               <FaDog className="icon" />
-              <p>I bark in pure CSS</p>
+              <p style={{ maxWidth: '50%' }}>I bark in pure CSS</p>
             </button>
             <button
               className="primary text-left small-padding xs-margin-bottom"
@@ -51,7 +51,9 @@ const Previewer = forwardRef(function Previewer(_, ref) {
             >
               <RiCactusFill className="icon" />
 
-              <p className="max-w-50-xs">Watch out for my pure CSS spikes</p>
+              <p style={{ maxWidth: '50%' }}>
+                Watch out for my pure CSS spikes
+              </p>
             </button>
             <button
               className="primary text-left small-padding xs-margin-bottom"
@@ -67,7 +69,7 @@ const Previewer = forwardRef(function Previewer(_, ref) {
               }}
             >
               <LuMicroscope className="icon" />
-              <p className="max-w-50-xs">I enlarge the world in pure CSS</p>
+              <p style={{ maxWidth: '50%' }}>I enlarge the world in pure CSS</p>
             </button>
           </div>
 
