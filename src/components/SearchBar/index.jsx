@@ -265,7 +265,7 @@ const SearchBar = () => {
           />
           <button
             onClick={closeNavigation}
-            className="ternary w-full no-border-radius border-bottom-left-radius border-bottom-right-radius"
+            className="primary w-full no-border-radius border-bottom-left-radius border-bottom-right-radius"
           >
             Close
           </button>

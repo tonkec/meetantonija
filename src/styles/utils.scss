@@ -404,6 +404,10 @@
   color: var(--color-pink);
 }
 
+.text-sky-blue {
+  color: var(--color-sky-blue);
+}
+
 .normal-font {
   font-size: 100%;
 }
@@ -417,7 +421,15 @@
 }
 
 .large-font {
-  font-size: 1.5rem;
+  @include breakpoint(xs) {
+    font-size: 1rem;
+  }
+  @include breakpoint(sm) {
+    font-size: 1.4rem;
+  }
+  @include breakpoint(md) {
+    font-size: 1.6rem;
+  }
 }
 
 .extra-large-font {
@@ -716,4 +728,12 @@
 
 .border-black {
   border: 2px solid var(--color-black);
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.medium-font {
+  font-size: 1.2rem;
 }

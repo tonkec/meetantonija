@@ -64,9 +64,12 @@
   }
 
   .navigation-button {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background-color: var(--color-pink-light);
+    border-bottom: 0.2px solid var(--color-pink);
     &:hover {
-      background-color: var(--color-pink);
+      background-color: var(--color-pink-dark);
+      color: var(--color-white);
     }
   }
 }

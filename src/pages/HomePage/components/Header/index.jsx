@@ -24,16 +24,17 @@ const Header = () => {
           <p
             className={
               isMobile
-                ? 'normal-font small-margin-bottom small-margin-right'
-                : ''
+                ? 'normal-font small-margin-bottom medium-margin-right line-height-2'
+                : 'line-height-2'
             }
             style={{ fontSize: isMobile ? '0.9rem' : '1rem' }}
           >
             a frontend developer from{' '}
             <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>, Croatia,
             passionate about building beautiful, user-friendly web experiences.
-            I craft interfaces that are not only visually engaging but also
-            highly functional using React, Typescript and Tailwind CSS.
+            For the past <span className="large-font text-pink">10</span> years
+            I have been crafting interfaces that are not only visually engaging
+            but also highly functional.
           </p>
 
           {!isMobile && <ActionButtons />}
@@ -41,9 +42,10 @@ const Header = () => {
 
         <div
           className={
-            isMobile ? '' : 'content-end flex flex-1 medium-margin-right'
+            isMobile
+              ? 'large-margin-top large-margin-bottom'
+              : 'content-end flex flex-1 medium-margin-right'
           }
-          style={{ order: isMobile ? -1 : 2 }}
         >
           <Image
             src="https://avatars.githubusercontent.com/u/5020758?v=4"
