@@ -83,7 +83,7 @@ const ProjectPage = () => {
               </a>
             </div>
 
-            <div>
+            <div className="flex-1">
               <h3 className="small-margin-bottom"> Technologies 🚀</h3>
               <Skills
                 buttonClass="ternary"

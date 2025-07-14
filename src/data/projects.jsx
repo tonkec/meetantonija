@@ -349,9 +349,9 @@ const projects = [
     company: 'Mochalabs',
     id: 10,
     title: 'Funder Pro',
-    methodology: 'Scrum',
+    methodology: 'Kanban',
     headline: 'Make your trading exceptional',
-    skills: 'Javascript, React, Redux, Typescript',
+    skills: 'Javascript, React, Redux, Typescript, React Query, Zod',
     link: 'https://prop.funderpro.com/',
     responsibilities: [
       {
