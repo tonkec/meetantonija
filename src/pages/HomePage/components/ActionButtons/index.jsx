@@ -15,7 +15,7 @@ const ActionButtons = () => {
       }
     >
       <ButtonCopy
-        text="Copy Email"
+        text="Get in touch"
         className={isExtraSmall ? 'w-full' : 'inline-block'}
       />
 

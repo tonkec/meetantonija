@@ -29,12 +29,12 @@ const Header = () => {
             }
             style={{ fontSize: isMobile ? '0.9rem' : '1rem' }}
           >
-            a frontend developer from{' '}
+            a React developer from{' '}
             <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>, Croatia,
             passionate about building beautiful, user-friendly web experiences.
-            For the past <span className="large-font text-pink">10</span> years
-            I have been crafting interfaces that are not only visually engaging
-            but also highly functional.
+            For the past <span className="text-pink">10</span> years I have been
+            crafting interfaces that are not only visually engaging but also
+            highly functional.
           </p>
 
           {!isMobile && <ActionButtons />}
