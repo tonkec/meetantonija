@@ -87,7 +87,7 @@ const projects = [
     company: 'Formunauts',
     location: 'Remote',
     title: 'Formunauts',
-    headline: 'A fund-raising platform that changes lives',
+    headline: 'A fund-raising platform',
     skills: 'Angular, Typescript, Rxjs, Jest',
     responsibilities: [
       {
