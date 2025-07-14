@@ -26,7 +26,7 @@ const HireMe = () => {
         </Tooltip>
 
         <div className="small-margin-top">
-          <ButtonCopy text="Copy Email" />
+          <ButtonCopy text="Get in Touch" />
         </div>
       </div>
     </section>
