@@ -51,6 +51,13 @@ const testimonials = [
     project: 'TINT',
     avatar: rootImageUrl + 'testimonials/daniel.jpeg',
   },
+  {
+    content:
+      'Antonija is a great developer. She is very detail oriented and she always delivers on time. I would highly recommend her to anyone looking for a React developer.',
+    author: 'Dražen Lučanin',
+    project: 'Craftstrom',
+    avatar: rootImageUrl + 'testimonials/drazen.jpeg',
+  },
 ]
 
 const HomePage = () => {

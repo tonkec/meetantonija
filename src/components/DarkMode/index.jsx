@@ -8,7 +8,7 @@ const DarkMode = () => {
       onClick={() => {
         saveIsDark(!isDarkLocalStorage)
       }}
-      className="small-margin-left pointer"
+      className="medium-margin-left pointer large-font"
     >
       {isDarkLocalStorage ? '🌞' : '🌙'}
     </span>

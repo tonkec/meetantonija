@@ -74,4 +74,17 @@ input[type='submit'] {
     background-color: #000;
     color: var(--color-white);
   }
+
+  &.outlined {
+    background-color: transparent;
+    border: 1px solid var(--color-pink);
+    color: var(--color-pink);
+
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: var(--color-pink-light);
+      color: var(--color-black);
+    }
+  }
 }

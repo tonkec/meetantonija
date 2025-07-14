@@ -26,8 +26,8 @@ const ActionButtons = () => {
         role="button"
         className={
           isExtraSmall
-            ? 'w-full ternary block text-center small-margin-top'
-            : 'ternary inline-block '
+            ? 'w-full outlined block text-center small-margin-top'
+            : 'outlined inline-block '
         }
       >
         Download CV
