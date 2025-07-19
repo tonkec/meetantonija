@@ -21,8 +21,7 @@ const HireMe = () => {
             color: 'var(--color-black)',
           }}
         >
-          I do not like when people call me on the phone. Email is the best way
-          to reach me.
+          Email is the best way to reach me.
         </Tooltip>
 
         <div className="small-margin-top">
