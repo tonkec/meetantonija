@@ -8,12 +8,12 @@ const PageTransition = () => {
     if (current) {
       setTimeout(() => {
         current.classList.add('enter')
-      }, 100)
+      }, 0)
 
       setTimeout(() => {
         current.classList.remove('enter')
         current.classList.add('exit')
-      }, 3000)
+      }, 2000)
 
       return () => {
         current.classList.remove('enter')
