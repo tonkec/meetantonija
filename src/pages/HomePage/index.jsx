@@ -91,12 +91,12 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="container large-margin-top">
+      <div className="container" ref={myRef} style={{ paddingTop: '80px' }}>
         <h2 className="medium-margin-bottom">🌐 I am active online.</h2>
         <Social />
       </div>
 
-      <Previewer ref={myRef} />
+      <Previewer />
 
       <section className="small-padding large-margin-top">
         <div className="container text-center large-padding bg-sky-blue border-radius">
