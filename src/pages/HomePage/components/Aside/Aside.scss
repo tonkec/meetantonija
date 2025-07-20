@@ -3,21 +3,13 @@
 .aside-section {
   aside {
     background-color: var(--color-sky-blue);
-    right: 0;
-    z-index: 8;
+    z-index: 6;
     width: 100%;
     padding: 20px;
     transform: translateX(110%);
     @include transition(transform);
     color: var(--color-black);
-
     bottom: 0;
-    max-height: fit-content;
-    @include breakpoint(md) {
-      position: absolute;
-      top: 0;
-      width: 400px;
-    }
 
     @include breakpoint(lg) {
       width: 500px;
@@ -29,6 +21,15 @@
 
   .post {
     @include transition(background-color);
+    min-width: 90%;
+
+    &.active {
+      background-color: var(--color-pink);
+      h4,
+      p {
+        color: var(--color-white);
+      }
+    }
 
     h4,
     p {

@@ -1,7 +1,7 @@
 @import '../styles/mq.scss';
 
 .container {
-  max-width: 1250px;
+  max-width: var(--container-width);
   margin: 0px auto;
   position: relative;
   padding: 0 15px;

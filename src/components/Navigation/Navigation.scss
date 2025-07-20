@@ -19,7 +19,7 @@
 
   &.scrolled-to-top {
     @include breakpoint(xl) {
-      width: 1200px;
+      width: var(--container-width);
       top: 20px;
       border-radius: var(--border-radius);
     }

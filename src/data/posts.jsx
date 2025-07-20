@@ -106,8 +106,7 @@ const notes = [
     title: 'Group by method',
     subtitle: 'New method in Javascript',
     id: 8,
-    intro:
-      'I have been using group by method for a while now. But I never really understood how it works. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. Group by method is a method that is used to group array elements by a key. It is a very useful method when you want to group array elements by some property.',
+    intro: 'I decided to write a post to clarify it for myself and for others',
   },
   {
     date: '2024-08-26',
@@ -130,7 +129,7 @@ const notes = [
       'It is time to know how this method works even in the middle of the night',
     id: 1,
     intro:
-      'I have a small trauma when it comes to this little array method in Javascript. I got asked in an interview to sort some array and I could not remember by my heart what does a sort function looks like. I always google it. That is why I decided to write a post about it, mainly to teach myself once and for all, how its syntax looks like. Here is an array with random numbers. If you want to sort it from the smallest number to the biggest number, just use minus operator for two parameters.',
+      'I have a small trauma when it comes to this little array method in Javascript.',
   },
   {
     date: '2023-08-31',
@@ -142,7 +141,7 @@ const notes = [
       'I know what lexical means in lingustics, but what about Javascript?',
     id: 2,
     intro:
-      "Of course I know what lexical means, this is one of the rare cases where my diploma in linguistics helps me 💪. But still it was confusing to apply that knowledge to Javascript. Let's dive in! First things first. Lexical in general means a definition, an explanation, a meaning. It points to the definition part of the object in contrast to the execution.",
+      'Of course I know what lexical means, this is one of the rare cases where my diploma in linguistics helps me 💪.',
   },
   {
     date: '2022-04-14',
@@ -153,7 +152,7 @@ const notes = [
     subtitle: 'Stay away from dirty and smelly code',
     id: 3,
     intro:
-      'I have been hearing about pure functions for a while now. I know that they are good and I should use them. But I never really understood why. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. Pure functions are functions that always return the same output if the input is the same. They do not have side effects. They are predictable and easy to test.',
+      'I have been hearing about pure functions for a while now. I never really understood why. I decided to write a post about it to clarify it for myself and for others.',
   },
   {
     date: '2021-06-28',
@@ -175,7 +174,7 @@ const notes = [
     subtitle: 'What is this all about?',
     id: 5,
     intro:
-      'I have been seeing this operator a lot lately. I know that it is called double question mark operator. But I never really understood how it works. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. Double question mark operator is a new operator in Javascript. It is called nullish coalescing operator. It returns the right-hand operand when the left-hand operand is null or undefined.',
+      'I have been seeing this operator a lot lately. I know that it is called double question mark operator.',
   },
   {
     date: '2022-02-15',
@@ -185,8 +184,7 @@ const notes = [
     title: 'When to use useRef and useState?',
     subtitle: 'Be careful of rerendering',
     id: 6,
-    intro:
-      'I have been using useRef and useState hooks for a while now. But I never really understood when to use which. I decided to write a post about it to clarify it for myself and for others. Here is a short explanation. useRef is used to access the DOM element directly. It does not trigger re-rendering. useState is used to store the state of the component. It triggers re-rendering.',
+    intro: 'Let us see when to use which',
   },
   {
     date: '2023-09-15',
@@ -196,8 +194,7 @@ const notes = [
     tags: 'Codewars, Javascript, Algorithms',
     title: 'String incrementer',
     subtitle: 'Increment the number in a string',
-    intro:
-      'I have been doing a lot of coding challenges lately on Code Wars. I saw this interesting challenge called string incrementer. I will write about solution that I submitted.',
+    intro: 'I tried my luck with DSA',
   },
 ]
 
