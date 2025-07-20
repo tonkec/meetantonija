@@ -25,9 +25,7 @@ const IntroAnimation = () => {
       }`}
     >
       <div>
-        <h1 className="super-extra-large-font text-pink orbitron">
-          {displayText}
-        </h1>
+        <h1 className="super-extra-large-font text-pink">{displayText}</h1>
       </div>
     </div>
   )
