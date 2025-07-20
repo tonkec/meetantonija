@@ -109,7 +109,7 @@ const ProjectPage = () => {
       <section>
         <div className="container">
           <h3 className="small-margin-bottom">Description</h3>
-          <p>{project.description}</p>
+          <p className="max-w-1000">{project.description}</p>
         </div>
       </section>
 
