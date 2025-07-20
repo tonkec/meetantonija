@@ -92,11 +92,7 @@ const HomePage = () => {
       </div>
 
       <div className="container large-margin-top">
-        <h2 className="small-margin-bottom">🌐 I am present online.</h2>
-        <p className="medium-margin-bottom">
-          Feel free to stalk me on the web. Check out my profiles.
-        </p>
-
+        <h2 className="medium-margin-bottom">🌐 I am active online.</h2>
         <Social />
       </div>
 
