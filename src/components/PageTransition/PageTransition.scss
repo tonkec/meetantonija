@@ -19,3 +19,20 @@
     transform: translateX(-100%);
   }
 }
+
+.animated-a .path {
+  fill: none;
+  stroke: var(--color-pink);
+  stroke-width: 12;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: draw 1s ease-out forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

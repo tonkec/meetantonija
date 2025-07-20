@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
 import './PageTransition.scss'
-import { ThreeDots } from 'react-loader-spinner'
 
 const PageTransition = () => {
   const pageTransition = useRef(null)
@@ -25,7 +24,14 @@ const PageTransition = () => {
 
   return (
     <div ref={pageTransition} className="page-transition">
-      <ThreeDots color="#000" height={100} width={100} />
+      <svg
+        viewBox="0 0 100 100"
+        width="200"
+        height="200"
+        className="animated-a"
+      >
+        <path d="M10,90 L50,10 L90,90 M30,55 L70,55" className="path" />
+      </svg>
     </div>
   )
 }
