@@ -30,7 +30,7 @@ const SingleProject = ({ post }) => {
           }}
           className="primary small-margin-top"
         >
-          Read more
+          Read more 👉
         </button>
       </div>
     </div>

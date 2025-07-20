@@ -46,7 +46,7 @@ const Slider = ({ items, headline }) => {
                     )
                   }}
                 >
-                  See project
+                  Read more 👉
                 </button>
               </div>
             )

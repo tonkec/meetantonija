@@ -24,7 +24,7 @@ const CvProject = ({ project }) => {
           )
         }}
       >
-        Read more
+        Read more 👉
       </button>
     </article>
   )
