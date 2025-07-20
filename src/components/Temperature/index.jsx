@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import useTemperature from 'hooks/useTemperature'
-import { Triangle } from 'react-loader-spinner'
+import { ThreeDots } from 'react-loader-spinner'
 import { useLocalStorage } from '@uidotdev/usehooks'
 
 const Temperature = () => {
@@ -28,7 +28,7 @@ const Temperature = () => {
 
   if (isLoading)
     return (
-      <Triangle
+      <ThreeDots
         wrapperStyle={{ display: 'inline' }}
         color={isDarkLocalStorage ? 'var(--color-white)' : 'var(--color-black)'}
         height={50}

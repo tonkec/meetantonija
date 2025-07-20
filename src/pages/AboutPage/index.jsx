@@ -13,7 +13,7 @@ import MyMasonry from './MyMasonry'
 import { Helmet } from 'react-helmet'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import { rootImageUrl } from '../../rootImageUrl'
-import { Triangle } from 'react-loader-spinner'
+import { ThreeDots } from 'react-loader-spinner'
 
 const speakingEvents = [
   {
@@ -197,7 +197,7 @@ const AboutPage = () => {
             </div>
           ) : (
             <div className="loader">
-              <Triangle color="#f8f9fa" height={100} width={100} />
+              <ThreeDots color="#f8f9fa" height={100} width={100} />
             </div>
           )}
         </div>

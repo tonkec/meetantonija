@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import './PageTransition.scss'
-import { Triangle } from 'react-loader-spinner'
+import { ThreeDots } from 'react-loader-spinner'
 
 const PageTransition = () => {
   const pageTransition = useRef(null)
@@ -25,7 +25,7 @@ const PageTransition = () => {
 
   return (
     <div ref={pageTransition} className="page-transition">
-      <Triangle color="#000" height={100} width={100} />
+      <ThreeDots color="#000" height={100} width={100} />
     </div>
   )
 }

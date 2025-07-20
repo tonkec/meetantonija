@@ -1,6 +1,6 @@
 import './Image.scss'
 import useImage from 'hooks/useImage'
-import { Triangle } from 'react-loader-spinner'
+import { ThreeDots } from 'react-loader-spinner'
 import { useLocalStorage } from '@uidotdev/usehooks'
 const Image = ({
   hasColoredBackground,
@@ -16,7 +16,7 @@ const Image = ({
 
   if (isImageLoading) {
     return (
-      <Triangle
+      <ThreeDots
         color={isDarkLocalStorage ? '#fcfcfc' : '#000'}
         height={50}
         width={50}
