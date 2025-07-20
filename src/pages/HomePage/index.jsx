@@ -96,8 +96,6 @@ const HomePage = () => {
         <Social />
       </div>
 
-      <Previewer />
-
       <section className="small-padding large-margin-top">
         <div className="container text-center large-padding bg-sky-blue border-radius">
           <h3 className="text-black small-margin-bottom">
@@ -112,6 +110,8 @@ const HomePage = () => {
           </button>
         </div>
       </section>
+
+      <Previewer />
 
       <section>
         <div className="container">
