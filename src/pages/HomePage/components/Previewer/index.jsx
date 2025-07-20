@@ -1,4 +1,4 @@
-import { useState, useRef, forwardRef } from 'react'
+import { useState, useRef } from 'react'
 import Iframe from 'react-iframe'
 import { LuMicroscope } from 'react-icons/lu'
 import { FaDog } from 'react-icons/fa'
@@ -7,14 +7,14 @@ import { Triangle } from 'react-loader-spinner'
 
 import './Previewer.scss'
 
-const Previewer = forwardRef(function Previewer(_, ref) {
+const Previewer = () => {
   const [iframeUrl, setIframeUrl] = useState(
     'https://codepen.io/tonkec/embed/preview/zYLbVXV?default-tab=result'
   )
   const [isIframeLoading, setIsIframeLoading] = useState(true)
   const buttonWrapper = useRef(null)
   return (
-    <section ref={ref}>
+    <section>
       <div className="container">
         <h2>👩‍🎨 I design in code.</h2>
 
@@ -94,6 +94,6 @@ const Previewer = forwardRef(function Previewer(_, ref) {
       </div>
     </section>
   )
-})
+}
 
 export default Previewer

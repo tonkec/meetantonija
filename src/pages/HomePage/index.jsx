@@ -111,8 +111,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      <Previewer />
-
       <section>
         <div className="container">
           <h2>💼 I work with clients.</h2>
@@ -136,6 +134,8 @@ const HomePage = () => {
         </div>
       </section>
 
+      <Previewer />
+
       <Aside numberOfPosts={3} />
 
       <Videos />
@@ -144,7 +144,7 @@ const HomePage = () => {
 
       <section ref={tldrRef}>
         <div className="container">
-          <h2> 🏃‍♀️ Here is a quick summary:</h2>
+          <h2> ℹ️ TLDR:</h2>
 
           <p className="medium-font">
             I am a{' '}
