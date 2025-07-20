@@ -26,4 +26,20 @@
       transform: translateX(0px);
     }
   }
+
+  .post {
+    @include transition(background-color);
+
+    h4,
+    p {
+      @include transition(color);
+    }
+    &:hover {
+      background-color: var(--color-pink);
+      h4,
+      p {
+        color: var(--color-white);
+      }
+    }
+  }
 }

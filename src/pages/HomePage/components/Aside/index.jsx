@@ -40,7 +40,7 @@ const Aside = ({ numberOfPosts }) => {
           return (
             <button
               key={note.id}
-              className="max-w-50-md block text-left xs-margin-bottom border-radius bg-sky-blue text-black padding"
+              className="post max-w-50-md block text-left xs-margin-bottom border-radius bg-sky-blue text-black padding"
               onClick={() => {
                 setNoteContent(note)
               }}
