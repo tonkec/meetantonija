@@ -28,7 +28,7 @@
   stroke-linejoin: round;
   stroke-dasharray: 300;
   stroke-dashoffset: 300;
-  animation: draw 1s ease-out forwards;
+  animation: draw 1.4s ease-in-out forwards 0.2s;
 }
 
 @keyframes draw {
