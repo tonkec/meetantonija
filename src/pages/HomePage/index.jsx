@@ -13,6 +13,7 @@ import { removeSpacesAndDashes } from 'utils'
 import { useNavigate } from 'react-router-dom'
 import Image from 'components/Image'
 import Cta from 'components/Cta'
+import Social from 'components/Social'
 
 const SingleProject = ({ post }) => {
   const navigate = useNavigate()
@@ -53,7 +54,7 @@ const testimonials = [
   },
   {
     content:
-      'Antonija is a great developer. She is very detail oriented and she always delivers on time. I would highly recommend her to anyone looking for a React developer.',
+      'Antonija is a great developer. She is very detail oriented and she always delivers on time. I would highly recommend her to anyone looking for a serious developer.',
     author: 'Dražen Lučanin',
     project: 'Formunauts',
     avatar: rootImageUrl + 'testimonials/drazen.jpeg',
@@ -88,6 +89,15 @@ const HomePage = () => {
             color="var(--color-pink)"
           />
         </div>
+      </div>
+
+      <div className="container large-margin-top">
+        <h2 className="small-margin-bottom">🌐 I am present online.</h2>
+        <p className="medium-margin-bottom">
+          Feel free to stalk me on the web. Check out my profiles.
+        </p>
+
+        <Social />
       </div>
 
       <Previewer ref={myRef} />

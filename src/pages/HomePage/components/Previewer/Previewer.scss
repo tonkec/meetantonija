@@ -16,7 +16,7 @@ iframe {
   button {
     position: relative;
     width: 80%;
-    @include transition(transform);
+    @include transition((transform, background-color, color));
     background-color: var(--color-pink-light);
     color: var(--color-black);
 

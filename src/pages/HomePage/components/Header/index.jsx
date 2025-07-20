@@ -2,6 +2,7 @@ import { Tooltip } from 'react-tooltip'
 import Image from 'components/Image'
 import { useWindowSize } from 'hooks/useWindowSize'
 import ActionButtons from '../ActionButtons'
+import Social from 'components/Social'
 
 const Header = () => {
   const { width } = useWindowSize()
@@ -54,7 +55,7 @@ const Header = () => {
               width: isExtraSmall ? '100%' : isMobile ? '320px' : 'auto',
               height: isExtraSmall ? '100%' : isMobile ? '320px' : '400px',
             }}
-            className="border-radius-50"
+            className="border-radius-50 medium-margin-bottom"
           />
         </div>
       </div>

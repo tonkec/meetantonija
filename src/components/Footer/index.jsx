@@ -1,15 +1,8 @@
 import { FaHeart, FaCoffee } from 'react-icons/fa'
-import { LuLinkedin, LuGithub, LuCodepen } from 'react-icons/lu'
 import Social from 'components/Social'
 import Logo from 'components/Logo'
 import './Footer.scss'
 import Emoji from 'components/Emoji'
-
-const socialLinks = [
-  { href: 'https://codepen.io/tonkec', icon: LuCodepen },
-  { href: 'https://github.com/tonkec', icon: LuGithub },
-  { href: 'https://www.linkedin.com/in/antonija-simic/', icon: LuLinkedin },
-]
 
 const Footer = () => {
   return (
@@ -17,7 +10,7 @@ const Footer = () => {
       <div className="container large-margin-top">
         <Emoji />
         <div className="flex flex-x-center small-margin-bottom medium-margin-top">
-          <Social icons={socialLinks} />
+          <Social />
         </div>{' '}
         <p className="text-center xs-margin-bottom">
           Coded by Antonija Šimić with lots of{' '}

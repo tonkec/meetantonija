@@ -1,12 +1,10 @@
 $transitionDuration: 0.5s;
 $timingFunction: ease-in-out;
 
-@mixin transition(
-  $properties,
-  $duration: $transitionDuration,
-  $timing: $timingFunction
-) {
-  @for $i from 1 through length($properties) {
-    transition: nth($properties, $i) $duration $timing;
+@mixin transition($properties, $duration: 0.3s, $timing: ease-in-out) {
+  $transitions: ();
+  @each $prop in $properties {
+    $transitions: append($transitions, #{$prop} #{$duration} #{$timing}, comma);
   }
+  transition: $transitions;
 }

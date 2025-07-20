@@ -3,10 +3,11 @@
 .icons {
   a {
     color: var(--color-black);
-    @include transition(transform);
+    @include transition((transform, color));
   }
 
   a:hover {
+    color: var(--color-pink);
     transform: translateY(-5px);
   }
 }
