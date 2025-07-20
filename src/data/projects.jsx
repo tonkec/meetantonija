@@ -220,7 +220,7 @@ const projects = [
     location: 'Remote',
     company: 'Code Institute',
     title: 'Code Institute',
-    headline: 'A coding bootcamp',
+    headline: 'From zero to hero in several months',
     skills: 'Javascript, Django, Python',
     link: 'https://codeinstitute.net/global/',
     from: 2017,
