@@ -18,7 +18,7 @@ const Videos = () => {
               role="button"
               className="primary pull-right inline-block text-center max-w-150"
             >
-              Watch video
+              Watch video 👀
             </a>
           </div>
           <div className="border-radius video-dashboard">
