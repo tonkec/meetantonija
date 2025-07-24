@@ -70,6 +70,8 @@ const AboutPage = () => {
   const temperatureData = useTemperature()
   const { values, properties } = getValuesAndProperties(temperatureData)
   const speakingEventsSorted = speakingEvents.sort((a, b) => b.year - a.year)
+  const [activeIndex, setActiveIndex] = useState(0)
+
   return (
     <>
       <Helmet>
@@ -161,8 +163,15 @@ const AboutPage = () => {
                 {speakingEventsSorted.map((event, index) => (
                   <span
                     key={index}
-                    className="bg-pink-light xs-margin-bottom xs-padding border-radius pointer block"
-                    onClick={() => setEvent(event)}
+                    className={`xs-margin-bottom xs-padding border-radius pointer block ${
+                      index === activeIndex
+                        ? 'bg-pink text-white'
+                        : 'bg-pink-light'
+                    }`}
+                    onClick={() => {
+                      setEvent(event)
+                      setActiveIndex(index)
+                    }}
                   >
                     <p>
                       {event.name} @ {event.organizer}
