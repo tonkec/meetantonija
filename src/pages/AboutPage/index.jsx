@@ -53,12 +53,12 @@ const technologies = [
   { technology: 'HTML', years: new Date().getFullYear() - 2014, icon: FaHtml5 },
   { technology: 'CSS', years: new Date().getFullYear() - 2014, icon: FaCss3 },
   {
-    technology: 'JavaScript',
+    technology: 'JS',
     years: new Date().getFullYear() - 2016,
     icon: FaJs,
   },
   {
-    technology: 'TypeScript',
+    technology: 'TS',
     years: new Date().getFullYear() - 2019,
     icon: SiTypescript,
   },
@@ -165,11 +165,11 @@ const AboutPage = () => {
                       <span>
                         <tech.icon className="small-margin-right" />
                       </span>
+                      <span>{tech.technology}</span>{' '}
                       <span>
                         {tech.years} {getYearWord(tech.years)}
                       </span>
                     </p>
-                    <p>{tech.technology}</p>
                   </button>
                 ))}
               </div>
