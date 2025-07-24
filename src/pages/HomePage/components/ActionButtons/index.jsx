@@ -22,7 +22,7 @@ const ActionButtons = () => {
       <Link
         to={cv}
         target="_blank"
-        download
+        download="antonija_simic_cv"
         role="button"
         className={
           isExtraSmall
