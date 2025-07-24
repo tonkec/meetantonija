@@ -6,6 +6,8 @@
 }
 
 .video-dashboard {
+  max-height: 400px;
+  overflow: hidden;
   .dashboard {
     min-height: 50vh;
   }
