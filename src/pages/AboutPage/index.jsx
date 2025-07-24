@@ -53,7 +53,7 @@ const technologies = [
   { technology: 'CSS', years: new Date().getFullYear() - 2014, icon: FaCss3 },
   {
     technology: 'JavaScript',
-    years: new Date().getFullYear() - 2018,
+    years: new Date().getFullYear() - 2016,
     icon: FaJs,
   },
   {
