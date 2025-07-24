@@ -49,12 +49,28 @@ const speakingEvents = [
 ]
 
 const technologies = [
-  { technology: 'HTML', years: 11, icon: FaHtml5 },
-  { technology: 'CSS', years: 11, icon: FaCss3 },
-  { technology: 'JavaScript', years: 9, icon: FaJs },
-  { technology: 'TypeScript', years: 4, icon: SiTypescript },
-  { technology: 'React', years: 6, icon: SiReact },
-  { technology: 'Redux', years: 5, icon: SiRedux },
+  { technology: 'HTML', years: new Date().getFullYear() - 2014, icon: FaHtml5 },
+  { technology: 'CSS', years: new Date().getFullYear() - 2014, icon: FaCss3 },
+  {
+    technology: 'JavaScript',
+    years: new Date().getFullYear() - 2018,
+    icon: FaJs,
+  },
+  {
+    technology: 'TypeScript',
+    years: new Date().getFullYear() - 2019,
+    icon: SiTypescript,
+  },
+  {
+    technology: 'React',
+    years: new Date().getFullYear() - 2018,
+    icon: SiReact,
+  },
+  {
+    technology: 'Redux',
+    years: new Date().getFullYear() - 2018,
+    icon: SiRedux,
+  },
 ]
 
 const getYearWord = (years) => {
