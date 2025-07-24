@@ -48,10 +48,7 @@ const Search = () => {
           {resultQuestions.length ? (
             resultQuestions
           ) : (
-            <span
-              role="button"
-              className="block ternary xs-padding border-radius pointer max-w-400"
-            >
+            <span className="block border-radius pointer max-w-400">
               No questions found
             </span>
           )}

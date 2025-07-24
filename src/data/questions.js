@@ -3,23 +3,21 @@ const questions = [
     id: 1,
     title: 'How long have you been coding?',
     info: 'I have been coding for 10 years now. I started with Ruby on Rails and then moved to Javascript and React.',
-    answer:
-      'When I first started coding, I was working with Ruby on Rails. I then moved to Javascript and React. What attracts me the most in React is the ability to build reusable components and the virtual DOM. For the first couple of years, I was working on small projects using mostly HTML and CSS, but then I started working on bigger projects based on React. I have worked with many different technologies and I am always eager to learn new things.',
   },
   {
     id: 2,
     title: 'What is your favorite language?',
-    info: 'I enjoy working with Javascript and Typescript. I also like Ruby and Python.',
+    info: 'I enjoy working with Javascript and Typescript.',
   },
   {
     id: 3,
     title: 'What are your favorite libraries?',
-    info: 'I enjoy working with React and Redux the most. I also like working with Tailwind.',
+    info: 'I enjoy working with React and Redux and Tailwind the most.',
   },
   {
     id: 4,
     title: 'What are your favorite tools?',
-    info: 'I enjoy working with VSCode, Git, Github, and Figma.',
+    info: 'I enjoy working with VSCode, Git, GitHub, Figma, Postman, Chrome DevTools, Notion, Slack, Docker, Vite, Webpack, and Storybook.',
   },
   {
     id: 6,
