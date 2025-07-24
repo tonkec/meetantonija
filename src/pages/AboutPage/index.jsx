@@ -49,11 +49,11 @@ const speakingEvents = [
 ]
 
 const technologies = [
-  { technology: 'HTML', years: 10, icon: FaHtml5 },
-  { technology: 'CSS', years: 10, icon: FaCss3 },
+  { technology: 'HTML', years: 11, icon: FaHtml5 },
+  { technology: 'CSS', years: 11, icon: FaCss3 },
   { technology: 'JavaScript', years: 9, icon: FaJs },
   { technology: 'TypeScript', years: 4, icon: SiTypescript },
-  { technology: 'React', years: 5, icon: SiReact },
+  { technology: 'React', years: 6, icon: SiReact },
   { technology: 'Redux', years: 5, icon: SiRedux },
 ]
 
