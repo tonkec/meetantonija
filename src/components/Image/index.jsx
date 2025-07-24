@@ -13,7 +13,6 @@ const Image = ({
 }) => {
   const isImageLoading = useImage(src)
   const [isDarkLocalStorage] = useLocalStorage('dark-mode', false)
-
   if (isImageLoading) {
     return (
       <ThreeDots

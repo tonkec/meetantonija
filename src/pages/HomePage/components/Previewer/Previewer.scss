@@ -47,7 +47,7 @@ iframe {
     margin-bottom: 100px;
     position: relative;
 
-    @include breakpoint(lg) {
+    @include breakpoint(md) {
       width: 80%;
       margin-top: 0;
       margin-bottom: 0;
