@@ -2,7 +2,7 @@ const questions = [
   {
     id: 1,
     title: 'How long have you been coding?',
-    info: 'I have been coding for 10 years now. I started with Ruby on Rails and then moved to Javascript and React.',
+    info: 'I have been coding since 2015. I started with Ruby on Rails and then moved to Javascript and React.',
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const questions = [
   {
     id: 7,
     title: 'For how long have you been working as a developer?',
-    info: 'I have been working as a developer for 10 years now.',
+    info: 'I have been working as a developer from 2015.',
   },
   {
     id: 8,
@@ -37,7 +37,7 @@ const questions = [
   {
     id: 9,
     title: 'Are you able to work remotely?',
-    info: 'Yes, I am able to work remotely. I have been working remotely for 10 years now.',
+    info: 'Yes, I am able to work remotely. I have been working remotely since 2015.',
   },
   {
     id: 10,
