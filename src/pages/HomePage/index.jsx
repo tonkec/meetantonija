@@ -18,7 +18,7 @@ import Social from 'components/Social'
 const SingleProject = ({ post }) => {
   const navigate = useNavigate()
   return (
-    <div className="bg-pink-light xs-padding align-start flex flex-responsive flex-gap space-between">
+    <div className="bg-pink-light xs-padding flex flex-responsive flex-gap space-between">
       <Image src={post.data.coverPhoto} isBackgroundImage />
       <div className="flex-1">
         <h2 className="no-padding">{post.data.title}</h2>
