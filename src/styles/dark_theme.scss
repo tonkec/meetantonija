@@ -40,10 +40,10 @@
       }
     }
 
-    button.ternary,
-    a[role='button'].ternary,
-    *[role='button'].ternary,
-    input[type='submit'].ternary {
+    button.dark,
+    a[role='button'].dark,
+    *[role='button'].dark,
+    input[type='submit'].dark {
       background-color: var(--color-brown);
       color: var(--color-white);
 
@@ -53,8 +53,11 @@
       }
     }
 
-    button.dark {
-      background-color: var(--color-black);
+    button.ternary,
+    a[role='button'].ternary,
+    *[role='button'].ternary,
+    input[type='submit'].ternary {
+      background-color: var(--color-brown);
       color: var(--color-white);
 
       &:hover,
