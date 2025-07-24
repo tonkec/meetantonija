@@ -49,5 +49,6 @@ img {
   min-width: 48%;
   @include breakpoint('md') {
     height: 50vh;
+    max-height: 400px;
   }
 }
