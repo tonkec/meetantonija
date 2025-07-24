@@ -14,6 +14,7 @@ import { Helmet } from 'react-helmet'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import { rootImageUrl } from '../../rootImageUrl'
 import { ThreeDots } from 'react-loader-spinner'
+import { useNavigate } from 'react-router-dom'
 
 const speakingEvents = [
   {
@@ -82,6 +83,7 @@ const getYearWord = (years) => {
 }
 
 const AboutPage = () => {
+  const navigate = useNavigate()
   const [event, setEvent] = useState(speakingEvents[0])
   const temperatureData = useTemperature()
   const { values, properties } = getValuesAndProperties(temperatureData)
@@ -150,18 +152,25 @@ const AboutPage = () => {
               <h2>🚀 Technologies I have mastered</h2>
               <div className="flex flex-gap-small flex-wrap">
                 {technologies.map((tech, index) => (
-                  <a
+                  <button
                     key={index}
-                    href={`/cv?skill=${removeSpacesAndDashes(tech.technology)}`}
-                    role="button"
                     className="ternary"
+                    onClick={() =>
+                      navigate(
+                        `/cv?skill=${removeSpacesAndDashes(tech.technology)}`
+                      )
+                    }
                   >
                     <p className="small-font">
-                      <tech.icon className="small-margin-right" />
-                      {tech.years} {getYearWord(tech.years)}
+                      <span>
+                        <tech.icon className="small-margin-right" />
+                      </span>
+                      <span>
+                        {tech.years} {getYearWord(tech.years)}
+                      </span>
                     </p>
                     <p>{tech.technology}</p>
-                  </a>
+                  </button>
                 ))}
               </div>
             </div>
