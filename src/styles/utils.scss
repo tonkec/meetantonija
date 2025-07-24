@@ -49,6 +49,14 @@
   padding: var(--card-spacing);
 }
 
+.small-padding-right {
+  padding-right: var(--card-spacing);
+}
+
+.medium-padding-right {
+  padding-right: calc(var(--card-spacing) * 2);
+}
+
 .small-padding-top {
   padding-top: var(--card-spacing);
 }

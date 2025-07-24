@@ -79,29 +79,21 @@ const AboutPage = () => {
         <div className="container">
           <div className="flex flex-responsive flex-gap-large align-start space-between">
             <div>
-              <h2>
-                I am <span className="accent">Antonija</span>,
-              </h2>
-
-              <p className="line-height-2">
-                a frontend developer from Sveta Nedelja which currently has a{' '}
+              <h1 className="small-margin-bottom">About me</h1>
+              <p className="line-height-2 medium-padding-right">
+                I am a frontend developer from Sveta Nedelja, Croatia (CET)
+                which currently has a{' '}
                 <span data-tooltip-id="temperature-tooltip">
                   <Temperature />
                 </span>{' '}
-                weather.
-              </p>
-              <p className="line-height-2">
-                I'm a dedicated and forward-thinking front-end engineer with a
-                passion for building cutting-edge web applications. My expertise
-                lies in harnessing the power of modern JavaScript frameworks
-                such as React to create seamless, user-centric experiences. I
-                pride myself on optimizing performance and translating complex
-                ideas into intuitive interfaces. I continuously challenge myself
-                to learn new technologies and refine my problem-solving skills.
-                Collaboration is at the heart of my work, and I thrive in
-                environments where creativity and technical excellence merge. I
-                am excited to leverage my skills to drive innovation and make a
-                meaningful impact on every project I undertake.
+                weather. I'm a reliable and responsible front-end engineer with
+                a passion for building cutting-edge web applications. My
+                expertise lies in modern{' '}
+                <span className="text-pink">JavaScript</span>,{' '}
+                <span className="text-pink">Typescript</span> and{' '}
+                <span className="text-pink">React</span>. Collaboration is at
+                the heart of my work, and I thrive in environments where
+                creativity and technical excellence merge.
               </p>
             </div>
 
@@ -125,8 +117,9 @@ const AboutPage = () => {
             <Image
               hasColoredBackground
               src={`${rootImageUrl}/me.jpeg`}
-              alt="Antonija"
-              className="hidden-mobile medium-margin-right"
+              alt="Me"
+              className="medium-margin-right"
+              style={{ maxWidth: '300px' }}
             />
           </div>
         </div>

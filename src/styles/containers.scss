@@ -4,7 +4,11 @@
   max-width: var(--container-width);
   margin: 0px auto;
   position: relative;
-  padding: 0 15px;
+  padding: 0 calc(var(--cointainer-padding) / 2);
+  @include breakpoint(xl) {
+    padding-left: var(--cointainer-padding);
+    padding-right: var(--cointainer-padding);
+  }
 }
 
 .small-container {

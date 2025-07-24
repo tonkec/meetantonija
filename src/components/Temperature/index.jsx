@@ -31,11 +31,11 @@ const Temperature = () => {
       <ThreeDots
         wrapperStyle={{ display: 'inline' }}
         color={isDarkLocalStorage ? 'var(--color-white)' : 'var(--color-black)'}
-        height={50}
-        width={50}
+        height={20}
+        width={20}
       />
     )
-  return <span className="large-font">{getTemperatureMood(temperature)}</span>
+  return <span className="normal-font">{getTemperatureMood(temperature)}</span>
 }
 
 export default Temperature

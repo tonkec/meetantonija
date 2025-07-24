@@ -77,7 +77,9 @@ const PostsPage = () => {
       <header className="header-padding-top">
         <div className="container">
           <h1 className="no-padding">Notes.</h1>
-          <p>Here I write about cool stuff that I learned.</p>
+          <p>
+            I write about cool things I've learned or just find interesting.
+          </p>
         </div>
       </header>
       <section className="container medium-margin-top">
