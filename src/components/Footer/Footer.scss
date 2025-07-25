@@ -3,12 +3,12 @@ $footerColor: transparent;
 
 footer {
   padding-bottom: 100px;
-  padding-top: 150px;
+  padding-top: 100px;
   background-color: $footerColor;
   color: var(--color-black);
 
   @include breakpoint(lg) {
-    padding-top: 50px;
+    padding-top: 0px;
   }
 
   p {
