@@ -84,7 +84,7 @@ const SearchBar = () => {
           navigate(`/post/${formatNoteTitle(post.title.toLowerCase())}`)
           setIsNavigationOpen(false)
         }}
-        value={`Post: ${post.title}`}
+        value={`Note: ${post.title}`}
       />
     ))
     .slice(0, maxNumberOfResults)
@@ -247,7 +247,7 @@ const SearchBar = () => {
         <form onSubmit={onSubmit} className="relative">
           <input
             type="text"
-            placeholder="Search pages, posts or projects by their title"
+            placeholder="Search pages, notes or projects by their title"
             onChange={(event) => {
               setSearch(event.target.value)
             }}
