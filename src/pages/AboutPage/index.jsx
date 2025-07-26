@@ -180,7 +180,7 @@ const AboutPage = () => {
 
       <section className="large-padding-bottom">
         <div className="container">
-          <h2>🎤 I was a speaker at these events:</h2>
+          <h2>🎤 I like to share my knowledge:</h2>
 
           {event ? (
             <div className="flex flex-responsive flex-gap space-between">
