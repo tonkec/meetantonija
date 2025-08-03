@@ -2,7 +2,6 @@ import { Tooltip } from 'react-tooltip'
 import Image from 'components/Image'
 import { useWindowSize } from 'hooks/useWindowSize'
 import ActionButtons from '../ActionButtons'
-import Social from 'components/Social'
 
 const Header = () => {
   const { width } = useWindowSize()
