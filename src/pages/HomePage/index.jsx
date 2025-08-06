@@ -213,8 +213,8 @@ const HomePage = () => {
         </FadeInSection>
 
         <FadeInSection>
-          <MarqueeText baseVelocity={-1}>React developer</MarqueeText>
-          <MarqueeText baseVelocity={1}>10 years of experience</MarqueeText>
+          <MarqueeText baseVelocity={-0.5}>React developer</MarqueeText>
+          <MarqueeText baseVelocity={0.5}>10 years of experience</MarqueeText>
         </FadeInSection>
 
         <FadeInSection>
