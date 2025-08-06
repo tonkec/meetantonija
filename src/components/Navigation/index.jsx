@@ -68,7 +68,7 @@ const Navigation = () => {
   const isMobile = width < 1000
 
   const navigationClasses =
-    scrollPosition > 840 ? 'navigation' : 'navigation scrolled-to-top'
+    scrollPosition > 100 ? 'navigation' : 'navigation scrolled-to-top'
 
   return (
     <div className={navigationClasses}>

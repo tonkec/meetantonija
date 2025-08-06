@@ -19,6 +19,7 @@ import { getValuesAndProperties } from 'utils'
 import useTemperature from 'hooks/useTemperature'
 import Temperature from 'components/Temperature'
 import { Tooltip } from 'react-tooltip'
+
 const SingleProject = ({ post }) => {
   const navigate = useNavigate()
   return (
