@@ -6,7 +6,6 @@ import projects from '../../data/projects'
 import { Helmet } from 'react-helmet'
 import Testimonial from './components/Testimonial'
 import { useCallback, useRef } from 'react'
-import { FaChevronDown } from 'react-icons/fa6'
 import { rootImageUrl } from '../../rootImageUrl'
 import Paginated from 'components/Paginated'
 import { removeSpacesAndDashes } from 'utils'
@@ -14,6 +13,7 @@ import { useNavigate } from 'react-router-dom'
 import Image from 'components/Image'
 import Cta from 'components/Cta'
 import Social from 'components/Social'
+import MarqueeText from 'components/MarqueeText'
 
 const SingleProject = ({ post }) => {
   const navigate = useNavigate()
@@ -62,12 +62,6 @@ const testimonials = [
 ]
 
 const HomePage = () => {
-  const myRef = useRef(null)
-
-  const handleScrollToElement = useCallback(() => {
-    myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }, [])
-
   return (
     <>
       <Helmet>
@@ -75,18 +69,10 @@ const HomePage = () => {
       </Helmet>
       <Header />
 
-      <div className="container">
-        <div className="text-center">
-          <FaChevronDown
-            onClick={() => handleScrollToElement()}
-            className="pointer"
-            fontSize={50}
-            color="var(--color-pink)"
-          />
-        </div>
-      </div>
+      <MarqueeText baseVelocity={-1}>React developer</MarqueeText>
+      <MarqueeText baseVelocity={1}>10 years of experience</MarqueeText>
 
-      <div className="container" ref={myRef} style={{ paddingTop: '80px' }}>
+      <div className="container" style={{ paddingTop: '150px' }}>
         <h2 className="medium-margin-bottom">🌐 I am active online.</h2>
         <Social />
       </div>
