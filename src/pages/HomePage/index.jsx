@@ -5,7 +5,6 @@ import Videos from './components/Videos/'
 import projects from '../../data/projects'
 import { Helmet } from 'react-helmet'
 import Testimonial from './components/Testimonial'
-import { useCallback, useRef } from 'react'
 import { rootImageUrl } from '../../rootImageUrl'
 import Paginated from 'components/Paginated'
 import { removeSpacesAndDashes } from 'utils'
@@ -14,6 +13,7 @@ import Image from 'components/Image'
 import Cta from 'components/Cta'
 import Social from 'components/Social'
 import MarqueeText from 'components/MarqueeText'
+import FadeInSection from 'components/FadeInSection'
 
 const SingleProject = ({ post }) => {
   const navigate = useNavigate()
@@ -72,12 +72,14 @@ const HomePage = () => {
       <MarqueeText baseVelocity={-1}>React developer</MarqueeText>
       <MarqueeText baseVelocity={1}>10 years of experience</MarqueeText>
 
-      <div className="container" style={{ paddingTop: '150px' }}>
-        <h2 className="medium-margin-bottom">🌐 I am active online.</h2>
-        <Social />
-      </div>
+      {/* <FadeInSection>
+        <div className="container" style={{ paddingTop: '150px' }}>
+          <h2 className="medium-margin-bottom">🌐 I am active online.</h2>
+          <Social />
+        </div>
+      </FadeInSection> */}
 
-      <section>
+      {/* <section>
         <div className="container">
           <h2>💼 I work with clients.</h2>
 
@@ -87,9 +89,9 @@ const HomePage = () => {
             singleEntry={(project) => <SingleProject post={project} />}
           />
         </div>
-      </section>
+      </section> */}
 
-      <section>
+      {/* <section>
         <div className="container">
           <h2>🗣 What they say about me.</h2>
           <div className="grid">
@@ -98,15 +100,15 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <Previewer />
+      {/* <Previewer /> */}
 
-      <Aside numberOfPosts={3} />
+      {/* <Aside numberOfPosts={3} /> */}
 
-      <Videos />
+      {/* <Videos /> */}
 
-      <Cta />
+      {/* <Cta /> */}
     </>
   )
 }
