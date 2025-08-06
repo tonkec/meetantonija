@@ -1,0 +1,7 @@
+.pattern {
+  background-color: var(--color-white);
+  opacity: 0.8;
+  background-image: linear-gradient(#000 1px, transparent 1px),
+    linear-gradient(to right, #000 1px, var(--color-white) 1px);
+  background-size: 50px 50px;
+}

@@ -76,7 +76,7 @@ input[type='submit'] {
   }
 
   &.outlined {
-    background-color: transparent;
+    background-color: var(--color-white);
     border: 1px solid var(--color-pink);
     color: var(--color-pink);
 
