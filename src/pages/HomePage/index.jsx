@@ -126,7 +126,7 @@ const HomePage = () => {
         </div>
 
         <FadeInSection>
-          <section className="large-margin-bottom large-margin-top large-padding-top">
+          <section className="large-margin-bottom large-margin-top medium-padding-top">
             <div className="container">
               <h1 className="extra-large-font medium-margin-bottom">
                 Just published Duga 💪
