@@ -1,29 +1,5 @@
-::-webkit-scrollbar {
-  height: 5px;
-  width: 5px;
-  background: var(--background);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  -webkit-border-radius: 1ex;
-}
-
-::-webkit-scrollbar-corner {
-  background: var(--background);
-}
-
 html {
   scroll-snap-type: y mandatory;
-}
-
-.progress {
-  position: fixed;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: var(--accent);
-  bottom: 100px;
 }
 
 .parallax {
@@ -40,10 +16,8 @@ html {
 .parallax .scroller {
   font-weight: 600;
   text-transform: uppercase;
-
   display: flex;
   white-space: nowrap;
-  display: flex;
   flex-wrap: nowrap;
 }
 
