@@ -45,7 +45,7 @@ const Events = () => {
   return (
     <section className="large-padding-bottom large-margin-top">
       <div className="container">
-        <h2>🎤 I like to share my knowledge:</h2>
+        <h2>🎤 I share my knowledge:</h2>
 
         {event ? (
           <div className="flex flex-responsive flex-gap space-between">

@@ -191,7 +191,7 @@ const HomePage = () => {
         </FadeInSection>
 
         <FadeInSection>
-          <section>
+          <section className="pattern-black">
             <div className="container large-margin-bottom">
               <h2>🗣 What they say about me.</h2>
               <div className="grid">
