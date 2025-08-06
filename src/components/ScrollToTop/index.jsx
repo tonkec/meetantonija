@@ -21,7 +21,7 @@ const ScrollToTop = () => {
       onClick={() => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
       }}
-      className="primary fixed bottom-20 right-30 z-9"
+      className="primary fixed bottom-20 right-30 z-99"
     >
       <FaAngleDoubleUp />
     </button>
