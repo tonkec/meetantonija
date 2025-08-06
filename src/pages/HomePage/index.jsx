@@ -126,13 +126,11 @@ const HomePage = () => {
         </div>
 
         <FadeInSection>
-          <section className="large-margin-bottom large-margin-top medium-padding-top">
+          <section className="large-margin-bottom large-margin-top">
             <div className="container">
-              <h1 className="extra-large-font medium-margin-bottom">
-                Just published Duga 💪
-              </h1>
+              <h2>Just published Duga 💪</h2>
 
-              <div className="flex flex-gap">
+              <div className="flex flex-gap flex-responsive">
                 <div className="flex-1">
                   <p className="line-height-2">
                     I built Duga using React, Typescript and React Query for a
@@ -165,7 +163,7 @@ const HomePage = () => {
                   </div>
                 </div>
 
-                <div style={{ width: '60%' }}>
+                <div className="flex-1">
                   <Image src={Duga} style={{ width: '100%' }} />
                 </div>
               </div>
