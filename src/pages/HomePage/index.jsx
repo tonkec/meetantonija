@@ -63,14 +63,9 @@ const testimonials = [
 
 const HomePage = () => {
   const myRef = useRef(null)
-  const tldrRef = useRef(null)
 
   const handleScrollToElement = useCallback(() => {
     myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }, [])
-
-  const handleScrollToTLDR = useCallback(() => {
-    tldrRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }, [])
 
   return (
@@ -95,21 +90,6 @@ const HomePage = () => {
         <h2 className="medium-margin-bottom">🌐 I am active online.</h2>
         <Social />
       </div>
-
-      <section className="small-padding large-margin-top">
-        <div className="container text-center large-padding bg-sky-blue border-radius">
-          <h3 className="text-black small-margin-bottom">
-            🏃‍♀️ Are you in a hurry?
-          </h3>
-          <p className="text-black medium-margin-bottom">
-            If you are in a hurry, you can skip to the TLDR; section below.
-          </p>
-
-          <button className="primary" onClick={handleScrollToTLDR}>
-            Skip to TLDR;
-          </button>
-        </div>
-      </section>
 
       <section>
         <div className="container">
@@ -141,54 +121,6 @@ const HomePage = () => {
       <Videos />
 
       <Cta />
-
-      <section ref={tldrRef}>
-        <div className="container">
-          <h2> ℹ️ TLDR:</h2>
-
-          <p className="medium-font">
-            I am a{' '}
-            <span className="font-weight-bold medium-font">senior react</span>{' '}
-            developer from Croatia (CET) with major open source contributions on{' '}
-            <a
-              href="https://github.com/tonkec"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="medium-font"
-            >
-              GitHub
-            </a>{' '}
-            and{' '}
-            <a
-              href="https://codepen.io/tonkec"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="medium-font"
-            >
-              Codepen
-            </a>
-            . My skills include{' '}
-            <span className="font-weight-bold medium-font">Javascript</span>,{' '}
-            <span className="font-weight-bold medium-font">Typescript</span>,{' '}
-            <span className="font-weight-bold medium-font">React</span>,{' '}
-            <span className="font-weight-bold medium-font">Tailwind</span> and
-            more. For the past 2 years I have been working with FinTech company
-            where I was responsible for building and maintaining complex web
-            applications. For the past 6 months I have been working on an open
-            source project called Duga. Its source code is available on{' '}
-            <a
-              href="https://github.com/tonkec/duga_frontend_v2"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="medium-font"
-            >
-              Github
-            </a>
-            . I have plenty of experience in mentoring junior developers and
-            helping them grow their skills.
-          </p>
-        </div>
-      </section>
     </>
   )
 }
