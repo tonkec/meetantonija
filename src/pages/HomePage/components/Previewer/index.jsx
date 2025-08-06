@@ -14,7 +14,7 @@ const Previewer = () => {
   const [isIframeLoading, setIsIframeLoading] = useState(true)
   const buttonWrapper = useRef(null)
   return (
-    <section>
+    <section className="large-margin-bottom">
       <div className="container">
         <h2>👩‍🎨 I design in code.</h2>
 

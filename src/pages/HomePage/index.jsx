@@ -14,7 +14,14 @@ import Cta from 'components/Cta'
 import Social from 'components/Social'
 import MarqueeText from 'components/MarqueeText'
 import FadeInSection from 'components/FadeInSection'
-
+import Duga from './remove_me.png'
+import HireMe from 'components/HireMe'
+import Events from 'components/Events'
+import Technologies from 'components/Technologies'
+import { getValuesAndProperties } from 'utils'
+import useTemperature from 'hooks/useTemperature'
+import Temperature from 'components/Temperature'
+import { Tooltip } from 'react-tooltip'
 const SingleProject = ({ post }) => {
   const navigate = useNavigate()
   return (
@@ -62,6 +69,8 @@ const testimonials = [
 ]
 
 const HomePage = () => {
+  const temperatureData = useTemperature()
+  const { values, properties } = getValuesAndProperties(temperatureData)
   return (
     <>
       <Helmet>
@@ -69,46 +78,152 @@ const HomePage = () => {
       </Helmet>
       <Header />
 
-      <MarqueeText baseVelocity={-1}>React developer</MarqueeText>
-      <MarqueeText baseVelocity={1}>10 years of experience</MarqueeText>
+      <FadeInSection>
+        <MarqueeText baseVelocity={-1}>React developer</MarqueeText>
+        <MarqueeText baseVelocity={1}>10 years of experience</MarqueeText>
+      </FadeInSection>
 
-      {/* <FadeInSection>
-        <div className="container" style={{ paddingTop: '150px' }}>
-          <h2 className="medium-margin-bottom">🌐 I am active online.</h2>
-          <Social />
-        </div>
-      </FadeInSection> */}
+      <FadeInSection>
+        <section className="container large-margin-bottom large-margin-top">
+          <div className="flex flex-responsive flex-gap-large align-start space-between">
+            <div>
+              <h1 className="small-margin-bottom">About me</h1>
+              <p className="line-height-2 medium-padding-right">
+                I am a frontend developer from Sveta Nedelja, Croatia (CET)
+                which currently has a{' '}
+                <span data-tooltip-id="temperature-tooltip">
+                  <Temperature />
+                </span>{' '}
+                weather. I'm a reliable and responsible front-end engineer with
+                a passion for building cutting-edge web applications.
+                Collaboration is at the heart of my work, and I thrive in
+                environments where creativity and technical excellence merge.
+                With over 6 years of React experience and a decade in frontend
+                development, I excel at crafting intuitive, high‑performance
+                user interfaces that deliver exceptional user experiences. I’m
+                driven by problem‑solving, continuous learning, and staying at
+                the forefront of modern web technologies. My approach blends
+                clean, maintainable code with thoughtful design, ensuring every
+                project I work on is scalable, accessible, and built to last.
+              </p>
+            </div>
 
-      {/* <section>
-        <div className="container">
-          <h2>💼 I work with clients.</h2>
-
-          <Paginated
-            data={projects.sort((a, b) => b.from - a.from)}
-            postsPerPage={1}
-            singleEntry={(project) => <SingleProject post={project} />}
-          />
-        </div>
-      </section> */}
-
-      {/* <section>
-        <div className="container">
-          <h2>🗣 What they say about me.</h2>
-          <div className="grid">
-            {testimonials.map((testimonial, index) => (
-              <Testimonial key={index} testimonial={testimonial} />
-            ))}
+            <Tooltip
+              id="temperature-tooltip"
+              style={{
+                backgroundColor: 'var(--color-sky-blue)',
+                padding: '10px',
+                borderRadius: '5px',
+                color: 'var(--color-black)',
+              }}
+              className="tooltip"
+            >
+              {properties.map((property, index) => (
+                <span className="block" key={index}>
+                  {property}: {values[index]}
+                </span>
+              ))}
+            </Tooltip>
           </div>
-        </div>
-      </section> */}
+        </section>
+      </FadeInSection>
 
-      {/* <Previewer /> */}
+      <FadeInSection>
+        <section className="container large-margin-bottom">
+          <h1 className="extra-large-fon medium-margin-bottom">
+            Just published Duga 💪
+          </h1>
 
-      {/* <Aside numberOfPosts={3} /> */}
+          <div className="flex flex-gap">
+            <div className="flex-1">
+              <p className="line-height-2">
+                I built Duga using React, Typescript and React Query for a
+                responsive, state‑managed frontend, and Socket.IO for real‑time
+                communication. The backend runs on Node.js/Express with
+                PostgreSQL via Sequelize, enabling instant chat, notifications,
+                and seamless collaboration across devices.
+              </p>
 
-      {/* <Videos /> */}
+              <div className="small-margin-top flex flex-gap-small">
+                <a
+                  href="https://github.com/tonkec/duga_frontend_v2"
+                  className="primary"
+                  role="button"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View source
+                </a>
+                <a
+                  href="https://staging--dugaprod.netlify.app/"
+                  className="outlined"
+                  role="button"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open Demo
+                </a>
+              </div>
+            </div>
 
-      {/* <Cta /> */}
+            <div style={{ width: '60%' }}>
+              <Image src={Duga} style={{ width: '100%' }} />
+            </div>
+          </div>
+        </section>
+      </FadeInSection>
+
+      <FadeInSection>
+        <section className="large-margin-top large-margin-bottom">
+          <div className="container">
+            <h2>💼 I work with clients.</h2>
+
+            <Paginated
+              data={projects.sort((a, b) => b.from - a.from)}
+              postsPerPage={1}
+              singleEntry={(project) => <SingleProject post={project} />}
+            />
+          </div>
+        </section>
+      </FadeInSection>
+
+      <FadeInSection>
+        <section>
+          <div className="container large-margin-bottom">
+            <h2>🗣 What they say about me.</h2>
+            <div className="grid">
+              {testimonials.map((testimonial, index) => (
+                <Testimonial key={index} testimonial={testimonial} />
+              ))}
+            </div>
+          </div>
+        </section>
+      </FadeInSection>
+
+      <FadeInSection>
+        <Previewer />
+      </FadeInSection>
+
+      <FadeInSection>
+        <Aside numberOfPosts={3} />
+      </FadeInSection>
+
+      <FadeInSection>
+        <Videos />
+      </FadeInSection>
+
+      <FadeInSection>
+        <MarqueeText baseVelocity={-1}>React developer</MarqueeText>
+        <MarqueeText baseVelocity={1}>10 years of experience</MarqueeText>
+      </FadeInSection>
+
+      <FadeInSection>
+        <Events />
+      </FadeInSection>
+
+      <FadeInSection>
+        <HireMe />
+      </FadeInSection>
     </>
   )
 }

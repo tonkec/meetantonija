@@ -3,7 +3,7 @@ import ButtonCopy from 'components/ButtonCopy'
 
 const HireMe = () => {
   return (
-    <section className="small-padding large-margin-top">
+    <section className="small-padding">
       <div className="container text-center large-padding bg-sky-blue border-radius">
         <h3 className="no-margin text-black">
           Do you have a project in mind? 🤔

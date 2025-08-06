@@ -3,7 +3,7 @@ import { useRef } from 'react'
 
 function FadeInSection({ children }) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { amount: 0.6, once: true })
+  const isInView = useInView(ref, { amount: 0.5, once: true })
 
   return (
     <motion.section

@@ -1,7 +1,6 @@
 import HomePage from 'pages/HomePage'
 import PostsPage from 'pages/PostsPage'
 import ProjectPage from 'pages/ProjectPage'
-import AboutPage from 'pages/AboutPage'
 import CvPage from 'pages/CvPage'
 import NotFound from 'components/NotFound'
 import PostPage from 'pages/PostPage'
@@ -15,10 +14,6 @@ const routes = [
   {
     path: '/posts',
     element: <PostsPage />,
-  },
-  {
-    path: '/about',
-    element: <AboutPage />,
   },
   {
     path: '/cv',

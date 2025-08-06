@@ -39,11 +39,6 @@ const navigationLinks = [
     icon: <MdHome fontSize={20} />,
   },
   {
-    href: '/about',
-    label: 'About',
-    icon: <RiEmotionLine fontSize={20} />,
-  },
-  {
     href: '/posts',
     label: 'Notes',
     icon: <MdLibraryBooks fontSize={20} />,

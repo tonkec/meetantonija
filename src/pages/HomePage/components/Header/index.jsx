@@ -9,7 +9,7 @@ const Header = () => {
   const isExtraSmall = width < 400
 
   return (
-    <header className="container header-padding-top header-padding-bottom large-margin-bottom">
+    <header className="container header-padding-top large-margin-bottom">
       <div
         className={isMobile ? 'flex-column' : 'flex'}
         style={{
