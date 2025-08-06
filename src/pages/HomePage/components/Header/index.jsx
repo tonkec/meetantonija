@@ -3,13 +3,14 @@ import Image from 'components/Image'
 import { useWindowSize } from 'hooks/useWindowSize'
 import ActionButtons from '../ActionButtons'
 
+import './Header.scss'
+
 const Header = () => {
   const { width } = useWindowSize()
   const isMobile = width < 800
   const isExtraSmall = width < 400
-
   return (
-    <div className="pattern">
+    <div className="header-wrapper">
       <header className="container header-padding-top">
         <div
           className={isMobile ? 'flex-column' : 'flex'}
@@ -18,20 +19,14 @@ const Header = () => {
           }}
         >
           <div className="flex-1">
-            <h1
-              className={
-                isMobile
-                  ? 'normal-font bg-white small-padding no-padding-top no-padding-bottom'
-                  : 'bg-white small-padding no-padding-top no-padding-bottom'
-              }
-            >
+            <h1 className={isMobile ? 'normal-font' : ''}>
               I'm <span className="accent">Antonija</span>,
             </h1>
             <p
               className={
                 isMobile
-                  ? 'normal-font small-margin-bottom medium-margin-right line-height-2 bg-white small-padding no-padding-top'
-                  : 'line-height-2 bg-white small-padding no-padding-top'
+                  ? 'normal-font small-margin-bottom medium-margin-right line-height-2'
+                  : 'line-height-2'
               }
               style={{ fontSize: isMobile ? '0.9rem' : '1rem' }}
             >

@@ -7,7 +7,7 @@ import Emoji from 'components/Emoji'
 const Footer = () => {
   return (
     <footer>
-      <div className="container large-margin-top">
+      <div className="container">
         <Emoji />
         <div className="flex flex-x-center small-margin-bottom medium-margin-top">
           <Social />

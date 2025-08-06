@@ -1,0 +1,18 @@
+.header-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: var(--color-white);
+}
+
+.header-wrapper header {
+  padding-top: 35vh;
+}
+
+.homepage-content {
+  margin-top: 100vh;
+  background-color: var(--color-white);
+  position: relative;
+  z-index: 9;
+}

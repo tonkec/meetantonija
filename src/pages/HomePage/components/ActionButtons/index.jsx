@@ -10,8 +10,8 @@ const ActionButtons = () => {
     <div
       className={
         isExtraSmall
-          ? 'block medium-margin-top bg-white small-padding no-padding-top'
-          : 'flex flex-gap-small small-padding bg-white no-padding-top'
+          ? 'block medium-margin-top'
+          : 'flex flex-gap-small medium-margin-top'
       }
     >
       <ButtonCopy
