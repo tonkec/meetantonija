@@ -132,9 +132,9 @@ const HomePage = () => {
                 <div className="flex-1">
                   <p className="line-height-2">
                     I built Duga using React, Typescript and React Query for a
-                    responsive, state‑managed frontend, and Socket.IO for
-                    real‑time communication. The backend runs on Node.js/Express
-                    with PostgreSQL via Sequelize, enabling instant chat,
+                    responsive, state managed frontend, and Socket.IO for real
+                    time communication. The backend runs on Node.js/Express with
+                    PostgreSQL via Sequelize, enabling instant chat,
                     notifications, and seamless collaboration across devices.
                   </p>
 
