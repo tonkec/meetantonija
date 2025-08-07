@@ -154,7 +154,6 @@ const HomePage = () => {
                       role="button"
                       target="_blank"
                       rel="noreferrer"
-                      style={{ backgroundColor: 'var(--color-white)' }}
                     >
                       Open Demo
                     </a>
