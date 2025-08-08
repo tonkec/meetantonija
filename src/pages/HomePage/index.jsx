@@ -93,13 +93,13 @@ const HomePage = () => {
                   Collaboration is at the heart of my work, and I thrive in
                   environments where creativity and technical excellence merge.
                   With over 6 years of React experience and a decade in frontend
-                  development, I excel at crafting intuitive, high‑performance
-                  user interfaces that deliver exceptional user experiences. I’m
-                  driven by problem‑solving, continuous learning, and staying at
-                  the forefront of modern web technologies. My approach blends
-                  clean, maintainable code with thoughtful design, ensuring
-                  every project I work on is scalable, accessible, and built to
-                  last.
+                  development, I excel at crafting intuitive, high performance
+                  user interfaces that deliver exceptional user experiences. I
+                  am driven by problem solving, continuous learning, and staying
+                  at the forefront of modern web technologies. My approach
+                  blends clean, maintainable code with thoughtful design,
+                  ensuring every project I work on is scalable, accessible, and
+                  built to last.
                 </p>
               </div>
 
