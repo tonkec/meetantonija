@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 
 const IntroAnimation = () => {
-  const text = 'Antonija'
+  const text = 'ANTONIJA'
   const [displayText, setDisplayText] = useState('')
   const currentIndexRef = useRef(0)
 

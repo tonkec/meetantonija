@@ -88,7 +88,7 @@ const HomePage = () => {
                   <span data-tooltip-id="temperature-tooltip">
                     <Temperature />
                   </span>{' '}
-                  weather. I'm a reliable and responsible front-end engineer
+                  weather. I am a reliable and responsible front-end engineer
                   with a passion for building cutting-edge web applications.
                   Collaboration is at the heart of my work, and I thrive in
                   environments where creativity and technical excellence merge.
