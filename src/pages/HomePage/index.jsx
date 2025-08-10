@@ -205,7 +205,7 @@ const HomePage = () => {
         </FadeInSection>
 
         <FadeInSection>
-          <Aside numberOfPosts={3} />
+          <Aside numberOfPosts={2} />
         </FadeInSection>
 
         <FadeInSection>
