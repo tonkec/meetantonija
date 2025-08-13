@@ -89,7 +89,7 @@ const Navigation = ({ openNavigation }) => {
               <BiSearch
                 fontSize={20}
                 onClick={() => openNavigation()}
-                className="pointer"
+                className="pointer hidden-mobile"
               />
             </span>
           </div>
