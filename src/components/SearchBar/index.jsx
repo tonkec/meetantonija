@@ -24,11 +24,16 @@ const NavigationButton = ({ onClick, value }) => (
   />
 )
 
-const SearchBar = () => {
+const SearchBar = ({
+  closeNavigation,
+  openNavigation,
+  enableScroll,
+  setIsNavigationOpen,
+  isNavigationOpen,
+}) => {
   const location = useLocation()
   const navigate = useNavigate()
   const [search, setSearch] = useState('')
-  const [isNavigationOpen, setIsNavigationOpen] = useState(false)
   const [keyPressCounter, setKeyPressCounter] = useState(0)
   const searchedRoutes = routes
     .filter(
@@ -110,32 +115,6 @@ const SearchBar = () => {
         value={`Page: ${route.path}`}
       />
     ))
-
-  const closeNavigation = useCallback(() => {
-    setSearch('')
-    setIsNavigationOpen(false)
-    enableSrcoll()
-  }, [])
-
-  const openNavigation = useCallback(() => {
-    setSearch('')
-    setIsNavigationOpen(true)
-    preventScroll()
-  }, [])
-
-  const preventScroll = () => {
-    const body = document.querySelector('body')
-    body.style.overflow = 'hidden'
-    const html = document.querySelector('html')
-    html.style.overflow = 'hidden'
-  }
-
-  const enableSrcoll = () => {
-    const body = document.querySelector('body')
-    body.style.overflow = 'auto'
-    const html = document.querySelector('html')
-    html.style.overflow = 'auto'
-  }
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -228,7 +207,7 @@ const SearchBar = () => {
 
   const onSubmit = (event) => {
     event.preventDefault()
-    enableSrcoll()
+    enableScroll()
     const route = routes.find((route) => route.path === search)
     if (route) {
       navigate(route.path)

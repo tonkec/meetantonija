@@ -7,7 +7,8 @@ import { useWindowSize } from '@uidotdev/usehooks'
 import MobileNavigation from './MobileNavigation'
 import ButtonCopy from 'components/ButtonCopy'
 import DarkMode from 'components/DarkMode'
-import { BiHomeHeart, BiFile, BiBriefcase } from 'react-icons/bi'
+import { BiHomeHeart, BiFile, BiBriefcase, BiSearch } from 'react-icons/bi'
+import { ImShift } from 'react-icons/im'
 
 export const NavigationLink = ({ children, href, buttonClassName }) => {
   const activeLink = window.location.pathname
@@ -60,7 +61,7 @@ const getNavigationLinks = (navigationLinks) => {
   })
 }
 
-const Navigation = () => {
+const Navigation = ({ openNavigation }) => {
   const [isMobileNavigationOpen, setIsMobileNavigationOpen] = useState(false)
   const scrollPosition = useScrollPosition()
   const { width } = useWindowSize()
@@ -82,7 +83,16 @@ const Navigation = () => {
             <RxHamburgerMenu fontSize="1.5rem" />
           </button>
         ) : (
-          <div className="flex">{getNavigationLinks(navigationLinks)}</div>
+          <div className="flex">
+            {getNavigationLinks(navigationLinks)}
+            <span className="flex flex-y-center">
+              <BiSearch
+                fontSize={20}
+                onClick={() => openNavigation()}
+                className="pointer"
+              />
+            </span>
+          </div>
         )}
 
         <div className="flex medium-margin-right flex-y-center">

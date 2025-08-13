@@ -1,5 +1,5 @@
 import './App.scss'
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useCallback } from 'react'
 import { Routes, Route, Outlet, useLocation } from 'react-router-dom'
 import routes from './routes'
 import Footer from './components/Footer'
@@ -16,6 +16,34 @@ function Layout() {
 
   const [isIntroAnimationActive, setIsIntroAnimationActive] = useState(true)
   const [isOutletLoaded, setIsOutletLoaded] = useState(true)
+  const [isNavigationOpen, setIsNavigationOpen] = useState(false)
+  const [, setSearch] = useState('')
+
+  const openNavigation = useCallback(() => {
+    setSearch('')
+    setIsNavigationOpen(true)
+    preventScroll()
+  }, [])
+
+  const closeNavigation = useCallback(() => {
+    setSearch('')
+    setIsNavigationOpen(false)
+    enableSrcoll()
+  }, [])
+
+  const enableSrcoll = () => {
+    const body = document.querySelector('body')
+    body.style.overflow = 'auto'
+    const html = document.querySelector('html')
+    html.style.overflow = 'auto'
+  }
+
+  const preventScroll = () => {
+    const body = document.querySelector('body')
+    body.style.overflow = 'hidden'
+    const html = document.querySelector('html')
+    html.style.overflow = 'hidden'
+  }
 
   const location = useLocation()
   const introAnimationDuration = 1500
@@ -60,8 +88,14 @@ function Layout() {
   return (
     <div className="fadeIn">
       <ScrollToTop />
-      <SearchBar />
-      <Navigation />
+      <SearchBar
+        closeNavigation={closeNavigation}
+        openNavigation={openNavigation}
+        enableSrcoll={enableSrcoll}
+        setIsNavigationOpen={setIsNavigationOpen}
+        isNavigationOpen={isNavigationOpen}
+      />
+      <Navigation openNavigation={openNavigation} />
       <main>
         <Outlet />
       </main>
