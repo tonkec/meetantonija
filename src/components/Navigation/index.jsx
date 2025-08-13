@@ -85,12 +85,12 @@ const Navigation = ({ openNavigation }) => {
         ) : (
           <div className="flex">
             {getNavigationLinks(navigationLinks)}
-            <span className="flex flex-y-center">
-              <BiSearch
-                fontSize={20}
-                onClick={() => openNavigation()}
-                className="pointer hidden-mobile"
-              />
+            <span
+              className="flex flex-y-center flex-gap-small pointer small-margin-left"
+              onClick={() => openNavigation()}
+            >
+              <BiSearch fontSize={20} className="pointer hidden-mobile" />
+              <span>Shift + K</span>
             </span>
           </div>
         )}
