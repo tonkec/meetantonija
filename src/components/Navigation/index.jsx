@@ -5,10 +5,9 @@ import './Navigation.scss'
 import { Link } from 'react-router-dom'
 import { useWindowSize } from '@uidotdev/usehooks'
 import MobileNavigation from './MobileNavigation'
-import { RiBriefcase2Line } from 'react-icons/ri'
 import ButtonCopy from 'components/ButtonCopy'
-import { MdLibraryBooks, MdHome } from 'react-icons/md'
 import DarkMode from 'components/DarkMode'
+import { BiHomeHeart, BiFile, BiBriefcase } from 'react-icons/bi'
 
 export const NavigationLink = ({ children, href, buttonClassName }) => {
   const activeLink = window.location.pathname
@@ -35,17 +34,17 @@ const navigationLinks = [
   {
     href: '/',
     label: 'Home',
-    icon: <MdHome fontSize={20} />,
+    icon: <BiHomeHeart fontSize={20} />,
   },
   {
     href: '/posts',
     label: 'Notes',
-    icon: <MdLibraryBooks fontSize={20} />,
+    icon: <BiFile fontSize={20} />,
   },
   {
     href: '/cv',
     label: 'CV',
-    icon: <RiBriefcase2Line fontSize={20} />,
+    icon: <BiBriefcase fontSize={20} />,
   },
 ]
 
