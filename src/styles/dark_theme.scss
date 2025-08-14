@@ -1,5 +1,6 @@
 @mixin dark-theme {
   background-color: #000;
+
   body {
     color: #fff;
     background-color: #000;
@@ -10,6 +11,10 @@
     --color-pink-light: #b5b5b5;
 
     form {
+      color: var(--color-black);
+    }
+
+    .navigation span {
       color: var(--color-black);
     }
 
@@ -28,6 +33,10 @@
 
     footer {
       background-color: var(--color-black);
+    }
+
+    .text-white {
+      color: var(--color-black);
     }
 
     .accent {
