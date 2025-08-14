@@ -13,6 +13,23 @@
       color: var(--color-black);
     }
 
+    .header-wrapper,
+    .homepage-content {
+      background-color: var(--color-black);
+    }
+
+    .pattern-black {
+      background-color: var(--color-black);
+      background-image: radial-gradient(
+        var(--color-white) 2px,
+        var(--color-black) 2px
+      );
+    }
+
+    footer {
+      background-color: var(--color-black);
+    }
+
     .accent {
       background-color: var(--color-white);
       text-shadow: 0 0 5px var(--color-white);
