@@ -8,7 +8,6 @@ import MobileNavigation from './MobileNavigation'
 import ButtonCopy from 'components/ButtonCopy'
 import DarkMode from 'components/DarkMode'
 import { BiHomeHeart, BiFile, BiBriefcase, BiSearch } from 'react-icons/bi'
-import { ImShift } from 'react-icons/im'
 
 export const NavigationLink = ({ children, href, buttonClassName }) => {
   const activeLink = window.location.pathname
