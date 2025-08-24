@@ -14,7 +14,7 @@ const ButtonCopy = ({ text, className }) => {
         }, 1000)
       }}
     >
-      {isCopied ? 'Email copied!' : text}
+      {isCopied ? 'Email is copied!' : text}
     </button>
   )
 }
