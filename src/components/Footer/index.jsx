@@ -12,7 +12,7 @@ const Footer = () => (
         <Social />
       </div>{' '}
       <p className="text-center xs-margin-bottom">
-        Coded by Antonija Šimić with lots of{' '}
+        Coded by Antonija Šimić with bunch of{' '}
         <FaHeart className="icon" color="red" /> and{' '}
         <FaCoffee color="#6F4E37" className="icon" />
       </p>
