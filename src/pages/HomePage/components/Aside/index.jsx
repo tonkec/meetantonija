@@ -20,7 +20,7 @@ const AsideContent = ({ noteContent }) => {
       <p>{noteContent.intro}</p>
       <br />
       <button
-        className="primary small-margin-top"
+        className="primary small-margin-top line-height-1"
         onClick={() => {
           navigate(`/post/${formatNoteTitle(noteContent.title)}`)
         }}

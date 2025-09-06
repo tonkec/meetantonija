@@ -17,7 +17,7 @@ const CvProject = ({ project }) => {
         <Skills buttonClass="ternary" skills={project.skills.split(',')} />
       </div>
       <button
-        className="bg-black"
+        className="bg-black line-height-1"
         onClick={() => {
           navigate(
             `/project/${removeSpacesAndDashes(project.title.toLowerCase())}`

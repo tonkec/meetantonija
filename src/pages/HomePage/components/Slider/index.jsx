@@ -39,7 +39,7 @@ const Slider = ({ items, headline }) => {
                 <p>{truncateString(project.description, 200)}</p>
 
                 <button
-                  className="primary inline-block small-margin-top"
+                  className="primary inline-block small-margin-top line-height-1"
                   onClick={() => {
                     navigate(
                       `/project/${removeSpacesAndDashes(project.title.toLowerCase())}`

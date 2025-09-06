@@ -50,7 +50,7 @@ export const SinglePost = ({ post, onClick }) => {
       )}
       <span className="flex align-start flex-gap space-between">
         <button
-          className="primary border-radius inline-block no-underline"
+          className="primary border-radius inline-block no-underline line-height-1"
           onClick={() => {
             navigate(`/post/${formatNoteTitle(currentPost.title)}`)
           }}

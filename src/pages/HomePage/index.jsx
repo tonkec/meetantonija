@@ -33,7 +33,7 @@ const SingleProject = ({ post }) => {
           onClick={() => {
             navigate(`/project/${removeSpacesAndDashes(post.data.title)}`)
           }}
-          className="primary small-margin-top"
+          className="primary small-margin-top line-height-1"
         >
           Read more 👉
         </button>
