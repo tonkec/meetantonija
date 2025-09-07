@@ -21,7 +21,7 @@ export const SinglePost = ({ post, onClick }) => {
       <span className="flex flex-y-center small-margin-bottom flex-gap-small">
         <Image
           src="https://avatars.githubusercontent.com/u/5020758?v=4"
-          style={{ width: 50, height: 50, borderRadius: '50%' }}
+          style={{ width: 40, height: 40, borderRadius: '50%' }}
         />
         <h6>
           {currentPost.author} | {currentPost.date}{' '}
