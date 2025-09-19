@@ -11,7 +11,7 @@ const ButtonCopy = ({ text, className }) => {
 
         setTimeout(() => {
           setIsCopied(false)
-        }, 1000)
+        }, 900)
       }}
     >
       {isCopied ? 'Email is copied!' : text}
