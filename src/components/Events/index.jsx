@@ -64,7 +64,7 @@ const Events = () => {
                   }}
                 >
                   <p>
-                    {event.name} @ {event.organizer}
+                    {event.name} at {event.organizer}
                   </p>
                 </span>
               ))}
