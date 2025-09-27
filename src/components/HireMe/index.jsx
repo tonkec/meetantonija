@@ -6,7 +6,7 @@ const HireMe = () => {
     <section className="small-padding">
       <div className="container text-center large-padding bg-sky-blue border-radius">
         <h3 className="no-margin text-black">
-          Do you have a project in mind? 🤔
+          Do you have a project for me? 🤔
         </h3>
         <p className="small-margin-top small-margin-bottom text-black">
           If you are interested in working with me, please get in touch via{' '}
