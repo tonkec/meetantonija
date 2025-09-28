@@ -9,7 +9,7 @@ const HireMe = () => {
           Do you have a project for me? 🤔
         </h3>
         <p className="small-margin-top small-margin-bottom text-black">
-          If you are interested in working with me, please get in touch via{' '}
+          If you are interested in working with me, please get in touch only via{' '}
           <span data-tooltip-id="email">email</span>.
         </p>
 
