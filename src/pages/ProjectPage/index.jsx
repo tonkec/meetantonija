@@ -54,7 +54,7 @@ const ProjectPage = () => {
       </header>
 
       <section>
-        <div className="container flex flex-wrap flex-gap medium-margin-bottom space-between">
+        <div className="container flex flex-wrap flex-gap medium-margin-bottom space-between medium-margin-top">
           <div>
             <div className="medium-margin-bottom">
               <h3 className="small-margin-bottom">Position 💼</h3>
@@ -118,7 +118,7 @@ const ProjectPage = () => {
         headline="✅ These were the tasks I had"
       />
 
-      <section className="bg-pink-light">
+      <section className="bg-pink-light medium-margin-top">
         <div className="container">
           <h2>
             📸{' '}
@@ -171,7 +171,10 @@ const ProjectPage = () => {
         headline="🏢 Check out other projects"
         items={projects.filter((p) => p.id !== project.id)}
       />
-      <HireMe />
+
+      <div className="medium-margin-top">
+        <HireMe />
+      </div>
     </>
   )
 }
