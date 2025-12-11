@@ -124,51 +124,6 @@ const HomePage = () => {
         </div>
 
         <FadeInSection>
-          <section className="large-margin-bottom large-margin-top">
-            <div className="container">
-              <h2>Just published Duga 💪</h2>
-
-              <div className="flex flex-gap flex-responsive">
-                <div className="flex-1">
-                  <p className="line-height-2">
-                    I built Duga using React, Typescript and React Query for a
-                    responsive, state managed frontend, and Socket.IO for real
-                    time communication. The backend runs on Node.js/Express with
-                    PostgreSQL via Sequelize, enabling instant chat,
-                    notifications, and seamless collaboration across devices.
-                  </p>
-
-                  <div className="small-margin-top flex flex-gap-small">
-                    <a
-                      href="https://github.com/tonkec/duga_frontend_v2"
-                      className="primary"
-                      role="button"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      View source
-                    </a>
-                    <a
-                      href="https://staging--dugaprod.netlify.app/"
-                      className="outlined"
-                      role="button"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Open Demo
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex-1">
-                  <Image src={Duga} style={{ width: '100%' }} />
-                </div>
-              </div>
-            </div>
-          </section>
-        </FadeInSection>
-
-        <FadeInSection>
           <MarqueeText baseVelocity={-0.5}>React developer</MarqueeText>
           <MarqueeText baseVelocity={0.5}>10 years of experience</MarqueeText>
         </FadeInSection>
