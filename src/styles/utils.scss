@@ -305,11 +305,6 @@
   color: var(--color-white);
 }
 
-.bg-rose {
-  background-color: var(--color-rose);
-  color: var(--color-white);
-}
-
 .bg-pink-dark {
   background-color: var(--color-pink-dark);
   color: var(--color-white);
@@ -318,6 +313,10 @@
 .bg-pink-light {
   background-color: var(--color-pink-light);
   color: var(--color-black);
+}
+
+.bg-gray {
+  background-color: #f5f5f5;
 }
 
 .bg-purple {

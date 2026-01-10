@@ -86,7 +86,7 @@ const PostsPage = () => {
         <input
           type="text"
           placeholder={`Search ${posts.length} notes by their title`}
-          className="small-margin-top small-margin-bottom w-full border-radius xs-padding"
+          className="small-margin-top small-margin-bottom w-full border-radius xs-padding border-none bg-gray"
           onChange={(e) => {
             setSearch(e.target.value)
             setQueryParams({ search: e.target.value })
