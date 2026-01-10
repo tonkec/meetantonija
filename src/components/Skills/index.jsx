@@ -4,7 +4,7 @@ import { removeSpacesAndDashes } from 'utils'
 const Skills = ({ skills, buttonClass }) => {
   const navigate = useNavigate()
   return (
-    <div className="flex flex-gap-small no-padding-left flex-wrap">
+    <div className="flex flex-gap-small no-padding-left flex-wrap max-w-400">
       {skills.map((s) => (
         <button
           key={s}
