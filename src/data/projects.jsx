@@ -351,7 +351,7 @@ const projects = [
     title: 'Funder Pro',
     methodology: 'Kanban',
     headline: 'Make your trading exceptional',
-    skills: 'Javascript, React, Redux, Typescript, React Query, Zod',
+    skills: 'Javascript, React, Typescript, React Query, Zod',
     link: 'https://prop.funderpro.com/',
     responsibilities: [
       {
