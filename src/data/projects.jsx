@@ -387,7 +387,7 @@ const projects = [
     ],
     collaboration: 'Jira, Slack, Gitlab, Google Meet, Notion',
     learned:
-      'I learned how to work with React Query, which was a new library for me. Working with Mochalabs improved my Typescript skills, I learned about new features and how to use them efficiently.',
+      'I learned how to work with React Query, which was a new library for me. Working with Funderpro improved my Typescript skills, I learned about new features and how to use them efficiently.',
     position: 'Senior React Developer',
     team: 100,
     conclusion:

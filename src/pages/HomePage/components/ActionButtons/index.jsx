@@ -11,7 +11,7 @@ const ActionButtons = () => {
       className={
         isExtraSmall
           ? 'block medium-margin-top'
-          : 'flex flex-gap-small medium-margin-top'
+          : 'flex flex-gap-small small-margin-top'
       }
     >
       <ButtonCopy
