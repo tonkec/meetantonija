@@ -12,7 +12,6 @@ import { useNavigate } from 'react-router-dom'
 import Image from 'components/Image'
 import MarqueeText from 'components/MarqueeText'
 import FadeInSection from 'components/FadeInSection'
-import Duga from './remove_me.png'
 import HireMe from 'components/HireMe'
 import Events from 'components/Events'
 import { getValuesAndProperties } from 'utils'
@@ -43,6 +42,13 @@ const SingleProject = ({ post }) => {
 }
 
 const testimonials = [
+  {
+    content:
+      'You’re honestly one of the best devs i’ve ever worked with, not just for your coding skills but for your attitude, mindset, and how you always worked proactively and responsibly towards us as a team, the client, and the overall quality of what we deliver.',
+    author: 'Joanna Azzi',
+    project: 'Funderpro',
+    avatar: rootImageUrl + 'testimonials/joanna.jpeg',
+  },
   {
     content:
       "Antonija is a superb developer. She is detail focused and she helped us make a superb educational product. She is a pleasure to work with. I'd highly recommend her.",
