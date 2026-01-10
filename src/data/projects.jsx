@@ -343,7 +343,11 @@ const projects = [
   },
   {
     coverPhoto: rootImageUrl + 'funderpro/tokens.jpg',
-    photos: [rootImageUrl + 'funderpro/2.png'],
+    photos: [
+      rootImageUrl + 'funderpro/1.png',
+      rootImageUrl + 'funderpro/2.png',
+      rootImageUrl + 'funderpro/3.png',
+    ],
     location: 'Zagreb',
     from: 2023,
     company: 'Mochalabs',
