@@ -11,9 +11,9 @@ const projects = [
     photos: [modeMobilePhoto],
     location: 'Remote',
     company: 'Mode Mobile',
-    title: 'Mode Mobile',
-    headline: 'Mobile-first product development',
-    skills: 'React, Typescript, Mobile UI, Frontend Architecture',
+    title: 'Trimbox',
+    headline: 'Trim your inbox with ease',
+    skills: 'React, Typescript, Expo, React Native, Firebase',
     link: 'https://www.modemobile.com/',
     id: 11,
     description:
