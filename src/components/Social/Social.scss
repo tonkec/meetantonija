@@ -1,13 +1,27 @@
 @import './../../styles/transitions.scss';
 
 .icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
   a {
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid rgba(85, 65, 72, 0.24);
+    border-radius: 999px;
     color: var(--color-black);
-    @include transition((transform, color));
+    display: inline-flex;
+    gap: 0.55rem;
+    padding: 0.55rem 0.85rem;
+    text-decoration: none;
+    @include transition((transform, color, background-color, box-shadow));
   }
 
   a:hover {
+    background-color: var(--color-pink-light);
+    box-shadow: none;
     color: var(--color-pink);
-    transform: translateY(-5px);
+    transform: translateY(-2px);
   }
 }

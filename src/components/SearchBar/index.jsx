@@ -16,12 +16,14 @@ const SearchResults = ({ searchResults }) => {
 }
 
 const NavigationButton = ({ onClick, value }) => (
-  <input
-    className="block w-full text-left active navigation-button pointer"
+  <button
+    className="navigation-button"
     onClick={onClick}
-    type="submit"
-    value={value}
-  />
+    type="button"
+  >
+    <span>{value.split(':')[0]}</span>
+    <strong>{value.split(':').slice(1).join(':').trim()}</strong>
+  </button>
 )
 
 const SearchBar = ({
@@ -223,28 +225,31 @@ const SearchBar = ({
   return (
     <FocusTrap active>
       <div className="search-container show">
-        <form onSubmit={onSubmit} className="relative">
-          <input
-            type="text"
-            placeholder="Search pages, notes or projects by their title"
-            onChange={(event) => {
-              setSearch(event.target.value)
-            }}
-            value={search}
-            className="bg-white"
-          />
+        <form onSubmit={onSubmit} className="search-card">
+          <div className="search-card-header">
+            <p className="section-kicker">Quick search</p>
+            <span>Shift + K</span>
+          </div>
+          <div className="search-input-wrapper">
+            <input
+              type="text"
+              placeholder="Search pages, notes or projects"
+              onChange={(event) => {
+                setSearch(event.target.value)
+              }}
+              value={search}
+              autoFocus
+            />
 
-          <FaKeyboard
-            className="keyboard-icon absolute"
-            fontSize="2rem"
-            style={{ marginTop: '-7px' }}
-          />
+            <FaKeyboard className="keyboard-icon" fontSize="1.8rem" />
+          </div>
           <SearchResults
             searchResults={searchedResults.length ? searchedResults : allRoutes}
           />
           <button
+            type="button"
             onClick={closeNavigation}
-            className="primary w-full no-border-radius border-bottom-left-radius border-bottom-right-radius"
+            className="search-close"
           >
             Close
           </button>

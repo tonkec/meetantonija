@@ -1,31 +1,33 @@
 import { Tooltip } from 'react-tooltip'
 import ButtonCopy from 'components/ButtonCopy'
+import './HireMe.scss'
 
 const HireMe = () => {
   return (
-    <section className="small-padding">
-      <div className="container text-center large-padding bg-sky-blue border-radius">
-        <h3 className="no-margin text-black">
-          Do you have a project for me? 🤔
-        </h3>
-        <p className="small-margin-top small-margin-bottom text-black">
-          If you are interested in working with me, please get in touch only via{' '}
-          <span data-tooltip-id="email">email</span>.
-        </p>
+    <section className="hire-me-section">
+      <div className="container">
+        <div className="hire-me-card">
+          <p className="section-kicker">Let&apos;s work together</p>
+          <h2>Have a React project that needs a careful frontend eye?</h2>
+          <p>
+            Send me a short note by <span data-tooltip-id="email">email</span>.
+            I&apos;ll reply with next steps if it sounds like a good fit.
+          </p>
 
-        <Tooltip
-          id="email"
-          style={{
-            backgroundColor: 'var(--color-white)',
-            maxWidth: '400px',
-            color: 'var(--color-black)',
-          }}
-        >
-          Email is the best way to reach me, no phone calls please 🙏
-        </Tooltip>
+          <Tooltip
+            id="email"
+            style={{
+              backgroundColor: 'var(--color-white)',
+              maxWidth: '400px',
+              color: 'var(--color-black)',
+            }}
+          >
+            Email is the best way to reach me, no phone calls please 🙏
+          </Tooltip>
 
-        <div className="small-margin-top">
-          <ButtonCopy text="Get in Touch" />
+          <div className="hire-me-action">
+            <ButtonCopy text="Get in Touch" />
+          </div>
         </div>
       </div>
     </section>

@@ -99,6 +99,7 @@
   border: 2px solid var(--color-black);
   border-radius: calc(var(--border-radius) * 4);
   box-shadow: 8px 8px 0 var(--color-black);
+  color: var(--color-black);
   padding: clamp(1rem, 3vw, 1.7rem);
 
   span {

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import { ThreeDots } from 'react-loader-spinner'
 import Image from 'components/Image'
+import './Events.scss'
 
 const speakingEvents = [
   {
@@ -40,52 +41,48 @@ const speakingEvents = [
 const Events = () => {
   const [event, setEvent] = useState(speakingEvents[0])
 
-  const speakingEventsSorted = speakingEvents.sort((a, b) => b.year - a.year)
+  const speakingEventsSorted = [...speakingEvents].sort((a, b) => b.year - a.year)
   const [activeIndex, setActiveIndex] = useState(0)
   return (
-    <section className="large-padding-bottom large-margin-top">
-      <div className="container">
-        <h2>🎤 I share my knowledge:</h2>
+    <section className="events-section">
+      <div className="container events-container">
+        <div className="events-heading">
+          <p className="section-kicker">Talks and mentoring</p>
+          <h2>I share what I learn.</h2>
+        </div>
 
         {event ? (
-          <div className="flex flex-responsive flex-gap space-between">
-            <div className="flex-1">
+          <div className="events-layout">
+            <div className="events-list">
               {speakingEventsSorted.map((event, index) => (
-                <span
+                <button
                   key={index}
-                  className={`xs-margin-bottom xs-padding border-radius pointer block ${
-                    index === activeIndex
-                      ? 'bg-pink text-white'
-                      : 'bg-pink-light'
-                  }`}
+                  type="button"
+                  className={`event-button ${index === activeIndex ? 'active' : ''}`}
                   onClick={() => {
                     setEvent(event)
                     setActiveIndex(index)
                   }}
                 >
-                  <p>
-                    {event.name} at {event.organizer}
-                  </p>
-                </span>
+                  <span>{event.year}</span>
+                  <strong>{event.name}</strong>
+                  <small>{event.organizer}</small>
+                </button>
               ))}
             </div>
-            <div className="flex-1 bg-pink-light small-padding border-radius max-w-400">
-              <div className="flex small-margin-bottom flex-y-center flex-gap-small">
-                <p>
-                  {event.organizer}, {event.year} in {event.location}{' '}
-                  <a
-                    className="text-black normal-font"
-                    href={event.link}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaExternalLinkAlt fontSize="1rem" />{' '}
-                  </a>
-                </p>
+            <article className="event-card">
+              <div className="event-meta">
+                <span>
+                  {event.organizer}, {event.location}
+                </span>
+                <a href={event.link} target="_blank" rel="noreferrer">
+                  View event <FaExternalLinkAlt fontSize="0.85rem" />
+                </a>
               </div>
               <Image src={event.photo} alt={event.name} className="w-full" />
-              <p className="small-margin-top">{event.content}</p>
-            </div>
+              <h3>{event.name}</h3>
+              <p>{event.content}</p>
+            </article>
           </div>
         ) : (
           <div className="loader">

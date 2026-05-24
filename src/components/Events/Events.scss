@@ -1,0 +1,130 @@
+@import '../../styles/mq.scss';
+@import '../../styles/transitions.scss';
+
+.events-section {
+  background-color: var(--color-white);
+  padding: 5rem 0;
+}
+
+.events-heading {
+  max-width: 700px;
+
+  h2 {
+    font-size: clamp(2.2rem, 5vw, 4.8rem);
+    letter-spacing: -0.07em;
+    line-height: 1;
+    padding: 0;
+  }
+}
+
+.events-layout {
+  align-items: start;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+
+  @include breakpoint(lg) {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+  }
+}
+
+.events-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.event-button {
+  @include transition((transform, background-color, box-shadow, color));
+  background-color: var(--color-pink-light);
+  border: 2px solid var(--color-black);
+  border-radius: calc(var(--border-radius) * 4);
+  box-shadow: 6px 6px 0 transparent;
+  color: var(--color-black);
+  display: grid;
+  gap: 0.45rem;
+  padding: 1rem;
+  text-align: left;
+  width: 100%;
+
+  &:hover,
+  &:focus,
+  &.active {
+    background-color: var(--color-pink);
+    box-shadow: 8px 8px 0 var(--color-black);
+    color: var(--color-white);
+    transform: translate(-4px, -4px);
+  }
+
+  span,
+  strong,
+  small {
+    display: block;
+  }
+
+  span,
+  small {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  strong {
+    font-size: clamp(1.1rem, 3vw, 1.45rem);
+    line-height: 1.2;
+  }
+}
+
+.event-card {
+  background-color: var(--color-pink-light);
+  border: 2px solid var(--color-black);
+  border-radius: calc(var(--border-radius) * 4);
+  box-shadow: 10px 10px 0 var(--color-sky-blue);
+  padding: clamp(1rem, 3vw, 1.5rem);
+
+  img {
+    border: 2px solid var(--color-black);
+    margin: 1rem 0;
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    line-height: 1.1;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    line-height: 1.75;
+  }
+}
+
+.event-meta {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+
+  span,
+  a {
+    font-size: 0.8rem;
+  }
+
+  a {
+    align-items: center;
+    color: var(--color-black);
+    display: inline-flex;
+    gap: 0.35rem;
+    white-space: nowrap;
+  }
+}
+
+@include breakpoint(md, max) {
+  .events-section {
+    padding: 3.5rem 0;
+  }
+
+  .event-meta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

@@ -135,6 +135,56 @@
     .text-black {
       color: var(--color-white);
     }
+
+    .hero-card-note,
+    .hero-floating-card,
+    .aside-section aside,
+    .tutorial-card,
+    .hire-me-card,
+    .project-tldr-grid article {
+      color: var(--color-white);
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      span,
+      strong,
+      a {
+        color: var(--color-white);
+      }
+    }
+
+    .tutorial-copy p {
+      color: var(--color-white);
+    }
+
+    .hero-card,
+    .service-card,
+    .project-hero-card,
+    .cv-actions-card {
+      color: var(--color-black);
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      span,
+      strong {
+        color: var(--color-black);
+      }
+    }
+
+    .aside-section .note-close {
+      background-color: var(--color-white);
+      color: var(--color-black);
+    }
   }
 }
 

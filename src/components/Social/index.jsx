@@ -13,14 +13,13 @@ const socialLinks = [
 ]
 const Social = () => {
   return (
-    <div className="flex flex-gap icons flex-responsive">
+    <div className="icons">
       {socialLinks.map((icon, index) => (
         <a
           key={index}
           href={icon.href}
           target="_blank"
           rel="noreferrer"
-          className="flex flex-y-center flex-gap-small no-underline"
         >
           <icon.icon fontSize="2.5rem" /> <span>{icon.name}</span>
         </a>

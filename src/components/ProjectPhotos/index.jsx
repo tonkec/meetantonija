@@ -2,10 +2,10 @@ import Image from 'components/Image'
 
 const ProjectPhotos = ({ project }) => {
   return (
-    <div className="flex flex-gap flex-wrap">
+    <div className="project-photos-grid">
       {project.photos.map((photo, index) => (
-        <div className="small-margin-bottom">
-          <Image key={index} src={photo} alt={project.title} />
+        <div key={photo} className="project-photo-card">
+          <Image src={photo} alt={`${project.title} screenshot ${index + 1}`} />
         </div>
       ))}
     </div>

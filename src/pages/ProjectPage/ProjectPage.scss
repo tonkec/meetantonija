@@ -1,0 +1,317 @@
+@import '../../styles/mq.scss';
+@import '../../styles/transitions.scss';
+
+.project-hero {
+  background:
+    radial-gradient(circle at 12% 16%, rgba(249, 0, 147, 0.16), transparent 24rem),
+    radial-gradient(circle at 88% 20%, rgba(169, 228, 255, 0.65), transparent 24rem),
+    linear-gradient(135deg, var(--color-white) 0%, var(--color-pink-light) 100%);
+  padding: 9rem 0 5rem;
+}
+
+.project-hero-grid {
+  align-items: end;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+
+  @include breakpoint(lg) {
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  }
+}
+
+.project-hero-copy {
+  h1 {
+    font-size: clamp(3.2rem, 9vw, 7.2rem);
+    letter-spacing: -0.09em;
+    line-height: 0.9;
+    padding: 0;
+  }
+
+  p:not(.section-kicker) {
+    font-size: clamp(1.1rem, 3vw, 1.6rem);
+    line-height: 1.5;
+    margin-top: 1rem;
+    max-width: 720px;
+  }
+}
+
+.project-hero-card {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-black);
+  border-radius: calc(var(--border-radius) * 5);
+  box-shadow: 12px 12px 0 var(--color-pink);
+  color: var(--color-black);
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1.2rem, 3vw, 1.8rem);
+
+  span,
+  strong {
+    display: block;
+  }
+
+  span {
+    color: var(--color-pink);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  strong {
+    font-size: clamp(1.5rem, 4vw, 2.4rem);
+    line-height: 1.1;
+  }
+
+  button {
+    justify-self: start;
+  }
+}
+
+.project-overview,
+.project-description,
+.project-gallery,
+.project-tldr {
+  background-color: var(--color-white);
+  padding: 5rem 0;
+}
+
+.project-overview-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+
+  @include breakpoint(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  article {
+    background-color: var(--color-pink-light);
+    border: 2px solid var(--color-black);
+    border-radius: calc(var(--border-radius) * 4);
+    box-shadow: 8px 8px 0 var(--color-sky-blue);
+    color: var(--color-black);
+    display: grid;
+    gap: 1.4rem;
+    padding: 1.2rem;
+  }
+
+  article > span {
+    color: var(--color-pink);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 0.35rem;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+}
+
+.project-description-card {
+  background-color: var(--color-black);
+  border-radius: calc(var(--border-radius) * 5);
+  color: var(--color-white);
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+
+  .section-kicker {
+    color: var(--color-sky-blue);
+  }
+
+  h2 {
+    font-size: clamp(2.2rem, 5vw, 4.8rem);
+    letter-spacing: -0.08em;
+    line-height: 1;
+    padding: 0;
+  }
+
+  p:not(.section-kicker) {
+    line-height: 1.9;
+    margin-top: 1.5rem;
+    max-width: 1000px;
+  }
+}
+
+.project-gallery {
+  background-color: var(--color-pink-light);
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 4.2rem);
+    letter-spacing: -0.07em;
+    line-height: 1;
+    padding: 0 0 2rem;
+  }
+}
+
+.project-tldr {
+  background-color: var(--color-white);
+
+  h2 {
+    font-size: clamp(2.2rem, 5vw, 4.8rem);
+    letter-spacing: -0.08em;
+    line-height: 1;
+    padding: 0;
+  }
+}
+
+.project-tldr-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  article {
+    background-color: var(--color-sky-blue);
+    border: 2px solid var(--color-black);
+    border-radius: calc(var(--border-radius) * 4);
+    box-shadow: 8px 8px 0 var(--color-black);
+    color: var(--color-black);
+    padding: 1.2rem;
+  }
+
+  h3 {
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    line-height: 1.15;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    line-height: 1.75;
+  }
+
+  a {
+    color: var(--color-black);
+  }
+}
+
+.project-steps,
+.project-slider-section {
+  background-color: var(--color-white);
+  padding: 5rem 0;
+
+  h2 {
+    font-size: clamp(2.2rem, 5vw, 4.8rem);
+    letter-spacing: -0.08em;
+    line-height: 1;
+    padding: 0 0 2rem;
+  }
+}
+
+.project-steps-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-step-card {
+  background-color: var(--color-pink-light);
+  border: 2px solid var(--color-black);
+  border-radius: calc(var(--border-radius) * 4);
+  box-shadow: 8px 8px 0 var(--color-sky-blue);
+  color: var(--color-black);
+  padding: 1.2rem;
+
+  span {
+    color: var(--color-pink);
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    line-height: 1.15;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    line-height: 1.75;
+  }
+}
+
+.project-photos-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-photo-card {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-black);
+  border-radius: calc(var(--border-radius) * 4);
+  box-shadow: 8px 8px 0 var(--color-black);
+  overflow: hidden;
+  padding: 0.6rem;
+}
+
+.project-slide {
+  background-color: var(--color-pink-light);
+  border: 2px solid var(--color-black);
+  border-radius: calc(var(--border-radius) * 4);
+  color: var(--color-black);
+  display: grid;
+  gap: 1rem;
+  padding: 1.3rem;
+
+  > span {
+    color: var(--color-pink);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    line-height: 1;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+
+  button {
+    justify-self: start;
+  }
+}
+
+@include breakpoint(md, max) {
+  .project-hero {
+    padding: 7rem 0 3.5rem;
+  }
+
+  .project-overview,
+  .project-description,
+  .project-gallery,
+  .project-tldr,
+  .project-steps,
+  .project-slider-section {
+    padding: 3.5rem 0;
+  }
+}

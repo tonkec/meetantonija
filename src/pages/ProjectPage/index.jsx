@@ -8,6 +8,7 @@ import Skills from 'components/Skills'
 import { Helmet } from 'react-helmet'
 import ProjectPhotos from 'components/ProjectPhotos'
 import RecordNotFound from 'components/RecordNotFound'
+import './ProjectPage.scss'
 
 const getTeamSize = (team) => {
   if (team <= 1) {
@@ -36,80 +37,86 @@ const ProjectPage = () => {
       <Helmet>
         <title>Meetantonija | {project.title}</title>
       </Helmet>
-      <header className="header-padding-top bg-pink header-padding-bottom">
-        <div className="container">
-          <div className="text-center">
+      <header className="project-hero">
+        <div className="container project-hero-grid">
+          <div className="project-hero-copy">
+            <p className="section-kicker">Project case study</p>
             <h1>{project.title}</h1>
             <p>{project.headline}</p>
+          </div>
+          <div className="project-hero-card">
+            <span>{project.position}</span>
+            <strong>
+              {project.from} - {project.to || 'Present'}
+            </strong>
             <button
-              className="button ternary inline-block medium-margin-top"
-              onClick={() => {
-                scrollToTheElement('tldr')
-              }}
+              className="primary"
+              onClick={() => scrollToTheElement('tldr')}
             >
-              <span>Skip to TLDR</span> <span>👇</span>
+              Skip to TLDR
             </button>
           </div>
         </div>
       </header>
 
-      <section>
-        <div className="container flex flex-wrap flex-gap medium-margin-bottom space-between medium-margin-top">
-          <div>
-            <div className="medium-margin-bottom">
-              <h3 className="small-margin-bottom">Position 💼</h3>
+      <section className="project-overview">
+        <div className="container project-overview-grid">
+          <article>
+            <span>Role</span>
+            <div>
+              <h3>Position</h3>
               <p>{project.position}</p>
             </div>
-
             <div>
-              <h3 className="small-margin-bottom"> Years 🗓️</h3>
+              <h3>Timeline</h3>
               <p>
                 {project.from} - {project.to || 'Present'}
               </p>
             </div>
-          </div>
+          </article>
 
-          <div>
-            <div className="medium-margin-bottom">
-              <h3 className="small-margin-bottom"> Link 🌐</h3>
+          <article>
+            <span>Stack</span>
+            <div>
+              <h3>Website</h3>
               <a
                 href={project.link}
                 target="_blank"
                 rel="noreferrer"
                 role="button"
-                className="ternary inline-block"
+                className="outlined inline-block"
               >
                 Open website
               </a>
             </div>
-
-            <div className="flex-1">
-              <h3 className="small-margin-bottom"> Technologies 🚀</h3>
+            <div>
+              <h3>Technologies</h3>
               <Skills
-                buttonClass="ternary"
+                buttonClass="outlined"
                 skills={project.skills.split(',')}
               />
             </div>
-          </div>
+          </article>
 
-          <div>
-            <div className="medium-margin-bottom">
-              <h3 className="small-margin-bottom">Methodology 👩‍🏫</h3>
+          <article>
+            <span>Team</span>
+            <div>
+              <h3>Methodology</h3>
               <p>{project.methodology}</p>
             </div>
-
             <div>
-              <h3 className="small-margin-bottom">Team 👨‍👩‍👧‍👦</h3>
+              <h3>Team size</h3>
               <p>{getTeamSize(project.team)}</p>
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
-      <section>
-        <div className="container">
-          <h3 className="small-margin-bottom">Description</h3>
-          <p className="max-w-1000">{project.description}</p>
+      <section className="project-description">
+        <div className="container project-description-card">
+          <p className="section-kicker">Context</p>
+          <h2>What this project was about.</h2>
+          <p>{project.description}</p>
         </div>
       </section>
 
@@ -118,10 +125,10 @@ const ProjectPage = () => {
         headline="✅ These were the tasks I had"
       />
 
-      <section className="bg-pink-light medium-margin-top">
+      <section className="project-gallery">
         <div className="container">
+          <p className="section-kicker">Product snapshots</p>
           <h2>
-            📸{' '}
             {project.photos.length > 1
               ? 'Here are some photos of the app'
               : 'Here is a photo of the app'}
@@ -132,37 +139,27 @@ const ProjectPage = () => {
         </div>
       </section>
 
-      <section className="bg-sky-blue small-padding" id="tldr">
+      <section className="project-tldr" id="tldr">
         <div className="container">
-          <h2 className="text-black">🤔 Having some questions? </h2>
-        </div>
-
-        <div className="container">
-          <div className="flex flex-gap flex-responsive">
-            <div className="flex-1">
-              <h4 className="text-black">What did I learn in this project?</h4>
-              <p className="text-black">{project.learned}</p>
-            </div>
-            <div className="flex-1">
-              <h4 className="text-black">What was the most difficult part?</h4>
-              <p className="text-black">{project.problem}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-sky-blue small-padding">
-        <div className="container">
-          <div className="flex flex-gap flex-responsive">
-            <div className="flex-1">
-              <h4 className="text-black">Who was my manager?</h4>
-              <p className="text-black">{project.manager}</p>
-            </div>
-
-            <div className="medium-margin-bottom flex-1">
-              <h4 className="text-black">TL;DR</h4>
-              <p className="text-black">{project.conclusion}</p>
-            </div>
+          <p className="section-kicker">TLDR</p>
+          <h2>What mattered most.</h2>
+          <div className="project-tldr-grid">
+            <article>
+              <h3>What I learned</h3>
+              <p>{project.learned}</p>
+            </article>
+            <article>
+              <h3>Hardest part</h3>
+              <p>{project.problem}</p>
+            </article>
+            <article>
+              <h3>Manager</h3>
+              <p>{project.manager}</p>
+            </article>
+            <article>
+              <h3>Conclusion</h3>
+              <p>{project.conclusion}</p>
+            </article>
           </div>
         </div>
       </section>

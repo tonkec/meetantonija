@@ -1,18 +1,63 @@
 @import '../../styles/mq.scss';
 
 footer {
-  padding-bottom: 100px;
-  padding-top: 200px;
+  padding: 1rem 0 4rem;
   background-color: var(--color-white);
   color: var(--color-black);
   position: relative;
   z-index: 9;
+}
+
+.footer-shell {
+  border-top: 2px solid rgba(85, 65, 72, 0.16);
+  display: grid;
+  gap: 1.5rem;
+  padding-top: 2rem;
+}
+
+.footer-brand {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+
+  img,
+  svg {
+    max-width: 82px;
+  }
+}
+
+.footer-content {
+  align-items: end;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+
+  @include breakpoint(md) {
+    grid-template-columns: 1fr auto;
+  }
 
   p {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
 
-    .icon {
-      vertical-align: middle;
+    @include breakpoint(md) {
+      text-align: right;
     }
+  }
+
+  .icon {
+    vertical-align: middle;
+  }
+}
+
+.footer-logo-link {
+  color: var(--color-black);
+  display: inline-block;
+  justify-self: start;
+}
+
+@include breakpoint(md, max) {
+  footer {
+    padding-bottom: 3rem;
   }
 }

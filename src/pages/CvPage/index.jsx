@@ -7,10 +7,11 @@ import cv from 'files/cv.pdf'
 import { Helmet } from 'react-helmet'
 import Timeline from './components/Timeline'
 import { FaDownload } from 'react-icons/fa'
+import './CvPage.scss'
 
 const CvProjectWrapper = ({ project, index, entry }) => {
   return (
-    <div className="flex flex-responsive-reverse flex-gap">
+    <div className="cv-entry-row">
       <CvProject key={project.id} project={project} />
       {index > 0 ? null : <Timeline start={entry} />}
     </div>
@@ -73,7 +74,7 @@ const CvPage = () => {
   const skill = searchParams.get('skill')
   const start = searchParams.get('start')
 
-  const sortedProjects = projects.sort((a, b) => b.from - a.from)
+  const sortedProjects = [...projects].sort((a, b) => b.from - a.from)
 
   const groupByStartYear = sortedProjects.reduce((acc, project) => {
     if (!acc[project.from]) {
@@ -90,23 +91,31 @@ const CvPage = () => {
       <Helmet>
         <title>Meetantonija | My CV</title>
       </Helmet>
-      <header className="container header-padding-top header-padding-bottom">
-        <div>
-          <h1 className="small-margin-bottom">Work history</h1>
+      <header className="cv-hero">
+        <div className="container cv-hero-grid">
           <div>
+            <p className="section-kicker">CV</p>
+            <h1>Work history shaped by frontend craft.</h1>
+            <p>
+              A timeline of the teams, products and technologies I have worked
+              with across React, TypeScript, Angular and product UI delivery.
+            </p>
+          </div>
+
+          <div className="cv-actions-card">
             <Link
               to={cv}
               target="_blank"
               download="antonija_simic_cv"
               role="button"
-              className="dark inline-block"
+              className="primary"
             >
-              <span> Download CV</span> <FaDownload />
+              <span>Download CV</span> <FaDownload />
             </Link>
 
             {shouldShowResetButton && (
               <button
-                className="ternary block small-margin-top"
+                className="outlined"
                 onClick={() => {
                   setSearchParams({})
                 }}
@@ -117,12 +126,25 @@ const CvPage = () => {
           </div>
         </div>
       </header>
-      <section className="container">
-        {start
-          ? filteredByStart(groupByStartYear, start)
-          : skill
-            ? filteredBySkill(groupByStartYear, skill)
-            : reversedProjects(groupByStartYear)}
+      <section className="cv-history">
+        <div className="container">
+          <div className="cv-filter-summary">
+            <span>
+              {start
+                ? `Showing projects from ${start}`
+                : skill
+                  ? `Showing projects using ${skill}`
+                  : 'Showing all projects'}
+            </span>
+          </div>
+          <div className="cv-history-list">
+            {start
+              ? filteredByStart(groupByStartYear, start)
+              : skill
+                ? filteredBySkill(groupByStartYear, skill)
+                : reversedProjects(groupByStartYear)}
+          </div>
+        </div>
       </section>
     </>
   )

@@ -2,10 +2,7 @@
 @import '../../../../styles/transitions.scss';
 
 .code-lab-section {
-  background:
-    radial-gradient(circle at 10% 15%, rgba(169, 228, 255, 0.8), transparent 22rem),
-    radial-gradient(circle at 86% 8%, rgba(249, 0, 147, 0.13), transparent 24rem),
-    var(--color-white);
+  background-color: var(--color-white);
   padding: 5rem 0;
 }
 

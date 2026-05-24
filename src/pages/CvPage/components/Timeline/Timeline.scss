@@ -1,9 +1,54 @@
 @import '../../../../styles/transitions.scss';
+@import '../../../../styles/mq.scss';
 
 .timeline {
-  opacity: 0.2;
-  @include transition(opacity);
-  &:hover {
-    opacity: 1;
+  align-self: stretch;
+  position: relative;
+
+  &::before {
+    background-color: var(--color-black);
+    bottom: -1rem;
+    content: '';
+    left: 50%;
+    opacity: 0.18;
+    position: absolute;
+    top: 4rem;
+    width: 2px;
+  }
+
+  button {
+    @include transition((transform, background-color, color));
+    background-color: var(--color-black);
+    border: 2px solid var(--color-black);
+    border-radius: 999px;
+    color: var(--color-white);
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 700;
+    line-height: 1;
+    padding: 0.8rem 1rem;
+    position: sticky;
+    top: 6rem;
+    z-index: 2;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-pink);
+      color: var(--color-white);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+@include breakpoint(lg, max) {
+  .timeline {
+    order: -1;
+
+    &::before {
+      display: none;
+    }
+
+    button {
+      position: static;
+    }
   }
 }

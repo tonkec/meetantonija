@@ -1,24 +1,22 @@
 import { FaHeart, FaCoffee } from 'react-icons/fa'
 import Social from 'components/Social'
-import Logo from 'components/Logo'
 import './Footer.scss'
 import Emoji from 'components/Emoji'
 
 const Footer = () => (
   <footer>
-    <div className="container">
-      <Emoji />
-      <div className="flex flex-x-center small-margin-bottom medium-margin-top">
+    <div className="container footer-shell">
+      <div className="footer-brand">
+        <Emoji />
+      </div>
+
+      <div className="footer-content">
         <Social />
-      </div>{' '}
-      <p className="text-center xs-margin-bottom">
-        Coded by Antonija Šimić with bunch of{' '}
-        <FaHeart className="icon" color="red" /> and{' '}
-        <FaCoffee color="#6F4E37" className="icon" />
-      </p>
-      <a href="/" className="text-black font-normal">
-        <Logo />
-      </a>
+        <p>
+          Coded by Antonija Šimić with <FaHeart className="icon" color="red" />{' '}
+          and <FaCoffee color="#6F4E37" className="icon" />.
+        </p>
+      </div>
     </div>
   </footer>
 )

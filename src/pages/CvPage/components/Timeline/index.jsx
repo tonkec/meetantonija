@@ -4,16 +4,16 @@ import { useSearchParams } from 'react-router-dom'
 const Timeline = ({ start }) => {
   const [, setSearchParams] = useSearchParams()
   return (
-    <section className="container">
-      <h1
-        className="timeline pointer"
+    <aside className="timeline">
+      <button
+        type="button"
         onClick={() => {
           setSearchParams({ start })
         }}
       >
         {start}
-      </h1>
-    </section>
+      </button>
+    </aside>
   )
 }
 
