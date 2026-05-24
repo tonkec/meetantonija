@@ -1,0 +1,196 @@
+@import '../../styles/mq.scss';
+
+.homepage-content {
+  background-color: var(--color-white);
+  position: relative;
+  z-index: 9;
+}
+
+.home-section {
+  padding: 5rem 0;
+}
+
+.section-kicker {
+  color: var(--color-pink);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.about-section {
+  background-color: var(--color-white);
+}
+
+.about-grid {
+  align-items: start;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+
+  @include breakpoint(lg) {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 4.8rem);
+    letter-spacing: -0.07em;
+    line-height: 1;
+    padding: 0;
+  }
+}
+
+.about-card {
+  background-color: var(--color-pink-light);
+  border: 2px solid var(--color-black);
+  border-radius: calc(var(--border-radius) * 4);
+  box-shadow: 12px 12px 0 var(--color-sky-blue);
+  display: grid;
+  gap: 1.25rem;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+
+  p {
+    line-height: 1.85;
+  }
+}
+
+.services-section {
+  background:
+    linear-gradient(90deg, rgba(249, 0, 147, 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(249, 0, 147, 0.08) 1px, transparent 1px),
+    var(--color-pink-light);
+  background-size: 44px 44px;
+}
+
+.services-header {
+  align-items: end;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  margin-bottom: 2rem;
+
+  @include breakpoint(lg) {
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  }
+
+  h2 {
+    max-width: 780px;
+    padding: 0;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+}
+
+.service-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-black);
+  border-radius: calc(var(--border-radius) * 4);
+  box-shadow: 8px 8px 0 var(--color-black);
+  padding: clamp(1rem, 3vw, 1.7rem);
+
+  span {
+    color: var(--color-pink);
+    display: block;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.45rem;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    line-height: 1.75;
+  }
+}
+
+.featured-project-card {
+  align-items: stretch;
+  background-color: var(--color-black);
+  border-radius: calc(var(--border-radius) * 5);
+  color: var(--color-white);
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
+
+  @include breakpoint(lg) {
+    grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+  }
+
+  .isBackgroundImage {
+    border: 2px solid var(--color-white);
+    height: 320px;
+    max-height: none;
+
+    @include breakpoint(lg) {
+      height: 100%;
+      min-height: 420px;
+    }
+  }
+}
+
+.featured-project-copy {
+  align-self: center;
+  padding: clamp(0.5rem, 3vw, 2rem);
+
+  .section-kicker {
+    color: var(--color-sky-blue);
+  }
+
+  h3 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    letter-spacing: -0.06em;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+}
+
+.testimonials-section {
+  background-color: var(--color-white);
+}
+
+.testimonial-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  margin-top: 1rem;
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  > div {
+    background-color: var(--color-pink-light);
+    border: 2px solid var(--color-black);
+    border-radius: calc(var(--border-radius) * 4);
+    box-shadow: 8px 8px 0 var(--color-sky-blue);
+    margin-top: 0;
+    padding: 1.25rem;
+  }
+}
+
+@include breakpoint(md, max) {
+  .home-section {
+    padding: 3.5rem 0;
+  }
+}

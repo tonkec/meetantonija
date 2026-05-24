@@ -1,66 +1,60 @@
 import { Tooltip } from 'react-tooltip'
 import Image from 'components/Image'
-import { useWindowSize } from 'hooks/useWindowSize'
 import ActionButtons from '../ActionButtons'
 
 import './Header.scss'
 
 const Header = () => {
-  const { width } = useWindowSize()
-  const isMobile = width < 800
-  const isExtraSmall = width < 400
   return (
-    <div className="header-wrapper">
-      <header className="container header-padding-top">
-        <div
-          className={isMobile ? 'flex-column' : 'flex'}
-          style={{
-            flexDirection: isExtraSmall ? 'column' : 'row',
-          }}
-        >
-          <div className="flex-1">
-            <h1 className={isMobile ? 'normal-font' : ''}>
-              I'm <span className="accent">Antonija</span>,
-            </h1>
-            <p
-              className={
-                isMobile
-                  ? 'normal-font small-margin-bottom medium-margin-right line-height-2'
-                  : 'line-height-2'
-              }
-              style={{ fontSize: isMobile ? '0.9rem' : '1rem' }}
-            >
-              a React developer from{' '}
-              <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>, Croatia.
-              For the past <span className="text-pink">10</span> years I have
-              been crafting interfaces that are not only visually engaging but
-              also highly functional.
-            </p>
+    <div className="header-wrapper hero-shell">
+      <header className="container hero">
+        <div className="hero-copy">
+          <p className="hero-eyebrow">Independent frontend engineer</p>
+          <h1>
+            I build thoughtful React products with a sharp eye for UX.
+          </h1>
+          <p className="hero-description">
+            I&apos;m <span className="accent">Antonija</span>, a React developer
+            from <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>,
+            Croatia. I help teams turn complex product ideas into fast,
+            maintainable interfaces.
+          </p>
 
-            {!isMobile && <ActionButtons />}
-          </div>
+          <ActionButtons />
 
-          <div
-            className={
-              isMobile
-                ? 'large-margin-top large-margin-bottom'
-                : 'content-end flex flex-1 medium-margin-right'
-            }
-          >
-            <Image
-              src="https://avatars.githubusercontent.com/u/5020758?v=4"
-              alt="Antonija"
-              hasColoredBackground={isMobile ? false : true}
-              style={{
-                width: isExtraSmall ? '100%' : isMobile ? '320px' : 'auto',
-                height: isExtraSmall ? '100%' : isMobile ? '320px' : '400px',
-              }}
-              className="border-radius-50 medium-margin-bottom"
-            />
+          <div className="hero-stats" aria-label="Experience summary">
+            <div>
+              <strong>10+</strong>
+              <span>years frontend</span>
+            </div>
+            <div>
+              <strong>7+</strong>
+              <span>years React</span>
+            </div>
+            <div>
+              <strong>CET</strong>
+              <span>remote friendly</span>
+            </div>
           </div>
         </div>
 
-        {isMobile && <ActionButtons />}
+        <div className="hero-visual" aria-label="Antonija profile">
+          <div className="hero-card">
+            <Image
+              src="https://avatars.githubusercontent.com/u/5020758?v=4"
+              alt="Antonija"
+              className="hero-photo"
+            />
+            <div className="hero-card-note">
+              <span>Currently crafting</span>
+              <strong>accessible product UIs</strong>
+            </div>
+          </div>
+          <div className="hero-floating-card">
+            <span>Available for</span>
+            <strong>React apps, design systems and product polish</strong>
+          </div>
+        </div>
 
         <Tooltip
           id="my-tooltip"

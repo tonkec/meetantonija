@@ -18,23 +18,29 @@ import { getValuesAndProperties } from 'utils'
 import useTemperature from 'hooks/useTemperature'
 import Temperature from 'components/Temperature'
 import { Tooltip } from 'react-tooltip'
+import './HomePage.scss'
 
 const SingleProject = ({ post }) => {
   const navigate = useNavigate()
   return (
-    <div className="bg-pink-light xs-padding flex flex-responsive flex-gap space-between">
-      <Image src={post.data.coverPhoto} isBackgroundImage />
-      <div className="flex-1">
-        <h2 className="no-padding">{post.data.title}</h2>
-        <p className="small-margin-top">{post.data.conclusion}</p>
+    <div className="featured-project-card">
+      <Image
+        src={post.data.coverPhoto}
+        isBackgroundImage
+        style={{ minWidth: 'auto' }}
+      />
+      <div className="featured-project-copy">
+        <p className="section-kicker">Selected project</p>
+        <h3>{post.data.title}</h3>
+        <p>{post.data.conclusion}</p>
 
         <button
           onClick={() => {
             navigate(`/project/${removeSpacesAndDashes(post.data.title)}`)
           }}
-          className="primary small-margin-top line-height-1"
+          className="primary small-margin-top"
         >
-          Read more 👉
+          Read the case study
         </button>
       </div>
     </div>
@@ -72,6 +78,24 @@ const testimonials = [
   },
 ]
 
+const services = [
+  {
+    title: 'Product interfaces',
+    content:
+      'React screens, flows and dashboards that stay usable as requirements grow.',
+  },
+  {
+    title: 'Design systems',
+    content:
+      'Reusable component foundations, visual polish and patterns teams can ship with.',
+  },
+  {
+    title: 'Frontend mentoring',
+    content:
+      'Practical guidance for teams that want cleaner architecture and stronger UI craft.',
+  },
+]
+
 const HomePage = () => {
   const temperatureData = useTemperature()
   const { values, properties } = getValuesAndProperties(temperatureData)
@@ -83,51 +107,69 @@ const HomePage = () => {
       <Header />
 
       <div className="homepage-content">
-        <div className="pattern large-margin-bottom large-margin-top">
-          <section>
-            <div className="container flex flex-responsive flex-gap-large align-start space-between">
-              <div className="bg-pink-light small-padding">
-                <h1 className="small-margin-bottom text-pink">About me</h1>
-                <p className="line-height-2 medium-padding-right">
-                  I am a frontend developer from Sveta Nedelja, Croatia (CET)
-                  which currently has a{' '}
-                  <span data-tooltip-id="temperature-tooltip">
-                    <Temperature />
-                  </span>{' '}
-                  weather. I am a reliable and responsible front-end engineer
-                  with a passion for building cutting-edge web applications.
-                  Collaboration is at the heart of my work, and I thrive in
-                  environments where creativity and technical excellence merge.
-                  With over <b>7</b> years of React experience and a decade in
-                  frontend development, I excel at crafting intuitive, high
-                  performance user interfaces that deliver exceptional user
-                  experiences. I am driven by problem solving, continuous
-                  learning, and staying at the forefront of modern web
-                  technologies. My approach blends clean, maintainable code with
-                  thoughtful design, ensuring every project I work on is
-                  scalable, accessible, and built to last.
-                </p>
-              </div>
-
-              <Tooltip
-                id="temperature-tooltip"
-                style={{
-                  backgroundColor: 'var(--color-pink)',
-                  padding: '10px',
-                  borderRadius: '5px',
-                  color: 'var(--color-white)',
-                }}
-                className="tooltip"
-              >
-                {properties.map((property, index) => (
-                  <span className="block" key={index}>
-                    {property}: {values[index]}
-                  </span>
-                ))}
-              </Tooltip>
+        <section className="home-section about-section">
+          <div className="container about-grid">
+            <div>
+              <p className="section-kicker">About me</p>
+              <h2>Frontend engineering with product taste.</h2>
             </div>
-          </section>
-        </div>
+            <div className="about-card">
+              <p>
+                I am a frontend developer from Sveta Nedelja, Croatia (CET),
+                where it currently feels like{' '}
+                <span data-tooltip-id="temperature-tooltip">
+                  <Temperature />
+                </span>
+                . I am reliable, collaborative and focused on building web
+                applications that are fast, accessible and easy to maintain.
+              </p>
+              <p>
+                My work blends clean React architecture, thoughtful design and
+                steady delivery. I like joining teams where technical excellence
+                and creativity meet.
+              </p>
+            </div>
+
+            <Tooltip
+              id="temperature-tooltip"
+              style={{
+                backgroundColor: 'var(--color-pink)',
+                padding: '10px',
+                borderRadius: '5px',
+                color: 'var(--color-white)',
+              }}
+              className="tooltip"
+            >
+              {properties.map((property, index) => (
+                <span className="block" key={index}>
+                  {property}: {values[index]}
+                </span>
+              ))}
+            </Tooltip>
+          </div>
+        </section>
+
+        <section className="home-section services-section">
+          <div className="container">
+            <p className="section-kicker">What I do</p>
+            <div className="services-header">
+              <h2>I help small teams ship polished frontend experiences.</h2>
+              <p>
+                From early product screens to mature component systems, I bring
+                the same care to UX details, code quality and team momentum.
+              </p>
+            </div>
+            <div className="service-grid">
+              {services.map((service, index) => (
+                <article className="service-card" key={service.title}>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <h3>{service.title}</h3>
+                  <p>{service.content}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
 
         <FadeInSection>
           <MarqueeText baseVelocity={-0.5}>React developer</MarqueeText>
@@ -135,12 +177,13 @@ const HomePage = () => {
         </FadeInSection>
 
         <FadeInSection>
-          <section className="large-margin-top large-margin-bottom">
+          <section className="home-section">
             <div className="container">
-              <h2>💼 I work with clients.</h2>
+              <p className="section-kicker">Client work</p>
+              <h2>I work with clients on focused, useful products.</h2>
 
               <Paginated
-                data={projects.sort((a, b) => b.from - a.from)}
+                data={[...projects].sort((a, b) => b.from - a.from)}
                 postsPerPage={1}
                 singleEntry={(project) => <SingleProject post={project} />}
               />
@@ -149,10 +192,11 @@ const HomePage = () => {
         </FadeInSection>
 
         <FadeInSection>
-          <section className="pattern-black">
-            <div className="container large-margin-bottom">
-              <h2>🗣 What they say about me.</h2>
-              <div className="grid">
+          <section className="home-section testimonials-section">
+            <div className="container">
+              <p className="section-kicker">Testimonials</p>
+              <h2>Kind words from people I have built with.</h2>
+              <div className="testimonial-grid">
                 {testimonials.map((testimonial, index) => (
                   <Testimonial key={index} testimonial={testimonial} />
                 ))}
