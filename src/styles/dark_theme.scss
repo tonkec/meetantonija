@@ -23,6 +23,21 @@
       background-color: var(--color-black);
     }
 
+    .header-wrapper,
+    .services-section,
+    .aside-section,
+    .hire-me-card,
+    .posts-hero,
+    .project-hero,
+    .cv-hero,
+    .post-hero,
+    .page-transition,
+    .intro-animation {
+      background: var(--color-black);
+      background-color: var(--color-black);
+      background-image: none;
+    }
+
     .pattern-black {
       background-color: var(--color-black);
       background-image: radial-gradient(
