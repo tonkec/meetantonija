@@ -49,9 +49,9 @@ function Layout() {
   const isMobileViewport =
     typeof window !== 'undefined' &&
     window.matchMedia('(max-width: 768px)').matches
-  const introAnimationDuration = isMobileViewport ? 700 : 1500
-  const introExitDelay = isMobileViewport ? 250 : 1000
-  const outletTransitionDuration = isMobileViewport ? 250 : 1000
+  const introAnimationDuration = isMobileViewport ? 700 : 900
+  const introExitDelay = isMobileViewport ? 250 : 350
+  const outletTransitionDuration = isMobileViewport ? 450 : 700
 
   useEffect(() => {
     if (value) {

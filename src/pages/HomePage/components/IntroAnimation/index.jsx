@@ -9,7 +9,7 @@ const IntroAnimation = () => {
     typeof window !== 'undefined' &&
     window.matchMedia('(max-width: 768px)').matches
       ? 75
-      : 150
+      : 100
 
   useEffect(() => {
     const interval = setInterval(() => {

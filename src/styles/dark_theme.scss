@@ -1,14 +1,17 @@
 @mixin dark-theme {
-  background-color: #000;
+  background-color: #0d1a63;
 
   body {
     color: #fff;
-    background-color: #000;
-    --color-black: #3e3e3e;
-    --color-pink: #929292;
-    --color-pink-dark: #6b6b6b;
-    --color-sky-blue: #4a4a4a;
-    --color-pink-light: #b5b5b5;
+    background-color: #0d1a63;
+    --color-black: #0d1a63;
+    --color-pink: #f68048;
+    --color-pink-dark: #d96634;
+    --color-sky-blue: #2845d6;
+    --color-pink-light: #1a2ca3;
+    --color-brown: #0d1a63;
+    --color-blue: #f68048;
+    --color-dark-blue: #2845d6;
 
     form {
       color: var(--color-black);
@@ -27,7 +30,14 @@
       background-color: var(--color-black);
     }
 
-    .header-wrapper,
+    .header-wrapper {
+      background:
+        radial-gradient(circle at 72% 18%, rgba(40, 69, 214, 0.72), transparent 28rem),
+        radial-gradient(circle at 16% 34%, rgba(26, 44, 163, 0.6), transparent 24rem),
+        var(--color-black);
+      background-color: var(--color-black);
+    }
+
     .home-section,
     .about-section,
     .testimonials-section,
@@ -175,6 +185,14 @@
     .aside-section aside,
     .tutorial-card,
     .hire-me-card,
+    .experiment-card,
+    .event-button,
+    .event-card,
+    .post-card,
+    .cv-project-card,
+    .project-overview-grid article,
+    .project-step-card,
+    .project-slide,
     .project-tldr-grid article {
       color: var(--color-white);
 
@@ -192,8 +210,121 @@
       }
     }
 
+    .navigation-button {
+      background-color: var(--color-pink-light);
+      border-color: var(--color-sky-blue);
+      color: var(--color-white);
+
+      span,
+      strong {
+        color: var(--color-white);
+      }
+    }
+
     .tutorial-copy p {
       color: var(--color-white);
+    }
+
+    .experiment-card .experiment-number,
+    .experiment-card .experiment-icon,
+    .post-card-level,
+    .event-button span,
+    .event-button small {
+      color: var(--color-white);
+    }
+
+    .post-tags button,
+    .post-card-tags button {
+      background-color: var(--color-black);
+      border-color: var(--color-pink);
+      color: var(--color-white);
+      box-shadow: 0 0 0 1px rgba(246, 128, 72, 0.35);
+
+      &:hover,
+      &:focus {
+        background-color: var(--color-pink);
+        border-color: var(--color-pink);
+        color: var(--color-white);
+      }
+    }
+
+    .post-filter-clear {
+      border-color: var(--color-pink);
+      box-shadow: 0 0 0 1px rgba(246, 128, 72, 0.28);
+    }
+
+    .posts-empty-state {
+      background-color: rgba(13, 26, 99, 0.78);
+      border-color: var(--color-pink);
+      box-shadow: 8px 8px 0 rgba(246, 128, 72, 0.72);
+      color: var(--color-white);
+
+      span {
+        color: var(--color-pink);
+      }
+    }
+
+    .cv-filter-summary span,
+    .cv-project-meta span {
+      background-color: var(--color-black);
+      border-color: var(--color-pink);
+      color: var(--color-white);
+      box-shadow: 0 0 0 1px rgba(246, 128, 72, 0.35);
+    }
+
+    .cv-project-skills button.outlined {
+      background-color: var(--color-black);
+      border-color: var(--color-pink);
+      color: var(--color-white);
+      box-shadow: 0 0 0 1px rgba(246, 128, 72, 0.35);
+    }
+
+    button.outlined,
+    a[role='button'].outlined,
+    *[role='button'].outlined {
+      background-color: rgba(13, 26, 99, 0.55);
+      border-color: var(--color-pink);
+      color: var(--color-white);
+
+      &:hover,
+      &:focus {
+        background-color: var(--color-pink);
+        color: var(--color-white);
+      }
+    }
+
+    .project-overview-grid article,
+    .project-step-card,
+    .project-slide,
+    .cv-project-card,
+    .post-card,
+    .event-card,
+    .experiment-card {
+      background-color: var(--color-pink-light);
+      border-color: var(--color-sky-blue);
+      box-shadow: 8px 8px 0 rgba(246, 128, 72, 0.35);
+    }
+
+    .project-slide,
+    .project-overview-grid article {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      span,
+      strong {
+        color: var(--color-white);
+      }
+
+      button:not(.primary),
+      a[role='button']:not(.primary) {
+        background-color: rgba(13, 26, 99, 0.7);
+        border-color: var(--color-pink);
+        color: var(--color-white);
+      }
     }
 
     .hero-card,
@@ -230,10 +361,10 @@
     }
 
     .hire-me-card {
-      background: #171717;
-      background-color: #171717;
-      border-color: rgba(255, 255, 255, 0.72);
-      box-shadow: 14px 14px 0 rgba(255, 255, 255, 0.18);
+      background: var(--color-pink-light);
+      background-color: var(--color-pink-light);
+      border-color: var(--color-sky-blue);
+      box-shadow: 14px 14px 0 rgba(246, 128, 72, 0.35);
       color: var(--color-white);
 
       h2,

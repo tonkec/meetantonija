@@ -13,28 +13,47 @@ const Image = ({
 }) => {
   const isImageLoading = useImage(src)
   const [isDarkLocalStorage] = useLocalStorage('dark-mode', false)
-  if (isImageLoading) {
-    return (
-      <ThreeDots
-        color={isDarkLocalStorage ? '#fcfcfc' : '#000'}
-        height={50}
-        width={50}
-      />
-    )
-  }
 
   if (!src) {
     return null
   }
 
+  const loader = (
+    <ThreeDots
+      color={isDarkLocalStorage ? '#fcfcfc' : '#000'}
+      height={50}
+      width={50}
+    />
+  )
+
   if (isBackgroundImage) {
+    const backgroundImageClassName = ['content contain isBackgroundImage', className]
+      .filter(Boolean)
+      .join(' ')
+
+    if (isImageLoading) {
+      return (
+        <div
+          className={`${backgroundImageClassName} image-loading`}
+          style={style}
+          onClick={onClick}
+        >
+          {loader}
+        </div>
+      )
+    }
+
     return (
       <div
-        className="content contain isBackgroundImage"
+        className={backgroundImageClassName}
         style={{ backgroundImage: `url(${src})`, ...style }}
         onClick={onClick}
       ></div>
     )
+  }
+
+  if (isImageLoading) {
+    return loader
   }
 
   if (hasColoredBackground) {

@@ -117,9 +117,9 @@
 
 .dark-theme {
   .navigation-inner {
-    background-color: #050505;
-    border-color: rgba(255, 255, 255, 0.72);
-    box-shadow: 8px 8px 0 rgba(255, 255, 255, 0.16);
+    background-color: var(--color-black);
+    border-color: var(--color-sky-blue);
+    box-shadow: 8px 8px 0 rgba(246, 128, 72, 0.28);
   }
 
   .navigation .nav-link,
@@ -138,8 +138,8 @@
   .navigation .nav-link:focus,
   .nav-search-button,
   .nav-icon-button {
-    background-color: #1b1b1b;
-    border-color: rgba(255, 255, 255, 0.28);
+    background-color: var(--color-pink-light);
+    border-color: var(--color-sky-blue);
   }
 
   .navigation .nav-link.active {

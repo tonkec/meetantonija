@@ -159,7 +159,7 @@ const Pagination = ({
             setQueryParams({ search: '', page: 1, tag: '' })
             clearSearch()
           }}
-          className="ternary small-margin-bottom small-margin-top"
+          className="post-filter-clear ternary small-margin-bottom small-margin-top"
         >
           Clear all filters
         </button>
@@ -176,7 +176,11 @@ const Pagination = ({
             </div>
           ))
         ) : (
-          <p>No data found.</p>
+          <div className="posts-empty-state" aria-live="polite">
+            <span>No matches</span>
+            <h2>No notes found</h2>
+            <p>Try a different search term or clear the active filters.</p>
+          </div>
         )}
       </div>
 

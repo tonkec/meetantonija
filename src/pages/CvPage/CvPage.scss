@@ -135,7 +135,14 @@
 }
 
 .cv-project-link {
+  background-color: var(--color-black);
+  color: var(--color-white);
   justify-self: start;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-pink-dark);
+  }
 }
 
 @include breakpoint(md, max) {

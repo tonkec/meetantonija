@@ -115,7 +115,7 @@ const HomePage = () => {
             </div>
             <div className="about-card">
               <p>
-                I am a frontend developer from Sveta Nedelja, Croatia (CET),
+                My name is Antonija Šimić and I am a frontend developer from Sveta Nedelja, Croatia (CET),
                 where it currently feels like{' '}
                 <span data-tooltip-id="temperature-tooltip">
                   <Temperature />
