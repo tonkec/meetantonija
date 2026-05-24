@@ -8,7 +8,7 @@ const IntroAnimation = () => {
   const letterDelay =
     typeof window !== 'undefined' &&
     window.matchMedia('(max-width: 768px)').matches
-      ? 75
+      ? 48
       : 100
 
   useEffect(() => {
