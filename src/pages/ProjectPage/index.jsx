@@ -36,6 +36,8 @@ const ProjectPage = () => {
     return <RecordNotFound />
   }
 
+  const isModeMobile = project.id === 11
+
   return (
     <>
       <Helmet>
@@ -125,7 +127,7 @@ const ProjectPage = () => {
         headline="✅ These were the tasks I had"
       />
 
-      {project.title !== 'Mode Mobile' && (
+      {!isModeMobile && project.photos.length > 0 && (
         <section className="project-gallery">
           <div className="container">
             <p className="section-kicker">Product snapshots</p>
