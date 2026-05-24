@@ -185,6 +185,15 @@
       background-color: var(--color-white);
       color: var(--color-black);
     }
+
+    .hero-card .hero-card-note {
+      color: var(--color-white);
+
+      span,
+      strong {
+        color: var(--color-white);
+      }
+    }
   }
 }
 

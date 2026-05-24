@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import './IntroAnimation.scss'
 
 const IntroAnimation = () => {
   const text = 'ANTONIJA'
@@ -20,12 +21,30 @@ const IntroAnimation = () => {
 
   return (
     <div
-      className={`small-padding bg-pink-light fixed text-center flex-y-center flex flex-column top-0 bottom-0 left-0 right-0 flex-x-center ${
+      className={`intro-animation ${
         displayText.length === text.length ? 'fadeOut' : 'fadeIn'
       }`}
     >
-      <div>
-        <h1 className="super-extra-large-font text-pink">{displayText}</h1>
+      <div className="intro-card">
+        <p>Loading portfolio</p>
+        <h1 aria-label={text}>
+          {text.split('').map((letter, index) => (
+            <span
+              key={`${letter}-${index}`}
+              className={index < displayText.length ? 'visible' : ''}
+            >
+              {letter}
+            </span>
+          ))}
+        </h1>
+        <div className="intro-progress" aria-hidden="true">
+          {text.split('').map((letter, index) => (
+            <span
+              key={`${letter}-dot-${index}`}
+              className={index < displayText.length ? 'visible' : ''}
+            ></span>
+          ))}
+        </div>
       </div>
     </div>
   )
