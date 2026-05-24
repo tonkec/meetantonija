@@ -7,8 +7,10 @@ const MobileNavigation = ({ isOpen, links, onClose, isSettings }) => {
   }
 
   return (
-    <div className="fixed flex flex-column space-between overflow-auto top-0 bottom-0 right-0 bg-pink-light z-999 mobile-nav w-full">
-      <div className="flex flex-column links">
+    <div className="mobile-nav">
+      <div>
+        <p className="section-kicker">Navigation</p>
+        <div className="links">
         {links.map((link, index) => (
           <NavigationLink key={index} href={link.href}>
             <span className="flex flex-y-center flex-gap-small">
@@ -16,10 +18,11 @@ const MobileNavigation = ({ isOpen, links, onClose, isSettings }) => {
             </span>
           </NavigationLink>
         ))}
+        </div>
       </div>
 
       <button
-        className="w-full ternary inline-block normal-font no-border-radius"
+        className="mobile-nav-close"
         onClick={() => {
           onClose()
         }}

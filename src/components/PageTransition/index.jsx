@@ -24,14 +24,14 @@ const PageTransition = () => {
 
   return (
     <div ref={pageTransition} className="page-transition">
-      <svg
-        viewBox="0 0 100 100"
-        width="200"
-        height="200"
-        className="animated-a"
-      >
-        <path d="M10,90 L50,10 L90,90 M30,55 L70,55" className="path" />
-      </svg>
+      <div className="transition-card" aria-label="Loading next page">
+        <div className="transition-mark">
+          <svg viewBox="0 0 100 100" className="animated-a" aria-hidden="true">
+            <path d="M12,88 L50,12 L88,88 M31,56 L69,56" className="path" />
+          </svg>
+        </div>
+        <p>Loading something thoughtful</p>
+      </div>
     </div>
   )
 }

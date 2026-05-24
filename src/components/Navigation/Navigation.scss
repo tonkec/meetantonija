@@ -5,41 +5,108 @@
   position: fixed;
   left: 0;
   right: 0;
-  top: 0px;
+  top: 0;
   z-index: 100;
-  background-color: var(--color-pink-light);
   margin: 0 auto;
   transition:
     width 0.3s ease-in-out,
     top 0.3s ease-in-out,
-    border-radius 0.3s ease-in-out;
+    border-radius 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
   width: 100%;
-  border-radius: 0;
-  overflow: hidden;
+  padding: 0.75rem;
 
   &.scrolled-to-top {
     @include breakpoint(xl) {
       width: var(--container-width);
-      top: 20px;
-      border-radius: var(--border-radius);
+      top: 16px;
     }
   }
 
   .nav-link {
-    padding: 20px;
-    border-radius: 0;
-    background-color: var(--color-pink-light);
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 999px;
     color: var(--color-black);
-    font-size: 1.6rem;
+    display: inline-flex;
+    font-size: 0.95rem;
     font-weight: 700;
-    &:hover {
-      background-color: var(--color-pink);
-      color: var(--color-white);
+    padding: 0.75rem 1rem;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-white);
+      border-color: var(--color-black);
+      color: var(--color-black);
+      outline: none;
     }
 
     &.active {
       background-color: var(--color-pink);
+      border-color: var(--color-pink);
       color: var(--color-white);
+
+      span {
+        color: var(--color-white);
+      }
     }
+  }
+}
+
+.navigation-inner {
+  align-items: center;
+  background-color: rgba(255, 228, 245, 0.92);
+  border: 2px solid var(--color-black);
+  border-radius: 999px;
+  box-shadow: 8px 8px 0 rgba(85, 65, 72, 0.2);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: var(--container-width);
+  padding: 0.45rem;
+}
+
+.navigation-links,
+.navigation-actions {
+  align-items: center;
+  display: flex;
+  gap: 0.35rem;
+}
+
+.nav-search-button,
+.nav-icon-button {
+  align-items: center;
+  background-color: var(--color-white);
+  border: 2px solid transparent;
+  border-radius: 999px;
+  color: var(--color-black);
+  display: inline-flex;
+  gap: 0.55rem;
+  padding: 0.75rem 1rem;
+
+  &:hover,
+  &:focus {
+    border-color: var(--color-black);
+    outline: none;
+  }
+}
+
+.nav-search-button span {
+  font-size: 0.9rem;
+}
+
+.nav-icon-button {
+  padding: 0.65rem 0.8rem;
+}
+
+@include breakpoint(md, max) {
+  .navigation {
+    padding: 0.5rem;
+  }
+
+  .navigation-inner {
+    border-radius: calc(var(--border-radius) * 4);
   }
 }

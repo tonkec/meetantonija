@@ -1,13 +1,59 @@
 @import './../../../styles/mq.scss';
+
 .mobile-nav {
+  background-color: var(--color-pink-light);
+  border-left: 2px solid var(--color-black);
+  bottom: 0;
+  box-shadow: -10px 0 0 rgba(85, 65, 72, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 100vh;
+  overflow: auto;
+  padding: 1.2rem;
+  position: fixed;
+  right: 0;
+  top: 0;
   width: 100%;
+  z-index: 999;
+
   @include breakpoint(md) {
-    max-width: 300px;
+    max-width: 360px;
   }
+
   .links {
-    a,
-    button:not(.normal-font) {
-      font-size: 1.8rem;
-    }
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .nav-link {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-black);
+    border-radius: calc(var(--border-radius) * 3);
+    color: var(--color-black);
+    display: flex;
+    font-size: 1.4rem;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .nav-link.active {
+    background-color: var(--color-pink);
+    color: var(--color-white);
+  }
+}
+
+.mobile-nav-close {
+  background-color: var(--color-black);
+  border-radius: calc(var(--border-radius) * 3);
+  color: var(--color-white);
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.dark-theme {
+  .mobile-nav {
+    color: var(--color-black);
   }
 }

@@ -71,30 +71,32 @@ const Navigation = ({ openNavigation }) => {
 
   return (
     <div className={navigationClasses}>
-      <div className="flex flex-gap space-between flex-y-center">
+      <div className="navigation-inner">
         {isMobile ? (
           <button
             onClick={() => {
               setIsMobileNavigationOpen(!isMobileNavigationOpen)
             }}
-            className="transparent"
+            className="nav-icon-button"
+            aria-label="Open navigation"
           >
             <RxHamburgerMenu fontSize="1.5rem" />
           </button>
         ) : (
-          <div className="flex">
+          <nav className="navigation-links" aria-label="Main navigation">
             {getNavigationLinks(navigationLinks)}
-            <span
-              className="flex flex-y-center flex-gap-small pointer small-margin-left"
+            <button
+              type="button"
+              className="nav-search-button"
               onClick={() => openNavigation()}
             >
-              <BiSearch fontSize={20} className="pointer hidden-mobile" />
+              <BiSearch fontSize={20} />
               <span>Shift + K</span>
-            </span>
-          </div>
+            </button>
+          </nav>
         )}
 
-        <div className="flex medium-margin-right flex-y-center">
+        <div className="navigation-actions">
           <div className="hidden-mobile">
             <ButtonCopy text="Contact" />
           </div>

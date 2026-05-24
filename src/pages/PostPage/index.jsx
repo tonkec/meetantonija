@@ -19,19 +19,19 @@ import HireMe from 'components/HireMe'
 
 const Tags = (tags, handleTagClick) => {
   return (
-    <p className="small-margin-bottom">
+    <div className="post-tags">
       {tags.split(',').map((tag) => (
-        <span
+        <button
           key={tag}
-          className="tag bg-black small-margin-right border-radius pointer"
+          type="button"
           onClick={() => {
             handleTagClick(tag)
           }}
         >
           {tag}
-        </span>
+        </button>
       ))}
-    </p>
+    </div>
   )
 }
 
@@ -92,46 +92,53 @@ const PostPage = () => {
         components={{
           h1({ children }) {
             return (
-              <header className="medium-padding-top no-padding-bottom small-margin-bottom">
-                <div className="container">
+              <header className="post-hero">
+                <div className="container post-hero-grid">
+                  <div>
                   <Link
                     to="/posts"
-                    className="post-link flex flex-y-center medium-margin-bottom"
+                    className="post-back-link"
                   >
-                    <IoIosArrowRoundBack fontSize="2rem" />{' '}
-                    <h5> Back to all notes</h5>
+                    <IoIosArrowRoundBack fontSize="2rem" />
+                    <span>Back to all notes</span>
                   </Link>
-                  {currentPost && Tags(currentPost.tags, handleTagClick)}
-                  <span>{minutesToRead} to read</span>
+                    <p className="section-kicker">Note</p>
                   <h1>{children}</h1>
+                    {currentPost?.intro && <p>{currentPost.intro}</p>}
+                  </div>
+                  <aside className="post-hero-card">
+                    <span>{minutesToRead} read</span>
+                    <strong>{currentPost?.date}</strong>
+                    {currentPost && Tags(currentPost.tags, handleTagClick)}
+                  </aside>
                 </div>
               </header>
             )
           },
           h4({ children }) {
             return (
-              <h4 className="container small-padding-bottom">{children}</h4>
+              <h4 className="post-content-container post-heading">{children}</h4>
             )
           },
           h5({ children }) {
             return (
-              <h5 className="container small-padding-bottom">{children}</h5>
+              <h5 className="post-content-container post-heading">{children}</h5>
             )
           },
 
           h2({ children }) {
             return (
-              <h2 className="container small-padding-bottom">{children}</h2>
+              <h2 className="post-content-container post-heading">{children}</h2>
             )
           },
           h3({ children }) {
             return (
-              <h3 className="container small-padding-bottom">{children}</h3>
+              <h3 className="post-content-container post-heading">{children}</h3>
             )
           },
           h6({ children }) {
             return (
-              <h6 className="container small-padding-bottom">{children}</h6>
+              <h6 className="post-content-container post-heading">{children}</h6>
             )
           },
           strong({ children }) {
@@ -148,7 +155,7 @@ const PostPage = () => {
           },
           p({ children }) {
             return (
-              <p className="container small-padding-bottom line-height-2">
+              <p className="post-content-container post-paragraph post-body-block">
                 {children}
               </p>
             )
@@ -159,7 +166,7 @@ const PostPage = () => {
                 {...props}
                 target="_blank"
                 rel="noreferrer"
-                className="normal-font text-black"
+                className="normal-font"
               >
                 {children}
               </a>
@@ -167,7 +174,7 @@ const PostPage = () => {
           },
           blockquote({ children }) {
             return (
-              <blockquote className="medium-margin-top">
+              <blockquote className="post-content-container">
                 <i>{children}</i>
               </blockquote>
             )
@@ -191,7 +198,7 @@ const PostPage = () => {
           },
           ol({ children }) {
             return (
-              <div className="container">
+              <div className="post-content-container post-list">
                 <ol>{children}</ol>
               </div>
             )
@@ -199,30 +206,29 @@ const PostPage = () => {
 
           ul({ children }) {
             return (
-              <div className="container">
+              <div className="post-content-container post-list">
                 <ul>{children}</ul>
               </div>
             )
           },
           pre({ children }) {
-            return <div className="container code-block">{children}</div>
+            return <div className="post-content-container code-block">{children}</div>
           },
         }}
       />
 
-      <section className="container">
-        <div className="large-margin-top large-margin-bottom">
-          <h2 className="no-margin-bottom no-padding-bottom no-padding-top text-center">
-            Read more
-          </h2>
-          <p className="medium-margin-bottom text-center">
+      <section className="post-related">
+        <div className="container">
+          <p className="section-kicker">Keep reading</p>
+          <h2>Read more notes.</h2>
+          <p>
             Here are some of my other notes that you might find interesting.
           </p>
-          <div className="flex flex-gap-small flex-responsive">
+          <div className="post-related-grid">
             {shuffleArray(otherPosts)
               .slice(0, 3)
               .map((post) => (
-                <div className="flex-1" key={post.id}>
+                <div key={post.id}>
                   <SinglePost
                     post={post}
                     onClick={(tag) => {
