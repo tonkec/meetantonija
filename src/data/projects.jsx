@@ -1,6 +1,57 @@
 import { rootImageUrl } from 'rootImageUrl'
 
+const modeMobileCover =
+  'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"%3E%3Crect width="1200" height="800" fill="%230D1A63"/%3E%3Ccircle cx="980" cy="160" r="220" fill="%232845D6" opacity="0.7"/%3E%3Ccircle cx="160" cy="650" r="260" fill="%23F68048" opacity="0.8"/%3E%3Ctext x="80" y="430" font-family="Arial,sans-serif" font-size="96" font-weight="700" fill="white"%3EMode%20Mobile%3C/text%3E%3C/svg%3E'
+
 const projects = [
+  {
+    coverPhoto: modeMobileCover,
+    photos: [modeMobileCover],
+    location: 'Remote',
+    company: 'Mode Mobile',
+    title: 'Mode Mobile',
+    headline: 'Mobile-first product development',
+    skills: 'React, Typescript, Mobile UI, Frontend Architecture',
+    link: 'https://www.modemobile.com/',
+    id: 11,
+    description:
+      'I am currently working with Mode Mobile on mobile-first product experiences, contributing frontend craft, product thinking, and scalable UI implementation.',
+    responsibilities: [
+      {
+        title: 'Building mobile-first product experiences',
+        description:
+          'Contributing to product UI work with a focus on responsive, maintainable, and polished user experiences.',
+      },
+      {
+        title: 'Collaborating with product teams',
+        description:
+          'Working with cross-functional teammates to ship thoughtful features and improve the user experience.',
+      },
+      {
+        title: 'Maintaining frontend quality',
+        description:
+          'Keeping components readable, reusable, and aligned with the product design system.',
+      },
+    ],
+    from: 2026,
+    fromMonth: 'March',
+    methodology: 'Agile',
+    position: 'Senior Frontend Developer',
+    team: 100,
+    learned:
+      'I am continuing to deepen my experience with mobile-first product work, frontend architecture, and collaboration across product teams.',
+    conclusion:
+      'Mode Mobile is my current role, where I am focused on contributing thoughtful frontend implementation to mobile-first product experiences.',
+    collaboration: 'Slack, Jira, Google Meet',
+    problem:
+      'The current challenge is building polished product experiences while keeping the frontend implementation scalable and maintainable.',
+    manager: (
+      <span>
+        I am currently working with the Mode Mobile team and contributing to the
+        product as a Senior Frontend Developer.
+      </span>
+    ),
+  },
   {
     coverPhoto: rootImageUrl + 'casumo/cubes.jpg',
     photos: [
@@ -350,6 +401,8 @@ const projects = [
     ],
     location: 'Zagreb',
     from: 2023,
+    to: 2026,
+    toMonth: 'March',
     company: 'Mochalabs',
     id: 10,
     title: 'Funder Pro',

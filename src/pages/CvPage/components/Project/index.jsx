@@ -1,5 +1,5 @@
 import Skills from 'components/Skills'
-import { removeSpacesAndDashes } from 'utils'
+import { formatProjectPeriod, removeSpacesAndDashes } from 'utils'
 import { useNavigate } from 'react-router-dom'
 
 const CvProject = ({ project }) => {
@@ -8,9 +8,7 @@ const CvProject = ({ project }) => {
     <article key={project.id} className="cv-project-card">
       <div className="cv-project-meta">
         <span>{project.position}</span>
-        <span>
-          {project.from} - {project.to || 'Present'}
-        </span>
+        <span>{formatProjectPeriod(project)}</span>
       </div>
 
       <h2>{project.title}</h2>

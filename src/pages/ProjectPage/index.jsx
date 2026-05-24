@@ -3,7 +3,11 @@ import projects from 'data/projects'
 import Steps from '../HomePage/components/Steps'
 import HireMe from 'components/HireMe'
 import Slider from '../HomePage/components/Slider'
-import { removeSpacesAndDashes, scrollToTheElement } from 'utils'
+import {
+  formatProjectPeriod,
+  removeSpacesAndDashes,
+  scrollToTheElement,
+} from 'utils'
 import Skills from 'components/Skills'
 import { Helmet } from 'react-helmet'
 import ProjectPhotos from 'components/ProjectPhotos'
@@ -46,9 +50,7 @@ const ProjectPage = () => {
           </div>
           <div className="project-hero-card">
             <span>{project.position}</span>
-            <strong>
-              {project.from} - {project.to || 'Present'}
-            </strong>
+            <strong>{formatProjectPeriod(project)}</strong>
             <button
               className="primary"
               onClick={() => scrollToTheElement('tldr')}
@@ -69,9 +71,7 @@ const ProjectPage = () => {
             </div>
             <div>
               <h3>Timeline</h3>
-              <p>
-                {project.from} - {project.to || 'Present'}
-              </p>
+              <p>{formatProjectPeriod(project)}</p>
             </div>
           </article>
 
@@ -125,19 +125,21 @@ const ProjectPage = () => {
         headline="✅ These were the tasks I had"
       />
 
-      <section className="project-gallery">
-        <div className="container">
-          <p className="section-kicker">Product snapshots</p>
-          <h2>
-            {project.photos.length > 1
-              ? 'Here are some photos of the app'
-              : 'Here is a photo of the app'}
-          </h2>
-        </div>
-        <div className="small-container">
-          <ProjectPhotos project={project} />
-        </div>
-      </section>
+      {project.title !== 'Mode Mobile' && (
+        <section className="project-gallery">
+          <div className="container">
+            <p className="section-kicker">Product snapshots</p>
+            <h2>
+              {project.photos.length > 1
+                ? 'Here are some photos of the app'
+                : 'Here is a photo of the app'}
+            </h2>
+          </div>
+          <div className="small-container">
+            <ProjectPhotos project={project} />
+          </div>
+        </section>
+      )}
 
       <section className="project-tldr" id="tldr">
         <div className="container">

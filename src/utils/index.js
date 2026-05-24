@@ -52,6 +52,15 @@ export const formatNoteTitle = (string) => {
   )
 }
 
+export const formatProjectPeriod = (project) => {
+  const start = [project.fromMonth, project.from].filter(Boolean).join(' ')
+  const end = project.to
+    ? [project.toMonth, project.to].filter(Boolean).join(' ')
+    : 'Present'
+
+  return `${start} - ${end}`
+}
+
 export const arrayHasFullString = (array, string) => {
   return array.some(
     (item) => removeSpacesAndDashes(item) === removeSpacesAndDashes(string)

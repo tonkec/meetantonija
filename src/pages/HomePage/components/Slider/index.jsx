@@ -2,7 +2,7 @@ import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 import './Slider.scss'
 import { useWindowSize } from 'hooks/useWindowSize'
-import { removeSpacesAndDashes, truncateString } from 'utils'
+import { formatProjectPeriod, removeSpacesAndDashes, truncateString } from 'utils'
 import { useNavigate } from 'react-router-dom'
 
 const Slider = ({ items, headline }) => {
@@ -29,9 +29,7 @@ const Slider = ({ items, headline }) => {
             .map((project) => {
               return (
                 <div key={project.id} className="keen-slider__slide project-slide">
-                  <span>
-                    {project.from} - {project.to || 'Present'}
-                  </span>
+                  <span>{formatProjectPeriod(project)}</span>
                   <h3>{project.title}</h3>
                   <h4>{project.headline}</h4>
 
