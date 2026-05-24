@@ -110,6 +110,17 @@
       }
     }
 
+    .featured-project-copy button.primary {
+      background-color: var(--color-black);
+      color: var(--color-white);
+
+      &:hover,
+      &:focus {
+        background-color: var(--color-white);
+        color: var(--color-black);
+      }
+    }
+
     button.dark,
     a[role='button'].dark,
     *[role='button'].dark,

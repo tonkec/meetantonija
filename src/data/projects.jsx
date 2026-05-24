@@ -1,12 +1,14 @@
 import { rootImageUrl } from 'rootImageUrl'
 
 const modeMobileCover =
-  'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"%3E%3Crect width="1200" height="800" fill="%230D1A63"/%3E%3Ccircle cx="980" cy="160" r="220" fill="%232845D6" opacity="0.7"/%3E%3Ccircle cx="160" cy="650" r="260" fill="%23F68048" opacity="0.8"/%3E%3Ctext x="80" y="430" font-family="Arial,sans-serif" font-size="96" font-weight="700" fill="white"%3EMode%20Mobile%3C/text%3E%3C/svg%3E'
+  rootImageUrl + 'modemobile/trimbox.avif'
+const modeMobilePhoto =
+  'https://static-academy.siteground.com/wp-content/uploads/sites/2/2023/11/Build_a_list_header_image-1.jpg'
 
 const projects = [
   {
     coverPhoto: modeMobileCover,
-    photos: [modeMobileCover],
+    photos: [modeMobilePhoto],
     location: 'Remote',
     company: 'Mode Mobile',
     title: 'Mode Mobile',

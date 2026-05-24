@@ -165,6 +165,17 @@
   p {
     line-height: 1.8;
   }
+
+  .primary {
+    background-color: var(--color-black);
+    color: var(--color-white);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-white);
+      color: var(--color-black);
+    }
+  }
 }
 
 .testimonials-section {
