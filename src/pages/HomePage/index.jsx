@@ -107,69 +107,73 @@ const HomePage = () => {
       <Header />
 
       <div className="homepage-content">
-        <section className="home-section about-section">
-          <div className="container about-grid">
-            <div>
-              <p className="section-kicker">About me</p>
-              <h2>Frontend engineering with product taste.</h2>
-            </div>
-            <div className="about-card">
-              <p>
-                My name is Antonija Šimić and I am a frontend developer from Sveta Nedelja, Croatia (CET),
-                where it currently feels like{' '}
-                <span data-tooltip-id="temperature-tooltip">
-                  <Temperature />
-                </span>
-                . I am reliable, collaborative and focused on building web
-                applications that are fast, accessible and easy to maintain.
-              </p>
-              <p>
-                My work blends clean React architecture, thoughtful design and
-                steady delivery. I like joining teams where technical excellence
-                and creativity meet.
-              </p>
-            </div>
+        <FadeInSection>
+          <section className="home-section about-section">
+            <div className="container about-grid">
+              <div>
+                <p className="section-kicker">About me</p>
+                <h2>Frontend engineering with product taste.</h2>
+              </div>
+              <div className="about-card">
+                <p>
+                  My name is Antonija Šimić and I am a frontend developer from Sveta Nedelja, Croatia (CET),
+                  where it currently feels like{' '}
+                  <span data-tooltip-id="temperature-tooltip">
+                    <Temperature />
+                  </span>
+                  . I am reliable, collaborative and focused on building web
+                  applications that are fast, accessible and easy to maintain.
+                </p>
+                <p>
+                  My work blends clean React architecture, thoughtful design and
+                  steady delivery. I like joining teams where technical excellence
+                  and creativity meet.
+                </p>
+              </div>
 
-            <Tooltip
-              id="temperature-tooltip"
-              style={{
-                backgroundColor: 'var(--color-pink)',
-                padding: '10px',
-                borderRadius: '5px',
-                color: 'var(--color-white)',
-              }}
-              className="tooltip"
-            >
-              {properties.map((property, index) => (
-                <span className="block" key={index}>
-                  {property}: {values[index]}
-                </span>
-              ))}
-            </Tooltip>
-          </div>
-        </section>
+              <Tooltip
+                id="temperature-tooltip"
+                style={{
+                  backgroundColor: 'var(--color-pink)',
+                  padding: '10px',
+                  borderRadius: '5px',
+                  color: 'var(--color-white)',
+                }}
+                className="tooltip"
+              >
+                {properties.map((property, index) => (
+                  <span className="block" key={index}>
+                    {property}: {values[index]}
+                  </span>
+                ))}
+              </Tooltip>
+            </div>
+          </section>
+        </FadeInSection>
 
-        <section className="home-section services-section">
-          <div className="container">
-            <p className="section-kicker">What I do</p>
-            <div className="services-header">
-              <h2>I help small teams ship polished frontend experiences.</h2>
-              <p>
-                From early product screens to mature component systems, I bring
-                the same care to UX details, code quality and team momentum.
-              </p>
+        <FadeInSection>
+          <section className="home-section services-section">
+            <div className="container">
+              <p className="section-kicker">What I do</p>
+              <div className="services-header">
+                <h2>I help small teams ship polished frontend experiences.</h2>
+                <p>
+                  From early product screens to mature component systems, I bring
+                  the same care to UX details, code quality and team momentum.
+                </p>
+              </div>
+              <div className="service-grid">
+                {services.map((service, index) => (
+                  <article className="service-card" key={service.title}>
+                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    <h3>{service.title}</h3>
+                    <p>{service.content}</p>
+                  </article>
+                ))}
+              </div>
             </div>
-            <div className="service-grid">
-              {services.map((service, index) => (
-                <article className="service-card" key={service.title}>
-                  <span>{String(index + 1).padStart(2, '0')}</span>
-                  <h3>{service.title}</h3>
-                  <p>{service.content}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+          </section>
+        </FadeInSection>
 
         <FadeInSection>
           <MarqueeText baseVelocity={-0.5}>React developer</MarqueeText>
