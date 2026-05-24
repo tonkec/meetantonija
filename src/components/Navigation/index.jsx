@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import useScrollPosition from './../../hooks/useScrollPosition'
 import './Navigation.scss'
@@ -68,6 +68,25 @@ const Navigation = ({ openNavigation }) => {
 
   const navigationClasses =
     scrollPosition > 100 ? 'navigation' : 'navigation scrolled-to-top'
+
+  useEffect(() => {
+    if (!isMobileNavigationOpen) {
+      return
+    }
+
+    const body = document.querySelector('body')
+    const html = document.querySelector('html')
+    const previousBodyOverflow = body.style.overflow
+    const previousHtmlOverflow = html.style.overflow
+
+    body.style.overflow = 'hidden'
+    html.style.overflow = 'hidden'
+
+    return () => {
+      body.style.overflow = previousBodyOverflow
+      html.style.overflow = previousHtmlOverflow
+    }
+  }, [isMobileNavigationOpen])
 
   return (
     <div className={navigationClasses}>

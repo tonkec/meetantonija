@@ -1,16 +1,18 @@
 @import './../../../styles/mq.scss';
 
 .mobile-nav {
-  background-color: var(--color-pink-light);
-  border-left: 2px solid var(--color-black);
+  background:
+    radial-gradient(circle at 88% 8%, rgba(169, 228, 255, 0.8), transparent 12rem),
+    var(--color-pink-light);
+  border-left: 3px solid var(--color-black);
   bottom: 0;
-  box-shadow: -10px 0 0 rgba(85, 65, 72, 0.2);
+  box-shadow: -14px 0 0 rgba(85, 65, 72, 0.22);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   max-height: 100vh;
   overflow: auto;
-  padding: 1.2rem;
+  padding: 1.25rem;
   position: fixed;
   right: 0;
   top: 0;
@@ -18,42 +20,162 @@
   z-index: 999;
 
   @include breakpoint(md) {
-    max-width: 360px;
+    max-width: 390px;
+  }
+
+  @include breakpoint(md, max) {
+    border-left: 0;
   }
 
   .links {
     display: grid;
-    gap: 0.75rem;
-    margin-top: 1rem;
+    gap: 0.9rem;
+    margin-top: 1.3rem;
   }
 
   .nav-link {
+    align-items: center;
     background-color: var(--color-white);
     border: 2px solid var(--color-black);
-    border-radius: calc(var(--border-radius) * 3);
+    border-radius: calc(var(--border-radius) * 4);
+    box-shadow: 6px 6px 0 rgba(85, 65, 72, 0.18);
     color: var(--color-black);
     display: flex;
-    font-size: 1.4rem;
+    font-size: clamp(1.2rem, 7vw, 1.55rem);
+    font-weight: 700;
     justify-content: space-between;
-    padding: 1rem;
+    min-height: 4.6rem;
+    padding: 1.05rem 1.2rem;
+
+    span {
+      width: 100%;
+    }
+
+    svg {
+      margin-left: auto;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-black);
+      border-color: var(--color-pink);
+      box-shadow: 8px 8px 0 rgba(249, 0, 147, 0.18);
+      color: var(--color-white);
+      outline: none;
+      transform: translate(-2px, -2px);
+
+      span {
+        color: var(--color-white);
+      }
+    }
   }
 
   .nav-link.active {
     background-color: var(--color-pink);
+    border-color: var(--color-pink);
+    box-shadow: 8px 8px 0 rgba(85, 65, 72, 0.24);
     color: var(--color-white);
   }
 }
 
+.mobile-nav-header {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-black);
+  border-radius: calc(var(--border-radius) * 4);
+  box-shadow: 8px 8px 0 var(--color-sky-blue);
+  color: var(--color-black);
+  padding: 1.1rem;
+
+  .section-kicker {
+    margin-bottom: 0.65rem;
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 9vw, 2.8rem);
+    letter-spacing: -0.06em;
+    line-height: 0.95;
+    padding: 0;
+  }
+
+  p:not(.section-kicker) {
+    line-height: 1.6;
+    margin-top: 0.85rem;
+  }
+}
+
 .mobile-nav-close {
-  background-color: var(--color-black);
-  border-radius: calc(var(--border-radius) * 3);
+  background-color: var(--color-pink);
+  border: 2px solid var(--color-black);
+  border-radius: calc(var(--border-radius) * 4);
+  box-shadow: 6px 6px 0 var(--color-black);
   color: var(--color-white);
   margin-top: 2rem;
+  min-height: 3.5rem;
   width: 100%;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-black);
+    outline: none;
+  }
 }
 
 .dark-theme {
   .mobile-nav {
-    color: var(--color-black);
+    background:
+      radial-gradient(circle at 88% 8%, rgba(40, 69, 214, 0.72), transparent 12rem),
+      var(--color-black);
+    border-color: var(--color-sky-blue);
+    box-shadow: -14px 0 0 rgba(246, 128, 72, 0.28);
+    color: var(--color-white);
+
+    .mobile-nav-header {
+      background-color: var(--color-pink-light);
+      border-color: var(--color-sky-blue);
+      box-shadow: 8px 8px 0 rgba(246, 128, 72, 0.35);
+      color: var(--color-white);
+
+      p,
+      h2 {
+        color: var(--color-white);
+      }
+    }
+
+    .nav-link {
+      background-color: var(--color-white);
+      border-color: var(--color-sky-blue);
+      box-shadow: 6px 6px 0 rgba(246, 128, 72, 0.22);
+      color: var(--color-black);
+
+      span {
+        color: var(--color-black);
+      }
+
+      &:hover,
+      &:focus {
+        background-color: var(--color-black);
+        border-color: var(--color-pink);
+        color: var(--color-white);
+
+        span {
+          color: var(--color-white);
+        }
+      }
+    }
+
+    .nav-link.active {
+      background-color: var(--color-pink);
+      border-color: var(--color-pink);
+      color: var(--color-white);
+
+      span {
+        color: var(--color-white);
+      }
+    }
+
+    .mobile-nav-close {
+      border-color: var(--color-pink);
+      box-shadow: 6px 6px 0 rgba(246, 128, 72, 0.45);
+    }
   }
 }
