@@ -5,6 +5,11 @@ const IntroAnimation = () => {
   const text = 'ANTONIJA'
   const [displayText, setDisplayText] = useState('')
   const currentIndexRef = useRef(0)
+  const letterDelay =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(max-width: 768px)').matches
+      ? 75
+      : 150
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -14,10 +19,10 @@ const IntroAnimation = () => {
       } else {
         clearInterval(interval)
       }
-    }, 150)
+    }, letterDelay)
 
     return () => clearInterval(interval)
-  }, [text])
+  }, [text, letterDelay])
 
   return (
     <div

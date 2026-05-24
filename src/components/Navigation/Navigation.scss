@@ -114,3 +114,37 @@
     border-radius: calc(var(--border-radius) * 4);
   }
 }
+
+.dark-theme {
+  .navigation-inner {
+    background-color: #050505;
+    border-color: rgba(255, 255, 255, 0.72);
+    box-shadow: 8px 8px 0 rgba(255, 255, 255, 0.16);
+  }
+
+  .navigation .nav-link,
+  .nav-search-button,
+  .nav-icon-button {
+    color: var(--color-white);
+  }
+
+  .navigation .nav-link span,
+  .navigation .nav-link.active span,
+  .nav-search-button span {
+    color: var(--color-white);
+  }
+
+  .navigation .nav-link:hover,
+  .navigation .nav-link:focus,
+  .nav-search-button,
+  .nav-icon-button {
+    background-color: #1b1b1b;
+    border-color: rgba(255, 255, 255, 0.28);
+  }
+
+  .navigation .nav-link.active {
+    background-color: var(--color-pink);
+    border-color: var(--color-pink);
+    color: var(--color-white);
+  }
+}

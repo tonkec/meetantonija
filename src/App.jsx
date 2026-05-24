@@ -46,8 +46,12 @@ function Layout() {
   }
 
   const location = useLocation()
-  const introAnimationDuration = 1500
-  const outletTransitionDuration = 1000
+  const isMobileViewport =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(max-width: 768px)').matches
+  const introAnimationDuration = isMobileViewport ? 700 : 1500
+  const introExitDelay = isMobileViewport ? 250 : 1000
+  const outletTransitionDuration = isMobileViewport ? 250 : 1000
 
   useEffect(() => {
     if (value) {
@@ -58,24 +62,32 @@ function Layout() {
   }, [value])
 
   useEffect(() => {
-    setTimeout(() => {
+    let outletTimer
+    const introTimer = setTimeout(() => {
       setIsIntroAnimationActive(false)
 
-      setTimeout(() => {
+      outletTimer = setTimeout(() => {
         setIsOutletLoaded(true)
       }, outletTransitionDuration)
-    }, introAnimationDuration + 1000) // delay for the fade out animation
-  }, [])
+    }, introAnimationDuration + introExitDelay)
+
+    return () => {
+      clearTimeout(introTimer)
+      clearTimeout(outletTimer)
+    }
+  }, [introAnimationDuration, introExitDelay, outletTransitionDuration])
 
   useEffect(() => {
     setIsOutletLoaded(false)
   }, [location.pathname])
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setIsOutletLoaded(true)
     }, outletTransitionDuration)
-  }, [location.pathname])
+
+    return () => clearTimeout(timer)
+  }, [location.pathname, outletTransitionDuration])
 
   if (isIntroAnimationActive) {
     return <IntroAnimation />

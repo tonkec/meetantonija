@@ -50,6 +50,16 @@ input:focus {
   animation: fadeIn 1s ease-in-out forwards;
 }
 
+@media (max-width: 768px) {
+  .fadeOut {
+    animation-duration: 0.25s;
+  }
+
+  .fadeIn {
+    animation-duration: 0.2s;
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

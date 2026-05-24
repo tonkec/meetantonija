@@ -18,18 +18,37 @@
       color: var(--color-black);
     }
 
+    .navigation .nav-search-button span {
+      color: var(--color-white);
+    }
+
     .header-wrapper,
     .homepage-content {
       background-color: var(--color-black);
     }
 
     .header-wrapper,
+    .home-section,
+    .about-section,
+    .testimonials-section,
+    .code-lab-section,
+    .events-section,
+    .videos-section,
+    .hire-me-section,
     .services-section,
     .aside-section,
-    .hire-me-card,
+    .posts-page,
     .posts-hero,
+    .project-overview,
+    .project-description,
+    .project-tldr,
+    .project-steps,
+    .project-slider-section,
     .project-hero,
+    .cv-history,
     .cv-hero,
+    .post-page,
+    .post-related,
     .post-hero,
     .page-transition,
     .intro-animation {
@@ -208,6 +227,29 @@
       strong {
         color: var(--color-white);
       }
+    }
+
+    .hire-me-card {
+      background: #171717;
+      background-color: #171717;
+      border-color: rgba(255, 255, 255, 0.72);
+      box-shadow: 14px 14px 0 rgba(255, 255, 255, 0.18);
+      color: var(--color-white);
+
+      h2,
+      p,
+      span {
+        color: var(--color-white);
+      }
+
+      .section-kicker {
+        color: var(--color-pink-light);
+      }
+    }
+
+    .home-section {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
     }
   }
 }
