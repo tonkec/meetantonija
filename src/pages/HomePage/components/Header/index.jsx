@@ -9,33 +9,15 @@ const Header = () => {
     <div className="header-wrapper hero-shell">
       <header className="container hero">
         <div className="hero-copy">
-          <p className="hero-eyebrow">Independent frontend engineer</p>
-          <h1>
-            I build thoughtful React products with a sharp eye for UX.
-          </h1>
+          <p className="hero-eyebrow">Frontend engineer</p>
+          <h1>React interfaces with product sense.</h1>
           <p className="hero-description">
             I&apos;m <span className="accent">Antonija</span>, a React developer
             from <span data-tooltip-id="my-tooltip">Sveta Nedelja</span>,
-            Croatia. I help teams turn complex product ideas into fast,
-            maintainable interfaces.
+            Croatia.
           </p>
 
           <ActionButtons />
-
-          <div className="hero-stats" aria-label="Experience summary">
-            <div>
-              <strong>10+</strong>
-              <span>years frontend</span>
-            </div>
-            <div>
-              <strong>7+</strong>
-              <span>years React</span>
-            </div>
-            <div>
-              <strong>CET</strong>
-              <span>remote friendly</span>
-            </div>
-          </div>
         </div>
 
         <div className="hero-visual" aria-label="Antonija profile">
@@ -46,13 +28,13 @@ const Header = () => {
               className="hero-photo"
             />
             <div className="hero-card-note">
-              <span>Currently crafting</span>
-              <strong>accessible product UIs</strong>
+              <span>Currently</span>
+              <strong>crafting UIs</strong>
             </div>
           </div>
           <div className="hero-floating-card">
             <span>Available for</span>
-            <strong>React apps, design systems and product polish</strong>
+            <strong>React work</strong>
           </div>
         </div>
 

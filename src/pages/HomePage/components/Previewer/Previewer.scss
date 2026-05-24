@@ -1,56 +1,162 @@
 @import '../../../../styles/mq.scss';
 @import '../../../../styles/transitions.scss';
 
-iframe {
-  border: none;
-  border-radius: var(--border-radius);
+.code-lab-section {
+  background:
+    radial-gradient(circle at 10% 15%, rgba(169, 228, 255, 0.8), transparent 22rem),
+    radial-gradient(circle at 86% 8%, rgba(249, 0, 147, 0.13), transparent 24rem),
+    var(--color-white);
+  padding: 5rem 0;
 }
 
-.codepen {
-  margin-top: 50px;
-  flex-direction: column;
+.code-lab-header {
+  align-items: end;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  margin-bottom: 2rem;
 
-  @include breakpoint(md) {
-    flex-direction: row;
-  }
-  button {
-    position: relative;
-    width: 80%;
-    @include transition((transform, background-color, color));
-    background-color: var(--color-pink-light);
-    color: var(--color-black);
-
-    &:hover,
-    &.active {
-      transform: translateX(10px);
-      background-color: var(--color-pink);
-      color: var(--color-white);
-
-      .icon {
-        color: var(--color-white);
-      }
-    }
-
-    .icon {
-      color: var(--color-black);
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 20px;
-      font-size: 3rem;
-    }
+  @include breakpoint(lg) {
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
   }
 
-  .preview {
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 100px;
-    position: relative;
+  h2 {
+    font-size: clamp(2.3rem, 6vw, 5.4rem);
+    letter-spacing: -0.08em;
+    line-height: 0.95;
+    padding: 0;
+  }
 
-    @include breakpoint(md) {
-      width: 80%;
-      margin-top: 0;
-      margin-bottom: 0;
+  p:not(.section-kicker) {
+    line-height: 1.8;
+  }
+}
+
+.code-lab-grid {
+  align-items: stretch;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+
+  @include breakpoint(lg) {
+    grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+  }
+}
+
+.experiment-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.experiment-card {
+  @include transition((transform, background-color, box-shadow, color));
+  align-items: center;
+  background-color: var(--color-pink-light);
+  border: 2px solid var(--color-black);
+  border-radius: calc(var(--border-radius) * 4);
+  box-shadow: 6px 6px 0 transparent;
+  color: var(--color-black);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  padding: 1rem;
+  text-align: left;
+  width: 100%;
+
+  &:hover,
+  &:focus,
+  &.active {
+    background-color: var(--color-pink);
+    box-shadow: 8px 8px 0 var(--color-black);
+    color: var(--color-white);
+    transform: translate(-4px, -4px);
+  }
+
+  strong,
+  span {
+    display: block;
+  }
+
+  strong {
+    font-size: 1.15rem;
+    line-height: 1.2;
+    margin-bottom: 0.3rem;
+  }
+
+  span span {
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+}
+
+.experiment-number {
+  color: currentColor;
+  font-size: 0.8rem;
+  font-weight: 700;
+  opacity: 0.72;
+}
+
+.experiment-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.preview-panel {
+  background-color: var(--color-black);
+  border: 2px solid var(--color-black);
+  border-radius: calc(var(--border-radius) * 5);
+  box-shadow: 14px 14px 0 var(--color-sky-blue);
+  overflow: hidden;
+  position: relative;
+
+  iframe {
+    background-color: #263640;
+    border: none;
+    display: block;
+  }
+}
+
+.preview-toolbar {
+  align-items: center;
+  background-color: var(--color-white);
+  border-bottom: 2px solid var(--color-black);
+  color: var(--color-black);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr auto 1fr;
+  padding: 0.85rem 1rem;
+
+  div {
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  div span {
+    background-color: var(--color-pink);
+    border: 2px solid var(--color-black);
+    border-radius: 50%;
+    height: 0.8rem;
+    width: 0.8rem;
+  }
+
+  > span {
+    font-size: 0.78rem;
+    justify-self: end;
+    text-transform: uppercase;
+  }
+}
+
+@include breakpoint(md, max) {
+  .code-lab-section {
+    padding: 3.5rem 0;
+  }
+
+  .preview-toolbar {
+    grid-template-columns: 1fr;
+
+    strong,
+    > span {
+      justify-self: start;
     }
   }
 }

@@ -1,0 +1,51 @@
+@import '../../../../styles/mq.scss';
+
+.videos-section {
+  background-color: var(--color-pink-light);
+  padding: 5rem 0;
+}
+
+.videos-heading {
+  max-width: 760px;
+
+  h2 {
+    font-size: clamp(2.2rem, 5vw, 4.8rem);
+    letter-spacing: -0.07em;
+    line-height: 1;
+    padding: 0;
+  }
+}
+
+.tutorial-card {
+  background-color: var(--color-sky-blue);
+  border: 2px solid var(--color-black);
+  border-radius: calc(var(--border-radius) * 5);
+  box-shadow: 12px 12px 0 var(--color-black);
+  margin-top: 2rem;
+  overflow: hidden;
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.tutorial-copy {
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  margin-bottom: 1rem;
+
+  @include breakpoint(md) {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  p {
+    color: var(--color-black);
+    line-height: 1.7;
+    max-width: 720px;
+  }
+}
+
+@include breakpoint(md, max) {
+  .videos-section {
+    padding: 3.5rem 0;
+  }
+}

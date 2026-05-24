@@ -2,26 +2,18 @@ import './Dashboard.scss'
 
 const Dashboard = ({ title }) => {
   const fakeTitle = title || 'Dashboard'
+  const links = [fakeTitle, 'Users', 'Posts', 'Categories', 'Settings']
+
   return (
     <div className="dashboard flex-responsive">
       <aside>
         <nav>
           <ul>
-            <li>
-              <a href="#">{fakeTitle}</a>
-            </li>
-            <li>
-              <a href="#">Users</a>
-            </li>
-            <li>
-              <a href="#">Posts</a>
-            </li>
-            <li>
-              <a href="#">Categories</a>
-            </li>
-            <li>
-              <a href="#">Settings</a>
-            </li>
+            {links.map((link) => (
+              <li key={link}>
+                <button type="button">{link}</button>
+              </li>
+            ))}
           </ul>
         </nav>
       </aside>

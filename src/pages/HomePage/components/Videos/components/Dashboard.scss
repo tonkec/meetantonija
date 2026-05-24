@@ -6,8 +6,11 @@
 }
 
 .video-dashboard {
-  max-height: 400px;
+  border: 2px solid var(--color-black);
+  border-radius: calc(var(--border-radius) * 3);
+  max-height: 430px;
   overflow: hidden;
+
   .dashboard {
     min-height: 50vh;
   }
@@ -34,13 +37,19 @@
     border-top-left-radius: var(--border-radius);
   }
 
-  aside a {
+  aside button {
+    background-color: transparent;
+    border: 0;
     color: var(--color-white);
-    text-decoration: none;
+    display: block;
     font-size: 1rem;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
     @include transition(color);
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: var(--color-accent);
     }
   }
@@ -117,7 +126,7 @@
       height: auto;
     }
 
-    aside a {
+    aside button {
       font-size: 1rem;
     }
 
