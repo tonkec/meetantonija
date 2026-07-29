@@ -163,7 +163,7 @@ const notes = [
       'I know what lexical means in lingustics, but what about Javascript?',
     id: 2,
     intro:
-      'Of course I know what lexical means, this is one of the rare cases where my diploma in linguistics helps me 💪.',
+      'Of course I know what lexical means, this is one of the rare cases where my diploma in linguistics helps me.',
   },
   {
     date: '2022-04-14',

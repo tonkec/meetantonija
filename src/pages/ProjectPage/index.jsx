@@ -9,9 +9,11 @@ import {
   scrollToTheElement,
 } from 'utils'
 import Skills from 'components/Skills'
-import { Helmet } from 'react-helmet'
+import Seo from 'components/Seo'
 import ProjectPhotos from 'components/ProjectPhotos'
 import RecordNotFound from 'components/RecordNotFound'
+import EngineeringStories from 'components/EngineeringStories'
+import caseStudies from 'data/caseStudies'
 import './ProjectPage.scss'
 
 const getTeamSize = (team) => {
@@ -26,10 +28,16 @@ const getTeamSize = (team) => {
   }
 }
 
+const architectureLabels = {
+  frontend: 'Frontend',
+  backend: 'Backend',
+  infrastructure: 'Infrastructure',
+}
+
 const ProjectPage = () => {
   const { title } = useParams()
   const project = projects.find(
-    (project) => removeSpacesAndDashes(project.title) === title
+    (entry) => removeSpacesAndDashes(entry.title) === title
   )
 
   if (!project) {
@@ -37,23 +45,58 @@ const ProjectPage = () => {
   }
 
   const isModeMobile = project.id === 11
+  const isDuga = project.title === 'Duga'
+  const caseStudy = caseStudies.find(
+    (study) =>
+      removeSpacesAndDashes(study.title) ===
+      removeSpacesAndDashes(project.title)
+  )
+  const outcomes = caseStudy?.outcomes || project.outcomes || []
+  const keyFeatures = caseStudy?.keyFeatures || []
+  const architecture = caseStudy?.architecture
+  const repositoryLinks =
+    caseStudy?.repositoryLinks ||
+    (project.repositoryUrl || caseStudy?.repositoryUrl
+      ? [
+          {
+            label: 'GitHub repository',
+            href: project.repositoryUrl || caseStudy.repositoryUrl,
+          },
+        ]
+      : [])
+  const galleryPhotos =
+    caseStudy?.photos?.length > 0
+      ? caseStudy.photos
+      : project.photos || []
+  const showGallery = !isModeMobile && galleryPhotos.length > 0
 
   return (
     <>
-      <Helmet>
-        <title>Meetantonija | {project.title}</title>
-      </Helmet>
+      <Seo
+        title={`${project.title} — Antonija Simić`}
+        description={project.description?.slice(0, 160) || project.headline}
+        path={`/project/${title}`}
+        type="article"
+      />
       <header className="project-hero">
         <div className="container project-hero-grid">
           <div className="project-hero-copy">
-            <p className="section-kicker">Project case study</p>
+            <p className="section-kicker">
+              {caseStudy?.personal ? 'Personal product' : 'Project case study'}
+            </p>
             <h1>{project.title}</h1>
-            <p>{project.headline}</p>
+            <p>{caseStudy?.summary || project.headline}</p>
+            {caseStudy?.confidential ? (
+              <p className="project-confidential">
+                Some product details remain confidential.
+              </p>
+            ) : null}
           </div>
           <div className="project-hero-card">
             <span>{project.position}</span>
             <strong>{formatProjectPeriod(project)}</strong>
             <button
+              type="button"
               className="primary"
               onClick={() => scrollToTheElement('tldr')}
             >
@@ -69,7 +112,7 @@ const ProjectPage = () => {
             <span>Role</span>
             <div>
               <h3>Position</h3>
-              <p>{project.position}</p>
+              <p>{caseStudy?.role || project.position}</p>
             </div>
             <div>
               <h3>Timeline</h3>
@@ -80,16 +123,32 @@ const ProjectPage = () => {
           <article>
             <span>Stack</span>
             <div>
-              <h3>Website</h3>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noreferrer"
-                role="button"
-                className="outlined inline-block"
-              >
-                Open website
-              </a>
+              <h3>Links</h3>
+              <div className="project-link-row">
+                {project.link ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="primary inline-block"
+                  >
+                    View project
+                  </a>
+                ) : null}
+                {!isDuga
+                  ? repositoryLinks.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="outlined inline-block"
+                      >
+                        {link.label}
+                      </a>
+                    ))
+                  : null}
+              </div>
             </div>
             <div>
               <h3>Technologies</h3>
@@ -116,32 +175,160 @@ const ProjectPage = () => {
 
       <section className="project-description">
         <div className="container project-description-card">
-          <p className="section-kicker">Context</p>
-          <h2>What this project was about.</h2>
-          <p>{project.description}</p>
+          <p className="section-kicker">Overview</p>
+          <h2>What needed solving.</h2>
+          <p>{caseStudy?.context || project.description}</p>
+          {project.problem ? <p>{project.problem}</p> : null}
         </div>
       </section>
 
+      {caseStudy?.challenges?.length ? (
+        <section className="project-description">
+          <div className="container project-description-card">
+            <p className="section-kicker">Engineering challenges</p>
+            <h2>Where the hard parts were.</h2>
+            <ul className="project-outcomes">
+              {caseStudy.challenges.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ) : null}
+
+      {caseStudy?.solution?.length ? (
+        <section className="project-description">
+          <div className="container project-description-card">
+            <p className="section-kicker">Selected contributions</p>
+            <h2>What changed in the product.</h2>
+            <ul className="project-outcomes">
+              {caseStudy.solution.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ) : null}
+
+      {caseStudy?.slug ? (
+        <EngineeringStories
+          projectSlug={caseStudy.slug}
+          id={`${caseStudy.slug}-engineering-stories`}
+          heading={`Selected ${caseStudy.title} engineering stories.`}
+          intro="Problem, approach and outcome for the work that mattered most — kept short enough to scan."
+          showProjectLinks={false}
+        />
+      ) : null}
+
+      {keyFeatures.length > 0 ? (
+        <section className="project-description">
+          <div className="container project-description-card">
+            <p className="section-kicker">Key features</p>
+            <h2>What users can do.</h2>
+            <ul className="project-outcomes">
+              {keyFeatures.map((feature) => (
+                <li key={feature}>{feature}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ) : null}
+
+      {architecture ? (
+        <section className="project-description">
+          <div className="container project-description-card">
+            <p className="section-kicker">Technical architecture</p>
+            <h2>How the system is structured.</h2>
+            <div className="project-architecture-grid">
+              {Object.entries(architecture).map(([key, items]) =>
+                items?.length ? (
+                  <article key={key}>
+                    <h3>{architectureLabels[key] || key}</h3>
+                    <ul className="project-outcomes">
+                      {items.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </article>
+                ) : null
+              )}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       <Steps
         steps={project.responsibilities}
-        headline="✅ These were the tasks I had"
+        headline="These were the tasks I had"
       />
 
-      {!isModeMobile && project.photos.length > 0 && (
+      {showGallery ? (
         <section className="project-gallery">
           <div className="container">
             <p className="section-kicker">Product snapshots</p>
             <h2>
-              {project.photos.length > 1
+              {galleryPhotos.length > 1
                 ? 'Here are some photos of the app'
-                : 'Here is a photo of the app'}
+                : 'Product preview'}
             </h2>
           </div>
           <div className="small-container">
-            <ProjectPhotos project={project} />
+            <ProjectPhotos
+              project={{ ...project, photos: galleryPhotos }}
+            />
           </div>
         </section>
-      )}
+      ) : null}
+
+      {outcomes.length > 0 ? (
+        <section className="project-description">
+          <div className="container project-description-card">
+            <p className="section-kicker">Outcomes</p>
+            <h2>What the work improved.</h2>
+            <ul className="project-outcomes">
+              {outcomes.map((outcome) => (
+                <li key={outcome}>{outcome}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ) : null}
+
+      {!isDuga && (project.link || repositoryLinks.length > 0) ? (
+        <section className="project-description" id="project-cta">
+          <div className="container project-description-card project-cta-card">
+            <p className="section-kicker">Explore</p>
+            <h2>View the product.</h2>
+            <div className="project-link-row">
+              {project.link ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="primary inline-block"
+                >
+                  View project
+                </a>
+              ) : null}
+              {repositoryLinks.map((link) => (
+                <a
+                  key={`cta-${link.href}`}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="outlined inline-block"
+                >
+                  {link.label.includes('Backend')
+                    ? 'Backend repository'
+                    : link.label.includes('Frontend')
+                      ? 'GitHub repository'
+                      : link.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="project-tldr" id="tldr">
         <div className="container">
@@ -150,14 +337,14 @@ const ProjectPage = () => {
           <div className="project-tldr-grid">
             <article>
               <h3>What I learned</h3>
-              <p>{project.learned}</p>
+              <p>{caseStudy?.learned || project.learned}</p>
             </article>
             <article>
               <h3>Hardest part</h3>
-              <p>{project.problem}</p>
+              <p>{caseStudy?.challenges?.[0] || project.problem}</p>
             </article>
             <article>
-              <h3>Manager</h3>
+              <h3>Context</h3>
               <p>{project.manager}</p>
             </article>
             <article>
@@ -169,7 +356,7 @@ const ProjectPage = () => {
       </section>
 
       <Slider
-        headline="🏢 Check out other projects"
+        headline="Other projects"
         items={projects.filter((p) => p.id !== project.id)}
       />
 

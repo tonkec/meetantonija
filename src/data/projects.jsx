@@ -8,57 +8,53 @@ const modeMobilePhoto =
 const projects = [
   {
     coverPhoto: modeMobileCover,
+    // PLACEHOLDER: replace generic photo with approved Trimbox product screenshots when available.
     photos: [modeMobilePhoto],
     location: 'Remote',
     company: 'Mode Mobile',
     title: 'Trimbox',
     headline: 'Trim your inbox with ease',
     skills:
-      'React Native, Typescript, Expo, EAS, Firebase, Jest, Maestro',
-    link: 'https://www.modemobile.com/',
+      'React Native, Typescript, Expo, EAS, Firebase, RevenueCat, Mixpanel, Jest, Maestro',
+    link: 'https://www.trimbox.io/',
     id: 11,
     description:
-      'Trimbox is Mode Mobile’s inbox-cleaning product. As a Senior Frontend Developer, I work across React Native feature development, paywalls and subscriptions, analytics, remote config, testing, and Expo/EAS release workflows.',
+      'Trimbox is Mode Mobile’s subscription-based inbox product. As a Senior Frontend Developer on the React Native team, I contribute to production feature work across paywalls and subscriptions, app-open dialog coordination, analytics, Remote Config experiments, pricing validation, testing, and Expo/EAS release workflows — without claiming sole ownership of the product.',
     responsibilities: [
       {
         title: 'Paywall and subscriptions',
         description:
-          'Building and refining paywall and subscription flows so users can upgrade and manage plans smoothly inside the app.',
+          'Implementing subscription and paywall flows with RevenueCat, including coalescing deferred paywall intents so duplicate requests cannot open overlapping paywalls.',
       },
       {
-        title: 'Analytics',
+        title: 'App-open dialog coordination',
         description:
-          'Instrumenting product analytics to track user behaviour, funnel performance, and the impact of new features.',
+          'Coordinating privacy, pricing, survey and subscription UI through a shared popup flow so startup dialogs appear sequentially and do not race past auth or navigation changes.',
+      },
+      {
+        title: 'Analytics and experiments',
+        description:
+          'Integrating Mixpanel analytics and experiment eligibility so product behaviour can be measured and iterated on safely.',
       },
       {
         title: 'Firebase Remote Config',
         description:
-          'Using Firebase Remote Config to ship and iterate on in-app behaviour without waiting on a full app release.',
+          'Implementing Remote Config flags, defaults and safe fallbacks so paywalls, surveys and eligibility can change without a new app release.',
+      },
+      {
+        title: 'Pricing validation',
+        description:
+          'Hardening offerings and pricing presentation around currency precision, zero-decimal currencies and mismatched values so invalid checkout paths stay blocked.',
       },
       {
         title: 'Testing with Jest and Maestro',
         description:
-          'Writing and maintaining unit and end-to-end tests with Jest and Maestro to keep regressions in check.',
+          'Writing and maintaining unit and end-to-end tests with Jest and Maestro around critical purchase, deferred-paywall and race-condition scenarios.',
       },
       {
         title: 'Build and release with Expo/EAS',
         description:
-          'Owning parts of the build and release process with Expo and EAS, from packaging builds to shipping updates.',
-      },
-      {
-        title: 'React Native development',
-        description:
-          'Developing mobile UI and product flows in React Native with a focus on performance, polish, and maintainability.',
-      },
-      {
-        title: 'Architecture of new features',
-        description:
-          'Designing and implementing the architecture for new features so they fit cleanly into the existing codebase.',
-      },
-      {
-        title: 'Bug fixing and app stability',
-        description:
-          'Investigating production issues and hardening the app to improve reliability and day-to-day stability.',
+          'Supporting iOS and Android release-related work with Expo and EAS, including React Native dependency and platform upgrades.',
       },
       {
         title: 'Experimental products',
@@ -66,22 +62,104 @@ const projects = [
           'Contributing to experimental product work such as the Qualified Leads Survey and early planning for Trimbox Lite.',
       },
     ],
+    outcomes: [
+      'Improved reliability of subscription and app-open behaviour',
+      'Prevented overlapping user flows around paywalls and startup dialogs',
+      'Enabled safer remote configuration of product experiments',
+      'Increased test coverage for critical subscription behaviour',
+      'Reduced risk around pricing presentation',
+    ],
     from: 2026,
     fromMonth: 'March',
     methodology: 'Agile',
     position: 'Senior Frontend Developer',
     team: 100,
     learned:
-      'I am deepening my experience with React Native product work, subscription flows, Firebase Remote Config, Maestro testing, and Expo/EAS release pipelines.',
+      'I am deepening my experience with React Native product work, subscription flows, RevenueCat, Firebase Remote Config, Maestro testing, and Expo/EAS release pipelines.',
     conclusion:
-      'At Mode Mobile I contribute across the Trimbox stack — from React Native features and paywalls to analytics, testing, and release — while also helping shape experimental products like Qualified Leads Survey and Trimbox Lite.',
+      'At Mode Mobile I contribute across the Trimbox stack — from React Native features and paywalls to analytics, testing, and release — while helping keep complex product flows reliable in production.',
     collaboration: 'Slack, Jira, Google Meet',
     problem:
-      'The challenge is shipping polished subscription and product experiences in React Native while keeping the app stable, measurable, and ready to release through Expo/EAS.',
+      'The challenge is shipping polished subscription and product experiences in React Native while coordinating complex popups and navigation, keeping the app measurable, and staying ready to release through Expo/EAS.',
     manager: (
       <span>
         I am currently working with the Mode Mobile team on Trimbox as a Senior
         Frontend Developer.
+      </span>
+    ),
+  },
+  {
+    coverPhoto: '/projects/duga/illustration.png',
+    photos: [
+      '/projects/duga/dashboard.png',
+      '/projects/duga/settings.png',
+      '/projects/duga/report.png',
+      '/projects/duga/illustration.png',
+    ],
+    location: 'Remote',
+    company: 'Personal project',
+    title: 'Duga',
+    headline: 'Queer dating and community for the Balkans',
+    skills:
+      'React, TypeScript, Vite, React Query, Auth0, Socket.IO, Node.js, Express, PostgreSQL, Sequelize, Amazon S3, AWS Rekognition, Netlify, Heroku',
+    link: 'https://duga.chat/',
+    repositoryUrl: 'https://github.com/tonkec/duga_frontend_v2',
+    id: 12,
+    description:
+      'Duga is a queer dating and community application for the Balkans. As creator and lead full-stack engineer, I designed and built the product across a Vite/React/TypeScript frontend and an Express/PostgreSQL backend — including Auth0 authentication, real-time chat, moderated photo uploads, profiles and a community forum. Occasional collaborators contributed over time; I remain the primary maintainer.',
+    responsibilities: [
+      {
+        title: 'Full-stack product ownership',
+        description:
+          'Designed and built the current frontend and backend as the primary maintainer, from product flows and API design through deployment.',
+      },
+      {
+        title: 'Authentication and onboarding',
+        description:
+          'Integrated Auth0 with app-session enforcement, email verification and route guards that lock the product until onboarding is complete.',
+      },
+      {
+        title: 'Real-time messaging',
+        description:
+          'Implemented Socket.IO chat with reactions, typing indicators, mentions, media sharing and group-chat admin flows.',
+      },
+      {
+        title: 'Photo uploads and moderation',
+        description:
+          'Built S3 uploads with Sharp preprocessing and AWS Rekognition moderation for profile and chat media.',
+      },
+      {
+        title: 'Community forum',
+        description:
+          'Shipped forum categories, questions, answers, votes, replies, reactions and image support.',
+      },
+      {
+        title: 'Deployment',
+        description:
+          'Deployed the frontend on Netlify and the API on Heroku with staging and production environments.',
+      },
+    ],
+    outcomes: [
+      'Shipped a production full-stack product at duga.chat',
+      'Connected auth, realtime chat, moderated uploads and forum into one maintainable system',
+      'Established staging and production deployment paths for frontend and API',
+    ],
+    from: 2024,
+    fromMonth: 'December',
+    methodology: 'Kanban',
+    position: 'Creator & Lead Full-stack Engineer',
+    team: 3,
+    learned:
+      'Building Duga end to end taught me how frontend product flows and backend boundaries have to stay aligned — especially around auth sessions, realtime events and private media access.',
+    conclusion:
+      'Duga is a personal production product that shows how I design and ship a complete application — from React/TypeScript UI to Express/PostgreSQL API, realtime messaging and moderated media.',
+    collaboration: 'GitHub, Trello',
+    problem:
+      'The challenge was building a trustworthy queer meeting space as a full product: secure auth, private media, realtime chat and community discussion all had to work together reliably.',
+    manager: (
+      <span>
+        Personal project. I am the creator and primary maintainer, with
+        occasional contributions from collaborators over time.
       </span>
     ),
   },
@@ -426,66 +504,69 @@ const projects = [
     ),
   },
   {
-    coverPhoto: rootImageUrl + 'funderpro/tokens.jpg',
+    coverPhoto: '/projects/funderpro/login.png',
     photos: [
+      '/projects/funderpro/login.png',
       rootImageUrl + 'funderpro/1.png',
       rootImageUrl + 'funderpro/2.png',
       rootImageUrl + 'funderpro/3.png',
     ],
     location: 'Zagreb',
     from: 2023,
-    to: 2026,
-    toMonth: 'March',
+    fromMonth: 'September',
     company: 'Mochalabs',
     id: 10,
-    title: 'Funder Pro',
+    title: 'FunderPro',
     methodology: 'Kanban',
     headline: 'Make your trading exceptional',
-    skills: 'Javascript, React, Typescript, React Query, Zod',
-    link: 'https://prop.funderpro.com/',
+    skills:
+      'React, TypeScript, React Query, JavaScript, CSS, Frontend Architecture, API Integration',
+    link: 'https://funderpro.com/',
     responsibilities: [
       {
-        title: 'Implementation of Dynamic and Responsive User Interfaces',
+        title: 'Reducing redundant API traffic',
         description:
-          'Implemented dynamic and responsive user interfaces using React, leveraging its component-based architecture to develop modular and reusable UI components.',
+          'Introduced React Query, reworked data fetching and improved caching — reducing redundant API calls by 40%.',
       },
       {
-        title: 'Utilization of TypeScript for Enhanced Development',
+        title: 'Onboarding and KYC',
         description:
-          'Utilized TypeScript to bring type safety and enhanced tooling to the development process, identifying and preventing potential errors early in the development lifecycle.',
+          'Enhanced sign-up, KYC and onboarding so identity verification stayed clear while supporting business requirements.',
       },
       {
-        title: 'Integration of React Query for Efficient Data Fetching',
+        title: 'Product experience',
         description:
-          'Integrated React Query into the Funder Pro platform to facilitate efficient data fetching and state management, optimizing network requests and improving platform performance.',
+          'Improved usability using insights from user interviews, simplifying interfaces and clarifying important workflows.',
       },
       {
-        title: 'Driving Innovation',
+        title: 'New fintech capabilities',
         description:
-          'Contributed to driving innovation and delivering a best-in-class trading experience to users by harnessing the power of React, TypeScript, and React Query.',
+          'Extended the mature production application with an affiliate system, coupon creation and related frontend functionality.',
       },
       {
-        title: 'Delivering Best-in-Class Trading Experience',
+        title: 'Frontend engineering standards',
         description:
-          'Contributed to delivering a seamless trading experience for users by implementing dynamic and responsive user interfaces with React, ensuring type safety and cleaner code with TypeScript, and optimizing data fetching and state management with React Query.',
+          'Hosted weekly knowledge-sharing sessions on React, TypeScript, JavaScript and React Query to help the team ship faster.',
       },
-      {
-        title: 'Collaboration with Cross-Functional Teams',
-        description:
-          'Collaborated closely with cross-functional teams to develop cutting-edge features and enhancements, ensuring seamless integration of new technologies and functionalities.',
-      },
+    ],
+    outcomes: [
+      'Reduced redundant API calls by 40%',
+      'Made onboarding and KYC flows clearer for users',
+      'Improved usability of important product workflows',
+      'Expanded the platform with affiliate and coupon capabilities',
+      'Helped frontend engineers become more productive through recurring knowledge sharing',
     ],
     collaboration: 'Jira, Slack, Gitlab, Google Meet, Notion',
     learned:
-      'I learned how to work with React Query, which was a new library for me. Working with Funderpro improved my Typescript skills, I learned about new features and how to use them efficiently.',
+      'Shipping inside a mature fintech product reinforced how caching, onboarding clarity and shared engineering standards compound — especially when React Query becomes the default way the team thinks about server state.',
     position: 'Senior React Developer',
     team: 100,
     conclusion:
-      'My role in enhancing the Funder Pro trading platform has been pivotal in elevating its performance, reliability, and user satisfaction. By implementing dynamic and responsive user interfaces with React, ensuring type safety and cleaner code with TypeScript, and optimizing data fetching and state management with React Query, I have contributed to delivering a seamless trading experience for our users. These contributions have played a key role in driving innovation and establishing Funder Pro as a leading platform in the trading industry.',
+      'At FunderPro I focused on production frontend problems: cutting redundant API traffic, clarifying onboarding and KYC, improving usability from user interviews, extending the platform with affiliate and coupon capabilities, and raising frontend standards through weekly knowledge sharing.',
     description:
-      'Funderpro is a prop firm. I played a key role in enhancing its performance and user experience. My responsibilities included implementing dynamic and responsive user interfaces, utilizing TypeScript for type safety, and integrating React Query for efficient data fetching and state management.',
+      'FunderPro is a production fintech platform. As a Senior React Developer I improved core user flows, frontend architecture, application performance and developer productivity while continuously shipping new product features.',
     problem:
-      'The most challenging part of the project was integrating React Query into the Funder Pro platform to facilitate efficient data fetching and state management. I had to optimize network requests and improve platform performance while ensuring seamless integration of new technologies and functionalities.',
+      'The platform needed more efficient data fetching, clearer onboarding and KYC, more usable product workflows, room to grow with new fintech capabilities, and stronger shared frontend knowledge across the team.',
     manager: (
       <span>
         My manager was{' '}
@@ -497,10 +578,7 @@ const projects = [
         >
           Mateo Simonović
         </a>
-        , who provided valuable guidance and support throughout the project. He
-        was instrumental in helping me navigate the complexities of the Funder
-        Pro platform and ensuring the successful implementation of dynamic and
-        responsive user interfaces with React, TypeScript, and React Query.
+        , who provided valuable guidance and support throughout the project.
       </span>
     ),
   },

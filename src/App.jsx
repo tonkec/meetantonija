@@ -1,5 +1,5 @@
 import './App.scss'
-import { useState, useEffect, useMemo, useCallback } from 'react'
+import { useState, useEffect, useLayoutEffect, useMemo, useCallback } from 'react'
 import { Routes, Route, Outlet, useLocation } from 'react-router-dom'
 import routes from './routes'
 import Footer from './components/Footer'
@@ -53,7 +53,7 @@ function Layout() {
   const introExitDelay = isMobileViewport ? 120 : 350
   const outletTransitionDuration = isMobileViewport ? 240 : 700
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (value) {
       document.documentElement.classList.add('dark-theme')
     } else {
@@ -98,7 +98,10 @@ function Layout() {
   }
 
   return (
-    <div className="fadeIn">
+    <div className="fadeIn app-shell">
+      <a className="skip-link" href="#main-content">
+        Skip to main content
+      </a>
       <ScrollToTop />
       <SearchBar
         closeNavigation={closeNavigation}
@@ -108,7 +111,7 @@ function Layout() {
         isNavigationOpen={isNavigationOpen}
       />
       <Navigation openNavigation={openNavigation} />
-      <main>
+      <main id="main-content" className="app-shell__main">
         <Outlet />
       </main>
       <Footer />

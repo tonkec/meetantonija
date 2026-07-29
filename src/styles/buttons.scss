@@ -5,86 +5,137 @@ button {
 }
 
 button,
+a.primary,
+a.outlined,
+a.secondary,
+a.ternary,
+a.transparent,
+a.dark,
 a[role='button'],
 *[role='button'],
 input[type='submit'] {
-  font-family: var(--font-family);
-  padding: calc(var(--button-spacing) / 2) var(--button-spacing);
-  border-radius: var(--border-radius);
+  align-items: center;
   border: none;
+  border-radius: var(--border-radius);
   cursor: pointer;
+  display: inline-flex;
+  font-family: var(--font-family);
+  justify-content: center;
+  padding: calc(var(--button-spacing) / 2) var(--button-spacing);
+  text-decoration: none;
   transition:
     background-color 0.3s ease-in-out,
     color 0.3s ease-in-out,
     outline 0.3s ease-in-out;
-  text-decoration: none;
 
   &:disabled {
     cursor: not-allowed;
     opacity: 0.5;
   }
+}
 
-  &.primary {
-    background-color: var(--color-pink);
-    color: var(--color-white);
+button.primary,
+a.primary,
+a[role='button'].primary,
+*[role='button'].primary,
+input[type='submit'].primary {
+  background-color: var(--color-pink);
+  color: var(--color-white);
 
-    &:hover,
-    &:focus {
-      outline: none;
-      background-color: var(--color-pink-dark);
-    }
-  }
-
-  &.secondary {
+  &:hover,
+  &:focus {
     background-color: var(--color-pink-dark);
-    color: var(--color-black);
-
-    &:hover,
-    &:focus {
-      outline: none;
-      background-color: var(--color-sky-blue);
-      color: var(--color-black);
-    }
+    outline: none;
   }
+}
 
-  &.ternary {
+button.secondary,
+a.secondary,
+a[role='button'].secondary,
+*[role='button'].secondary,
+input[type='submit'].secondary {
+  background-color: var(--color-pink-dark);
+  color: var(--color-black);
+
+  &:hover,
+  &:focus {
     background-color: var(--color-sky-blue);
     color: var(--color-black);
-
-    &:hover,
-    &:focus {
-      outline: none;
-      background-color: var(--color-dark-blue);
-      color: var(--color-white);
-    }
+    outline: none;
   }
+}
 
-  &.transparent {
-    background-color: transparent;
-    color: var(--color-black);
+button.ternary,
+a.ternary,
+a[role='button'].ternary,
+*[role='button'].ternary,
+input[type='submit'].ternary {
+  background-color: var(--color-sky-blue);
+  color: var(--color-black);
 
-    &:hover,
-    &:focus {
-      outline: none;
-      background-color: var(--color-sky-blue);
-    }
-  }
-
-  &.dark {
-    background-color: #000;
+  &:hover,
+  &:focus {
+    background-color: var(--color-dark-blue);
     color: var(--color-white);
+    outline: none;
   }
+}
 
-  &.outlined {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-pink);
-    color: var(--color-pink);
+button.transparent,
+a.transparent,
+a[role='button'].transparent,
+*[role='button'].transparent,
+input[type='submit'].transparent {
+  background-color: transparent;
+  color: var(--color-black);
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-sky-blue);
+    outline: none;
+  }
+}
+
+button.dark,
+a.dark,
+a[role='button'].dark,
+*[role='button'].dark,
+input[type='submit'].dark {
+  background-color: #000;
+  color: var(--color-white);
+}
+
+button.outlined,
+a.outlined,
+a[role='button'].outlined,
+*[role='button'].outlined,
+input[type='submit'].outlined {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-pink);
+  color: var(--color-pink);
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-pink-light);
+    color: var(--color-black);
+    outline: none;
+  }
+}
+
+.dark-theme {
+  button.outlined,
+  a.outlined,
+  a[role='button'].outlined,
+  *[role='button'].outlined,
+  input[type='submit'].outlined {
+    background-color: transparent;
+    border-color: var(--color-pink);
+    color: var(--color-white);
 
     &:hover,
     &:focus {
-      outline: none;
-      background-color: var(--color-pink-light);
-      color: var(--color-black);
+      background-color: var(--color-pink);
+      color: var(--color-white);
     }
   }
 }

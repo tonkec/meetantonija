@@ -36,6 +36,7 @@
 
 .event-button {
   @include transition((transform, background-color, box-shadow, color));
+  align-items: start;
   background-color: var(--color-pink-light);
   border: 2px solid var(--color-black);
   border-radius: calc(var(--border-radius) * 4);
@@ -43,6 +44,8 @@
   color: var(--color-black);
   display: grid;
   gap: 0.45rem;
+  justify-content: start;
+  justify-items: start;
   padding: 1rem;
   text-align: left;
   width: 100%;
@@ -60,6 +63,8 @@
   strong,
   small {
     display: block;
+    text-align: left;
+    width: 100%;
   }
 
   span,

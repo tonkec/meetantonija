@@ -1,6 +1,7 @@
 @import '../../styles/mq.scss';
 
 footer {
+  flex-shrink: 0;
   padding: 1rem 0 4rem;
   background-color: var(--color-white);
   color: var(--color-black);
@@ -19,6 +20,8 @@ footer {
   align-items: center;
   display: flex;
   gap: 1rem;
+  min-height: 0;
+  overflow: visible;
 
   img,
   svg {

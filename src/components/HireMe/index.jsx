@@ -1,33 +1,18 @@
-import { Tooltip } from 'react-tooltip'
-import ButtonCopy from 'components/ButtonCopy'
+import ContactForm from 'components/ContactForm'
 import './HireMe.scss'
 
-const HireMe = () => {
+/**
+ * Contact section used on homepage and other pages.
+ */
+const HireMe = ({ className = '' }) => {
   return (
-    <section className="hire-me-section">
+    <section
+      className={`hire-me-section ${className}`.trim()}
+      id="contact"
+    >
       <div className="container">
         <div className="hire-me-card">
-          <p className="section-kicker">Let&apos;s work together</p>
-          <h2>Have a React project that needs a careful frontend eye?</h2>
-          <p>
-            Send me a short note by <span data-tooltip-id="email">email</span>.
-            I&apos;ll reply with next steps if it sounds like a good fit.
-          </p>
-
-          <Tooltip
-            id="email"
-            style={{
-              backgroundColor: 'var(--color-white)',
-              maxWidth: '400px',
-              color: 'var(--color-black)',
-            }}
-          >
-            Email is the best way to reach me, no phone calls please 🙏
-          </Tooltip>
-
-          <div className="hire-me-action">
-            <ButtonCopy text="Get in Touch" />
-          </div>
+          <ContactForm showIntro />
         </div>
       </div>
     </section>

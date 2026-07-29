@@ -48,6 +48,9 @@ const Image = ({
         className={backgroundImageClassName}
         style={{ backgroundImage: `url(${src})`, ...style }}
         onClick={onClick}
+        role={alt ? 'img' : undefined}
+        aria-label={alt || undefined}
+        aria-hidden={alt ? undefined : true}
       ></div>
     )
   }

@@ -41,7 +41,7 @@ const Pagination = ({
 }) => {
   const { width } = useWindowSize()
 
-  // ✅ make URL changes reactive (pushState doesn't re-render by itself)
+  // Make URL changes reactive (pushState doesn't re-render by itself)
   const [locationSearch, setLocationSearch] = useState(window.location.search)
 
   useEffect(() => {

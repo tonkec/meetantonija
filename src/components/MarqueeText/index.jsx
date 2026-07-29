@@ -8,10 +8,12 @@ import {
   useMotionValue,
   useVelocity,
   useAnimationFrame,
+  useReducedMotion,
 } from 'framer-motion'
 import { wrap } from '@motionone/utils'
 
 export default function MarqueeText({ children, baseVelocity = 100 }) {
+  const shouldReduceMotion = useReducedMotion()
   const baseX = useMotionValue(0)
   const { scrollY } = useScroll()
   const scrollVelocity = useVelocity(scrollY)
@@ -27,6 +29,10 @@ export default function MarqueeText({ children, baseVelocity = 100 }) {
 
   const directionFactor = useRef(1)
   useAnimationFrame((t, delta) => {
+    if (shouldReduceMotion) {
+      return
+    }
+
     let moveBy = directionFactor.current * baseVelocity * (delta / 1000)
 
     if (velocityFactor.get() < 0) {
@@ -40,15 +46,21 @@ export default function MarqueeText({ children, baseVelocity = 100 }) {
     baseX.set(baseX.get() + moveBy)
   })
 
-  const spanRef = useRef(null)
+  if (shouldReduceMotion) {
+    return (
+      <div className="parallax parallax--static">
+        <div className="scroller">
+          <span>{children}</span>
+        </div>
+      </div>
+    )
+  }
 
   return (
-    <div className="parallax">
+    <div className="parallax" aria-hidden="true">
       <motion.div className="scroller" style={{ x }}>
         {Array.from({ length: 20 }).map((_, i) => (
-          <span key={i} ref={i === 0 ? spanRef : null}>
-            {children}
-          </span>
+          <span key={i}>{children}</span>
         ))}
       </motion.div>
     </div>

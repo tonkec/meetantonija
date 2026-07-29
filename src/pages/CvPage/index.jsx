@@ -3,8 +3,8 @@ import { useSearchParams } from 'react-router-dom'
 import { arrayHasFullString } from 'utils'
 import CvProject from './components/Project'
 import { Link } from 'react-router-dom'
-import cv from 'files/cv.pdf'
-import { Helmet } from 'react-helmet'
+import { cvAsset, seo } from 'data/site'
+import Seo from 'components/Seo'
 import Timeline from './components/Timeline'
 import { FaDownload } from 'react-icons/fa'
 import './CvPage.scss'
@@ -88,29 +88,32 @@ const CvPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Meetantonija | My CV</title>
-      </Helmet>
+      <Seo
+        title={`CV — ${seo.title}`}
+        description="Work history for Antonija Simić spanning React Native, React, TypeScript and product frontend delivery."
+        path="/cv"
+      />
       <header className="cv-hero">
         <div className="container cv-hero-grid">
           <div>
             <p className="section-kicker">CV</p>
-            <h1>Work history shaped by frontend craft.</h1>
+            <h1>Work history shaped by product delivery.</h1>
             <p>
               A timeline of the teams, products and technologies I have worked
-              with across React, TypeScript, Angular and product UI delivery.
+              with across React Native, React, TypeScript and production UI
+              delivery.
             </p>
           </div>
 
           <div className="cv-actions-card">
             <Link
-              to={cv}
+              to={cvAsset.href}
               target="_blank"
-              download="antonija_simic_cv"
-              role="button"
+              rel="noopener noreferrer"
+              download={cvAsset.downloadName}
               className="primary"
             >
-              <span>Download CV</span> <FaDownload />
+              <span>Download CV</span> <FaDownload aria-hidden />
             </Link>
 
             {shouldShowResetButton && (

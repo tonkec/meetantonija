@@ -7,7 +7,12 @@
 }
 
 .home-section {
-  padding: 5rem 0;
+  padding: 3.25rem 0;
+
+  h2 {
+    padding-bottom: 0.35rem;
+    padding-top: 0;
+  }
 }
 
 .section-kicker {
@@ -15,7 +20,7 @@
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.45rem;
   text-transform: uppercase;
 }
 
@@ -178,6 +183,24 @@
   }
 }
 
+.about-availability {
+  font-weight: 700;
+}
+
+.selected-work-intro {
+  line-height: 1.65;
+  margin-top: 0.4rem;
+  max-width: 40rem;
+}
+
+#about,
+#selected-work,
+#what-i-do,
+#technologies,
+#contact {
+  scroll-margin-top: 6rem;
+}
+
 .testimonials-section {
   background-color: var(--color-white);
 }
@@ -204,6 +227,6 @@
 
 @include breakpoint(md, max) {
   .home-section {
-    padding: 3.5rem 0;
+    padding: 2.5rem 0;
   }
 }

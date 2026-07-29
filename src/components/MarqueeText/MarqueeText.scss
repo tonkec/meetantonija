@@ -20,6 +20,24 @@
 .parallax span {
   display: block;
   margin-right: 30px;
-  font-size: 80px;
+  font-size: clamp(2rem, 8vw, 80px);
   font-family: 'Plaster', sans-serif;
+}
+
+.parallax--static {
+  overflow: visible;
+  white-space: normal;
+
+  .scroller {
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+
+  span {
+    font-size: clamp(1.4rem, 5vw, 2.5rem);
+    letter-spacing: -0.04em;
+    line-height: 1.2;
+    margin: 0.5rem 0;
+    white-space: normal;
+  }
 }

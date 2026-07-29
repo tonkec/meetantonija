@@ -25,7 +25,7 @@ const AsideContent = ({ noteContent }) => {
           navigate(`/post/${formatNoteTitle(noteContent.title)}`)
         }}
       >
-        Read more 👉
+        Read more
       </button>
     </>
   )

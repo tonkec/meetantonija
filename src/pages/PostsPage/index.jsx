@@ -1,5 +1,6 @@
 import posts from 'data/posts'
-import { Helmet } from 'react-helmet'
+import Seo from 'components/Seo'
+import { seo } from 'data/site'
 import { formatNoteTitle } from 'utils'
 import Image from 'components/Image'
 import Paginated, { setQueryParams } from 'components/Paginated'
@@ -76,9 +77,11 @@ const PostsPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Meetantonija | All Posts</title>
-      </Helmet>
+      <Seo
+        title={`Notes — ${seo.title}`}
+        description="Practical React, JavaScript and performance notes from Antonija Simić."
+        path="/posts"
+      />
       <header className="posts-hero">
         <div className="container posts-hero-grid">
           <div>

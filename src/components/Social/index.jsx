@@ -1,29 +1,31 @@
 import './Social.scss'
 import { LuLinkedin, LuGithub, LuCodepen } from 'react-icons/lu'
+import { socialLinks } from 'data/site'
 
-const socialLinks = [
-  { href: 'https://github.com/tonkec', icon: LuGithub, name: 'Github' },
-  { href: 'https://codepen.io/tonkec', icon: LuCodepen, name: 'Codepen' },
+const iconMap = {
+  github: LuGithub,
+  linkedin: LuLinkedin,
+  codepen: LuCodepen,
+}
 
-  {
-    href: 'https://www.linkedin.com/in/antonija-simic/',
-    icon: LuLinkedin,
-    name: 'Linkedin',
-  },
-]
 const Social = () => {
   return (
     <div className="icons">
-      {socialLinks.map((icon, index) => (
-        <a
-          key={index}
-          href={icon.href}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <icon.icon fontSize="2.5rem" /> <span>{icon.name}</span>
-        </a>
-      ))}
+      {socialLinks.map((link) => {
+        const Icon = iconMap[link.icon]
+        return (
+          <a
+            key={link.id}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={link.name}
+          >
+            {Icon ? <Icon fontSize="2.5rem" aria-hidden /> : null}{' '}
+            <span>{link.name}</span>
+          </a>
+        )
+      })}
     </div>
   )
 }

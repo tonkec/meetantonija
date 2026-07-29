@@ -44,7 +44,7 @@ const Technologies = () => {
       <div className="container">
         <div className="flex flex-gap flex-responsive">
           <div className="flex-1">
-            <h2>🚀 Technologies I have mastered</h2>
+            <h2>Technologies I have mastered</h2>
             <div className="flex flex-gap-small flex-wrap">
               {technologies.map((tech, index) => (
                 <button

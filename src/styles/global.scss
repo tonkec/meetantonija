@@ -9,14 +9,57 @@ body {
   font-style: normal;
   overflow-x: hidden;
   background-color: var(--color-white);
+  min-height: 100%;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 * {
   box-sizing: border-box;
 }
 
-input:focus {
+.skip-link {
+  background: var(--color-black);
+  color: var(--color-white);
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  position: absolute;
+  top: -100%;
+  z-index: 10000;
+
+  &:focus {
+    top: 1rem;
+  }
+}
+
+/* Sticky footer: keeps the footer at the bottom of short pages (e.g. /contact)
+   instead of leaving empty body space beneath it. */
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-shell__main {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus,
+button:focus,
+a:focus {
   outline: none;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--color-pink);
+  outline-offset: 3px;
 }
 
 .loader {
@@ -66,5 +109,22 @@ input:focus {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .fadeIn,
+  .fadeOut {
+    animation: none !important;
+    opacity: 1 !important;
   }
 }

@@ -84,3 +84,37 @@
     width: 1.6rem;
   }
 }
+
+.dark-theme {
+  .intro-animation {
+    background:
+      radial-gradient(circle at 18% 18%, rgba(246, 128, 72, 0.22), transparent 24rem),
+      radial-gradient(circle at 84% 18%, rgba(40, 69, 214, 0.55), transparent 24rem),
+      var(--color-black);
+  }
+
+  .intro-card {
+    background-color: var(--color-pink-light);
+    border-color: var(--color-sky-blue);
+    box-shadow: 14px 14px 0 rgba(246, 128, 72, 0.55);
+    color: var(--color-white);
+
+    p {
+      color: var(--color-pink);
+    }
+
+    h1 span.visible {
+      color: var(--color-pink);
+      text-shadow: 4px 4px 0 rgba(13, 26, 99, 0.65);
+    }
+  }
+
+  .intro-progress span {
+    background-color: var(--color-black);
+    border-color: var(--color-sky-blue);
+  }
+
+  .intro-progress span.visible {
+    background-color: var(--color-pink);
+  }
+}

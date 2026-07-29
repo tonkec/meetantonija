@@ -1,12 +1,16 @@
 import { useState } from 'react'
+import { person } from 'data/site'
 
 const ButtonCopy = ({ text, className }) => {
   const [isCopied, setIsCopied] = useState(false)
+
   return (
     <button
-      className={`primary ${className}`}
+      type="button"
+      className={`primary ${className || ''}`}
+      aria-label={`Copy email address ${person.email}`}
       onClick={() => {
-        navigator.clipboard.writeText('antonija1023@gmail.com')
+        navigator.clipboard.writeText(person.email)
         setIsCopied(true)
 
         setTimeout(() => {

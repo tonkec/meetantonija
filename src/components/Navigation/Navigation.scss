@@ -76,7 +76,88 @@
 }
 
 .navigation-actions {
-  padding-right: 0.55rem;
+  gap: 1rem;
+  padding-right: 0.25rem;
+}
+
+.nav-contact-cta {
+  align-items: center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.28), transparent 42%),
+    var(--color-pink);
+  border: 2px solid var(--color-black);
+  border-radius: 999px;
+  box-shadow:
+    5px 5px 0 var(--color-black),
+    9px 9px 0 var(--color-sky-blue);
+  color: var(--color-white);
+  display: inline-flex;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 700;
+  gap: 0.5rem;
+  justify-content: center;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  min-height: 48px;
+  padding: 0.75rem 1.35rem;
+  position: relative;
+  text-decoration: none;
+  transform: rotate(-2.5deg);
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+  z-index: 1;
+  animation: nav-contact-bob 2.8s ease-in-out infinite;
+
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover,
+  &:focus {
+    animation: none;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.35), transparent 45%),
+      var(--color-pink-dark);
+    box-shadow:
+      7px 7px 0 var(--color-black),
+      12px 12px 0 var(--color-sky-blue);
+    color: var(--color-white);
+    outline: none;
+    text-decoration: none;
+    transform: rotate(1.5deg) translate(-2px, -2px) scale(1.04);
+
+    svg {
+      transform: translateY(-1px) rotate(-12deg) scale(1.1);
+    }
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--color-sky-blue);
+    outline-offset: 3px;
+  }
+
+  &:active {
+    animation: none;
+    box-shadow:
+      2px 2px 0 var(--color-black),
+      4px 4px 0 var(--color-sky-blue);
+    transform: rotate(0deg) translate(1px, 1px) scale(0.98);
+  }
+}
+
+@keyframes nav-contact-bob {
+  0%,
+  100% {
+    transform: rotate(-2.5deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(-1deg) translateY(-3px);
+  }
 }
 
 .nav-search-button,
@@ -146,5 +227,44 @@
     background-color: var(--color-pink);
     border-color: var(--color-pink);
     color: var(--color-white);
+  }
+
+  .nav-contact-cta {
+    background:
+      radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.22), transparent 42%),
+      var(--color-pink);
+    border-color: var(--color-sky-blue);
+    box-shadow:
+      5px 5px 0 var(--color-black),
+      9px 9px 0 var(--color-sky-blue);
+    color: var(--color-white);
+
+    &:hover,
+    &:focus {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.3), transparent 45%),
+        var(--color-pink-dark);
+      box-shadow:
+        7px 7px 0 var(--color-black),
+        12px 12px 0 var(--color-sky-blue);
+      color: var(--color-white);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-contact-cta {
+    animation: none;
+    transition: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      transform: none;
+    }
+
+    svg {
+      transition: none;
+    }
   }
 }

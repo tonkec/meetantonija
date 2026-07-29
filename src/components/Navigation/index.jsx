@@ -3,34 +3,42 @@ import { RxHamburgerMenu } from 'react-icons/rx'
 import useScrollPosition from './../../hooks/useScrollPosition'
 import './Navigation.scss'
 import { Link } from 'react-router-dom'
-import { useWindowSize } from '@uidotdev/usehooks'
+import { useWindowSize } from 'hooks/useWindowSize'
 import MobileNavigation from './MobileNavigation'
-import ButtonCopy from 'components/ButtonCopy'
 import DarkMode from 'components/DarkMode'
-import { BiHomeHeart, BiFile, BiBriefcase, BiSearch } from 'react-icons/bi'
+import {
+  BiHomeHeart,
+  BiFile,
+  BiBriefcase,
+  BiSearch,
+  BiEnvelope,
+} from 'react-icons/bi'
 
-export const NavigationLink = ({ children, href, buttonClassName }) => {
+export const NavigationLink = ({
+  children,
+  href,
+  buttonClassName,
+  onNavigate,
+}) => {
   const activeLink = window.location.pathname
+  const className =
+    activeLink === href
+      ? `nav-link active ${buttonClassName || ''}`
+      : `nav-link ${buttonClassName || ''}`
 
-  if (activeLink === href) {
-    return (
-      <Link
-        to={href}
-        role="button"
-        className={`nav-link active ${buttonClassName}`}
-      >
-        {children}
-      </Link>
-    )
-  }
   return (
-    <Link to={href} role="button" className={`nav-link ${buttonClassName}`}>
+    <Link
+      to={href}
+      className={className}
+      aria-current={activeLink === href ? 'page' : undefined}
+      onClick={onNavigate}
+    >
       {children}
     </Link>
   )
 }
 
-const navigationLinks = [
+const primaryNavigationLinks = [
   {
     href: '/',
     label: 'Home',
@@ -48,8 +56,18 @@ const navigationLinks = [
   },
 ]
 
-const getNavigationLinks = (navigationLinks) => {
-  return navigationLinks.map((link) => {
+// Contact stays in the mobile menu; desktop uses the right-side CTA only.
+const mobileNavigationLinks = [
+  ...primaryNavigationLinks,
+  {
+    href: '/contact',
+    label: 'Contact',
+    icon: <BiEnvelope fontSize={20} />,
+  },
+]
+
+const getNavigationLinks = (links) => {
+  return links.map((link) => {
     return (
       <NavigationLink key={link.href} href={link.href}>
         <span className="flex flex-y-center flex-gap-small">
@@ -103,13 +121,14 @@ const Navigation = ({ openNavigation }) => {
           </button>
         ) : (
           <nav className="navigation-links" aria-label="Main navigation">
-            {getNavigationLinks(navigationLinks)}
+            {getNavigationLinks(primaryNavigationLinks)}
             <button
               type="button"
               className="nav-search-button"
               onClick={() => openNavigation()}
+              aria-label="Open search"
             >
-              <BiSearch fontSize={20} />
+              <BiSearch fontSize={20} aria-hidden />
               <span>Shift + K</span>
             </button>
           </nav>
@@ -117,14 +136,17 @@ const Navigation = ({ openNavigation }) => {
 
         <div className="navigation-actions">
           <div className="hidden-mobile">
-            <ButtonCopy text="Contact" />
+            <Link to="/contact" className="nav-contact-cta">
+              <BiEnvelope fontSize={18} aria-hidden />
+              Contact
+            </Link>
           </div>
           <DarkMode />
         </div>
       </div>
       <MobileNavigation
         isOpen={isMobileNavigationOpen}
-        links={navigationLinks}
+        links={mobileNavigationLinks}
         onClose={() => setIsMobileNavigationOpen(false)}
       />
     </div>

@@ -6,7 +6,7 @@
     radial-gradient(circle at 12% 16%, rgba(249, 0, 147, 0.16), transparent 24rem),
     radial-gradient(circle at 88% 20%, rgba(169, 228, 255, 0.65), transparent 24rem),
     linear-gradient(135deg, var(--color-white) 0%, var(--color-pink-light) 100%);
-  padding: 9rem 0 5rem;
+  padding: 7.5rem 0 2.5rem;
 }
 
 .project-hero-grid {
@@ -22,17 +22,91 @@
 
 .project-hero-copy {
   h1 {
-    font-size: clamp(3.2rem, 9vw, 7.2rem);
-    letter-spacing: -0.09em;
-    line-height: 0.9;
+    font-size: clamp(2.4rem, 8vw, 5.5rem);
+    letter-spacing: -0.08em;
+    line-height: 0.95;
+    overflow-wrap: anywhere;
     padding: 0;
   }
 
   p:not(.section-kicker) {
-    font-size: clamp(1.1rem, 3vw, 1.6rem);
-    line-height: 1.5;
+    font-size: clamp(1rem, 2.5vw, 1.35rem);
+    line-height: 1.55;
     margin-top: 1rem;
     max-width: 720px;
+  }
+}
+
+.project-confidential {
+  font-size: 0.95rem !important;
+  margin-top: 0.75rem !important;
+  opacity: 0.8;
+}
+
+.project-outcomes {
+  display: grid;
+  gap: 0.65rem;
+  list-style: disc;
+  margin: 1rem 0 0 1.2rem;
+  padding: 0;
+
+  li {
+    line-height: 1.65;
+  }
+}
+
+.project-link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  a {
+    min-height: 44px;
+  }
+}
+
+.dark-theme {
+  .project-link-row a.outlined,
+  .project-overview-grid .button.outlined {
+    background-color: transparent;
+    border: 1px solid var(--color-pink);
+    color: var(--color-white);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-pink);
+      color: var(--color-white);
+    }
+  }
+}
+
+.project-architecture-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1rem;
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
+.project-gallery-note {
+  margin-top: 0.75rem;
+  opacity: 0.8;
+
+  code {
+    font-size: 0.85em;
+  }
+}
+
+.project-cta-card {
+  .project-link-row {
+    margin-top: 1.25rem;
   }
 }
 
@@ -69,21 +143,39 @@
   }
 }
 
+.dark-theme {
+  .project-hero-card {
+    background-color: var(--color-pink-light);
+    border-color: var(--color-sky-blue);
+    box-shadow: 12px 12px 0 var(--color-pink);
+    color: var(--color-white);
+
+    strong {
+      color: var(--color-white);
+    }
+
+    span {
+      color: var(--color-pink);
+    }
+  }
+}
+
 .project-overview,
 .project-description,
 .project-gallery,
 .project-tldr {
   background-color: var(--color-white);
-  padding: 5rem 0;
+  padding: 3rem 0;
 }
 
 .project-overview-grid {
+  align-items: start;
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr;
 
   @include breakpoint(lg) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.3fr) minmax(0, 0.85fr);
   }
 
   article {
@@ -93,8 +185,9 @@
     box-shadow: 8px 8px 0 var(--color-sky-blue);
     color: var(--color-black);
     display: grid;
-    gap: 1.4rem;
-    padding: 1.2rem;
+    gap: 0.85rem;
+    height: fit-content;
+    padding: 1rem 1.1rem;
   }
 
   article > span {
@@ -106,13 +199,14 @@
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.2;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.25rem;
   }
 
   p {
-    line-height: 1.7;
+    line-height: 1.55;
+    margin: 0;
   }
 }
 
@@ -147,7 +241,7 @@
     font-size: clamp(2rem, 5vw, 4.2rem);
     letter-spacing: -0.07em;
     line-height: 1;
-    padding: 0 0 2rem;
+    padding: 0 0 1.25rem;
   }
 }
 
@@ -209,6 +303,10 @@
   }
 }
 
+.project-slider-section h2 {
+  max-width: 12ch;
+}
+
 .project-steps-grid {
   display: grid;
   gap: 1rem;
@@ -263,47 +361,23 @@
   border-radius: calc(var(--border-radius) * 4);
   box-shadow: 8px 8px 0 var(--color-black);
   overflow: hidden;
-  padding: 0.6rem;
-}
+  padding: 0.5rem;
 
-.project-slide {
-  background-color: var(--color-pink-light);
-  border: 2px solid var(--color-black);
-  border-radius: calc(var(--border-radius) * 4);
-  color: var(--color-black);
-  display: grid;
-  gap: 1rem;
-  padding: 1.3rem;
-
-  > span {
-    color: var(--color-pink);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-
-  h3 {
-    font-size: clamp(1.6rem, 4vw, 2.6rem);
-    line-height: 1;
-  }
-
-  h4 {
-    font-size: 1rem;
-  }
-
-  p {
-    line-height: 1.7;
-  }
-
-  button {
-    justify-self: start;
+  img {
+    aspect-ratio: 16 / 10;
+    border-radius: calc(var(--border-radius) * 2);
+    display: block;
+    height: auto;
+    max-height: 280px;
+    object-fit: cover;
+    object-position: top center;
+    width: 100%;
   }
 }
 
 @include breakpoint(md, max) {
   .project-hero {
-    padding: 7rem 0 3.5rem;
+    padding: 6.5rem 0 2rem;
   }
 
   .project-overview,
@@ -312,6 +386,6 @@
   .project-tldr,
   .project-steps,
   .project-slider-section {
-    padding: 3.5rem 0;
+    padding: 2.25rem 0;
   }
 }

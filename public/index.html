@@ -9,51 +9,106 @@
       href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap"
       rel="stylesheet"
     />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
       rel="stylesheet"
     />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="The best portfolio website you will ever see."
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta name="theme-color" content="#f90093" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://meetantonija.com/" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
+    <!--
+      Static SEO shell for crawlers and social previews that do not execute JS.
+      This CRA SPA remains client-rendered for the app; metadata here is the
+      least-disruptive crawlability improvement without a Next/Astro migration.
     -->
+    <title>Antonija Simić — Senior React Native & Frontend Engineer</title>
     <meta
       name="description"
-      content="Welcome to my portfolio website. Here you can learn a lot about me and the projects I worked on."
+      content="React Native and frontend engineer building production mobile products, subscriptions, analytics integrations, experiments, and maintainable TypeScript applications."
     />
-    <title>Meetantonija</title>
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Antonija Simić — Senior React Native & Frontend Engineer"
+    />
+    <meta
+      property="og:description"
+      content="React Native and frontend engineer building production mobile products, subscriptions, analytics integrations, experiments, and maintainable TypeScript applications."
+    />
+    <meta property="og:url" content="https://meetantonija.com/" />
+    <meta
+      property="og:image"
+      content="https://avatars.githubusercontent.com/u/5020758?v=4"
+    />
+    <meta property="og:site_name" content="Antonija Simić" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Antonija Simić — Senior React Native & Frontend Engineer"
+    />
+    <meta
+      name="twitter:description"
+      content="React Native and frontend engineer building production mobile products, subscriptions, analytics integrations, experiments, and maintainable TypeScript applications."
+    />
+    <meta
+      name="twitter:image"
+      content="https://avatars.githubusercontent.com/u/5020758?v=4"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://meetantonija.com/#person",
+            "name": "Antonija Simić",
+            "alternateName": "Antonija Šimić",
+            "jobTitle": "Senior React Native & Frontend Engineer",
+            "url": "https://meetantonija.com/",
+            "image": "https://avatars.githubusercontent.com/u/5020758?v=4",
+            "email": "mailto:antonija1023@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Sveta Nedelja",
+              "addressCountry": "Croatia"
+            },
+            "sameAs": [
+              "https://github.com/tonkec",
+              "https://www.linkedin.com/in/antonija-simic/",
+              "https://codepen.io/tonkec"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://meetantonija.com/#website",
+            "url": "https://meetantonija.com/",
+            "name": "Antonija Simić",
+            "description": "React Native and frontend engineer specializing in TypeScript, mobile subscriptions, analytics, experimentation and production-ready user experiences.",
+            "author": { "@id": "https://meetantonija.com/#person" }
+          }
+        ]
+      }
+    </script>
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      Antonija Simić is a Senior React Native and Frontend Engineer based in
+      Croatia. Visit
+      <a href="mailto:antonija1023@gmail.com">antonija1023@gmail.com</a>
+      or enable JavaScript to explore selected work and contact options.
+    </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

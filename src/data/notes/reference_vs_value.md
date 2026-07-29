@@ -37,7 +37,7 @@ React relies on **shallow comparison** to determine when to re-render a componen
 
 If the reference is the same, React assumes nothing has changed — even if you mutated the contents.
 
-###### ❌ Mutating State (Wrong)
+###### Mutating State (Wrong)
 
 ```js
 const [user, setUser] = useState({ name: 'Antonija' })
@@ -47,7 +47,7 @@ setUser(user) // React might not re-render!
 
 Here, the `user` object is the same reference before and after `setUser`, so React skips the re-render.
 
-###### ✅ Immutable Update (Correct)
+###### Immutable Update (Correct)
 
 ```js
 setUser((prev) => ({

@@ -1,5 +1,6 @@
 import Image from 'components/Image'
 import ActionButtons from '../ActionButtons'
+import { availability, hero, person } from 'data/site'
 
 import './Header.scss'
 
@@ -8,27 +9,29 @@ const Header = () => {
     <div className="header-wrapper hero-shell">
       <header className="container hero">
         <div className="hero-copy">
-          <p className="hero-eyebrow">Frontend engineer</p>
-          <h1>React interfaces with product sense.</h1>
+          <p className="hero-eyebrow">{hero.eyebrow}</p>
+          <h1>{hero.headline}</h1>
+          <p className="hero-supporting">{hero.supporting}</p>
+          <p className="hero-location">{availability.locationLine}</p>
 
           <ActionButtons />
         </div>
 
-        <div className="hero-visual" aria-label="Antonija profile">
+        <div className="hero-visual" aria-label={`${person.name} profile`}>
           <div className="hero-card">
             <Image
-              src="https://avatars.githubusercontent.com/u/5020758?v=4"
-              alt="Antonija"
+              src={person.image}
+              alt={person.name}
               className="hero-photo"
             />
             <div className="hero-card-note">
-              <span>Currently</span>
-              <strong>crafting UIs</strong>
+              <span>{availability.heroCardLabel}</span>
+              <strong>{availability.heroCardValue}</strong>
             </div>
           </div>
           <div className="hero-floating-card">
-            <span>Available for</span>
-            <strong>React work</strong>
+            <span>{availability.floatingLabel}</span>
+            <strong>{availability.floatingValue}</strong>
           </div>
         </div>
       </header>

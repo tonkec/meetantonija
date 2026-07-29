@@ -1,37 +1,42 @@
-import cv from 'files/cv.pdf'
 import { Link } from 'react-router-dom'
-import ButtonCopy from 'components/ButtonCopy'
+import { cvAsset, hero } from 'data/site'
+import { scrollToTheElement } from 'utils'
 import { useWindowSize } from 'hooks/useWindowSize'
+
 const ActionButtons = () => {
   const { width } = useWindowSize()
-
   const isExtraSmall = width < 400
+  const stackClass = isExtraSmall
+    ? 'hero-actions hero-actions--stack'
+    : 'hero-actions'
+
   return (
-    <div
-      className={
-        isExtraSmall
-          ? 'block medium-margin-top'
-          : 'flex flex-gap-small small-margin-top'
-      }
-    >
-      <ButtonCopy
-        text="Get in touch"
-        className={isExtraSmall ? 'w-full' : 'inline-block'}
-      />
+    <div className={stackClass}>
+      <button
+        type="button"
+        className="primary"
+        onClick={() => scrollToTheElement(hero.ctas.work.targetId)}
+      >
+        {hero.ctas.work.label}
+      </button>
 
       <Link
-        to={cv}
+        to={cvAsset.href}
         target="_blank"
-        download="antonija_simic_cv"
-        role="button"
-        className={
-          isExtraSmall
-            ? 'w-full outlined block text-center small-margin-top'
-            : 'outlined inline-block '
-        }
+        rel="noopener noreferrer"
+        download={cvAsset.downloadName}
+        className="outlined"
       >
-        Download CV
+        {cvAsset.label}
       </Link>
+
+      <button
+        type="button"
+        className="outlined"
+        onClick={() => scrollToTheElement(hero.ctas.contact.targetId)}
+      >
+        {hero.ctas.contact.label}
+      </button>
     </div>
   )
 }

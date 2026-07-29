@@ -31,7 +31,18 @@ export const getValuesAndProperties = (object) => {
 
 export const scrollToTheElement = (id) => {
   const element = document.getElementById(id)
-  element.scrollIntoView({ behavior: 'smooth' })
+  if (!element) {
+    return
+  }
+
+  const prefersReducedMotion =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+  element.scrollIntoView({
+    behavior: prefersReducedMotion ? 'auto' : 'smooth',
+    block: 'start',
+  })
 }
 
 export const removeSpacesAndDashes = (string) => {

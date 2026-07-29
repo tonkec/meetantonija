@@ -89,3 +89,28 @@
     transform: scale(1.04);
   }
 }
+
+.dark-theme {
+  .page-transition {
+    background:
+      radial-gradient(circle at 18% 20%, rgba(246, 128, 72, 0.22), transparent 24rem),
+      radial-gradient(circle at 82% 20%, rgba(40, 69, 214, 0.55), transparent 24rem),
+      var(--color-black);
+  }
+
+  .transition-card {
+    background-color: var(--color-pink-light);
+    border-color: var(--color-sky-blue);
+    box-shadow: 14px 14px 0 rgba(246, 128, 72, 0.55);
+    color: var(--color-white);
+
+    p {
+      color: var(--color-pink);
+    }
+  }
+
+  .transition-mark {
+    background-color: var(--color-black);
+    border-color: var(--color-sky-blue);
+  }
+}

@@ -88,6 +88,8 @@
   cursor: pointer;
   display: grid;
   gap: 0.25rem;
+  justify-content: start;
+  justify-items: start;
   padding: 1rem;
   text-align: left;
   width: 100%;
@@ -126,5 +128,49 @@
 @include breakpoint(md, max) {
   .search-container {
     padding-top: 5rem;
+  }
+}
+
+.dark-theme {
+  .search-card {
+    background-color: var(--color-pink-light);
+    border-color: var(--color-sky-blue);
+    box-shadow: 14px 14px 0 rgba(246, 128, 72, 0.45);
+    color: var(--color-white);
+  }
+
+  .search-card-header {
+    background-color: var(--color-black);
+    border-bottom-color: var(--color-sky-blue);
+
+    > span {
+      background-color: var(--color-pink);
+      color: var(--color-white);
+    }
+  }
+
+  .search-input-wrapper input {
+    background-color: transparent;
+    color: var(--color-white);
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.55);
+    }
+  }
+
+  .keyboard-icon {
+    color: var(--color-white);
+  }
+
+  .search-close {
+    background-color: var(--color-black);
+    border-top: 2px solid var(--color-sky-blue);
+    color: var(--color-white);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-pink);
+      color: var(--color-white);
+    }
   }
 }

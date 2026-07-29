@@ -1,7 +1,7 @@
 import './Emoji.scss'
 
 const Emoji = () => (
-  <div className="container text-center small-padding-top small-padding-bottom">
+  <div className="emoji" aria-hidden="true">
     <div className="wrapper">
       <div className="face">
         <div className="straight-hair"></div>
