@@ -26,8 +26,8 @@ const ProjectNav = ({ currentSlug }) => {
               to={`/project/${removeSpacesAndDashes(previous.title)}`}
               className="project-nav__link"
             >
-              <span>Previous</span>
-              {previous.title}
+              <span className="project-nav__label">Previous</span>
+              <span className="project-nav__title">← {previous.title}</span>
             </Link>
           ) : (
             <span className="project-nav__placeholder" aria-hidden="true" />
@@ -37,8 +37,8 @@ const ProjectNav = ({ currentSlug }) => {
               to={`/project/${removeSpacesAndDashes(next.title)}`}
               className="project-nav__link project-nav__link--next"
             >
-              <span>Next</span>
-              {next.title}
+              <span className="project-nav__label">Next</span>
+              <span className="project-nav__title">{next.title} →</span>
             </Link>
           ) : (
             <span className="project-nav__placeholder" aria-hidden="true" />

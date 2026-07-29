@@ -5,7 +5,7 @@ import { rootImageUrl } from 'rootImageUrl'
  * Optional fields may be omitted — CaseStudyCard must render safely without them.
  *
  * PLACEHOLDERS (do not invent facts in UI):
- * - Trimbox: product shot under public/projects/trimbox/ (privacy-update).
+ * - Trimbox: product shots under public/projects/trimbox/ (paywall, privacy-update, privacy-onboarding).
  * - Duga: product shots under public/projects/duga/ (dashboard, settings, report, illustration).
  * - Measurable outcomes: qualitative only unless metrics are approved.
  */
@@ -114,10 +114,24 @@ const caseStudies = [
     image: rootImageUrl + 'modemobile/trimbox.avif',
     photos: [
       {
+        src: '/projects/trimbox/paywall.jpg',
+        alt: 'Trimbox subscription paywall showing annual and monthly plans with a continue CTA',
+        caption: 'Subscription and pricing presentation with annual and monthly offerings',
+        width: 503,
+        height: 1024,
+      },
+      {
         src: '/projects/trimbox/privacy-update.jpg',
         alt: 'Trimbox mobile screen showing inbox keep and unsubscribe actions with a Privacy Policy Updated dialog in front',
         caption: 'App-open privacy notice coordinated over the inbox product surface',
-        width: 469,
+        width: 488,
+        height: 1024,
+      },
+      {
+        src: '/projects/trimbox/privacy-onboarding.jpg',
+        alt: 'Trimbox onboarding screen explaining that emails stay private, with a Next CTA',
+        caption: 'Privacy messaging during onboarding',
+        width: 484,
         height: 1024,
       },
     ],

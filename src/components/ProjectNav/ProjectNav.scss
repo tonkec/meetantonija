@@ -1,9 +1,9 @@
 @import '../../styles/mq.scss';
+@import '../../styles/transitions.scss';
 
 .project-nav {
-  background-color: var(--color-pink-light);
-  border-bottom: 2px solid var(--color-black);
-  padding: 7.5rem 0 1.25rem;
+  background-color: transparent;
+  padding: 7.5rem 0 0.75rem;
 }
 
 .project-nav__inner {
@@ -20,33 +20,50 @@
 }
 
 .project-nav__link {
-  background-color: var(--color-white);
-  border: 2px solid var(--color-black);
-  border-radius: calc(var(--border-radius) * 3);
-  box-shadow: 4px 4px 0 var(--color-sky-blue);
+  @include transition((color, opacity));
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
   color: var(--color-black);
   display: grid;
-  gap: 0.2rem;
+  gap: 0.15rem;
   min-height: 44px;
-  padding: 0.75rem 1rem;
+  opacity: 0.78;
+  padding: 0.35rem 0;
   text-decoration: none;
 
-  span {
-    color: var(--color-pink);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+  &:hover,
+  &:focus-visible {
+    opacity: 1;
   }
 
   &:focus-visible {
     outline: 3px solid var(--color-pink);
-    outline-offset: 2px;
+    outline-offset: 4px;
   }
 
   &--next {
     text-align: right;
+    justify-items: end;
   }
+}
+
+.project-nav__label {
+  color: var(--color-pink);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-nav__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
 }
 
 .project-nav__placeholder {
@@ -58,19 +75,11 @@
 }
 
 .dark-theme {
-  .project-nav {
-    background-color: var(--color-black);
-    border-color: var(--color-sky-blue);
+  .project-nav__link {
+    color: var(--color-white);
   }
 
-  .project-nav__link {
-    background-color: var(--color-pink-light);
-    border-color: var(--color-sky-blue);
-    box-shadow: 4px 4px 0 var(--color-pink);
-    color: var(--color-white);
-
-    span {
-      color: var(--color-pink);
-    }
+  .project-nav__label {
+    color: var(--color-pink);
   }
 }

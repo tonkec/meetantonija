@@ -1,5 +1,3 @@
-import Image from 'components/Image'
-
 const normalizePhoto = (photo, projectTitle, index) => {
   if (typeof photo === 'string') {
     return {
@@ -38,7 +36,22 @@ const ProjectPhotos = ({ project }) => {
             key={item.src}
             className={`project-photo-card${isPortrait ? ' project-photo-card--portrait' : ''}`}
           >
-            <Image src={item.src} alt={item.alt} />
+            <a
+              href={item.src}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-photo-card__link"
+              aria-label={`Open full-size image: ${item.alt}`}
+            >
+              <img
+                src={item.src}
+                alt={item.alt}
+                width={item.width || undefined}
+                height={item.height || undefined}
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
             {item.caption ? <figcaption>{item.caption}</figcaption> : null}
           </figure>
         )
