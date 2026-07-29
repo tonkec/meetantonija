@@ -165,9 +165,28 @@ blockquote.post-content-container {
   }
 }
 
+.inline-code {
+  background-color: var(--color-pink-light);
+  border: 1.5px solid var(--color-black);
+  border-radius: calc(var(--border-radius) * 1.5);
+  color: var(--color-black);
+  display: inline;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.92em;
+  padding: 0.1rem 0.35rem;
+  white-space: break-spaces;
+  word-break: break-word;
+}
+
 .dark-theme .code-block pre {
   border-color: var(--color-sky-blue);
   box-shadow: 8px 8px 0 rgba(246, 128, 72, 0.45);
+}
+
+.dark-theme .inline-code {
+  background-color: var(--color-pink-light);
+  border-color: var(--color-sky-blue);
+  color: var(--color-white);
 }
 
 .post-image {

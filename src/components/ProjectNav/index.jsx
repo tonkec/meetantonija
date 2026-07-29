@@ -4,7 +4,7 @@ import { removeSpacesAndDashes } from 'utils'
 import './ProjectNav.scss'
 
 /**
- * Case-study navigation: back to selected work + prev/next featured projects.
+ * Case-study navigation: previous / next featured projects.
  */
 const ProjectNav = ({ currentSlug }) => {
   const featured = featuredCaseStudies
@@ -13,13 +13,13 @@ const ProjectNav = ({ currentSlug }) => {
   const next =
     index >= 0 && index < featured.length - 1 ? featured[index + 1] : null
 
+  if (!previous && !next) {
+    return null
+  }
+
   return (
     <nav className="project-nav" aria-label="Case study navigation">
       <div className="container project-nav__inner">
-        <Link to="/#selected-work" className="project-nav__back">
-          Back to selected work
-        </Link>
-
         <div className="project-nav__siblings">
           {previous ? (
             <Link

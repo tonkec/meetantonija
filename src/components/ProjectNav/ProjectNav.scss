@@ -2,31 +2,12 @@
 
 .project-nav {
   background-color: var(--color-pink-light);
-  border-block: 2px solid var(--color-black);
-  padding: 1rem 0;
+  border-bottom: 2px solid var(--color-black);
+  padding: 7.5rem 0 1.25rem;
 }
 
 .project-nav__inner {
-  display: grid;
-  gap: 1rem;
-
-  @include breakpoint(md) {
-    align-items: center;
-    grid-template-columns: auto 1fr;
-  }
-}
-
-.project-nav__back {
-  color: var(--color-black);
-  font-weight: 700;
-  min-height: 44px;
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-
-  &:focus-visible {
-    outline: 3px solid var(--color-pink);
-    outline-offset: 3px;
-  }
+  display: block;
 }
 
 .project-nav__siblings {
@@ -80,10 +61,6 @@
   .project-nav {
     background-color: var(--color-black);
     border-color: var(--color-sky-blue);
-  }
-
-  .project-nav__back {
-    color: var(--color-white);
   }
 
   .project-nav__link {

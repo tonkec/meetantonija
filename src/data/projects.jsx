@@ -2,14 +2,19 @@ import { rootImageUrl } from 'rootImageUrl'
 
 const modeMobileCover =
   rootImageUrl + 'modemobile/trimbox.avif'
-const modeMobilePhoto =
-  'https://static-academy.siteground.com/wp-content/uploads/sites/2/2023/11/Build_a_list_header_image-1.jpg'
 
 const projects = [
   {
     coverPhoto: modeMobileCover,
-    // PLACEHOLDER: replace generic photo with approved Trimbox product screenshots when available.
-    photos: [modeMobilePhoto],
+    photos: [
+      {
+        src: '/projects/trimbox/privacy-update.jpg',
+        alt: 'Trimbox mobile screen showing inbox keep and unsubscribe actions with a Privacy Policy Updated dialog in front',
+        caption: 'App-open privacy notice coordinated over the inbox product surface',
+        width: 469,
+        height: 1024,
+      },
+    ],
     location: 'Remote',
     company: 'Mode Mobile',
     title: 'Trimbox',
@@ -513,6 +518,8 @@ const projects = [
     location: 'Zagreb',
     from: 2023,
     fromMonth: 'September',
+    to: 2026,
+    toMonth: 'March',
     company: 'Mochalabs',
     id: 10,
     title: 'FunderPro',

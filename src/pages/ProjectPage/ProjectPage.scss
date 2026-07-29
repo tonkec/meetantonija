@@ -9,6 +9,10 @@
   padding: 7.5rem 0 2.5rem;
 }
 
+.project-nav + .project-hero {
+  padding-top: 2.5rem;
+}
+
 .project-hero-grid {
   align-items: end;
   display: grid;
@@ -372,6 +376,7 @@
   border: 2px solid var(--color-black);
   border-radius: calc(var(--border-radius) * 4);
   box-shadow: 8px 8px 0 var(--color-black);
+  margin: 0;
   overflow: hidden;
   padding: 0.5rem;
 
@@ -384,6 +389,38 @@
     object-fit: cover;
     object-position: top center;
     width: 100%;
+  }
+
+  figcaption {
+    color: var(--color-black);
+    font-size: 0.9rem;
+    line-height: 1.45;
+    margin-top: 0.65rem;
+    padding: 0 0.25rem 0.25rem;
+  }
+
+  &--portrait {
+    max-width: 320px;
+
+    img {
+      aspect-ratio: 9 / 19.5;
+      max-height: 560px;
+      object-fit: contain;
+      object-position: center top;
+      width: 100%;
+    }
+  }
+}
+
+.dark-theme {
+  .project-photo-card {
+    background-color: var(--color-pink-light);
+    border-color: var(--color-sky-blue);
+    box-shadow: 8px 8px 0 var(--color-pink);
+
+    figcaption {
+      color: var(--color-white);
+    }
   }
 }
 

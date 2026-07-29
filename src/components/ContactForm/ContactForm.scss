@@ -91,7 +91,11 @@
       outline-offset: 3px;
     }
 
-    &.primary,
+    &.primary {
+      color: var(--color-white);
+      text-decoration: none;
+    }
+
     &.outlined {
       text-decoration: none;
     }

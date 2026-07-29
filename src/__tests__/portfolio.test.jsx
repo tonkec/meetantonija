@@ -255,7 +255,7 @@ describe('ArchitectureFlow', () => {
 })
 
 describe('ProjectNav', () => {
-  it('links back to selected work and sibling featured projects', () => {
+  it('links to sibling featured projects', () => {
     render(
       <MemoryRouter>
         <ProjectNav currentSlug="duga" />
@@ -263,8 +263,8 @@ describe('ProjectNav', () => {
     )
 
     expect(
-      screen.getByRole('link', { name: /back to selected work/i })
-    ).toHaveAttribute('href', '/#selected-work')
+      screen.queryByRole('link', { name: /back to selected work/i })
+    ).not.toBeInTheDocument()
     expect(screen.getByRole('link', { name: /trimbox/i })).toBeInTheDocument()
     expect(
       screen.getByRole('link', { name: /funderpro/i })
@@ -279,7 +279,7 @@ describe('featured work set', () => {
 
     const funder = featuredCaseStudies.find((study) => study.slug === 'funderpro')
     expect(funder.title).toBe('FunderPro')
-    expect(funder.period).toMatch(/September 2023/i)
+    expect(funder.period).toMatch(/September 2023.*March 2026/i)
     expect(funder.outcomes[0]).toMatch(/40%/)
     expect(funder.technologies).toEqual([
       'React',

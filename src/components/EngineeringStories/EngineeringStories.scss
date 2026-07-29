@@ -54,14 +54,18 @@
 }
 
 .engineering-story__toggle {
+  align-items: stretch;
   background: transparent;
   border: 0;
+  border-radius: 0;
   color: inherit;
   cursor: pointer;
   display: grid;
   font: inherit;
   gap: 0.45rem;
-  padding: clamp(1rem, 3vw, 1.4rem);
+  justify-content: start;
+  justify-items: start;
+  padding: 1rem;
   text-align: left;
   width: 100%;
 
@@ -131,7 +135,7 @@
   border-top: 2px solid var(--color-black);
   display: grid;
   gap: 1.25rem;
-  padding: clamp(1rem, 3vw, 1.5rem);
+  padding: 1rem;
 
   &[hidden] {
     display: none;

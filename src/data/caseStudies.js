@@ -5,7 +5,7 @@ import { rootImageUrl } from 'rootImageUrl'
  * Optional fields may be omitted — CaseStudyCard must render safely without them.
  *
  * PLACEHOLDERS (do not invent facts in UI):
- * - Trimbox screenshots: keep cover only until approved product shots are provided.
+ * - Trimbox: product shot under public/projects/trimbox/ (privacy-update).
  * - Duga: product shots under public/projects/duga/ (dashboard, settings, report, illustration).
  * - Measurable outcomes: qualitative only unless metrics are approved.
  */
@@ -37,13 +37,22 @@ import { rootImageUrl } from 'rootImageUrl'
  * @property {CaseStudyArchitecture} [architecture]
  * @property {string} [learned]
  * @property {string} [image]
- * @property {string[]} [photos]
+ * @property {string|ProjectScreenshot}[] [photos]
  * @property {string} [liveUrl]
  * @property {string} [repositoryUrl]
  * @property {{label: string, href: string}[]} [repositoryLinks]
  * @property {boolean} [confidential]
  * @property {boolean} [featured]
  * @property {boolean} [personal]
+ */
+
+/**
+ * @typedef {Object} ProjectScreenshot
+ * @property {string} src
+ * @property {string} alt
+ * @property {string} [caption]
+ * @property {number} [width]
+ * @property {number} [height]
  */
 
 /** @type {CaseStudy[]} */
@@ -103,6 +112,15 @@ const caseStudies = [
       'subscription-pricing',
     ],
     image: rootImageUrl + 'modemobile/trimbox.avif',
+    photos: [
+      {
+        src: '/projects/trimbox/privacy-update.jpg',
+        alt: 'Trimbox mobile screen showing inbox keep and unsubscribe actions with a Privacy Policy Updated dialog in front',
+        caption: 'App-open privacy notice coordinated over the inbox product surface',
+        width: 469,
+        height: 1024,
+      },
+    ],
     liveUrl: 'https://www.trimbox.io/',
     confidential: true,
     featured: true,
@@ -226,7 +244,7 @@ const caseStudies = [
     title: 'FunderPro',
     projectType: 'Fintech platform',
     company: 'Mochalabs',
-    period: 'September 2023 – Present',
+    period: 'September 2023 – March 2026',
     summary:
       'Production fintech platform work — reduced redundant API traffic with React Query, strengthened onboarding and KYC, and expanded mature product flows while raising frontend engineering standards.',
     role: 'Senior React Developer',

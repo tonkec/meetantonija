@@ -183,23 +183,34 @@ const PostPage = () => {
           img({ src, alt }) {
             return <PostsImage src={src} alt={alt} />
           },
-          code({ node, inline, className, children, ...props }) {
-            const language = String(className || '').replace('language-', '')
+          code({ className, children, ...props }) {
+            const languageMatch = /language-(\w+)/.exec(className || '')
+            const content = String(children).replace(/\n$/, '')
+            // react-markdown v9 no longer passes `inline` — treat unfenced,
+            // single-line code as inline.
+            const isInline = !languageMatch && !content.includes('\n')
+
+            if (isInline) {
+              return (
+                <code className="inline-code" {...props}>
+                  {children}
+                </code>
+              )
+            }
+
             return (
               <SyntaxHighlighter
                 {...props}
                 style={atomOneDark}
-                language={language || 'javascript'}
-                PreTag={inline ? 'span' : 'pre'}
+                language={languageMatch?.[1] || 'javascript'}
+                PreTag="pre"
                 customStyle={{
                   background: '#0d1a63',
-                  borderRadius: inline ? '0.35rem' : undefined,
-                  display: inline ? 'inline' : 'block',
                   margin: 0,
-                  padding: inline ? '0.15rem 0.4rem' : '1.1rem 1.25rem',
+                  padding: '1.1rem 1.25rem',
                 }}
               >
-                {String(children).replace(/\n$/, '')}
+                {content}
               </SyntaxHighlighter>
             )
           },

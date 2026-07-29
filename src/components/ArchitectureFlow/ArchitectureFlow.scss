@@ -44,18 +44,21 @@
   border: 2px solid var(--color-black);
   border-radius: calc(var(--border-radius) * 3);
   box-shadow: 6px 6px 0 var(--color-sky-blue);
+  color: var(--color-black);
   display: grid;
   gap: 0.55rem;
   min-width: 0;
   padding: 1rem;
 
   h3 {
+    color: var(--color-black);
     font-size: 1.05rem;
     line-height: 1.25;
     margin: 0;
   }
 
   p {
+    color: var(--color-black);
     font-size: 0.9rem;
     line-height: 1.55;
     margin: 0;

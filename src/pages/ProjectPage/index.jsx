@@ -47,7 +47,6 @@ const ProjectPage = () => {
     return <RecordNotFound />
   }
 
-  const isModeMobile = project.id === 11
   const isDuga = project.title === 'Duga'
   const caseStudy = caseStudies.find(
     (study) =>
@@ -71,7 +70,7 @@ const ProjectPage = () => {
     caseStudy?.photos?.length > 0
       ? caseStudy.photos
       : project.photos || []
-  const showGallery = !isModeMobile && galleryPhotos.length > 0
+  const showGallery = galleryPhotos.length > 0
   const architectureFlow = caseStudy?.slug
     ? architectureFlows[caseStudy.slug]
     : null
