@@ -1,5 +1,27 @@
 const notes = [
   {
+    title: 'Server state vs client state',
+    author: 'Antonija Šimić',
+    date: '2026-07-29',
+    level: 'senior',
+    tags: 'React, React Query, TanStack Query, State',
+    id: 19,
+    intro:
+      'A practical guide to the boundary between server state and client state in React — and when TanStack Query should own remote data instead of useState and useEffect.',
+    subtitle: 'Where does React Query end and useState begin?',
+  },
+  {
+    title: 'Avoiding waterfalls with Suspense and streaming',
+    author: 'Antonija Šimić',
+    date: '2026-01-21',
+    level: 'senior',
+    tags: 'React, Suspense, Streaming, Performance',
+    id: 20,
+    intro:
+      'A practical guide to spotting request waterfalls in React and breaking them with parallel fetching, granular Suspense boundaries, and streaming UI.',
+    subtitle: 'Why is my page waiting on everything?',
+  },
+  {
     title: 'Generics',
     author: 'Antonija Šimić',
     date: '2024-02-15',

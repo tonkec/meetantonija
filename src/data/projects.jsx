@@ -13,26 +13,57 @@ const projects = [
     company: 'Mode Mobile',
     title: 'Trimbox',
     headline: 'Trim your inbox with ease',
-    skills: 'React, Typescript, Expo, React Native, Firebase',
+    skills:
+      'React Native, Typescript, Expo, EAS, Firebase, Jest, Maestro',
     link: 'https://www.modemobile.com/',
     id: 11,
     description:
-      'I am currently working with Mode Mobile on mobile-first product experiences, contributing frontend craft, product thinking, and scalable UI implementation.',
+      'Trimbox is Mode Mobile’s inbox-cleaning product. As a Senior Frontend Developer, I work across React Native feature development, paywalls and subscriptions, analytics, remote config, testing, and Expo/EAS release workflows.',
     responsibilities: [
       {
-        title: 'Building mobile-first product experiences',
+        title: 'Paywall and subscriptions',
         description:
-          'Contributing to product UI work with a focus on responsive, maintainable, and polished user experiences.',
+          'Building and refining paywall and subscription flows so users can upgrade and manage plans smoothly inside the app.',
       },
       {
-        title: 'Collaborating with product teams',
+        title: 'Analytics',
         description:
-          'Working with cross-functional teammates to ship thoughtful features and improve the user experience.',
+          'Instrumenting product analytics to track user behaviour, funnel performance, and the impact of new features.',
       },
       {
-        title: 'Maintaining frontend quality',
+        title: 'Firebase Remote Config',
         description:
-          'Keeping components readable, reusable, and aligned with the product design system.',
+          'Using Firebase Remote Config to ship and iterate on in-app behaviour without waiting on a full app release.',
+      },
+      {
+        title: 'Testing with Jest and Maestro',
+        description:
+          'Writing and maintaining unit and end-to-end tests with Jest and Maestro to keep regressions in check.',
+      },
+      {
+        title: 'Build and release with Expo/EAS',
+        description:
+          'Owning parts of the build and release process with Expo and EAS, from packaging builds to shipping updates.',
+      },
+      {
+        title: 'React Native development',
+        description:
+          'Developing mobile UI and product flows in React Native with a focus on performance, polish, and maintainability.',
+      },
+      {
+        title: 'Architecture of new features',
+        description:
+          'Designing and implementing the architecture for new features so they fit cleanly into the existing codebase.',
+      },
+      {
+        title: 'Bug fixing and app stability',
+        description:
+          'Investigating production issues and hardening the app to improve reliability and day-to-day stability.',
+      },
+      {
+        title: 'Experimental products',
+        description:
+          'Contributing to experimental product work such as the Qualified Leads Survey and early planning for Trimbox Lite.',
       },
     ],
     from: 2026,
@@ -41,16 +72,16 @@ const projects = [
     position: 'Senior Frontend Developer',
     team: 100,
     learned:
-      'I am continuing to deepen my experience with mobile-first product work, frontend architecture, and collaboration across product teams.',
+      'I am deepening my experience with React Native product work, subscription flows, Firebase Remote Config, Maestro testing, and Expo/EAS release pipelines.',
     conclusion:
-      'Mode Mobile is my current role, where I am focused on contributing thoughtful frontend implementation to mobile-first product experiences.',
+      'At Mode Mobile I contribute across the Trimbox stack — from React Native features and paywalls to analytics, testing, and release — while also helping shape experimental products like Qualified Leads Survey and Trimbox Lite.',
     collaboration: 'Slack, Jira, Google Meet',
     problem:
-      'The current challenge is building polished product experiences while keeping the frontend implementation scalable and maintainable.',
+      'The challenge is shipping polished subscription and product experiences in React Native while keeping the app stable, measurable, and ready to release through Expo/EAS.',
     manager: (
       <span>
-        I am currently working with the Mode Mobile team and contributing to the
-        product as a Senior Frontend Developer.
+        I am currently working with the Mode Mobile team on Trimbox as a Senior
+        Frontend Developer.
       </span>
     ),
   },
