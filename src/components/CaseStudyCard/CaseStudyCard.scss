@@ -31,6 +31,14 @@
     transform: translate(-2px, -2px);
   }
 
+  &--primary {
+    box-shadow: 14px 14px 0 var(--color-pink);
+
+    @include breakpoint(lg) {
+      grid-column: 1 / -1;
+    }
+  }
+
   &__media {
     background:
       linear-gradient(145deg, rgba(249, 0, 147, 0.08), transparent 55%),

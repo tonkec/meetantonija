@@ -582,9 +582,9 @@ const projects = [
     position: 'Senior React Developer',
     team: 100,
     conclusion:
-      'At FunderPro I focused on production frontend problems: cutting redundant API traffic, clarifying onboarding and KYC, improving usability from user interviews, extending the platform with affiliate and coupon capabilities, and raising frontend standards through weekly knowledge sharing.',
+      'At FunderPro I focused on production frontend problems on a trading-focused fintech product: cutting redundant API traffic, clarifying onboarding and KYC, improving usability from user interviews, extending the platform with affiliate and coupon capabilities, and raising frontend standards through weekly knowledge sharing.',
     description:
-      'FunderPro is a production fintech platform. As a Senior React Developer I improved core user flows, frontend architecture, application performance and developer productivity while continuously shipping new product features.',
+      'FunderPro is a production platform for a proprietary trading company. As a Senior React Developer I improved core user flows, frontend architecture, application performance and developer productivity while continuously shipping new product features.',
     problem:
       'The platform needed more efficient data fetching, clearer onboarding and KYC, more usable product workflows, room to grow with new fintech capabilities, and stronger shared frontend knowledge across the team.',
     manager: (

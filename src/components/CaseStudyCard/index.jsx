@@ -16,7 +16,9 @@ const CaseStudyCard = ({ study }) => {
   const tech = study.technologies?.slice(0, 4) || []
 
   return (
-    <article className="case-study-card">
+    <article
+      className={`case-study-card${study.emphasis === 'primary' ? ' case-study-card--primary' : ''}`}
+    >
       {study.image ? (
         <div className="case-study-card__media">
           <img
@@ -37,7 +39,7 @@ const CaseStudyCard = ({ study }) => {
 
       <div className="case-study-card__body">
         <p className="section-kicker">
-          {study.projectType || study.company || 'Selected work'}
+          {study.workType || study.projectType || study.company || 'Selected work'}
           {study.period ? ` · ${study.period}` : ''}
         </p>
         <h3>{study.title}</h3>

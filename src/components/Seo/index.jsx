@@ -1,20 +1,29 @@
 import { Helmet } from 'react-helmet'
 import { SITE_URL, person, seo } from 'data/site'
+import { getPageMeta } from 'data/pagesMeta'
 
 /**
  * Shared document head for titles, social previews and JSON-LD.
- * Homepage defaults live in public/index.html so crawlers see metadata
- * without executing the SPA; this component keeps routed pages in sync.
+ * Homepage defaults live in public/index.html; build-time static HTML
+ * (`scripts/generate-static-pages.js`) mirrors route meta for crawlers.
+ * This component keeps client-routed pages in sync via react-helmet.
  */
 const Seo = ({
-  title = seo.title,
-  description = seo.description,
+  title,
+  description,
   path = '/',
-  image = seo.ogImage,
-  type = 'website',
+  image,
+  type,
   jsonLd,
 }) => {
+  const pageMeta = getPageMeta(path)
+  const resolvedTitle = title || pageMeta?.title || seo.title
+  const resolvedDescription =
+    description || pageMeta?.description || seo.description
+  const resolvedImage = image || pageMeta?.ogImage || seo.ogImage
+  const resolvedType = type || pageMeta?.type || 'website'
   const url = `${SITE_URL}${path === '/' ? '' : path}`
+
   const personJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -41,29 +50,37 @@ const Seo = ({
     author: { '@id': `${SITE_URL}/#person` },
   }
 
-  const structuredData = jsonLd || [personJsonLd, websiteJsonLd]
+  const defaultJsonLd = [personJsonLd, websiteJsonLd]
+  const metaJsonLd = pageMeta?.jsonLd
+  const structuredData =
+    jsonLd ||
+    (metaJsonLd
+      ? Array.isArray(metaJsonLd)
+        ? metaJsonLd
+        : [metaJsonLd]
+      : defaultJsonLd)
 
   return (
     <Helmet>
       <html lang="en" />
-      <title>{title}</title>
-      <meta name="description" content={description} />
+      <title>{resolvedTitle}</title>
+      <meta name="description" content={resolvedDescription} />
       <link rel="canonical" href={url} />
       <meta name="theme-color" content={seo.themeColor} />
       <meta name="robots" content="index,follow" />
 
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+      <meta property="og:type" content={resolvedType} />
+      <meta property="og:title" content={resolvedTitle} />
+      <meta property="og:description" content={resolvedDescription} />
       <meta property="og:url" content={url} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={resolvedImage} />
       <meta property="og:site_name" content={person.name} />
       <meta property="og:locale" content="en_US" />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:title" content={resolvedTitle} />
+      <meta name="twitter:description" content={resolvedDescription} />
+      <meta name="twitter:image" content={resolvedImage} />
 
       <script type="application/ld+json">
         {JSON.stringify(

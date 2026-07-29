@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import { arrayHasFullString } from 'utils'
 import CvProject from './components/Project'
 import { Link } from 'react-router-dom'
-import { cvAsset, seo } from 'data/site'
+import { cvAsset } from 'data/site'
 import Seo from 'components/Seo'
 import Timeline from './components/Timeline'
 import { FaDownload } from 'react-icons/fa'
@@ -88,11 +88,7 @@ const CvPage = () => {
 
   return (
     <>
-      <Seo
-        title={`CV — ${seo.title}`}
-        description="Work history for Antonija Simić spanning React Native, React, TypeScript and product frontend delivery."
-        path="/cv"
-      />
+      <Seo path="/cv" />
       <header className="cv-hero">
         <div className="container cv-hero-grid">
           <div>

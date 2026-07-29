@@ -7,7 +7,30 @@
 }
 
 .project-nav__inner {
-  display: block;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.project-nav__back {
+  @include transition((opacity));
+  color: var(--color-black);
+  font-size: 0.95rem;
+  font-weight: 600;
+  justify-self: start;
+  min-height: 44px;
+  opacity: 0.8;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--color-pink);
+    outline-offset: 4px;
+  }
 }
 
 .project-nav__siblings {
@@ -75,6 +98,7 @@
 }
 
 .dark-theme {
+  .project-nav__back,
   .project-nav__link {
     color: var(--color-white);
   }

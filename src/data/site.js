@@ -3,10 +3,11 @@
  * Update availability and SEO here rather than scattering strings across components.
  *
  * Crawlability note: this site is a CRA SPA. Full Next/Astro migration would be
- * disproportionate for a portfolio. We ship complete Open Graph / Twitter / JSON-LD
- * and Person schema in the static HTML shell so crawlers and social previews receive
- * meaningful content without executing the app. Netlify `_redirects` keeps direct
- * URL refreshes working. Prefer prerender/SSG only if social crawlers prove insufficient.
+ * disproportionate for a portfolio. We ship Open Graph / Twitter / JSON-LD in the
+ * static HTML shell, then generate per-route HTML after build
+ * (`scripts/generate-static-pages.js`) so crawlers see route-specific meta and
+ * semantic markup inside #root. Netlify serves those files first; `_redirects`
+ * keeps SPA fallback working for other deep links.
  */
 
 import cv from 'files/cv.pdf'
@@ -14,7 +15,7 @@ import cv from 'files/cv.pdf'
 export const SITE_URL = 'https://meetantonija.com'
 
 export const person = {
-  name: 'Antonija Simić',
+  name: 'Antonija Šimić',
   alternateName: 'Antonija Šimić',
   jobTitle: 'Senior React Native & Frontend Engineer',
   // "Senior" is verified via CV/project roles (Trimbox, Funder Pro, Casumo).
@@ -44,9 +45,9 @@ export const availability = {
 }
 
 export const seo = {
-  title: 'Antonija Simić — Senior React Native & Frontend Engineer',
+  title: 'Antonija Šimić — Senior React Native & Frontend Engineer',
   description:
-    'React Native and frontend engineer building production mobile products, subscriptions, analytics integrations, experiments, and maintainable TypeScript applications.',
+    'Senior React Native and frontend engineer building production mobile products, subscription systems, experiments, and scalable frontend architecture.',
   // PLACEHOLDER: replace with a dedicated social-preview image when available.
   ogImage: 'https://avatars.githubusercontent.com/u/5020758?v=4',
   themeColor: '#f90093',
@@ -91,32 +92,17 @@ export const credibilityItems = [
   {
     id: 'years',
     label: '10+ years',
-    detail: 'in software development',
-    // Verified: coding/working since 2015 (FAQ + marquee + Tint role from 2015).
+    detail: 'of frontend and product engineering',
   },
   {
     id: 'mobile',
-    label: 'Production RN',
-    detail: 'iOS & Android apps',
-    // Verified via Trimbox React Native + Expo/EAS release work.
+    label: 'Production RN & React',
+    detail: 'mobile and web applications',
   },
   {
-    id: 'fullstack',
-    label: 'Full-stack',
-    detail: 'product development',
-    // Verified via Duga (React + Express/PostgreSQL) as creator & lead.
-  },
-  {
-    id: 'typescript',
-    label: 'TypeScript',
-    detail: 'day to day',
-  },
-  {
-    id: 'speaking',
-    label: 'Talks & mentoring',
-    detail: 'sharing the craft',
-    // Verified via Events section (JS Zagreb, DevSheGoes, CSS in Vienna)
-    // and Code Institute mentoring role in projects data.
+    id: 'impact',
+    label: 'Measurable impact',
+    detail: 'performance, API efficiency, and test coverage',
   },
 ]
 

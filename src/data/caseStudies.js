@@ -60,12 +60,14 @@ const caseStudies = [
   {
     slug: 'trimbox',
     title: 'Trimbox',
-    projectType: 'Production mobile product',
+    projectType: 'Professional product work',
     company: 'Mode Mobile',
     period: 'March 2026 – Present',
     summary:
       'Production React Native work on a subscription inbox product — paywalls, app-open coordination, remote experiments and pricing validation.',
     role: 'Senior Frontend Developer · React Native',
+    workType: 'Professional product work',
+    emphasis: 'primary',
     context:
       'Trimbox is Mode Mobile’s inbox-cleaning product. I contribute to production React Native product features and supporting infrastructure — subscriptions, analytics, remote configuration and release workflows — as part of a larger team. I do not claim sole ownership of the product architecture.',
     responsibilities: [
@@ -142,12 +144,14 @@ const caseStudies = [
   {
     slug: 'duga',
     title: 'Duga',
-    projectType: 'Personal full-stack product',
+    projectType: 'Independent product',
     company: 'Personal project',
     period: '2024 – Present',
     personal: true,
+    workType: 'Independent product',
+    emphasis: 'secondary',
     summary:
-      'Built a full-stack queer dating and community platform for the Balkans with Auth0, real-time chat, moderated uploads and a forum — shipped at duga.chat.',
+      'Independent full-stack queer dating and community platform for the Balkans with Auth0, real-time chat, moderated uploads and a forum — shipped at duga.chat.',
     role: 'Creator & lead full-stack engineer',
     context:
       'Duga exists as a safer queer space for meeting and conversation in the Balkan region. The product needed more than a thin UI demo: authentication, profiles, moderation-aware uploads, real-time messaging and community discussion had to work together as one application.',
@@ -256,31 +260,33 @@ const caseStudies = [
   {
     slug: 'funderpro',
     title: 'FunderPro',
-    projectType: 'Fintech platform',
+    projectType: 'Professional product work',
     company: 'Mochalabs',
     period: 'September 2023 – March 2026',
+    workType: 'Professional product work',
+    emphasis: 'secondary',
     summary:
-      'Production fintech platform work — reduced redundant API traffic with React Query, strengthened onboarding and KYC, and expanded mature product flows while raising frontend engineering standards.',
+      'Frontend engineering on a production platform for a proprietary trading company — React Query, onboarding, KYC, product UX, and knowledge sharing.',
     role: 'Senior React Developer',
     context:
-      'FunderPro is a production fintech platform. The work focused on improving core user flows, frontend architecture, application performance and developer productivity while continuously shipping new product features.',
+      'FunderPro is a trading-focused fintech product supporting onboarding, KYC, affiliate, and promotional flows for a proprietary trading company. The work focused on improving core user flows, frontend architecture, application performance and developer productivity while continuously shipping new product features — without claiming sole ownership of the platform.',
     responsibilities: [
       'Reduced redundant API traffic by introducing React Query and reworking data fetching',
-      'Modernized onboarding and KYC experiences',
+      'Improved enhanced sign-up and KYC experiences',
       'Improved usability using insights from user interviews',
-      'Expanded a production fintech platform with affiliate and coupon capabilities',
+      'Expanded production affiliate and coupon capabilities',
       'Raised frontend engineering standards through recurring technical knowledge sharing',
     ],
     challenges: [
       'Unnecessary API requests created redundant network traffic and made data synchronization harder to maintain',
       'Onboarding and identity verification needed a clearer journey while supporting business requirements',
       'Existing UI patterns made important workflows harder to understand',
-      'A mature production codebase needed new fintech capabilities without isolating them as one-off features',
+      'A mature production codebase needed new capabilities without isolating them as one-off features',
       'Frontend engineers needed shared React, TypeScript and React Query knowledge to ship faster',
     ],
     solution: [
       'Introduced React Query, reworked data fetching and improved caching to cut unnecessary API calls',
-      'Enhanced sign-up, KYC and onboarding flows as part of the critical fintech user journey',
+      'Enhanced sign-up, KYC and onboarding flows as part of the critical user journey',
       'Simplified interfaces and clarified workflows using insights from user interviews',
       'Extended the production application with an affiliate system, coupon creation and related frontend functionality',
       'Hosted weekly knowledge-sharing sessions on React, TypeScript, JavaScript and React Query',
@@ -293,7 +299,7 @@ const caseStudies = [
       'Helped frontend engineers become more productive through recurring knowledge sharing',
     ],
     highlight:
-      'Cut redundant API traffic by 40% with React Query, then strengthened onboarding, KYC and mature product flows.',
+      'Cut redundant API traffic by 40% with React Query while improving onboarding, KYC and mature product flows.',
     technologies: [
       'React',
       'TypeScript',
@@ -319,7 +325,7 @@ const caseStudies = [
   {
     slug: 'casumo',
     title: 'Casumo',
-    projectType: 'Production web platform',
+    projectType: 'Professional product work',
     company: 'Casumo',
     period: '2022 – 2023',
     summary:
@@ -362,6 +368,7 @@ const caseStudies = [
     title: 'Revuto',
     company: 'AsyncLabs',
     period: '2020 – 2021',
+    projectType: 'Professional product work',
     summary:
       'Subscription management web product — sole frontend developer ownership.',
     role: 'Mid React Developer',
@@ -390,6 +397,9 @@ const caseStudies = [
   },
 ]
 
-export const featuredCaseStudies = caseStudies.filter((study) => study.featured)
+/** Featured order: Trimbox → FunderPro → Duga */
+export const featuredCaseStudies = ['trimbox', 'funderpro', 'duga']
+  .map((slug) => caseStudies.find((study) => study.slug === slug))
+  .filter(Boolean)
 
 export default caseStudies

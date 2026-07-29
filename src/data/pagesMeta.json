@@ -1,0 +1,331 @@
+[
+  {
+    "path": "/",
+    "title": "Antonija Šimić — Senior React Native & Frontend Engineer",
+    "description": "Senior React Native and frontend engineer building production mobile products, subscription systems, experiments, and scalable frontend architecture.",
+    "type": "website",
+    "ogImage": "https://avatars.githubusercontent.com/u/5020758?v=4",
+    "heading": "Antonija Šimić — Senior React Native & Frontend Engineer",
+    "summary": "Senior React Native and frontend engineer based in Croatia, building production mobile and web products for remote international teams.",
+    "links": [
+      {
+        "href": "/#selected-work",
+        "label": "Selected work"
+      },
+      {
+        "href": "/project/trimbox",
+        "label": "Trimbox"
+      },
+      {
+        "href": "/project/funderpro",
+        "label": "FunderPro"
+      },
+      {
+        "href": "/project/duga",
+        "label": "Duga"
+      },
+      {
+        "href": "/cv",
+        "label": "CV"
+      },
+      {
+        "href": "/contact",
+        "label": "Contact"
+      },
+      {
+        "href": "/posts",
+        "label": "Notes"
+      }
+    ],
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://meetantonija.com/#person",
+        "name": "Antonija Šimić",
+        "alternateName": "Antonija Šimić",
+        "jobTitle": "Senior React Native & Frontend Engineer",
+        "url": "https://meetantonija.com/",
+        "image": "https://avatars.githubusercontent.com/u/5020758?v=4",
+        "email": "mailto:antonija1023@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sveta Nedelja",
+          "addressCountry": "Croatia"
+        },
+        "sameAs": [
+          "https://github.com/tonkec",
+          "https://www.linkedin.com/in/antonija-simic/",
+          "https://codepen.io/tonkec"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://meetantonija.com/#website",
+        "url": "https://meetantonija.com/",
+        "name": "Antonija Šimić",
+        "description": "Senior React Native and frontend engineer building production mobile products, subscription systems, experiments, and scalable frontend architecture.",
+        "author": {
+          "@id": "https://meetantonija.com/#person"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/project/trimbox",
+    "title": "Trimbox Case Study — Antonija Šimić",
+    "description": "React Native case study covering subscription flows, app-open UI coordination, Remote Config, analytics, pricing validation, and production mobile engineering.",
+    "type": "article",
+    "ogImage": "https://avatars.githubusercontent.com/u/5020758?v=4",
+    "heading": "Trimbox",
+    "summary": "Production React Native work on Mode Mobile’s subscription inbox product — paywalls, app-open coordination, remote experiments and pricing validation. Contributed as a Senior Frontend Developer on a larger team; not sole product ownership.",
+    "outcomes": [
+      "Improved reliability of subscription and app-open behaviour",
+      "Prevented overlapping user flows around paywalls and startup dialogs",
+      "Enabled safer remote configuration of product experiments",
+      "Increased test coverage for critical subscription behaviour",
+      "Reduced risk around pricing presentation"
+    ],
+    "links": [
+      {
+        "href": "/",
+        "label": "Home"
+      },
+      {
+        "href": "/#selected-work",
+        "label": "Selected work"
+      },
+      {
+        "href": "/project/funderpro",
+        "label": "FunderPro"
+      },
+      {
+        "href": "/project/duga",
+        "label": "Duga"
+      },
+      {
+        "href": "/contact",
+        "label": "Contact"
+      }
+    ],
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Trimbox",
+      "description": "Production React Native case study covering subscription paywalls, app-open dialog coordination, Remote Config experiments, and Expo/EAS release work at Mode Mobile.",
+      "url": "https://meetantonija.com/project/trimbox",
+      "author": {
+        "@type": "Person",
+        "name": "Antonija Šimić",
+        "alternateName": "Antonija Šimić",
+        "url": "https://meetantonija.com/"
+      }
+    }
+  },
+  {
+    "path": "/project/funderpro",
+    "title": "FunderPro Case Study — Antonija Šimić",
+    "description": "Frontend engineering case study covering React Query, API-request reduction, onboarding, KYC, product UX, and technical knowledge sharing.",
+    "type": "article",
+    "ogImage": "https://avatars.githubusercontent.com/u/5020758?v=4",
+    "heading": "FunderPro",
+    "summary": "Frontend engineering on a production platform for a proprietary trading company — React Query (40% fewer redundant API calls), onboarding, KYC, product UX, and knowledge sharing. Team contribution, not sole platform ownership.",
+    "outcomes": [
+      "Reduced redundant API calls by 40%",
+      "Made onboarding and KYC flows clearer for users",
+      "Improved usability of important product workflows",
+      "Expanded the platform with affiliate and coupon capabilities",
+      "Helped frontend engineers become more productive through recurring knowledge sharing"
+    ],
+    "links": [
+      {
+        "href": "/",
+        "label": "Home"
+      },
+      {
+        "href": "/#selected-work",
+        "label": "Selected work"
+      },
+      {
+        "href": "/project/trimbox",
+        "label": "Trimbox"
+      },
+      {
+        "href": "/project/duga",
+        "label": "Duga"
+      },
+      {
+        "href": "/contact",
+        "label": "Contact"
+      }
+    ],
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "FunderPro",
+      "description": "Frontend engineering case study on a trading-focused fintech product: React Query performance, onboarding and KYC improvements, and affiliate and coupon capabilities.",
+      "url": "https://meetantonija.com/project/funderpro",
+      "author": {
+        "@type": "Person",
+        "name": "Antonija Šimić",
+        "alternateName": "Antonija Šimić",
+        "url": "https://meetantonija.com/"
+      }
+    }
+  },
+  {
+    "path": "/project/duga",
+    "title": "Duga Case Study — Antonija Šimić",
+    "description": "Independent full-stack product case study covering React, authentication, real-time communication, backend architecture, and product ownership.",
+    "type": "article",
+    "ogImage": "https://avatars.githubusercontent.com/u/5020758?v=4",
+    "heading": "Duga",
+    "summary": "Independent personal product: a queer dating and community application for the Balkans. Designed and built as creator and lead full-stack engineer across a Vite/React/TypeScript frontend and Express/PostgreSQL backend.",
+    "outcomes": [
+      "Shipped a production full-stack product at duga.chat",
+      "Connected auth, realtime chat, moderated uploads and forum into one maintainable system",
+      "Established staging and production deployment paths for frontend and API"
+    ],
+    "links": [
+      {
+        "href": "/",
+        "label": "Home"
+      },
+      {
+        "href": "/#selected-work",
+        "label": "Selected work"
+      },
+      {
+        "href": "/project/trimbox",
+        "label": "Trimbox"
+      },
+      {
+        "href": "/project/funderpro",
+        "label": "FunderPro"
+      },
+      {
+        "href": "/contact",
+        "label": "Contact"
+      }
+    ],
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Duga",
+      "description": "Personal independent full-stack product: queer dating and community for the Balkans, built with React, Express, PostgreSQL, Auth0 and realtime messaging.",
+      "url": "https://meetantonija.com/project/duga",
+      "author": {
+        "@type": "Person",
+        "name": "Antonija Šimić",
+        "alternateName": "Antonija Šimić",
+        "url": "https://meetantonija.com/"
+      }
+    }
+  },
+  {
+    "path": "/cv",
+    "title": "CV — Antonija Šimić — Senior React Native & Frontend Engineer",
+    "description": "Work history for Antonija Simić spanning React Native, React, TypeScript and product frontend delivery.",
+    "type": "website",
+    "ogImage": "https://avatars.githubusercontent.com/u/5020758?v=4",
+    "heading": "CV — Antonija Šimić",
+    "summary": "Work history shaped by product delivery across React Native, React, TypeScript and production UI.",
+    "links": [
+      {
+        "href": "/",
+        "label": "Home"
+      },
+      {
+        "href": "/#selected-work",
+        "label": "Selected work"
+      },
+      {
+        "href": "/contact",
+        "label": "Contact"
+      }
+    ],
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "name": "CV — Antonija Simić",
+      "url": "https://meetantonija.com/cv",
+      "about": {
+        "@type": "Person",
+        "name": "Antonija Šimić",
+        "jobTitle": "Senior React Native & Frontend Engineer",
+        "url": "https://meetantonija.com/"
+      }
+    }
+  },
+  {
+    "path": "/contact",
+    "title": "Contact — Antonija Šimić — Senior React Native & Frontend Engineer",
+    "description": "Contact Antonija Simić about React Native and frontend opportunities, consulting, or product collaboration.",
+    "type": "website",
+    "ogImage": "https://avatars.githubusercontent.com/u/5020758?v=4",
+    "heading": "Contact Antonija Šimić",
+    "summary": "Reach out about React Native and frontend opportunities, consulting, or product collaboration.",
+    "links": [
+      {
+        "href": "/",
+        "label": "Home"
+      },
+      {
+        "href": "/cv",
+        "label": "CV"
+      },
+      {
+        "href": "mailto:antonija1023@gmail.com",
+        "label": "Email"
+      }
+    ],
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact — Antonija Simić",
+      "url": "https://meetantonija.com/contact",
+      "about": {
+        "@type": "Person",
+        "name": "Antonija Šimić",
+        "email": "mailto:antonija1023@gmail.com",
+        "url": "https://meetantonija.com/"
+      }
+    }
+  },
+  {
+    "path": "/posts",
+    "title": "Notes — Antonija Šimić — Senior React Native & Frontend Engineer",
+    "description": "Practical React, JavaScript and performance notes from Antonija Simić.",
+    "type": "website",
+    "ogImage": "https://avatars.githubusercontent.com/u/5020758?v=4",
+    "heading": "Notes for curious frontend developers",
+    "summary": "Practical React, JavaScript and performance notes from problems solved, talks prepared and things relearned.",
+    "links": [
+      {
+        "href": "/",
+        "label": "Home"
+      },
+      {
+        "href": "/#selected-work",
+        "label": "Selected work"
+      },
+      {
+        "href": "/contact",
+        "label": "Contact"
+      }
+    ],
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Notes — Antonija Simić",
+      "url": "https://meetantonija.com/posts",
+      "description": "Practical React, JavaScript and performance notes from Antonija Simić.",
+      "author": {
+        "@type": "Person",
+        "name": "Antonija Šimić",
+        "url": "https://meetantonija.com/"
+      }
+    }
+  }
+]

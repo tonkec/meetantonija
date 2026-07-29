@@ -33,6 +33,11 @@
     font-size: 0.95rem;
     font-weight: 700;
     padding: 0.75rem 1rem;
+    text-decoration: none;
+
+    span {
+      text-decoration: none;
+    }
 
     &:hover,
     &:focus {
@@ -40,15 +45,18 @@
       border-color: var(--color-black);
       color: var(--color-black);
       outline: none;
+      text-decoration: none;
     }
 
     &.active {
       background-color: var(--color-pink);
       border-color: var(--color-pink);
       color: var(--color-white);
+      text-decoration: none;
 
       span {
         color: var(--color-white);
+        text-decoration: none;
       }
     }
   }

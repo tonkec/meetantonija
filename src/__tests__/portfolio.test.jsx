@@ -10,7 +10,6 @@ import ProjectNav from 'components/ProjectNav'
 import Social from 'components/Social'
 import { featuredCaseStudies } from 'data/caseStudies'
 import architectureFlows from 'data/architectureFlows'
-import { homepageChallengeIds } from 'data/engineeringStories'
 import { cvAsset, hero, seo, person, contact } from 'data/site'
 import { scrollToTheElement } from 'utils'
 
@@ -154,10 +153,10 @@ describe('Social links', () => {
 })
 
 describe('EngineeringStories', () => {
-  it('renders curated homepage engineering challenges', () => {
+  it('renders curated homepage engineering challenge previews', () => {
     render(
       <MemoryRouter>
-        <EngineeringStories mode="homepage" />
+        <EngineeringStories mode="homepage" previewOnly />
       </MemoryRouter>
     )
 
@@ -167,9 +166,7 @@ describe('EngineeringStories', () => {
       })
     ).toBeInTheDocument()
 
-    expect(screen.getAllByRole('button')).toHaveLength(
-      homepageChallengeIds.length
-    )
+    expect(screen.queryAllByRole('button')).toHaveLength(0)
     expect(
       screen.getByText(/preventing duplicate paywalls/i)
     ).toBeInTheDocument()
@@ -177,14 +174,17 @@ describe('EngineeringStories', () => {
       screen.getByText(/coordinating app-open ui/i)
     ).toBeInTheDocument()
     expect(
-      screen.getByText(/reducing redundant api traffic/i)
+      screen.getByText(/reducing redundant api calls by 40%/i)
     ).toBeInTheDocument()
     expect(
       screen.getByText(/modernizing fintech onboarding/i)
     ).toBeInTheDocument()
     expect(
-      screen.getByText(/building a real-time communication product/i)
-    ).toBeInTheDocument()
+      screen.queryByText(/building a real-time communication product/i)
+    ).not.toBeInTheDocument()
+    expect(
+      screen.getAllByRole('link', { name: /read trimbox case study/i }).length
+    ).toBeGreaterThan(0)
   })
 
   it('filters stories when a projectSlug is provided', () => {
@@ -218,7 +218,7 @@ describe('EngineeringStories', () => {
   it('supports expandable story accessibility attributes', async () => {
     render(
       <MemoryRouter>
-        <EngineeringStories mode="homepage" />
+        <EngineeringStories mode="project" projectSlug="trimbox" />
       </MemoryRouter>
     )
 
@@ -255,31 +255,35 @@ describe('ArchitectureFlow', () => {
 })
 
 describe('ProjectNav', () => {
-  it('links to sibling featured projects', () => {
+  it('links back to selected work and sibling featured projects', () => {
     render(
       <MemoryRouter>
-        <ProjectNav currentSlug="duga" />
+        <ProjectNav currentSlug="funderpro" />
       </MemoryRouter>
     )
 
     expect(
-      screen.queryByRole('link', { name: /back to selected work/i })
-    ).not.toBeInTheDocument()
+      screen.getByRole('link', { name: /back to selected work/i })
+    ).toHaveAttribute('href', '/#selected-work')
     expect(screen.getByRole('link', { name: /trimbox/i })).toBeInTheDocument()
-    expect(
-      screen.getByRole('link', { name: /funderpro/i })
-    ).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /duga/i })).toBeInTheDocument()
   })
 })
 
 describe('featured work set', () => {
-  it('features Trimbox, Duga and FunderPro', () => {
+  it('features Trimbox, FunderPro and Duga in that order', () => {
     const slugs = featuredCaseStudies.map((study) => study.slug)
-    expect(slugs).toEqual(['trimbox', 'duga', 'funderpro'])
+    expect(slugs).toEqual(['trimbox', 'funderpro', 'duga'])
+
+    expect(featuredCaseStudies[0].workType).toMatch(/professional/i)
+    expect(featuredCaseStudies[1].workType).toMatch(/professional/i)
+    expect(featuredCaseStudies[2].workType).toMatch(/independent/i)
 
     const funder = featuredCaseStudies.find((study) => study.slug === 'funderpro')
     expect(funder.title).toBe('FunderPro')
     expect(funder.period).toMatch(/September 2023.*March 2026/i)
+    expect(funder.context).toMatch(/proprietary trading company/i)
+    expect(funder.context).not.toMatch(/bank|brokerage/i)
     expect(funder.outcomes[0]).toMatch(/40%/)
     expect(funder.technologies).toEqual([
       'React',
@@ -294,7 +298,7 @@ describe('site SEO content', () => {
   it('exposes the verified professional title and description', () => {
     expect(seo.title).toContain(person.name)
     expect(seo.title).toMatch(/Senior React Native/i)
-    expect(seo.description).toMatch(/subscriptions/i)
+    expect(seo.description).toMatch(/subscription systems/i)
     expect(seo.description).toMatch(/experiments/i)
     expect(hero.supporting).toMatch(/subscription systems/i)
     expect(contact.headline).toMatch(/React Native or frontend/i)

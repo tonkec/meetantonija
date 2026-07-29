@@ -35,6 +35,11 @@ const architectureFlows = {
         description: 'Shared flow decides order and gating.',
       },
       {
+        id: 'eligibility',
+        label: 'Eligibility evaluation',
+        description: 'Checks whether each queued surface should show.',
+      },
+      {
         id: 'privacy',
         label: 'Privacy update',
         description: 'Blocking notice when required.',

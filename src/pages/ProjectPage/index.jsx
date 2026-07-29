@@ -16,6 +16,7 @@ import ArchitectureFlow from 'components/ArchitectureFlow'
 import ProjectNav from 'components/ProjectNav'
 import caseStudies from 'data/caseStudies'
 import architectureFlows from 'data/architectureFlows'
+import { getPageMeta } from 'data/pagesMeta'
 import './ProjectPage.scss'
 
 const getTeamSize = (team) => {
@@ -103,13 +104,20 @@ const ProjectPage = () => {
     : null
   const hasExploreLinks = !isDuga && (project.link || repositoryLinks.length > 0)
 
+  const pageMeta = getPageMeta(`/project/${title}`)
+
   return (
     <div className="project-page">
       <Seo
-        title={`${project.title} — Antonija Simić`}
-        description={project.description?.slice(0, 160) || project.headline}
+        title={pageMeta?.title || `${project.title} — Antonija Simić`}
+        description={
+          pageMeta?.description ||
+          project.description?.slice(0, 160) ||
+          project.headline
+        }
         path={`/project/${title}`}
         type="article"
+        jsonLd={pageMeta?.jsonLd}
       />
 
       {caseStudy?.featured ? <ProjectNav currentSlug={caseStudy.slug} /> : null}

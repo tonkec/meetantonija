@@ -1,1 +1,5 @@
+# Netlify serves existing files first, then falls through to SPA redirects.
+# Build-time static HTML under /project/*/index.html (and similar) wins over
+# the catch-all below — so crawlers get route-specific meta + semantic markup.
+# The SPA fallback keeps client-side routing working for unknown deep links.
 /*    /index.html   200

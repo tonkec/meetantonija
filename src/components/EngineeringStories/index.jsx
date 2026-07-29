@@ -7,9 +7,9 @@ import { removeSpacesAndDashes } from 'utils'
 import './EngineeringStories.scss'
 
 /**
- * Expandable engineering challenges / stories.
- * Homepage uses curated challenges; project pages filter by projectSlug.
- * Uses real buttons with aria-expanded / aria-controls for accessibility.
+ * Engineering challenges / stories.
+ * Homepage previewOnly: short cards linking to case studies (no duplicated detail).
+ * Project pages: expandable Context → Problem → Approach → Considerations → Outcome.
  */
 const EngineeringStories = ({
   projectSlug,
@@ -19,6 +19,7 @@ const EngineeringStories = ({
   id = 'engineering-challenges',
   kicker = 'Engineering challenges',
   mode = 'auto',
+  previewOnly = false,
 } = {}) => {
   const reactId = useId()
   const [openId, setOpenId] = useState(null)
@@ -59,6 +60,21 @@ const EngineeringStories = ({
             const bodyId = `${reactId}-${story.id}-body`
             const isOpen = openId === story.id
 
+            if (previewOnly) {
+              return (
+                <article key={story.id} className="engineering-story engineering-story--preview">
+                  <p className="engineering-story__meta">{story.project}</p>
+                  <h3 className="engineering-story__heading">{story.title}</h3>
+                  <p className="engineering-story__summary">{story.summary}</p>
+                  {projectPath ? (
+                    <Link to={projectPath} className="engineering-story__link">
+                      Read {story.project} case study
+                    </Link>
+                  ) : null}
+                </article>
+              )
+            }
+
             return (
               <article
                 key={story.id}
@@ -81,11 +97,6 @@ const EngineeringStories = ({
                     <span className="engineering-story__summary">
                       {story.summary}
                     </span>
-                    {story.outcome?.[0] ? (
-                      <span className="engineering-story__outcome-preview">
-                        Outcome: {story.outcome[0]}
-                      </span>
-                    ) : null}
                     <span className="engineering-story__hint" aria-hidden="true">
                       {isOpen ? 'Collapse −' : 'Expand +'}
                     </span>

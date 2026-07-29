@@ -1,16 +1,12 @@
 import Seo from 'components/Seo'
 import ContactForm from 'components/ContactForm'
-import { contact, seo } from 'data/site'
+import { contact } from 'data/site'
 import './ContactPage.scss'
 
 const ContactPage = () => {
   return (
     <>
-      <Seo
-        title={`Contact — ${seo.title}`}
-        description="Contact Antonija Simić about React Native and frontend opportunities, consulting, or product collaboration."
-        path="/contact"
-      />
+      <Seo path="/contact" />
 
       <header className="contact-hero">
         <div className="container contact-hero-grid">

@@ -27,16 +27,15 @@ export const homepageChallengeIds = [
   'app-open-dialogs',
   'funderpro-api-traffic',
   'funderpro-onboarding-kyc',
-  'duga-realtime-chat',
 ]
 
 /** @type {EngineeringStory[]} */
 const engineeringStories = [
   {
     id: 'funderpro-api-traffic',
-    title: 'Reducing redundant API traffic',
+    title: 'Reducing redundant API calls by 40%',
     summary:
-      'Introduced React Query and improved data-fetching behaviour, reducing redundant API calls by 40%.',
+      'Introduced React Query and improved frontend data-fetching behaviour, reducing redundant requests across a production trading platform.',
     context:
       'The FunderPro application was performing unnecessary API requests, creating redundant network traffic and making data fetching less efficient.',
     problem:
@@ -61,7 +60,7 @@ const engineeringStories = [
     id: 'duplicate-paywalls',
     title: 'Preventing duplicate paywalls',
     summary:
-      'Coalesced deferred subscription intents so multiple requests could not trigger overlapping paywalls after a blocking app-open dialog closed.',
+      'Coalesced deferred subscription intents so multiple requests could not trigger overlapping paywalls after blocking app-open UI closed.',
     context:
       'The Trimbox app could receive multiple requests to open a subscription paywall while another app-open dialog was blocking the interface.',
     problem:
