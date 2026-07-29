@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom'
-import { cvAsset, hero } from 'data/site'
+import { hero } from 'data/site'
 import { scrollToTheElement } from 'utils'
 import { useWindowSize } from 'hooks/useWindowSize'
 
@@ -19,16 +18,6 @@ const ActionButtons = () => {
       >
         {hero.ctas.work.label}
       </button>
-
-      <Link
-        to={cvAsset.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        download={cvAsset.downloadName}
-        className="outlined"
-      >
-        {cvAsset.label}
-      </Link>
 
       <button
         type="button"

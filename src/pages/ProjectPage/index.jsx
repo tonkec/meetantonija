@@ -13,7 +13,10 @@ import Seo from 'components/Seo'
 import ProjectPhotos from 'components/ProjectPhotos'
 import RecordNotFound from 'components/RecordNotFound'
 import EngineeringStories from 'components/EngineeringStories'
+import ArchitectureFlow from 'components/ArchitectureFlow'
+import ProjectNav from 'components/ProjectNav'
 import caseStudies from 'data/caseStudies'
+import architectureFlows from 'data/architectureFlows'
 import './ProjectPage.scss'
 
 const getTeamSize = (team) => {
@@ -69,6 +72,9 @@ const ProjectPage = () => {
       ? caseStudy.photos
       : project.photos || []
   const showGallery = !isModeMobile && galleryPhotos.length > 0
+  const architectureFlow = caseStudy?.slug
+    ? architectureFlows[caseStudy.slug]
+    : null
 
   return (
     <>
@@ -78,6 +84,7 @@ const ProjectPage = () => {
         path={`/project/${title}`}
         type="article"
       />
+      {caseStudy?.featured ? <ProjectNav currentSlug={caseStudy.slug} /> : null}
       <header className="project-hero">
         <div className="container project-hero-grid">
           <div className="project-hero-copy">
@@ -213,11 +220,21 @@ const ProjectPage = () => {
       {caseStudy?.slug ? (
         <EngineeringStories
           projectSlug={caseStudy.slug}
+          mode="project"
           id={`${caseStudy.slug}-engineering-stories`}
+          kicker="Engineering stories"
           heading={`Selected ${caseStudy.title} engineering stories.`}
-          intro="Problem, approach and outcome for the work that mattered most — kept short enough to scan."
+          intro="Context, problem, approach, considerations and outcome — expandable for engineering depth."
           showProjectLinks={false}
         />
+      ) : null}
+
+      {architectureFlow ? (
+        <section className="project-description">
+          <div className="container project-description-card">
+            <ArchitectureFlow flow={architectureFlow} />
+          </div>
+        </section>
       ) : null}
 
       {keyFeatures.length > 0 ? (

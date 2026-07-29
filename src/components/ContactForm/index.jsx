@@ -170,7 +170,12 @@ const ContactForm = ({ showIntro = true }) => {
 
         <ul className="contact-links">
           <li>
-            <a href={`mailto:${person.email}`}>{person.email}</a>
+            <a
+              href={`mailto:${person.email}?subject=${encodeURIComponent(contact.mailtoSubject)}`}
+              className="primary"
+            >
+              {contact.emailLabel || 'Email me'}
+            </a>
           </li>
           {linkedIn ? (
             <li>
@@ -178,8 +183,9 @@ const ContactForm = ({ showIntro = true }) => {
                 href={linkedIn.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="outlined"
               >
-                LinkedIn
+                {contact.linkedInLabel || 'LinkedIn'}
               </a>
             </li>
           ) : null}

@@ -1,38 +1,41 @@
+import { useId, useState } from 'react'
 import { Link } from 'react-router-dom'
-import engineeringStories from 'data/engineeringStories'
-import { featuredCaseStudies } from 'data/caseStudies'
+import engineeringStories, {
+  getHomepageChallenges,
+} from 'data/engineeringStories'
 import { removeSpacesAndDashes } from 'utils'
 import './EngineeringStories.scss'
 
-const getHomepageStories = () =>
-  featuredCaseStudies
-    .map(
-      (study) =>
-        engineeringStories.find(
-          (story) => story.projectSlug === study.slug && story.homepage
-        ) ||
-        engineeringStories.find((story) => story.projectSlug === study.slug)
-    )
-    .filter(Boolean)
-
 /**
- * Expandable engineering stories. Pass projectSlug to limit to one product.
- * On the homepage, shows exactly one story per featured product.
- * Each story surfaces Problem → Approach → Outcome for recruiter scanning.
+ * Expandable engineering challenges / stories.
+ * Homepage uses curated challenges; project pages filter by projectSlug.
+ * Uses real buttons with aria-expanded / aria-controls for accessibility.
  */
 const EngineeringStories = ({
   projectSlug,
-  heading = 'Production problems I have owned.',
-  intro = 'One highlight from each featured product — FunderPro, Trimbox and Duga.',
+  heading = 'Selected engineering challenges.',
+  intro = 'Problems solved across Trimbox, FunderPro and Duga — concise enough to scan, expandable for engineering depth.',
   showProjectLinks = true,
-  id = 'engineering-stories',
+  id = 'engineering-challenges',
+  kicker = 'Engineering challenges',
+  mode = 'auto',
 } = {}) => {
-  const stories = projectSlug
-    ? engineeringStories.filter((story) => story.projectSlug === projectSlug)
-    : getHomepageStories()
+  const reactId = useId()
+  const [openId, setOpenId] = useState(null)
+
+  const stories =
+    mode === 'homepage' || (!projectSlug && mode === 'auto')
+      ? getHomepageChallenges()
+      : projectSlug
+        ? engineeringStories.filter((story) => story.projectSlug === projectSlug)
+        : getHomepageChallenges()
 
   if (!stories.length) {
     return null
+  }
+
+  const toggleStory = (storyId) => {
+    setOpenId((current) => (current === storyId ? null : storyId))
   }
 
   return (
@@ -42,7 +45,7 @@ const EngineeringStories = ({
       aria-labelledby={`${id}-heading`}
     >
       <div className="container">
-        <p className="section-kicker">Engineering stories</p>
+        <p className="section-kicker">{kicker}</p>
         <div className="engineering-stories-header">
           <h2 id={`${id}-heading`}>{heading}</h2>
           {intro ? <p>{intro}</p> : null}
@@ -50,35 +53,65 @@ const EngineeringStories = ({
 
         <div className="engineering-stories-list">
           {stories.map((story) => {
-            const projectPath = story.projectSlug
-              ? `/project/${removeSpacesAndDashes(story.projectSlug)}`
+            const projectPath = story.project
+              ? `/project/${removeSpacesAndDashes(story.project)}`
               : null
+            const bodyId = `${reactId}-${story.id}-body`
+            const isOpen = openId === story.id
 
             return (
-              <details key={story.id} className="engineering-story">
-                <summary>
-                  <span className="engineering-story__meta">
-                    {story.project}
-                  </span>
-                  <strong>{story.title}</strong>
-                  <span className="engineering-story__summary">
-                    {story.summary}
-                  </span>
-                </summary>
+              <article
+                key={story.id}
+                className={`engineering-story${isOpen ? ' engineering-story--open' : ''}`}
+              >
+                <h3 className="engineering-story__title">
+                  <button
+                    type="button"
+                    className="engineering-story__toggle"
+                    aria-expanded={isOpen}
+                    aria-controls={bodyId}
+                    onClick={() => toggleStory(story.id)}
+                  >
+                    <span className="engineering-story__meta">
+                      {story.project}
+                    </span>
+                    <span className="engineering-story__heading">
+                      {story.title}
+                    </span>
+                    <span className="engineering-story__summary">
+                      {story.summary}
+                    </span>
+                    {story.outcome?.[0] ? (
+                      <span className="engineering-story__outcome-preview">
+                        Outcome: {story.outcome[0]}
+                      </span>
+                    ) : null}
+                    <span className="engineering-story__hint" aria-hidden="true">
+                      {isOpen ? 'Collapse −' : 'Expand +'}
+                    </span>
+                  </button>
+                </h3>
 
-                <div className="engineering-story__body">
+                <div
+                  className="engineering-story__body"
+                  id={bodyId}
+                  hidden={!isOpen}
+                >
                   {story.context ? (
-                    <p className="engineering-story__context">{story.context}</p>
+                    <article className="engineering-story__panel">
+                      <h4>Context</h4>
+                      <p>{story.context}</p>
+                    </article>
                   ) : null}
 
                   <div className="engineering-story__panels">
                     <article className="engineering-story__panel engineering-story__panel--problem">
-                      <h3>Problem</h3>
+                      <h4>Problem</h4>
                       <p>{story.problem}</p>
                     </article>
 
                     <article className="engineering-story__panel engineering-story__panel--approach">
-                      <h3>Approach</h3>
+                      <h4>Approach</h4>
                       <ul>
                         {story.contribution.map((item) => (
                           <li key={item}>{item}</li>
@@ -86,8 +119,19 @@ const EngineeringStories = ({
                       </ul>
                     </article>
 
+                    {story.considerations?.length ? (
+                      <article className="engineering-story__panel">
+                        <h4>Engineering considerations</h4>
+                        <ul>
+                          {story.considerations.map((item) => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ul>
+                      </article>
+                    ) : null}
+
                     <article className="engineering-story__panel engineering-story__panel--outcome">
-                      <h3>Outcome</h3>
+                      <h4>Outcome</h4>
                       <ul>
                         {story.outcome.map((item) => (
                           <li key={item}>{item}</li>
@@ -96,13 +140,24 @@ const EngineeringStories = ({
                     </article>
                   </div>
 
+                  {story.technologies?.length ? (
+                    <ul
+                      className="engineering-story__tech"
+                      aria-label="Technologies"
+                    >
+                      {story.technologies.slice(0, 5).map((tech) => (
+                        <li key={tech}>{tech}</li>
+                      ))}
+                    </ul>
+                  ) : null}
+
                   {showProjectLinks && projectPath ? (
                     <Link to={projectPath} className="engineering-story__link">
-                      View {story.project} case study
+                      Read {story.project} case study
                     </Link>
                   ) : null}
                 </div>
-              </details>
+              </article>
             )
           })}
         </div>

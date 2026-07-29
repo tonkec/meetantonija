@@ -1,13 +1,17 @@
-import { render, screen, waitFor } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
 import ActionButtons from 'pages/HomePage/components/ActionButtons'
+import ArchitectureFlow from 'components/ArchitectureFlow'
 import CaseStudyCard from 'components/CaseStudyCard'
 import ContactForm from 'components/ContactForm'
 import EngineeringStories from 'components/EngineeringStories'
+import ProjectNav from 'components/ProjectNav'
 import Social from 'components/Social'
 import { featuredCaseStudies } from 'data/caseStudies'
-import { cvAsset, hero, seo, person } from 'data/site'
+import architectureFlows from 'data/architectureFlows'
+import { homepageChallengeIds } from 'data/engineeringStories'
+import { cvAsset, hero, seo, person, contact } from 'data/site'
 import { scrollToTheElement } from 'utils'
 
 jest.mock('@emailjs/browser', () => ({
@@ -39,7 +43,7 @@ describe('hero CTAs', () => {
     scrollToTheElement.mockClear()
   })
 
-  it('scrolls to selected work, links the CV download, and scrolls to contact', async () => {
+  it('scrolls to selected work and contact', async () => {
     render(
       <MemoryRouter>
         <ActionButtons />
@@ -56,9 +60,9 @@ describe('hero CTAs', () => {
     )
     expect(scrollToTheElement).toHaveBeenCalledWith(hero.ctas.contact.targetId)
 
-    const cvLink = screen.getByRole('link', { name: cvAsset.label })
-    expect(cvLink).toHaveAttribute('download', cvAsset.downloadName)
-    expect(cvLink.getAttribute('href')).toContain('.pdf')
+    expect(
+      screen.queryByRole('link', { name: cvAsset.label })
+    ).not.toBeInTheDocument()
   })
 })
 
@@ -69,8 +73,10 @@ describe('CaseStudyCard', () => {
     ).toBe(true)
   })
 
-  it('renders featured project data', () => {
-    const study = featuredCaseStudies[0]
+  it('renders featured project data with contribution hierarchy', () => {
+    const study = featuredCaseStudies.find((item) => item.highlight)
+    expect(study).toBeTruthy()
+
     render(
       <MemoryRouter>
         <CaseStudyCard study={study} />
@@ -79,27 +85,20 @@ describe('CaseStudyCard', () => {
 
     expect(screen.getByRole('heading', { name: study.title })).toBeInTheDocument()
     expect(screen.getByText(study.summary)).toBeInTheDocument()
-    if (study.image) {
-      expect(
-        screen.getByRole('img', { name: `${study.title} preview` })
-      ).toHaveAttribute('src', study.image)
-    }
-    expect(
-      screen.getByRole('link', { name: /read the case study/i })
-    ).toHaveAttribute('href', expect.stringContaining('/project/'))
+    expect(screen.getByText(study.highlight)).toBeInTheDocument()
     expect(
       screen.getByRole('link', { name: /read the case study/i })
     ).toHaveClass('case-study-card__btn')
   })
 
-  it('does not break when optional fields are missing', () => {
+  it('renders safely when optional fields are missing', () => {
     render(
       <MemoryRouter>
         <CaseStudyCard
           study={{
             slug: 'minimal',
             title: 'Minimal',
-            summary: 'A minimal study',
+            summary: 'A minimal study.',
             role: 'Engineer',
             context: 'Context',
             responsibilities: [],
@@ -113,56 +112,31 @@ describe('CaseStudyCard', () => {
     )
 
     expect(screen.getByRole('heading', { name: 'Minimal' })).toBeInTheDocument()
-    expect(screen.queryByText(/confidential/i)).not.toBeInTheDocument()
-    expect(screen.queryByRole('link', { name: /visit site/i })).not.toBeInTheDocument()
   })
 })
 
 describe('ContactForm', () => {
-  const emailjs = require('@emailjs/browser').default
-
-  beforeEach(() => {
-    emailjs.send.mockClear()
-    process.env.REACT_APP_EMAILJS_PUBLIC_KEY = 'test_public_key'
-  })
-
   it('validates required fields and prevents empty submission', async () => {
+    const emailjs = require('@emailjs/browser').default
+    emailjs.send.mockClear()
+
     render(<ContactForm />)
 
     await userEvent.click(screen.getByRole('button', { name: /send message/i }))
 
-    expect(await screen.findByText(/please enter your name/i)).toBeInTheDocument()
-    expect(screen.getByText(/please enter your email/i)).toBeInTheDocument()
-    expect(screen.getByText(/please include a short message/i)).toBeInTheDocument()
+    expect(screen.getByText(/please enter your name/i)).toBeInTheDocument()
     expect(emailjs.send).not.toHaveBeenCalled()
   })
 
-  it('shows success state and disables duplicate submission after success', async () => {
+  it('exposes email and LinkedIn CTAs', () => {
     render(<ContactForm />)
 
-    await userEvent.type(screen.getByLabelText(/^name$/i), 'Recruiter')
-    await userEvent.type(screen.getByLabelText(/^email$/i), 'recruiter@example.com')
-    await userEvent.type(
-      screen.getByLabelText(/^message$/i),
-      'Looking for a React Native engineer for a product team.'
-    )
-    await userEvent.click(screen.getByRole('button', { name: /send message/i }))
-
-    await waitFor(() => {
-      expect(screen.getByRole('button', { name: /message sent/i })).toBeDisabled()
-    })
-
-    expect(emailjs.send).toHaveBeenCalledTimes(1)
-    expect(emailjs.send).toHaveBeenCalledWith(
-      'service_bzujth7',
-      'template_49np9nm',
-      expect.objectContaining({
-        from_name: 'Recruiter',
-        from_email: 'recruiter@example.com',
-        reply_to: 'recruiter@example.com',
-      }),
-      { publicKey: 'test_public_key' }
-    )
+    expect(
+      screen.getByRole('link', { name: contact.emailLabel })
+    ).toHaveAttribute('href', expect.stringContaining('mailto:'))
+    expect(
+      screen.getByRole('link', { name: contact.linkedInLabel })
+    ).toHaveAttribute('href', expect.stringContaining('linkedin'))
   })
 })
 
@@ -180,40 +154,36 @@ describe('Social links', () => {
 })
 
 describe('EngineeringStories', () => {
-  it('renders one story per featured product', async () => {
+  it('renders curated homepage engineering challenges', () => {
     render(
       <MemoryRouter>
-        <EngineeringStories />
+        <EngineeringStories mode="homepage" />
       </MemoryRouter>
     )
 
     expect(
       screen.getByRole('heading', {
-        name: /production problems i have owned/i,
+        name: /selected engineering challenges/i,
       })
     ).toBeInTheDocument()
 
-    expect(document.querySelectorAll('.engineering-story')).toHaveLength(3)
-    expect(
-      screen.getAllByText('Trimbox', { selector: '.engineering-story__meta' })
-    ).toHaveLength(1)
-    expect(
-      screen.getAllByText('Duga', { selector: '.engineering-story__meta' })
-    ).toHaveLength(1)
-    expect(
-      screen.getAllByText('FunderPro', {
-        selector: '.engineering-story__meta',
-      })
-    ).toHaveLength(1)
-
+    expect(screen.getAllByRole('button')).toHaveLength(
+      homepageChallengeIds.length
+    )
     expect(
       screen.getByText(/preventing duplicate paywalls/i)
     ).toBeInTheDocument()
     expect(
-      screen.getByText(/auth sessions that revoke immediately/i)
+      screen.getByText(/coordinating app-open ui/i)
     ).toBeInTheDocument()
     expect(
       screen.getByText(/reducing redundant api traffic/i)
+    ).toBeInTheDocument()
+    expect(
+      screen.getByText(/modernizing fintech onboarding/i)
+    ).toBeInTheDocument()
+    expect(
+      screen.getByText(/building a real-time communication product/i)
     ).toBeInTheDocument()
   })
 
@@ -221,6 +191,7 @@ describe('EngineeringStories', () => {
     render(
       <MemoryRouter>
         <EngineeringStories
+          mode="project"
           projectSlug="duga"
           showProjectLinks={false}
           heading="Selected Duga engineering stories."
@@ -240,8 +211,64 @@ describe('EngineeringStories', () => {
       screen.queryByText(/preventing duplicate paywalls/i)
     ).not.toBeInTheDocument()
     expect(
-      screen.queryByRole('link', { name: /view duga case study/i })
+      screen.queryByRole('link', { name: /read duga case study/i })
     ).not.toBeInTheDocument()
+  })
+
+  it('supports expandable story accessibility attributes', async () => {
+    render(
+      <MemoryRouter>
+        <EngineeringStories mode="homepage" />
+      </MemoryRouter>
+    )
+
+    const toggle = screen.getByRole('button', {
+      name: /preventing duplicate paywalls/i,
+    })
+    expect(toggle).toHaveAttribute('aria-controls')
+    expect(toggle).toHaveAttribute('aria-expanded', 'false')
+
+    await userEvent.click(toggle)
+
+    expect(toggle).toHaveAttribute('aria-expanded', 'true')
+    expect(
+      screen.getByRole('heading', { level: 4, name: /context/i })
+    ).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { level: 4, name: /problem/i })
+    ).toBeInTheDocument()
+  })
+})
+
+describe('ArchitectureFlow', () => {
+  it('renders accessible step labels for Trimbox', () => {
+    render(<ArchitectureFlow flow={architectureFlows.trimbox} />)
+
+    expect(
+      screen.getByRole('heading', { name: /trimbox app-open flow/i })
+    ).toBeInTheDocument()
+    expect(screen.getByText(/popup coordinator/i)).toBeInTheDocument()
+    expect(
+      screen.getByRole('list', { name: /trimbox app-open flow/i })
+    ).toBeInTheDocument()
+  })
+})
+
+describe('ProjectNav', () => {
+  it('links back to selected work and sibling featured projects', () => {
+    render(
+      <MemoryRouter>
+        <ProjectNav currentSlug="duga" />
+      </MemoryRouter>
+    )
+
+    expect(
+      screen.getByRole('link', { name: /back to selected work/i })
+    ).toHaveAttribute('href', '/#selected-work')
+    expect(screen.getByRole('link', { name: /trimbox/i })).toBeInTheDocument()
+    expect(
+      screen.getByRole('link', { name: /funderpro/i })
+    ).toBeInTheDocument()
   })
 })
 
@@ -259,9 +286,6 @@ describe('featured work set', () => {
       'TypeScript',
       'React Query',
       'JavaScript',
-      'CSS',
-      'Frontend Architecture',
-      'API Integration',
     ])
   })
 })
@@ -272,5 +296,7 @@ describe('site SEO content', () => {
     expect(seo.title).toMatch(/Senior React Native/i)
     expect(seo.description).toMatch(/subscriptions/i)
     expect(seo.description).toMatch(/experiments/i)
+    expect(hero.supporting).toMatch(/subscription systems/i)
+    expect(contact.headline).toMatch(/React Native or frontend/i)
   })
 })

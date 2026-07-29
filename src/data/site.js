@@ -124,10 +124,9 @@ export const hero = {
   eyebrow: 'Product engineer',
   headline: 'Senior React Native & Frontend Engineer',
   supporting:
-    'I build production mobile and web products with React Native, React and TypeScript, with a focus on subscriptions, analytics, experimentation and complex product flows.',
+    'I build production mobile and web products, subscription systems, experiments, and scalable frontend architecture.',
   ctas: {
     work: { label: 'View selected work', targetId: 'selected-work' },
-    cv: { label: 'Download CV' },
     contact: { label: 'Contact me', targetId: 'contact' },
   },
 }
@@ -135,11 +134,13 @@ export const hero = {
 export const contact = {
   kicker: "Let's work together",
   headline:
-    'Looking for someone to own complex React Native product work? Let’s talk.',
-  body: 'Reach me by email, LinkedIn, or the form below. I reply to recruiter and client notes that are a good fit for React Native or frontend product work.',
+    'Looking for someone to own complex React Native or frontend product work?',
+  body: 'Let’s talk about your product, technical challenges, and where I can help. Reach me by email, LinkedIn, or the form below.',
   closingCta:
     'Available for part-time Senior React Native and frontend roles with remote international teams.',
   mailtoSubject: 'Hello from meetantonija.com',
+  emailLabel: 'Email me',
+  linkedInLabel: 'LinkedIn',
 }
 
 const site = {

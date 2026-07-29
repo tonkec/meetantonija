@@ -113,6 +113,22 @@
   margin-bottom: 0.55rem;
 }
 
+.case-study-card__highlight,
+.case-study-card__outcome {
+  line-height: 1.55;
+  margin: 0.85rem 0 0;
+
+  span {
+    color: var(--color-pink);
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+  }
+}
+
 .case-study-card__outcomes {
   display: grid;
   gap: 0.4rem;
@@ -134,7 +150,7 @@
   flex-wrap: wrap;
   gap: 0.35rem;
   list-style: none;
-  margin: 0.85rem 0 0;
+  margin: 1rem 0 0;
   padding: 0;
 
   li {

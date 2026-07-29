@@ -86,16 +86,15 @@ const caseStudies = [
       'Increased test coverage for critical subscription behaviour',
       'Reduced risk around pricing presentation',
     ],
+    highlight:
+      'Coordinated paywalls and app-open UI so subscription and startup surfaces could not overlap or race.',
     technologies: [
       'React Native',
       'TypeScript',
       'Expo',
-      'EAS',
       'RevenueCat',
       'Firebase Remote Config',
-      'Mixpanel',
       'Jest',
-      'Maestro',
     ],
     storyIds: [
       'duplicate-paywalls',
@@ -183,23 +182,18 @@ const caseStudies = [
       'Connected auth, realtime chat, moderated uploads and forum into one maintainable system',
       'Established staging and production deployment paths for frontend and API',
     ],
+    highlight:
+      'Shipped Auth0, realtime chat, moderated uploads and a forum as one full-stack product.',
     learned:
       'Building Duga end to end taught me how frontend product flows and backend boundaries have to stay aligned — especially around auth sessions, realtime events and private media access. Owning both sides made trade-offs concrete: schema design, Socket.IO event contracts, moderation pipelines and deployment environments all show up as user-facing reliability.',
     technologies: [
       'React',
       'TypeScript',
-      'Vite',
       'React Query',
       'Auth0',
       'Socket.IO',
-      'Node.js',
       'Express',
       'PostgreSQL',
-      'Sequelize',
-      'Amazon S3',
-      'AWS Rekognition',
-      'Netlify',
-      'Heroku',
     ],
     storyIds: [
       'duga-auth-sessions',
@@ -266,14 +260,18 @@ const caseStudies = [
       'Expanded the platform with affiliate and coupon capabilities',
       'Helped frontend engineers become more productive through recurring knowledge sharing',
     ],
+    highlight:
+      'Cut redundant API traffic by 40% with React Query, then strengthened onboarding, KYC and mature product flows.',
     technologies: [
       'React',
       'TypeScript',
       'React Query',
       'JavaScript',
-      'CSS',
-      'Frontend Architecture',
-      'API Integration',
+    ],
+    photos: [
+      rootImageUrl + 'funderpro/1.png',
+      rootImageUrl + 'funderpro/2.png',
+      rootImageUrl + 'funderpro/3.png',
     ],
     storyIds: [
       'funderpro-api-traffic',

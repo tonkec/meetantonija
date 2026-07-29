@@ -537,10 +537,25 @@
       }
     }
 
-    .engineering-story[open] {
+    .engineering-story--open {
       background-color: var(--color-pink-light);
       border-color: var(--color-sky-blue);
       box-shadow: 8px 8px 0 rgba(246, 128, 72, 0.35);
+    }
+
+    .engineering-story__toggle {
+      color: var(--color-white);
+    }
+
+    .engineering-story__tech li {
+      background-color: var(--color-black);
+      border-color: var(--color-sky-blue);
+      color: var(--color-white);
+    }
+
+    .case-study-card__highlight span,
+    .case-study-card__outcome span {
+      color: var(--color-pink);
     }
 
     .post-hero-card,

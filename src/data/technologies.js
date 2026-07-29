@@ -1,48 +1,28 @@
 /**
- * Technologies grouped by how they are used in product work.
- * Only includes stack verified in projects data or supplied experience.
- * Omitted until verified: React Navigation, React Native Testing Library.
+ * Technologies grouped by product work.
+ * Trimmed to reduce badge noise — only stack verified in projects data.
  */
 
 const technologyGroups = [
   {
     id: 'mobile',
-    title: 'Mobile product development',
+    title: 'Mobile products',
     items: ['React Native', 'Expo', 'iOS', 'Android', 'EAS'],
   },
   {
     id: 'frontend',
-    title: 'Frontend engineering',
-    items: [
-      'React',
-      'TypeScript',
-      'React Query',
-      'state management',
-      'component architecture',
-    ],
+    title: 'Frontend systems',
+    items: ['React', 'TypeScript', 'React Query'],
   },
   {
     id: 'product-systems',
-    title: 'Product systems',
-    items: [
-      'Firebase Remote Config',
-      'Mixpanel',
-      'RevenueCat',
-      'analytics',
-      'experimentation',
-    ],
+    title: 'Product infrastructure',
+    items: ['Firebase Remote Config', 'Mixpanel', 'RevenueCat'],
   },
   {
     id: 'testing-delivery',
     title: 'Testing and delivery',
-    items: [
-      'Jest',
-      'React Testing Library',
-      'Cypress',
-      'Maestro',
-      'Expo EAS Build',
-      'Jenkins',
-    ],
+    items: ['Jest', 'Maestro', 'EAS'],
   },
 ]
 

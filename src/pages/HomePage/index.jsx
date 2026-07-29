@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Header from './components/Header'
 import Previewer from './components/Previewer'
 import Aside from './components/Aside'
@@ -12,7 +14,7 @@ import CredibilityStrip from 'components/CredibilityStrip'
 import CaseStudyCard from 'components/CaseStudyCard'
 import EngineeringStories from 'components/EngineeringStories'
 import TechnologiesSection from 'components/TechnologiesSection'
-import { getValuesAndProperties } from 'utils'
+import { getValuesAndProperties, scrollToTheElement } from 'utils'
 import useTemperature from 'hooks/useTemperature'
 import Temperature from 'components/Temperature'
 import { Tooltip } from 'react-tooltip'
@@ -25,6 +27,18 @@ import './HomePage.scss'
 const HomePage = () => {
   const temperatureData = useTemperature()
   const { values, properties } = getValuesAndProperties(temperatureData)
+  const location = useLocation()
+
+  useEffect(() => {
+    const hash = location.hash?.replace('#', '')
+    if (!hash) {
+      return undefined
+    }
+    const frame = window.requestAnimationFrame(() => {
+      scrollToTheElement(hash)
+    })
+    return () => window.cancelAnimationFrame(frame)
+  }, [location.hash])
 
   return (
     <>
@@ -109,10 +123,6 @@ const HomePage = () => {
         </FadeInSection>
 
         <FadeInSection>
-          <TechnologiesSection />
-        </FadeInSection>
-
-        <FadeInSection>
           <section className="home-section" id="selected-work">
             <div className="container">
               <p className="section-kicker">Selected work</p>
@@ -133,7 +143,11 @@ const HomePage = () => {
         </FadeInSection>
 
         <FadeInSection>
-          <EngineeringStories />
+          <EngineeringStories mode="homepage" />
+        </FadeInSection>
+
+        <FadeInSection>
+          <TechnologiesSection />
         </FadeInSection>
 
         <FadeInSection>

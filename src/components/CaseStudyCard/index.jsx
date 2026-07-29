@@ -3,9 +3,8 @@ import { removeSpacesAndDashes } from 'utils'
 import './CaseStudyCard.scss'
 
 /**
- * Renders a featured case study summary.
- * Optional fields (image, liveUrl, repositoryUrl, confidential, outcomes)
- * are safely omitted when missing.
+ * Featured case study summary.
+ * Hierarchy: product → contribution → outcome → link → compact tech.
  */
 const CaseStudyCard = ({ study }) => {
   if (!study) {
@@ -13,12 +12,21 @@ const CaseStudyCard = ({ study }) => {
   }
 
   const projectPath = `/project/${removeSpacesAndDashes(study.title)}`
+  const primaryOutcome = study.outcomes?.[0]
+  const tech = study.technologies?.slice(0, 4) || []
 
   return (
     <article className="case-study-card">
       {study.image ? (
         <div className="case-study-card__media">
-          <img src={study.image} alt={`${study.title} preview`} />
+          <img
+            src={study.image}
+            alt={`${study.title} product preview`}
+            width={640}
+            height={400}
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       ) : (
         <div
@@ -29,34 +37,25 @@ const CaseStudyCard = ({ study }) => {
 
       <div className="case-study-card__body">
         <p className="section-kicker">
-          {study.projectType
-            ? study.projectType
-            : study.company
-              ? study.company
-              : 'Selected work'}
+          {study.projectType || study.company || 'Selected work'}
           {study.period ? ` · ${study.period}` : ''}
         </p>
         <h3>{study.title}</h3>
-        {study.company && study.projectType ? (
-          <p className="case-study-card__company">{study.company}</p>
-        ) : null}
         <p className="case-study-card__role">{study.role}</p>
         <p>{study.summary}</p>
 
-        {study.outcomes?.length ? (
-          <ul className="case-study-card__outcomes">
-            {study.outcomes.slice(0, 3).map((outcome) => (
-              <li key={outcome}>{outcome}</li>
-            ))}
-          </ul>
+        {study.highlight ? (
+          <p className="case-study-card__highlight">
+            <span>Contribution</span>
+            {study.highlight}
+          </p>
         ) : null}
 
-        {study.technologies?.length ? (
-          <ul className="case-study-card__tech" aria-label="Technologies">
-            {study.technologies.slice(0, 6).map((tech) => (
-              <li key={tech}>{tech}</li>
-            ))}
-          </ul>
+        {primaryOutcome ? (
+          <p className="case-study-card__outcome">
+            <span>Outcome</span>
+            {primaryOutcome}
+          </p>
         ) : null}
 
         {study.confidential ? (
@@ -82,17 +81,15 @@ const CaseStudyCard = ({ study }) => {
               Visit site
             </a>
           ) : null}
-          {study.repositoryUrl ? (
-            <a
-              href={study.repositoryUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="case-study-card__btn case-study-card__btn--ghost"
-            >
-              Repository
-            </a>
-          ) : null}
         </div>
+
+        {tech.length ? (
+          <ul className="case-study-card__tech" aria-label="Technologies">
+            {tech.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        ) : null}
       </div>
     </article>
   )
