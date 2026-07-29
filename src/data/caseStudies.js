@@ -282,7 +282,7 @@ const caseStudies = [
       'funderpro-fintech-capabilities',
       'funderpro-engineering-standards',
     ],
-    image: '/projects/funderpro/login.png',
+    image: rootImageUrl + 'funderpro/1.png',
     liveUrl: 'https://funderpro.com/',
     featured: true,
   },

@@ -157,10 +157,17 @@ blockquote.post-content-container {
   }
 
   pre {
+    background-color: #0d1a63 !important;
     border: 2px solid var(--color-black);
     border-radius: calc(var(--border-radius) * 3);
+    box-shadow: 8px 8px 0 var(--color-pink);
     overflow: auto;
   }
+}
+
+.dark-theme .code-block pre {
+  border-color: var(--color-sky-blue);
+  box-shadow: 8px 8px 0 rgba(246, 128, 72, 0.45);
 }
 
 .post-image {

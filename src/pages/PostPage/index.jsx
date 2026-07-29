@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import PostsImage from './PostsImage'
 import SyntaxHighlighter from 'react-syntax-highlighter'
+import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import './Post.scss'
 import posts from 'data/posts'
 import {
@@ -183,17 +184,23 @@ const PostPage = () => {
             return <PostsImage src={src} alt={alt} />
           },
           code({ node, inline, className, children, ...props }) {
+            const language = String(className || '').replace('language-', '')
             return (
-              <span>
-                <SyntaxHighlighter
-                  {...props}
-                  children={String(children).replace(/\n$/, '')}
-                  language={String(className).replace('language-', '')}
-                  customStyle={{
-                    display: 'inline',
-                  }}
-                />
-              </span>
+              <SyntaxHighlighter
+                {...props}
+                style={atomOneDark}
+                language={language || 'javascript'}
+                PreTag={inline ? 'span' : 'pre'}
+                customStyle={{
+                  background: '#0d1a63',
+                  borderRadius: inline ? '0.35rem' : undefined,
+                  display: inline ? 'inline' : 'block',
+                  margin: 0,
+                  padding: inline ? '0.15rem 0.4rem' : '1.1rem 1.25rem',
+                }}
+              >
+                {String(children).replace(/\n$/, '')}
+              </SyntaxHighlighter>
             )
           },
           ol({ children }) {

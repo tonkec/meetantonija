@@ -123,6 +123,21 @@ input[type='submit'].outlined {
 }
 
 .dark-theme {
+  button.primary,
+  a.primary,
+  a[role='button'].primary,
+  *[role='button'].primary,
+  input[type='submit'].primary {
+    background-color: var(--color-pink);
+    color: var(--color-white);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-pink-dark);
+      color: var(--color-white);
+    }
+  }
+
   button.outlined,
   a.outlined,
   a[role='button'].outlined,

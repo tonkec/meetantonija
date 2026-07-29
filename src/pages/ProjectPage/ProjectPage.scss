@@ -66,6 +66,18 @@
 }
 
 .dark-theme {
+  .project-link-row a.primary,
+  .project-cta-card a.primary {
+    background-color: var(--color-pink);
+    color: var(--color-white);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-pink-dark);
+      color: var(--color-white);
+    }
+  }
+
   .project-link-row a.outlined,
   .project-overview-grid .button.outlined {
     background-color: transparent;

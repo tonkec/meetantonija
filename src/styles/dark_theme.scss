@@ -101,6 +101,7 @@
     }
 
     button.primary,
+    a.primary,
     a[role='button'].primary,
     *[role='button'].primary,
     input[type='submit'].primary {
@@ -110,6 +111,7 @@
       &:hover,
       &:focus {
         background-color: var(--color-dark-blue);
+        color: var(--color-white);
       }
     }
 

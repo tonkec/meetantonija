@@ -504,9 +504,8 @@ const projects = [
     ),
   },
   {
-    coverPhoto: '/projects/funderpro/login.png',
+    coverPhoto: rootImageUrl + 'funderpro/1.png',
     photos: [
-      '/projects/funderpro/login.png',
       rootImageUrl + 'funderpro/1.png',
       rootImageUrl + 'funderpro/2.png',
       rootImageUrl + 'funderpro/3.png',
