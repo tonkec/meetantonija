@@ -2,6 +2,8 @@
 
 .experience-preview {
   background-color: var(--color-pink-light);
+  padding-bottom: 3.75rem;
+  padding-top: 3.75rem;
 
   h2 {
     font-size: clamp(1.8rem, 4vw, 3.2rem);
@@ -33,7 +35,15 @@
   box-shadow: 6px 6px 0 var(--color-sky-blue);
   display: grid;
   gap: 0.45rem;
-  padding: 1.15rem 1.25rem;
+  padding: 1.25rem 1.35rem;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    box-shadow: 8px 8px 0 var(--color-black);
+    transform: translate(-1px, -1px);
+  }
 
   h3 {
     font-size: clamp(1.15rem, 2.5vw, 1.45rem);
@@ -86,6 +96,16 @@
     p,
     a {
       color: var(--color-white);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-preview__card {
+    transition: none;
+
+    &:hover {
+      transform: none;
     }
   }
 }

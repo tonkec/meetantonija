@@ -9,6 +9,30 @@
     gap: 2rem;
     grid-template-columns: minmax(0, 0.95fr) minmax(300px, 1.05fr);
   }
+
+  &--channels-only {
+    @include breakpoint(lg) {
+      grid-template-columns: 1fr;
+      max-width: 40rem;
+    }
+
+    .contact-links {
+      margin-top: 0.5rem;
+      padding-top: 1rem;
+    }
+
+    .contact-facts a {
+      color: inherit;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+
+      &:focus-visible {
+        outline: 3px solid var(--color-pink);
+        outline-offset: 3px;
+      }
+    }
+  }
 }
 
 .contact-channels {
@@ -106,16 +130,23 @@
   background-color: var(--color-white);
   border: 2px solid var(--color-black);
   border-radius: calc(var(--border-radius) * 4);
-  box-shadow: 10px 10px 0 var(--color-black);
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.35);
   display: grid;
   gap: 1rem;
   height: fit-content;
-  padding: clamp(1rem, 3vw, 1.75rem);
+  padding: clamp(1rem, 3vw, 1.5rem);
 
   .primary {
     justify-self: start;
     min-height: 44px;
     min-width: 10rem;
+    transition:
+      background-color 0.2s ease,
+      transform 0.2s ease;
+
+    &:hover:not(:disabled) {
+      transform: translate(-1px, -1px);
+    }
 
     &:disabled {
       cursor: not-allowed;

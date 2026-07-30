@@ -90,6 +90,20 @@ describe('CaseStudyCard', () => {
     ).toHaveClass('case-study-card__btn')
   })
 
+  it('marks Trimbox as the flagship featured project', () => {
+    const trimbox = featuredCaseStudies.find((item) => item.slug === 'trimbox')
+    expect(trimbox.emphasis).toBe('primary')
+    expect(trimbox.image).toMatch(/trimbox\/paywall/)
+
+    render(
+      <MemoryRouter>
+        <CaseStudyCard study={trimbox} />
+      </MemoryRouter>
+    )
+
+    expect(screen.getByText(/featured/i)).toBeInTheDocument()
+  })
+
   it('renders safely when optional fields are missing', () => {
     render(
       <MemoryRouter>
@@ -170,6 +184,8 @@ describe('EngineeringStories', () => {
     expect(
       screen.getByText(/preventing duplicate paywalls/i)
     ).toBeInTheDocument()
+    expect(screen.getAllByText(/^Trimbox · React Native$/i).length).toBeGreaterThan(0)
+    expect(screen.getByText(/^FunderPro · React · React Query$/i)).toBeInTheDocument()
     expect(
       screen.getByText(/coordinating app-open ui/i)
     ).toBeInTheDocument()
@@ -300,7 +316,9 @@ describe('site SEO content', () => {
     expect(seo.title).toMatch(/Senior React Native/i)
     expect(seo.description).toMatch(/subscription systems/i)
     expect(seo.description).toMatch(/experiments/i)
-    expect(hero.supporting).toMatch(/subscription systems/i)
+    expect(hero.supporting).toMatch(/reliable React Native and React products/i)
+    expect(hero.headline).toBe('Senior React Native & Frontend Engineer')
     expect(contact.headline).toMatch(/React Native or frontend/i)
+    expect(contact.closingNote).toMatch(/Thanks for visiting/i)
   })
 })

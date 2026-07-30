@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 import { cvAsset } from 'data/site'
 import Seo from 'components/Seo'
 import Timeline from './components/Timeline'
-import { FaDownload } from 'react-icons/fa'
 import './CvPage.scss'
 
 const CvProjectWrapper = ({ project, index, entry }) => {
@@ -109,7 +108,7 @@ const CvPage = () => {
               download={cvAsset.downloadName}
               className="primary"
             >
-              <span>Download CV</span> <FaDownload aria-hidden />
+              Download CV
             </Link>
 
             {shouldShowResetButton && (

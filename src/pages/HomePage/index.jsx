@@ -11,7 +11,7 @@ import { useLocation } from 'react-router-dom'
 import { scrollToTheElement } from 'utils'
 import { featuredCaseStudies } from 'data/caseStudies'
 import { getPageMeta } from 'data/pagesMeta'
-import { seo } from 'data/site'
+import { contact, seo } from 'data/site'
 import './HomePage.scss'
 
 const HomePage = () => {
@@ -76,6 +76,8 @@ const HomePage = () => {
         <FadeInSection>
           <HireMe />
         </FadeInSection>
+
+        <p className="homepage-closing">{contact.closingNote}</p>
       </div>
     </>
   )

@@ -11,7 +11,7 @@ const experienceEntries = [
     company: 'Mode Mobile · Trimbox',
     dates: 'March 2026 – Present',
     summary:
-      'Contributed to production React Native flows covering subscriptions, experiments, analytics, and app-open UI coordination.',
+      'Production React Native work on subscriptions, experiments, analytics, and app-open UI coordination.',
     href: '/project/trimbox',
     workType: 'Professional product work',
   },
@@ -21,7 +21,7 @@ const experienceEntries = [
     company: 'Mochalabs · FunderPro',
     dates: 'September 2023 – March 2026',
     summary:
-      'Reduced redundant API calls by 40% using React Query while improving onboarding, KYC, affiliate, and coupon flows.',
+      'Reduced redundant API calls by 40% with React Query while improving onboarding, KYC, affiliate, and coupon flows.',
     href: '/project/funderpro',
     workType: 'Professional product work',
   },
@@ -31,7 +31,7 @@ const experienceEntries = [
     company: 'Duga',
     dates: '2024 – Present',
     summary:
-      'Independent product ownership across React, authentication, real-time chat, backend architecture, and deployment.',
+      'Independent product ownership across React, auth, realtime chat, backend architecture, and deployment.',
     href: '/project/duga',
     workType: 'Independent product',
   },

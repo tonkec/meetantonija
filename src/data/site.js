@@ -92,17 +92,17 @@ export const credibilityItems = [
   {
     id: 'years',
     label: '10+ years',
-    detail: 'of frontend and product engineering',
+    detail: 'building production products',
   },
   {
     id: 'mobile',
-    label: 'Production RN & React',
-    detail: 'mobile and web applications',
+    label: 'Production React Native & React',
+    detail: 'shipped on mobile and web',
   },
   {
     id: 'impact',
-    label: 'Measurable impact',
-    detail: 'performance, API efficiency, and test coverage',
+    label: 'Measurable engineering impact',
+    detail: 'API efficiency, performance, test coverage',
   },
 ]
 
@@ -110,7 +110,7 @@ export const hero = {
   eyebrow: 'Product engineer',
   headline: 'Senior React Native & Frontend Engineer',
   supporting:
-    'I build production mobile and web products, subscription systems, experiments, and scalable frontend architecture.',
+    'I help companies build reliable React Native and React products, solve complex frontend architecture problems, and ship production software with confidence.',
   ctas: {
     work: { label: 'View selected work', targetId: 'selected-work' },
     contact: { label: 'Contact me', targetId: 'contact' },
@@ -127,6 +127,8 @@ export const contact = {
   mailtoSubject: 'Hello from meetantonija.com',
   emailLabel: 'Email me',
   linkedInLabel: 'LinkedIn',
+  closingNote:
+    "Thanks for visiting. If you're building a React Native or frontend product, I'd love to hear about it.",
 }
 
 const site = {

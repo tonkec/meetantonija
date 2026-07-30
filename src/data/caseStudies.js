@@ -64,10 +64,11 @@ const caseStudies = [
     company: 'Mode Mobile',
     period: 'March 2026 – Present',
     summary:
-      'Production React Native work on a subscription inbox product — paywalls, app-open coordination, remote experiments and pricing validation.',
+      'Subscription inbox product — production React Native work on paywalls, app-open coordination, experiments and pricing.',
     role: 'Senior Frontend Developer · React Native',
     workType: 'Professional product work',
     emphasis: 'primary',
+    featuredBadge: 'Featured',
     context:
       'Trimbox is Mode Mobile’s inbox-cleaning product. I contribute to production React Native product features and supporting infrastructure — subscriptions, analytics, remote configuration and release workflows — as part of a larger team. I do not claim sole ownership of the product architecture.',
     responsibilities: [
@@ -113,7 +114,7 @@ const caseStudies = [
       'remote-experiments',
       'subscription-pricing',
     ],
-    image: rootImageUrl + 'modemobile/trimbox.avif',
+    image: '/projects/trimbox/paywall.jpg',
     photos: [
       {
         src: '/projects/trimbox/paywall.jpg',
@@ -151,7 +152,7 @@ const caseStudies = [
     workType: 'Independent product',
     emphasis: 'secondary',
     summary:
-      'Independent full-stack queer dating and community platform for the Balkans with Auth0, real-time chat, moderated uploads and a forum — shipped at duga.chat.',
+      'Independent full-stack dating and community product — Auth0, realtime chat, moderated uploads and forum.',
     role: 'Creator & lead full-stack engineer',
     context:
       'Duga exists as a safer queer space for meeting and conversation in the Balkan region. The product needed more than a thin UI demo: authentication, profiles, moderation-aware uploads, real-time messaging and community discussion had to work together as one application.',
@@ -266,7 +267,7 @@ const caseStudies = [
     workType: 'Professional product work',
     emphasis: 'secondary',
     summary:
-      'Frontend engineering on a production platform for a proprietary trading company — React Query, onboarding, KYC, product UX, and knowledge sharing.',
+      'Trading-focused fintech product — React Query, onboarding, KYC, UX improvements and knowledge sharing.',
     role: 'Senior React Developer',
     context:
       'FunderPro is a trading-focused fintech product supporting onboarding, KYC, affiliate, and promotional flows for a proprietary trading company. The work focused on improving core user flows, frontend architecture, application performance and developer productivity while continuously shipping new product features — without claiming sole ownership of the platform.',

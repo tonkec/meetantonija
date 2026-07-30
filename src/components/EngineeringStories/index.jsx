@@ -60,11 +60,20 @@ const EngineeringStories = ({
             const bodyId = `${reactId}-${story.id}-body`
             const isOpen = openId === story.id
 
+            const filteredTech = (story.technologies || []).filter(
+              (tech) => !['TypeScript', 'JavaScript', 'Jest'].includes(tech)
+            )
+            const techLimit = filteredTech[0] === 'React Native' ? 1 : 2
+            const techMeta = filteredTech.slice(0, techLimit).join(' · ')
+            const contextLine = [story.project, techMeta].filter(Boolean).join(' · ')
+
             if (previewOnly) {
               return (
                 <article key={story.id} className="engineering-story engineering-story--preview">
-                  <p className="engineering-story__meta">{story.project}</p>
                   <h3 className="engineering-story__heading">{story.title}</h3>
+                  {contextLine ? (
+                    <p className="engineering-story__context">{contextLine}</p>
+                  ) : null}
                   <p className="engineering-story__summary">{story.summary}</p>
                   {projectPath ? (
                     <Link to={projectPath} className="engineering-story__link">
@@ -88,12 +97,14 @@ const EngineeringStories = ({
                     aria-controls={bodyId}
                     onClick={() => toggleStory(story.id)}
                   >
-                    <span className="engineering-story__meta">
-                      {story.project}
-                    </span>
                     <span className="engineering-story__heading">
                       {story.title}
                     </span>
+                    {contextLine ? (
+                      <span className="engineering-story__context">
+                        {contextLine}
+                      </span>
+                    ) : null}
                     <span className="engineering-story__summary">
                       {story.summary}
                     </span>

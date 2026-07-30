@@ -28,8 +28,9 @@ const getEmailJsConfig = () => ({
  * Contact form sends messages through EmailJS.
  * Template fields: from_name, from_email, message, reply_to
  * (also mirrored as name/email for older templates).
+ * Homepage can omit the form (`showForm={false}`) for a lighter contact panel.
  */
-const ContactForm = ({ showIntro = true }) => {
+const ContactForm = ({ showIntro = true, showForm = true }) => {
   const formId = useId()
   const [values, setValues] = useState(initialValues)
   const [errors, setErrors] = useState({})
@@ -138,7 +139,9 @@ const ContactForm = ({ showIntro = true }) => {
   const isDisabled = status === 'submitting' || status === 'success'
 
   return (
-    <div className="contact-panel">
+    <div
+      className={`contact-panel${showForm ? '' : ' contact-panel--channels-only'}`}
+    >
       <div className="contact-channels">
         {showIntro ? (
           <>
@@ -167,6 +170,51 @@ const ContactForm = ({ showIntro = true }) => {
             </dl>
           </>
         )}
+
+        {showIntro && !showForm ? (
+          <dl className="contact-facts">
+            <div>
+              <dt>Email</dt>
+              <dd>
+                <a href={`mailto:${person.email}?subject=${encodeURIComponent(contact.mailtoSubject)}`}>
+                  {person.email}
+                </a>
+              </dd>
+            </div>
+            {linkedIn ? (
+              <div>
+                <dt>LinkedIn</dt>
+                <dd>
+                  <a
+                    href={linkedIn.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {linkedIn.name}
+                  </a>
+                </dd>
+              </div>
+            ) : null}
+            {github ? (
+              <div>
+                <dt>GitHub</dt>
+                <dd>
+                  <a
+                    href={github.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {github.name}
+                  </a>
+                </dd>
+              </div>
+            ) : null}
+            <div>
+              <dt>Availability</dt>
+              <dd>{availability.short}</dd>
+            </div>
+          </dl>
+        ) : null}
 
         <ul className="contact-links">
           <li>
@@ -209,6 +257,7 @@ const ContactForm = ({ showIntro = true }) => {
         </ul>
       </div>
 
+      {showForm ? (
       <form
         className="contact-form"
         name="contact"
@@ -329,6 +378,7 @@ const ContactForm = ({ showIntro = true }) => {
           {statusMessage}
         </p>
       </form>
+      ) : null}
     </div>
   )
 }

@@ -15,17 +15,23 @@ const CaseStudyCard = ({ study }) => {
   const primaryOutcome = study.outcomes?.[0]
   const tech = study.technologies?.slice(0, 4) || []
 
+  const isPrimary = study.emphasis === 'primary'
+  const badge = study.featuredBadge || (isPrimary ? 'Featured' : null)
+
   return (
     <article
-      className={`case-study-card${study.emphasis === 'primary' ? ' case-study-card--primary' : ''}`}
+      className={`case-study-card${isPrimary ? ' case-study-card--primary' : ''}`}
     >
       {study.image ? (
         <div className="case-study-card__media">
+          {badge ? (
+            <span className="case-study-card__badge">{badge}</span>
+          ) : null}
           <img
             src={study.image}
             alt={`${study.title} product preview`}
-            width={640}
-            height={400}
+            width={isPrimary ? 503 : 640}
+            height={isPrimary ? 1024 : 400}
             loading="lazy"
             decoding="async"
           />

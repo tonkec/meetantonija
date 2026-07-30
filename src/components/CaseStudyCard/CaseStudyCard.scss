@@ -32,11 +32,53 @@
   }
 
   &--primary {
-    box-shadow: 14px 14px 0 var(--color-pink);
+    border-width: 3px;
+    box-shadow: 16px 16px 0 var(--color-pink);
+    gap: 1.35rem;
+    padding: clamp(1rem, 2.8vw, 1.5rem);
 
     @include breakpoint(lg) {
       grid-column: 1 / -1;
+      grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1.35fr);
     }
+
+    .case-study-card__media {
+      aspect-ratio: 9 / 16;
+      max-height: 420px;
+      margin-inline: auto;
+      width: min(100%, 280px);
+
+      @include breakpoint(lg) {
+        aspect-ratio: unset;
+        max-height: none;
+        min-height: 360px;
+        width: 100%;
+      }
+
+      img {
+        object-fit: contain;
+        object-position: top center;
+      }
+    }
+
+    .case-study-card__body h3 {
+      font-size: clamp(1.85rem, 3.8vw, 3rem);
+    }
+  }
+
+  &__badge {
+    background-color: var(--color-black);
+    border-radius: calc(var(--border-radius) * 2);
+    color: var(--color-white);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    left: 0.75rem;
+    padding: 0.4rem 0.65rem;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0.75rem;
+    z-index: 1;
   }
 
   &__media {
