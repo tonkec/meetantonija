@@ -1,0 +1,8 @@
+# Ignore build output and dependencies
+build
+node_modules
+coverage
+package-lock.json
+public
+*.min.js
+*.min.css
