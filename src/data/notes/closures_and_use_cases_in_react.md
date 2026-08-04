@@ -132,11 +132,3 @@ for (let i = 0; i < 3; i++) {
 }
 // 0, 1, 2
 ```
-
-#### A 30-second challenge
-
-Write a counter that returns `increment` and `decrement`, with a truly private `count` variable. No classes. No `this`. Just a closure.
-
-If you can do it quickly, your fundamentals are in good shape. If not, start there before the next framework release note.
-
-Framework syntax changes every year. Closures do not. Master the fundamentals and you will adapt to anything.
