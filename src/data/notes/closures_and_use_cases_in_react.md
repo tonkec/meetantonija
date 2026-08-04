@@ -1,11 +1,5 @@
 # Closures and use cases in React
 
-A candidate with six years of React experience could not explain closures last week. He could build a full app. He knew hooks cold. But when I asked why closures exist and where you use them — blank stare.
-
-That is the problem with a lot of modern frontend hiring. Framework syntax gets practiced. JavaScript fundamentals do not.
-
-Closures are not academic trivia. You use them every single day in React, usually without naming them.
-
 #### What is a closure?
 
 A **closure** is a function that remembers the variables from the scope where it was created — even after that outer function has finished running.
