@@ -1,5 +1,16 @@
 const notes = [
   {
+    title: 'Closures and use cases in React',
+    author: 'Antonija Šimić',
+    date: '2026-08-04',
+    level: 'beginner',
+    tags: 'Javascript, React, Closures, Scope',
+    id: 21,
+    intro:
+      'Closures are not interview trivia — you use them every day in React. A practical look at what they are, where they show up in hooks and handlers, and why fundamentals still matter.',
+    subtitle: 'Why do closures exist and where do you use them?',
+  },
+  {
     title: 'Server state vs client state',
     author: 'Antonija Šimić',
     date: '2026-07-29',
