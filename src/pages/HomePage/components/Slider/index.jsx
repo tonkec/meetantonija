@@ -13,15 +13,11 @@ const Slider = ({ items, headline }) => {
   return (
     <section className="project-slider-section">
       <div className="container">
-        <p className="section-kicker">More work</p>
         <h2>{headline}</h2>
 
         <div className="project-related-grid">
-          {sortedItems.map((project, index) => (
-            <article
-              key={project.id}
-              className={`project-slide project-slide--accent-${(index % 3) + 1}`}
-            >
+          {sortedItems.map((project) => (
+            <article key={project.id} className="project-slide">
               <div className="project-slide__meta">
                 <span>{formatProjectPeriod(project)}</span>
                 {project.company ? (

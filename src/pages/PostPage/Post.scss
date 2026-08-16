@@ -17,10 +17,12 @@
 }
 
 .post-hero {
-  background:
-    radial-gradient(circle at 14% 18%, rgba(249, 0, 147, 0.14), transparent 24rem),
-    radial-gradient(circle at 86% 20%, rgba(169, 228, 255, 0.6), transparent 24rem),
-    linear-gradient(135deg, var(--color-white) 0%, var(--color-pink-light) 100%);
+  background: radial-gradient(
+      circle at 14% 18%,
+      rgba(255, 1, 251, 0.1),
+      transparent 28rem
+    ),
+    var(--color-neutral-50);
   padding: 9rem 0 3.5rem;
 }
 
@@ -60,9 +62,8 @@
 
 .post-hero-card {
   background-color: var(--color-white);
-  border: 2px solid var(--color-black);
-  border-radius: calc(var(--border-radius) * 5);
-  box-shadow: 12px 12px 0 var(--color-pink);
+  border: 1px solid var(--color-line);
+  border-radius: calc(var(--border-radius) * 3);
   color: var(--color-black);
   display: grid;
   gap: 1rem;
@@ -89,7 +90,7 @@
 
   button {
     background-color: var(--color-pink-light);
-    border: 1px solid rgba(85, 65, 72, 0.28);
+    border: 1px solid rgba(0, 0, 0, 0.28);
     border-radius: 999px;
     color: var(--color-black);
     font-size: 0.8rem;
@@ -97,7 +98,7 @@
 
     &:hover,
     &:focus {
-      background-color: var(--color-pink);
+      background-color: var(--color-black);
       color: var(--color-white);
     }
   }
@@ -157,17 +158,16 @@ blockquote.post-content-container {
   }
 
   pre {
-    background-color: #0d1a63 !important;
-    border: 2px solid var(--color-black);
+    background-color: #10261a !important;
+    border: 1px solid var(--color-line-strong);
     border-radius: calc(var(--border-radius) * 3);
-    box-shadow: 8px 8px 0 var(--color-pink);
     overflow: auto;
   }
 }
 
 .inline-code {
   background-color: var(--color-pink-light);
-  border: 1.5px solid var(--color-black);
+  border: 1px solid var(--color-line-strong);
   border-radius: calc(var(--border-radius) * 1.5);
   color: var(--color-black);
   display: inline;
@@ -180,7 +180,6 @@ blockquote.post-content-container {
 
 .dark-theme .code-block pre {
   border-color: var(--color-sky-blue);
-  box-shadow: 8px 8px 0 rgba(246, 128, 72, 0.45);
 }
 
 .dark-theme .inline-code {
@@ -194,8 +193,7 @@ blockquote.post-content-container {
   max-width: 960px;
 
   img {
-    border: 2px solid var(--color-black);
-    box-shadow: 10px 10px 0 var(--color-pink-light);
+    border-radius: calc(var(--border-radius) * 2);
   }
 }
 

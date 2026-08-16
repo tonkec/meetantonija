@@ -6,7 +6,6 @@ const Videos = () => {
     <section className="videos-section">
       <div className="container videos-container">
         <div className="videos-heading">
-          <p className="section-kicker">Short tutorials</p>
           <h2>I turn UI ideas into bite-sized lessons.</h2>
         </div>
 

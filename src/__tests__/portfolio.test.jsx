@@ -67,9 +67,9 @@ describe('hero CTAs', () => {
 
 describe('CaseStudyCard', () => {
   it('includes Duga among featured case studies', () => {
-    expect(
-      featuredCaseStudies.some((study) => study.slug === 'duga')
-    ).toBe(true)
+    expect(featuredCaseStudies.some((study) => study.slug === 'duga')).toBe(
+      true
+    )
   })
 
   it('renders featured project data with contribution hierarchy', () => {
@@ -82,7 +82,9 @@ describe('CaseStudyCard', () => {
       </MemoryRouter>
     )
 
-    expect(screen.getByRole('heading', { name: study.title })).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: study.title })
+    ).toBeInTheDocument()
     expect(screen.getByText(study.summary)).toBeInTheDocument()
     expect(screen.getByText(study.highlight)).toBeInTheDocument()
     expect(
@@ -162,7 +164,10 @@ describe('Social links', () => {
 
     expect(github).toHaveAttribute('target', '_blank')
     expect(github).toHaveAttribute('rel', expect.stringContaining('noopener'))
-    expect(linkedin).toHaveAttribute('rel', expect.stringContaining('noreferrer'))
+    expect(linkedin).toHaveAttribute(
+      'rel',
+      expect.stringContaining('noreferrer')
+    )
   })
 })
 
@@ -184,11 +189,13 @@ describe('EngineeringStories', () => {
     expect(
       screen.getByText(/preventing duplicate paywalls/i)
     ).toBeInTheDocument()
-    expect(screen.getAllByText(/^Trimbox · React Native$/i).length).toBeGreaterThan(0)
-    expect(screen.getByText(/^FunderPro · React · React Query$/i)).toBeInTheDocument()
     expect(
-      screen.getByText(/coordinating app-open ui/i)
+      screen.getAllByText(/^Trimbox · React Native$/i).length
+    ).toBeGreaterThan(0)
+    expect(
+      screen.getByText(/^FunderPro · React · React Query$/i)
     ).toBeInTheDocument()
+    expect(screen.getByText(/coordinating app-open ui/i)).toBeInTheDocument()
     expect(
       screen.getByText(/reducing redundant api calls by 40%/i)
     ).toBeInTheDocument()
@@ -271,17 +278,17 @@ describe('ArchitectureFlow', () => {
 })
 
 describe('ProjectNav', () => {
-  it('links back to selected work and sibling featured projects', () => {
+  it('links back to home and the next featured project', () => {
     render(
       <MemoryRouter>
         <ProjectNav currentSlug="funderpro" />
       </MemoryRouter>
     )
 
-    expect(
-      screen.getByRole('link', { name: /back to selected work/i })
-    ).toHaveAttribute('href', '/#selected-work')
-    expect(screen.getByRole('link', { name: /trimbox/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /back to home/i })).toHaveAttribute(
+      'href',
+      '/'
+    )
     expect(screen.getByRole('link', { name: /duga/i })).toBeInTheDocument()
   })
 })
@@ -295,7 +302,9 @@ describe('featured work set', () => {
     expect(featuredCaseStudies[1].workType).toMatch(/professional/i)
     expect(featuredCaseStudies[2].workType).toMatch(/independent/i)
 
-    const funder = featuredCaseStudies.find((study) => study.slug === 'funderpro')
+    const funder = featuredCaseStudies.find(
+      (study) => study.slug === 'funderpro'
+    )
     expect(funder.title).toBe('FunderPro')
     expect(funder.period).toMatch(/September 2023.*March 2026/i)
     expect(funder.context).toMatch(/proprietary trading company/i)

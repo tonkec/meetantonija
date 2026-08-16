@@ -1,12 +1,15 @@
 @import './../../../styles/mq.scss';
 
 .mobile-nav {
-  background:
-    radial-gradient(circle at 88% 8%, rgba(169, 228, 255, 0.8), transparent 12rem),
+  background: radial-gradient(
+      circle at 88% 8%,
+      rgba(255, 254, 255, 0.8),
+      transparent 12rem
+    ),
     var(--color-pink-light);
   border-left: 3px solid var(--color-black);
   bottom: 0;
-  box-shadow: -14px 0 0 rgba(85, 65, 72, 0.22);
+  box-shadow: -14px 0 0 rgba(0, 0, 0, 0.22);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -38,7 +41,7 @@
     background-color: var(--color-white);
     border: 2px solid var(--color-black);
     border-radius: calc(var(--border-radius) * 4);
-    box-shadow: 6px 6px 0 rgba(85, 65, 72, 0.18);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.18);
     color: var(--color-black);
     display: flex;
     font-size: clamp(1.2rem, 7vw, 1.55rem);
@@ -60,8 +63,8 @@
     &:hover,
     &:focus {
       background-color: var(--color-black);
-      border-color: var(--color-pink);
-      box-shadow: 8px 8px 0 rgba(249, 0, 147, 0.18);
+      border-color: var(--color-black);
+      box-shadow: 8px 8px 0 rgba(255, 1, 251, 0.18);
       color: var(--color-white);
       outline: none;
       transform: translate(-2px, -2px);
@@ -73,9 +76,9 @@
   }
 
   .nav-link.active {
-    background-color: var(--color-pink);
-    border-color: var(--color-pink);
-    box-shadow: 8px 8px 0 rgba(85, 65, 72, 0.24);
+    background-color: var(--color-black);
+    border-color: var(--color-black);
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.24);
     color: var(--color-white);
   }
 }
@@ -106,7 +109,7 @@
 }
 
 .mobile-nav-close {
-  background-color: var(--color-pink);
+  background-color: var(--color-black);
   border: 2px solid var(--color-black);
   border-radius: calc(var(--border-radius) * 4);
   box-shadow: 6px 6px 0 var(--color-black);
@@ -124,17 +127,20 @@
 
 .dark-theme {
   .mobile-nav {
-    background:
-      radial-gradient(circle at 88% 8%, rgba(40, 69, 214, 0.72), transparent 12rem),
+    background: radial-gradient(
+        circle at 88% 8%,
+        rgba(74, 65, 67, 0.72),
+        transparent 12rem
+      ),
       var(--color-black);
     border-color: var(--color-sky-blue);
-    box-shadow: -14px 0 0 rgba(246, 128, 72, 0.28);
+    box-shadow: -14px 0 0 rgba(255, 1, 251, 0.28);
     color: var(--color-white);
 
     .mobile-nav-header {
       background-color: var(--color-pink-light);
       border-color: var(--color-sky-blue);
-      box-shadow: 8px 8px 0 rgba(246, 128, 72, 0.35);
+      box-shadow: 8px 8px 0 rgba(255, 1, 251, 0.35);
       color: var(--color-white);
 
       p,
@@ -146,7 +152,7 @@
     .nav-link {
       background-color: var(--color-white);
       border-color: var(--color-sky-blue);
-      box-shadow: 6px 6px 0 rgba(246, 128, 72, 0.22);
+      box-shadow: 6px 6px 0 rgba(255, 1, 251, 0.22);
       color: var(--color-black);
 
       span {
@@ -156,7 +162,7 @@
       &:hover,
       &:focus {
         background-color: var(--color-black);
-        border-color: var(--color-pink);
+        border-color: var(--color-black);
         color: var(--color-white);
 
         span {
@@ -166,8 +172,8 @@
     }
 
     .nav-link.active {
-      background-color: var(--color-pink);
-      border-color: var(--color-pink);
+      background-color: var(--color-black);
+      border-color: var(--color-black);
       color: var(--color-white);
 
       span {
@@ -177,7 +183,7 @@
 
     .mobile-nav-close {
       border-color: var(--color-pink);
-      box-shadow: 6px 6px 0 rgba(246, 128, 72, 0.45);
+      box-shadow: 6px 6px 0 rgba(255, 1, 251, 0.45);
     }
   }
 }

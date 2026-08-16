@@ -1,12 +1,6 @@
 import { useId, useState } from 'react'
 import emailjs from '@emailjs/browser'
-import {
-  availability,
-  contact,
-  person,
-  socialLinks,
-  cvAsset,
-} from 'data/site'
+import { availability, contact, person, socialLinks, cvAsset } from 'data/site'
 import './ContactForm.scss'
 
 const initialValues = {
@@ -145,14 +139,12 @@ const ContactForm = ({ showIntro = true, showForm = true }) => {
       <div className="contact-channels">
         {showIntro ? (
           <>
-            <p className="section-kicker">Contact</p>
             <h2 id="contact-heading">{contact.headline}</h2>
             <p>{contact.body}</p>
             <p className="contact-closing">{contact.closingCta}</p>
           </>
         ) : (
           <>
-            <p className="section-kicker">Direct channels</p>
             <h2 id="contact-heading">{contact.headline}</h2>
             <p className="contact-channels__lede">
               {availability.locationLine}
@@ -176,7 +168,9 @@ const ContactForm = ({ showIntro = true, showForm = true }) => {
             <div>
               <dt>Email</dt>
               <dd>
-                <a href={`mailto:${person.email}?subject=${encodeURIComponent(contact.mailtoSubject)}`}>
+                <a
+                  href={`mailto:${person.email}?subject=${encodeURIComponent(contact.mailtoSubject)}`}
+                >
                   {person.email}
                 </a>
               </dd>
@@ -258,126 +252,128 @@ const ContactForm = ({ showIntro = true, showForm = true }) => {
       </div>
 
       {showForm ? (
-      <form
-        className="contact-form"
-        name="contact"
-        onSubmit={handleSubmit}
-        noValidate
-        aria-labelledby="contact-heading"
-      >
-        <p className="contact-form__honeypot" aria-hidden="true">
-          <label htmlFor={`${formId}-company`}>
-            Company
+        <form
+          className="contact-form"
+          name="contact"
+          onSubmit={handleSubmit}
+          noValidate
+          aria-labelledby="contact-heading"
+        >
+          <p className="contact-form__honeypot" aria-hidden="true">
+            <label htmlFor={`${formId}-company`}>
+              Company
+              <input
+                id={`${formId}-company`}
+                name="company"
+                value={values.company}
+                onChange={handleChange}
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </label>
+          </p>
+
+          <div className="contact-form__field">
+            <label htmlFor={`${formId}-name`}>Name</label>
             <input
-              id={`${formId}-company`}
-              name="company"
-              value={values.company}
+              id={`${formId}-name`}
+              name="name"
+              type="text"
+              autoComplete="name"
+              value={values.name}
               onChange={handleChange}
-              tabIndex={-1}
-              autoComplete="off"
+              aria-invalid={Boolean(errors.name)}
+              aria-describedby={
+                errors.name ? `${formId}-name-error` : undefined
+              }
+              disabled={isDisabled}
+              required
             />
-          </label>
-        </p>
+            {errors.name ? (
+              <p
+                id={`${formId}-name-error`}
+                className="contact-form__error"
+                role="alert"
+              >
+                {errors.name}
+              </p>
+            ) : null}
+          </div>
 
-        <div className="contact-form__field">
-          <label htmlFor={`${formId}-name`}>Name</label>
-          <input
-            id={`${formId}-name`}
-            name="name"
-            type="text"
-            autoComplete="name"
-            value={values.name}
-            onChange={handleChange}
-            aria-invalid={Boolean(errors.name)}
-            aria-describedby={errors.name ? `${formId}-name-error` : undefined}
+          <div className="contact-form__field">
+            <label htmlFor={`${formId}-email`}>Email</label>
+            <input
+              id={`${formId}-email`}
+              name="email"
+              type="email"
+              autoComplete="email"
+              value={values.email}
+              onChange={handleChange}
+              aria-invalid={Boolean(errors.email)}
+              aria-describedby={
+                errors.email ? `${formId}-email-error` : undefined
+              }
+              disabled={isDisabled}
+              required
+            />
+            {errors.email ? (
+              <p
+                id={`${formId}-email-error`}
+                className="contact-form__error"
+                role="alert"
+              >
+                {errors.email}
+              </p>
+            ) : null}
+          </div>
+
+          <div className="contact-form__field">
+            <label htmlFor={`${formId}-message`}>Message</label>
+            <textarea
+              id={`${formId}-message`}
+              name="message"
+              rows={5}
+              value={values.message}
+              onChange={handleChange}
+              aria-invalid={Boolean(errors.message)}
+              aria-describedby={
+                errors.message ? `${formId}-message-error` : undefined
+              }
+              disabled={isDisabled}
+              required
+            />
+            {errors.message ? (
+              <p
+                id={`${formId}-message-error`}
+                className="contact-form__error"
+                role="alert"
+              >
+                {errors.message}
+              </p>
+            ) : null}
+          </div>
+
+          <button
+            type="submit"
+            className="primary"
             disabled={isDisabled}
-            required
-          />
-          {errors.name ? (
-            <p
-              id={`${formId}-name-error`}
-              className="contact-form__error"
-              role="alert"
-            >
-              {errors.name}
-            </p>
-          ) : null}
-        </div>
+            aria-busy={status === 'submitting'}
+          >
+            {status === 'submitting'
+              ? 'Sending…'
+              : status === 'success'
+                ? 'Message sent'
+                : 'Send message'}
+          </button>
 
-        <div className="contact-form__field">
-          <label htmlFor={`${formId}-email`}>Email</label>
-          <input
-            id={`${formId}-email`}
-            name="email"
-            type="email"
-            autoComplete="email"
-            value={values.email}
-            onChange={handleChange}
-            aria-invalid={Boolean(errors.email)}
-            aria-describedby={
-              errors.email ? `${formId}-email-error` : undefined
-            }
-            disabled={isDisabled}
-            required
-          />
-          {errors.email ? (
-            <p
-              id={`${formId}-email-error`}
-              className="contact-form__error"
-              role="alert"
-            >
-              {errors.email}
-            </p>
-          ) : null}
-        </div>
-
-        <div className="contact-form__field">
-          <label htmlFor={`${formId}-message`}>Message</label>
-          <textarea
-            id={`${formId}-message`}
-            name="message"
-            rows={5}
-            value={values.message}
-            onChange={handleChange}
-            aria-invalid={Boolean(errors.message)}
-            aria-describedby={
-              errors.message ? `${formId}-message-error` : undefined
-            }
-            disabled={isDisabled}
-            required
-          />
-          {errors.message ? (
-            <p
-              id={`${formId}-message-error`}
-              className="contact-form__error"
-              role="alert"
-            >
-              {errors.message}
-            </p>
-          ) : null}
-        </div>
-
-        <button
-          type="submit"
-          className="primary"
-          disabled={isDisabled}
-          aria-busy={status === 'submitting'}
-        >
-          {status === 'submitting'
-            ? 'Sending…'
-            : status === 'success'
-              ? 'Message sent'
-              : 'Send message'}
-        </button>
-
-        <p
-          className={`contact-form__status ${status}`}
-          role="status"
-          aria-live="polite"
-        >
-          {statusMessage}
-        </p>
-      </form>
+          <p
+            className={`contact-form__status ${status}`}
+            role="status"
+            aria-live="polite"
+          >
+            {statusMessage}
+          </p>
+        </form>
       ) : null}
     </div>
   )

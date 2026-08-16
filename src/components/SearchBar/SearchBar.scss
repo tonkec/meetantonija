@@ -4,7 +4,7 @@
 .search-container {
   backdrop-filter: blur(5px);
   align-items: flex-start;
-  background-color: rgba(85, 65, 72, 0.28);
+  background-color: rgba(0, 0, 0, 0.28);
   display: none;
   inset: 0;
   justify-content: center;
@@ -21,9 +21,9 @@
 
 .search-card {
   background-color: var(--color-white);
-  border: 2px solid var(--color-black);
-  border-radius: calc(var(--border-radius) * 5);
-  box-shadow: 14px 14px 0 var(--color-pink);
+  border: 1px solid var(--color-line-strong);
+  border-radius: calc(var(--border-radius) * 4);
+  box-shadow: 0 24px 48px rgba(58, 46, 40, 0.22);
   overflow: hidden;
   width: min(720px, 100%);
 }
@@ -31,7 +31,7 @@
 .search-card-header {
   align-items: center;
   background-color: var(--color-pink-light);
-  border-bottom: 2px solid var(--color-black);
+  border-bottom: 1px solid var(--color-line);
   display: flex;
   justify-content: space-between;
   padding: 1rem;
@@ -80,9 +80,9 @@
 }
 
 .navigation-button {
-  @include transition((transform, background-color, color, box-shadow));
-  background-color: var(--color-pink-light);
-  border: 2px solid var(--color-black);
+  @include transition((background-color, border-color, color));
+  background-color: var(--color-neutral-50);
+  border: 1px solid var(--color-line);
   border-radius: calc(var(--border-radius) * 3);
   color: var(--color-black);
   cursor: pointer;
@@ -110,9 +110,8 @@
   &:hover,
   &:focus {
     background-color: var(--color-pink);
-    box-shadow: 6px 6px 0 var(--color-black);
+    border-color: var(--color-pink);
     color: var(--color-white);
-    transform: translate(-3px, -3px);
 
     span {
       color: currentColor;
@@ -121,8 +120,16 @@
 }
 
 .search-close {
+  background-color: var(--color-black);
   border-radius: 0;
+  color: var(--color-white);
   width: 100%;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-pink);
+    color: var(--color-white);
+  }
 }
 
 @include breakpoint(md, max) {
@@ -134,8 +141,14 @@
 .dark-theme {
   .search-card {
     background-color: var(--color-pink-light);
-    border-color: var(--color-sky-blue);
-    box-shadow: 14px 14px 0 rgba(246, 128, 72, 0.45);
+    border-color: var(--color-line-strong);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+    color: var(--color-white);
+  }
+
+  .navigation-button {
+    background-color: var(--color-neutral-100);
+    border-color: var(--color-line-strong);
     color: var(--color-white);
   }
 

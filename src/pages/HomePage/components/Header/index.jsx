@@ -9,29 +9,23 @@ const Header = () => {
     <div className="header-wrapper hero-shell">
       <header className="container hero">
         <div className="hero-copy">
-          <p className="hero-eyebrow">{hero.eyebrow}</p>
           <h1>{hero.headline}</h1>
           <p className="hero-supporting">{hero.supporting}</p>
           <p className="hero-location">{availability.locationLine}</p>
+          <p className="hero-status">{availability.statusLine}</p>
 
           <ActionButtons />
         </div>
 
         <div className="hero-visual" aria-label={`${person.name} profile`}>
           <div className="hero-card">
-            <Image
-              src={person.image}
-              alt={person.name}
-              className="hero-photo"
-            />
-            <div className="hero-card-note">
-              <span>{availability.heroCardLabel}</span>
-              <strong>{availability.heroCardValue}</strong>
+            <div className="hero-photo-frame">
+              <Image
+                src={person.image}
+                alt={person.name}
+                className="hero-photo"
+              />
             </div>
-          </div>
-          <div className="hero-floating-card">
-            <span>{availability.floatingLabel}</span>
-            <strong>{availability.floatingValue}</strong>
           </div>
         </div>
       </header>

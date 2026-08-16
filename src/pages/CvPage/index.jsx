@@ -91,7 +91,6 @@ const CvPage = () => {
       <header className="cv-hero">
         <div className="container cv-hero-grid">
           <div>
-            <p className="section-kicker">CV</p>
             <h1>Work history shaped by product delivery.</h1>
             <p>
               A timeline of the teams, products and technologies I have worked

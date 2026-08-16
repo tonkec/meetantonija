@@ -1,7 +1,7 @@
 @import '../../styles/mq.scss';
 
 .experience-preview {
-  background-color: var(--color-pink-light);
+  background-color: var(--color-neutral-50);
   padding-bottom: 3.75rem;
   padding-top: 3.75rem;
 
@@ -16,34 +16,56 @@
 
 .experience-preview__intro {
   line-height: 1.7;
-  margin: 0.75rem 0 1.5rem;
+  margin: 0.75rem 0 1rem;
   max-width: 36rem;
 }
 
 .experience-preview__list {
-  display: grid;
-  gap: 1rem;
   list-style: none;
-  margin: 0;
+  margin: 1.5rem 0 0;
   padding: 0;
 }
 
-.experience-preview__card {
-  background-color: var(--color-white);
-  border: 2px solid var(--color-black);
-  border-radius: calc(var(--border-radius) * 4);
-  box-shadow: 6px 6px 0 var(--color-sky-blue);
+.experience-preview__row {
+  border-top: 1px solid var(--color-line);
   display: grid;
-  gap: 0.45rem;
-  padding: 1.25rem 1.35rem;
-  transition:
-    box-shadow 0.2s ease,
-    transform 0.2s ease;
+  gap: 0.5rem;
+  padding: 1.75rem 0;
 
-  &:hover {
-    box-shadow: 8px 8px 0 var(--color-black);
-    transform: translate(-1px, -1px);
+  &:first-child {
+    border-top: 0;
+    padding-top: 0;
   }
+
+  @include breakpoint(md) {
+    gap: 2rem;
+    grid-template-columns: 12rem minmax(0, 1fr);
+  }
+}
+
+.experience-preview__when {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.experience-preview__dates {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.experience-preview__type {
+  color: var(--color-pink);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.experience-preview__what {
+  display: grid;
+  gap: 0.4rem;
 
   h3 {
     font-size: clamp(1.15rem, 2.5vw, 1.45rem);
@@ -57,17 +79,9 @@
   }
 }
 
-.experience-preview__type {
-  color: var(--color-pink);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
 .experience-preview__meta {
-  font-size: 0.95rem;
-  opacity: 0.8;
+  font-weight: 700;
+  opacity: 0.75;
 }
 
 .experience-preview__link {
@@ -85,27 +99,6 @@
   }
 }
 
-.dark-theme {
-  .experience-preview__card {
-    background-color: var(--color-black);
-    border-color: var(--color-sky-blue);
-    box-shadow: 6px 6px 0 var(--color-pink);
-    color: var(--color-white);
-
-    h3,
-    p,
-    a {
-      color: var(--color-white);
-    }
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .experience-preview__card {
-    transition: none;
-
-    &:hover {
-      transform: none;
-    }
-  }
+.dark-theme .experience-preview__link {
+  color: var(--color-white);
 }

@@ -1,17 +1,22 @@
 @mixin dark-theme {
-  background-color: #0d1a63;
+  background-color: #1c1516;
 
   body {
-    color: #fff;
-    background-color: #0d1a63;
-    --color-black: #0d1a63;
-    --color-pink: #f68048;
-    --color-pink-dark: #d96634;
-    --color-sky-blue: #2845d6;
-    --color-pink-light: #1a2ca3;
-    --color-brown: #0d1a63;
-    --color-blue: #f68048;
-    --color-dark-blue: #2845d6;
+    color: #fffeff;
+    background-color: #1c1516;
+    --color-black: #1c1516;
+    --color-pink: #ff01fb;
+    --color-pink-dark: #cc00c8;
+    --color-sky-blue: #3a2f31;
+    --color-pink-light: #2a2123;
+    --color-brown: var(--color-black);
+    --color-blue: var(--color-pink);
+    --color-dark-blue: var(--color-pink-dark);
+    --color-neutral-50: #1c1516;
+    --color-neutral-100: #2a2123;
+    --color-line: rgba(255, 1, 251, 0.22);
+    --color-line-strong: rgba(255, 1, 251, 0.4);
+    --shadow-signature: none;
 
     form {
       color: var(--color-black);
@@ -31,9 +36,16 @@
     }
 
     .header-wrapper {
-      background:
-        radial-gradient(circle at 72% 18%, rgba(40, 69, 214, 0.72), transparent 28rem),
-        radial-gradient(circle at 16% 34%, rgba(26, 44, 163, 0.6), transparent 24rem),
+      background: radial-gradient(
+          circle at 72% 18%,
+          rgba(74, 65, 67, 0.72),
+          transparent 28rem
+        ),
+        radial-gradient(
+          circle at 16% 34%,
+          rgba(42, 33, 35, 0.6),
+          transparent 24rem
+        ),
         var(--color-black);
       background-color: var(--color-black);
     }
@@ -102,18 +114,22 @@
       color: var(--color-blue);
     }
 
+    // !important here because several unrelated "reset descendant text to
+    // white" rules below (card wrappers like .contact-page-card a, etc.)
+    // share this same specificity and would otherwise win by source order,
+    // turning this into invisible white-on-white text.
     button.primary,
     a.primary,
     a[role='button'].primary,
     *[role='button'].primary,
     input[type='submit'].primary {
-      background-color: var(--color-pink);
-      color: var(--color-white);
+      background-color: var(--color-white) !important;
+      color: var(--color-black) !important;
 
       &:hover,
       &:focus {
-        background-color: var(--color-dark-blue);
-        color: var(--color-white);
+        background-color: var(--color-sky-blue) !important;
+        color: var(--color-black) !important;
       }
     }
 
@@ -130,20 +146,11 @@
 
     .case-study-card {
       background-color: #1f1a1c;
-      border-color: var(--color-sky-blue);
-      box-shadow: 12px 12px 0 var(--color-pink);
+      border-color: rgba(255, 254, 255, 0.3);
       color: var(--color-white);
 
-      &:nth-child(3n + 2) {
-        box-shadow: 12px 12px 0 var(--color-sky-blue);
-      }
-
-      &:nth-child(3n + 3) {
-        box-shadow: 12px 12px 0 var(--color-purple);
-      }
-
       &:hover {
-        box-shadow: 14px 14px 0 var(--color-sky-blue);
+        border-color: var(--color-sky-blue);
       }
 
       .section-kicker {
@@ -151,27 +158,17 @@
       }
     }
 
-    .case-study-card__media {
-      border-color: var(--color-sky-blue);
-    }
-
-    .case-study-card__company {
-      color: var(--color-white);
+    .case-study-card__media,
+    .case-study-card__media--placeholder {
+      background-color: rgba(255, 254, 255, 0.08);
     }
 
     .case-study-card__role {
       color: var(--color-sky-blue);
     }
 
-    .case-study-card__outcomes li {
-      background-color: rgba(249, 0, 147, 0.18);
-      border-left-color: var(--color-pink);
-    }
-
     .case-study-card__tech li {
-      background-color: transparent;
-      border-color: var(--color-sky-blue);
-      color: var(--color-white);
+      color: rgba(255, 255, 255, 0.75);
     }
 
     .case-study-card a.case-study-card__btn {
@@ -180,13 +177,13 @@
 
     .case-study-card__btn--primary {
       background-color: var(--color-pink);
-      border-color: var(--color-sky-blue);
-      box-shadow: 4px 4px 0 var(--color-sky-blue);
+      border-color: var(--color-pink);
       color: var(--color-white);
 
       &:hover,
       &:focus {
         background-color: var(--color-pink-dark);
+        border-color: var(--color-pink-dark);
         color: var(--color-white);
       }
     }
@@ -273,8 +270,6 @@
       color: var(--color-white);
     }
 
-    .hero-card-note,
-    .hero-floating-card,
     .aside-section aside,
     .tutorial-card,
     .hire-me-card,
@@ -331,9 +326,9 @@
     .post-tags button,
     .post-card-tags button {
       background-color: var(--color-black);
-      border-color: var(--color-pink);
+      border-color: var(--color-black);
       color: var(--color-white);
-      box-shadow: 0 0 0 1px rgba(246, 128, 72, 0.35);
+      box-shadow: 0 0 0 1px rgba(255, 1, 251, 0.35);
 
       &:hover,
       &:focus {
@@ -345,13 +340,12 @@
 
     .post-filter-clear {
       border-color: var(--color-pink);
-      box-shadow: 0 0 0 1px rgba(246, 128, 72, 0.28);
+      box-shadow: 0 0 0 1px rgba(255, 1, 251, 0.28);
     }
 
     .posts-empty-state {
-      background-color: rgba(13, 26, 99, 0.78);
-      border-color: var(--color-pink);
-      box-shadow: 8px 8px 0 rgba(246, 128, 72, 0.72);
+      background-color: var(--color-neutral-50);
+      border-color: var(--color-line-strong);
       color: var(--color-white);
 
       span {
@@ -362,16 +356,16 @@
     .cv-filter-summary span,
     .cv-project-meta span {
       background-color: var(--color-black);
-      border-color: var(--color-pink);
+      border-color: var(--color-black);
       color: var(--color-white);
-      box-shadow: 0 0 0 1px rgba(246, 128, 72, 0.35);
+      box-shadow: 0 0 0 1px rgba(255, 1, 251, 0.35);
     }
 
     .cv-project-skills button.outlined {
       background-color: var(--color-black);
-      border-color: var(--color-pink);
+      border-color: var(--color-black);
       color: var(--color-white);
-      box-shadow: 0 0 0 1px rgba(246, 128, 72, 0.35);
+      box-shadow: 0 0 0 1px rgba(255, 1, 251, 0.35);
     }
 
     button.outlined,
@@ -390,32 +384,31 @@
     }
 
     .project-overview-grid article,
-    .project-step-card,
-    .cv-project-card,
-    .post-card,
-    .event-card,
     .experiment-card {
       background-color: var(--color-pink-light);
       border-color: var(--color-sky-blue);
-      box-shadow: 8px 8px 0 rgba(246, 128, 72, 0.35);
+      box-shadow: 8px 8px 0 rgba(255, 1, 251, 0.35);
+    }
+
+    .post-card,
+    .cv-project-card,
+    .project-step-card {
+      background-color: var(--color-neutral-100);
+      border-color: var(--color-line-strong);
+    }
+
+    .event-card {
+      background-color: var(--color-neutral-100);
+      border-color: var(--color-line-strong);
     }
 
     .project-slide {
       background-color: #1f1a1c;
-      border-color: var(--color-sky-blue);
-      box-shadow: 8px 8px 0 var(--color-pink);
+      border-color: var(--color-line-strong);
       color: var(--color-white);
 
-      &--accent-2 {
-        box-shadow: 8px 8px 0 var(--color-sky-blue);
-      }
-
-      &--accent-3 {
-        box-shadow: 8px 8px 0 var(--color-purple);
-      }
-
       &:hover {
-        box-shadow: 10px 10px 0 var(--color-sky-blue);
+        border-color: var(--color-pink);
       }
 
       .project-slide__meta > span {
@@ -444,7 +437,7 @@
 
       button:not(.primary),
       a[role='button']:not(.primary) {
-        background-color: rgba(13, 26, 99, 0.7);
+        background-color: rgba(16, 38, 26, 0.7);
         border-color: var(--color-pink);
         color: var(--color-white);
       }
@@ -453,7 +446,7 @@
     .hero-card {
       background-color: var(--color-pink-light);
       border-color: var(--color-sky-blue);
-      box-shadow: 18px 18px 0 rgba(246, 128, 72, 0.45);
+      box-shadow: 18px 18px 0 rgba(255, 1, 251, 0.45);
       color: var(--color-white);
 
       h1,
@@ -492,11 +485,10 @@
     }
 
     .service-card,
-    .credibility-chip,
     .tech-group {
       background-color: var(--color-pink-light);
       border-color: var(--color-sky-blue);
-      box-shadow: 8px 8px 0 rgba(246, 128, 72, 0.35);
+      box-shadow: 8px 8px 0 rgba(255, 1, 251, 0.35);
       color: var(--color-white);
 
       h1,
@@ -512,13 +504,16 @@
       }
     }
 
-    .service-card > span,
-    .credibility-chip__index {
+    .service-card > span {
       color: var(--color-pink) !important;
     }
 
-    .credibility-chip__copy span {
-      color: rgba(255, 255, 255, 0.75);
+    .credibility-item {
+      border-color: rgba(255, 1, 251, 0.3);
+
+      span {
+        color: rgba(255, 255, 255, 0.75);
+      }
     }
 
     .tech-group li {
@@ -527,23 +522,10 @@
       color: var(--color-white);
     }
 
-    .credibility-chip {
-      box-shadow: 6px 6px 0 var(--color-pink);
-
-      &:nth-child(n) {
-        box-shadow: 6px 6px 0 var(--color-pink);
-      }
-
-      &:hover,
-      &:focus-within {
-        box-shadow: 8px 8px 0 var(--color-pink);
-      }
-    }
-
     .engineering-story--open {
       background-color: var(--color-pink-light);
       border-color: var(--color-sky-blue);
-      box-shadow: 8px 8px 0 rgba(246, 128, 72, 0.35);
+      box-shadow: 8px 8px 0 rgba(255, 1, 251, 0.35);
     }
 
     .engineering-story__toggle {
@@ -565,7 +547,6 @@
     .cv-actions-card {
       background-color: var(--color-pink-light);
       border-color: var(--color-sky-blue);
-      box-shadow: 12px 12px 0 rgba(246, 128, 72, 0.55);
       color: var(--color-white);
 
       h1,
@@ -587,9 +568,8 @@
     }
 
     .posts-toolbar {
-      background-color: var(--color-pink-light);
-      border-color: var(--color-sky-blue);
-      box-shadow: 8px 8px 0 rgba(246, 128, 72, 0.35);
+      background-color: var(--color-neutral-50);
+      border-color: var(--color-line-strong);
 
       input {
         background-color: var(--color-black);
@@ -605,7 +585,7 @@
     .search-card {
       background-color: var(--color-pink-light);
       border-color: var(--color-sky-blue);
-      box-shadow: 14px 14px 0 rgba(246, 128, 72, 0.45);
+      box-shadow: 14px 14px 0 rgba(255, 1, 251, 0.45);
       color: var(--color-white);
     }
 
@@ -633,12 +613,8 @@
     }
 
     .credibility-strip {
-      background:
-        linear-gradient(90deg, rgba(246, 128, 72, 0.18) 1px, transparent 1px),
-        linear-gradient(0deg, rgba(246, 128, 72, 0.18) 1px, transparent 1px),
-        var(--color-pink-light);
-      background-size: 28px 28px;
-      border-color: var(--color-sky-blue);
+      background-color: var(--color-black);
+      border-color: rgba(255, 1, 251, 0.3);
     }
 
     .aside-section .note-close {
@@ -666,7 +642,6 @@
       &:focus {
         background-color: var(--color-pink);
         border-color: var(--color-pink);
-        box-shadow: 8px 8px 0 rgba(246, 128, 72, 0.55);
         color: var(--color-white);
 
         span,
@@ -680,16 +655,6 @@
     .aside-section aside {
       background-color: var(--color-pink-light);
       border-color: var(--color-sky-blue);
-      box-shadow: 10px 10px 0 rgba(246, 128, 72, 0.35);
-    }
-
-    .hero-card .hero-card-note {
-      color: var(--color-white);
-
-      span,
-      strong {
-        color: var(--color-white);
-      }
     }
 
     .hire-me-card,
@@ -697,7 +662,6 @@
       background: var(--color-pink-light);
       background-color: var(--color-pink-light);
       border-color: var(--color-sky-blue);
-      box-shadow: 14px 14px 0 rgba(246, 128, 72, 0.35);
       color: var(--color-white);
 
       h2,
@@ -711,10 +675,12 @@
       }
     }
 
+    .contact-page-card {
+      box-shadow: 14px 14px 0 rgba(255, 1, 251, 0.35);
+    }
+
     .contact-form {
       background-color: #1f1a1c;
-      border-color: var(--color-sky-blue);
-      box-shadow: 10px 10px 0 rgba(246, 128, 72, 0.35);
       color: var(--color-white);
 
       label {
@@ -737,16 +703,17 @@
       color: var(--color-white);
     }
 
-    .contact-links a {
+    // Plain text links only — .primary/.outlined already get correct
+    // text color from their own button rules above, and this selector's
+    // specificity is high enough to otherwise clobber them back to white
+    // (turning white-on-white for .primary), which is what caused the
+    // "Email me" button text to disappear in dark mode.
+    .contact-links a:not(.primary):not(.outlined) {
       color: var(--color-white);
-
-      &.primary {
-        color: var(--color-white);
-      }
     }
 
     .contact-facts div {
-      background-color: rgba(13, 26, 99, 0.45);
+      background-color: rgba(16, 38, 26, 0.45);
       border-color: var(--color-sky-blue);
     }
 

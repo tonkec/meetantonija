@@ -1,9 +1,11 @@
 .intro-animation {
   align-items: center;
-  background:
-    radial-gradient(circle at 18% 18%, rgba(249, 0, 147, 0.2), transparent 24rem),
-    radial-gradient(circle at 84% 18%, rgba(169, 228, 255, 0.72), transparent 24rem),
-    var(--color-pink-light);
+  background: radial-gradient(
+      circle at 18% 18%,
+      rgba(255, 1, 251, 0.14),
+      transparent 28rem
+    ),
+    var(--color-neutral-50);
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -20,12 +22,12 @@
   background-color: var(--color-white);
   border: 2px solid var(--color-black);
   border-radius: calc(var(--border-radius) * 5);
-  box-shadow: 14px 14px 0 var(--color-pink);
+  box-shadow: var(--shadow-signature);
   color: var(--color-black);
   display: grid;
   gap: 1.25rem;
   padding: clamp(1.5rem, 6vw, 4rem);
-  transform: rotate(-2deg);
+  transform: rotate(2deg);
 
   p {
     color: var(--color-pink);
@@ -87,16 +89,18 @@
 
 .dark-theme {
   .intro-animation {
-    background:
-      radial-gradient(circle at 18% 18%, rgba(246, 128, 72, 0.22), transparent 24rem),
-      radial-gradient(circle at 84% 18%, rgba(40, 69, 214, 0.55), transparent 24rem),
+    background: radial-gradient(
+        circle at 18% 18%,
+        rgba(255, 1, 251, 0.18),
+        transparent 28rem
+      ),
       var(--color-black);
   }
 
   .intro-card {
     background-color: var(--color-pink-light);
     border-color: var(--color-sky-blue);
-    box-shadow: 14px 14px 0 rgba(246, 128, 72, 0.55);
+    box-shadow: var(--shadow-signature);
     color: var(--color-white);
 
     p {
@@ -105,7 +109,7 @@
 
     h1 span.visible {
       color: var(--color-pink);
-      text-shadow: 4px 4px 0 rgba(13, 26, 99, 0.65);
+      text-shadow: 4px 4px 0 rgba(16, 38, 26, 0.65);
     }
   }
 

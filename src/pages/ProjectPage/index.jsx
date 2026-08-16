@@ -38,7 +38,6 @@ const architectureLabels = {
 }
 
 const ProjectSection = ({
-  kicker,
   title,
   children,
   tone = 'light',
@@ -50,10 +49,9 @@ const ProjectSection = ({
     id={id}
   >
     <div className="container">
-      {kicker || title ? (
+      {title ? (
         <header className="project-section__header">
-          {kicker ? <p className="section-kicker">{kicker}</p> : null}
-          {title ? <h2>{title}</h2> : null}
+          <h2>{title}</h2>
         </header>
       ) : null}
       {children}
@@ -83,7 +81,10 @@ const ProjectPage = () => {
   const technologies =
     caseStudy?.technologies?.length > 0
       ? caseStudy.technologies
-      : project.skills.split(',').map((skill) => skill.trim()).filter(Boolean)
+      : project.skills
+          .split(',')
+          .map((skill) => skill.trim())
+          .filter(Boolean)
   const repositoryLinks =
     caseStudy?.repositoryLinks ||
     (project.repositoryUrl || caseStudy?.repositoryUrl
@@ -95,14 +96,13 @@ const ProjectPage = () => {
         ]
       : [])
   const galleryPhotos =
-    caseStudy?.photos?.length > 0
-      ? caseStudy.photos
-      : project.photos || []
+    caseStudy?.photos?.length > 0 ? caseStudy.photos : project.photos || []
   const showGallery = galleryPhotos.length > 0
   const architectureFlow = caseStudy?.slug
     ? architectureFlows[caseStudy.slug]
     : null
-  const hasExploreLinks = !isDuga && (project.link || repositoryLinks.length > 0)
+  const hasExploreLinks =
+    !isDuga && (project.link || repositoryLinks.length > 0)
 
   const pageMeta = getPageMeta(`/project/${title}`)
 
@@ -125,9 +125,6 @@ const ProjectPage = () => {
       <header className="project-hero">
         <div className="container project-hero-grid">
           <div className="project-hero-copy">
-            <p className="section-kicker">
-              {caseStudy?.personal ? 'Personal product' : 'Project case study'}
-            </p>
             <h1>{project.title}</h1>
             <p>{caseStudy?.summary || project.headline}</p>
             {caseStudy?.confidential ? (
@@ -186,7 +183,7 @@ const ProjectPage = () => {
         </div>
       </header>
 
-      <ProjectSection kicker="Overview" title="What needed solving." tone="dark">
+      <ProjectSection title="What needed solving." tone="dark">
         <div className="project-prose">
           <p>{caseStudy?.context || project.description}</p>
           {project.problem ? <p>{project.problem}</p> : null}
@@ -195,7 +192,6 @@ const ProjectPage = () => {
 
       {showGallery ? (
         <ProjectSection
-          kicker="Product snapshots"
           title={
             galleryPhotos.length > 1
               ? 'Here are some photos of the app'
@@ -208,12 +204,8 @@ const ProjectPage = () => {
         </ProjectSection>
       ) : null}
 
-      {(caseStudy?.challenges?.length || caseStudy?.solution?.length) ? (
-        <ProjectSection
-          kicker="Engineering focus"
-          title="Hard parts and what changed."
-          tone="light"
-        >
+      {caseStudy?.challenges?.length || caseStudy?.solution?.length ? (
+        <ProjectSection title="Hard parts and what changed." tone="light">
           <div className="project-split">
             {caseStudy?.challenges?.length ? (
               <article className="project-panel">
@@ -244,7 +236,6 @@ const ProjectPage = () => {
           projectSlug={caseStudy.slug}
           mode="project"
           id={`${caseStudy.slug}-engineering-stories`}
-          kicker="Engineering stories"
           heading={`Selected ${caseStudy.title} engineering stories.`}
           intro="Expand for context, approach, considerations and outcome."
           showProjectLinks={false}
@@ -258,11 +249,7 @@ const ProjectPage = () => {
       ) : null}
 
       {keyFeatures.length > 0 ? (
-        <ProjectSection
-          kicker="Key features"
-          title="What users can do."
-          tone="light"
-        >
+        <ProjectSection title="What users can do." tone="light">
           <ul className="project-outcomes project-outcomes--wide">
             {keyFeatures.map((feature) => (
               <li key={feature}>{feature}</li>
@@ -272,11 +259,7 @@ const ProjectPage = () => {
       ) : null}
 
       {architecture ? (
-        <ProjectSection
-          kicker="Technical architecture"
-          title="How the system is structured."
-          tone="dark"
-        >
+        <ProjectSection title="How the system is structured." tone="dark">
           <div className="project-architecture-grid">
             {Object.entries(architecture).map(([key, items]) =>
               items?.length ? (
@@ -300,11 +283,7 @@ const ProjectPage = () => {
       />
 
       {outcomes.length > 0 ? (
-        <ProjectSection
-          kicker="Outcomes"
-          title="What the work improved."
-          tone="light"
-        >
+        <ProjectSection title="What the work improved." tone="light">
           <ul className="project-outcomes project-outcomes--wide">
             {outcomes.map((outcome) => (
               <li key={outcome}>{outcome}</li>
@@ -314,12 +293,7 @@ const ProjectPage = () => {
       ) : null}
 
       {hasExploreLinks ? (
-        <ProjectSection
-          kicker="Explore"
-          title="View the product."
-          tone="dark"
-          id="project-cta"
-        >
+        <ProjectSection title="View the product." tone="dark" id="project-cta">
           <div className="project-link-row">
             {project.link ? (
               <a
@@ -353,7 +327,6 @@ const ProjectPage = () => {
       <section className="project-section project-section--soft" id="tldr">
         <div className="container">
           <header className="project-section__header">
-            <p className="section-kicker">TLDR</p>
             <h2>What mattered most.</h2>
           </header>
           <div className="project-tldr-grid">

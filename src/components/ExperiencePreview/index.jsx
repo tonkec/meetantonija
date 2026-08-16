@@ -45,7 +45,6 @@ const ExperiencePreview = () => {
       aria-labelledby="experience-heading"
     >
       <div className="container">
-        <p className="section-kicker">Experience</p>
         <h2 id="experience-heading">Where the work happened.</h2>
         <p className="experience-preview__intro">
           Concise highlights — full context lives on each case study.
@@ -53,20 +52,20 @@ const ExperiencePreview = () => {
 
         <ul className="experience-preview__list">
           {experienceEntries.map((entry) => (
-            <li key={entry.id}>
-              <article className="experience-preview__card">
+            <li key={entry.id} className="experience-preview__row">
+              <div className="experience-preview__when">
+                <p className="experience-preview__dates">{entry.dates}</p>
                 <p className="experience-preview__type">{entry.workType}</p>
+              </div>
+              <div className="experience-preview__what">
                 <h3>{entry.title}</h3>
-                <p className="experience-preview__meta">
-                  {entry.company}
-                  <span aria-hidden="true"> · </span>
-                  {entry.dates}
-                </p>
+                <p className="experience-preview__meta">{entry.company}</p>
                 <p>{entry.summary}</p>
                 <Link to={entry.href} className="experience-preview__link">
                   Read {entry.company.split('·').pop().trim()} case study
+                  <span aria-hidden="true"> →</span>
                 </Link>
-              </article>
+              </div>
             </li>
           ))}
         </ul>

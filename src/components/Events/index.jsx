@@ -20,7 +20,6 @@ const Events = () => {
     <section className="events-section" aria-labelledby="events-heading">
       <div className="container events-container">
         <div className="events-heading">
-          <p className="section-kicker">Beyond product work</p>
           <h2 id="events-heading">Talks and mentoring.</h2>
         </div>
 
@@ -50,12 +49,9 @@ const Events = () => {
                 <span>
                   {event.organizer}, {event.location}
                 </span>
-                <a
-                  href={event.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View event <FaExternalLinkAlt fontSize="0.85rem" aria-hidden />
+                <a href={event.link} target="_blank" rel="noopener noreferrer">
+                  View event{' '}
+                  <FaExternalLinkAlt fontSize="0.85rem" aria-hidden />
                 </a>
               </div>
               <Image src={event.photo} alt="" className="w-full" />

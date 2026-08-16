@@ -6,10 +6,12 @@
 }
 
 .project-hero {
-  background:
-    radial-gradient(circle at 12% 16%, rgba(249, 0, 147, 0.16), transparent 24rem),
-    radial-gradient(circle at 88% 20%, rgba(169, 228, 255, 0.65), transparent 24rem),
-    linear-gradient(135deg, var(--color-white) 0%, var(--color-pink-light) 100%);
+  background: radial-gradient(
+      circle at 12% 16%,
+      rgba(255, 1, 251, 0.08),
+      transparent 28rem
+    ),
+    var(--color-neutral-50);
   padding: 7.5rem 0 3rem;
 }
 
@@ -66,9 +68,8 @@
 
 .project-hero-card {
   background-color: var(--color-white);
-  border: 2px solid var(--color-black);
-  border-radius: calc(var(--border-radius) * 4);
-  box-shadow: 10px 10px 0 var(--color-pink);
+  border: 1px solid var(--color-line);
+  border-radius: calc(var(--border-radius) * 3);
   color: var(--color-black);
   display: grid;
   gap: 1.25rem;
@@ -109,8 +110,8 @@
   padding: 0;
 
   li {
-    background-color: var(--color-pink-light);
-    border: 1.5px solid var(--color-black);
+    background-color: var(--color-neutral-50);
+    border: 1px solid var(--color-line-strong);
     border-radius: calc(var(--border-radius) * 2);
     font-size: 0.75rem;
     line-height: 1.3;
@@ -126,37 +127,31 @@
   }
 
   &--soft {
-    background-color: var(--color-pink-light);
+    background-color: var(--color-neutral-50);
   }
 
   &--dark {
     background-color: var(--color-white);
 
     .container {
-      background-color: var(--color-black);
-      border-radius: calc(var(--border-radius) * 5);
-      color: var(--color-white);
+      background-color: var(--color-neutral-50);
+      border: 1px solid var(--color-line);
+      border-radius: calc(var(--border-radius) * 4);
+      color: var(--color-black);
       padding: clamp(1.5rem, 4vw, 2.75rem);
 
       .section-kicker {
-        color: var(--color-sky-blue);
-      }
-
-      h2,
-      h3,
-      p,
-      li {
-        color: var(--color-white);
+        color: var(--color-pink);
       }
 
       .outlined {
         background-color: transparent;
-        border-color: var(--color-sky-blue);
-        color: var(--color-white);
+        border-color: var(--color-line-strong);
+        color: var(--color-black);
 
         &:hover,
         &:focus {
-          background-color: var(--color-sky-blue);
+          background-color: var(--color-neutral-100);
           color: var(--color-black);
         }
       }
@@ -210,9 +205,9 @@
 }
 
 .project-panel {
-  background-color: var(--color-pink-light);
-  border: 2px solid var(--color-black);
-  border-radius: calc(var(--border-radius) * 4);
+  background-color: var(--color-neutral-50);
+  border: 1px solid var(--color-line);
+  border-radius: calc(var(--border-radius) * 3);
   padding: 1.15rem 1.25rem;
 
   h3 {
@@ -284,10 +279,9 @@
   }
 
   article {
-    background-color: var(--color-sky-blue);
-    border: 2px solid var(--color-black);
-    border-radius: calc(var(--border-radius) * 4);
-    box-shadow: 6px 6px 0 var(--color-black);
+    background-color: var(--color-neutral-50);
+    border: 1px solid var(--color-line);
+    border-radius: calc(var(--border-radius) * 3);
     color: var(--color-black);
     padding: 1.15rem 1.25rem;
   }
@@ -336,20 +330,20 @@
 }
 
 .project-step-card {
-  background-color: var(--color-pink-light);
-  border: 2px solid var(--color-black);
-  border-radius: calc(var(--border-radius) * 4);
-  box-shadow: 6px 6px 0 var(--color-sky-blue);
+  background-color: var(--color-neutral-50);
+  border: 1px solid var(--color-line);
+  border-radius: calc(var(--border-radius) * 3);
   color: var(--color-black);
   padding: 1.15rem 1.25rem;
 
   span {
-    color: var(--color-pink);
+    color: var(--color-black);
     display: block;
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     margin-bottom: 0.85rem;
+    opacity: 0.6;
   }
 
   h3 {
@@ -448,8 +442,7 @@
 
   .project-hero-card {
     background-color: var(--color-pink-light);
-    border-color: var(--color-sky-blue);
-    box-shadow: 10px 10px 0 var(--color-pink);
+    border-color: var(--color-line-strong);
     color: var(--color-white);
 
     dd {
@@ -459,7 +452,7 @@
 
   .project-tech-list li {
     background-color: var(--color-black);
-    border-color: var(--color-sky-blue);
+    border-color: var(--color-line-strong);
     color: var(--color-white);
   }
 
@@ -477,8 +470,7 @@
   .project-panel,
   .project-step-card {
     background-color: var(--color-pink-light);
-    border-color: var(--color-sky-blue);
-    box-shadow: 6px 6px 0 var(--color-pink);
+    border-color: var(--color-line-strong);
     color: var(--color-white);
 
     h3,
@@ -490,8 +482,7 @@
 
   .project-tldr-grid article {
     background-color: var(--color-pink-light);
-    border-color: var(--color-sky-blue);
-    box-shadow: 6px 6px 0 var(--color-pink);
+    border-color: var(--color-line-strong);
     color: var(--color-white);
 
     h3,
@@ -507,11 +498,6 @@
 
   .project-hero-actions .outlined,
   .project-link-row .outlined {
-    color: var(--color-white);
-  }
-
-  .project-link-row .primary,
-  .project-hero-actions .primary {
     color: var(--color-white);
   }
 }

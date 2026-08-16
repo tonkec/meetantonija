@@ -34,17 +34,20 @@ input[type='submit'] {
   }
 }
 
+// Green is reserved for highlights (links, labels, focus rings, outlined
+// accents) — not for filling large blocks like buttons. Buttons use a
+// neutral ink/white system instead.
 button.primary,
 a.primary,
 a[role='button'].primary,
 *[role='button'].primary,
 input[type='submit'].primary {
-  background-color: var(--color-pink);
+  background-color: var(--color-black);
   color: var(--color-white);
 
   &:hover,
   &:focus {
-    background-color: var(--color-pink-dark);
+    background-color: var(--color-brown);
     outline: none;
   }
 }
@@ -54,12 +57,13 @@ a.secondary,
 a[role='button'].secondary,
 *[role='button'].secondary,
 input[type='submit'].secondary {
-  background-color: var(--color-pink-dark);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-line-strong);
   color: var(--color-black);
 
   &:hover,
   &:focus {
-    background-color: var(--color-sky-blue);
+    background-color: var(--color-neutral-100);
     color: var(--color-black);
     outline: none;
   }
@@ -70,13 +74,14 @@ a.ternary,
 a[role='button'].ternary,
 *[role='button'].ternary,
 input[type='submit'].ternary {
-  background-color: var(--color-sky-blue);
+  background-color: var(--color-neutral-100);
   color: var(--color-black);
 
   &:hover,
   &:focus {
-    background-color: var(--color-dark-blue);
-    color: var(--color-white);
+    background-color: var(--color-neutral-100);
+    border-color: var(--color-line-strong);
+    color: var(--color-black);
     outline: none;
   }
 }
@@ -91,7 +96,7 @@ input[type='submit'].transparent {
 
   &:hover,
   &:focus {
-    background-color: var(--color-sky-blue);
+    background-color: var(--color-neutral-100);
     outline: none;
   }
 }

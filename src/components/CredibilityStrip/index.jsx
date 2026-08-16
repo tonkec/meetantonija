@@ -3,22 +3,13 @@ import './CredibilityStrip.scss'
 
 const CredibilityStrip = () => {
   return (
-    <section
-      className="credibility-strip"
-      aria-label="Professional highlights"
-    >
+    <section className="credibility-strip" aria-label="Professional highlights">
       <div className="container">
-        <p className="credibility-strip__kicker">Quick facts</p>
         <ul className="credibility-strip__list">
-          {credibilityItems.map((item, index) => (
-            <li key={item.id} className="credibility-chip">
-              <span className="credibility-chip__index" aria-hidden="true">
-                {String(index + 1).padStart(2, '0')}
-              </span>
-              <span className="credibility-chip__copy">
-                <strong>{item.label}</strong>
-                <span>{item.detail}</span>
-              </span>
+          {credibilityItems.map((item) => (
+            <li key={item.id} className="credibility-item">
+              <strong>{item.label}</strong>
+              <span>{item.detail}</span>
             </li>
           ))}
         </ul>

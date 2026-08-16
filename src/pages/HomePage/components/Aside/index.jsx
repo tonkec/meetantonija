@@ -38,7 +38,6 @@ const Aside = ({ numberOfPosts }) => {
     <section className="aside-section">
       <div className="container">
         <div className="notes-heading">
-          <p className="section-kicker">Learning notes</p>
           <h2>I write down what I learn.</h2>
         </div>
 
@@ -62,9 +61,7 @@ const Aside = ({ numberOfPosts }) => {
               )
             })}
           </div>
-          <aside
-            className={noteContent.intro ? 'show' : 'hide'}
-          >
+          <aside className={noteContent.intro ? 'show' : 'hide'}>
             <button
               className="note-close"
               type="button"

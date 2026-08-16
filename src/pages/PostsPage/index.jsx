@@ -37,7 +37,9 @@ export const SinglePost = ({ post, onClick }) => {
         <p>{currentPost.subtitle}</p>
       </div>
 
-      {currentPost.intro && <p className="post-card-intro">{currentPost.intro}</p>}
+      {currentPost.intro && (
+        <p className="post-card-intro">{currentPost.intro}</p>
+      )}
 
       {currentPost.tags && (
         <div className="post-card-tags">
@@ -80,7 +82,6 @@ const PostsPage = () => {
       <header className="posts-hero">
         <div className="container posts-hero-grid">
           <div>
-            <p className="section-kicker">Learning archive</p>
             <h1>Notes for curious frontend developers.</h1>
           </div>
           <p>

@@ -10,7 +10,6 @@ const ContactPage = () => {
 
       <header className="contact-hero">
         <div className="container contact-hero-grid">
-          <p className="section-kicker">{contact.kicker}</p>
           <h1>Let’s talk.</h1>
           <p>{contact.body}</p>
         </div>

@@ -1,12 +1,16 @@
 @import '../../../../styles/mq.scss';
 
 .header-wrapper {
-  background:
-    radial-gradient(circle at 12% 15%, rgba(249, 0, 147, 0.18), transparent 28rem),
-    radial-gradient(circle at 82% 18%, rgba(169, 228, 255, 0.8), transparent 24rem),
-    linear-gradient(135deg, var(--color-white) 0%, var(--color-pink-light) 100%);
+  // One quiet glow instead of two competing blobs + a diagonal gradient —
+  // the hero should read as a warm neutral surface, not a decorative panel.
+  background: radial-gradient(
+      circle at 14% 10%,
+      rgba(255, 1, 251, 0.1),
+      transparent 32rem
+    ),
+    var(--color-neutral-50);
   overflow: hidden;
-  padding: 7.5rem 0 4rem;
+  padding: 8.5rem 0 4rem;
   position: relative;
 }
 
@@ -46,8 +50,15 @@
 .hero-location {
   color: var(--color-black);
   font-size: 0.9rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.35rem;
   opacity: 0.85;
+}
+
+.hero-status {
+  color: var(--color-black);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
 }
 
 .hero-actions {
@@ -76,105 +87,66 @@
   }
 }
 
-.hero-eyebrow {
-  background-color: var(--color-black);
-  border-radius: 999px;
-  color: var(--color-white);
-  display: inline-block;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-  margin-bottom: 1.2rem;
-  padding: 0.55rem 0.8rem;
-  text-transform: uppercase;
-}
-
 .hero-visual {
   justify-self: center;
-  max-width: 370px;
+  max-width: 340px;
   position: relative;
   width: 100%;
 }
 
 .hero-card {
   background-color: var(--color-white);
-  border: 2px solid var(--color-black);
+  border: 1px solid var(--color-line);
   border-radius: calc(var(--border-radius) * 5);
-  box-shadow: 18px 18px 0 var(--color-pink);
-  padding: 1rem;
+  box-shadow: var(--shadow-soft);
+  padding: 0.85rem;
   position: relative;
-  transform: rotate(2deg);
+}
+
+// Reserves the same box whether the photo is loading or loaded, so the
+// hero never grows after mount (see useImage / Image component — while
+// loading it renders a small centered spinner with no intrinsic size).
+.hero-photo-frame {
+  aspect-ratio: 1;
+  background-color: var(--color-neutral-100);
+  border-radius: calc(var(--border-radius) * 4);
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+  width: 100%;
 }
 
 .hero-photo {
   aspect-ratio: 1;
   border-radius: calc(var(--border-radius) * 4);
   display: block;
+  height: 100%;
   object-fit: cover;
-}
-
-.hero-card-note,
-.hero-floating-card {
-  background-color: var(--color-sky-blue);
-  border: 2px solid var(--color-black);
-  border-radius: calc(var(--border-radius) * 3);
-  color: var(--color-black);
-  padding: 0.85rem 1rem;
-
-  span,
-  strong {
-    display: block;
-  }
-
-  span {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-  }
-}
-
-.hero-card-note {
-  margin-top: 1rem;
-}
-
-.hero-floating-card {
-  bottom: -1.5rem;
-  box-shadow: 10px 10px 0 var(--color-black);
-  max-width: 260px;
-  position: absolute;
-  right: -0.75rem;
-  transform: rotate(-4deg);
+  width: 100%;
 }
 
 .dark-theme {
   .hero-card {
     background-color: var(--color-pink-light);
-    border-color: var(--color-sky-blue);
-    box-shadow: 18px 18px 0 rgba(246, 128, 72, 0.45);
+    border-color: var(--color-line-strong);
+    box-shadow: var(--shadow-soft);
   }
 
-  .hero-card-note,
-  .hero-floating-card {
+  .hero-photo-frame {
     background-color: var(--color-black);
-    border-color: var(--color-sky-blue);
-    color: var(--color-white);
-
-    span,
-    strong {
-      color: var(--color-white);
-    }
   }
 
-  .hero-floating-card {
-    box-shadow: 10px 10px 0 rgba(246, 128, 72, 0.35);
+  // `--color-black` is remapped to the dark background color in dark mode,
+  // so anything using it for text (rather than as a surface color) needs
+  // an explicit override here or it renders invisible (navy-on-navy).
+  .hero-location,
+  .hero-status {
+    color: var(--color-white);
   }
 }
 
 @include breakpoint(md, max) {
   .header-wrapper {
     padding-top: 6rem;
-  }
-
-  .hero-floating-card {
-    margin-top: 1rem;
-    position: static;
   }
 }

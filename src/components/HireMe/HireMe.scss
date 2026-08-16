@@ -6,13 +6,11 @@
   scroll-margin-top: 6rem;
 }
 
+// One strong treatment for the page's main CTA — a solid colored panel,
+// no added border/hard-shadow layering on top of it.
 .hire-me-card {
-  background:
-    radial-gradient(circle at 16% 20%, rgba(249, 0, 147, 0.2), transparent 18rem),
-    var(--color-sky-blue);
-  border: 2px solid var(--color-black);
+  background-color: var(--color-sky-blue);
   border-radius: calc(var(--border-radius) * 5);
-  box-shadow: 14px 14px 0 var(--color-pink);
   color: var(--color-black);
   margin: 0 auto;
   max-width: 1100px;

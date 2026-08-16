@@ -34,12 +34,8 @@
 }
 
 .project-nav__siblings {
-  display: grid;
-  gap: 0.75rem;
-
-  @include breakpoint(sm) {
-    grid-template-columns: 1fr 1fr;
-  }
+  display: flex;
+  justify-content: flex-end;
 }
 
 .project-nav__link {
@@ -87,14 +83,6 @@
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
-}
-
-.project-nav__placeholder {
-  display: none;
-
-  @include breakpoint(sm) {
-    display: block;
-  }
 }
 
 .dark-theme {

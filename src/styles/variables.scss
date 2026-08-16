@@ -1,25 +1,42 @@
 // https://coolors.co/palette/03045e-0077b6-00b4d8-90e0ef-caf0f8 => staro
 // https://coolors.co/palette/969a97-d6d1cd-e5ece9-c60f7b-f90093
-
+//
+// Strict two-color palette: FF01FB (magenta accent, used sparingly for
+// highlights/links/focus — not block fills) + FFFEFF (near-white,
+// dominant background). Near-black stays for body text/ink since a
+// palette with zero readable text color isn't usable. Every other
+// legacy token (grey, blue, purple, sky-blue, brown...) now aliases one
+// of these two so nothing else renders as an independent color.
+// Variable names are kept as-is on purpose since they're referenced by
+// hundreds of selectors sitewide; only the values changed.
 :root {
-  --color-pink: #f90093;
-  --color-pink-dark: #c60f7b;
-  --color-pink-light: #ffe4f5;
-  --color-purple: #c8b1ff;
-  --color-sky-blue: #a9e4ff;
-  --color-white: #fff;
-  --color-gray: #c0c0c0;
-  --color-blue: #00b4d8;
-  --color-dark-blue: #0073fb;
-  --color-black: #554148;
-  --color-light-gray: #f5f5f5;
-  --color-gray: #dbdbdb;
-  --color-brown: #292929;
+  --color-pink: #ff01fb;
+  --color-pink-dark: #cc00c8;
+  --color-pink-light: #ffe0fe;
+  --color-purple: var(--color-black);
+  --color-sky-blue: var(--color-white);
+  --color-white: #fffeff;
+  --color-gray: var(--color-white);
+  --color-blue: var(--color-black);
+  --color-dark-blue: var(--color-black);
+  --color-black: #000000;
+  --color-light-gray: var(--color-white);
+  --color-brown: var(--color-black);
   --color-block-code: rgb(43, 43, 43);
-  --color-accent: #a9e4ff; // sky-blue
-  --color-red: #ff0000;
-  --color-green: #7bd47b;
+  --color-accent: var(--color-black);
+  --color-red: var(--color-pink);
+  --color-green: var(--color-black);
   --font-family: 'Reddit Mono', monospace;
   --container-width: 1200px;
   --container-padding: 30px;
+
+  // Editorial layer, added to de-templatize the homepage: a calm neutral
+  // ground + hairline dividers so most sections don't need a bordered/
+  // shadowed card just to read as "designed."
+  --color-neutral-50: #fffeff;
+  --color-neutral-100: #fffeff;
+  --color-line: rgba(0, 0, 0, 0.16);
+  --color-line-strong: rgba(0, 0, 0, 0.32);
+  --shadow-signature: none;
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.08);
 }

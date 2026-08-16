@@ -63,7 +63,7 @@
   &:hover,
   &:focus,
   &.active {
-    background-color: var(--color-pink);
+    background-color: var(--color-black);
     box-shadow: 8px 8px 0 var(--color-black);
     color: var(--color-white);
     transform: translate(-4px, -4px);
@@ -129,7 +129,7 @@
   }
 
   div span {
-    background-color: var(--color-pink);
+    background-color: var(--color-black);
     border: 2px solid var(--color-black);
     border-radius: 50%;
     height: 0.8rem;

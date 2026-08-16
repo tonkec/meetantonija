@@ -17,7 +17,7 @@ const EngineeringStories = ({
   intro = 'Problems solved across Trimbox, FunderPro and Duga — concise enough to scan, expandable for engineering depth.',
   showProjectLinks = true,
   id = 'engineering-challenges',
-  kicker = 'Engineering challenges',
+  kicker = null,
   mode = 'auto',
   previewOnly = false,
 } = {}) => {
@@ -28,7 +28,9 @@ const EngineeringStories = ({
     mode === 'homepage' || (!projectSlug && mode === 'auto')
       ? getHomepageChallenges()
       : projectSlug
-        ? engineeringStories.filter((story) => story.projectSlug === projectSlug)
+        ? engineeringStories.filter(
+            (story) => story.projectSlug === projectSlug
+          )
         : getHomepageChallenges()
 
   if (!stories.length) {
@@ -46,14 +48,14 @@ const EngineeringStories = ({
       aria-labelledby={`${id}-heading`}
     >
       <div className="container">
-        <p className="section-kicker">{kicker}</p>
+        {kicker ? <p className="section-kicker">{kicker}</p> : null}
         <div className="engineering-stories-header">
           <h2 id={`${id}-heading`}>{heading}</h2>
           {intro ? <p>{intro}</p> : null}
         </div>
 
         <div className="engineering-stories-list">
-          {stories.map((story) => {
+          {stories.map((story, index) => {
             const projectPath = story.project
               ? `/project/${removeSpacesAndDashes(story.project)}`
               : null
@@ -65,21 +67,41 @@ const EngineeringStories = ({
             )
             const techLimit = filteredTech[0] === 'React Native' ? 1 : 2
             const techMeta = filteredTech.slice(0, techLimit).join(' · ')
-            const contextLine = [story.project, techMeta].filter(Boolean).join(' · ')
+            const contextLine = [story.project, techMeta]
+              .filter(Boolean)
+              .join(' · ')
 
             if (previewOnly) {
               return (
-                <article key={story.id} className="engineering-story engineering-story--preview">
-                  <h3 className="engineering-story__heading">{story.title}</h3>
-                  {contextLine ? (
-                    <p className="engineering-story__context">{contextLine}</p>
-                  ) : null}
-                  <p className="engineering-story__summary">{story.summary}</p>
-                  {projectPath ? (
-                    <Link to={projectPath} className="engineering-story__link">
-                      Read {story.project} case study
-                    </Link>
-                  ) : null}
+                <article
+                  key={story.id}
+                  className="engineering-story engineering-story--preview"
+                >
+                  <span className="engineering-story__index" aria-hidden="true">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <div className="engineering-story__preview-body">
+                    <h3 className="engineering-story__heading">
+                      {story.title}
+                    </h3>
+                    {contextLine ? (
+                      <p className="engineering-story__context">
+                        {contextLine}
+                      </p>
+                    ) : null}
+                    <p className="engineering-story__summary">
+                      {story.summary}
+                    </p>
+                    {projectPath ? (
+                      <Link
+                        to={projectPath}
+                        className="engineering-story__link"
+                      >
+                        Read {story.project} case study
+                        <span aria-hidden="true"> →</span>
+                      </Link>
+                    ) : null}
+                  </div>
                 </article>
               )
             }
@@ -108,7 +130,10 @@ const EngineeringStories = ({
                     <span className="engineering-story__summary">
                       {story.summary}
                     </span>
-                    <span className="engineering-story__hint" aria-hidden="true">
+                    <span
+                      className="engineering-story__hint"
+                      aria-hidden="true"
+                    >
                       {isOpen ? 'Collapse −' : 'Expand +'}
                     </span>
                   </button>

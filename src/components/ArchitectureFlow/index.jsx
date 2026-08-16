@@ -10,12 +10,8 @@ const ArchitectureFlow = ({ flow }) => {
   }
 
   return (
-    <section
-      className="architecture-flow"
-      aria-labelledby={`${flow.id}-title`}
-    >
+    <section className="architecture-flow" aria-labelledby={`${flow.id}-title`}>
       <div className="architecture-flow__header">
-        <p className="section-kicker">Architecture</p>
         <h2 id={`${flow.id}-title`}>{flow.title}</h2>
         {flow.summary ? <p>{flow.summary}</p> : null}
       </div>

@@ -9,16 +9,19 @@
   z-index: 100;
   margin: 0 auto;
   transition:
-    width 0.3s ease-in-out,
-    top 0.3s ease-in-out,
+    width 0.45s cubic-bezier(0.65, 0, 0.35, 1),
+    top 0.45s cubic-bezier(0.65, 0, 0.35, 1),
     border-radius 0.3s ease-in-out,
     box-shadow 0.3s ease-in-out;
   width: 100%;
   padding: 0.75rem;
 
+  // At rest near the top, the nav sits as a compact centered pill; scrolling
+  // down noticeably spreads it out to the full-width bar (and back on
+  // scroll-up), rather than a barely-visible few-pixel width change.
   &.scrolled-to-top {
-    @include breakpoint(xl) {
-      width: var(--container-width);
+    @include breakpoint(lg) {
+      width: min(880px, calc(100% - 4rem));
       top: 16px;
     }
   }
@@ -49,8 +52,8 @@
     }
 
     &.active {
-      background-color: var(--color-pink);
-      border-color: var(--color-pink);
+      background-color: var(--color-black);
+      border-color: var(--color-black);
       color: var(--color-white);
       text-decoration: none;
 
@@ -64,10 +67,10 @@
 
 .navigation-inner {
   align-items: center;
-  background-color: rgba(255, 228, 245, 0.92);
-  border: 2px solid var(--color-black);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-line);
   border-radius: 999px;
-  box-shadow: 8px 8px 0 rgba(85, 65, 72, 0.2);
+  box-shadow: var(--shadow-soft);
   display: flex;
   gap: 1rem;
   justify-content: space-between;
@@ -88,16 +91,14 @@
   padding-right: 0.25rem;
 }
 
+// A calm, static CTA — no auto-playing bob/rotate loop and no stacked
+// double-shadow. It should read as a normal button, not a self-animating
+// mascot that runs whether or not anyone is looking at it.
 .nav-contact-cta {
   align-items: center;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.28), transparent 42%),
-    var(--color-pink);
+  background-color: var(--color-black);
   border: 2px solid var(--color-black);
   border-radius: 999px;
-  box-shadow:
-    5px 5px 0 var(--color-black),
-    9px 9px 0 var(--color-sky-blue);
   color: var(--color-white);
   display: inline-flex;
   font-family: var(--font-family);
@@ -111,36 +112,22 @@
   padding: 0.75rem 1.35rem;
   position: relative;
   text-decoration: none;
-  transform: rotate(-2.5deg);
   transition:
     background-color 0.2s ease,
-    box-shadow 0.2s ease,
     transform 0.2s ease;
   z-index: 1;
-  animation: nav-contact-bob 2.8s ease-in-out infinite;
 
   svg {
     flex-shrink: 0;
-    transition: transform 0.2s ease;
   }
 
   &:hover,
   &:focus {
-    animation: none;
-    background:
-      radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.35), transparent 45%),
-      var(--color-pink-dark);
-    box-shadow:
-      7px 7px 0 var(--color-black),
-      12px 12px 0 var(--color-sky-blue);
+    background-color: var(--color-pink-dark);
     color: var(--color-white);
     outline: none;
     text-decoration: none;
-    transform: rotate(1.5deg) translate(-2px, -2px) scale(1.04);
-
-    svg {
-      transform: translateY(-1px) rotate(-12deg) scale(1.1);
-    }
+    transform: translateY(-1px);
   }
 
   &:focus-visible {
@@ -149,22 +136,7 @@
   }
 
   &:active {
-    animation: none;
-    box-shadow:
-      2px 2px 0 var(--color-black),
-      4px 4px 0 var(--color-sky-blue);
-    transform: rotate(0deg) translate(1px, 1px) scale(0.98);
-  }
-}
-
-@keyframes nav-contact-bob {
-  0%,
-  100% {
-    transform: rotate(-2.5deg) translateY(0);
-  }
-
-  50% {
-    transform: rotate(-1deg) translateY(-3px);
+    transform: translateY(0);
   }
 }
 
@@ -207,8 +179,8 @@
 .dark-theme {
   .navigation-inner {
     background-color: var(--color-black);
-    border-color: var(--color-sky-blue);
-    box-shadow: 8px 8px 0 rgba(246, 128, 72, 0.28);
+    border-color: var(--color-line-strong);
+    box-shadow: var(--shadow-soft);
   }
 
   .navigation .nav-link,
@@ -232,14 +204,17 @@
   }
 
   .navigation .nav-link.active {
-    background-color: var(--color-pink);
-    border-color: var(--color-pink);
+    background-color: var(--color-black);
+    border-color: var(--color-black);
     color: var(--color-white);
   }
 
   .nav-contact-cta {
-    background:
-      radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.22), transparent 42%),
+    background: radial-gradient(
+        circle at 20% 20%,
+        rgba(255, 255, 255, 0.22),
+        transparent 42%
+      ),
       var(--color-pink);
     border-color: var(--color-sky-blue);
     box-shadow:
@@ -249,8 +224,11 @@
 
     &:hover,
     &:focus {
-      background:
-        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.3), transparent 45%),
+      background: radial-gradient(
+          circle at 20% 20%,
+          rgba(255, 255, 255, 0.3),
+          transparent 45%
+        ),
         var(--color-pink-dark);
       box-shadow:
         7px 7px 0 var(--color-black),
@@ -261,6 +239,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .navigation {
+    transform: none !important;
+    transition: none;
+  }
+
   .nav-contact-cta {
     animation: none;
     transition: none;

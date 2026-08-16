@@ -37,8 +37,7 @@ export const availability = {
   // Centralized availability copy — change here to update hero, contact, and marquees.
   short:
     'Open to part-time Senior React Native and frontend opportunities with remote international teams.',
-  floatingLabel: 'Open to',
-  floatingValue: 'Part-time RN roles',
+  statusLine: 'Currently building Trimbox · Open to part-time RN roles',
   locationLine: 'Based in Croatia · Working remotely with international teams',
   heroCardLabel: 'Currently',
   heroCardValue: 'Trimbox · React Native',
@@ -50,7 +49,7 @@ export const seo = {
     'Senior React Native and frontend engineer building production mobile products, subscription systems, experiments, and scalable frontend architecture.',
   // PLACEHOLDER: replace with a dedicated social-preview image when available.
   ogImage: 'https://avatars.githubusercontent.com/u/5020758?v=4',
-  themeColor: '#f90093',
+  themeColor: '#c2410c',
   locale: 'en',
 }
 
@@ -107,12 +106,11 @@ export const credibilityItems = [
 ]
 
 export const hero = {
-  eyebrow: 'Product engineer',
   headline: 'Senior React Native & Frontend Engineer',
   supporting:
     'I help companies build reliable React Native and React products, solve complex frontend architecture problems, and ship production software with confidence.',
   ctas: {
-    work: { label: 'View selected work', targetId: 'selected-work' },
+    work: { label: 'See my experience', targetId: 'experience' },
     contact: { label: 'Contact me', targetId: 'contact' },
   },
 }
