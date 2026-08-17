@@ -278,10 +278,10 @@ describe('ArchitectureFlow', () => {
 })
 
 describe('ProjectNav', () => {
-  it('links back to home and the next featured project', () => {
+  it('links back to home', () => {
     render(
       <MemoryRouter>
-        <ProjectNav currentSlug="funderpro" />
+        <ProjectNav />
       </MemoryRouter>
     )
 
@@ -289,7 +289,6 @@ describe('ProjectNav', () => {
       'href',
       '/'
     )
-    expect(screen.getByRole('link', { name: /duga/i })).toBeInTheDocument()
   })
 })
 

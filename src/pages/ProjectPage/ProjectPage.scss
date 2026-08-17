@@ -12,11 +12,7 @@
       transparent 28rem
     ),
     var(--color-neutral-50);
-  padding: 7.5rem 0 3rem;
-}
-
-.project-nav + .project-hero {
-  padding-top: 1.5rem;
+  padding: 9.5rem 0 3rem;
 }
 
 .project-hero-grid {
@@ -155,6 +151,25 @@
           color: var(--color-black);
         }
       }
+    }
+  }
+
+  // The CTA variant only ever holds a short heading + a row of links —
+  // stretching that across the full container as a block leaves a wall of
+  // empty space, so lay it out as one row that uses the width instead.
+  &#project-cta .container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+
+    .project-section__header {
+      margin-bottom: 0;
+    }
+
+    .project-link-row {
+      flex: 0 0 auto;
     }
   }
 }
@@ -504,7 +519,7 @@
 
 @include breakpoint(md, max) {
   .project-hero {
-    padding: 6.5rem 0 2rem;
+    padding: 7.5rem 0 2rem;
   }
 
   .project-section,

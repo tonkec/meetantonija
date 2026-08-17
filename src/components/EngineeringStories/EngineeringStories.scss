@@ -236,14 +236,8 @@
   border-radius: calc(var(--border-radius) * 3);
   padding: 0.9rem 1rem;
 
-  &--problem {
-    border-top: 4px solid var(--color-pink);
-  }
-
-  &--approach {
-    border-top: 4px solid var(--color-sky-blue);
-  }
-
+  &--problem,
+  &--approach,
   &--outcome {
     border-top: 4px solid var(--color-black);
   }

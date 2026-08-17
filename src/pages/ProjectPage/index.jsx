@@ -13,7 +13,6 @@ import ProjectPhotos from 'components/ProjectPhotos'
 import RecordNotFound from 'components/RecordNotFound'
 import EngineeringStories from 'components/EngineeringStories'
 import ArchitectureFlow from 'components/ArchitectureFlow'
-import ProjectNav from 'components/ProjectNav'
 import caseStudies from 'data/caseStudies'
 import architectureFlows from 'data/architectureFlows'
 import { getPageMeta } from 'data/pagesMeta'
@@ -119,8 +118,6 @@ const ProjectPage = () => {
         type="article"
         jsonLd={pageMeta?.jsonLd}
       />
-
-      {caseStudy?.featured ? <ProjectNav currentSlug={caseStudy.slug} /> : null}
 
       <header className="project-hero">
         <div className="container project-hero-grid">

@@ -2,7 +2,6 @@ const Steps = ({ steps, headline }) => {
   return (
     <section className="project-steps">
       <div className="container">
-        <p className="section-kicker">Responsibilities</p>
         <h2>{headline}</h2>
 
         <div className="project-steps-grid">

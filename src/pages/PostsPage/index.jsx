@@ -4,7 +4,7 @@ import { formatNoteTitle } from 'utils'
 import Image from 'components/Image'
 import Paginated, { setQueryParams } from 'components/Paginated'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import HireMe from 'components/HireMe'
 import './PostsPage.scss'
 
@@ -13,7 +13,6 @@ const sortedPosts = posts.sort((a, b) => {
 })
 
 export const SinglePost = ({ post, onClick }) => {
-  const navigate = useNavigate()
   const currentPost = post.data ? post.data : post
   const onSinglePostClick = post.onClick ? post.onClick : onClick
 
@@ -33,7 +32,11 @@ export const SinglePost = ({ post, onClick }) => {
 
       <div>
         <span className="post-card-level">{currentPost.level || 'note'}</span>
-        <h2>{currentPost.title}</h2>
+        <h2>
+          <Link to={`/post/${formatNoteTitle(currentPost.title)}`}>
+            {currentPost.title}
+          </Link>
+        </h2>
         <p>{currentPost.subtitle}</p>
       </div>
 
@@ -57,14 +60,12 @@ export const SinglePost = ({ post, onClick }) => {
         </div>
       )}
 
-      <button
+      <Link
+        to={`/post/${formatNoteTitle(currentPost.title)}`}
         className="primary post-card-link"
-        onClick={() => {
-          navigate(`/post/${formatNoteTitle(currentPost.title)}`)
-        }}
       >
         Read note
-      </button>
+      </Link>
     </article>
   )
 }

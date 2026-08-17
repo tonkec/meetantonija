@@ -402,26 +402,6 @@
       border-color: var(--color-line-strong);
     }
 
-    .project-slide {
-      background-color: #1f1a1c;
-      border-color: var(--color-line-strong);
-      color: var(--color-white);
-
-      &:hover {
-        border-color: var(--color-pink);
-      }
-
-      .project-slide__meta > span {
-        color: var(--color-pink);
-      }
-
-      .project-slide__company {
-        color: var(--color-white);
-        opacity: 0.65;
-      }
-    }
-
-    .project-slide,
     .project-overview-grid article {
       h1,
       h2,
@@ -439,25 +419,6 @@
       a[role='button']:not(.primary) {
         background-color: rgba(16, 38, 26, 0.7);
         border-color: var(--color-pink);
-        color: var(--color-white);
-      }
-    }
-
-    .hero-card {
-      background-color: var(--color-pink-light);
-      border-color: var(--color-sky-blue);
-      box-shadow: 18px 18px 0 rgba(255, 1, 251, 0.45);
-      color: var(--color-white);
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p,
-      span,
-      strong {
         color: var(--color-white);
       }
     }

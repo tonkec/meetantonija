@@ -15,9 +15,9 @@ const Slider = ({ items, headline }) => {
       <div className="container">
         <h2>{headline}</h2>
 
-        <div className="project-related-grid">
+        <ul className="project-related-list">
           {sortedItems.map((project) => (
-            <article key={project.id} className="project-slide">
+            <li key={project.id} className="project-slide">
               <div className="project-slide__meta">
                 <span>{formatProjectPeriod(project)}</span>
                 {project.company ? (
@@ -31,22 +31,22 @@ const Slider = ({ items, headline }) => {
                 <h3>{project.title}</h3>
                 <h4>{project.headline}</h4>
                 <p>{truncateString(project.description, 140)}</p>
+                <button
+                  type="button"
+                  className="project-slide__link"
+                  onClick={() => {
+                    navigate(
+                      `/project/${removeSpacesAndDashes(project.title.toLowerCase())}`
+                    )
+                  }}
+                >
+                  Read case study
+                  <span aria-hidden="true"> →</span>
+                </button>
               </div>
-
-              <button
-                type="button"
-                className="primary"
-                onClick={() => {
-                  navigate(
-                    `/project/${removeSpacesAndDashes(project.title.toLowerCase())}`
-                  )
-                }}
-              >
-                Read case study
-              </button>
-            </article>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   )
