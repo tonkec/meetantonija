@@ -154,6 +154,31 @@
     }
   }
 
+  // `--color-neutral-50`/`--color-neutral-100` double as this container's
+  // background AND, via `--color-black`, its text color — in dark mode
+  // `--color-black` is remapped to the same near-black used for that
+  // background, so without this override the heading/body text renders
+  // black-on-black.
+  .dark-theme &--dark .container {
+    color: var(--color-white);
+
+    h2,
+    h3,
+    p,
+    li {
+      color: var(--color-white);
+    }
+
+    .outlined {
+      color: var(--color-white);
+
+      &:hover,
+      &:focus {
+        color: var(--color-white);
+      }
+    }
+  }
+
   // The CTA variant only ever holds a short heading + a row of links —
   // stretching that across the full container as a block leaves a wall of
   // empty space, so lay it out as one row that uses the width instead.

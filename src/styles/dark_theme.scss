@@ -126,9 +126,13 @@
       background-color: var(--color-white) !important;
       color: var(--color-black) !important;
 
+      // Was using --color-sky-blue, which the current palette repurposed
+      // into a dark neutral surface (#3a2f31) — near-black text on that
+      // was barely legible. A light warm-gray keeps the hover state
+      // readable and still visibly different from the resting white.
       &:hover,
       &:focus {
-        background-color: var(--color-sky-blue) !important;
+        background-color: #e8e2e3 !important;
         color: var(--color-black) !important;
       }
     }
@@ -424,9 +428,8 @@
     }
 
     .project-hero-card {
-      background-color: var(--color-pink-light);
-      border-color: var(--color-sky-blue);
-      box-shadow: 12px 12px 0 var(--color-pink);
+      background-color: var(--color-neutral-100);
+      border-color: var(--color-line-strong);
       color: var(--color-white);
 
       h1,
