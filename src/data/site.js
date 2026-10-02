@@ -47,7 +47,7 @@ export const availability = {
 export const seo = {
   title: 'Antonija Šimić — Senior Frontend & Full-Stack Engineer',
   description:
-    'Senior Frontend & Full-Stack Engineer specializing in React, React Native, TypeScript and Node.js, building production web and mobile products from UI to backend APIs and cloud deployment.',
+    'Senior Frontend & Full-Stack Engineer specializing in React, React Native, TypeScript and Node.js, building production web and mobile products — from UI and product experiments to backend APIs and cloud deployment.',
   // PLACEHOLDER: replace with a dedicated social-preview image when available.
   ogImage: 'https://avatars.githubusercontent.com/u/5020758?v=4',
   themeColor: '#c2410c',

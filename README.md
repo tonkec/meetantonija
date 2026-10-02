@@ -1,6 +1,6 @@
 # Portfolio Website
 
-This is my personal portfolio website built using React, showcasing my projects, skills, and experience as a Frontend Engineer.
+This is my personal portfolio website built using React, showcasing my projects, skills, and experience as a Senior Frontend & Full-Stack Engineer.
 
 ## Features
 

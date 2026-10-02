@@ -65,7 +65,7 @@ const caseStudies = [
     period: 'March 2026 – Present',
     summary:
       'Subscription inbox product — production React Native work on paywalls, app-open coordination, experiments and pricing.',
-    role: 'Senior Frontend Developer · React Native',
+    role: 'Senior Frontend & Full-Stack Engineer',
     workType: 'Professional product work',
     emphasis: 'primary',
     featuredBadge: 'Featured',
@@ -119,14 +119,16 @@ const caseStudies = [
       {
         src: '/projects/trimbox/paywall.jpg',
         alt: 'Trimbox subscription paywall showing annual and monthly plans with a continue CTA',
-        caption: 'Subscription and pricing presentation with annual and monthly offerings',
+        caption:
+          'Subscription and pricing presentation with annual and monthly offerings',
         width: 503,
         height: 1024,
       },
       {
         src: '/projects/trimbox/privacy-update.jpg',
         alt: 'Trimbox mobile screen showing inbox keep and unsubscribe actions with a Privacy Policy Updated dialog in front',
-        caption: 'App-open privacy notice coordinated over the inbox product surface',
+        caption:
+          'App-open privacy notice coordinated over the inbox product surface',
         width: 488,
         height: 1024,
       },
@@ -301,12 +303,7 @@ const caseStudies = [
     ],
     highlight:
       'Cut redundant API traffic by 40% with React Query while improving onboarding, KYC and mature product flows.',
-    technologies: [
-      'React',
-      'TypeScript',
-      'React Query',
-      'JavaScript',
-    ],
+    technologies: ['React', 'TypeScript', 'React Query', 'JavaScript'],
     photos: [
       rootImageUrl + 'funderpro/1.png',
       rootImageUrl + 'funderpro/2.png',
@@ -353,13 +350,7 @@ const caseStudies = [
       'Improved maintainability by moving core UI toward React',
       'Supported continued delivery of platform features during migration',
     ],
-    technologies: [
-      'React',
-      'TypeScript',
-      'Contentful',
-      'Keycloak',
-      'GraphQL',
-    ],
+    technologies: ['React', 'TypeScript', 'Contentful', 'Keycloak', 'GraphQL'],
     image: rootImageUrl + 'casumo/cubes.jpg',
     liveUrl: 'https://casumo.com/',
     featured: false,

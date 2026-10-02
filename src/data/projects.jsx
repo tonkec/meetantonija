@@ -1,7 +1,6 @@
 import { rootImageUrl } from 'rootImageUrl'
 
-const modeMobileCover =
-  rootImageUrl + 'modemobile/trimbox.avif'
+const modeMobileCover = rootImageUrl + 'modemobile/trimbox.avif'
 
 const projects = [
   {
@@ -10,14 +9,16 @@ const projects = [
       {
         src: '/projects/trimbox/paywall.jpg',
         alt: 'Trimbox subscription paywall showing annual and monthly plans with a continue CTA',
-        caption: 'Subscription and pricing presentation with annual and monthly offerings',
+        caption:
+          'Subscription and pricing presentation with annual and monthly offerings',
         width: 503,
         height: 1024,
       },
       {
         src: '/projects/trimbox/privacy-update.jpg',
         alt: 'Trimbox mobile screen showing inbox keep and unsubscribe actions with a Privacy Policy Updated dialog in front',
-        caption: 'App-open privacy notice coordinated over the inbox product surface',
+        caption:
+          'App-open privacy notice coordinated over the inbox product surface',
         width: 488,
         height: 1024,
       },
@@ -38,7 +39,7 @@ const projects = [
     link: 'https://www.trimbox.io/',
     id: 11,
     description:
-      'Trimbox is Mode Mobile’s subscription-based inbox product. As a Senior Frontend Developer on the React Native team, I contribute to production feature work across paywalls and subscriptions, app-open dialog coordination, analytics, Remote Config experiments, pricing validation, testing, and Expo/EAS release workflows — without claiming sole ownership of the product.',
+      'Trimbox is Mode Mobile’s subscription-based inbox product. As a Senior Frontend & Full-Stack Engineer on the React Native team, I contribute to production feature work across paywalls and subscriptions, app-open dialog coordination, analytics, Remote Config experiments, pricing validation, testing, and Expo/EAS release workflows — without claiming sole ownership of the product.',
     responsibilities: [
       {
         title: 'Paywall and subscriptions',
@@ -91,7 +92,7 @@ const projects = [
     from: 2026,
     fromMonth: 'March',
     methodology: 'Agile',
-    position: 'Senior Frontend Developer',
+    position: 'Senior Frontend & Full-Stack Engineer',
     team: 100,
     learned:
       'I am deepening my experience with React Native product work, subscription flows, RevenueCat, Firebase Remote Config, Maestro testing, and Expo/EAS release pipelines.',
@@ -103,7 +104,7 @@ const projects = [
     manager: (
       <span>
         I am currently working with the Mode Mobile team on Trimbox as a Senior
-        Frontend Developer.
+        Frontend & Full-Stack Engineer.
       </span>
     ),
   },

@@ -7,7 +7,7 @@ import './ExperiencePreview.scss'
 const experienceEntries = [
   {
     id: 'trimbox',
-    title: 'Senior Frontend Developer · React Native',
+    title: 'Senior Frontend & Full-Stack Engineer',
     company: 'Mode Mobile · Trimbox',
     dates: 'March 2026 – Present',
     summary:

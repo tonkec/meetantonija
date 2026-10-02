@@ -14,9 +14,8 @@ describe('homepage metadata', () => {
     expect(home.title).toMatch(
       /Antonija Šimić — Senior Frontend & Full-Stack Engineer/
     )
-    expect(home.description).toMatch(
-      /Antonija Šimić — Senior Frontend & Full-Stack Engineer/
-    )
+    expect(home.description).toMatch(/Senior Frontend & Full-Stack Engineer/)
+    expect(home.description).not.toMatch(/Antonija Šimić/)
   })
 
   it('never regresses to stale positioning copy', () => {
