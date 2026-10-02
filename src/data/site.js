@@ -17,12 +17,12 @@ export const SITE_URL = 'https://meetantonija.com'
 export const person = {
   name: 'Antonija Šimić',
   alternateName: 'Antonija Šimić',
-  jobTitle: 'Senior React Native & Frontend Engineer',
+  jobTitle: 'Senior Frontend & Full-Stack Engineer',
   // "Senior" is verified via CV/project roles (Trimbox, Funder Pro, Casumo).
   location: {
     country: 'Croatia',
     // City-level only; do not expose a private street address.
-    locality: 'Sveta Nedelja',
+    locality: 'Zagreb',
   },
   email: 'antonija1023@gmail.com',
   image: 'https://avatars.githubusercontent.com/u/5020758?v=4',
@@ -36,17 +36,18 @@ export const person = {
 export const availability = {
   // Centralized availability copy — change here to update hero, contact, and marquees.
   short:
-    'Open to part-time Senior React Native and frontend opportunities with remote international teams.',
-  statusLine: 'Currently building Trimbox · Open to part-time RN roles',
+    'Open to part-time Senior Frontend and Full-Stack opportunities with remote international teams.',
+  statusLine:
+    'Currently building Trimbox · Open to part-time senior engineering roles',
   locationLine: 'Based in Croatia · Working remotely with international teams',
   heroCardLabel: 'Currently',
   heroCardValue: 'Trimbox · React Native',
 }
 
 export const seo = {
-  title: 'Antonija Šimić — Senior React Native & Frontend Engineer',
+  title: 'Antonija Šimić — Senior Frontend & Full-Stack Engineer',
   description:
-    'Senior React Native and frontend engineer building production mobile products, subscription systems, experiments, and scalable frontend architecture.',
+    'Senior Frontend & Full-Stack Engineer specializing in React, React Native, TypeScript and Node.js, building production web and mobile products from UI to backend APIs and cloud deployment.',
   // PLACEHOLDER: replace with a dedicated social-preview image when available.
   ogImage: 'https://avatars.githubusercontent.com/u/5020758?v=4',
   themeColor: '#c2410c',
@@ -94,21 +95,21 @@ export const credibilityItems = [
     detail: 'building production products',
   },
   {
-    id: 'mobile',
-    label: 'Production React Native & React',
-    detail: 'shipped on mobile and web',
+    id: 'stack',
+    label: 'React · React Native · Node.js',
+    detail: 'production mobile, web, and backend systems',
   },
   {
     id: 'impact',
-    label: 'Measurable engineering impact',
-    detail: 'API efficiency, performance, test coverage',
+    label: 'End-to-end product delivery',
+    detail: 'architecture, APIs, databases, testing, and deployment',
   },
 ]
 
 export const hero = {
-  headline: 'Senior React Native & Frontend Engineer',
+  headline: 'Senior Frontend & Full-Stack Engineer',
   supporting:
-    'I help companies build reliable React Native and React products, solve complex frontend architecture problems, and ship production software with confidence.',
+    'I build production web and mobile products with React, React Native, TypeScript and Node.js — from polished user interfaces to APIs, databases and cloud deployment.',
   ctas: {
     work: { label: 'See my experience', targetId: 'experience' },
     contact: { label: 'Contact me', targetId: 'contact' },
@@ -118,15 +119,15 @@ export const hero = {
 export const contact = {
   kicker: "Let's work together",
   headline:
-    'Looking for someone to own complex React Native or frontend product work?',
-  body: 'Let’s talk about your product, technical challenges, and where I can help. Reach me by email, LinkedIn, or the form below.',
+    'Looking for a senior engineer who can own product work from frontend to backend?',
+  body: 'Let’s talk about your product, technical challenges, and where I can help — whether that means React or React Native architecture, full-stack feature development, APIs, or production delivery.',
   closingCta:
-    'Available for part-time Senior React Native and frontend roles with remote international teams.',
+    'Available for part-time Senior Frontend and Full-Stack roles with remote international teams.',
   mailtoSubject: 'Hello from meetantonija.com',
   emailLabel: 'Email me',
   linkedInLabel: 'LinkedIn',
   closingNote:
-    "Thanks for visiting. If you're building a React Native or frontend product, I'd love to hear about it.",
+    "Thanks for visiting. If you're building a web or mobile product with React, React Native, TypeScript or Node.js, I'd love to hear about it.",
 }
 
 const site = {

@@ -321,11 +321,13 @@ describe('featured work set', () => {
 describe('site SEO content', () => {
   it('exposes the verified professional title and description', () => {
     expect(seo.title).toContain(person.name)
-    expect(seo.title).toMatch(/Senior React Native/i)
-    expect(seo.description).toMatch(/subscription systems/i)
+    expect(seo.title).toMatch(
+      /Antonija Šimić — Senior Frontend & Full-Stack Engineer/i
+    )
+    expect(seo.description).toMatch(/Senior Frontend & Full-Stack Engineer/i)
     expect(seo.description).toMatch(/experiments/i)
     expect(hero.supporting).toMatch(/reliable React Native and React products/i)
-    expect(hero.headline).toBe('Senior React Native & Frontend Engineer')
+    expect(hero.headline).toBe('Senior Frontend & Full-Stack Engineer')
     expect(contact.headline).toMatch(/React Native or frontend/i)
     expect(contact.closingNote).toMatch(/Thanks for visiting/i)
   })

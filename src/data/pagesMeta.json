@@ -1,12 +1,12 @@
 [
   {
     "path": "/",
-    "title": "Antonija Šimić — Senior React Native & Frontend Engineer",
-    "description": "Senior React Native and frontend engineer building production mobile products, subscription systems, experiments, and scalable frontend architecture.",
+    "title": "Antonija Šimić — Senior Frontend & Full-Stack Engineer",
+    "description": "Senior Frontend & Full-Stack Engineer specializing in React, React Native, TypeScript and Node.js, building production web and mobile products from UI to backend APIs and cloud deployment.",
+    "heading": "Antonija Šimić — Senior Frontend & Full-Stack Engineer",
+    "summary": "Senior engineer based in Croatia specializing in React, React Native and TypeScript, with full-stack experience building Node.js APIs, PostgreSQL-backed applications and production cloud infrastructure.",
     "type": "website",
     "ogImage": "https://avatars.githubusercontent.com/u/5020758?v=4",
-    "heading": "Antonija Šimić — Senior React Native & Frontend Engineer",
-    "summary": "Senior React Native and frontend engineer based in Croatia, building production mobile and web products for remote international teams.",
     "links": [
       {
         "href": "/#experience",
@@ -44,7 +44,7 @@
         "@id": "https://meetantonija.com/#person",
         "name": "Antonija Šimić",
         "alternateName": "Antonija Šimić",
-        "jobTitle": "Senior React Native & Frontend Engineer",
+        "jobTitle": "Senior Frontend & Full-Stack Engineer",
         "url": "https://meetantonija.com/",
         "image": "https://avatars.githubusercontent.com/u/5020758?v=4",
         "email": "mailto:antonija1023@gmail.com",
@@ -65,7 +65,7 @@
         "@id": "https://meetantonija.com/#website",
         "url": "https://meetantonija.com/",
         "name": "Antonija Šimić",
-        "description": "Senior React Native and frontend engineer building production mobile products, subscription systems, experiments, and scalable frontend architecture.",
+        "description": "Senior Frontend & Full-Stack Engineer specializing in React, React Native, TypeScript and Node.js, building production web and mobile products from UI to backend APIs and cloud deployment.",
         "author": {
           "@id": "https://meetantonija.com/#person"
         }
@@ -225,12 +225,12 @@
   },
   {
     "path": "/cv",
-    "title": "CV — Antonija Šimić — Senior React Native & Frontend Engineer",
-    "description": "Work history for Antonija Simić spanning React Native, React, TypeScript and product frontend delivery.",
+    "title": "CV — Antonija Šimić — Senior Frontend & Full-Stack Engineer",
+    "description": "Work history for Antonija Šimić spanning React Native, React, TypeScript, Node.js, full-stack product development and production delivery.",
+    "summary": "Senior engineering experience across React Native, React and TypeScript, with full-stack product development using Node.js, APIs, databases and cloud infrastructure.",
     "type": "website",
     "ogImage": "https://avatars.githubusercontent.com/u/5020758?v=4",
     "heading": "CV — Antonija Šimić",
-    "summary": "Work history shaped by product delivery across React Native, React, TypeScript and production UI.",
     "links": [
       {
         "href": "/",
@@ -253,19 +253,19 @@
       "about": {
         "@type": "Person",
         "name": "Antonija Šimić",
-        "jobTitle": "Senior React Native & Frontend Engineer",
+        "jobTitle": "Senior Frontend & Full-Stack Engineer",
         "url": "https://meetantonija.com/"
       }
     }
   },
   {
     "path": "/contact",
-    "title": "Contact — Antonija Šimić — Senior React Native & Frontend Engineer",
-    "description": "Contact Antonija Simić about React Native and frontend opportunities, consulting, or product collaboration.",
+    "title": "Contact — Antonija Šimić — Senior Frontend & Full-Stack Engineer",
+    "description": "Contact Antonija Šimić about React, React Native, full-stack engineering, consulting, or product collaboration.",
+    "summary": "Reach out about senior frontend and full-stack opportunities, consulting, or product collaboration.",
     "type": "website",
     "ogImage": "https://avatars.githubusercontent.com/u/5020758?v=4",
     "heading": "Contact Antonija Šimić",
-    "summary": "Reach out about React Native and frontend opportunities, consulting, or product collaboration.",
     "links": [
       {
         "href": "/",
@@ -295,7 +295,7 @@
   },
   {
     "path": "/posts",
-    "title": "Notes — Antonija Šimić — Senior React Native & Frontend Engineer",
+    "title": "Notes — Antonija Šimić — Senior Frontend & Full-Stack Engineer",
     "description": "Practical React, JavaScript and performance notes from Antonija Simić.",
     "type": "website",
     "ogImage": "https://avatars.githubusercontent.com/u/5020758?v=4",

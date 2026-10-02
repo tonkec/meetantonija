@@ -11,8 +11,12 @@ describe('homepage metadata', () => {
 
   it('carries the current professional positioning', () => {
     expect(home.title).toMatch(/Antonija Šimić/)
-    expect(home.title).toMatch(/Senior React Native/)
-    expect(home.description).toMatch(/Senior React Native/)
+    expect(home.title).toMatch(
+      /Antonija Šimić — Senior Frontend & Full-Stack Engineer/
+    )
+    expect(home.description).toMatch(
+      /Antonija Šimić — Senior Frontend & Full-Stack Engineer/
+    )
   })
 
   it('never regresses to stale positioning copy', () => {
