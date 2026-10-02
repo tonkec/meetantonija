@@ -37,8 +37,7 @@ export const availability = {
   // Centralized availability copy — change here to update hero, contact, and marquees.
   short:
     'Open to part-time Senior Frontend and Full-Stack opportunities with remote international teams.',
-  statusLine:
-    'Currently building Trimbox · Open to part-time senior engineering roles',
+  statusLine: 'Currently building Trimbox · Open to senior engineering roles',
   locationLine: 'Based in Croatia · Working remotely with international teams',
   heroCardLabel: 'Currently',
   heroCardValue: 'Trimbox · React Native',
