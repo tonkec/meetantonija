@@ -50,7 +50,7 @@
         "email": "mailto:antonija1023@gmail.com",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Sveta Nedelja",
+          "addressLocality": "Zagreb",
           "addressCountry": "Croatia"
         },
         "sameAs": [
